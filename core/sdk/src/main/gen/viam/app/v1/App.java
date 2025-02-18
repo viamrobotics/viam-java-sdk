@@ -11355,6 +11355,1426 @@ public final class App {
     }
   }
 
+  public interface GetOrganizationMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetOrganizationMetadataRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetOrganizationMetadataRequest}
+   */
+  public  static final class GetOrganizationMetadataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetOrganizationMetadataRequest, GetOrganizationMetadataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetOrganizationMetadataRequest)
+      GetOrganizationMetadataRequestOrBuilder {
+    private GetOrganizationMetadataRequest() {
+      organizationId_ = "";
+    }
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.GetOrganizationMetadataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.GetOrganizationMetadataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.GetOrganizationMetadataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.GetOrganizationMetadataRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetOrganizationMetadataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.GetOrganizationMetadataRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetOrganizationMetadataRequest)
+        viam.app.v1.App.GetOrganizationMetadataRequestOrBuilder {
+      // Construct using viam.app.v1.App.GetOrganizationMetadataRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetOrganizationMetadataRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.GetOrganizationMetadataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "organizationId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.GetOrganizationMetadataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.GetOrganizationMetadataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.GetOrganizationMetadataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetOrganizationMetadataRequest)
+    private static final viam.app.v1.App.GetOrganizationMetadataRequest DEFAULT_INSTANCE;
+    static {
+      GetOrganizationMetadataRequest defaultInstance = new GetOrganizationMetadataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetOrganizationMetadataRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.GetOrganizationMetadataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetOrganizationMetadataRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetOrganizationMetadataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetOrganizationMetadataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetOrganizationMetadataResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    int getDataCount();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    boolean containsData(
+        java.lang.String key);
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getData();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getDataMap();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+
+    /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue);
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+
+    com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetOrganizationMetadataResponse}
+   */
+  public  static final class GetOrganizationMetadataResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetOrganizationMetadataResponse, GetOrganizationMetadataResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetOrganizationMetadataResponse)
+      GetOrganizationMetadataResponseOrBuilder {
+    private GetOrganizationMetadataResponse() {
+    }
+    public static final int DATA_FIELD_NUMBER = 1;
+    private static final class DataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, com.google.protobuf.Any> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.google.protobuf.Any.getDefaultInstance());
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.google.protobuf.Any> data_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetData() {
+      return data_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetMutableData() {
+      if (!data_.isMutable()) {
+        data_ = data_.mutableCopy();
+      }
+      return data_;
+    }
+    @java.lang.Override
+
+    public int getDataCount() {
+      return internalGetData().size();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsData(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetData().containsKey(key);
+    }
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+      return getDataMap();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetData());
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    private java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getMutableDataMap() {
+      return internalGetMutableData();
+    }
+
+    public static viam.app.v1.App.GetOrganizationMetadataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.GetOrganizationMetadataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.GetOrganizationMetadataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetOrganizationMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.GetOrganizationMetadataResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetOrganizationMetadataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.GetOrganizationMetadataResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetOrganizationMetadataResponse)
+        viam.app.v1.App.GetOrganizationMetadataResponseOrBuilder {
+      // Construct using viam.app.v1.App.GetOrganizationMetadataResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      @java.lang.Override
+
+      public int getDataCount() {
+        return instance.getDataMap().size();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getDataMap().containsKey(key);
+      }
+
+      public Builder clearData() {
+        copyOnWrite();
+        instance.getMutableDataMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+
+      public Builder removeData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getDataMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+        return getDataMap();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getDataMap());
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.protobuf.Any defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.Any getDataOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      public Builder putData(
+          java.lang.String key,
+          com.google.protobuf.Any value) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      public Builder putAllData(
+          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+        copyOnWrite();
+        instance.getMutableDataMap().putAll(values);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetOrganizationMetadataResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.GetOrganizationMetadataResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+              DataDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.GetOrganizationMetadataResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.GetOrganizationMetadataResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.GetOrganizationMetadataResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetOrganizationMetadataResponse)
+    private static final viam.app.v1.App.GetOrganizationMetadataResponse DEFAULT_INSTANCE;
+    static {
+      GetOrganizationMetadataResponse defaultInstance = new GetOrganizationMetadataResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetOrganizationMetadataResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.GetOrganizationMetadataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetOrganizationMetadataResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetOrganizationMetadataResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateOrganizationMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateOrganizationMetadataRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    int getDataCount();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    boolean containsData(
+        java.lang.String key);
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getData();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getDataMap();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+
+    /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue);
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+
+    com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateOrganizationMetadataRequest}
+   */
+  public  static final class UpdateOrganizationMetadataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateOrganizationMetadataRequest, UpdateOrganizationMetadataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateOrganizationMetadataRequest)
+      UpdateOrganizationMetadataRequestOrBuilder {
+    private UpdateOrganizationMetadataRequest() {
+      organizationId_ = "";
+    }
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private static final class DataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, com.google.protobuf.Any> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.google.protobuf.Any.getDefaultInstance());
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.google.protobuf.Any> data_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetData() {
+      return data_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetMutableData() {
+      if (!data_.isMutable()) {
+        data_ = data_.mutableCopy();
+      }
+      return data_;
+    }
+    @java.lang.Override
+
+    public int getDataCount() {
+      return internalGetData().size();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsData(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetData().containsKey(key);
+    }
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+      return getDataMap();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetData());
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    private java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getMutableDataMap() {
+      return internalGetMutableData();
+    }
+
+    public static viam.app.v1.App.UpdateOrganizationMetadataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.UpdateOrganizationMetadataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.UpdateOrganizationMetadataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.UpdateOrganizationMetadataRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateOrganizationMetadataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.UpdateOrganizationMetadataRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateOrganizationMetadataRequest)
+        viam.app.v1.App.UpdateOrganizationMetadataRequestOrBuilder {
+      // Construct using viam.app.v1.App.UpdateOrganizationMetadataRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      @java.lang.Override
+
+      public int getDataCount() {
+        return instance.getDataMap().size();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getDataMap().containsKey(key);
+      }
+
+      public Builder clearData() {
+        copyOnWrite();
+        instance.getMutableDataMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+
+      public Builder removeData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getDataMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+        return getDataMap();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getDataMap());
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.protobuf.Any defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.Any getDataOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      public Builder putData(
+          java.lang.String key,
+          com.google.protobuf.Any value) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      public Builder putAllData(
+          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+        copyOnWrite();
+        instance.getMutableDataMap().putAll(values);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateOrganizationMetadataRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.UpdateOrganizationMetadataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "organizationId_",
+              "data_",
+              DataDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0001\u0000\u0000\u0001\u0208\u00022";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.UpdateOrganizationMetadataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.UpdateOrganizationMetadataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.UpdateOrganizationMetadataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateOrganizationMetadataRequest)
+    private static final viam.app.v1.App.UpdateOrganizationMetadataRequest DEFAULT_INSTANCE;
+    static {
+      UpdateOrganizationMetadataRequest defaultInstance = new UpdateOrganizationMetadataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateOrganizationMetadataRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.UpdateOrganizationMetadataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateOrganizationMetadataRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateOrganizationMetadataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateOrganizationMetadataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateOrganizationMetadataResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateOrganizationMetadataResponse}
+   */
+  public  static final class UpdateOrganizationMetadataResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateOrganizationMetadataResponse, UpdateOrganizationMetadataResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateOrganizationMetadataResponse)
+      UpdateOrganizationMetadataResponseOrBuilder {
+    private UpdateOrganizationMetadataResponse() {
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.UpdateOrganizationMetadataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.UpdateOrganizationMetadataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateOrganizationMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.UpdateOrganizationMetadataResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateOrganizationMetadataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.UpdateOrganizationMetadataResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateOrganizationMetadataResponse)
+        viam.app.v1.App.UpdateOrganizationMetadataResponseOrBuilder {
+      // Construct using viam.app.v1.App.UpdateOrganizationMetadataResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateOrganizationMetadataResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.UpdateOrganizationMetadataResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.UpdateOrganizationMetadataResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.UpdateOrganizationMetadataResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.UpdateOrganizationMetadataResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateOrganizationMetadataResponse)
+    private static final viam.app.v1.App.UpdateOrganizationMetadataResponse DEFAULT_INSTANCE;
+    static {
+      UpdateOrganizationMetadataResponse defaultInstance = new UpdateOrganizationMetadataResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateOrganizationMetadataResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.UpdateOrganizationMetadataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateOrganizationMetadataResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateOrganizationMetadataResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface ListOrganizationMembersRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.ListOrganizationMembersRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -21962,7 +23382,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=528
+     *     See app/v1/app.proto;l=568
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -21973,7 +23393,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=528
+     *     See app/v1/app.proto;l=568
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -22047,7 +23467,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=528
+     *     See app/v1/app.proto;l=568
      * @return The secret.
      */
     @java.lang.Override
@@ -22061,7 +23481,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=528
+     *     See app/v1/app.proto;l=568
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -22076,7 +23496,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=528
+     *     See app/v1/app.proto;l=568
      * @param value The secret to set.
      */
     private void setSecret(
@@ -22092,7 +23512,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=528
+     *     See app/v1/app.proto;l=568
      */
     private void clearSecret() {
 
@@ -22105,7 +23525,7 @@ public final class App {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=528
+     *     See app/v1/app.proto;l=568
      * @param value The bytes for secret to set.
      */
     private void setSecretBytes(
@@ -22424,7 +23844,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=528
+       *     See app/v1/app.proto;l=568
        * @return The secret.
        */
       @java.lang.Override
@@ -22438,7 +23858,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=528
+       *     See app/v1/app.proto;l=568
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -22453,7 +23873,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=528
+       *     See app/v1/app.proto;l=568
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -22470,7 +23890,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=528
+       *     See app/v1/app.proto;l=568
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -22485,7 +23905,7 @@ public final class App {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=528
+       *     See app/v1/app.proto;l=568
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -29063,6 +30483,1426 @@ public final class App {
     private static volatile com.google.protobuf.Parser<DeleteLocationResponse> PARSER;
 
     public static com.google.protobuf.Parser<DeleteLocationResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetLocationMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetLocationMetadataRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    java.lang.String getLocationId();
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    com.google.protobuf.ByteString
+        getLocationIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetLocationMetadataRequest}
+   */
+  public  static final class GetLocationMetadataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetLocationMetadataRequest, GetLocationMetadataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetLocationMetadataRequest)
+      GetLocationMetadataRequestOrBuilder {
+    private GetLocationMetadataRequest() {
+      locationId_ = "";
+    }
+    public static final int LOCATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String locationId_;
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    @java.lang.Override
+    public java.lang.String getLocationId() {
+      return locationId_;
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(locationId_);
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @param value The locationId to set.
+     */
+    private void setLocationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      locationId_ = value;
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     */
+    private void clearLocationId() {
+
+      locationId_ = getDefaultInstance().getLocationId();
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @param value The bytes for locationId to set.
+     */
+    private void setLocationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      locationId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.GetLocationMetadataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetLocationMetadataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetLocationMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetLocationMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetLocationMetadataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetLocationMetadataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetLocationMetadataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetLocationMetadataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.GetLocationMetadataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.GetLocationMetadataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetLocationMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetLocationMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.GetLocationMetadataRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetLocationMetadataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.GetLocationMetadataRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetLocationMetadataRequest)
+        viam.app.v1.App.GetLocationMetadataRequestOrBuilder {
+      // Construct using viam.app.v1.App.GetLocationMetadataRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @return The locationId.
+       */
+      @java.lang.Override
+      public java.lang.String getLocationId() {
+        return instance.getLocationId();
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @return The bytes for locationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLocationIdBytes() {
+        return instance.getLocationIdBytes();
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @param value The locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setLocationId(value);
+        return this;
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocationId() {
+        copyOnWrite();
+        instance.clearLocationId();
+        return this;
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @param value The bytes for locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setLocationIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetLocationMetadataRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.GetLocationMetadataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "locationId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.GetLocationMetadataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.GetLocationMetadataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.GetLocationMetadataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetLocationMetadataRequest)
+    private static final viam.app.v1.App.GetLocationMetadataRequest DEFAULT_INSTANCE;
+    static {
+      GetLocationMetadataRequest defaultInstance = new GetLocationMetadataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetLocationMetadataRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.GetLocationMetadataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetLocationMetadataRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetLocationMetadataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetLocationMetadataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetLocationMetadataResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    int getDataCount();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    boolean containsData(
+        java.lang.String key);
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getData();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getDataMap();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+
+    /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue);
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+
+    com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetLocationMetadataResponse}
+   */
+  public  static final class GetLocationMetadataResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetLocationMetadataResponse, GetLocationMetadataResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetLocationMetadataResponse)
+      GetLocationMetadataResponseOrBuilder {
+    private GetLocationMetadataResponse() {
+    }
+    public static final int DATA_FIELD_NUMBER = 1;
+    private static final class DataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, com.google.protobuf.Any> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.google.protobuf.Any.getDefaultInstance());
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.google.protobuf.Any> data_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetData() {
+      return data_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetMutableData() {
+      if (!data_.isMutable()) {
+        data_ = data_.mutableCopy();
+      }
+      return data_;
+    }
+    @java.lang.Override
+
+    public int getDataCount() {
+      return internalGetData().size();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsData(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetData().containsKey(key);
+    }
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+      return getDataMap();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetData());
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    private java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getMutableDataMap() {
+      return internalGetMutableData();
+    }
+
+    public static viam.app.v1.App.GetLocationMetadataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetLocationMetadataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetLocationMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetLocationMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetLocationMetadataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetLocationMetadataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetLocationMetadataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetLocationMetadataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.GetLocationMetadataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.GetLocationMetadataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetLocationMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetLocationMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.GetLocationMetadataResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetLocationMetadataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.GetLocationMetadataResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetLocationMetadataResponse)
+        viam.app.v1.App.GetLocationMetadataResponseOrBuilder {
+      // Construct using viam.app.v1.App.GetLocationMetadataResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      @java.lang.Override
+
+      public int getDataCount() {
+        return instance.getDataMap().size();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getDataMap().containsKey(key);
+      }
+
+      public Builder clearData() {
+        copyOnWrite();
+        instance.getMutableDataMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+
+      public Builder removeData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getDataMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+        return getDataMap();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getDataMap());
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.protobuf.Any defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.Any getDataOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      public Builder putData(
+          java.lang.String key,
+          com.google.protobuf.Any value) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      public Builder putAllData(
+          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+        copyOnWrite();
+        instance.getMutableDataMap().putAll(values);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetLocationMetadataResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.GetLocationMetadataResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+              DataDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.GetLocationMetadataResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.GetLocationMetadataResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.GetLocationMetadataResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetLocationMetadataResponse)
+    private static final viam.app.v1.App.GetLocationMetadataResponse DEFAULT_INSTANCE;
+    static {
+      GetLocationMetadataResponse defaultInstance = new GetLocationMetadataResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetLocationMetadataResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.GetLocationMetadataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetLocationMetadataResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetLocationMetadataResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateLocationMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateLocationMetadataRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    java.lang.String getLocationId();
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    com.google.protobuf.ByteString
+        getLocationIdBytes();
+
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    int getDataCount();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    boolean containsData(
+        java.lang.String key);
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getData();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getDataMap();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+
+    /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue);
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+
+    com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateLocationMetadataRequest}
+   */
+  public  static final class UpdateLocationMetadataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateLocationMetadataRequest, UpdateLocationMetadataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateLocationMetadataRequest)
+      UpdateLocationMetadataRequestOrBuilder {
+    private UpdateLocationMetadataRequest() {
+      locationId_ = "";
+    }
+    public static final int LOCATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String locationId_;
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    @java.lang.Override
+    public java.lang.String getLocationId() {
+      return locationId_;
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(locationId_);
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @param value The locationId to set.
+     */
+    private void setLocationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      locationId_ = value;
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     */
+    private void clearLocationId() {
+
+      locationId_ = getDefaultInstance().getLocationId();
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @param value The bytes for locationId to set.
+     */
+    private void setLocationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      locationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private static final class DataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, com.google.protobuf.Any> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.google.protobuf.Any.getDefaultInstance());
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.google.protobuf.Any> data_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetData() {
+      return data_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetMutableData() {
+      if (!data_.isMutable()) {
+        data_ = data_.mutableCopy();
+      }
+      return data_;
+    }
+    @java.lang.Override
+
+    public int getDataCount() {
+      return internalGetData().size();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsData(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetData().containsKey(key);
+    }
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+      return getDataMap();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetData());
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    private java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getMutableDataMap() {
+      return internalGetMutableData();
+    }
+
+    public static viam.app.v1.App.UpdateLocationMetadataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.UpdateLocationMetadataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.UpdateLocationMetadataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.UpdateLocationMetadataRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateLocationMetadataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.UpdateLocationMetadataRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateLocationMetadataRequest)
+        viam.app.v1.App.UpdateLocationMetadataRequestOrBuilder {
+      // Construct using viam.app.v1.App.UpdateLocationMetadataRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @return The locationId.
+       */
+      @java.lang.Override
+      public java.lang.String getLocationId() {
+        return instance.getLocationId();
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @return The bytes for locationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLocationIdBytes() {
+        return instance.getLocationIdBytes();
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @param value The locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setLocationId(value);
+        return this;
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocationId() {
+        copyOnWrite();
+        instance.clearLocationId();
+        return this;
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @param value The bytes for locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setLocationIdBytes(value);
+        return this;
+      }
+
+      @java.lang.Override
+
+      public int getDataCount() {
+        return instance.getDataMap().size();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getDataMap().containsKey(key);
+      }
+
+      public Builder clearData() {
+        copyOnWrite();
+        instance.getMutableDataMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+
+      public Builder removeData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getDataMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+        return getDataMap();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getDataMap());
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.protobuf.Any defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.Any getDataOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      public Builder putData(
+          java.lang.String key,
+          com.google.protobuf.Any value) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      public Builder putAllData(
+          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+        copyOnWrite();
+        instance.getMutableDataMap().putAll(values);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateLocationMetadataRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.UpdateLocationMetadataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "locationId_",
+              "data_",
+              DataDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0001\u0000\u0000\u0001\u0208\u00022";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.UpdateLocationMetadataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.UpdateLocationMetadataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.UpdateLocationMetadataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateLocationMetadataRequest)
+    private static final viam.app.v1.App.UpdateLocationMetadataRequest DEFAULT_INSTANCE;
+    static {
+      UpdateLocationMetadataRequest defaultInstance = new UpdateLocationMetadataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateLocationMetadataRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.UpdateLocationMetadataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateLocationMetadataRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateLocationMetadataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateLocationMetadataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateLocationMetadataResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateLocationMetadataResponse}
+   */
+  public  static final class UpdateLocationMetadataResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateLocationMetadataResponse, UpdateLocationMetadataResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateLocationMetadataResponse)
+      UpdateLocationMetadataResponseOrBuilder {
+    private UpdateLocationMetadataResponse() {
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.UpdateLocationMetadataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.UpdateLocationMetadataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateLocationMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.UpdateLocationMetadataResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateLocationMetadataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.UpdateLocationMetadataResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateLocationMetadataResponse)
+        viam.app.v1.App.UpdateLocationMetadataResponseOrBuilder {
+      // Construct using viam.app.v1.App.UpdateLocationMetadataResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateLocationMetadataResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.UpdateLocationMetadataResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.UpdateLocationMetadataResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.UpdateLocationMetadataResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.UpdateLocationMetadataResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateLocationMetadataResponse)
+    private static final viam.app.v1.App.UpdateLocationMetadataResponse DEFAULT_INSTANCE;
+    static {
+      UpdateLocationMetadataResponse defaultInstance = new UpdateLocationMetadataResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateLocationMetadataResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.UpdateLocationMetadataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateLocationMetadataResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateLocationMetadataResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -37031,7 +39871,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=733
+     *     See app/v1/app.proto;l=788
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -37233,7 +40073,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=733
+     *     See app/v1/app.proto;l=788
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -37247,7 +40087,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=733
+     *     See app/v1/app.proto;l=788
      * @param value The errorsOnly to set.
      */
     private void setErrorsOnly(boolean value) {
@@ -37261,7 +40101,7 @@ public final class App {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=733
+     *     See app/v1/app.proto;l=788
      */
     private void clearErrorsOnly() {
 
@@ -37841,7 +40681,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=733
+       *     See app/v1/app.proto;l=788
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -37855,7 +40695,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=733
+       *     See app/v1/app.proto;l=788
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -37871,7 +40711,7 @@ public final class App {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=733
+       *     See app/v1/app.proto;l=788
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
@@ -42271,6 +45111,1426 @@ public final class App {
     private static volatile com.google.protobuf.Parser<DeleteRobotPartRequest> PARSER;
 
     public static com.google.protobuf.Parser<DeleteRobotPartRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetRobotPartMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetRobotPartMetadataRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetRobotPartMetadataRequest}
+   */
+  public  static final class GetRobotPartMetadataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetRobotPartMetadataRequest, GetRobotPartMetadataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetRobotPartMetadataRequest)
+      GetRobotPartMetadataRequestOrBuilder {
+    private GetRobotPartMetadataRequest() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.GetRobotPartMetadataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.GetRobotPartMetadataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.GetRobotPartMetadataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.GetRobotPartMetadataRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetRobotPartMetadataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.GetRobotPartMetadataRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetRobotPartMetadataRequest)
+        viam.app.v1.App.GetRobotPartMetadataRequestOrBuilder {
+      // Construct using viam.app.v1.App.GetRobotPartMetadataRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetRobotPartMetadataRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.GetRobotPartMetadataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.GetRobotPartMetadataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.GetRobotPartMetadataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.GetRobotPartMetadataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetRobotPartMetadataRequest)
+    private static final viam.app.v1.App.GetRobotPartMetadataRequest DEFAULT_INSTANCE;
+    static {
+      GetRobotPartMetadataRequest defaultInstance = new GetRobotPartMetadataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetRobotPartMetadataRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.GetRobotPartMetadataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetRobotPartMetadataRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetRobotPartMetadataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetRobotPartMetadataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetRobotPartMetadataResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    int getDataCount();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    boolean containsData(
+        java.lang.String key);
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getData();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getDataMap();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+
+    /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue);
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+
+    com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetRobotPartMetadataResponse}
+   */
+  public  static final class GetRobotPartMetadataResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetRobotPartMetadataResponse, GetRobotPartMetadataResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetRobotPartMetadataResponse)
+      GetRobotPartMetadataResponseOrBuilder {
+    private GetRobotPartMetadataResponse() {
+    }
+    public static final int DATA_FIELD_NUMBER = 1;
+    private static final class DataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, com.google.protobuf.Any> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.google.protobuf.Any.getDefaultInstance());
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.google.protobuf.Any> data_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetData() {
+      return data_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetMutableData() {
+      if (!data_.isMutable()) {
+        data_ = data_.mutableCopy();
+      }
+      return data_;
+    }
+    @java.lang.Override
+
+    public int getDataCount() {
+      return internalGetData().size();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsData(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetData().containsKey(key);
+    }
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+      return getDataMap();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetData());
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    private java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getMutableDataMap() {
+      return internalGetMutableData();
+    }
+
+    public static viam.app.v1.App.GetRobotPartMetadataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.GetRobotPartMetadataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.GetRobotPartMetadataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetRobotPartMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.GetRobotPartMetadataResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetRobotPartMetadataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.GetRobotPartMetadataResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetRobotPartMetadataResponse)
+        viam.app.v1.App.GetRobotPartMetadataResponseOrBuilder {
+      // Construct using viam.app.v1.App.GetRobotPartMetadataResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      @java.lang.Override
+
+      public int getDataCount() {
+        return instance.getDataMap().size();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getDataMap().containsKey(key);
+      }
+
+      public Builder clearData() {
+        copyOnWrite();
+        instance.getMutableDataMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+
+      public Builder removeData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getDataMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+        return getDataMap();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getDataMap());
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.protobuf.Any defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.Any getDataOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      public Builder putData(
+          java.lang.String key,
+          com.google.protobuf.Any value) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      public Builder putAllData(
+          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+        copyOnWrite();
+        instance.getMutableDataMap().putAll(values);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetRobotPartMetadataResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.GetRobotPartMetadataResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+              DataDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.GetRobotPartMetadataResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.GetRobotPartMetadataResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.GetRobotPartMetadataResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetRobotPartMetadataResponse)
+    private static final viam.app.v1.App.GetRobotPartMetadataResponse DEFAULT_INSTANCE;
+    static {
+      GetRobotPartMetadataResponse defaultInstance = new GetRobotPartMetadataResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetRobotPartMetadataResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.GetRobotPartMetadataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetRobotPartMetadataResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetRobotPartMetadataResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateRobotPartMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateRobotPartMetadataRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    int getDataCount();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    boolean containsData(
+        java.lang.String key);
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getData();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getDataMap();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+
+    /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue);
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+
+    com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateRobotPartMetadataRequest}
+   */
+  public  static final class UpdateRobotPartMetadataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateRobotPartMetadataRequest, UpdateRobotPartMetadataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateRobotPartMetadataRequest)
+      UpdateRobotPartMetadataRequestOrBuilder {
+    private UpdateRobotPartMetadataRequest() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private static final class DataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, com.google.protobuf.Any> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.google.protobuf.Any.getDefaultInstance());
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.google.protobuf.Any> data_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetData() {
+      return data_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetMutableData() {
+      if (!data_.isMutable()) {
+        data_ = data_.mutableCopy();
+      }
+      return data_;
+    }
+    @java.lang.Override
+
+    public int getDataCount() {
+      return internalGetData().size();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsData(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetData().containsKey(key);
+    }
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+      return getDataMap();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetData());
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    private java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getMutableDataMap() {
+      return internalGetMutableData();
+    }
+
+    public static viam.app.v1.App.UpdateRobotPartMetadataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.UpdateRobotPartMetadataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.UpdateRobotPartMetadataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.UpdateRobotPartMetadataRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateRobotPartMetadataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.UpdateRobotPartMetadataRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateRobotPartMetadataRequest)
+        viam.app.v1.App.UpdateRobotPartMetadataRequestOrBuilder {
+      // Construct using viam.app.v1.App.UpdateRobotPartMetadataRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      @java.lang.Override
+
+      public int getDataCount() {
+        return instance.getDataMap().size();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getDataMap().containsKey(key);
+      }
+
+      public Builder clearData() {
+        copyOnWrite();
+        instance.getMutableDataMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+
+      public Builder removeData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getDataMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+        return getDataMap();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getDataMap());
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.protobuf.Any defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.Any getDataOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      public Builder putData(
+          java.lang.String key,
+          com.google.protobuf.Any value) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      public Builder putAllData(
+          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+        copyOnWrite();
+        instance.getMutableDataMap().putAll(values);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateRobotPartMetadataRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.UpdateRobotPartMetadataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+              "data_",
+              DataDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0001\u0000\u0000\u0001\u0208\u00022";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.UpdateRobotPartMetadataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.UpdateRobotPartMetadataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.UpdateRobotPartMetadataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateRobotPartMetadataRequest)
+    private static final viam.app.v1.App.UpdateRobotPartMetadataRequest DEFAULT_INSTANCE;
+    static {
+      UpdateRobotPartMetadataRequest defaultInstance = new UpdateRobotPartMetadataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateRobotPartMetadataRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.UpdateRobotPartMetadataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateRobotPartMetadataRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateRobotPartMetadataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateRobotPartMetadataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateRobotPartMetadataResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateRobotPartMetadataResponse}
+   */
+  public  static final class UpdateRobotPartMetadataResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateRobotPartMetadataResponse, UpdateRobotPartMetadataResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateRobotPartMetadataResponse)
+      UpdateRobotPartMetadataResponseOrBuilder {
+    private UpdateRobotPartMetadataResponse() {
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.UpdateRobotPartMetadataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.UpdateRobotPartMetadataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateRobotPartMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.UpdateRobotPartMetadataResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateRobotPartMetadataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.UpdateRobotPartMetadataResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateRobotPartMetadataResponse)
+        viam.app.v1.App.UpdateRobotPartMetadataResponseOrBuilder {
+      // Construct using viam.app.v1.App.UpdateRobotPartMetadataResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateRobotPartMetadataResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.UpdateRobotPartMetadataResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.UpdateRobotPartMetadataResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.UpdateRobotPartMetadataResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.UpdateRobotPartMetadataResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateRobotPartMetadataResponse)
+    private static final viam.app.v1.App.UpdateRobotPartMetadataResponse DEFAULT_INSTANCE;
+    static {
+      UpdateRobotPartMetadataResponse defaultInstance = new UpdateRobotPartMetadataResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateRobotPartMetadataResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.UpdateRobotPartMetadataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateRobotPartMetadataResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateRobotPartMetadataResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -48206,6 +52466,18 @@ public final class App {
      * @return The error.
      */
     viam.app.v1.App.FragmentError getError();
+
+    /**
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    java.lang.String getRevision();
+    /**
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    com.google.protobuf.ByteString
+        getRevisionBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.ResolvedFragment}
@@ -48217,6 +52489,7 @@ public final class App {
       ResolvedFragmentOrBuilder {
     private ResolvedFragment() {
       fragmentId_ = "";
+      revision_ = "";
     }
     private int bitField0_;
     public static final int FRAGMENT_ID_FIELD_NUMBER = 1;
@@ -48356,6 +52629,53 @@ public final class App {
      */
     private void clearError() {  error_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int REVISION_FIELD_NUMBER = 4;
+    private java.lang.String revision_;
+    /**
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     * @return The revision.
+     */
+    @java.lang.Override
+    public java.lang.String getRevision() {
+      return revision_;
+    }
+    /**
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     * @return The bytes for revision.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRevisionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(revision_);
+    }
+    /**
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     * @param value The revision to set.
+     */
+    private void setRevision(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      revision_ = value;
+    }
+    /**
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     */
+    private void clearRevision() {
+
+      revision_ = getDefaultInstance().getRevision();
+    }
+    /**
+     * <code>string revision = 4 [json_name = "revision"];</code>
+     * @param value The bytes for revision to set.
+     */
+    private void setRevisionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      revision_ = value.toStringUtf8();
+
     }
 
     public static viam.app.v1.App.ResolvedFragment parseFrom(
@@ -48598,6 +52918,55 @@ public final class App {
         return this;
       }
 
+      /**
+       * <code>string revision = 4 [json_name = "revision"];</code>
+       * @return The revision.
+       */
+      @java.lang.Override
+      public java.lang.String getRevision() {
+        return instance.getRevision();
+      }
+      /**
+       * <code>string revision = 4 [json_name = "revision"];</code>
+       * @return The bytes for revision.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRevisionBytes() {
+        return instance.getRevisionBytes();
+      }
+      /**
+       * <code>string revision = 4 [json_name = "revision"];</code>
+       * @param value The revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevision(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRevision(value);
+        return this;
+      }
+      /**
+       * <code>string revision = 4 [json_name = "revision"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRevision() {
+        copyOnWrite();
+        instance.clearRevision();
+        return this;
+      }
+      /**
+       * <code>string revision = 4 [json_name = "revision"];</code>
+       * @param value The bytes for revision to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRevisionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRevisionBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ResolvedFragment)
     }
     @java.lang.Override
@@ -48618,10 +52987,11 @@ public final class App {
               "fragmentId_",
               "resolvedConfig_",
               "error_",
+              "revision_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u1009\u0001";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001\u0004\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -57468,6 +61838,434 @@ public final class App {
     }
   }
 
+  public interface AdditionalFragmentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.AdditionalFragment)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
+     */
+    java.lang.String getFragmentId();
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The bytes for fragmentId.
+     */
+    com.google.protobuf.ByteString
+        getFragmentIdBytes();
+
+    /**
+     * <code>optional string version = 2 [json_name = "version"];</code>
+     * @return Whether the version field is set.
+     */
+    boolean hasVersion();
+    /**
+     * <code>optional string version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <code>optional string version = 2 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.AdditionalFragment}
+   */
+  public  static final class AdditionalFragment extends
+      com.google.protobuf.GeneratedMessageLite<
+          AdditionalFragment, AdditionalFragment.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.AdditionalFragment)
+      AdditionalFragmentOrBuilder {
+    private AdditionalFragment() {
+      fragmentId_ = "";
+      version_ = "";
+    }
+    private int bitField0_;
+    public static final int FRAGMENT_ID_FIELD_NUMBER = 1;
+    private java.lang.String fragmentId_;
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The fragmentId.
+     */
+    @java.lang.Override
+    public java.lang.String getFragmentId() {
+      return fragmentId_;
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @return The bytes for fragmentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFragmentIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(fragmentId_);
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @param value The fragmentId to set.
+     */
+    private void setFragmentId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      fragmentId_ = value;
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     */
+    private void clearFragmentId() {
+
+      fragmentId_ = getDefaultInstance().getFragmentId();
+    }
+    /**
+     * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+     * @param value The bytes for fragmentId to set.
+     */
+    private void setFragmentIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fragmentId_ = value.toStringUtf8();
+
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private java.lang.String version_;
+    /**
+     * <code>optional string version = 2 [json_name = "version"];</code>
+     * @return Whether the version field is set.
+     */
+    @java.lang.Override
+    public boolean hasVersion() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      return version_;
+    }
+    /**
+     * <code>optional string version = 2 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(version_);
+    }
+    /**
+     * <code>optional string version = 2 [json_name = "version"];</code>
+     * @param value The version to set.
+     */
+    private void setVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      version_ = value;
+    }
+    /**
+     * <code>optional string version = 2 [json_name = "version"];</code>
+     */
+    private void clearVersion() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      version_ = getDefaultInstance().getVersion();
+    }
+    /**
+     * <code>optional string version = 2 [json_name = "version"];</code>
+     * @param value The bytes for version to set.
+     */
+    private void setVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      version_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
+    }
+
+    public static viam.app.v1.App.AdditionalFragment parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.AdditionalFragment parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.AdditionalFragment parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.AdditionalFragment parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.AdditionalFragment parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.AdditionalFragment parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.AdditionalFragment parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.AdditionalFragment parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.AdditionalFragment parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.AdditionalFragment parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.AdditionalFragment parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.AdditionalFragment parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.AdditionalFragment prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.AdditionalFragment}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.AdditionalFragment, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.AdditionalFragment)
+        viam.app.v1.App.AdditionalFragmentOrBuilder {
+      // Construct using viam.app.v1.App.AdditionalFragment.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return The fragmentId.
+       */
+      @java.lang.Override
+      public java.lang.String getFragmentId() {
+        return instance.getFragmentId();
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return The bytes for fragmentId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFragmentIdBytes() {
+        return instance.getFragmentIdBytes();
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @param value The fragmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFragmentId(value);
+        return this;
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFragmentId() {
+        copyOnWrite();
+        instance.clearFragmentId();
+        return this;
+      }
+      /**
+       * <code>string fragment_id = 1 [json_name = "fragmentId"];</code>
+       * @param value The bytes for fragmentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFragmentIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string version = 2 [json_name = "version"];</code>
+       * @return Whether the version field is set.
+       */
+      @java.lang.Override
+      public boolean hasVersion() {
+        return instance.hasVersion();
+      }
+      /**
+       * <code>optional string version = 2 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public java.lang.String getVersion() {
+        return instance.getVersion();
+      }
+      /**
+       * <code>optional string version = 2 [json_name = "version"];</code>
+       * @return The bytes for version.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        return instance.getVersionBytes();
+      }
+      /**
+       * <code>optional string version = 2 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setVersion(value);
+        return this;
+      }
+      /**
+       * <code>optional string version = 2 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        copyOnWrite();
+        instance.clearVersion();
+        return this;
+      }
+      /**
+       * <code>optional string version = 2 [json_name = "version"];</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setVersionBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.AdditionalFragment)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.AdditionalFragment();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "fragmentId_",
+              "version_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1208" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.AdditionalFragment> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.AdditionalFragment.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.AdditionalFragment>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.AdditionalFragment)
+    private static final viam.app.v1.App.AdditionalFragment DEFAULT_INSTANCE;
+    static {
+      AdditionalFragment defaultInstance = new AdditionalFragment();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AdditionalFragment.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.AdditionalFragment getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<AdditionalFragment> PARSER;
+
+    public static com.google.protobuf.Parser<AdditionalFragment> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface ListMachineFragmentsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.ListMachineFragmentsRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -57496,8 +62294,7 @@ public final class App {
 
     /**
      * <pre>
-     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-     * provisionally added to the machine alongside existing fragments.
+     * TODO(APP-7642): Mark this field as deprecated
      * </pre>
      *
      * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57507,8 +62304,7 @@ public final class App {
         getAdditionalFragmentIdsList();
     /**
      * <pre>
-     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-     * provisionally added to the machine alongside existing fragments.
+     * TODO(APP-7642): Mark this field as deprecated
      * </pre>
      *
      * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57517,8 +62313,7 @@ public final class App {
     int getAdditionalFragmentIdsCount();
     /**
      * <pre>
-     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-     * provisionally added to the machine alongside existing fragments.
+     * TODO(APP-7642): Mark this field as deprecated
      * </pre>
      *
      * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57528,8 +62323,7 @@ public final class App {
     java.lang.String getAdditionalFragmentIds(int index);
     /**
      * <pre>
-     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-     * provisionally added to the machine alongside existing fragments.
+     * TODO(APP-7642): Mark this field as deprecated
      * </pre>
      *
      * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57538,6 +62332,35 @@ public final class App {
      */
     com.google.protobuf.ByteString
         getAdditionalFragmentIdsBytes(int index);
+
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    java.util.List<viam.app.v1.App.AdditionalFragment> 
+        getAdditionalFragmentsList();
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    viam.app.v1.App.AdditionalFragment getAdditionalFragments(int index);
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    int getAdditionalFragmentsCount();
   }
   /**
    * Protobuf type {@code viam.app.v1.ListMachineFragmentsRequest}
@@ -57550,6 +62373,7 @@ public final class App {
     private ListMachineFragmentsRequest() {
       machineId_ = "";
       additionalFragmentIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      additionalFragments_ = emptyProtobufList();
     }
     public static final int MACHINE_ID_FIELD_NUMBER = 1;
     private java.lang.String machineId_;
@@ -57627,8 +62451,7 @@ public final class App {
     private com.google.protobuf.Internal.ProtobufList<java.lang.String> additionalFragmentIds_;
     /**
      * <pre>
-     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-     * provisionally added to the machine alongside existing fragments.
+     * TODO(APP-7642): Mark this field as deprecated
      * </pre>
      *
      * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57640,8 +62463,7 @@ public final class App {
     }
     /**
      * <pre>
-     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-     * provisionally added to the machine alongside existing fragments.
+     * TODO(APP-7642): Mark this field as deprecated
      * </pre>
      *
      * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57653,8 +62475,7 @@ public final class App {
     }
     /**
      * <pre>
-     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-     * provisionally added to the machine alongside existing fragments.
+     * TODO(APP-7642): Mark this field as deprecated
      * </pre>
      *
      * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57667,8 +62488,7 @@ public final class App {
     }
     /**
      * <pre>
-     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-     * provisionally added to the machine alongside existing fragments.
+     * TODO(APP-7642): Mark this field as deprecated
      * </pre>
      *
      * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57690,8 +62510,7 @@ public final class App {
     }
     /**
      * <pre>
-     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-     * provisionally added to the machine alongside existing fragments.
+     * TODO(APP-7642): Mark this field as deprecated
      * </pre>
      *
      * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57706,8 +62525,7 @@ public final class App {
     }
     /**
      * <pre>
-     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-     * provisionally added to the machine alongside existing fragments.
+     * TODO(APP-7642): Mark this field as deprecated
      * </pre>
      *
      * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57721,8 +62539,7 @@ public final class App {
     }
     /**
      * <pre>
-     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-     * provisionally added to the machine alongside existing fragments.
+     * TODO(APP-7642): Mark this field as deprecated
      * </pre>
      *
      * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57736,8 +62553,7 @@ public final class App {
     }
     /**
      * <pre>
-     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-     * provisionally added to the machine alongside existing fragments.
+     * TODO(APP-7642): Mark this field as deprecated
      * </pre>
      *
      * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57747,8 +62563,7 @@ public final class App {
     }
     /**
      * <pre>
-     * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-     * provisionally added to the machine alongside existing fragments.
+     * TODO(APP-7642): Mark this field as deprecated
      * </pre>
      *
      * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57759,6 +62574,155 @@ public final class App {
       checkByteStringIsUtf8(value);
       ensureAdditionalFragmentIdsIsMutable();
       additionalFragmentIds_.add(value.toStringUtf8());
+    }
+
+    public static final int ADDITIONAL_FRAGMENTS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.AdditionalFragment> additionalFragments_;
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.App.AdditionalFragment> getAdditionalFragmentsList() {
+      return additionalFragments_;
+    }
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.App.AdditionalFragmentOrBuilder> 
+        getAdditionalFragmentsOrBuilderList() {
+      return additionalFragments_;
+    }
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    @java.lang.Override
+    public int getAdditionalFragmentsCount() {
+      return additionalFragments_.size();
+    }
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.AdditionalFragment getAdditionalFragments(int index) {
+      return additionalFragments_.get(index);
+    }
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    public viam.app.v1.App.AdditionalFragmentOrBuilder getAdditionalFragmentsOrBuilder(
+        int index) {
+      return additionalFragments_.get(index);
+    }
+    private void ensureAdditionalFragmentsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.App.AdditionalFragment> tmp = additionalFragments_;
+      if (!tmp.isModifiable()) {
+        additionalFragments_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    private void setAdditionalFragments(
+        int index, viam.app.v1.App.AdditionalFragment value) {
+      value.getClass();
+  ensureAdditionalFragmentsIsMutable();
+      additionalFragments_.set(index, value);
+    }
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    private void addAdditionalFragments(viam.app.v1.App.AdditionalFragment value) {
+      value.getClass();
+  ensureAdditionalFragmentsIsMutable();
+      additionalFragments_.add(value);
+    }
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    private void addAdditionalFragments(
+        int index, viam.app.v1.App.AdditionalFragment value) {
+      value.getClass();
+  ensureAdditionalFragmentsIsMutable();
+      additionalFragments_.add(index, value);
+    }
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    private void addAllAdditionalFragments(
+        java.lang.Iterable<? extends viam.app.v1.App.AdditionalFragment> values) {
+      ensureAdditionalFragmentsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, additionalFragments_);
+    }
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    private void clearAdditionalFragments() {
+      additionalFragments_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * additional fragments to append to the response. useful when needing to view fragments that will be
+     * provisionally added to the machine alongside existing fragments.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+     */
+    private void removeAdditionalFragments(int index) {
+      ensureAdditionalFragmentsIsMutable();
+      additionalFragments_.remove(index);
     }
 
     public static viam.app.v1.App.ListMachineFragmentsRequest parseFrom(
@@ -57934,8 +62898,7 @@ public final class App {
 
       /**
        * <pre>
-       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-       * provisionally added to the machine alongside existing fragments.
+       * TODO(APP-7642): Mark this field as deprecated
        * </pre>
        *
        * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57949,8 +62912,7 @@ public final class App {
       }
       /**
        * <pre>
-       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-       * provisionally added to the machine alongside existing fragments.
+       * TODO(APP-7642): Mark this field as deprecated
        * </pre>
        *
        * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57962,8 +62924,7 @@ public final class App {
       }
       /**
        * <pre>
-       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-       * provisionally added to the machine alongside existing fragments.
+       * TODO(APP-7642): Mark this field as deprecated
        * </pre>
        *
        * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57976,8 +62937,7 @@ public final class App {
       }
       /**
        * <pre>
-       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-       * provisionally added to the machine alongside existing fragments.
+       * TODO(APP-7642): Mark this field as deprecated
        * </pre>
        *
        * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -57991,8 +62951,7 @@ public final class App {
       }
       /**
        * <pre>
-       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-       * provisionally added to the machine alongside existing fragments.
+       * TODO(APP-7642): Mark this field as deprecated
        * </pre>
        *
        * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -58008,8 +62967,7 @@ public final class App {
       }
       /**
        * <pre>
-       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-       * provisionally added to the machine alongside existing fragments.
+       * TODO(APP-7642): Mark this field as deprecated
        * </pre>
        *
        * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -58024,8 +62982,7 @@ public final class App {
       }
       /**
        * <pre>
-       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-       * provisionally added to the machine alongside existing fragments.
+       * TODO(APP-7642): Mark this field as deprecated
        * </pre>
        *
        * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -58040,8 +62997,7 @@ public final class App {
       }
       /**
        * <pre>
-       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-       * provisionally added to the machine alongside existing fragments.
+       * TODO(APP-7642): Mark this field as deprecated
        * </pre>
        *
        * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -58054,8 +63010,7 @@ public final class App {
       }
       /**
        * <pre>
-       * additional fragment_ids to append to the response. useful when needing to view fragments that will be
-       * provisionally added to the machine alongside existing fragments.
+       * TODO(APP-7642): Mark this field as deprecated
        * </pre>
        *
        * <code>repeated string additional_fragment_ids = 2 [json_name = "additionalFragmentIds"];</code>
@@ -58066,6 +63021,168 @@ public final class App {
           com.google.protobuf.ByteString value) {
         copyOnWrite();
         instance.addAdditionalFragmentIdsBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * additional fragments to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.App.AdditionalFragment> getAdditionalFragmentsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getAdditionalFragmentsList());
+      }
+      /**
+       * <pre>
+       * additional fragments to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+       */
+      @java.lang.Override
+      public int getAdditionalFragmentsCount() {
+        return instance.getAdditionalFragmentsCount();
+      }/**
+       * <pre>
+       * additional fragments to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.AdditionalFragment getAdditionalFragments(int index) {
+        return instance.getAdditionalFragments(index);
+      }
+      /**
+       * <pre>
+       * additional fragments to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+       */
+      public Builder setAdditionalFragments(
+          int index, viam.app.v1.App.AdditionalFragment value) {
+        copyOnWrite();
+        instance.setAdditionalFragments(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * additional fragments to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+       */
+      public Builder setAdditionalFragments(
+          int index, viam.app.v1.App.AdditionalFragment.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAdditionalFragments(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * additional fragments to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+       */
+      public Builder addAdditionalFragments(viam.app.v1.App.AdditionalFragment value) {
+        copyOnWrite();
+        instance.addAdditionalFragments(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * additional fragments to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+       */
+      public Builder addAdditionalFragments(
+          int index, viam.app.v1.App.AdditionalFragment value) {
+        copyOnWrite();
+        instance.addAdditionalFragments(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * additional fragments to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+       */
+      public Builder addAdditionalFragments(
+          viam.app.v1.App.AdditionalFragment.Builder builderForValue) {
+        copyOnWrite();
+        instance.addAdditionalFragments(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * additional fragments to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+       */
+      public Builder addAdditionalFragments(
+          int index, viam.app.v1.App.AdditionalFragment.Builder builderForValue) {
+        copyOnWrite();
+        instance.addAdditionalFragments(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * additional fragments to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+       */
+      public Builder addAllAdditionalFragments(
+          java.lang.Iterable<? extends viam.app.v1.App.AdditionalFragment> values) {
+        copyOnWrite();
+        instance.addAllAdditionalFragments(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * additional fragments to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+       */
+      public Builder clearAdditionalFragments() {
+        copyOnWrite();
+        instance.clearAdditionalFragments();
+        return this;
+      }
+      /**
+       * <pre>
+       * additional fragments to append to the response. useful when needing to view fragments that will be
+       * provisionally added to the machine alongside existing fragments.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.AdditionalFragment additional_fragments = 3 [json_name = "additionalFragments"];</code>
+       */
+      public Builder removeAdditionalFragments(int index) {
+        copyOnWrite();
+        instance.removeAdditionalFragments(index);
         return this;
       }
 
@@ -58087,10 +63204,12 @@ public final class App {
             java.lang.Object[] objects = new java.lang.Object[] {
               "machineId_",
               "additionalFragmentIds_",
+              "additionalFragments_",
+              viam.app.v1.App.AdditionalFragment.class,
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u0208\u0002\u021a" +
-                "";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0002\u0000\u0001\u0208\u0002\u021a" +
+                "\u0003\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -61130,6 +66249,1426 @@ public final class App {
     private static volatile com.google.protobuf.Parser<DeleteRobotResponse> PARSER;
 
     public static com.google.protobuf.Parser<DeleteRobotResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetRobotMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetRobotMetadataRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetRobotMetadataRequest}
+   */
+  public  static final class GetRobotMetadataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetRobotMetadataRequest, GetRobotMetadataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetRobotMetadataRequest)
+      GetRobotMetadataRequestOrBuilder {
+    private GetRobotMetadataRequest() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.GetRobotMetadataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetRobotMetadataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetRobotMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotMetadataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetRobotMetadataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotMetadataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetRobotMetadataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.GetRobotMetadataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.GetRobotMetadataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetRobotMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.GetRobotMetadataRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetRobotMetadataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.GetRobotMetadataRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetRobotMetadataRequest)
+        viam.app.v1.App.GetRobotMetadataRequestOrBuilder {
+      // Construct using viam.app.v1.App.GetRobotMetadataRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetRobotMetadataRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.GetRobotMetadataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.GetRobotMetadataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.GetRobotMetadataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.GetRobotMetadataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetRobotMetadataRequest)
+    private static final viam.app.v1.App.GetRobotMetadataRequest DEFAULT_INSTANCE;
+    static {
+      GetRobotMetadataRequest defaultInstance = new GetRobotMetadataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetRobotMetadataRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.GetRobotMetadataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetRobotMetadataRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetRobotMetadataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetRobotMetadataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetRobotMetadataResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    int getDataCount();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    boolean containsData(
+        java.lang.String key);
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getData();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getDataMap();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+
+    /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue);
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+
+    com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetRobotMetadataResponse}
+   */
+  public  static final class GetRobotMetadataResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetRobotMetadataResponse, GetRobotMetadataResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetRobotMetadataResponse)
+      GetRobotMetadataResponseOrBuilder {
+    private GetRobotMetadataResponse() {
+    }
+    public static final int DATA_FIELD_NUMBER = 1;
+    private static final class DataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, com.google.protobuf.Any> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.google.protobuf.Any.getDefaultInstance());
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.google.protobuf.Any> data_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetData() {
+      return data_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetMutableData() {
+      if (!data_.isMutable()) {
+        data_ = data_.mutableCopy();
+      }
+      return data_;
+    }
+    @java.lang.Override
+
+    public int getDataCount() {
+      return internalGetData().size();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsData(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetData().containsKey(key);
+    }
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+      return getDataMap();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetData());
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     */
+    private java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getMutableDataMap() {
+      return internalGetMutableData();
+    }
+
+    public static viam.app.v1.App.GetRobotMetadataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetRobotMetadataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetRobotMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotMetadataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetRobotMetadataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotMetadataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetRobotMetadataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.GetRobotMetadataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.GetRobotMetadataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetRobotMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetRobotMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.GetRobotMetadataResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetRobotMetadataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.GetRobotMetadataResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetRobotMetadataResponse)
+        viam.app.v1.App.GetRobotMetadataResponseOrBuilder {
+      // Construct using viam.app.v1.App.GetRobotMetadataResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      @java.lang.Override
+
+      public int getDataCount() {
+        return instance.getDataMap().size();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getDataMap().containsKey(key);
+      }
+
+      public Builder clearData() {
+        copyOnWrite();
+        instance.getMutableDataMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+
+      public Builder removeData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getDataMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+        return getDataMap();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getDataMap());
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.protobuf.Any defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.Any getDataOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      public Builder putData(
+          java.lang.String key,
+          com.google.protobuf.Any value) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       */
+      public Builder putAllData(
+          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+        copyOnWrite();
+        instance.getMutableDataMap().putAll(values);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetRobotMetadataResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.GetRobotMetadataResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+              DataDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.GetRobotMetadataResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.GetRobotMetadataResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.GetRobotMetadataResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetRobotMetadataResponse)
+    private static final viam.app.v1.App.GetRobotMetadataResponse DEFAULT_INSTANCE;
+    static {
+      GetRobotMetadataResponse defaultInstance = new GetRobotMetadataResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetRobotMetadataResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.GetRobotMetadataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetRobotMetadataResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetRobotMetadataResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateRobotMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateRobotMetadataRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    int getDataCount();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    boolean containsData(
+        java.lang.String key);
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getData();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getDataMap();
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+
+    /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue);
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+
+    com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateRobotMetadataRequest}
+   */
+  public  static final class UpdateRobotMetadataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateRobotMetadataRequest, UpdateRobotMetadataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateRobotMetadataRequest)
+      UpdateRobotMetadataRequestOrBuilder {
+    private UpdateRobotMetadataRequest() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private static final class DataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, com.google.protobuf.Any> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.google.protobuf.Any.getDefaultInstance());
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.google.protobuf.Any> data_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetData() {
+      return data_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
+    internalGetMutableData() {
+      if (!data_.isMutable()) {
+        data_ = data_.mutableCopy();
+      }
+      return data_;
+    }
+    @java.lang.Override
+
+    public int getDataCount() {
+      return internalGetData().size();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsData(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetData().containsKey(key);
+    }
+    /**
+     * Use {@link #getDataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+      return getDataMap();
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetData());
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.Any defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+
+    public com.google.protobuf.Any getDataOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+          internalGetData();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     */
+    private java.util.Map<java.lang.String, com.google.protobuf.Any>
+    getMutableDataMap() {
+      return internalGetMutableData();
+    }
+
+    public static viam.app.v1.App.UpdateRobotMetadataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.UpdateRobotMetadataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.UpdateRobotMetadataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.UpdateRobotMetadataRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateRobotMetadataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.UpdateRobotMetadataRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateRobotMetadataRequest)
+        viam.app.v1.App.UpdateRobotMetadataRequestOrBuilder {
+      // Construct using viam.app.v1.App.UpdateRobotMetadataRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      @java.lang.Override
+
+      public int getDataCount() {
+        return instance.getDataMap().size();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getDataMap().containsKey(key);
+      }
+
+      public Builder clearData() {
+        copyOnWrite();
+        instance.getMutableDataMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+
+      public Builder removeData(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getDataMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
+        return getDataMap();
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getDataMap());
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public /* nullable */
+com.google.protobuf.Any getDataOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.protobuf.Any defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+
+      public com.google.protobuf.Any getDataOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
+            instance.getDataMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      public Builder putData(
+          java.lang.String key,
+          com.google.protobuf.Any value) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableDataMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       */
+      public Builder putAllData(
+          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+        copyOnWrite();
+        instance.getMutableDataMap().putAll(values);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateRobotMetadataRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.UpdateRobotMetadataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+              "data_",
+              DataDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0001\u0000\u0000\u0001\u0208\u00022";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.UpdateRobotMetadataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.UpdateRobotMetadataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.UpdateRobotMetadataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateRobotMetadataRequest)
+    private static final viam.app.v1.App.UpdateRobotMetadataRequest DEFAULT_INSTANCE;
+    static {
+      UpdateRobotMetadataRequest defaultInstance = new UpdateRobotMetadataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateRobotMetadataRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.UpdateRobotMetadataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateRobotMetadataRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateRobotMetadataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateRobotMetadataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateRobotMetadataResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateRobotMetadataResponse}
+   */
+  public  static final class UpdateRobotMetadataResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateRobotMetadataResponse, UpdateRobotMetadataResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateRobotMetadataResponse)
+      UpdateRobotMetadataResponseOrBuilder {
+    private UpdateRobotMetadataResponse() {
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.UpdateRobotMetadataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.UpdateRobotMetadataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.UpdateRobotMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.UpdateRobotMetadataResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateRobotMetadataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.UpdateRobotMetadataResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateRobotMetadataResponse)
+        viam.app.v1.App.UpdateRobotMetadataResponseOrBuilder {
+      // Construct using viam.app.v1.App.UpdateRobotMetadataResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateRobotMetadataResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.UpdateRobotMetadataResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.UpdateRobotMetadataResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.UpdateRobotMetadataResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.UpdateRobotMetadataResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateRobotMetadataResponse)
+    private static final viam.app.v1.App.UpdateRobotMetadataResponse DEFAULT_INSTANCE;
+    static {
+      UpdateRobotMetadataResponse defaultInstance = new UpdateRobotMetadataResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateRobotMetadataResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.UpdateRobotMetadataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateRobotMetadataResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateRobotMetadataResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
