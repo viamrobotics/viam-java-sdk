@@ -116,94 +116,242 @@ implements <a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interf
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearCheckInterval()" class="member-name-link">clearCheckInterval</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearAdditionalNetworks()" class="member-name-link">clearAdditionalNetworks</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- how often this request should be repeated</div>
+<div class="block"><code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSubsystemConfigs()" class="member-name-link">clearSubsystemConfigs</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#containsSubsystemConfigs(java.lang.String)" class="member-name-link">containsSubsystemConfigs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearAdvancedSettings()" class="member-name-link">clearAdvancedSettings</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ various settings that are passed directly to device Agent</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearAgentUpdateInfo()" class="member-name-link">clearAgentUpdateInfo</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- subsystems to be installed/configured/updated
- note: previously installed subsystems will be removed from the system if removed from this list</div>
+ update info for agent and viam-server, parsed/processed in App</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Duration</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCheckInterval()" class="member-name-link">getCheckInterval</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearCheckInterval()" class="member-name-link">clearCheckInterval</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  how often this request should be repeated</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearNetworkConfiguration()" class="member-name-link">clearNetworkConfiguration</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#clearSubsystemConfigs()" class="member-name-link">clearSubsystemConfigs</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSystemConfiguration()" class="member-name-link">clearSystemConfiguration</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearViamServerUpdateInfo()" class="member-name-link">clearViamServerUpdateInfo</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#containsSubsystemConfigs(java.lang.String)" class="member-name-link">containsSubsystemConfigs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAdditionalNetworks()" class="member-name-link">getAdditionalNetworks</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAdvancedSettings()" class="member-name-link">getAdvancedSettings</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ various settings that are passed directly to device Agent</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.UpdateInfo.html" title="class in viam.app.agent.v1">Agent.UpdateInfo</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAgentUpdateInfo()" class="member-name-link">getAgentUpdateInfo</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ update info for agent and viam-server, parsed/processed in App</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Duration</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCheckInterval()" class="member-name-link">getCheckInterval</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ how often this request should be repeated</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNetworkConfiguration()" class="member-name-link">getNetworkConfiguration</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getSubsystemConfigs()" class="member-name-link">getSubsystemConfigs</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSubsystemConfigsCount()" class="member-name-link">getSubsystemConfigsCount</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- subsystems to be installed/configured/updated
- note: previously installed subsystems will be removed from the system if removed from this list</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getSubsystemConfigsCount()" class="member-name-link">getSubsystemConfigsCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSubsystemConfigsMap()" class="member-name-link">getSubsystemConfigsMap</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- subsystems to be installed/configured/updated
- note: previously installed subsystems will be removed from the system if removed from this list</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getSubsystemConfigsMap()" class="member-name-link">getSubsystemConfigsMap</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSubsystemConfigsOrDefault(java.lang.String,viam.app.agent.v1.Agent.DeviceSubsystemConfig)" class="member-name-link">getSubsystemConfigsOrDefault</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getSubsystemConfigsOrDefault(java.lang.String,viam.app.agent.v1.Agent.DeviceSubsystemConfig)" class="member-name-link">getSubsystemConfigsOrDefault</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a>&nbsp;defaultValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- subsystems to be installed/configured/updated
- note: previously installed subsystems will be removed from the system if removed from this list</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSubsystemConfigsOrThrow(java.lang.String)" class="member-name-link">getSubsystemConfigsOrThrow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getSubsystemConfigsOrThrow(java.lang.String)" class="member-name-link">getSubsystemConfigsOrThrow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSystemConfiguration()" class="member-name-link">getSystemConfiguration</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.UpdateInfo.html" title="class in viam.app.agent.v1">Agent.UpdateInfo</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getViamServerUpdateInfo()" class="member-name-link">getViamServerUpdateInfo</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- subsystems to be installed/configured/updated
- note: previously installed subsystems will be removed from the system if removed from this list</div>
+<div class="block"><code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCheckInterval()" class="member-name-link">hasCheckInterval</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAdditionalNetworks()" class="member-name-link">hasAdditionalNetworks</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAdvancedSettings()" class="member-name-link">hasAdvancedSettings</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ various settings that are passed directly to device Agent</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAgentUpdateInfo()" class="member-name-link">hasAgentUpdateInfo</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- how often this request should be repeated</div>
+ update info for agent and viam-server, parsed/processed in App</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeCheckInterval(com.google.protobuf.Duration)" class="member-name-link">mergeCheckInterval</a><wbr>(com.google.protobuf.Duration&nbsp;value)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCheckInterval()" class="member-name-link">hasCheckInterval</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  how often this request should be repeated</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putAllSubsystemConfigs(java.util.Map)" class="member-name-link">putAllSubsystemConfigs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a>&gt;&nbsp;values)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasNetworkConfiguration()" class="member-name-link">hasNetworkConfiguration</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- subsystems to be installed/configured/updated
- note: previously installed subsystems will be removed from the system if removed from this list</div>
+<div class="block"><code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSystemConfiguration()" class="member-name-link">hasSystemConfiguration</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasViamServerUpdateInfo()" class="member-name-link">hasViamServerUpdateInfo</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putSubsystemConfigs(java.lang.String,viam.app.agent.v1.Agent.DeviceSubsystemConfig)" class="member-name-link">putSubsystemConfigs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeAdditionalNetworks(com.google.protobuf.Struct)" class="member-name-link">mergeAdditionalNetworks</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeAdvancedSettings(com.google.protobuf.Struct)" class="member-name-link">mergeAdvancedSettings</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ various settings that are passed directly to device Agent</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeAgentUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo)" class="member-name-link">mergeAgentUpdateInfo</a><wbr>(<a href="Agent.UpdateInfo.html" title="class in viam.app.agent.v1">Agent.UpdateInfo</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ update info for agent and viam-server, parsed/processed in App</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeCheckInterval(com.google.protobuf.Duration)" class="member-name-link">mergeCheckInterval</a><wbr>(com.google.protobuf.Duration&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ how often this request should be repeated</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeNetworkConfiguration(com.google.protobuf.Struct)" class="member-name-link">mergeNetworkConfiguration</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeSystemConfiguration(com.google.protobuf.Struct)" class="member-name-link">mergeSystemConfiguration</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeViamServerUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo)" class="member-name-link">mergeViamServerUpdateInfo</a><wbr>(<a href="Agent.UpdateInfo.html" title="class in viam.app.agent.v1">Agent.UpdateInfo</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#putAllSubsystemConfigs(java.util.Map)" class="member-name-link">putAllSubsystemConfigs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a>&gt;&nbsp;values)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#putSubsystemConfigs(java.lang.String,viam.app.agent.v1.Agent.DeviceSubsystemConfig)" class="member-name-link">putSubsystemConfigs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#removeSubsystemConfigs(java.lang.String)" class="member-name-link">removeSubsystemConfigs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAdditionalNetworks(com.google.protobuf.Struct)" class="member-name-link">setAdditionalNetworks</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- subsystems to be installed/configured/updated
- note: previously installed subsystems will be removed from the system if removed from this list</div>
+<div class="block"><code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeSubsystemConfigs(java.lang.String)" class="member-name-link">removeSubsystemConfigs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAdditionalNetworks(com.google.protobuf.Struct.Builder)" class="member-name-link">setAdditionalNetworks</a><wbr>(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAdvancedSettings(com.google.protobuf.Struct)" class="member-name-link">setAdvancedSettings</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ various settings that are passed directly to device Agent</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAdvancedSettings(com.google.protobuf.Struct.Builder)" class="member-name-link">setAdvancedSettings</a><wbr>(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- subsystems to be installed/configured/updated
- note: previously installed subsystems will be removed from the system if removed from this list</div>
+ various settings that are passed directly to device Agent</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAgentUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo)" class="member-name-link">setAgentUpdateInfo</a><wbr>(<a href="Agent.UpdateInfo.html" title="class in viam.app.agent.v1">Agent.UpdateInfo</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ update info for agent and viam-server, parsed/processed in App</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAgentUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo.Builder)" class="member-name-link">setAgentUpdateInfo</a><wbr>(<a href="Agent.UpdateInfo.Builder.html" title="class in viam.app.agent.v1">Agent.UpdateInfo.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ update info for agent and viam-server, parsed/processed in App</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCheckInterval(com.google.protobuf.Duration)" class="member-name-link">setCheckInterval</a><wbr>(com.google.protobuf.Duration&nbsp;value)</code></div>
@@ -216,6 +364,36 @@ implements <a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interf
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  how often this request should be repeated</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNetworkConfiguration(com.google.protobuf.Struct)" class="member-name-link">setNetworkConfiguration</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNetworkConfiguration(com.google.protobuf.Struct.Builder)" class="member-name-link">setNetworkConfiguration</a><wbr>(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSystemConfiguration(com.google.protobuf.Struct)" class="member-name-link">setSystemConfiguration</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSystemConfiguration(com.google.protobuf.Struct.Builder)" class="member-name-link">setSystemConfiguration</a><wbr>(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setViamServerUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo)" class="member-name-link">setViamServerUpdateInfo</a><wbr>(<a href="Agent.UpdateInfo.html" title="class in viam.app.agent.v1">Agent.UpdateInfo</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setViamServerUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo.Builder)" class="member-name-link">setViamServerUpdateInfo</a><wbr>(<a href="Agent.UpdateInfo.Builder.html" title="class in viam.app.agent.v1">Agent.UpdateInfo.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code></div>
 </div>
 </div>
 </div>
@@ -246,14 +424,17 @@ implements <a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interf
 <li>
 <section class="detail" id="getSubsystemConfigsCount()">
 <h3>getSubsystemConfigsCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getSubsystemConfigsCount</span>()</div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getSubsystemConfigsCount</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#getSubsystemConfigsCount()">Agent.DeviceAgentConfigResponseOrBuilder</a></code></span></div>
 <div class="block"><pre>
  subsystems to be installed/configured/updated
  note: previously installed subsystems will be removed from the system if removed from this list
+ DEPRECATED in favor of indidivual update_info and settings fields
  </pre>
 
- <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code></div>
+ <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#getSubsystemConfigsCount()">getSubsystemConfigsCount</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
@@ -263,13 +444,16 @@ implements <a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interf
 <li>
 <section class="detail" id="containsSubsystemConfigs(java.lang.String)">
 <h3>containsSubsystemConfigs</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">containsSubsystemConfigs</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">containsSubsystemConfigs</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><pre>
  subsystems to be installed/configured/updated
  note: previously installed subsystems will be removed from the system if removed from this list
+ DEPRECATED in favor of indidivual update_info and settings fields
  </pre>
 
- <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code></div>
+ <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#containsSubsystemConfigs(java.lang.String)">containsSubsystemConfigs</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
@@ -279,19 +463,24 @@ implements <a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interf
 <li>
 <section class="detail" id="clearSubsystemConfigs()">
 <h3>clearSubsystemConfigs</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">clearSubsystemConfigs</span>()</div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">clearSubsystemConfigs</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeSubsystemConfigs(java.lang.String)">
 <h3>removeSubsystemConfigs</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">removeSubsystemConfigs</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">removeSubsystemConfigs</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><pre>
  subsystems to be installed/configured/updated
  note: previously installed subsystems will be removed from the system if removed from this list
+ DEPRECATED in favor of indidivual update_info and settings fields
  </pre>
 
- <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code></div>
+ <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code></div>
 </section>
 </li>
 <li>
@@ -310,13 +499,16 @@ implements <a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interf
 <li>
 <section class="detail" id="getSubsystemConfigsMap()">
 <h3>getSubsystemConfigsMap</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a>&gt;</span>&nbsp;<span class="element-name">getSubsystemConfigsMap</span>()</div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a>&gt;</span>&nbsp;<span class="element-name">getSubsystemConfigsMap</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><pre>
  subsystems to be installed/configured/updated
  note: previously installed subsystems will be removed from the system if removed from this list
+ DEPRECATED in favor of indidivual update_info and settings fields
  </pre>
 
- <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code></div>
+ <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#getSubsystemConfigsMap()">getSubsystemConfigsMap</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
@@ -326,14 +518,17 @@ implements <a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interf
 <li>
 <section class="detail" id="getSubsystemConfigsOrDefault(java.lang.String,viam.app.agent.v1.Agent.DeviceSubsystemConfig)">
 <h3>getSubsystemConfigsOrDefault</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a></span>&nbsp;<span class="element-name">getSubsystemConfigsOrDefault</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a></span>&nbsp;<span class="element-name">getSubsystemConfigsOrDefault</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a>&nbsp;defaultValue)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><pre>
  subsystems to be installed/configured/updated
  note: previously installed subsystems will be removed from the system if removed from this list
+ DEPRECATED in favor of indidivual update_info and settings fields
  </pre>
 
- <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code></div>
+ <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#getSubsystemConfigsOrDefault(java.lang.String,viam.app.agent.v1.Agent.DeviceSubsystemConfig)">getSubsystemConfigsOrDefault</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
@@ -343,13 +538,16 @@ implements <a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interf
 <li>
 <section class="detail" id="getSubsystemConfigsOrThrow(java.lang.String)">
 <h3>getSubsystemConfigsOrThrow</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a></span>&nbsp;<span class="element-name">getSubsystemConfigsOrThrow</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a></span>&nbsp;<span class="element-name">getSubsystemConfigsOrThrow</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><pre>
  subsystems to be installed/configured/updated
  note: previously installed subsystems will be removed from the system if removed from this list
+ DEPRECATED in favor of indidivual update_info and settings fields
  </pre>
 
- <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code></div>
+ <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#getSubsystemConfigsOrThrow(java.lang.String)">getSubsystemConfigsOrThrow</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
@@ -359,26 +557,32 @@ implements <a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interf
 <li>
 <section class="detail" id="putSubsystemConfigs(java.lang.String,viam.app.agent.v1.Agent.DeviceSubsystemConfig)">
 <h3>putSubsystemConfigs</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">putSubsystemConfigs</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">putSubsystemConfigs</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a>&nbsp;value)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><pre>
  subsystems to be installed/configured/updated
  note: previously installed subsystems will be removed from the system if removed from this list
+ DEPRECATED in favor of indidivual update_info and settings fields
  </pre>
 
- <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code></div>
+ <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="putAllSubsystemConfigs(java.util.Map)">
 <h3>putAllSubsystemConfigs</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">putAllSubsystemConfigs</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a>&gt;&nbsp;values)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">putAllSubsystemConfigs</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Agent.DeviceSubsystemConfig.html" title="class in viam.app.agent.v1">Agent.DeviceSubsystemConfig</a>&gt;&nbsp;values)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><pre>
  subsystems to be installed/configured/updated
  note: previously installed subsystems will be removed from the system if removed from this list
+ DEPRECATED in favor of indidivual update_info and settings fields
  </pre>
 
- <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code></div>
+ <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code></div>
 </section>
 </li>
 <li>
@@ -457,6 +661,378 @@ implements <a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interf
  </pre>
 
  <code>.google.protobuf.Duration check_interval = 2 [json_name = "checkInterval"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasAgentUpdateInfo()">
+<h3>hasAgentUpdateInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasAgentUpdateInfo</span>()</div>
+<div class="block"><pre>
+ update info for agent and viam-server, parsed/processed in App
+ </pre>
+
+ <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#hasAgentUpdateInfo()">hasAgentUpdateInfo</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the agentUpdateInfo field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAgentUpdateInfo()">
+<h3>getAgentUpdateInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.UpdateInfo.html" title="class in viam.app.agent.v1">Agent.UpdateInfo</a></span>&nbsp;<span class="element-name">getAgentUpdateInfo</span>()</div>
+<div class="block"><pre>
+ update info for agent and viam-server, parsed/processed in App
+ </pre>
+
+ <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#getAgentUpdateInfo()">getAgentUpdateInfo</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The agentUpdateInfo.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setAgentUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo)">
+<h3>setAgentUpdateInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">setAgentUpdateInfo</span><wbr><span class="parameters">(<a href="Agent.UpdateInfo.html" title="class in viam.app.agent.v1">Agent.UpdateInfo</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ update info for agent and viam-server, parsed/processed in App
+ </pre>
+
+ <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setAgentUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo.Builder)">
+<h3>setAgentUpdateInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">setAgentUpdateInfo</span><wbr><span class="parameters">(<a href="Agent.UpdateInfo.Builder.html" title="class in viam.app.agent.v1">Agent.UpdateInfo.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><pre>
+ update info for agent and viam-server, parsed/processed in App
+ </pre>
+
+ <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeAgentUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo)">
+<h3>mergeAgentUpdateInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">mergeAgentUpdateInfo</span><wbr><span class="parameters">(<a href="Agent.UpdateInfo.html" title="class in viam.app.agent.v1">Agent.UpdateInfo</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ update info for agent and viam-server, parsed/processed in App
+ </pre>
+
+ <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearAgentUpdateInfo()">
+<h3>clearAgentUpdateInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">clearAgentUpdateInfo</span>()</div>
+<div class="block"><pre>
+ update info for agent and viam-server, parsed/processed in App
+ </pre>
+
+ <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasViamServerUpdateInfo()">
+<h3>hasViamServerUpdateInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasViamServerUpdateInfo</span>()</div>
+<div class="block"><code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#hasViamServerUpdateInfo()">hasViamServerUpdateInfo</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the viamServerUpdateInfo field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getViamServerUpdateInfo()">
+<h3>getViamServerUpdateInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.UpdateInfo.html" title="class in viam.app.agent.v1">Agent.UpdateInfo</a></span>&nbsp;<span class="element-name">getViamServerUpdateInfo</span>()</div>
+<div class="block"><code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#getViamServerUpdateInfo()">getViamServerUpdateInfo</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The viamServerUpdateInfo.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setViamServerUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo)">
+<h3>setViamServerUpdateInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">setViamServerUpdateInfo</span><wbr><span class="parameters">(<a href="Agent.UpdateInfo.html" title="class in viam.app.agent.v1">Agent.UpdateInfo</a>&nbsp;value)</span></div>
+<div class="block"><code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setViamServerUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo.Builder)">
+<h3>setViamServerUpdateInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">setViamServerUpdateInfo</span><wbr><span class="parameters">(<a href="Agent.UpdateInfo.Builder.html" title="class in viam.app.agent.v1">Agent.UpdateInfo.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeViamServerUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo)">
+<h3>mergeViamServerUpdateInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">mergeViamServerUpdateInfo</span><wbr><span class="parameters">(<a href="Agent.UpdateInfo.html" title="class in viam.app.agent.v1">Agent.UpdateInfo</a>&nbsp;value)</span></div>
+<div class="block"><code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearViamServerUpdateInfo()">
+<h3>clearViamServerUpdateInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">clearViamServerUpdateInfo</span>()</div>
+<div class="block"><code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasAdvancedSettings()">
+<h3>hasAdvancedSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasAdvancedSettings</span>()</div>
+<div class="block"><pre>
+ various settings that are passed directly to device Agent
+ </pre>
+
+ <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#hasAdvancedSettings()">hasAdvancedSettings</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the advancedSettings field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAdvancedSettings()">
+<h3>getAdvancedSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getAdvancedSettings</span>()</div>
+<div class="block"><pre>
+ various settings that are passed directly to device Agent
+ </pre>
+
+ <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#getAdvancedSettings()">getAdvancedSettings</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The advancedSettings.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setAdvancedSettings(com.google.protobuf.Struct)">
+<h3>setAdvancedSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">setAdvancedSettings</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
+<div class="block"><pre>
+ various settings that are passed directly to device Agent
+ </pre>
+
+ <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setAdvancedSettings(com.google.protobuf.Struct.Builder)">
+<h3>setAdvancedSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">setAdvancedSettings</span><wbr><span class="parameters">(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</span></div>
+<div class="block"><pre>
+ various settings that are passed directly to device Agent
+ </pre>
+
+ <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeAdvancedSettings(com.google.protobuf.Struct)">
+<h3>mergeAdvancedSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">mergeAdvancedSettings</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
+<div class="block"><pre>
+ various settings that are passed directly to device Agent
+ </pre>
+
+ <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearAdvancedSettings()">
+<h3>clearAdvancedSettings</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">clearAdvancedSettings</span>()</div>
+<div class="block"><pre>
+ various settings that are passed directly to device Agent
+ </pre>
+
+ <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasNetworkConfiguration()">
+<h3>hasNetworkConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasNetworkConfiguration</span>()</div>
+<div class="block"><code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#hasNetworkConfiguration()">hasNetworkConfiguration</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the networkConfiguration field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getNetworkConfiguration()">
+<h3>getNetworkConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getNetworkConfiguration</span>()</div>
+<div class="block"><code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#getNetworkConfiguration()">getNetworkConfiguration</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The networkConfiguration.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setNetworkConfiguration(com.google.protobuf.Struct)">
+<h3>setNetworkConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">setNetworkConfiguration</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
+<div class="block"><code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setNetworkConfiguration(com.google.protobuf.Struct.Builder)">
+<h3>setNetworkConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">setNetworkConfiguration</span><wbr><span class="parameters">(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</span></div>
+<div class="block"><code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeNetworkConfiguration(com.google.protobuf.Struct)">
+<h3>mergeNetworkConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">mergeNetworkConfiguration</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
+<div class="block"><code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearNetworkConfiguration()">
+<h3>clearNetworkConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">clearNetworkConfiguration</span>()</div>
+<div class="block"><code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasAdditionalNetworks()">
+<h3>hasAdditionalNetworks</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasAdditionalNetworks</span>()</div>
+<div class="block"><code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#hasAdditionalNetworks()">hasAdditionalNetworks</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the additionalNetworks field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAdditionalNetworks()">
+<h3>getAdditionalNetworks</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getAdditionalNetworks</span>()</div>
+<div class="block"><code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#getAdditionalNetworks()">getAdditionalNetworks</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The additionalNetworks.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setAdditionalNetworks(com.google.protobuf.Struct)">
+<h3>setAdditionalNetworks</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">setAdditionalNetworks</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
+<div class="block"><code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setAdditionalNetworks(com.google.protobuf.Struct.Builder)">
+<h3>setAdditionalNetworks</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">setAdditionalNetworks</span><wbr><span class="parameters">(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</span></div>
+<div class="block"><code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeAdditionalNetworks(com.google.protobuf.Struct)">
+<h3>mergeAdditionalNetworks</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">mergeAdditionalNetworks</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
+<div class="block"><code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearAdditionalNetworks()">
+<h3>clearAdditionalNetworks</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">clearAdditionalNetworks</span>()</div>
+<div class="block"><code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasSystemConfiguration()">
+<h3>hasSystemConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasSystemConfiguration</span>()</div>
+<div class="block"><code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#hasSystemConfiguration()">hasSystemConfiguration</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the systemConfiguration field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSystemConfiguration()">
+<h3>getSystemConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getSystemConfiguration</span>()</div>
+<div class="block"><code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html#getSystemConfiguration()">getSystemConfiguration</a></code>&nbsp;in interface&nbsp;<code><a href="Agent.DeviceAgentConfigResponseOrBuilder.html" title="interface in viam.app.agent.v1">Agent.DeviceAgentConfigResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The systemConfiguration.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setSystemConfiguration(com.google.protobuf.Struct)">
+<h3>setSystemConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">setSystemConfiguration</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
+<div class="block"><code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setSystemConfiguration(com.google.protobuf.Struct.Builder)">
+<h3>setSystemConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">setSystemConfiguration</span><wbr><span class="parameters">(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</span></div>
+<div class="block"><code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeSystemConfiguration(com.google.protobuf.Struct)">
+<h3>mergeSystemConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">mergeSystemConfiguration</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
+<div class="block"><code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearSystemConfiguration()">
+<h3>clearSystemConfiguration</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Agent.DeviceAgentConfigResponse.Builder.html" title="class in viam.app.agent.v1">Agent.DeviceAgentConfigResponse.Builder</a></span>&nbsp;<span class="element-name">clearSystemConfiguration</span>()</div>
+<div class="block"><code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code></div>
 </section>
 </li>
 </ul>
