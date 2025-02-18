@@ -212,19 +212,21 @@ public final class Agent {
     /**
      * <pre>
      * current subsystems and versions
+     * DEPRECATED in favor of version_info
      * </pre>
      *
-     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
      */
-    int getSubsystemVersionsCount();
+    @java.lang.Deprecated int getSubsystemVersionsCount();
     /**
      * <pre>
      * current subsystems and versions
+     * DEPRECATED in favor of version_info
      * </pre>
      *
-     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
      */
-    boolean containsSubsystemVersions(
+    @java.lang.Deprecated boolean containsSubsystemVersions(
         java.lang.String key);
     /**
      * Use {@link #getSubsystemVersionsMap()} instead.
@@ -235,20 +237,22 @@ public final class Agent {
     /**
      * <pre>
      * current subsystems and versions
+     * DEPRECATED in favor of version_info
      * </pre>
      *
-     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
      */
-    java.util.Map<java.lang.String, java.lang.String>
+    @java.lang.Deprecated java.util.Map<java.lang.String, java.lang.String>
     getSubsystemVersionsMap();
     /**
      * <pre>
      * current subsystems and versions
+     * DEPRECATED in favor of version_info
      * </pre>
      *
-     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
      */
-
+    @java.lang.Deprecated 
     /* nullable */
 java.lang.String getSubsystemVersionsOrDefault(
         java.lang.String key,
@@ -257,13 +261,33 @@ java.lang.String defaultValue);
     /**
      * <pre>
      * current subsystems and versions
+     * DEPRECATED in favor of version_info
      * </pre>
      *
-     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
      */
-
+    @java.lang.Deprecated 
     java.lang.String getSubsystemVersionsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Currently installed versions for agent and viam-server
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.VersionInfo version_info = 4 [json_name = "versionInfo"];</code>
+     * @return Whether the versionInfo field is set.
+     */
+    boolean hasVersionInfo();
+    /**
+     * <pre>
+     * Currently installed versions for agent and viam-server
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.VersionInfo version_info = 4 [json_name = "versionInfo"];</code>
+     * @return The versionInfo.
+     */
+    viam.app.agent.v1.Agent.VersionInfo getVersionInfo();
   }
   /**
    * <pre>
@@ -440,19 +464,20 @@ java.lang.String defaultValue);
       return subsystemVersions_;
     }
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public int getSubsystemVersionsCount() {
       return internalGetSubsystemVersions().size();
     }
     /**
      * <pre>
      * current subsystems and versions
+     * DEPRECATED in favor of version_info
      * </pre>
      *
-     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public boolean containsSubsystemVersions(
         java.lang.String key) {
       java.lang.Class<?> keyClass = key.getClass();
@@ -469,12 +494,13 @@ java.lang.String defaultValue);
     /**
      * <pre>
      * current subsystems and versions
+     * DEPRECATED in favor of version_info
      * </pre>
      *
-     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public java.util.Map<java.lang.String, java.lang.String> getSubsystemVersionsMap() {
       return java.util.Collections.unmodifiableMap(
           internalGetSubsystemVersions());
@@ -482,12 +508,13 @@ java.lang.String defaultValue);
     /**
      * <pre>
      * current subsystems and versions
+     * DEPRECATED in favor of version_info
      * </pre>
      *
-     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public /* nullable */
 java.lang.String getSubsystemVersionsOrDefault(
         java.lang.String key,
@@ -501,12 +528,13 @@ java.lang.String defaultValue) {
     /**
      * <pre>
      * current subsystems and versions
+     * DEPRECATED in favor of version_info
      * </pre>
      *
-     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public java.lang.String getSubsystemVersionsOrThrow(
         java.lang.String key) {
       java.lang.Class<?> keyClass = key.getClass();
@@ -520,13 +548,80 @@ java.lang.String defaultValue) {
     /**
      * <pre>
      * current subsystems and versions
+     * DEPRECATED in favor of version_info
      * </pre>
      *
-     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+     * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
      */
     private java.util.Map<java.lang.String, java.lang.String>
     getMutableSubsystemVersionsMap() {
       return internalGetMutableSubsystemVersions();
+    }
+
+    public static final int VERSION_INFO_FIELD_NUMBER = 4;
+    private viam.app.agent.v1.Agent.VersionInfo versionInfo_;
+    /**
+     * <pre>
+     * Currently installed versions for agent and viam-server
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.VersionInfo version_info = 4 [json_name = "versionInfo"];</code>
+     */
+    @java.lang.Override
+    public boolean hasVersionInfo() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Currently installed versions for agent and viam-server
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.VersionInfo version_info = 4 [json_name = "versionInfo"];</code>
+     */
+    @java.lang.Override
+    public viam.app.agent.v1.Agent.VersionInfo getVersionInfo() {
+      return versionInfo_ == null ? viam.app.agent.v1.Agent.VersionInfo.getDefaultInstance() : versionInfo_;
+    }
+    /**
+     * <pre>
+     * Currently installed versions for agent and viam-server
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.VersionInfo version_info = 4 [json_name = "versionInfo"];</code>
+     */
+    private void setVersionInfo(viam.app.agent.v1.Agent.VersionInfo value) {
+      value.getClass();
+  versionInfo_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * Currently installed versions for agent and viam-server
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.VersionInfo version_info = 4 [json_name = "versionInfo"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeVersionInfo(viam.app.agent.v1.Agent.VersionInfo value) {
+      value.getClass();
+  if (versionInfo_ != null &&
+          versionInfo_ != viam.app.agent.v1.Agent.VersionInfo.getDefaultInstance()) {
+        versionInfo_ =
+          viam.app.agent.v1.Agent.VersionInfo.newBuilder(versionInfo_).mergeFrom(value).buildPartial();
+      } else {
+        versionInfo_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * Currently installed versions for agent and viam-server
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.VersionInfo version_info = 4 [json_name = "versionInfo"];</code>
+     */
+    private void clearVersionInfo() {  versionInfo_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.agent.v1.Agent.DeviceAgentConfigRequest parseFrom(
@@ -771,25 +866,26 @@ java.lang.String defaultValue) {
       }
 
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public int getSubsystemVersionsCount() {
         return instance.getSubsystemVersionsMap().size();
       }
       /**
        * <pre>
        * current subsystems and versions
+       * DEPRECATED in favor of version_info
        * </pre>
        *
-       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
        */
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public boolean containsSubsystemVersions(
           java.lang.String key) {
         java.lang.Class<?> keyClass = key.getClass();
         return instance.getSubsystemVersionsMap().containsKey(key);
       }
-
+      @java.lang.Deprecated 
       public Builder clearSubsystemVersions() {
         copyOnWrite();
         instance.getMutableSubsystemVersionsMap().clear();
@@ -798,11 +894,12 @@ java.lang.String defaultValue) {
       /**
        * <pre>
        * current subsystems and versions
+       * DEPRECATED in favor of version_info
        * </pre>
        *
-       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
        */
-
+      @java.lang.Deprecated 
       public Builder removeSubsystemVersions(
           java.lang.String key) {
         java.lang.Class<?> keyClass = key.getClass();
@@ -821,24 +918,26 @@ java.lang.String defaultValue) {
       /**
        * <pre>
        * current subsystems and versions
+       * DEPRECATED in favor of version_info
        * </pre>
        *
-       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
        */
       @java.lang.Override
-      public java.util.Map<java.lang.String, java.lang.String> getSubsystemVersionsMap() {
+      @java.lang.Deprecated public java.util.Map<java.lang.String, java.lang.String> getSubsystemVersionsMap() {
         return java.util.Collections.unmodifiableMap(
             instance.getSubsystemVersionsMap());
       }
       /**
        * <pre>
        * current subsystems and versions
+       * DEPRECATED in favor of version_info
        * </pre>
        *
-       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
        */
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public /* nullable */
 java.lang.String getSubsystemVersionsOrDefault(
           java.lang.String key,
@@ -852,12 +951,13 @@ java.lang.String defaultValue) {
       /**
        * <pre>
        * current subsystems and versions
+       * DEPRECATED in favor of version_info
        * </pre>
        *
-       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
        */
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public java.lang.String getSubsystemVersionsOrThrow(
           java.lang.String key) {
         java.lang.Class<?> keyClass = key.getClass();
@@ -871,11 +971,12 @@ java.lang.String defaultValue) {
       /**
        * <pre>
        * current subsystems and versions
+       * DEPRECATED in favor of version_info
        * </pre>
        *
-       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
        */
-      public Builder putSubsystemVersions(
+      @java.lang.Deprecated public Builder putSubsystemVersions(
           java.lang.String key,
           java.lang.String value) {
         java.lang.Class<?> keyClass = key.getClass();
@@ -887,14 +988,86 @@ java.lang.String defaultValue) {
       /**
        * <pre>
        * current subsystems and versions
+       * DEPRECATED in favor of version_info
        * </pre>
        *
-       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions"];</code>
+       * <code>map&lt;string, string&gt; subsystem_versions = 3 [json_name = "subsystemVersions", deprecated = true];</code>
        */
-      public Builder putAllSubsystemVersions(
+      @java.lang.Deprecated public Builder putAllSubsystemVersions(
           java.util.Map<java.lang.String, java.lang.String> values) {
         copyOnWrite();
         instance.getMutableSubsystemVersionsMap().putAll(values);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Currently installed versions for agent and viam-server
+       * </pre>
+       *
+       * <code>.viam.app.agent.v1.VersionInfo version_info = 4 [json_name = "versionInfo"];</code>
+       */
+      @java.lang.Override
+      public boolean hasVersionInfo() {
+        return instance.hasVersionInfo();
+      }
+      /**
+       * <pre>
+       * Currently installed versions for agent and viam-server
+       * </pre>
+       *
+       * <code>.viam.app.agent.v1.VersionInfo version_info = 4 [json_name = "versionInfo"];</code>
+       */
+      @java.lang.Override
+      public viam.app.agent.v1.Agent.VersionInfo getVersionInfo() {
+        return instance.getVersionInfo();
+      }
+      /**
+       * <pre>
+       * Currently installed versions for agent and viam-server
+       * </pre>
+       *
+       * <code>.viam.app.agent.v1.VersionInfo version_info = 4 [json_name = "versionInfo"];</code>
+       */
+      public Builder setVersionInfo(viam.app.agent.v1.Agent.VersionInfo value) {
+        copyOnWrite();
+        instance.setVersionInfo(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Currently installed versions for agent and viam-server
+       * </pre>
+       *
+       * <code>.viam.app.agent.v1.VersionInfo version_info = 4 [json_name = "versionInfo"];</code>
+       */
+      public Builder setVersionInfo(
+          viam.app.agent.v1.Agent.VersionInfo.Builder builderForValue) {
+        copyOnWrite();
+        instance.setVersionInfo(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Currently installed versions for agent and viam-server
+       * </pre>
+       *
+       * <code>.viam.app.agent.v1.VersionInfo version_info = 4 [json_name = "versionInfo"];</code>
+       */
+      public Builder mergeVersionInfo(viam.app.agent.v1.Agent.VersionInfo value) {
+        copyOnWrite();
+        instance.mergeVersionInfo(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Currently installed versions for agent and viam-server
+       * </pre>
+       *
+       * <code>.viam.app.agent.v1.VersionInfo version_info = 4 [json_name = "versionInfo"];</code>
+       */
+      public Builder clearVersionInfo() {  copyOnWrite();
+        instance.clearVersionInfo();
         return this;
       }
 
@@ -919,10 +1092,11 @@ java.lang.String defaultValue) {
               "hostInfo_",
               "subsystemVersions_",
               SubsystemVersionsDefaultEntryHolder.defaultEntry,
+              "versionInfo_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0001\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u00032";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0001\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u00032\u0004\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -985,20 +1159,22 @@ java.lang.String defaultValue) {
      * <pre>
      * subsystems to be installed/configured/updated
      * note: previously installed subsystems will be removed from the system if removed from this list
+     * DEPRECATED in favor of indidivual update_info and settings fields
      * </pre>
      *
-     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
      */
-    int getSubsystemConfigsCount();
+    @java.lang.Deprecated int getSubsystemConfigsCount();
     /**
      * <pre>
      * subsystems to be installed/configured/updated
      * note: previously installed subsystems will be removed from the system if removed from this list
+     * DEPRECATED in favor of indidivual update_info and settings fields
      * </pre>
      *
-     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
      */
-    boolean containsSubsystemConfigs(
+    @java.lang.Deprecated boolean containsSubsystemConfigs(
         java.lang.String key);
     /**
      * Use {@link #getSubsystemConfigsMap()} instead.
@@ -1010,21 +1186,23 @@ java.lang.String defaultValue) {
      * <pre>
      * subsystems to be installed/configured/updated
      * note: previously installed subsystems will be removed from the system if removed from this list
+     * DEPRECATED in favor of indidivual update_info and settings fields
      * </pre>
      *
-     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
      */
-    java.util.Map<java.lang.String, viam.app.agent.v1.Agent.DeviceSubsystemConfig>
+    @java.lang.Deprecated java.util.Map<java.lang.String, viam.app.agent.v1.Agent.DeviceSubsystemConfig>
     getSubsystemConfigsMap();
     /**
      * <pre>
      * subsystems to be installed/configured/updated
      * note: previously installed subsystems will be removed from the system if removed from this list
+     * DEPRECATED in favor of indidivual update_info and settings fields
      * </pre>
      *
-     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
      */
-
+    @java.lang.Deprecated 
     /* nullable */
 viam.app.agent.v1.Agent.DeviceSubsystemConfig getSubsystemConfigsOrDefault(
         java.lang.String key,
@@ -1034,11 +1212,12 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue);
      * <pre>
      * subsystems to be installed/configured/updated
      * note: previously installed subsystems will be removed from the system if removed from this list
+     * DEPRECATED in favor of indidivual update_info and settings fields
      * </pre>
      *
-     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
      */
-
+    @java.lang.Deprecated 
     viam.app.agent.v1.Agent.DeviceSubsystemConfig getSubsystemConfigsOrThrow(
         java.lang.String key);
 
@@ -1060,6 +1239,88 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue);
      * @return The checkInterval.
      */
     com.google.protobuf.Duration getCheckInterval();
+
+    /**
+     * <pre>
+     * update info for agent and viam-server, parsed/processed in App
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code>
+     * @return Whether the agentUpdateInfo field is set.
+     */
+    boolean hasAgentUpdateInfo();
+    /**
+     * <pre>
+     * update info for agent and viam-server, parsed/processed in App
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code>
+     * @return The agentUpdateInfo.
+     */
+    viam.app.agent.v1.Agent.UpdateInfo getAgentUpdateInfo();
+
+    /**
+     * <code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code>
+     * @return Whether the viamServerUpdateInfo field is set.
+     */
+    boolean hasViamServerUpdateInfo();
+    /**
+     * <code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code>
+     * @return The viamServerUpdateInfo.
+     */
+    viam.app.agent.v1.Agent.UpdateInfo getViamServerUpdateInfo();
+
+    /**
+     * <pre>
+     * various settings that are passed directly to device Agent
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code>
+     * @return Whether the advancedSettings field is set.
+     */
+    boolean hasAdvancedSettings();
+    /**
+     * <pre>
+     * various settings that are passed directly to device Agent
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code>
+     * @return The advancedSettings.
+     */
+    com.google.protobuf.Struct getAdvancedSettings();
+
+    /**
+     * <code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code>
+     * @return Whether the networkConfiguration field is set.
+     */
+    boolean hasNetworkConfiguration();
+    /**
+     * <code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code>
+     * @return The networkConfiguration.
+     */
+    com.google.protobuf.Struct getNetworkConfiguration();
+
+    /**
+     * <code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code>
+     * @return Whether the additionalNetworks field is set.
+     */
+    boolean hasAdditionalNetworks();
+    /**
+     * <code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code>
+     * @return The additionalNetworks.
+     */
+    com.google.protobuf.Struct getAdditionalNetworks();
+
+    /**
+     * <code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code>
+     * @return Whether the systemConfiguration field is set.
+     */
+    boolean hasSystemConfiguration();
+    /**
+     * <code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code>
+     * @return The systemConfiguration.
+     */
+    com.google.protobuf.Struct getSystemConfiguration();
   }
   /**
    * Protobuf type {@code viam.app.agent.v1.DeviceAgentConfigResponse}
@@ -1098,7 +1359,7 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue);
       return subsystemConfigs_;
     }
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public int getSubsystemConfigsCount() {
       return internalGetSubsystemConfigs().size();
     }
@@ -1106,12 +1367,13 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue);
      * <pre>
      * subsystems to be installed/configured/updated
      * note: previously installed subsystems will be removed from the system if removed from this list
+     * DEPRECATED in favor of indidivual update_info and settings fields
      * </pre>
      *
-     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public boolean containsSubsystemConfigs(
         java.lang.String key) {
       java.lang.Class<?> keyClass = key.getClass();
@@ -1129,12 +1391,13 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue);
      * <pre>
      * subsystems to be installed/configured/updated
      * note: previously installed subsystems will be removed from the system if removed from this list
+     * DEPRECATED in favor of indidivual update_info and settings fields
      * </pre>
      *
-     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public java.util.Map<java.lang.String, viam.app.agent.v1.Agent.DeviceSubsystemConfig> getSubsystemConfigsMap() {
       return java.util.Collections.unmodifiableMap(
           internalGetSubsystemConfigs());
@@ -1143,12 +1406,13 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue);
      * <pre>
      * subsystems to be installed/configured/updated
      * note: previously installed subsystems will be removed from the system if removed from this list
+     * DEPRECATED in favor of indidivual update_info and settings fields
      * </pre>
      *
-     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public /* nullable */
 viam.app.agent.v1.Agent.DeviceSubsystemConfig getSubsystemConfigsOrDefault(
         java.lang.String key,
@@ -1163,12 +1427,13 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
      * <pre>
      * subsystems to be installed/configured/updated
      * note: previously installed subsystems will be removed from the system if removed from this list
+     * DEPRECATED in favor of indidivual update_info and settings fields
      * </pre>
      *
-     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public viam.app.agent.v1.Agent.DeviceSubsystemConfig getSubsystemConfigsOrThrow(
         java.lang.String key) {
       java.lang.Class<?> keyClass = key.getClass();
@@ -1183,9 +1448,10 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
      * <pre>
      * subsystems to be installed/configured/updated
      * note: previously installed subsystems will be removed from the system if removed from this list
+     * DEPRECATED in favor of indidivual update_info and settings fields
      * </pre>
      *
-     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+     * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
      */
     private java.util.Map<java.lang.String, viam.app.agent.v1.Agent.DeviceSubsystemConfig>
     getMutableSubsystemConfigsMap() {
@@ -1256,6 +1522,322 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
      */
     private void clearCheckInterval() {  checkInterval_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int AGENT_UPDATE_INFO_FIELD_NUMBER = 3;
+    private viam.app.agent.v1.Agent.UpdateInfo agentUpdateInfo_;
+    /**
+     * <pre>
+     * update info for agent and viam-server, parsed/processed in App
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAgentUpdateInfo() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * update info for agent and viam-server, parsed/processed in App
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code>
+     */
+    @java.lang.Override
+    public viam.app.agent.v1.Agent.UpdateInfo getAgentUpdateInfo() {
+      return agentUpdateInfo_ == null ? viam.app.agent.v1.Agent.UpdateInfo.getDefaultInstance() : agentUpdateInfo_;
+    }
+    /**
+     * <pre>
+     * update info for agent and viam-server, parsed/processed in App
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code>
+     */
+    private void setAgentUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo value) {
+      value.getClass();
+  agentUpdateInfo_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * update info for agent and viam-server, parsed/processed in App
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAgentUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo value) {
+      value.getClass();
+  if (agentUpdateInfo_ != null &&
+          agentUpdateInfo_ != viam.app.agent.v1.Agent.UpdateInfo.getDefaultInstance()) {
+        agentUpdateInfo_ =
+          viam.app.agent.v1.Agent.UpdateInfo.newBuilder(agentUpdateInfo_).mergeFrom(value).buildPartial();
+      } else {
+        agentUpdateInfo_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * update info for agent and viam-server, parsed/processed in App
+     * </pre>
+     *
+     * <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code>
+     */
+    private void clearAgentUpdateInfo() {  agentUpdateInfo_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int VIAM_SERVER_UPDATE_INFO_FIELD_NUMBER = 4;
+    private viam.app.agent.v1.Agent.UpdateInfo viamServerUpdateInfo_;
+    /**
+     * <code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code>
+     */
+    @java.lang.Override
+    public boolean hasViamServerUpdateInfo() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code>
+     */
+    @java.lang.Override
+    public viam.app.agent.v1.Agent.UpdateInfo getViamServerUpdateInfo() {
+      return viamServerUpdateInfo_ == null ? viam.app.agent.v1.Agent.UpdateInfo.getDefaultInstance() : viamServerUpdateInfo_;
+    }
+    /**
+     * <code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code>
+     */
+    private void setViamServerUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo value) {
+      value.getClass();
+  viamServerUpdateInfo_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeViamServerUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo value) {
+      value.getClass();
+  if (viamServerUpdateInfo_ != null &&
+          viamServerUpdateInfo_ != viam.app.agent.v1.Agent.UpdateInfo.getDefaultInstance()) {
+        viamServerUpdateInfo_ =
+          viam.app.agent.v1.Agent.UpdateInfo.newBuilder(viamServerUpdateInfo_).mergeFrom(value).buildPartial();
+      } else {
+        viamServerUpdateInfo_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code>
+     */
+    private void clearViamServerUpdateInfo() {  viamServerUpdateInfo_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static final int ADVANCED_SETTINGS_FIELD_NUMBER = 5;
+    private com.google.protobuf.Struct advancedSettings_;
+    /**
+     * <pre>
+     * various settings that are passed directly to device Agent
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAdvancedSettings() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * various settings that are passed directly to device Agent
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getAdvancedSettings() {
+      return advancedSettings_ == null ? com.google.protobuf.Struct.getDefaultInstance() : advancedSettings_;
+    }
+    /**
+     * <pre>
+     * various settings that are passed directly to device Agent
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code>
+     */
+    private void setAdvancedSettings(com.google.protobuf.Struct value) {
+      value.getClass();
+  advancedSettings_ = value;
+      bitField0_ |= 0x00000008;
+      }
+    /**
+     * <pre>
+     * various settings that are passed directly to device Agent
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAdvancedSettings(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (advancedSettings_ != null &&
+          advancedSettings_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        advancedSettings_ =
+          com.google.protobuf.Struct.newBuilder(advancedSettings_).mergeFrom(value).buildPartial();
+      } else {
+        advancedSettings_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * various settings that are passed directly to device Agent
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code>
+     */
+    private void clearAdvancedSettings() {  advancedSettings_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+    }
+
+    public static final int NETWORK_CONFIGURATION_FIELD_NUMBER = 6;
+    private com.google.protobuf.Struct networkConfiguration_;
+    /**
+     * <code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code>
+     */
+    @java.lang.Override
+    public boolean hasNetworkConfiguration() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getNetworkConfiguration() {
+      return networkConfiguration_ == null ? com.google.protobuf.Struct.getDefaultInstance() : networkConfiguration_;
+    }
+    /**
+     * <code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code>
+     */
+    private void setNetworkConfiguration(com.google.protobuf.Struct value) {
+      value.getClass();
+  networkConfiguration_ = value;
+      bitField0_ |= 0x00000010;
+      }
+    /**
+     * <code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeNetworkConfiguration(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (networkConfiguration_ != null &&
+          networkConfiguration_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        networkConfiguration_ =
+          com.google.protobuf.Struct.newBuilder(networkConfiguration_).mergeFrom(value).buildPartial();
+      } else {
+        networkConfiguration_ = value;
+      }
+      bitField0_ |= 0x00000010;
+    }
+    /**
+     * <code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code>
+     */
+    private void clearNetworkConfiguration() {  networkConfiguration_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+    }
+
+    public static final int ADDITIONAL_NETWORKS_FIELD_NUMBER = 7;
+    private com.google.protobuf.Struct additionalNetworks_;
+    /**
+     * <code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAdditionalNetworks() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getAdditionalNetworks() {
+      return additionalNetworks_ == null ? com.google.protobuf.Struct.getDefaultInstance() : additionalNetworks_;
+    }
+    /**
+     * <code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code>
+     */
+    private void setAdditionalNetworks(com.google.protobuf.Struct value) {
+      value.getClass();
+  additionalNetworks_ = value;
+      bitField0_ |= 0x00000020;
+      }
+    /**
+     * <code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAdditionalNetworks(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (additionalNetworks_ != null &&
+          additionalNetworks_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        additionalNetworks_ =
+          com.google.protobuf.Struct.newBuilder(additionalNetworks_).mergeFrom(value).buildPartial();
+      } else {
+        additionalNetworks_ = value;
+      }
+      bitField0_ |= 0x00000020;
+    }
+    /**
+     * <code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code>
+     */
+    private void clearAdditionalNetworks() {  additionalNetworks_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
+    }
+
+    public static final int SYSTEM_CONFIGURATION_FIELD_NUMBER = 8;
+    private com.google.protobuf.Struct systemConfiguration_;
+    /**
+     * <code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code>
+     */
+    @java.lang.Override
+    public boolean hasSystemConfiguration() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getSystemConfiguration() {
+      return systemConfiguration_ == null ? com.google.protobuf.Struct.getDefaultInstance() : systemConfiguration_;
+    }
+    /**
+     * <code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code>
+     */
+    private void setSystemConfiguration(com.google.protobuf.Struct value) {
+      value.getClass();
+  systemConfiguration_ = value;
+      bitField0_ |= 0x00000040;
+      }
+    /**
+     * <code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeSystemConfiguration(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (systemConfiguration_ != null &&
+          systemConfiguration_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        systemConfiguration_ =
+          com.google.protobuf.Struct.newBuilder(systemConfiguration_).mergeFrom(value).buildPartial();
+      } else {
+        systemConfiguration_ = value;
+      }
+      bitField0_ |= 0x00000040;
+    }
+    /**
+     * <code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code>
+     */
+    private void clearSystemConfiguration() {  systemConfiguration_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
     }
 
     public static viam.app.agent.v1.Agent.DeviceAgentConfigResponse parseFrom(
@@ -1356,7 +1938,7 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
 
 
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public int getSubsystemConfigsCount() {
         return instance.getSubsystemConfigsMap().size();
       }
@@ -1364,18 +1946,19 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
        * <pre>
        * subsystems to be installed/configured/updated
        * note: previously installed subsystems will be removed from the system if removed from this list
+       * DEPRECATED in favor of indidivual update_info and settings fields
        * </pre>
        *
-       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
        */
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public boolean containsSubsystemConfigs(
           java.lang.String key) {
         java.lang.Class<?> keyClass = key.getClass();
         return instance.getSubsystemConfigsMap().containsKey(key);
       }
-
+      @java.lang.Deprecated 
       public Builder clearSubsystemConfigs() {
         copyOnWrite();
         instance.getMutableSubsystemConfigsMap().clear();
@@ -1385,11 +1968,12 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
        * <pre>
        * subsystems to be installed/configured/updated
        * note: previously installed subsystems will be removed from the system if removed from this list
+       * DEPRECATED in favor of indidivual update_info and settings fields
        * </pre>
        *
-       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
        */
-
+      @java.lang.Deprecated 
       public Builder removeSubsystemConfigs(
           java.lang.String key) {
         java.lang.Class<?> keyClass = key.getClass();
@@ -1409,12 +1993,13 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
        * <pre>
        * subsystems to be installed/configured/updated
        * note: previously installed subsystems will be removed from the system if removed from this list
+       * DEPRECATED in favor of indidivual update_info and settings fields
        * </pre>
        *
-       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
        */
       @java.lang.Override
-      public java.util.Map<java.lang.String, viam.app.agent.v1.Agent.DeviceSubsystemConfig> getSubsystemConfigsMap() {
+      @java.lang.Deprecated public java.util.Map<java.lang.String, viam.app.agent.v1.Agent.DeviceSubsystemConfig> getSubsystemConfigsMap() {
         return java.util.Collections.unmodifiableMap(
             instance.getSubsystemConfigsMap());
       }
@@ -1422,12 +2007,13 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
        * <pre>
        * subsystems to be installed/configured/updated
        * note: previously installed subsystems will be removed from the system if removed from this list
+       * DEPRECATED in favor of indidivual update_info and settings fields
        * </pre>
        *
-       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
        */
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public /* nullable */
 viam.app.agent.v1.Agent.DeviceSubsystemConfig getSubsystemConfigsOrDefault(
           java.lang.String key,
@@ -1442,12 +2028,13 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
        * <pre>
        * subsystems to be installed/configured/updated
        * note: previously installed subsystems will be removed from the system if removed from this list
+       * DEPRECATED in favor of indidivual update_info and settings fields
        * </pre>
        *
-       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
        */
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public viam.app.agent.v1.Agent.DeviceSubsystemConfig getSubsystemConfigsOrThrow(
           java.lang.String key) {
         java.lang.Class<?> keyClass = key.getClass();
@@ -1462,11 +2049,12 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
        * <pre>
        * subsystems to be installed/configured/updated
        * note: previously installed subsystems will be removed from the system if removed from this list
+       * DEPRECATED in favor of indidivual update_info and settings fields
        * </pre>
        *
-       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
        */
-      public Builder putSubsystemConfigs(
+      @java.lang.Deprecated public Builder putSubsystemConfigs(
           java.lang.String key,
           viam.app.agent.v1.Agent.DeviceSubsystemConfig value) {
         java.lang.Class<?> keyClass = key.getClass();
@@ -1479,11 +2067,12 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
        * <pre>
        * subsystems to be installed/configured/updated
        * note: previously installed subsystems will be removed from the system if removed from this list
+       * DEPRECATED in favor of indidivual update_info and settings fields
        * </pre>
        *
-       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs"];</code>
+       * <code>map&lt;string, .viam.app.agent.v1.DeviceSubsystemConfig&gt; subsystem_configs = 1 [json_name = "subsystemConfigs", deprecated = true];</code>
        */
-      public Builder putAllSubsystemConfigs(
+      @java.lang.Deprecated public Builder putAllSubsystemConfigs(
           java.util.Map<java.lang.String, viam.app.agent.v1.Agent.DeviceSubsystemConfig> values) {
         copyOnWrite();
         instance.getMutableSubsystemConfigsMap().putAll(values);
@@ -1561,6 +2150,336 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * update info for agent and viam-server, parsed/processed in App
+       * </pre>
+       *
+       * <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAgentUpdateInfo() {
+        return instance.hasAgentUpdateInfo();
+      }
+      /**
+       * <pre>
+       * update info for agent and viam-server, parsed/processed in App
+       * </pre>
+       *
+       * <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code>
+       */
+      @java.lang.Override
+      public viam.app.agent.v1.Agent.UpdateInfo getAgentUpdateInfo() {
+        return instance.getAgentUpdateInfo();
+      }
+      /**
+       * <pre>
+       * update info for agent and viam-server, parsed/processed in App
+       * </pre>
+       *
+       * <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code>
+       */
+      public Builder setAgentUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo value) {
+        copyOnWrite();
+        instance.setAgentUpdateInfo(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * update info for agent and viam-server, parsed/processed in App
+       * </pre>
+       *
+       * <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code>
+       */
+      public Builder setAgentUpdateInfo(
+          viam.app.agent.v1.Agent.UpdateInfo.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAgentUpdateInfo(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * update info for agent and viam-server, parsed/processed in App
+       * </pre>
+       *
+       * <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code>
+       */
+      public Builder mergeAgentUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo value) {
+        copyOnWrite();
+        instance.mergeAgentUpdateInfo(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * update info for agent and viam-server, parsed/processed in App
+       * </pre>
+       *
+       * <code>.viam.app.agent.v1.UpdateInfo agent_update_info = 3 [json_name = "agentUpdateInfo"];</code>
+       */
+      public Builder clearAgentUpdateInfo() {  copyOnWrite();
+        instance.clearAgentUpdateInfo();
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code>
+       */
+      @java.lang.Override
+      public boolean hasViamServerUpdateInfo() {
+        return instance.hasViamServerUpdateInfo();
+      }
+      /**
+       * <code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code>
+       */
+      @java.lang.Override
+      public viam.app.agent.v1.Agent.UpdateInfo getViamServerUpdateInfo() {
+        return instance.getViamServerUpdateInfo();
+      }
+      /**
+       * <code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code>
+       */
+      public Builder setViamServerUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo value) {
+        copyOnWrite();
+        instance.setViamServerUpdateInfo(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code>
+       */
+      public Builder setViamServerUpdateInfo(
+          viam.app.agent.v1.Agent.UpdateInfo.Builder builderForValue) {
+        copyOnWrite();
+        instance.setViamServerUpdateInfo(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code>
+       */
+      public Builder mergeViamServerUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo value) {
+        copyOnWrite();
+        instance.mergeViamServerUpdateInfo(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.agent.v1.UpdateInfo viam_server_update_info = 4 [json_name = "viamServerUpdateInfo"];</code>
+       */
+      public Builder clearViamServerUpdateInfo() {  copyOnWrite();
+        instance.clearViamServerUpdateInfo();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * various settings that are passed directly to device Agent
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAdvancedSettings() {
+        return instance.hasAdvancedSettings();
+      }
+      /**
+       * <pre>
+       * various settings that are passed directly to device Agent
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getAdvancedSettings() {
+        return instance.getAdvancedSettings();
+      }
+      /**
+       * <pre>
+       * various settings that are passed directly to device Agent
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code>
+       */
+      public Builder setAdvancedSettings(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setAdvancedSettings(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * various settings that are passed directly to device Agent
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code>
+       */
+      public Builder setAdvancedSettings(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAdvancedSettings(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * various settings that are passed directly to device Agent
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code>
+       */
+      public Builder mergeAdvancedSettings(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeAdvancedSettings(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * various settings that are passed directly to device Agent
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct advanced_settings = 5 [json_name = "advancedSettings"];</code>
+       */
+      public Builder clearAdvancedSettings() {  copyOnWrite();
+        instance.clearAdvancedSettings();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code>
+       */
+      @java.lang.Override
+      public boolean hasNetworkConfiguration() {
+        return instance.hasNetworkConfiguration();
+      }
+      /**
+       * <code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getNetworkConfiguration() {
+        return instance.getNetworkConfiguration();
+      }
+      /**
+       * <code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code>
+       */
+      public Builder setNetworkConfiguration(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setNetworkConfiguration(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code>
+       */
+      public Builder setNetworkConfiguration(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setNetworkConfiguration(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code>
+       */
+      public Builder mergeNetworkConfiguration(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeNetworkConfiguration(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct network_configuration = 6 [json_name = "networkConfiguration"];</code>
+       */
+      public Builder clearNetworkConfiguration() {  copyOnWrite();
+        instance.clearNetworkConfiguration();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAdditionalNetworks() {
+        return instance.hasAdditionalNetworks();
+      }
+      /**
+       * <code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getAdditionalNetworks() {
+        return instance.getAdditionalNetworks();
+      }
+      /**
+       * <code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code>
+       */
+      public Builder setAdditionalNetworks(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setAdditionalNetworks(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code>
+       */
+      public Builder setAdditionalNetworks(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAdditionalNetworks(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code>
+       */
+      public Builder mergeAdditionalNetworks(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeAdditionalNetworks(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct additional_networks = 7 [json_name = "additionalNetworks"];</code>
+       */
+      public Builder clearAdditionalNetworks() {  copyOnWrite();
+        instance.clearAdditionalNetworks();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code>
+       */
+      @java.lang.Override
+      public boolean hasSystemConfiguration() {
+        return instance.hasSystemConfiguration();
+      }
+      /**
+       * <code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getSystemConfiguration() {
+        return instance.getSystemConfiguration();
+      }
+      /**
+       * <code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code>
+       */
+      public Builder setSystemConfiguration(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setSystemConfiguration(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code>
+       */
+      public Builder setSystemConfiguration(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSystemConfiguration(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code>
+       */
+      public Builder mergeSystemConfiguration(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeSystemConfiguration(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct system_configuration = 8 [json_name = "systemConfiguration"];</code>
+       */
+      public Builder clearSystemConfiguration() {  copyOnWrite();
+        instance.clearSystemConfiguration();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.agent.v1.DeviceAgentConfigResponse)
     }
     @java.lang.Override
@@ -1581,10 +2500,17 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
               "subsystemConfigs_",
               SubsystemConfigsDefaultEntryHolder.defaultEntry,
               "checkInterval_",
+              "agentUpdateInfo_",
+              "viamServerUpdateInfo_",
+              "advancedSettings_",
+              "networkConfiguration_",
+              "additionalNetworks_",
+              "systemConfiguration_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0001\u0000\u0000\u00012\u0002\u1009\u0000" +
-                "";
+                "\u0000\b\u0000\u0001\u0001\b\b\u0001\u0000\u0000\u00012\u0002\u1009\u0000\u0003\u1009" +
+                "\u0001\u0004\u1009\u0002\u0005\u1009\u0003\u0006\u1009\u0004\u0007\u1009\u0005\b" +
+                "\u1009\u0006";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -1639,7 +2565,7 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
     }
   }
 
-  public interface DeviceSubsystemConfigOrBuilder extends
+  @java.lang.Deprecated public interface DeviceSubsystemConfigOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.agent.v1.DeviceSubsystemConfig)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -1648,7 +2574,7 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
      * data needed to download/validate the subsystem
      * </pre>
      *
-     * <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
+     * <code>.viam.app.agent.v1.UpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
      * @return Whether the updateInfo field is set.
      */
     boolean hasUpdateInfo();
@@ -1657,10 +2583,10 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
      * data needed to download/validate the subsystem
      * </pre>
      *
-     * <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
+     * <code>.viam.app.agent.v1.UpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
      * @return The updateInfo.
      */
-    viam.app.agent.v1.Agent.SubsystemUpdateInfo getUpdateInfo();
+    viam.app.agent.v1.Agent.UpdateInfo getUpdateInfo();
 
     /**
      * <pre>
@@ -1702,9 +2628,13 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
     com.google.protobuf.Struct getAttributes();
   }
   /**
+   * <pre>
+   * DEPRECATED as of January 2025
+   * </pre>
+   *
    * Protobuf type {@code viam.app.agent.v1.DeviceSubsystemConfig}
    */
-  public  static final class DeviceSubsystemConfig extends
+  @java.lang.Deprecated public  static final class DeviceSubsystemConfig extends
       com.google.protobuf.GeneratedMessageLite<
           DeviceSubsystemConfig, DeviceSubsystemConfig.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.agent.v1.DeviceSubsystemConfig)
@@ -1713,13 +2643,13 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
     }
     private int bitField0_;
     public static final int UPDATE_INFO_FIELD_NUMBER = 1;
-    private viam.app.agent.v1.Agent.SubsystemUpdateInfo updateInfo_;
+    private viam.app.agent.v1.Agent.UpdateInfo updateInfo_;
     /**
      * <pre>
      * data needed to download/validate the subsystem
      * </pre>
      *
-     * <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
+     * <code>.viam.app.agent.v1.UpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
      */
     @java.lang.Override
     public boolean hasUpdateInfo() {
@@ -1730,20 +2660,20 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
      * data needed to download/validate the subsystem
      * </pre>
      *
-     * <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
+     * <code>.viam.app.agent.v1.UpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
      */
     @java.lang.Override
-    public viam.app.agent.v1.Agent.SubsystemUpdateInfo getUpdateInfo() {
-      return updateInfo_ == null ? viam.app.agent.v1.Agent.SubsystemUpdateInfo.getDefaultInstance() : updateInfo_;
+    public viam.app.agent.v1.Agent.UpdateInfo getUpdateInfo() {
+      return updateInfo_ == null ? viam.app.agent.v1.Agent.UpdateInfo.getDefaultInstance() : updateInfo_;
     }
     /**
      * <pre>
      * data needed to download/validate the subsystem
      * </pre>
      *
-     * <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
+     * <code>.viam.app.agent.v1.UpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
      */
-    private void setUpdateInfo(viam.app.agent.v1.Agent.SubsystemUpdateInfo value) {
+    private void setUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo value) {
       value.getClass();
   updateInfo_ = value;
       bitField0_ |= 0x00000001;
@@ -1753,15 +2683,15 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
      * data needed to download/validate the subsystem
      * </pre>
      *
-     * <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
+     * <code>.viam.app.agent.v1.UpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeUpdateInfo(viam.app.agent.v1.Agent.SubsystemUpdateInfo value) {
+    private void mergeUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo value) {
       value.getClass();
   if (updateInfo_ != null &&
-          updateInfo_ != viam.app.agent.v1.Agent.SubsystemUpdateInfo.getDefaultInstance()) {
+          updateInfo_ != viam.app.agent.v1.Agent.UpdateInfo.getDefaultInstance()) {
         updateInfo_ =
-          viam.app.agent.v1.Agent.SubsystemUpdateInfo.newBuilder(updateInfo_).mergeFrom(value).buildPartial();
+          viam.app.agent.v1.Agent.UpdateInfo.newBuilder(updateInfo_).mergeFrom(value).buildPartial();
       } else {
         updateInfo_ = value;
       }
@@ -1772,7 +2702,7 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
      * data needed to download/validate the subsystem
      * </pre>
      *
-     * <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
+     * <code>.viam.app.agent.v1.UpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
      */
     private void clearUpdateInfo() {  updateInfo_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -2004,6 +2934,10 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
     }
 
     /**
+     * <pre>
+     * DEPRECATED as of January 2025
+     * </pre>
+     *
      * Protobuf type {@code viam.app.agent.v1.DeviceSubsystemConfig}
      */
     public static final class Builder extends
@@ -2022,7 +2956,7 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
        * data needed to download/validate the subsystem
        * </pre>
        *
-       * <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
+       * <code>.viam.app.agent.v1.UpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
        */
       @java.lang.Override
       public boolean hasUpdateInfo() {
@@ -2033,10 +2967,10 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
        * data needed to download/validate the subsystem
        * </pre>
        *
-       * <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
+       * <code>.viam.app.agent.v1.UpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
        */
       @java.lang.Override
-      public viam.app.agent.v1.Agent.SubsystemUpdateInfo getUpdateInfo() {
+      public viam.app.agent.v1.Agent.UpdateInfo getUpdateInfo() {
         return instance.getUpdateInfo();
       }
       /**
@@ -2044,9 +2978,9 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
        * data needed to download/validate the subsystem
        * </pre>
        *
-       * <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
+       * <code>.viam.app.agent.v1.UpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
        */
-      public Builder setUpdateInfo(viam.app.agent.v1.Agent.SubsystemUpdateInfo value) {
+      public Builder setUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo value) {
         copyOnWrite();
         instance.setUpdateInfo(value);
         return this;
@@ -2056,10 +2990,10 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
        * data needed to download/validate the subsystem
        * </pre>
        *
-       * <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
+       * <code>.viam.app.agent.v1.UpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
        */
       public Builder setUpdateInfo(
-          viam.app.agent.v1.Agent.SubsystemUpdateInfo.Builder builderForValue) {
+          viam.app.agent.v1.Agent.UpdateInfo.Builder builderForValue) {
         copyOnWrite();
         instance.setUpdateInfo(builderForValue.build());
         return this;
@@ -2069,9 +3003,9 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
        * data needed to download/validate the subsystem
        * </pre>
        *
-       * <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
+       * <code>.viam.app.agent.v1.UpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
        */
-      public Builder mergeUpdateInfo(viam.app.agent.v1.Agent.SubsystemUpdateInfo value) {
+      public Builder mergeUpdateInfo(viam.app.agent.v1.Agent.UpdateInfo value) {
         copyOnWrite();
         instance.mergeUpdateInfo(value);
         return this;
@@ -2081,7 +3015,7 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
        * data needed to download/validate the subsystem
        * </pre>
        *
-       * <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
+       * <code>.viam.app.agent.v1.UpdateInfo update_info = 1 [json_name = "updateInfo"];</code>
        */
       public Builder clearUpdateInfo() {  copyOnWrite();
         instance.clearUpdateInfo();
@@ -2314,6 +3248,823 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
     private static volatile com.google.protobuf.Parser<DeviceSubsystemConfig> PARSER;
 
     public static com.google.protobuf.Parser<DeviceSubsystemConfig> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface VersionInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.agent.v1.VersionInfo)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * the version of agent currently running and making the request
+     * </pre>
+     *
+     * <code>string agent_running = 1 [json_name = "agentRunning"];</code>
+     * @return The agentRunning.
+     */
+    java.lang.String getAgentRunning();
+    /**
+     * <pre>
+     * the version of agent currently running and making the request
+     * </pre>
+     *
+     * <code>string agent_running = 1 [json_name = "agentRunning"];</code>
+     * @return The bytes for agentRunning.
+     */
+    com.google.protobuf.ByteString
+        getAgentRunningBytes();
+
+    /**
+     * <pre>
+     * the version of agent installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string agent_installed = 2 [json_name = "agentInstalled"];</code>
+     * @return The agentInstalled.
+     */
+    java.lang.String getAgentInstalled();
+    /**
+     * <pre>
+     * the version of agent installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string agent_installed = 2 [json_name = "agentInstalled"];</code>
+     * @return The bytes for agentInstalled.
+     */
+    com.google.protobuf.ByteString
+        getAgentInstalledBytes();
+
+    /**
+     * <pre>
+     * the version of viam-server currently running
+     * </pre>
+     *
+     * <code>string viam_server_running = 3 [json_name = "viamServerRunning"];</code>
+     * @return The viamServerRunning.
+     */
+    java.lang.String getViamServerRunning();
+    /**
+     * <pre>
+     * the version of viam-server currently running
+     * </pre>
+     *
+     * <code>string viam_server_running = 3 [json_name = "viamServerRunning"];</code>
+     * @return The bytes for viamServerRunning.
+     */
+    com.google.protobuf.ByteString
+        getViamServerRunningBytes();
+
+    /**
+     * <pre>
+     * the version of viam-server installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string viam_server_installed = 4 [json_name = "viamServerInstalled"];</code>
+     * @return The viamServerInstalled.
+     */
+    java.lang.String getViamServerInstalled();
+    /**
+     * <pre>
+     * the version of viam-server installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string viam_server_installed = 4 [json_name = "viamServerInstalled"];</code>
+     * @return The bytes for viamServerInstalled.
+     */
+    com.google.protobuf.ByteString
+        getViamServerInstalledBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.agent.v1.VersionInfo}
+   */
+  public  static final class VersionInfo extends
+      com.google.protobuf.GeneratedMessageLite<
+          VersionInfo, VersionInfo.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.agent.v1.VersionInfo)
+      VersionInfoOrBuilder {
+    private VersionInfo() {
+      agentRunning_ = "";
+      agentInstalled_ = "";
+      viamServerRunning_ = "";
+      viamServerInstalled_ = "";
+    }
+    public static final int AGENT_RUNNING_FIELD_NUMBER = 1;
+    private java.lang.String agentRunning_;
+    /**
+     * <pre>
+     * the version of agent currently running and making the request
+     * </pre>
+     *
+     * <code>string agent_running = 1 [json_name = "agentRunning"];</code>
+     * @return The agentRunning.
+     */
+    @java.lang.Override
+    public java.lang.String getAgentRunning() {
+      return agentRunning_;
+    }
+    /**
+     * <pre>
+     * the version of agent currently running and making the request
+     * </pre>
+     *
+     * <code>string agent_running = 1 [json_name = "agentRunning"];</code>
+     * @return The bytes for agentRunning.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAgentRunningBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(agentRunning_);
+    }
+    /**
+     * <pre>
+     * the version of agent currently running and making the request
+     * </pre>
+     *
+     * <code>string agent_running = 1 [json_name = "agentRunning"];</code>
+     * @param value The agentRunning to set.
+     */
+    private void setAgentRunning(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      agentRunning_ = value;
+    }
+    /**
+     * <pre>
+     * the version of agent currently running and making the request
+     * </pre>
+     *
+     * <code>string agent_running = 1 [json_name = "agentRunning"];</code>
+     */
+    private void clearAgentRunning() {
+
+      agentRunning_ = getDefaultInstance().getAgentRunning();
+    }
+    /**
+     * <pre>
+     * the version of agent currently running and making the request
+     * </pre>
+     *
+     * <code>string agent_running = 1 [json_name = "agentRunning"];</code>
+     * @param value The bytes for agentRunning to set.
+     */
+    private void setAgentRunningBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      agentRunning_ = value.toStringUtf8();
+
+    }
+
+    public static final int AGENT_INSTALLED_FIELD_NUMBER = 2;
+    private java.lang.String agentInstalled_;
+    /**
+     * <pre>
+     * the version of agent installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string agent_installed = 2 [json_name = "agentInstalled"];</code>
+     * @return The agentInstalled.
+     */
+    @java.lang.Override
+    public java.lang.String getAgentInstalled() {
+      return agentInstalled_;
+    }
+    /**
+     * <pre>
+     * the version of agent installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string agent_installed = 2 [json_name = "agentInstalled"];</code>
+     * @return The bytes for agentInstalled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAgentInstalledBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(agentInstalled_);
+    }
+    /**
+     * <pre>
+     * the version of agent installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string agent_installed = 2 [json_name = "agentInstalled"];</code>
+     * @param value The agentInstalled to set.
+     */
+    private void setAgentInstalled(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      agentInstalled_ = value;
+    }
+    /**
+     * <pre>
+     * the version of agent installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string agent_installed = 2 [json_name = "agentInstalled"];</code>
+     */
+    private void clearAgentInstalled() {
+
+      agentInstalled_ = getDefaultInstance().getAgentInstalled();
+    }
+    /**
+     * <pre>
+     * the version of agent installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string agent_installed = 2 [json_name = "agentInstalled"];</code>
+     * @param value The bytes for agentInstalled to set.
+     */
+    private void setAgentInstalledBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      agentInstalled_ = value.toStringUtf8();
+
+    }
+
+    public static final int VIAM_SERVER_RUNNING_FIELD_NUMBER = 3;
+    private java.lang.String viamServerRunning_;
+    /**
+     * <pre>
+     * the version of viam-server currently running
+     * </pre>
+     *
+     * <code>string viam_server_running = 3 [json_name = "viamServerRunning"];</code>
+     * @return The viamServerRunning.
+     */
+    @java.lang.Override
+    public java.lang.String getViamServerRunning() {
+      return viamServerRunning_;
+    }
+    /**
+     * <pre>
+     * the version of viam-server currently running
+     * </pre>
+     *
+     * <code>string viam_server_running = 3 [json_name = "viamServerRunning"];</code>
+     * @return The bytes for viamServerRunning.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getViamServerRunningBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(viamServerRunning_);
+    }
+    /**
+     * <pre>
+     * the version of viam-server currently running
+     * </pre>
+     *
+     * <code>string viam_server_running = 3 [json_name = "viamServerRunning"];</code>
+     * @param value The viamServerRunning to set.
+     */
+    private void setViamServerRunning(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      viamServerRunning_ = value;
+    }
+    /**
+     * <pre>
+     * the version of viam-server currently running
+     * </pre>
+     *
+     * <code>string viam_server_running = 3 [json_name = "viamServerRunning"];</code>
+     */
+    private void clearViamServerRunning() {
+
+      viamServerRunning_ = getDefaultInstance().getViamServerRunning();
+    }
+    /**
+     * <pre>
+     * the version of viam-server currently running
+     * </pre>
+     *
+     * <code>string viam_server_running = 3 [json_name = "viamServerRunning"];</code>
+     * @param value The bytes for viamServerRunning to set.
+     */
+    private void setViamServerRunningBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      viamServerRunning_ = value.toStringUtf8();
+
+    }
+
+    public static final int VIAM_SERVER_INSTALLED_FIELD_NUMBER = 4;
+    private java.lang.String viamServerInstalled_;
+    /**
+     * <pre>
+     * the version of viam-server installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string viam_server_installed = 4 [json_name = "viamServerInstalled"];</code>
+     * @return The viamServerInstalled.
+     */
+    @java.lang.Override
+    public java.lang.String getViamServerInstalled() {
+      return viamServerInstalled_;
+    }
+    /**
+     * <pre>
+     * the version of viam-server installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string viam_server_installed = 4 [json_name = "viamServerInstalled"];</code>
+     * @return The bytes for viamServerInstalled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getViamServerInstalledBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(viamServerInstalled_);
+    }
+    /**
+     * <pre>
+     * the version of viam-server installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string viam_server_installed = 4 [json_name = "viamServerInstalled"];</code>
+     * @param value The viamServerInstalled to set.
+     */
+    private void setViamServerInstalled(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      viamServerInstalled_ = value;
+    }
+    /**
+     * <pre>
+     * the version of viam-server installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string viam_server_installed = 4 [json_name = "viamServerInstalled"];</code>
+     */
+    private void clearViamServerInstalled() {
+
+      viamServerInstalled_ = getDefaultInstance().getViamServerInstalled();
+    }
+    /**
+     * <pre>
+     * the version of viam-server installed (will run after restart if different)
+     * </pre>
+     *
+     * <code>string viam_server_installed = 4 [json_name = "viamServerInstalled"];</code>
+     * @param value The bytes for viamServerInstalled to set.
+     */
+    private void setViamServerInstalledBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      viamServerInstalled_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.agent.v1.Agent.VersionInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.agent.v1.Agent.VersionInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.agent.v1.Agent.VersionInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.agent.v1.Agent.VersionInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.agent.v1.Agent.VersionInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.agent.v1.Agent.VersionInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.agent.v1.Agent.VersionInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.agent.v1.Agent.VersionInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.agent.v1.Agent.VersionInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.agent.v1.Agent.VersionInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.agent.v1.Agent.VersionInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.agent.v1.Agent.VersionInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.agent.v1.Agent.VersionInfo prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.agent.v1.VersionInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.agent.v1.Agent.VersionInfo, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.agent.v1.VersionInfo)
+        viam.app.agent.v1.Agent.VersionInfoOrBuilder {
+      // Construct using viam.app.agent.v1.Agent.VersionInfo.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * the version of agent currently running and making the request
+       * </pre>
+       *
+       * <code>string agent_running = 1 [json_name = "agentRunning"];</code>
+       * @return The agentRunning.
+       */
+      @java.lang.Override
+      public java.lang.String getAgentRunning() {
+        return instance.getAgentRunning();
+      }
+      /**
+       * <pre>
+       * the version of agent currently running and making the request
+       * </pre>
+       *
+       * <code>string agent_running = 1 [json_name = "agentRunning"];</code>
+       * @return The bytes for agentRunning.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAgentRunningBytes() {
+        return instance.getAgentRunningBytes();
+      }
+      /**
+       * <pre>
+       * the version of agent currently running and making the request
+       * </pre>
+       *
+       * <code>string agent_running = 1 [json_name = "agentRunning"];</code>
+       * @param value The agentRunning to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentRunning(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setAgentRunning(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * the version of agent currently running and making the request
+       * </pre>
+       *
+       * <code>string agent_running = 1 [json_name = "agentRunning"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAgentRunning() {
+        copyOnWrite();
+        instance.clearAgentRunning();
+        return this;
+      }
+      /**
+       * <pre>
+       * the version of agent currently running and making the request
+       * </pre>
+       *
+       * <code>string agent_running = 1 [json_name = "agentRunning"];</code>
+       * @param value The bytes for agentRunning to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentRunningBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setAgentRunningBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * the version of agent installed (will run after restart if different)
+       * </pre>
+       *
+       * <code>string agent_installed = 2 [json_name = "agentInstalled"];</code>
+       * @return The agentInstalled.
+       */
+      @java.lang.Override
+      public java.lang.String getAgentInstalled() {
+        return instance.getAgentInstalled();
+      }
+      /**
+       * <pre>
+       * the version of agent installed (will run after restart if different)
+       * </pre>
+       *
+       * <code>string agent_installed = 2 [json_name = "agentInstalled"];</code>
+       * @return The bytes for agentInstalled.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAgentInstalledBytes() {
+        return instance.getAgentInstalledBytes();
+      }
+      /**
+       * <pre>
+       * the version of agent installed (will run after restart if different)
+       * </pre>
+       *
+       * <code>string agent_installed = 2 [json_name = "agentInstalled"];</code>
+       * @param value The agentInstalled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentInstalled(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setAgentInstalled(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * the version of agent installed (will run after restart if different)
+       * </pre>
+       *
+       * <code>string agent_installed = 2 [json_name = "agentInstalled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAgentInstalled() {
+        copyOnWrite();
+        instance.clearAgentInstalled();
+        return this;
+      }
+      /**
+       * <pre>
+       * the version of agent installed (will run after restart if different)
+       * </pre>
+       *
+       * <code>string agent_installed = 2 [json_name = "agentInstalled"];</code>
+       * @param value The bytes for agentInstalled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentInstalledBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setAgentInstalledBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * the version of viam-server currently running
+       * </pre>
+       *
+       * <code>string viam_server_running = 3 [json_name = "viamServerRunning"];</code>
+       * @return The viamServerRunning.
+       */
+      @java.lang.Override
+      public java.lang.String getViamServerRunning() {
+        return instance.getViamServerRunning();
+      }
+      /**
+       * <pre>
+       * the version of viam-server currently running
+       * </pre>
+       *
+       * <code>string viam_server_running = 3 [json_name = "viamServerRunning"];</code>
+       * @return The bytes for viamServerRunning.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getViamServerRunningBytes() {
+        return instance.getViamServerRunningBytes();
+      }
+      /**
+       * <pre>
+       * the version of viam-server currently running
+       * </pre>
+       *
+       * <code>string viam_server_running = 3 [json_name = "viamServerRunning"];</code>
+       * @param value The viamServerRunning to set.
+       * @return This builder for chaining.
+       */
+      public Builder setViamServerRunning(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setViamServerRunning(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * the version of viam-server currently running
+       * </pre>
+       *
+       * <code>string viam_server_running = 3 [json_name = "viamServerRunning"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearViamServerRunning() {
+        copyOnWrite();
+        instance.clearViamServerRunning();
+        return this;
+      }
+      /**
+       * <pre>
+       * the version of viam-server currently running
+       * </pre>
+       *
+       * <code>string viam_server_running = 3 [json_name = "viamServerRunning"];</code>
+       * @param value The bytes for viamServerRunning to set.
+       * @return This builder for chaining.
+       */
+      public Builder setViamServerRunningBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setViamServerRunningBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * the version of viam-server installed (will run after restart if different)
+       * </pre>
+       *
+       * <code>string viam_server_installed = 4 [json_name = "viamServerInstalled"];</code>
+       * @return The viamServerInstalled.
+       */
+      @java.lang.Override
+      public java.lang.String getViamServerInstalled() {
+        return instance.getViamServerInstalled();
+      }
+      /**
+       * <pre>
+       * the version of viam-server installed (will run after restart if different)
+       * </pre>
+       *
+       * <code>string viam_server_installed = 4 [json_name = "viamServerInstalled"];</code>
+       * @return The bytes for viamServerInstalled.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getViamServerInstalledBytes() {
+        return instance.getViamServerInstalledBytes();
+      }
+      /**
+       * <pre>
+       * the version of viam-server installed (will run after restart if different)
+       * </pre>
+       *
+       * <code>string viam_server_installed = 4 [json_name = "viamServerInstalled"];</code>
+       * @param value The viamServerInstalled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setViamServerInstalled(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setViamServerInstalled(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * the version of viam-server installed (will run after restart if different)
+       * </pre>
+       *
+       * <code>string viam_server_installed = 4 [json_name = "viamServerInstalled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearViamServerInstalled() {
+        copyOnWrite();
+        instance.clearViamServerInstalled();
+        return this;
+      }
+      /**
+       * <pre>
+       * the version of viam-server installed (will run after restart if different)
+       * </pre>
+       *
+       * <code>string viam_server_installed = 4 [json_name = "viamServerInstalled"];</code>
+       * @param value The bytes for viamServerInstalled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setViamServerInstalledBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setViamServerInstalledBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.agent.v1.VersionInfo)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.agent.v1.Agent.VersionInfo();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "agentRunning_",
+              "agentInstalled_",
+              "viamServerRunning_",
+              "viamServerInstalled_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.agent.v1.Agent.VersionInfo> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.agent.v1.Agent.VersionInfo.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.agent.v1.Agent.VersionInfo>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.agent.v1.VersionInfo)
+    private static final viam.app.agent.v1.Agent.VersionInfo DEFAULT_INSTANCE;
+    static {
+      VersionInfo defaultInstance = new VersionInfo();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        VersionInfo.class, defaultInstance);
+    }
+
+    public static viam.app.agent.v1.Agent.VersionInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<VersionInfo> PARSER;
+
+    public static com.google.protobuf.Parser<VersionInfo> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -3141,8 +4892,8 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
     }
   }
 
-  public interface SubsystemUpdateInfoOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.app.agent.v1.SubsystemUpdateInfo)
+  public interface UpdateInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.agent.v1.UpdateInfo)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -3235,14 +4986,14 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
     viam.app.agent.v1.Agent.PackageFormat getFormat();
   }
   /**
-   * Protobuf type {@code viam.app.agent.v1.SubsystemUpdateInfo}
+   * Protobuf type {@code viam.app.agent.v1.UpdateInfo}
    */
-  public  static final class SubsystemUpdateInfo extends
+  public  static final class UpdateInfo extends
       com.google.protobuf.GeneratedMessageLite<
-          SubsystemUpdateInfo, SubsystemUpdateInfo.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.app.agent.v1.SubsystemUpdateInfo)
-      SubsystemUpdateInfoOrBuilder {
-    private SubsystemUpdateInfo() {
+          UpdateInfo, UpdateInfo.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.agent.v1.UpdateInfo)
+      UpdateInfoOrBuilder {
+    private UpdateInfo() {
       filename_ = "";
       url_ = "";
       version_ = "";
@@ -3550,50 +5301,50 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
       format_ = 0;
     }
 
-    public static viam.app.agent.v1.Agent.SubsystemUpdateInfo parseFrom(
+    public static viam.app.agent.v1.Agent.UpdateInfo parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.agent.v1.Agent.SubsystemUpdateInfo parseFrom(
+    public static viam.app.agent.v1.Agent.UpdateInfo parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.agent.v1.Agent.SubsystemUpdateInfo parseFrom(
+    public static viam.app.agent.v1.Agent.UpdateInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.agent.v1.Agent.SubsystemUpdateInfo parseFrom(
+    public static viam.app.agent.v1.Agent.UpdateInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.agent.v1.Agent.SubsystemUpdateInfo parseFrom(byte[] data)
+    public static viam.app.agent.v1.Agent.UpdateInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.agent.v1.Agent.SubsystemUpdateInfo parseFrom(
+    public static viam.app.agent.v1.Agent.UpdateInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.agent.v1.Agent.SubsystemUpdateInfo parseFrom(java.io.InputStream input)
+    public static viam.app.agent.v1.Agent.UpdateInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.agent.v1.Agent.SubsystemUpdateInfo parseFrom(
+    public static viam.app.agent.v1.Agent.UpdateInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3601,24 +5352,24 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static viam.app.agent.v1.Agent.SubsystemUpdateInfo parseDelimitedFrom(java.io.InputStream input)
+    public static viam.app.agent.v1.Agent.UpdateInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static viam.app.agent.v1.Agent.SubsystemUpdateInfo parseDelimitedFrom(
+    public static viam.app.agent.v1.Agent.UpdateInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static viam.app.agent.v1.Agent.SubsystemUpdateInfo parseFrom(
+    public static viam.app.agent.v1.Agent.UpdateInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.agent.v1.Agent.SubsystemUpdateInfo parseFrom(
+    public static viam.app.agent.v1.Agent.UpdateInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3629,19 +5380,19 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(viam.app.agent.v1.Agent.SubsystemUpdateInfo prototype) {
+    public static Builder newBuilder(viam.app.agent.v1.Agent.UpdateInfo prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code viam.app.agent.v1.SubsystemUpdateInfo}
+     * Protobuf type {@code viam.app.agent.v1.UpdateInfo}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          viam.app.agent.v1.Agent.SubsystemUpdateInfo, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.app.agent.v1.SubsystemUpdateInfo)
-        viam.app.agent.v1.Agent.SubsystemUpdateInfoOrBuilder {
-      // Construct using viam.app.agent.v1.Agent.SubsystemUpdateInfo.newBuilder()
+          viam.app.agent.v1.Agent.UpdateInfo, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.agent.v1.UpdateInfo)
+        viam.app.agent.v1.Agent.UpdateInfoOrBuilder {
+      // Construct using viam.app.agent.v1.Agent.UpdateInfo.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -3960,7 +5711,7 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:viam.app.agent.v1.SubsystemUpdateInfo)
+      // @@protoc_insertion_point(builder_scope:viam.app.agent.v1.UpdateInfo)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -3969,7 +5720,7 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new viam.app.agent.v1.Agent.SubsystemUpdateInfo();
+          return new viam.app.agent.v1.Agent.UpdateInfo();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -3992,13 +5743,13 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<viam.app.agent.v1.Agent.SubsystemUpdateInfo> parser = PARSER;
+          com.google.protobuf.Parser<viam.app.agent.v1.Agent.UpdateInfo> parser = PARSER;
           if (parser == null) {
-            synchronized (viam.app.agent.v1.Agent.SubsystemUpdateInfo.class) {
+            synchronized (viam.app.agent.v1.Agent.UpdateInfo.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<viam.app.agent.v1.Agent.SubsystemUpdateInfo>(
+                    new DefaultInstanceBasedParser<viam.app.agent.v1.Agent.UpdateInfo>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -4017,24 +5768,24 @@ viam.app.agent.v1.Agent.DeviceSubsystemConfig defaultValue) {
     }
 
 
-    // @@protoc_insertion_point(class_scope:viam.app.agent.v1.SubsystemUpdateInfo)
-    private static final viam.app.agent.v1.Agent.SubsystemUpdateInfo DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:viam.app.agent.v1.UpdateInfo)
+    private static final viam.app.agent.v1.Agent.UpdateInfo DEFAULT_INSTANCE;
     static {
-      SubsystemUpdateInfo defaultInstance = new SubsystemUpdateInfo();
+      UpdateInfo defaultInstance = new UpdateInfo();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        SubsystemUpdateInfo.class, defaultInstance);
+        UpdateInfo.class, defaultInstance);
     }
 
-    public static viam.app.agent.v1.Agent.SubsystemUpdateInfo getDefaultInstance() {
+    public static viam.app.agent.v1.Agent.UpdateInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<SubsystemUpdateInfo> PARSER;
+    private static volatile com.google.protobuf.Parser<UpdateInfo> PARSER;
 
-    public static com.google.protobuf.Parser<SubsystemUpdateInfo> parser() {
+    public static com.google.protobuf.Parser<UpdateInfo> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

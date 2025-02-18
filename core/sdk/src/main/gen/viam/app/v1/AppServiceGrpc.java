@@ -318,6 +318,66 @@ public final class AppServiceGrpc {
     return getDeleteOrganizationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.GetOrganizationMetadataRequest,
+      viam.app.v1.App.GetOrganizationMetadataResponse> getGetOrganizationMetadataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetOrganizationMetadata",
+      requestType = viam.app.v1.App.GetOrganizationMetadataRequest.class,
+      responseType = viam.app.v1.App.GetOrganizationMetadataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.GetOrganizationMetadataRequest,
+      viam.app.v1.App.GetOrganizationMetadataResponse> getGetOrganizationMetadataMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.GetOrganizationMetadataRequest, viam.app.v1.App.GetOrganizationMetadataResponse> getGetOrganizationMetadataMethod;
+    if ((getGetOrganizationMetadataMethod = AppServiceGrpc.getGetOrganizationMetadataMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getGetOrganizationMetadataMethod = AppServiceGrpc.getGetOrganizationMetadataMethod) == null) {
+          AppServiceGrpc.getGetOrganizationMetadataMethod = getGetOrganizationMetadataMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.GetOrganizationMetadataRequest, viam.app.v1.App.GetOrganizationMetadataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrganizationMetadata"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetOrganizationMetadataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetOrganizationMetadataResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetOrganizationMetadataMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.UpdateOrganizationMetadataRequest,
+      viam.app.v1.App.UpdateOrganizationMetadataResponse> getUpdateOrganizationMetadataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateOrganizationMetadata",
+      requestType = viam.app.v1.App.UpdateOrganizationMetadataRequest.class,
+      responseType = viam.app.v1.App.UpdateOrganizationMetadataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.UpdateOrganizationMetadataRequest,
+      viam.app.v1.App.UpdateOrganizationMetadataResponse> getUpdateOrganizationMetadataMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.UpdateOrganizationMetadataRequest, viam.app.v1.App.UpdateOrganizationMetadataResponse> getUpdateOrganizationMetadataMethod;
+    if ((getUpdateOrganizationMetadataMethod = AppServiceGrpc.getUpdateOrganizationMetadataMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getUpdateOrganizationMetadataMethod = AppServiceGrpc.getUpdateOrganizationMetadataMethod) == null) {
+          AppServiceGrpc.getUpdateOrganizationMetadataMethod = getUpdateOrganizationMetadataMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.UpdateOrganizationMetadataRequest, viam.app.v1.App.UpdateOrganizationMetadataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateOrganizationMetadata"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.UpdateOrganizationMetadataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.UpdateOrganizationMetadataResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUpdateOrganizationMetadataMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.ListOrganizationMembersRequest,
       viam.app.v1.App.ListOrganizationMembersResponse> getListOrganizationMembersMethod;
 
@@ -1068,6 +1128,66 @@ public final class AppServiceGrpc {
     return getDeleteLocationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.GetLocationMetadataRequest,
+      viam.app.v1.App.GetLocationMetadataResponse> getGetLocationMetadataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetLocationMetadata",
+      requestType = viam.app.v1.App.GetLocationMetadataRequest.class,
+      responseType = viam.app.v1.App.GetLocationMetadataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.GetLocationMetadataRequest,
+      viam.app.v1.App.GetLocationMetadataResponse> getGetLocationMetadataMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.GetLocationMetadataRequest, viam.app.v1.App.GetLocationMetadataResponse> getGetLocationMetadataMethod;
+    if ((getGetLocationMetadataMethod = AppServiceGrpc.getGetLocationMetadataMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getGetLocationMetadataMethod = AppServiceGrpc.getGetLocationMetadataMethod) == null) {
+          AppServiceGrpc.getGetLocationMetadataMethod = getGetLocationMetadataMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.GetLocationMetadataRequest, viam.app.v1.App.GetLocationMetadataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLocationMetadata"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetLocationMetadataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetLocationMetadataResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetLocationMetadataMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.UpdateLocationMetadataRequest,
+      viam.app.v1.App.UpdateLocationMetadataResponse> getUpdateLocationMetadataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateLocationMetadata",
+      requestType = viam.app.v1.App.UpdateLocationMetadataRequest.class,
+      responseType = viam.app.v1.App.UpdateLocationMetadataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.UpdateLocationMetadataRequest,
+      viam.app.v1.App.UpdateLocationMetadataResponse> getUpdateLocationMetadataMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.UpdateLocationMetadataRequest, viam.app.v1.App.UpdateLocationMetadataResponse> getUpdateLocationMetadataMethod;
+    if ((getUpdateLocationMetadataMethod = AppServiceGrpc.getUpdateLocationMetadataMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getUpdateLocationMetadataMethod = AppServiceGrpc.getUpdateLocationMetadataMethod) == null) {
+          AppServiceGrpc.getUpdateLocationMetadataMethod = getUpdateLocationMetadataMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.UpdateLocationMetadataRequest, viam.app.v1.App.UpdateLocationMetadataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateLocationMetadata"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.UpdateLocationMetadataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.UpdateLocationMetadataResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUpdateLocationMetadataMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.ListLocationsRequest,
       viam.app.v1.App.ListLocationsResponse> getListLocationsMethod;
 
@@ -1276,6 +1396,66 @@ public final class AppServiceGrpc {
       }
     }
     return getGetRobotMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.GetRobotMetadataRequest,
+      viam.app.v1.App.GetRobotMetadataResponse> getGetRobotMetadataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetRobotMetadata",
+      requestType = viam.app.v1.App.GetRobotMetadataRequest.class,
+      responseType = viam.app.v1.App.GetRobotMetadataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.GetRobotMetadataRequest,
+      viam.app.v1.App.GetRobotMetadataResponse> getGetRobotMetadataMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.GetRobotMetadataRequest, viam.app.v1.App.GetRobotMetadataResponse> getGetRobotMetadataMethod;
+    if ((getGetRobotMetadataMethod = AppServiceGrpc.getGetRobotMetadataMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getGetRobotMetadataMethod = AppServiceGrpc.getGetRobotMetadataMethod) == null) {
+          AppServiceGrpc.getGetRobotMetadataMethod = getGetRobotMetadataMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.GetRobotMetadataRequest, viam.app.v1.App.GetRobotMetadataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRobotMetadata"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetRobotMetadataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetRobotMetadataResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetRobotMetadataMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.UpdateRobotMetadataRequest,
+      viam.app.v1.App.UpdateRobotMetadataResponse> getUpdateRobotMetadataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateRobotMetadata",
+      requestType = viam.app.v1.App.UpdateRobotMetadataRequest.class,
+      responseType = viam.app.v1.App.UpdateRobotMetadataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.UpdateRobotMetadataRequest,
+      viam.app.v1.App.UpdateRobotMetadataResponse> getUpdateRobotMetadataMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.UpdateRobotMetadataRequest, viam.app.v1.App.UpdateRobotMetadataResponse> getUpdateRobotMetadataMethod;
+    if ((getUpdateRobotMetadataMethod = AppServiceGrpc.getUpdateRobotMetadataMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getUpdateRobotMetadataMethod = AppServiceGrpc.getUpdateRobotMetadataMethod) == null) {
+          AppServiceGrpc.getUpdateRobotMetadataMethod = getUpdateRobotMetadataMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.UpdateRobotMetadataRequest, viam.app.v1.App.UpdateRobotMetadataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateRobotMetadata"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.UpdateRobotMetadataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.UpdateRobotMetadataResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUpdateRobotMetadataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.GetRoverRentalRobotsRequest,
@@ -1546,6 +1726,66 @@ public final class AppServiceGrpc {
       }
     }
     return getDeleteRobotPartMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.GetRobotPartMetadataRequest,
+      viam.app.v1.App.GetRobotPartMetadataResponse> getGetRobotPartMetadataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetRobotPartMetadata",
+      requestType = viam.app.v1.App.GetRobotPartMetadataRequest.class,
+      responseType = viam.app.v1.App.GetRobotPartMetadataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.GetRobotPartMetadataRequest,
+      viam.app.v1.App.GetRobotPartMetadataResponse> getGetRobotPartMetadataMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.GetRobotPartMetadataRequest, viam.app.v1.App.GetRobotPartMetadataResponse> getGetRobotPartMetadataMethod;
+    if ((getGetRobotPartMetadataMethod = AppServiceGrpc.getGetRobotPartMetadataMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getGetRobotPartMetadataMethod = AppServiceGrpc.getGetRobotPartMetadataMethod) == null) {
+          AppServiceGrpc.getGetRobotPartMetadataMethod = getGetRobotPartMetadataMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.GetRobotPartMetadataRequest, viam.app.v1.App.GetRobotPartMetadataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRobotPartMetadata"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetRobotPartMetadataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetRobotPartMetadataResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetRobotPartMetadataMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.UpdateRobotPartMetadataRequest,
+      viam.app.v1.App.UpdateRobotPartMetadataResponse> getUpdateRobotPartMetadataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateRobotPartMetadata",
+      requestType = viam.app.v1.App.UpdateRobotPartMetadataRequest.class,
+      responseType = viam.app.v1.App.UpdateRobotPartMetadataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.UpdateRobotPartMetadataRequest,
+      viam.app.v1.App.UpdateRobotPartMetadataResponse> getUpdateRobotPartMetadataMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.UpdateRobotPartMetadataRequest, viam.app.v1.App.UpdateRobotPartMetadataResponse> getUpdateRobotPartMetadataMethod;
+    if ((getUpdateRobotPartMetadataMethod = AppServiceGrpc.getUpdateRobotPartMetadataMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getUpdateRobotPartMetadataMethod = AppServiceGrpc.getUpdateRobotPartMetadataMethod) == null) {
+          AppServiceGrpc.getUpdateRobotPartMetadataMethod = getUpdateRobotPartMetadataMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.UpdateRobotPartMetadataRequest, viam.app.v1.App.UpdateRobotPartMetadataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateRobotPartMetadata"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.UpdateRobotPartMetadataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.UpdateRobotPartMetadataResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUpdateRobotPartMetadataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.GetRobotAPIKeysRequest,
@@ -2931,6 +3171,26 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Get user-defined metadata for an organization
+     * </pre>
+     */
+    default void getOrganizationMetadata(viam.app.v1.App.GetOrganizationMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetOrganizationMetadataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrganizationMetadataMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an organization
+     * </pre>
+     */
+    default void updateOrganizationMetadata(viam.app.v1.App.UpdateOrganizationMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateOrganizationMetadataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateOrganizationMetadataMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * List all members of an organization and all invited members to the organization.
      * </pre>
      */
@@ -3136,6 +3396,26 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Get user-defined metadata for a location
+     * </pre>
+     */
+    default void getLocationMetadata(viam.app.v1.App.GetLocationMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetLocationMetadataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLocationMetadataMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for a location
+     * </pre>
+     */
+    default void updateLocationMetadata(viam.app.v1.App.UpdateLocationMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateLocationMetadataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateLocationMetadataMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Get a list of locations
      * </pre>
      */
@@ -3203,6 +3483,26 @@ public final class AppServiceGrpc {
     default void getRobot(viam.app.v1.App.GetRobotRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.App.GetRobotResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRobotMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get user-defined metadata for a robot
+     * </pre>
+     */
+    default void getRobotMetadata(viam.app.v1.App.GetRobotMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetRobotMetadataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRobotMetadataMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an robot
+     * </pre>
+     */
+    default void updateRobotMetadata(viam.app.v1.App.UpdateRobotMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateRobotMetadataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateRobotMetadataMethod(), responseObserver);
     }
 
     /**
@@ -3284,6 +3584,26 @@ public final class AppServiceGrpc {
     default void deleteRobotPart(viam.app.v1.App.DeleteRobotPartRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.App.DeleteRobotPartResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRobotPartMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get user-defined metadata for a robot part
+     * </pre>
+     */
+    default void getRobotPartMetadata(viam.app.v1.App.GetRobotPartMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetRobotPartMetadataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRobotPartMetadataMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an robot part
+     * </pre>
+     */
+    default void updateRobotPartMetadata(viam.app.v1.App.UpdateRobotPartMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateRobotPartMetadataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateRobotPartMetadataMethod(), responseObserver);
     }
 
     /**
@@ -3796,6 +4116,28 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Get user-defined metadata for an organization
+     * </pre>
+     */
+    public void getOrganizationMetadata(viam.app.v1.App.GetOrganizationMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetOrganizationMetadataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetOrganizationMetadataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an organization
+     * </pre>
+     */
+    public void updateOrganizationMetadata(viam.app.v1.App.UpdateOrganizationMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateOrganizationMetadataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateOrganizationMetadataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * List all members of an organization and all invited members to the organization.
      * </pre>
      */
@@ -4026,6 +4368,28 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Get user-defined metadata for a location
+     * </pre>
+     */
+    public void getLocationMetadata(viam.app.v1.App.GetLocationMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetLocationMetadataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetLocationMetadataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for a location
+     * </pre>
+     */
+    public void updateLocationMetadata(viam.app.v1.App.UpdateLocationMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateLocationMetadataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateLocationMetadataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Get a list of locations
      * </pre>
      */
@@ -4100,6 +4464,28 @@ public final class AppServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.App.GetRobotResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetRobotMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get user-defined metadata for a robot
+     * </pre>
+     */
+    public void getRobotMetadata(viam.app.v1.App.GetRobotMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetRobotMetadataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetRobotMetadataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an robot
+     * </pre>
+     */
+    public void updateRobotMetadata(viam.app.v1.App.UpdateRobotMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateRobotMetadataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateRobotMetadataMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -4190,6 +4576,28 @@ public final class AppServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.App.DeleteRobotPartResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteRobotPartMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get user-defined metadata for a robot part
+     * </pre>
+     */
+    public void getRobotPartMetadata(viam.app.v1.App.GetRobotPartMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetRobotPartMetadataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetRobotPartMetadataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an robot part
+     * </pre>
+     */
+    public void updateRobotPartMetadata(viam.app.v1.App.UpdateRobotPartMetadataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateRobotPartMetadataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateRobotPartMetadataMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -4719,6 +5127,26 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Get user-defined metadata for an organization
+     * </pre>
+     */
+    public viam.app.v1.App.GetOrganizationMetadataResponse getOrganizationMetadata(viam.app.v1.App.GetOrganizationMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetOrganizationMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an organization
+     * </pre>
+     */
+    public viam.app.v1.App.UpdateOrganizationMetadataResponse updateOrganizationMetadata(viam.app.v1.App.UpdateOrganizationMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateOrganizationMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * List all members of an organization and all invited members to the organization.
      * </pre>
      */
@@ -4924,6 +5352,26 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Get user-defined metadata for a location
+     * </pre>
+     */
+    public viam.app.v1.App.GetLocationMetadataResponse getLocationMetadata(viam.app.v1.App.GetLocationMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetLocationMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for a location
+     * </pre>
+     */
+    public viam.app.v1.App.UpdateLocationMetadataResponse updateLocationMetadata(viam.app.v1.App.UpdateLocationMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateLocationMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Get a list of locations
      * </pre>
      */
@@ -4991,6 +5439,26 @@ public final class AppServiceGrpc {
     public viam.app.v1.App.GetRobotResponse getRobot(viam.app.v1.App.GetRobotRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetRobotMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get user-defined metadata for a robot
+     * </pre>
+     */
+    public viam.app.v1.App.GetRobotMetadataResponse getRobotMetadata(viam.app.v1.App.GetRobotMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetRobotMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an robot
+     * </pre>
+     */
+    public viam.app.v1.App.UpdateRobotMetadataResponse updateRobotMetadata(viam.app.v1.App.UpdateRobotMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateRobotMetadataMethod(), getCallOptions(), request);
     }
 
     /**
@@ -5073,6 +5541,26 @@ public final class AppServiceGrpc {
     public viam.app.v1.App.DeleteRobotPartResponse deleteRobotPart(viam.app.v1.App.DeleteRobotPartRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteRobotPartMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get user-defined metadata for a robot part
+     * </pre>
+     */
+    public viam.app.v1.App.GetRobotPartMetadataResponse getRobotPartMetadata(viam.app.v1.App.GetRobotPartMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetRobotPartMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an robot part
+     * </pre>
+     */
+    public viam.app.v1.App.UpdateRobotPartMetadataResponse updateRobotPartMetadata(viam.app.v1.App.UpdateRobotPartMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateRobotPartMetadataMethod(), getCallOptions(), request);
     }
 
     /**
@@ -5564,6 +6052,28 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Get user-defined metadata for an organization
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.GetOrganizationMetadataResponse> getOrganizationMetadata(
+        viam.app.v1.App.GetOrganizationMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetOrganizationMetadataMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an organization
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.UpdateOrganizationMetadataResponse> updateOrganizationMetadata(
+        viam.app.v1.App.UpdateOrganizationMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateOrganizationMetadataMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * List all members of an organization and all invited members to the organization.
      * </pre>
      */
@@ -5794,6 +6304,28 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Get user-defined metadata for a location
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.GetLocationMetadataResponse> getLocationMetadata(
+        viam.app.v1.App.GetLocationMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetLocationMetadataMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for a location
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.UpdateLocationMetadataResponse> updateLocationMetadata(
+        viam.app.v1.App.UpdateLocationMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateLocationMetadataMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Get a list of locations
      * </pre>
      */
@@ -5868,6 +6400,28 @@ public final class AppServiceGrpc {
         viam.app.v1.App.GetRobotRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetRobotMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Get user-defined metadata for a robot
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.GetRobotMetadataResponse> getRobotMetadata(
+        viam.app.v1.App.GetRobotMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetRobotMetadataMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an robot
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.UpdateRobotMetadataResponse> updateRobotMetadata(
+        viam.app.v1.App.UpdateRobotMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateRobotMetadataMethod(), getCallOptions()), request);
     }
 
     /**
@@ -5950,6 +6504,28 @@ public final class AppServiceGrpc {
         viam.app.v1.App.DeleteRobotPartRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteRobotPartMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Get user-defined metadata for a robot part
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.GetRobotPartMetadataResponse> getRobotPartMetadata(
+        viam.app.v1.App.GetRobotPartMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetRobotPartMetadataMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an robot part
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.UpdateRobotPartMetadataResponse> updateRobotPartMetadata(
+        viam.app.v1.App.UpdateRobotPartMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateRobotPartMetadataMethod(), getCallOptions()), request);
     }
 
     /**
@@ -6360,88 +6936,96 @@ public final class AppServiceGrpc {
   private static final int METHODID_GET_ORGANIZATION_NAMESPACE_AVAILABILITY = 7;
   private static final int METHODID_UPDATE_ORGANIZATION = 8;
   private static final int METHODID_DELETE_ORGANIZATION = 9;
-  private static final int METHODID_LIST_ORGANIZATION_MEMBERS = 10;
-  private static final int METHODID_CREATE_ORGANIZATION_INVITE = 11;
-  private static final int METHODID_UPDATE_ORGANIZATION_INVITE_AUTHORIZATIONS = 12;
-  private static final int METHODID_DELETE_ORGANIZATION_MEMBER = 13;
-  private static final int METHODID_DELETE_ORGANIZATION_INVITE = 14;
-  private static final int METHODID_RESEND_ORGANIZATION_INVITE = 15;
-  private static final int METHODID_ENABLE_BILLING_SERVICE = 16;
-  private static final int METHODID_DISABLE_BILLING_SERVICE = 17;
-  private static final int METHODID_UPDATE_BILLING_SERVICE = 18;
-  private static final int METHODID_GET_BILLING_SERVICE_CONFIG = 19;
-  private static final int METHODID_ORGANIZATION_SET_SUPPORT_EMAIL = 20;
-  private static final int METHODID_ORGANIZATION_GET_SUPPORT_EMAIL = 21;
-  private static final int METHODID_ORGANIZATION_SET_LOGO = 22;
-  private static final int METHODID_ORGANIZATION_GET_LOGO = 23;
-  private static final int METHODID_ENABLE_AUTH_SERVICE = 24;
-  private static final int METHODID_DISABLE_AUTH_SERVICE = 25;
-  private static final int METHODID_CREATE_OAUTH_APP = 26;
-  private static final int METHODID_READ_OAUTH_APP = 27;
-  private static final int METHODID_UPDATE_OAUTH_APP = 28;
-  private static final int METHODID_DELETE_OAUTH_APP = 29;
-  private static final int METHODID_LIST_OAUTH_APPS = 30;
-  private static final int METHODID_CREATE_LOCATION = 31;
-  private static final int METHODID_GET_LOCATION = 32;
-  private static final int METHODID_UPDATE_LOCATION = 33;
-  private static final int METHODID_DELETE_LOCATION = 34;
-  private static final int METHODID_LIST_LOCATIONS = 35;
-  private static final int METHODID_SHARE_LOCATION = 36;
-  private static final int METHODID_UNSHARE_LOCATION = 37;
-  private static final int METHODID_LOCATION_AUTH = 38;
-  private static final int METHODID_CREATE_LOCATION_SECRET = 39;
-  private static final int METHODID_DELETE_LOCATION_SECRET = 40;
-  private static final int METHODID_GET_ROBOT = 41;
-  private static final int METHODID_GET_ROVER_RENTAL_ROBOTS = 42;
-  private static final int METHODID_GET_ROBOT_PARTS = 43;
-  private static final int METHODID_GET_ROBOT_PART = 44;
-  private static final int METHODID_GET_ROBOT_PART_LOGS = 45;
-  private static final int METHODID_TAIL_ROBOT_PART_LOGS = 46;
-  private static final int METHODID_GET_ROBOT_PART_HISTORY = 47;
-  private static final int METHODID_UPDATE_ROBOT_PART = 48;
-  private static final int METHODID_NEW_ROBOT_PART = 49;
-  private static final int METHODID_DELETE_ROBOT_PART = 50;
-  private static final int METHODID_GET_ROBOT_APIKEYS = 51;
-  private static final int METHODID_MARK_PART_AS_MAIN = 52;
-  private static final int METHODID_MARK_PART_FOR_RESTART = 53;
-  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 54;
-  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 55;
-  private static final int METHODID_LIST_ROBOTS = 56;
-  private static final int METHODID_NEW_ROBOT = 57;
-  private static final int METHODID_UPDATE_ROBOT = 58;
-  private static final int METHODID_DELETE_ROBOT = 59;
-  private static final int METHODID_LIST_FRAGMENTS = 60;
-  private static final int METHODID_GET_FRAGMENT = 61;
-  private static final int METHODID_CREATE_FRAGMENT = 62;
-  private static final int METHODID_UPDATE_FRAGMENT = 63;
-  private static final int METHODID_DELETE_FRAGMENT = 64;
-  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 65;
-  private static final int METHODID_GET_FRAGMENT_HISTORY = 66;
-  private static final int METHODID_GET_FRAGMENT_USAGE = 67;
-  private static final int METHODID_SET_FRAGMENT_TAG = 68;
-  private static final int METHODID_DELETE_FRAGMENT_TAG = 69;
-  private static final int METHODID_ADD_ROLE = 70;
-  private static final int METHODID_REMOVE_ROLE = 71;
-  private static final int METHODID_CHANGE_ROLE = 72;
-  private static final int METHODID_LIST_AUTHORIZATIONS = 73;
-  private static final int METHODID_CHECK_PERMISSIONS = 74;
-  private static final int METHODID_GET_REGISTRY_ITEM = 75;
-  private static final int METHODID_CREATE_REGISTRY_ITEM = 76;
-  private static final int METHODID_UPDATE_REGISTRY_ITEM = 77;
-  private static final int METHODID_LIST_REGISTRY_ITEMS = 78;
-  private static final int METHODID_DELETE_REGISTRY_ITEM = 79;
-  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 80;
-  private static final int METHODID_CREATE_MODULE = 81;
-  private static final int METHODID_UPDATE_MODULE = 82;
-  private static final int METHODID_GET_MODULE = 83;
-  private static final int METHODID_LIST_MODULES = 84;
-  private static final int METHODID_CREATE_KEY = 85;
-  private static final int METHODID_DELETE_KEY = 86;
-  private static final int METHODID_LIST_KEYS = 87;
-  private static final int METHODID_RENAME_KEY = 88;
-  private static final int METHODID_ROTATE_KEY = 89;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 90;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 91;
+  private static final int METHODID_GET_ORGANIZATION_METADATA = 10;
+  private static final int METHODID_UPDATE_ORGANIZATION_METADATA = 11;
+  private static final int METHODID_LIST_ORGANIZATION_MEMBERS = 12;
+  private static final int METHODID_CREATE_ORGANIZATION_INVITE = 13;
+  private static final int METHODID_UPDATE_ORGANIZATION_INVITE_AUTHORIZATIONS = 14;
+  private static final int METHODID_DELETE_ORGANIZATION_MEMBER = 15;
+  private static final int METHODID_DELETE_ORGANIZATION_INVITE = 16;
+  private static final int METHODID_RESEND_ORGANIZATION_INVITE = 17;
+  private static final int METHODID_ENABLE_BILLING_SERVICE = 18;
+  private static final int METHODID_DISABLE_BILLING_SERVICE = 19;
+  private static final int METHODID_UPDATE_BILLING_SERVICE = 20;
+  private static final int METHODID_GET_BILLING_SERVICE_CONFIG = 21;
+  private static final int METHODID_ORGANIZATION_SET_SUPPORT_EMAIL = 22;
+  private static final int METHODID_ORGANIZATION_GET_SUPPORT_EMAIL = 23;
+  private static final int METHODID_ORGANIZATION_SET_LOGO = 24;
+  private static final int METHODID_ORGANIZATION_GET_LOGO = 25;
+  private static final int METHODID_ENABLE_AUTH_SERVICE = 26;
+  private static final int METHODID_DISABLE_AUTH_SERVICE = 27;
+  private static final int METHODID_CREATE_OAUTH_APP = 28;
+  private static final int METHODID_READ_OAUTH_APP = 29;
+  private static final int METHODID_UPDATE_OAUTH_APP = 30;
+  private static final int METHODID_DELETE_OAUTH_APP = 31;
+  private static final int METHODID_LIST_OAUTH_APPS = 32;
+  private static final int METHODID_CREATE_LOCATION = 33;
+  private static final int METHODID_GET_LOCATION = 34;
+  private static final int METHODID_UPDATE_LOCATION = 35;
+  private static final int METHODID_DELETE_LOCATION = 36;
+  private static final int METHODID_GET_LOCATION_METADATA = 37;
+  private static final int METHODID_UPDATE_LOCATION_METADATA = 38;
+  private static final int METHODID_LIST_LOCATIONS = 39;
+  private static final int METHODID_SHARE_LOCATION = 40;
+  private static final int METHODID_UNSHARE_LOCATION = 41;
+  private static final int METHODID_LOCATION_AUTH = 42;
+  private static final int METHODID_CREATE_LOCATION_SECRET = 43;
+  private static final int METHODID_DELETE_LOCATION_SECRET = 44;
+  private static final int METHODID_GET_ROBOT = 45;
+  private static final int METHODID_GET_ROBOT_METADATA = 46;
+  private static final int METHODID_UPDATE_ROBOT_METADATA = 47;
+  private static final int METHODID_GET_ROVER_RENTAL_ROBOTS = 48;
+  private static final int METHODID_GET_ROBOT_PARTS = 49;
+  private static final int METHODID_GET_ROBOT_PART = 50;
+  private static final int METHODID_GET_ROBOT_PART_LOGS = 51;
+  private static final int METHODID_TAIL_ROBOT_PART_LOGS = 52;
+  private static final int METHODID_GET_ROBOT_PART_HISTORY = 53;
+  private static final int METHODID_UPDATE_ROBOT_PART = 54;
+  private static final int METHODID_NEW_ROBOT_PART = 55;
+  private static final int METHODID_DELETE_ROBOT_PART = 56;
+  private static final int METHODID_GET_ROBOT_PART_METADATA = 57;
+  private static final int METHODID_UPDATE_ROBOT_PART_METADATA = 58;
+  private static final int METHODID_GET_ROBOT_APIKEYS = 59;
+  private static final int METHODID_MARK_PART_AS_MAIN = 60;
+  private static final int METHODID_MARK_PART_FOR_RESTART = 61;
+  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 62;
+  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 63;
+  private static final int METHODID_LIST_ROBOTS = 64;
+  private static final int METHODID_NEW_ROBOT = 65;
+  private static final int METHODID_UPDATE_ROBOT = 66;
+  private static final int METHODID_DELETE_ROBOT = 67;
+  private static final int METHODID_LIST_FRAGMENTS = 68;
+  private static final int METHODID_GET_FRAGMENT = 69;
+  private static final int METHODID_CREATE_FRAGMENT = 70;
+  private static final int METHODID_UPDATE_FRAGMENT = 71;
+  private static final int METHODID_DELETE_FRAGMENT = 72;
+  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 73;
+  private static final int METHODID_GET_FRAGMENT_HISTORY = 74;
+  private static final int METHODID_GET_FRAGMENT_USAGE = 75;
+  private static final int METHODID_SET_FRAGMENT_TAG = 76;
+  private static final int METHODID_DELETE_FRAGMENT_TAG = 77;
+  private static final int METHODID_ADD_ROLE = 78;
+  private static final int METHODID_REMOVE_ROLE = 79;
+  private static final int METHODID_CHANGE_ROLE = 80;
+  private static final int METHODID_LIST_AUTHORIZATIONS = 81;
+  private static final int METHODID_CHECK_PERMISSIONS = 82;
+  private static final int METHODID_GET_REGISTRY_ITEM = 83;
+  private static final int METHODID_CREATE_REGISTRY_ITEM = 84;
+  private static final int METHODID_UPDATE_REGISTRY_ITEM = 85;
+  private static final int METHODID_LIST_REGISTRY_ITEMS = 86;
+  private static final int METHODID_DELETE_REGISTRY_ITEM = 87;
+  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 88;
+  private static final int METHODID_CREATE_MODULE = 89;
+  private static final int METHODID_UPDATE_MODULE = 90;
+  private static final int METHODID_GET_MODULE = 91;
+  private static final int METHODID_LIST_MODULES = 92;
+  private static final int METHODID_CREATE_KEY = 93;
+  private static final int METHODID_DELETE_KEY = 94;
+  private static final int METHODID_LIST_KEYS = 95;
+  private static final int METHODID_RENAME_KEY = 96;
+  private static final int METHODID_ROTATE_KEY = 97;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 98;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 99;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -6499,6 +7083,14 @@ public final class AppServiceGrpc {
         case METHODID_DELETE_ORGANIZATION:
           serviceImpl.deleteOrganization((viam.app.v1.App.DeleteOrganizationRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.App.DeleteOrganizationResponse>) responseObserver);
+          break;
+        case METHODID_GET_ORGANIZATION_METADATA:
+          serviceImpl.getOrganizationMetadata((viam.app.v1.App.GetOrganizationMetadataRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.GetOrganizationMetadataResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_ORGANIZATION_METADATA:
+          serviceImpl.updateOrganizationMetadata((viam.app.v1.App.UpdateOrganizationMetadataRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateOrganizationMetadataResponse>) responseObserver);
           break;
         case METHODID_LIST_ORGANIZATION_MEMBERS:
           serviceImpl.listOrganizationMembers((viam.app.v1.App.ListOrganizationMembersRequest) request,
@@ -6600,6 +7192,14 @@ public final class AppServiceGrpc {
           serviceImpl.deleteLocation((viam.app.v1.App.DeleteLocationRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.App.DeleteLocationResponse>) responseObserver);
           break;
+        case METHODID_GET_LOCATION_METADATA:
+          serviceImpl.getLocationMetadata((viam.app.v1.App.GetLocationMetadataRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.GetLocationMetadataResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_LOCATION_METADATA:
+          serviceImpl.updateLocationMetadata((viam.app.v1.App.UpdateLocationMetadataRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateLocationMetadataResponse>) responseObserver);
+          break;
         case METHODID_LIST_LOCATIONS:
           serviceImpl.listLocations((viam.app.v1.App.ListLocationsRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.App.ListLocationsResponse>) responseObserver);
@@ -6627,6 +7227,14 @@ public final class AppServiceGrpc {
         case METHODID_GET_ROBOT:
           serviceImpl.getRobot((viam.app.v1.App.GetRobotRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.App.GetRobotResponse>) responseObserver);
+          break;
+        case METHODID_GET_ROBOT_METADATA:
+          serviceImpl.getRobotMetadata((viam.app.v1.App.GetRobotMetadataRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.GetRobotMetadataResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_ROBOT_METADATA:
+          serviceImpl.updateRobotMetadata((viam.app.v1.App.UpdateRobotMetadataRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateRobotMetadataResponse>) responseObserver);
           break;
         case METHODID_GET_ROVER_RENTAL_ROBOTS:
           serviceImpl.getRoverRentalRobots((viam.app.v1.App.GetRoverRentalRobotsRequest) request,
@@ -6663,6 +7271,14 @@ public final class AppServiceGrpc {
         case METHODID_DELETE_ROBOT_PART:
           serviceImpl.deleteRobotPart((viam.app.v1.App.DeleteRobotPartRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.App.DeleteRobotPartResponse>) responseObserver);
+          break;
+        case METHODID_GET_ROBOT_PART_METADATA:
+          serviceImpl.getRobotPartMetadata((viam.app.v1.App.GetRobotPartMetadataRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.GetRobotPartMetadataResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_ROBOT_PART_METADATA:
+          serviceImpl.updateRobotPartMetadata((viam.app.v1.App.UpdateRobotPartMetadataRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.UpdateRobotPartMetadataResponse>) responseObserver);
           break;
         case METHODID_GET_ROBOT_APIKEYS:
           serviceImpl.getRobotAPIKeys((viam.app.v1.App.GetRobotAPIKeysRequest) request,
@@ -6916,6 +7532,20 @@ public final class AppServiceGrpc {
               viam.app.v1.App.DeleteOrganizationResponse>(
                 service, METHODID_DELETE_ORGANIZATION)))
         .addMethod(
+          getGetOrganizationMetadataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.GetOrganizationMetadataRequest,
+              viam.app.v1.App.GetOrganizationMetadataResponse>(
+                service, METHODID_GET_ORGANIZATION_METADATA)))
+        .addMethod(
+          getUpdateOrganizationMetadataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.UpdateOrganizationMetadataRequest,
+              viam.app.v1.App.UpdateOrganizationMetadataResponse>(
+                service, METHODID_UPDATE_ORGANIZATION_METADATA)))
+        .addMethod(
           getListOrganizationMembersMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -7091,6 +7721,20 @@ public final class AppServiceGrpc {
               viam.app.v1.App.DeleteLocationResponse>(
                 service, METHODID_DELETE_LOCATION)))
         .addMethod(
+          getGetLocationMetadataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.GetLocationMetadataRequest,
+              viam.app.v1.App.GetLocationMetadataResponse>(
+                service, METHODID_GET_LOCATION_METADATA)))
+        .addMethod(
+          getUpdateLocationMetadataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.UpdateLocationMetadataRequest,
+              viam.app.v1.App.UpdateLocationMetadataResponse>(
+                service, METHODID_UPDATE_LOCATION_METADATA)))
+        .addMethod(
           getListLocationsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -7139,6 +7783,20 @@ public final class AppServiceGrpc {
               viam.app.v1.App.GetRobotRequest,
               viam.app.v1.App.GetRobotResponse>(
                 service, METHODID_GET_ROBOT)))
+        .addMethod(
+          getGetRobotMetadataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.GetRobotMetadataRequest,
+              viam.app.v1.App.GetRobotMetadataResponse>(
+                service, METHODID_GET_ROBOT_METADATA)))
+        .addMethod(
+          getUpdateRobotMetadataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.UpdateRobotMetadataRequest,
+              viam.app.v1.App.UpdateRobotMetadataResponse>(
+                service, METHODID_UPDATE_ROBOT_METADATA)))
         .addMethod(
           getGetRoverRentalRobotsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -7202,6 +7860,20 @@ public final class AppServiceGrpc {
               viam.app.v1.App.DeleteRobotPartRequest,
               viam.app.v1.App.DeleteRobotPartResponse>(
                 service, METHODID_DELETE_ROBOT_PART)))
+        .addMethod(
+          getGetRobotPartMetadataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.GetRobotPartMetadataRequest,
+              viam.app.v1.App.GetRobotPartMetadataResponse>(
+                service, METHODID_GET_ROBOT_PART_METADATA)))
+        .addMethod(
+          getUpdateRobotPartMetadataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.UpdateRobotPartMetadataRequest,
+              viam.app.v1.App.UpdateRobotPartMetadataResponse>(
+                service, METHODID_UPDATE_ROBOT_PART_METADATA)))
         .addMethod(
           getGetRobotAPIKeysMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -7511,6 +8183,8 @@ public final class AppServiceGrpc {
               .addMethod(getGetOrganizationNamespaceAvailabilityMethod())
               .addMethod(getUpdateOrganizationMethod())
               .addMethod(getDeleteOrganizationMethod())
+              .addMethod(getGetOrganizationMetadataMethod())
+              .addMethod(getUpdateOrganizationMetadataMethod())
               .addMethod(getListOrganizationMembersMethod())
               .addMethod(getCreateOrganizationInviteMethod())
               .addMethod(getUpdateOrganizationInviteAuthorizationsMethod())
@@ -7536,6 +8210,8 @@ public final class AppServiceGrpc {
               .addMethod(getGetLocationMethod())
               .addMethod(getUpdateLocationMethod())
               .addMethod(getDeleteLocationMethod())
+              .addMethod(getGetLocationMetadataMethod())
+              .addMethod(getUpdateLocationMetadataMethod())
               .addMethod(getListLocationsMethod())
               .addMethod(getShareLocationMethod())
               .addMethod(getUnshareLocationMethod())
@@ -7543,6 +8219,8 @@ public final class AppServiceGrpc {
               .addMethod(getCreateLocationSecretMethod())
               .addMethod(getDeleteLocationSecretMethod())
               .addMethod(getGetRobotMethod())
+              .addMethod(getGetRobotMetadataMethod())
+              .addMethod(getUpdateRobotMetadataMethod())
               .addMethod(getGetRoverRentalRobotsMethod())
               .addMethod(getGetRobotPartsMethod())
               .addMethod(getGetRobotPartMethod())
@@ -7552,6 +8230,8 @@ public final class AppServiceGrpc {
               .addMethod(getUpdateRobotPartMethod())
               .addMethod(getNewRobotPartMethod())
               .addMethod(getDeleteRobotPartMethod())
+              .addMethod(getGetRobotPartMetadataMethod())
+              .addMethod(getUpdateRobotPartMetadataMethod())
               .addMethod(getGetRobotAPIKeysMethod())
               .addMethod(getMarkPartAsMainMethod())
               .addMethod(getMarkPartForRestartMethod())
