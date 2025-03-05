@@ -24710,6 +24710,25 @@ com.google.protobuf.Any defaultValue) {
      * @return The config.
      */
     viam.app.v1.App.StorageConfig getConfig();
+
+    /**
+     * <pre>
+     * The organization that is the primary owner of the location.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code>
+     * @return Whether the primaryOrgIdentity field is set.
+     */
+    boolean hasPrimaryOrgIdentity();
+    /**
+     * <pre>
+     * The organization that is the primary owner of the location.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code>
+     * @return The primaryOrgIdentity.
+     */
+    viam.app.v1.App.OrganizationIdentity getPrimaryOrgIdentity();
   }
   /**
    * Protobuf type {@code viam.app.v1.Location}
@@ -25296,6 +25315,72 @@ com.google.protobuf.Any defaultValue) {
      */
     private void clearConfig() {  config_ = null;
       bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static final int PRIMARY_ORG_IDENTITY_FIELD_NUMBER = 9;
+    private viam.app.v1.App.OrganizationIdentity primaryOrgIdentity_;
+    /**
+     * <pre>
+     * The organization that is the primary owner of the location.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code>
+     */
+    @java.lang.Override
+    public boolean hasPrimaryOrgIdentity() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The organization that is the primary owner of the location.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.App.OrganizationIdentity getPrimaryOrgIdentity() {
+      return primaryOrgIdentity_ == null ? viam.app.v1.App.OrganizationIdentity.getDefaultInstance() : primaryOrgIdentity_;
+    }
+    /**
+     * <pre>
+     * The organization that is the primary owner of the location.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code>
+     */
+    private void setPrimaryOrgIdentity(viam.app.v1.App.OrganizationIdentity value) {
+      value.getClass();
+  primaryOrgIdentity_ = value;
+      bitField0_ |= 0x00000008;
+      }
+    /**
+     * <pre>
+     * The organization that is the primary owner of the location.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePrimaryOrgIdentity(viam.app.v1.App.OrganizationIdentity value) {
+      value.getClass();
+  if (primaryOrgIdentity_ != null &&
+          primaryOrgIdentity_ != viam.app.v1.App.OrganizationIdentity.getDefaultInstance()) {
+        primaryOrgIdentity_ =
+          viam.app.v1.App.OrganizationIdentity.newBuilder(primaryOrgIdentity_).mergeFrom(value).buildPartial();
+      } else {
+        primaryOrgIdentity_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * The organization that is the primary owner of the location.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code>
+     */
+    private void clearPrimaryOrgIdentity() {  primaryOrgIdentity_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
     }
 
     public static viam.app.v1.App.Location parseFrom(
@@ -26002,6 +26087,77 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * The organization that is the primary owner of the location.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code>
+       */
+      @java.lang.Override
+      public boolean hasPrimaryOrgIdentity() {
+        return instance.hasPrimaryOrgIdentity();
+      }
+      /**
+       * <pre>
+       * The organization that is the primary owner of the location.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.App.OrganizationIdentity getPrimaryOrgIdentity() {
+        return instance.getPrimaryOrgIdentity();
+      }
+      /**
+       * <pre>
+       * The organization that is the primary owner of the location.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code>
+       */
+      public Builder setPrimaryOrgIdentity(viam.app.v1.App.OrganizationIdentity value) {
+        copyOnWrite();
+        instance.setPrimaryOrgIdentity(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * The organization that is the primary owner of the location.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code>
+       */
+      public Builder setPrimaryOrgIdentity(
+          viam.app.v1.App.OrganizationIdentity.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPrimaryOrgIdentity(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The organization that is the primary owner of the location.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code>
+       */
+      public Builder mergePrimaryOrgIdentity(viam.app.v1.App.OrganizationIdentity value) {
+        copyOnWrite();
+        instance.mergePrimaryOrgIdentity(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The organization that is the primary owner of the location.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code>
+       */
+      public Builder clearPrimaryOrgIdentity() {  copyOnWrite();
+        instance.clearPrimaryOrgIdentity();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.Location)
     }
     @java.lang.Override
@@ -26028,10 +26184,12 @@ com.google.protobuf.Any defaultValue) {
               viam.app.v1.App.LocationOrganization.class,
               "robotCount_",
               "config_",
+              "primaryOrgIdentity_",
             };
             java.lang.String info =
-                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0001\u0000\u0001\u0208\u0002\u0208\u0003\u1009" +
-                "\u0001\u0004\u0208\u0005\u1009\u0000\u0006\u001b\u0007\u0004\b\u1009\u0002";
+                "\u0000\t\u0000\u0001\u0001\t\t\u0000\u0001\u0000\u0001\u0208\u0002\u0208\u0003\u1009" +
+                "\u0001\u0004\u0208\u0005\u1009\u0000\u0006\u001b\u0007\u0004\b\u1009\u0002\t\u1009" +
+                "\u0003";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -39871,7 +40029,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=788
+     *     See app/v1/app.proto;l=790
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -40073,7 +40231,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=788
+     *     See app/v1/app.proto;l=790
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -40087,7 +40245,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=788
+     *     See app/v1/app.proto;l=790
      * @param value The errorsOnly to set.
      */
     private void setErrorsOnly(boolean value) {
@@ -40101,7 +40259,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=788
+     *     See app/v1/app.proto;l=790
      */
     private void clearErrorsOnly() {
 
@@ -40681,7 +40839,7 @@ com.google.protobuf.Any defaultValue) {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=788
+       *     See app/v1/app.proto;l=790
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -40695,7 +40853,7 @@ com.google.protobuf.Any defaultValue) {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=788
+       *     See app/v1/app.proto;l=790
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -40711,7 +40869,7 @@ com.google.protobuf.Any defaultValue) {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=788
+       *     See app/v1/app.proto;l=790
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
