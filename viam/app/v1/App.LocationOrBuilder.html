@@ -173,26 +173,38 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block">
  Location ID of the parent location.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRobotCount()" class="member-name-link">getRobotCount</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"></div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasAuth()" class="member-name-link">hasAuth</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="App.OrganizationIdentity.html" title="class in viam.app.v1">App.OrganizationIdentity</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPrimaryOrgIdentity()" class="member-name-link">getPrimaryOrgIdentity</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The organization that is the primary owner of the location.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRobotCount()" class="member-name-link">getRobotCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasAuth()" class="member-name-link">hasAuth</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Location authentication secrets.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasConfig()" class="member-name-link">hasConfig</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasConfig()" class="member-name-link">hasConfig</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Config for how data in this location is stored.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasCreatedOn()" class="member-name-link">hasCreatedOn</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasCreatedOn()" class="member-name-link">hasCreatedOn</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Location creation timestamp.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPrimaryOrgIdentity()" class="member-name-link">hasPrimaryOrgIdentity</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The organization that is the primary owner of the location.</div>
 </div>
 </div>
 </div>
@@ -435,6 +447,36 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The config.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasPrimaryOrgIdentity()">
+<h3>hasPrimaryOrgIdentity</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasPrimaryOrgIdentity</span>()</div>
+<div class="block"><pre>
+ The organization that is the primary owner of the location.
+ </pre>
+
+ <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the primaryOrgIdentity field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPrimaryOrgIdentity()">
+<h3>getPrimaryOrgIdentity</h3>
+<div class="member-signature"><span class="return-type"><a href="App.OrganizationIdentity.html" title="class in viam.app.v1">App.OrganizationIdentity</a></span>&nbsp;<span class="element-name">getPrimaryOrgIdentity</span>()</div>
+<div class="block"><pre>
+ The organization that is the primary owner of the location.
+ </pre>
+
+ <code>optional .viam.app.v1.OrganizationIdentity primary_org_identity = 9 [json_name = "primaryOrgIdentity"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The primaryOrgIdentity.</dd>
 </dl>
 </section>
 </li>

@@ -136,29 +136,32 @@ implements <a href="Data.BinaryMetadataOrBuilder.html" title="interface in viam.
 <div class="col-second even-row-color"><code><a href="#ANNOTATIONS_FIELD_NUMBER" class="member-name-link">ANNOTATIONS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CAPTURE_METADATA_FIELD_NUMBER" class="member-name-link">CAPTURE_METADATA_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#BINARY_DATA_ID_FIELD_NUMBER" class="member-name-link">BINARY_DATA_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#DATASET_IDS_FIELD_NUMBER" class="member-name-link">DATASET_IDS_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CAPTURE_METADATA_FIELD_NUMBER" class="member-name-link">CAPTURE_METADATA_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#FILE_EXT_FIELD_NUMBER" class="member-name-link">FILE_EXT_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#DATASET_IDS_FIELD_NUMBER" class="member-name-link">DATASET_IDS_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#FILE_NAME_FIELD_NUMBER" class="member-name-link">FILE_NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#FILE_EXT_FIELD_NUMBER" class="member-name-link">FILE_EXT_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#FILE_NAME_FIELD_NUMBER" class="member-name-link">FILE_NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#TIME_RECEIVED_FIELD_NUMBER" class="member-name-link">TIME_RECEIVED_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#TIME_REQUESTED_FIELD_NUMBER" class="member-name-link">TIME_REQUESTED_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#TIME_RECEIVED_FIELD_NUMBER" class="member-name-link">TIME_RECEIVED_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#URI_FIELD_NUMBER" class="member-name-link">URI_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#TIME_REQUESTED_FIELD_NUMBER" class="member-name-link">TIME_REQUESTED_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#URI_FIELD_NUMBER" class="member-name-link">URI_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -188,6 +191,16 @@ implements <a href="Data.BinaryMetadataOrBuilder.html" title="interface in viam.
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAnnotations()" class="member-name-link">getAnnotations</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.data.v1.Annotations annotations = 8 [json_name = "annotations"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBinaryDataId()" class="member-name-link">getBinaryDataId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string binary_data_id = 10 [json_name = "binaryDataId"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBinaryDataIdBytes()" class="member-name-link">getBinaryDataIdBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string binary_data_id = 10 [json_name = "binaryDataId"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.CaptureMetadata.html" title="class in viam.app.data.v1">Data.CaptureMetadata</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCaptureMetadata()" class="member-name-link">getCaptureMetadata</a>()</code></div>
@@ -490,6 +503,20 @@ implements <a href="Data.BinaryMetadataOrBuilder.html" title="interface in viam.
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="BINARY_DATA_ID_FIELD_NUMBER">
+<h3>BINARY_DATA_ID_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">BINARY_DATA_ID_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.data.v1.Data.BinaryMetadata.BINARY_DATA_ID_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -759,6 +786,32 @@ implements <a href="Data.BinaryMetadataOrBuilder.html" title="interface in viam.
 <dd><code>index</code> - The index of the value to return.</dd>
 <dt>Returns:</dt>
 <dd>The bytes of the datasetIds at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBinaryDataId()">
+<h3>getBinaryDataId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getBinaryDataId</span>()</div>
+<div class="block"><code>string binary_data_id = 10 [json_name = "binaryDataId"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.BinaryMetadataOrBuilder.html#getBinaryDataId()">getBinaryDataId</a></code>&nbsp;in interface&nbsp;<code><a href="Data.BinaryMetadataOrBuilder.html" title="interface in viam.app.data.v1">Data.BinaryMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The binaryDataId.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBinaryDataIdBytes()">
+<h3>getBinaryDataIdBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getBinaryDataIdBytes</span>()</div>
+<div class="block"><code>string binary_data_id = 10 [json_name = "binaryDataId"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.BinaryMetadataOrBuilder.html#getBinaryDataIdBytes()">getBinaryDataIdBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Data.BinaryMetadataOrBuilder.html" title="interface in viam.app.data.v1">Data.BinaryMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for binaryDataId.</dd>
 </dl>
 </section>
 </li>
