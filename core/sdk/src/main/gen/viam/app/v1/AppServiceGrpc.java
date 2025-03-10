@@ -3018,6 +3018,36 @@ public final class AppServiceGrpc {
     return getCreateKeyFromExistingKeyAuthorizationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.App.GetAppContentRequest,
+      viam.app.v1.App.GetAppContentResponse> getGetAppContentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAppContent",
+      requestType = viam.app.v1.App.GetAppContentRequest.class,
+      responseType = viam.app.v1.App.GetAppContentResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.App.GetAppContentRequest,
+      viam.app.v1.App.GetAppContentResponse> getGetAppContentMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.App.GetAppContentRequest, viam.app.v1.App.GetAppContentResponse> getGetAppContentMethod;
+    if ((getGetAppContentMethod = AppServiceGrpc.getGetAppContentMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getGetAppContentMethod = AppServiceGrpc.getGetAppContentMethod) == null) {
+          AppServiceGrpc.getGetAppContentMethod = getGetAppContentMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.App.GetAppContentRequest, viam.app.v1.App.GetAppContentResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAppContent"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetAppContentRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.App.GetAppContentResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetAppContentMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -3968,6 +3998,13 @@ public final class AppServiceGrpc {
     default void createKeyFromExistingKeyAuthorizations(viam.app.v1.App.CreateKeyFromExistingKeyAuthorizationsRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.App.CreateKeyFromExistingKeyAuthorizationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateKeyFromExistingKeyAuthorizationsMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getAppContent(viam.app.v1.App.GetAppContentRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetAppContentResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAppContentMethod(), responseObserver);
     }
   }
 
@@ -5004,6 +5041,14 @@ public final class AppServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateKeyFromExistingKeyAuthorizationsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getAppContent(viam.app.v1.App.GetAppContentRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.App.GetAppContentResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAppContentMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -5918,6 +5963,13 @@ public final class AppServiceGrpc {
     public viam.app.v1.App.CreateKeyFromExistingKeyAuthorizationsResponse createKeyFromExistingKeyAuthorizations(viam.app.v1.App.CreateKeyFromExistingKeyAuthorizationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateKeyFromExistingKeyAuthorizationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.App.GetAppContentResponse getAppContent(viam.app.v1.App.GetAppContentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAppContentMethod(), getCallOptions(), request);
     }
   }
 
@@ -6924,6 +6976,14 @@ public final class AppServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateKeyFromExistingKeyAuthorizationsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.App.GetAppContentResponse> getAppContent(
+        viam.app.v1.App.GetAppContentRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAppContentMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_USER_IDBY_EMAIL = 0;
@@ -7025,7 +7085,8 @@ public final class AppServiceGrpc {
   private static final int METHODID_RENAME_KEY = 96;
   private static final int METHODID_ROTATE_KEY = 97;
   private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 98;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 99;
+  private static final int METHODID_GET_APP_CONTENT = 99;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 100;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -7439,6 +7500,10 @@ public final class AppServiceGrpc {
         case METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS:
           serviceImpl.createKeyFromExistingKeyAuthorizations((viam.app.v1.App.CreateKeyFromExistingKeyAuthorizationsRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.App.CreateKeyFromExistingKeyAuthorizationsResponse>) responseObserver);
+          break;
+        case METHODID_GET_APP_CONTENT:
+          serviceImpl.getAppContent((viam.app.v1.App.GetAppContentRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.App.GetAppContentResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -8161,6 +8226,13 @@ public final class AppServiceGrpc {
               viam.app.v1.App.CreateKeyFromExistingKeyAuthorizationsRequest,
               viam.app.v1.App.CreateKeyFromExistingKeyAuthorizationsResponse>(
                 service, METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS)))
+        .addMethod(
+          getGetAppContentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.App.GetAppContentRequest,
+              viam.app.v1.App.GetAppContentResponse>(
+                service, METHODID_GET_APP_CONTENT)))
         .build();
   }
 
@@ -8273,6 +8345,7 @@ public final class AppServiceGrpc {
               .addMethod(getRenameKeyMethod())
               .addMethod(getRotateKeyMethod())
               .addMethod(getCreateKeyFromExistingKeyAuthorizationsMethod())
+              .addMethod(getGetAppContentMethod())
               .build();
         }
       }

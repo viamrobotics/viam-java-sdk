@@ -11654,40 +11654,15 @@ public final class App {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     * @return Whether the data field is set.
      */
-    int getDataCount();
+    boolean hasData();
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     * @return The data.
      */
-    boolean containsData(
-        java.lang.String key);
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getData();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getDataMap();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-
-    /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue);
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-
-    com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key);
+    com.google.protobuf.Struct getData();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetOrganizationMetadataResponse}
@@ -11699,99 +11674,51 @@ com.google.protobuf.Any defaultValue);
       GetOrganizationMetadataResponseOrBuilder {
     private GetOrganizationMetadataResponse() {
     }
+    private int bitField0_;
     public static final int DATA_FIELD_NUMBER = 1;
-    private static final class DataDefaultEntryHolder {
-      static final com.google.protobuf.MapEntryLite<
-          java.lang.String, com.google.protobuf.Any> defaultEntry =
-              com.google.protobuf.MapEntryLite
-              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.google.protobuf.Any.getDefaultInstance());
+    private com.google.protobuf.Struct data_;
+    /**
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public boolean hasData() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
-    private com.google.protobuf.MapFieldLite<
-        java.lang.String, com.google.protobuf.Any> data_ =
-            com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetData() {
-      return data_;
+    /**
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getData() {
+      return data_ == null ? com.google.protobuf.Struct.getDefaultInstance() : data_;
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetMutableData() {
-      if (!data_.isMutable()) {
-        data_ = data_.mutableCopy();
+    /**
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     */
+    private void setData(com.google.protobuf.Struct value) {
+      value.getClass();
+  data_ = value;
+      bitField0_ |= 0x00000001;
       }
-      return data_;
-    }
-    @java.lang.Override
-
-    public int getDataCount() {
-      return internalGetData().size();
-    }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
      */
-    @java.lang.Override
-
-    public boolean containsData(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      return internalGetData().containsKey(key);
-    }
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-      return getDataMap();
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-      return java.util.Collections.unmodifiableMap(
-          internalGetData());
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeData(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (data_ != null &&
+          data_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        data_ =
+          com.google.protobuf.Struct.newBuilder(data_).mergeFrom(value).buildPartial();
+      } else {
+        data_ = value;
       }
-      return map.get(key);
+      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
      */
-    private java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getMutableDataMap() {
-      return internalGetMutableData();
+    private void clearData() {  data_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.v1.App.GetOrganizationMetadataResponse parseFrom(
@@ -11891,103 +11818,50 @@ com.google.protobuf.Any defaultValue) {
       }
 
 
-      @java.lang.Override
-
-      public int getDataCount() {
-        return instance.getDataMap().size();
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
        */
       @java.lang.Override
-
-      public boolean containsData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        return instance.getDataMap().containsKey(key);
+      public boolean hasData() {
+        return instance.hasData();
       }
-
-      public Builder clearData() {
+      /**
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getData() {
+        return instance.getData();
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+       */
+      public Builder setData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().clear();
+        instance.setData(value);
         return this;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-
-      public Builder removeData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        copyOnWrite();
-        instance.getMutableDataMap().remove(key);
-        return this;
-      }
-      /**
-       * Use {@link #getDataMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-        return getDataMap();
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-        return java.util.Collections.unmodifiableMap(
-            instance.getDataMap());
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-          java.lang.String key,
-          /* nullable */
-com.google.protobuf.Any defaultValue) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public com.google.protobuf.Any getDataOrThrow(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
         }
-        return map.get(key);
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
        */
-      public Builder putData(
-          java.lang.String key,
-          com.google.protobuf.Any value) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.lang.Class<?> valueClass = value.getClass();
+      public Builder setData(
+          com.google.protobuf.Struct.Builder builderForValue) {
         copyOnWrite();
-        instance.getMutableDataMap().put(key, value);
+        instance.setData(builderForValue.build());
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
        */
-      public Builder putAllData(
-          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+      public Builder mergeData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().putAll(values);
+        instance.mergeData(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+       */
+      public Builder clearData() {  copyOnWrite();
+        instance.clearData();
         return this;
       }
 
@@ -12007,11 +11881,11 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "data_",
-              DataDefaultEntryHolder.defaultEntry,
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012";
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -12083,40 +11957,15 @@ com.google.protobuf.Any defaultValue) {
         getOrganizationIdBytes();
 
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * @return Whether the data field is set.
      */
-    int getDataCount();
+    boolean hasData();
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * @return The data.
      */
-    boolean containsData(
-        java.lang.String key);
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getData();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getDataMap();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-
-    /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue);
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-
-    com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key);
+    com.google.protobuf.Struct getData();
   }
   /**
    * Protobuf type {@code viam.app.v1.UpdateOrganizationMetadataRequest}
@@ -12129,6 +11978,7 @@ com.google.protobuf.Any defaultValue);
     private UpdateOrganizationMetadataRequest() {
       organizationId_ = "";
     }
+    private int bitField0_;
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
     private java.lang.String organizationId_;
     /**
@@ -12177,98 +12027,49 @@ com.google.protobuf.Any defaultValue);
     }
 
     public static final int DATA_FIELD_NUMBER = 2;
-    private static final class DataDefaultEntryHolder {
-      static final com.google.protobuf.MapEntryLite<
-          java.lang.String, com.google.protobuf.Any> defaultEntry =
-              com.google.protobuf.MapEntryLite
-              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.google.protobuf.Any.getDefaultInstance());
+    private com.google.protobuf.Struct data_;
+    /**
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public boolean hasData() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
-    private com.google.protobuf.MapFieldLite<
-        java.lang.String, com.google.protobuf.Any> data_ =
-            com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetData() {
-      return data_;
+    /**
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getData() {
+      return data_ == null ? com.google.protobuf.Struct.getDefaultInstance() : data_;
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetMutableData() {
-      if (!data_.isMutable()) {
-        data_ = data_.mutableCopy();
+    /**
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     */
+    private void setData(com.google.protobuf.Struct value) {
+      value.getClass();
+  data_ = value;
+      bitField0_ |= 0x00000001;
       }
-      return data_;
-    }
-    @java.lang.Override
-
-    public int getDataCount() {
-      return internalGetData().size();
-    }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
      */
-    @java.lang.Override
-
-    public boolean containsData(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      return internalGetData().containsKey(key);
-    }
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-      return getDataMap();
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-      return java.util.Collections.unmodifiableMap(
-          internalGetData());
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeData(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (data_ != null &&
+          data_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        data_ =
+          com.google.protobuf.Struct.newBuilder(data_).mergeFrom(value).buildPartial();
+      } else {
+        data_ = value;
       }
-      return map.get(key);
+      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
      */
-    private java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getMutableDataMap() {
-      return internalGetMutableData();
+    private void clearData() {  data_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.v1.App.UpdateOrganizationMetadataRequest parseFrom(
@@ -12417,103 +12218,50 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
-      @java.lang.Override
-
-      public int getDataCount() {
-        return instance.getDataMap().size();
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
        */
       @java.lang.Override
-
-      public boolean containsData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        return instance.getDataMap().containsKey(key);
+      public boolean hasData() {
+        return instance.hasData();
       }
-
-      public Builder clearData() {
+      /**
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getData() {
+        return instance.getData();
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+       */
+      public Builder setData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().clear();
+        instance.setData(value);
         return this;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-
-      public Builder removeData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        copyOnWrite();
-        instance.getMutableDataMap().remove(key);
-        return this;
-      }
-      /**
-       * Use {@link #getDataMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-        return getDataMap();
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-        return java.util.Collections.unmodifiableMap(
-            instance.getDataMap());
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-          java.lang.String key,
-          /* nullable */
-com.google.protobuf.Any defaultValue) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public com.google.protobuf.Any getDataOrThrow(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
         }
-        return map.get(key);
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
        */
-      public Builder putData(
-          java.lang.String key,
-          com.google.protobuf.Any value) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.lang.Class<?> valueClass = value.getClass();
+      public Builder setData(
+          com.google.protobuf.Struct.Builder builderForValue) {
         copyOnWrite();
-        instance.getMutableDataMap().put(key, value);
+        instance.setData(builderForValue.build());
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
        */
-      public Builder putAllData(
-          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+      public Builder mergeData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().putAll(values);
+        instance.mergeData(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+       */
+      public Builder clearData() {  copyOnWrite();
+        instance.clearData();
         return this;
       }
 
@@ -12533,12 +12281,13 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "organizationId_",
               "data_",
-              DataDefaultEntryHolder.defaultEntry,
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0001\u0000\u0000\u0001\u0208\u00022";
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -23382,7 +23131,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=568
+     *     See app/v1/app.proto;l=569
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -23393,7 +23142,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=568
+     *     See app/v1/app.proto;l=569
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -23467,7 +23216,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=568
+     *     See app/v1/app.proto;l=569
      * @return The secret.
      */
     @java.lang.Override
@@ -23481,7 +23230,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=568
+     *     See app/v1/app.proto;l=569
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -23496,7 +23245,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=568
+     *     See app/v1/app.proto;l=569
      * @param value The secret to set.
      */
     private void setSecret(
@@ -23512,7 +23261,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=568
+     *     See app/v1/app.proto;l=569
      */
     private void clearSecret() {
 
@@ -23525,7 +23274,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=568
+     *     See app/v1/app.proto;l=569
      * @param value The bytes for secret to set.
      */
     private void setSecretBytes(
@@ -23844,7 +23593,7 @@ com.google.protobuf.Any defaultValue) {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=568
+       *     See app/v1/app.proto;l=569
        * @return The secret.
        */
       @java.lang.Override
@@ -23858,7 +23607,7 @@ com.google.protobuf.Any defaultValue) {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=568
+       *     See app/v1/app.proto;l=569
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -23873,7 +23622,7 @@ com.google.protobuf.Any defaultValue) {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=568
+       *     See app/v1/app.proto;l=569
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -23890,7 +23639,7 @@ com.google.protobuf.Any defaultValue) {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=568
+       *     See app/v1/app.proto;l=569
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -23905,7 +23654,7 @@ com.google.protobuf.Any defaultValue) {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=568
+       *     See app/v1/app.proto;l=569
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -30944,40 +30693,15 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     * @return Whether the data field is set.
      */
-    int getDataCount();
+    boolean hasData();
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     * @return The data.
      */
-    boolean containsData(
-        java.lang.String key);
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getData();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getDataMap();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-
-    /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue);
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-
-    com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key);
+    com.google.protobuf.Struct getData();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetLocationMetadataResponse}
@@ -30989,99 +30713,51 @@ com.google.protobuf.Any defaultValue);
       GetLocationMetadataResponseOrBuilder {
     private GetLocationMetadataResponse() {
     }
+    private int bitField0_;
     public static final int DATA_FIELD_NUMBER = 1;
-    private static final class DataDefaultEntryHolder {
-      static final com.google.protobuf.MapEntryLite<
-          java.lang.String, com.google.protobuf.Any> defaultEntry =
-              com.google.protobuf.MapEntryLite
-              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.google.protobuf.Any.getDefaultInstance());
+    private com.google.protobuf.Struct data_;
+    /**
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public boolean hasData() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
-    private com.google.protobuf.MapFieldLite<
-        java.lang.String, com.google.protobuf.Any> data_ =
-            com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetData() {
-      return data_;
+    /**
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getData() {
+      return data_ == null ? com.google.protobuf.Struct.getDefaultInstance() : data_;
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetMutableData() {
-      if (!data_.isMutable()) {
-        data_ = data_.mutableCopy();
+    /**
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     */
+    private void setData(com.google.protobuf.Struct value) {
+      value.getClass();
+  data_ = value;
+      bitField0_ |= 0x00000001;
       }
-      return data_;
-    }
-    @java.lang.Override
-
-    public int getDataCount() {
-      return internalGetData().size();
-    }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
      */
-    @java.lang.Override
-
-    public boolean containsData(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      return internalGetData().containsKey(key);
-    }
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-      return getDataMap();
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-      return java.util.Collections.unmodifiableMap(
-          internalGetData());
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeData(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (data_ != null &&
+          data_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        data_ =
+          com.google.protobuf.Struct.newBuilder(data_).mergeFrom(value).buildPartial();
+      } else {
+        data_ = value;
       }
-      return map.get(key);
+      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
      */
-    private java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getMutableDataMap() {
-      return internalGetMutableData();
+    private void clearData() {  data_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.v1.App.GetLocationMetadataResponse parseFrom(
@@ -31181,103 +30857,50 @@ com.google.protobuf.Any defaultValue) {
       }
 
 
-      @java.lang.Override
-
-      public int getDataCount() {
-        return instance.getDataMap().size();
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
        */
       @java.lang.Override
-
-      public boolean containsData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        return instance.getDataMap().containsKey(key);
+      public boolean hasData() {
+        return instance.hasData();
       }
-
-      public Builder clearData() {
+      /**
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getData() {
+        return instance.getData();
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+       */
+      public Builder setData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().clear();
+        instance.setData(value);
         return this;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-
-      public Builder removeData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        copyOnWrite();
-        instance.getMutableDataMap().remove(key);
-        return this;
-      }
-      /**
-       * Use {@link #getDataMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-        return getDataMap();
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-        return java.util.Collections.unmodifiableMap(
-            instance.getDataMap());
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-          java.lang.String key,
-          /* nullable */
-com.google.protobuf.Any defaultValue) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public com.google.protobuf.Any getDataOrThrow(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
         }
-        return map.get(key);
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
        */
-      public Builder putData(
-          java.lang.String key,
-          com.google.protobuf.Any value) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.lang.Class<?> valueClass = value.getClass();
+      public Builder setData(
+          com.google.protobuf.Struct.Builder builderForValue) {
         copyOnWrite();
-        instance.getMutableDataMap().put(key, value);
+        instance.setData(builderForValue.build());
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
        */
-      public Builder putAllData(
-          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+      public Builder mergeData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().putAll(values);
+        instance.mergeData(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+       */
+      public Builder clearData() {  copyOnWrite();
+        instance.clearData();
         return this;
       }
 
@@ -31297,11 +30920,11 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "data_",
-              DataDefaultEntryHolder.defaultEntry,
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012";
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -31373,40 +30996,15 @@ com.google.protobuf.Any defaultValue) {
         getLocationIdBytes();
 
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * @return Whether the data field is set.
      */
-    int getDataCount();
+    boolean hasData();
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * @return The data.
      */
-    boolean containsData(
-        java.lang.String key);
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getData();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getDataMap();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-
-    /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue);
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-
-    com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key);
+    com.google.protobuf.Struct getData();
   }
   /**
    * Protobuf type {@code viam.app.v1.UpdateLocationMetadataRequest}
@@ -31419,6 +31017,7 @@ com.google.protobuf.Any defaultValue);
     private UpdateLocationMetadataRequest() {
       locationId_ = "";
     }
+    private int bitField0_;
     public static final int LOCATION_ID_FIELD_NUMBER = 1;
     private java.lang.String locationId_;
     /**
@@ -31467,98 +31066,49 @@ com.google.protobuf.Any defaultValue);
     }
 
     public static final int DATA_FIELD_NUMBER = 2;
-    private static final class DataDefaultEntryHolder {
-      static final com.google.protobuf.MapEntryLite<
-          java.lang.String, com.google.protobuf.Any> defaultEntry =
-              com.google.protobuf.MapEntryLite
-              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.google.protobuf.Any.getDefaultInstance());
+    private com.google.protobuf.Struct data_;
+    /**
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public boolean hasData() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
-    private com.google.protobuf.MapFieldLite<
-        java.lang.String, com.google.protobuf.Any> data_ =
-            com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetData() {
-      return data_;
+    /**
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getData() {
+      return data_ == null ? com.google.protobuf.Struct.getDefaultInstance() : data_;
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetMutableData() {
-      if (!data_.isMutable()) {
-        data_ = data_.mutableCopy();
+    /**
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     */
+    private void setData(com.google.protobuf.Struct value) {
+      value.getClass();
+  data_ = value;
+      bitField0_ |= 0x00000001;
       }
-      return data_;
-    }
-    @java.lang.Override
-
-    public int getDataCount() {
-      return internalGetData().size();
-    }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
      */
-    @java.lang.Override
-
-    public boolean containsData(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      return internalGetData().containsKey(key);
-    }
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-      return getDataMap();
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-      return java.util.Collections.unmodifiableMap(
-          internalGetData());
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeData(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (data_ != null &&
+          data_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        data_ =
+          com.google.protobuf.Struct.newBuilder(data_).mergeFrom(value).buildPartial();
+      } else {
+        data_ = value;
       }
-      return map.get(key);
+      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
      */
-    private java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getMutableDataMap() {
-      return internalGetMutableData();
+    private void clearData() {  data_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.v1.App.UpdateLocationMetadataRequest parseFrom(
@@ -31707,103 +31257,50 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
-      @java.lang.Override
-
-      public int getDataCount() {
-        return instance.getDataMap().size();
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
        */
       @java.lang.Override
-
-      public boolean containsData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        return instance.getDataMap().containsKey(key);
+      public boolean hasData() {
+        return instance.hasData();
       }
-
-      public Builder clearData() {
+      /**
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getData() {
+        return instance.getData();
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+       */
+      public Builder setData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().clear();
+        instance.setData(value);
         return this;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-
-      public Builder removeData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        copyOnWrite();
-        instance.getMutableDataMap().remove(key);
-        return this;
-      }
-      /**
-       * Use {@link #getDataMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-        return getDataMap();
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-        return java.util.Collections.unmodifiableMap(
-            instance.getDataMap());
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-          java.lang.String key,
-          /* nullable */
-com.google.protobuf.Any defaultValue) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public com.google.protobuf.Any getDataOrThrow(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
         }
-        return map.get(key);
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
        */
-      public Builder putData(
-          java.lang.String key,
-          com.google.protobuf.Any value) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.lang.Class<?> valueClass = value.getClass();
+      public Builder setData(
+          com.google.protobuf.Struct.Builder builderForValue) {
         copyOnWrite();
-        instance.getMutableDataMap().put(key, value);
+        instance.setData(builderForValue.build());
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
        */
-      public Builder putAllData(
-          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+      public Builder mergeData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().putAll(values);
+        instance.mergeData(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+       */
+      public Builder clearData() {  copyOnWrite();
+        instance.clearData();
         return this;
       }
 
@@ -31823,12 +31320,13 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "locationId_",
               "data_",
-              DataDefaultEntryHolder.defaultEntry,
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0001\u0000\u0000\u0001\u0208\u00022";
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -40029,7 +39527,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=790
+     *     See app/v1/app.proto;l=791
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -40231,7 +39729,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=790
+     *     See app/v1/app.proto;l=791
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -40245,7 +39743,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=790
+     *     See app/v1/app.proto;l=791
      * @param value The errorsOnly to set.
      */
     private void setErrorsOnly(boolean value) {
@@ -40259,7 +39757,7 @@ com.google.protobuf.Any defaultValue) {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=790
+     *     See app/v1/app.proto;l=791
      */
     private void clearErrorsOnly() {
 
@@ -40839,7 +40337,7 @@ com.google.protobuf.Any defaultValue) {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=790
+       *     See app/v1/app.proto;l=791
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -40853,7 +40351,7 @@ com.google.protobuf.Any defaultValue) {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=790
+       *     See app/v1/app.proto;l=791
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -40869,7 +40367,7 @@ com.google.protobuf.Any defaultValue) {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=790
+       *     See app/v1/app.proto;l=791
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
@@ -45572,40 +45070,15 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     * @return Whether the data field is set.
      */
-    int getDataCount();
+    boolean hasData();
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     * @return The data.
      */
-    boolean containsData(
-        java.lang.String key);
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getData();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getDataMap();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-
-    /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue);
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-
-    com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key);
+    com.google.protobuf.Struct getData();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetRobotPartMetadataResponse}
@@ -45617,99 +45090,51 @@ com.google.protobuf.Any defaultValue);
       GetRobotPartMetadataResponseOrBuilder {
     private GetRobotPartMetadataResponse() {
     }
+    private int bitField0_;
     public static final int DATA_FIELD_NUMBER = 1;
-    private static final class DataDefaultEntryHolder {
-      static final com.google.protobuf.MapEntryLite<
-          java.lang.String, com.google.protobuf.Any> defaultEntry =
-              com.google.protobuf.MapEntryLite
-              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.google.protobuf.Any.getDefaultInstance());
+    private com.google.protobuf.Struct data_;
+    /**
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public boolean hasData() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
-    private com.google.protobuf.MapFieldLite<
-        java.lang.String, com.google.protobuf.Any> data_ =
-            com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetData() {
-      return data_;
+    /**
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getData() {
+      return data_ == null ? com.google.protobuf.Struct.getDefaultInstance() : data_;
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetMutableData() {
-      if (!data_.isMutable()) {
-        data_ = data_.mutableCopy();
+    /**
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     */
+    private void setData(com.google.protobuf.Struct value) {
+      value.getClass();
+  data_ = value;
+      bitField0_ |= 0x00000001;
       }
-      return data_;
-    }
-    @java.lang.Override
-
-    public int getDataCount() {
-      return internalGetData().size();
-    }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
      */
-    @java.lang.Override
-
-    public boolean containsData(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      return internalGetData().containsKey(key);
-    }
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-      return getDataMap();
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-      return java.util.Collections.unmodifiableMap(
-          internalGetData());
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeData(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (data_ != null &&
+          data_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        data_ =
+          com.google.protobuf.Struct.newBuilder(data_).mergeFrom(value).buildPartial();
+      } else {
+        data_ = value;
       }
-      return map.get(key);
+      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
      */
-    private java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getMutableDataMap() {
-      return internalGetMutableData();
+    private void clearData() {  data_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.v1.App.GetRobotPartMetadataResponse parseFrom(
@@ -45809,103 +45234,50 @@ com.google.protobuf.Any defaultValue) {
       }
 
 
-      @java.lang.Override
-
-      public int getDataCount() {
-        return instance.getDataMap().size();
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
        */
       @java.lang.Override
-
-      public boolean containsData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        return instance.getDataMap().containsKey(key);
+      public boolean hasData() {
+        return instance.hasData();
       }
-
-      public Builder clearData() {
+      /**
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getData() {
+        return instance.getData();
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+       */
+      public Builder setData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().clear();
+        instance.setData(value);
         return this;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-
-      public Builder removeData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        copyOnWrite();
-        instance.getMutableDataMap().remove(key);
-        return this;
-      }
-      /**
-       * Use {@link #getDataMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-        return getDataMap();
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-        return java.util.Collections.unmodifiableMap(
-            instance.getDataMap());
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-          java.lang.String key,
-          /* nullable */
-com.google.protobuf.Any defaultValue) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public com.google.protobuf.Any getDataOrThrow(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
         }
-        return map.get(key);
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
        */
-      public Builder putData(
-          java.lang.String key,
-          com.google.protobuf.Any value) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.lang.Class<?> valueClass = value.getClass();
+      public Builder setData(
+          com.google.protobuf.Struct.Builder builderForValue) {
         copyOnWrite();
-        instance.getMutableDataMap().put(key, value);
+        instance.setData(builderForValue.build());
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
        */
-      public Builder putAllData(
-          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+      public Builder mergeData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().putAll(values);
+        instance.mergeData(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+       */
+      public Builder clearData() {  copyOnWrite();
+        instance.clearData();
         return this;
       }
 
@@ -45925,11 +45297,11 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "data_",
-              DataDefaultEntryHolder.defaultEntry,
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012";
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -46001,40 +45373,15 @@ com.google.protobuf.Any defaultValue) {
         getIdBytes();
 
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * @return Whether the data field is set.
      */
-    int getDataCount();
+    boolean hasData();
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * @return The data.
      */
-    boolean containsData(
-        java.lang.String key);
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getData();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getDataMap();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-
-    /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue);
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-
-    com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key);
+    com.google.protobuf.Struct getData();
   }
   /**
    * Protobuf type {@code viam.app.v1.UpdateRobotPartMetadataRequest}
@@ -46047,6 +45394,7 @@ com.google.protobuf.Any defaultValue);
     private UpdateRobotPartMetadataRequest() {
       id_ = "";
     }
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.String id_;
     /**
@@ -46095,98 +45443,49 @@ com.google.protobuf.Any defaultValue);
     }
 
     public static final int DATA_FIELD_NUMBER = 2;
-    private static final class DataDefaultEntryHolder {
-      static final com.google.protobuf.MapEntryLite<
-          java.lang.String, com.google.protobuf.Any> defaultEntry =
-              com.google.protobuf.MapEntryLite
-              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.google.protobuf.Any.getDefaultInstance());
+    private com.google.protobuf.Struct data_;
+    /**
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public boolean hasData() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
-    private com.google.protobuf.MapFieldLite<
-        java.lang.String, com.google.protobuf.Any> data_ =
-            com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetData() {
-      return data_;
+    /**
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getData() {
+      return data_ == null ? com.google.protobuf.Struct.getDefaultInstance() : data_;
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetMutableData() {
-      if (!data_.isMutable()) {
-        data_ = data_.mutableCopy();
+    /**
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     */
+    private void setData(com.google.protobuf.Struct value) {
+      value.getClass();
+  data_ = value;
+      bitField0_ |= 0x00000001;
       }
-      return data_;
-    }
-    @java.lang.Override
-
-    public int getDataCount() {
-      return internalGetData().size();
-    }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
      */
-    @java.lang.Override
-
-    public boolean containsData(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      return internalGetData().containsKey(key);
-    }
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-      return getDataMap();
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-      return java.util.Collections.unmodifiableMap(
-          internalGetData());
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeData(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (data_ != null &&
+          data_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        data_ =
+          com.google.protobuf.Struct.newBuilder(data_).mergeFrom(value).buildPartial();
+      } else {
+        data_ = value;
       }
-      return map.get(key);
+      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
      */
-    private java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getMutableDataMap() {
-      return internalGetMutableData();
+    private void clearData() {  data_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.v1.App.UpdateRobotPartMetadataRequest parseFrom(
@@ -46335,103 +45634,50 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
-      @java.lang.Override
-
-      public int getDataCount() {
-        return instance.getDataMap().size();
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
        */
       @java.lang.Override
-
-      public boolean containsData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        return instance.getDataMap().containsKey(key);
+      public boolean hasData() {
+        return instance.hasData();
       }
-
-      public Builder clearData() {
+      /**
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getData() {
+        return instance.getData();
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+       */
+      public Builder setData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().clear();
+        instance.setData(value);
         return this;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-
-      public Builder removeData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        copyOnWrite();
-        instance.getMutableDataMap().remove(key);
-        return this;
-      }
-      /**
-       * Use {@link #getDataMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-        return getDataMap();
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-        return java.util.Collections.unmodifiableMap(
-            instance.getDataMap());
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-          java.lang.String key,
-          /* nullable */
-com.google.protobuf.Any defaultValue) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public com.google.protobuf.Any getDataOrThrow(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
         }
-        return map.get(key);
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
        */
-      public Builder putData(
-          java.lang.String key,
-          com.google.protobuf.Any value) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.lang.Class<?> valueClass = value.getClass();
+      public Builder setData(
+          com.google.protobuf.Struct.Builder builderForValue) {
         copyOnWrite();
-        instance.getMutableDataMap().put(key, value);
+        instance.setData(builderForValue.build());
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
        */
-      public Builder putAllData(
-          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+      public Builder mergeData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().putAll(values);
+        instance.mergeData(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+       */
+      public Builder clearData() {  copyOnWrite();
+        instance.clearData();
         return this;
       }
 
@@ -46451,12 +45697,13 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "id_",
               "data_",
-              DataDefaultEntryHolder.defaultEntry,
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0001\u0000\u0000\u0001\u0208\u00022";
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -66710,40 +65957,15 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     * @return Whether the data field is set.
      */
-    int getDataCount();
+    boolean hasData();
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     * @return The data.
      */
-    boolean containsData(
-        java.lang.String key);
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getData();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getDataMap();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-
-    /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue);
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-
-    com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key);
+    com.google.protobuf.Struct getData();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetRobotMetadataResponse}
@@ -66755,99 +65977,51 @@ com.google.protobuf.Any defaultValue);
       GetRobotMetadataResponseOrBuilder {
     private GetRobotMetadataResponse() {
     }
+    private int bitField0_;
     public static final int DATA_FIELD_NUMBER = 1;
-    private static final class DataDefaultEntryHolder {
-      static final com.google.protobuf.MapEntryLite<
-          java.lang.String, com.google.protobuf.Any> defaultEntry =
-              com.google.protobuf.MapEntryLite
-              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.google.protobuf.Any.getDefaultInstance());
+    private com.google.protobuf.Struct data_;
+    /**
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public boolean hasData() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
-    private com.google.protobuf.MapFieldLite<
-        java.lang.String, com.google.protobuf.Any> data_ =
-            com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetData() {
-      return data_;
+    /**
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getData() {
+      return data_ == null ? com.google.protobuf.Struct.getDefaultInstance() : data_;
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetMutableData() {
-      if (!data_.isMutable()) {
-        data_ = data_.mutableCopy();
+    /**
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+     */
+    private void setData(com.google.protobuf.Struct value) {
+      value.getClass();
+  data_ = value;
+      bitField0_ |= 0x00000001;
       }
-      return data_;
-    }
-    @java.lang.Override
-
-    public int getDataCount() {
-      return internalGetData().size();
-    }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
      */
-    @java.lang.Override
-
-    public boolean containsData(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      return internalGetData().containsKey(key);
-    }
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-      return getDataMap();
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-      return java.util.Collections.unmodifiableMap(
-          internalGetData());
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeData(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (data_ != null &&
+          data_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        data_ =
+          com.google.protobuf.Struct.newBuilder(data_).mergeFrom(value).buildPartial();
+      } else {
+        data_ = value;
       }
-      return map.get(key);
+      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
      */
-    private java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getMutableDataMap() {
-      return internalGetMutableData();
+    private void clearData() {  data_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.v1.App.GetRobotMetadataResponse parseFrom(
@@ -66947,103 +66121,50 @@ com.google.protobuf.Any defaultValue) {
       }
 
 
-      @java.lang.Override
-
-      public int getDataCount() {
-        return instance.getDataMap().size();
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
        */
       @java.lang.Override
-
-      public boolean containsData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        return instance.getDataMap().containsKey(key);
+      public boolean hasData() {
+        return instance.hasData();
       }
-
-      public Builder clearData() {
+      /**
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getData() {
+        return instance.getData();
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+       */
+      public Builder setData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().clear();
+        instance.setData(value);
         return this;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-
-      public Builder removeData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        copyOnWrite();
-        instance.getMutableDataMap().remove(key);
-        return this;
-      }
-      /**
-       * Use {@link #getDataMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-        return getDataMap();
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-        return java.util.Collections.unmodifiableMap(
-            instance.getDataMap());
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-          java.lang.String key,
-          /* nullable */
-com.google.protobuf.Any defaultValue) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public com.google.protobuf.Any getDataOrThrow(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
         }
-        return map.get(key);
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
        */
-      public Builder putData(
-          java.lang.String key,
-          com.google.protobuf.Any value) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.lang.Class<?> valueClass = value.getClass();
+      public Builder setData(
+          com.google.protobuf.Struct.Builder builderForValue) {
         copyOnWrite();
-        instance.getMutableDataMap().put(key, value);
+        instance.setData(builderForValue.build());
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 1 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
        */
-      public Builder putAllData(
-          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+      public Builder mergeData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().putAll(values);
+        instance.mergeData(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 1 [json_name = "data"];</code>
+       */
+      public Builder clearData() {  copyOnWrite();
+        instance.clearData();
         return this;
       }
 
@@ -67063,11 +66184,11 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "data_",
-              DataDefaultEntryHolder.defaultEntry,
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012";
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -67139,40 +66260,15 @@ com.google.protobuf.Any defaultValue) {
         getIdBytes();
 
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * @return Whether the data field is set.
      */
-    int getDataCount();
+    boolean hasData();
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     * @return The data.
      */
-    boolean containsData(
-        java.lang.String key);
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getData();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getDataMap();
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-
-    /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue);
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-
-    com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key);
+    com.google.protobuf.Struct getData();
   }
   /**
    * Protobuf type {@code viam.app.v1.UpdateRobotMetadataRequest}
@@ -67185,6 +66281,7 @@ com.google.protobuf.Any defaultValue);
     private UpdateRobotMetadataRequest() {
       id_ = "";
     }
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.String id_;
     /**
@@ -67233,98 +66330,49 @@ com.google.protobuf.Any defaultValue);
     }
 
     public static final int DATA_FIELD_NUMBER = 2;
-    private static final class DataDefaultEntryHolder {
-      static final com.google.protobuf.MapEntryLite<
-          java.lang.String, com.google.protobuf.Any> defaultEntry =
-              com.google.protobuf.MapEntryLite
-              .<java.lang.String, com.google.protobuf.Any>newDefaultInstance(
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.google.protobuf.Any.getDefaultInstance());
+    private com.google.protobuf.Struct data_;
+    /**
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public boolean hasData() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
-    private com.google.protobuf.MapFieldLite<
-        java.lang.String, com.google.protobuf.Any> data_ =
-            com.google.protobuf.MapFieldLite.emptyMapField();
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetData() {
-      return data_;
+    /**
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getData() {
+      return data_ == null ? com.google.protobuf.Struct.getDefaultInstance() : data_;
     }
-    private com.google.protobuf.MapFieldLite<java.lang.String, com.google.protobuf.Any>
-    internalGetMutableData() {
-      if (!data_.isMutable()) {
-        data_ = data_.mutableCopy();
+    /**
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+     */
+    private void setData(com.google.protobuf.Struct value) {
+      value.getClass();
+  data_ = value;
+      bitField0_ |= 0x00000001;
       }
-      return data_;
-    }
-    @java.lang.Override
-
-    public int getDataCount() {
-      return internalGetData().size();
-    }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
      */
-    @java.lang.Override
-
-    public boolean containsData(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      return internalGetData().containsKey(key);
-    }
-    /**
-     * Use {@link #getDataMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-      return getDataMap();
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-      return java.util.Collections.unmodifiableMap(
-          internalGetData());
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-        java.lang.String key,
-        /* nullable */
-com.google.protobuf.Any defaultValue) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-     */
-    @java.lang.Override
-
-    public com.google.protobuf.Any getDataOrThrow(
-        java.lang.String key) {
-      java.lang.Class<?> keyClass = key.getClass();
-      java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-          internalGetData();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeData(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (data_ != null &&
+          data_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        data_ =
+          com.google.protobuf.Struct.newBuilder(data_).mergeFrom(value).buildPartial();
+      } else {
+        data_ = value;
       }
-      return map.get(key);
+      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+     * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
      */
-    private java.util.Map<java.lang.String, com.google.protobuf.Any>
-    getMutableDataMap() {
-      return internalGetMutableData();
+    private void clearData() {  data_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.v1.App.UpdateRobotMetadataRequest parseFrom(
@@ -67473,103 +66521,50 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
-      @java.lang.Override
-
-      public int getDataCount() {
-        return instance.getDataMap().size();
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
        */
       @java.lang.Override
-
-      public boolean containsData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        return instance.getDataMap().containsKey(key);
+      public boolean hasData() {
+        return instance.hasData();
       }
-
-      public Builder clearData() {
+      /**
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getData() {
+        return instance.getData();
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+       */
+      public Builder setData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().clear();
+        instance.setData(value);
         return this;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-
-      public Builder removeData(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        copyOnWrite();
-        instance.getMutableDataMap().remove(key);
-        return this;
-      }
-      /**
-       * Use {@link #getDataMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getData() {
-        return getDataMap();
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, com.google.protobuf.Any> getDataMap() {
-        return java.util.Collections.unmodifiableMap(
-            instance.getDataMap());
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public /* nullable */
-com.google.protobuf.Any getDataOrDefault(
-          java.lang.String key,
-          /* nullable */
-com.google.protobuf.Any defaultValue) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
-       */
-      @java.lang.Override
-
-      public com.google.protobuf.Any getDataOrThrow(
-          java.lang.String key) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.util.Map<java.lang.String, com.google.protobuf.Any> map =
-            instance.getDataMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
         }
-        return map.get(key);
-      }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
        */
-      public Builder putData(
-          java.lang.String key,
-          com.google.protobuf.Any value) {
-        java.lang.Class<?> keyClass = key.getClass();
-        java.lang.Class<?> valueClass = value.getClass();
+      public Builder setData(
+          com.google.protobuf.Struct.Builder builderForValue) {
         copyOnWrite();
-        instance.getMutableDataMap().put(key, value);
+        instance.setData(builderForValue.build());
         return this;
       }
       /**
-       * <code>map&lt;string, .google.protobuf.Any&gt; data = 2 [json_name = "data"];</code>
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
        */
-      public Builder putAllData(
-          java.util.Map<java.lang.String, com.google.protobuf.Any> values) {
+      public Builder mergeData(com.google.protobuf.Struct value) {
         copyOnWrite();
-        instance.getMutableDataMap().putAll(values);
+        instance.mergeData(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct data = 2 [json_name = "data"];</code>
+       */
+      public Builder clearData() {  copyOnWrite();
+        instance.clearData();
         return this;
       }
 
@@ -67589,12 +66584,13 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "id_",
               "data_",
-              DataDefaultEntryHolder.defaultEntry,
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0001\u0000\u0000\u0001\u0208\u00022";
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -109942,6 +108938,705 @@ com.google.protobuf.Any defaultValue) {
     private static volatile com.google.protobuf.Parser<CreateKeyFromExistingKeyAuthorizationsResponse> PARSER;
 
     public static com.google.protobuf.Parser<CreateKeyFromExistingKeyAuthorizationsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetAppContentRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetAppContentRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string public_namespace = 1 [json_name = "publicNamespace"];</code>
+     * @return The publicNamespace.
+     */
+    java.lang.String getPublicNamespace();
+    /**
+     * <code>string public_namespace = 1 [json_name = "publicNamespace"];</code>
+     * @return The bytes for publicNamespace.
+     */
+    com.google.protobuf.ByteString
+        getPublicNamespaceBytes();
+
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetAppContentRequest}
+   */
+  public  static final class GetAppContentRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetAppContentRequest, GetAppContentRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetAppContentRequest)
+      GetAppContentRequestOrBuilder {
+    private GetAppContentRequest() {
+      publicNamespace_ = "";
+      name_ = "";
+    }
+    public static final int PUBLIC_NAMESPACE_FIELD_NUMBER = 1;
+    private java.lang.String publicNamespace_;
+    /**
+     * <code>string public_namespace = 1 [json_name = "publicNamespace"];</code>
+     * @return The publicNamespace.
+     */
+    @java.lang.Override
+    public java.lang.String getPublicNamespace() {
+      return publicNamespace_;
+    }
+    /**
+     * <code>string public_namespace = 1 [json_name = "publicNamespace"];</code>
+     * @return The bytes for publicNamespace.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublicNamespaceBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(publicNamespace_);
+    }
+    /**
+     * <code>string public_namespace = 1 [json_name = "publicNamespace"];</code>
+     * @param value The publicNamespace to set.
+     */
+    private void setPublicNamespace(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      publicNamespace_ = value;
+    }
+    /**
+     * <code>string public_namespace = 1 [json_name = "publicNamespace"];</code>
+     */
+    private void clearPublicNamespace() {
+
+      publicNamespace_ = getDefaultInstance().getPublicNamespace();
+    }
+    /**
+     * <code>string public_namespace = 1 [json_name = "publicNamespace"];</code>
+     * @param value The bytes for publicNamespace to set.
+     */
+    private void setPublicNamespaceBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      publicNamespace_ = value.toStringUtf8();
+
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private java.lang.String name_;
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.GetAppContentRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetAppContentRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetAppContentRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetAppContentRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetAppContentRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetAppContentRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetAppContentRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetAppContentRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.GetAppContentRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.GetAppContentRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetAppContentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetAppContentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.GetAppContentRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetAppContentRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.GetAppContentRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetAppContentRequest)
+        viam.app.v1.App.GetAppContentRequestOrBuilder {
+      // Construct using viam.app.v1.App.GetAppContentRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string public_namespace = 1 [json_name = "publicNamespace"];</code>
+       * @return The publicNamespace.
+       */
+      @java.lang.Override
+      public java.lang.String getPublicNamespace() {
+        return instance.getPublicNamespace();
+      }
+      /**
+       * <code>string public_namespace = 1 [json_name = "publicNamespace"];</code>
+       * @return The bytes for publicNamespace.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPublicNamespaceBytes() {
+        return instance.getPublicNamespaceBytes();
+      }
+      /**
+       * <code>string public_namespace = 1 [json_name = "publicNamespace"];</code>
+       * @param value The publicNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicNamespace(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPublicNamespace(value);
+        return this;
+      }
+      /**
+       * <code>string public_namespace = 1 [json_name = "publicNamespace"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicNamespace() {
+        copyOnWrite();
+        instance.clearPublicNamespace();
+        return this;
+      }
+      /**
+       * <code>string public_namespace = 1 [json_name = "publicNamespace"];</code>
+       * @param value The bytes for publicNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPublicNamespaceBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetAppContentRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.GetAppContentRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "publicNamespace_",
+              "name_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.GetAppContentRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.GetAppContentRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.GetAppContentRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetAppContentRequest)
+    private static final viam.app.v1.App.GetAppContentRequest DEFAULT_INSTANCE;
+    static {
+      GetAppContentRequest defaultInstance = new GetAppContentRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetAppContentRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.GetAppContentRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetAppContentRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetAppContentRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetAppContentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetAppContentResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The url.
+     */
+    java.lang.String getUrl();
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The bytes for url.
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetAppContentResponse}
+   */
+  public  static final class GetAppContentResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetAppContentResponse, GetAppContentResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetAppContentResponse)
+      GetAppContentResponseOrBuilder {
+    private GetAppContentResponse() {
+      url_ = "";
+    }
+    public static final int URL_FIELD_NUMBER = 1;
+    private java.lang.String url_;
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The url.
+     */
+    @java.lang.Override
+    public java.lang.String getUrl() {
+      return url_;
+    }
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @return The bytes for url.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(url_);
+    }
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @param value The url to set.
+     */
+    private void setUrl(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      url_ = value;
+    }
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     */
+    private void clearUrl() {
+
+      url_ = getDefaultInstance().getUrl();
+    }
+    /**
+     * <code>string url = 1 [json_name = "url"];</code>
+     * @param value The bytes for url to set.
+     */
+    private void setUrlBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      url_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.App.GetAppContentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetAppContentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetAppContentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetAppContentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetAppContentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.App.GetAppContentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetAppContentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetAppContentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.App.GetAppContentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.App.GetAppContentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.App.GetAppContentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.App.GetAppContentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.App.GetAppContentResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetAppContentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.App.GetAppContentResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetAppContentResponse)
+        viam.app.v1.App.GetAppContentResponseOrBuilder {
+      // Construct using viam.app.v1.App.GetAppContentResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @return The url.
+       */
+      @java.lang.Override
+      public java.lang.String getUrl() {
+        return instance.getUrl();
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @return The bytes for url.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        return instance.getUrlBytes();
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setUrl(value);
+        return this;
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUrl() {
+        copyOnWrite();
+        instance.clearUrl();
+        return this;
+      }
+      /**
+       * <code>string url = 1 [json_name = "url"];</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUrlBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetAppContentResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.App.GetAppContentResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "url_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.App.GetAppContentResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.App.GetAppContentResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.App.GetAppContentResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetAppContentResponse)
+    private static final viam.app.v1.App.GetAppContentResponse DEFAULT_INSTANCE;
+    static {
+      GetAppContentResponse defaultInstance = new GetAppContentResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetAppContentResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.App.GetAppContentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetAppContentResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetAppContentResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
