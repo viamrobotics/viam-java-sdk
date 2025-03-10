@@ -10991,6 +10991,20 @@ java.lang.String defaultValue) {
      * @return The sessions.
      */
     viam.app.v1.Robot.SessionsConfig getSessions();
+
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    java.util.List<viam.app.v1.Robot.TrafficTunnelEndpoint> 
+        getTrafficTunnelEndpointsList();
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    viam.app.v1.Robot.TrafficTunnelEndpoint getTrafficTunnelEndpoints(int index);
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    int getTrafficTunnelEndpointsCount();
   }
   /**
    * Protobuf type {@code viam.app.v1.NetworkConfig}
@@ -11005,6 +11019,7 @@ java.lang.String defaultValue) {
       bindAddress_ = "";
       tlsCertFile_ = "";
       tlsKeyFile_ = "";
+      trafficTunnelEndpoints_ = emptyProtobufList();
     }
     private int bitField0_;
     public static final int FQDN_FIELD_NUMBER = 1;
@@ -11239,6 +11254,100 @@ java.lang.String defaultValue) {
      */
     private void clearSessions() {  sessions_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int TRAFFIC_TUNNEL_ENDPOINTS_FIELD_NUMBER = 6;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.TrafficTunnelEndpoint> trafficTunnelEndpoints_;
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.Robot.TrafficTunnelEndpoint> getTrafficTunnelEndpointsList() {
+      return trafficTunnelEndpoints_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.Robot.TrafficTunnelEndpointOrBuilder> 
+        getTrafficTunnelEndpointsOrBuilderList() {
+      return trafficTunnelEndpoints_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    @java.lang.Override
+    public int getTrafficTunnelEndpointsCount() {
+      return trafficTunnelEndpoints_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.TrafficTunnelEndpoint getTrafficTunnelEndpoints(int index) {
+      return trafficTunnelEndpoints_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    public viam.app.v1.Robot.TrafficTunnelEndpointOrBuilder getTrafficTunnelEndpointsOrBuilder(
+        int index) {
+      return trafficTunnelEndpoints_.get(index);
+    }
+    private void ensureTrafficTunnelEndpointsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.TrafficTunnelEndpoint> tmp = trafficTunnelEndpoints_;
+      if (!tmp.isModifiable()) {
+        trafficTunnelEndpoints_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    private void setTrafficTunnelEndpoints(
+        int index, viam.app.v1.Robot.TrafficTunnelEndpoint value) {
+      value.getClass();
+  ensureTrafficTunnelEndpointsIsMutable();
+      trafficTunnelEndpoints_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    private void addTrafficTunnelEndpoints(viam.app.v1.Robot.TrafficTunnelEndpoint value) {
+      value.getClass();
+  ensureTrafficTunnelEndpointsIsMutable();
+      trafficTunnelEndpoints_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    private void addTrafficTunnelEndpoints(
+        int index, viam.app.v1.Robot.TrafficTunnelEndpoint value) {
+      value.getClass();
+  ensureTrafficTunnelEndpointsIsMutable();
+      trafficTunnelEndpoints_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    private void addAllTrafficTunnelEndpoints(
+        java.lang.Iterable<? extends viam.app.v1.Robot.TrafficTunnelEndpoint> values) {
+      ensureTrafficTunnelEndpointsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, trafficTunnelEndpoints_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    private void clearTrafficTunnelEndpoints() {
+      trafficTunnelEndpoints_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+     */
+    private void removeTrafficTunnelEndpoints(int index) {
+      ensureTrafficTunnelEndpointsIsMutable();
+      trafficTunnelEndpoints_.remove(index);
     }
 
     public static viam.app.v1.Robot.NetworkConfig parseFrom(
@@ -11581,6 +11690,108 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.Robot.TrafficTunnelEndpoint> getTrafficTunnelEndpointsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getTrafficTunnelEndpointsList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+       */
+      @java.lang.Override
+      public int getTrafficTunnelEndpointsCount() {
+        return instance.getTrafficTunnelEndpointsCount();
+      }/**
+       * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.TrafficTunnelEndpoint getTrafficTunnelEndpoints(int index) {
+        return instance.getTrafficTunnelEndpoints(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+       */
+      public Builder setTrafficTunnelEndpoints(
+          int index, viam.app.v1.Robot.TrafficTunnelEndpoint value) {
+        copyOnWrite();
+        instance.setTrafficTunnelEndpoints(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+       */
+      public Builder setTrafficTunnelEndpoints(
+          int index, viam.app.v1.Robot.TrafficTunnelEndpoint.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTrafficTunnelEndpoints(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+       */
+      public Builder addTrafficTunnelEndpoints(viam.app.v1.Robot.TrafficTunnelEndpoint value) {
+        copyOnWrite();
+        instance.addTrafficTunnelEndpoints(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+       */
+      public Builder addTrafficTunnelEndpoints(
+          int index, viam.app.v1.Robot.TrafficTunnelEndpoint value) {
+        copyOnWrite();
+        instance.addTrafficTunnelEndpoints(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+       */
+      public Builder addTrafficTunnelEndpoints(
+          viam.app.v1.Robot.TrafficTunnelEndpoint.Builder builderForValue) {
+        copyOnWrite();
+        instance.addTrafficTunnelEndpoints(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+       */
+      public Builder addTrafficTunnelEndpoints(
+          int index, viam.app.v1.Robot.TrafficTunnelEndpoint.Builder builderForValue) {
+        copyOnWrite();
+        instance.addTrafficTunnelEndpoints(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+       */
+      public Builder addAllTrafficTunnelEndpoints(
+          java.lang.Iterable<? extends viam.app.v1.Robot.TrafficTunnelEndpoint> values) {
+        copyOnWrite();
+        instance.addAllTrafficTunnelEndpoints(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+       */
+      public Builder clearTrafficTunnelEndpoints() {
+        copyOnWrite();
+        instance.clearTrafficTunnelEndpoints();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
+       */
+      public Builder removeTrafficTunnelEndpoints(int index) {
+        copyOnWrite();
+        instance.removeTrafficTunnelEndpoints(index);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.NetworkConfig)
     }
     @java.lang.Override
@@ -11603,10 +11814,12 @@ java.lang.String defaultValue) {
               "tlsCertFile_",
               "tlsKeyFile_",
               "sessions_",
+              "trafficTunnelEndpoints_",
+              viam.app.v1.Robot.TrafficTunnelEndpoint.class,
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000";
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000\u0006\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -11948,6 +12161,359 @@ java.lang.String defaultValue) {
     private static volatile com.google.protobuf.Parser<SessionsConfig> PARSER;
 
     public static com.google.protobuf.Parser<SessionsConfig> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface TrafficTunnelEndpointOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.TrafficTunnelEndpoint)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>int32 port = 1 [json_name = "port"];</code>
+     * @return The port.
+     */
+    int getPort();
+
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     * @return Whether the connectionTimeout field is set.
+     */
+    boolean hasConnectionTimeout();
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     * @return The connectionTimeout.
+     */
+    com.google.protobuf.Duration getConnectionTimeout();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.TrafficTunnelEndpoint}
+   */
+  public  static final class TrafficTunnelEndpoint extends
+      com.google.protobuf.GeneratedMessageLite<
+          TrafficTunnelEndpoint, TrafficTunnelEndpoint.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.TrafficTunnelEndpoint)
+      TrafficTunnelEndpointOrBuilder {
+    private TrafficTunnelEndpoint() {
+    }
+    private int bitField0_;
+    public static final int PORT_FIELD_NUMBER = 1;
+    private int port_;
+    /**
+     * <code>int32 port = 1 [json_name = "port"];</code>
+     * @return The port.
+     */
+    @java.lang.Override
+    public int getPort() {
+      return port_;
+    }
+    /**
+     * <code>int32 port = 1 [json_name = "port"];</code>
+     * @param value The port to set.
+     */
+    private void setPort(int value) {
+      
+      port_ = value;
+    }
+    /**
+     * <code>int32 port = 1 [json_name = "port"];</code>
+     */
+    private void clearPort() {
+
+      port_ = 0;
+    }
+
+    public static final int CONNECTION_TIMEOUT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration connectionTimeout_;
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     */
+    @java.lang.Override
+    public boolean hasConnectionTimeout() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getConnectionTimeout() {
+      return connectionTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : connectionTimeout_;
+    }
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     */
+    private void setConnectionTimeout(com.google.protobuf.Duration value) {
+      value.getClass();
+  connectionTimeout_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeConnectionTimeout(com.google.protobuf.Duration value) {
+      value.getClass();
+  if (connectionTimeout_ != null &&
+          connectionTimeout_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        connectionTimeout_ =
+          com.google.protobuf.Duration.newBuilder(connectionTimeout_).mergeFrom(value).buildPartial();
+      } else {
+        connectionTimeout_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     */
+    private void clearConnectionTimeout() {  connectionTimeout_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.v1.Robot.TrafficTunnelEndpoint parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.TrafficTunnelEndpoint parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.TrafficTunnelEndpoint parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.TrafficTunnelEndpoint parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.TrafficTunnelEndpoint parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.TrafficTunnelEndpoint parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.TrafficTunnelEndpoint parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.TrafficTunnelEndpoint parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Robot.TrafficTunnelEndpoint parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Robot.TrafficTunnelEndpoint parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.TrafficTunnelEndpoint parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.TrafficTunnelEndpoint parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Robot.TrafficTunnelEndpoint prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.TrafficTunnelEndpoint}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Robot.TrafficTunnelEndpoint, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.TrafficTunnelEndpoint)
+        viam.app.v1.Robot.TrafficTunnelEndpointOrBuilder {
+      // Construct using viam.app.v1.Robot.TrafficTunnelEndpoint.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>int32 port = 1 [json_name = "port"];</code>
+       * @return The port.
+       */
+      @java.lang.Override
+      public int getPort() {
+        return instance.getPort();
+      }
+      /**
+       * <code>int32 port = 1 [json_name = "port"];</code>
+       * @param value The port to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPort(int value) {
+        copyOnWrite();
+        instance.setPort(value);
+        return this;
+      }
+      /**
+       * <code>int32 port = 1 [json_name = "port"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPort() {
+        copyOnWrite();
+        instance.clearPort();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+       */
+      @java.lang.Override
+      public boolean hasConnectionTimeout() {
+        return instance.hasConnectionTimeout();
+      }
+      /**
+       * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getConnectionTimeout() {
+        return instance.getConnectionTimeout();
+      }
+      /**
+       * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+       */
+      public Builder setConnectionTimeout(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.setConnectionTimeout(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+       */
+      public Builder setConnectionTimeout(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setConnectionTimeout(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+       */
+      public Builder mergeConnectionTimeout(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.mergeConnectionTimeout(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+       */
+      public Builder clearConnectionTimeout() {  copyOnWrite();
+        instance.clearConnectionTimeout();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.TrafficTunnelEndpoint)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Robot.TrafficTunnelEndpoint();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "port_",
+              "connectionTimeout_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0004\u0002\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Robot.TrafficTunnelEndpoint> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Robot.TrafficTunnelEndpoint.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Robot.TrafficTunnelEndpoint>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.TrafficTunnelEndpoint)
+    private static final viam.app.v1.Robot.TrafficTunnelEndpoint DEFAULT_INSTANCE;
+    static {
+      TrafficTunnelEndpoint defaultInstance = new TrafficTunnelEndpoint();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        TrafficTunnelEndpoint.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Robot.TrafficTunnelEndpoint getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<TrafficTunnelEndpoint> PARSER;
+
+    public static com.google.protobuf.Parser<TrafficTunnelEndpoint> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

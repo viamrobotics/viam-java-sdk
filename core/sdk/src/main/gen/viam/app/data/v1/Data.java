@@ -15105,6 +15105,31 @@ com.google.protobuf.Any defaultValue) {
      * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
      */
     int getBinaryIdsCount();
+
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @return A list containing the binaryDataIds.
+     */
+    java.util.List<java.lang.String>
+        getBinaryDataIdsList();
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @return The count of binaryDataIds.
+     */
+    int getBinaryDataIdsCount();
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    java.lang.String getBinaryDataIds(int index);
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdsBytes(int index);
   }
   /**
    * <pre>
@@ -15120,6 +15145,7 @@ com.google.protobuf.Any defaultValue) {
       BinaryDataByIDsRequestOrBuilder {
     private BinaryDataByIDsRequest() {
       binaryIds_ = emptyProtobufList();
+      binaryDataIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     public static final int INCLUDE_BINARY_FIELD_NUMBER = 2;
     private boolean includeBinary_;
@@ -15239,6 +15265,99 @@ com.google.protobuf.Any defaultValue) {
     private void removeBinaryIds(int index) {
       ensureBinaryIdsIsMutable();
       binaryIds_.remove(index);
+    }
+
+    public static final int BINARY_DATA_IDS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> binaryDataIds_;
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @return A list containing the binaryDataIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getBinaryDataIdsList() {
+      return binaryDataIds_;
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @return The count of binaryDataIds.
+     */
+    @java.lang.Override
+    public int getBinaryDataIdsCount() {
+      return binaryDataIds_.size();
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataIds(int index) {
+      return binaryDataIds_.get(index);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the binaryDataIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          binaryDataIds_.get(index));
+    }
+    private void ensureBinaryDataIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          binaryDataIds_;  if (!tmp.isModifiable()) {
+        binaryDataIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The binaryDataIds to set.
+     */
+    private void setBinaryDataIds(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.set(index, value);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param value The binaryDataIds to add.
+     */
+    private void addBinaryDataIds(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.add(value);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param values The binaryDataIds to add.
+     */
+    private void addAllBinaryDataIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureBinaryDataIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, binaryDataIds_);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     */
+    private void clearBinaryDataIds() {
+      binaryDataIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param value The bytes of the binaryDataIds to add.
+     */
+    private void addBinaryDataIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.add(value.toStringUtf8());
     }
 
     public static viam.app.data.v1.Data.BinaryDataByIDsRequest parseFrom(
@@ -15472,6 +15591,98 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @return A list containing the binaryDataIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getBinaryDataIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getBinaryDataIdsList());
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @return The count of binaryDataIds.
+       */
+      @java.lang.Override
+      public int getBinaryDataIdsCount() {
+        return instance.getBinaryDataIdsCount();
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param index The index of the element to return.
+       * @return The binaryDataIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataIds(int index) {
+        return instance.getBinaryDataIds(index);
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the binaryDataIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdsBytes(int index) {
+        return instance.getBinaryDataIdsBytes(index);
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The binaryDataIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataIds(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param value The binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBinaryDataIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addBinaryDataIds(value);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param values The binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBinaryDataIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllBinaryDataIds(values);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataIds() {
+        copyOnWrite();
+        instance.clearBinaryDataIds();
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param value The bytes of the binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBinaryDataIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addBinaryDataIdsBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.BinaryDataByIDsRequest)
     }
     @java.lang.Override
@@ -15491,10 +15702,11 @@ com.google.protobuf.Any defaultValue) {
               "includeBinary_",
               "binaryIds_",
               viam.app.data.v1.Data.BinaryID.class,
+              "binaryDataIds_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0002\u0003\u0002\u0000\u0001\u0000\u0002\u0007\u0003\u001b" +
-                "";
+                "\u0000\u0003\u0000\u0000\u0002\u0004\u0003\u0000\u0002\u0000\u0002\u0007\u0003\u001b" +
+                "\u0004\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -17965,6 +18177,18 @@ com.google.protobuf.Any defaultValue) {
      */
     com.google.protobuf.ByteString
         getDatasetIdsBytes(int index);
+
+    /**
+     * <code>string binary_data_id = 10 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    java.lang.String getBinaryDataId();
+    /**
+     * <code>string binary_data_id = 10 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdBytes();
   }
   /**
    * <pre>
@@ -17984,6 +18208,7 @@ com.google.protobuf.Any defaultValue) {
       fileExt_ = "";
       uri_ = "";
       datasetIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      binaryDataId_ = "";
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
@@ -18449,6 +18674,53 @@ com.google.protobuf.Any defaultValue) {
       checkByteStringIsUtf8(value);
       ensureDatasetIdsIsMutable();
       datasetIds_.add(value.toStringUtf8());
+    }
+
+    public static final int BINARY_DATA_ID_FIELD_NUMBER = 10;
+    private java.lang.String binaryDataId_;
+    /**
+     * <code>string binary_data_id = 10 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataId() {
+      return binaryDataId_;
+    }
+    /**
+     * <code>string binary_data_id = 10 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(binaryDataId_);
+    }
+    /**
+     * <code>string binary_data_id = 10 [json_name = "binaryDataId"];</code>
+     * @param value The binaryDataId to set.
+     */
+    private void setBinaryDataId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      binaryDataId_ = value;
+    }
+    /**
+     * <code>string binary_data_id = 10 [json_name = "binaryDataId"];</code>
+     */
+    private void clearBinaryDataId() {
+
+      binaryDataId_ = getDefaultInstance().getBinaryDataId();
+    }
+    /**
+     * <code>string binary_data_id = 10 [json_name = "binaryDataId"];</code>
+     * @param value The bytes for binaryDataId to set.
+     */
+    private void setBinaryDataIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      binaryDataId_ = value.toStringUtf8();
+
     }
 
     public static viam.app.data.v1.Data.BinaryMetadata parseFrom(
@@ -19028,6 +19300,55 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>string binary_data_id = 10 [json_name = "binaryDataId"];</code>
+       * @return The binaryDataId.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataId() {
+        return instance.getBinaryDataId();
+      }
+      /**
+       * <code>string binary_data_id = 10 [json_name = "binaryDataId"];</code>
+       * @return The bytes for binaryDataId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdBytes() {
+        return instance.getBinaryDataIdBytes();
+      }
+      /**
+       * <code>string binary_data_id = 10 [json_name = "binaryDataId"];</code>
+       * @param value The binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataId(value);
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 10 [json_name = "binaryDataId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataId() {
+        copyOnWrite();
+        instance.clearBinaryDataId();
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 10 [json_name = "binaryDataId"];</code>
+       * @param value The bytes for binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBinaryDataIdBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.BinaryMetadata)
     }
     @java.lang.Override
@@ -19054,11 +19375,12 @@ com.google.protobuf.Any defaultValue) {
               "uri_",
               "annotations_",
               "datasetIds_",
+              "binaryDataId_",
             };
             java.lang.String info =
-                "\u0000\t\u0000\u0001\u0001\t\t\u0000\u0001\u0000\u0001\u0208\u0002\u1009\u0000\u0003" +
+                "\u0000\n\u0000\u0001\u0001\n\n\u0000\u0001\u0000\u0001\u0208\u0002\u1009\u0000\u0003" +
                 "\u1009\u0001\u0004\u1009\u0002\u0005\u0208\u0006\u0208\u0007\u0208\b\u1009\u0003" +
-                "\t\u021a";
+                "\t\u021a\n\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -20371,6 +20693,31 @@ com.google.protobuf.Any defaultValue) {
      * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
      */
     int getBinaryIdsCount();
+
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @return A list containing the binaryDataIds.
+     */
+    java.util.List<java.lang.String>
+        getBinaryDataIdsList();
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @return The count of binaryDataIds.
+     */
+    int getBinaryDataIdsCount();
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    java.lang.String getBinaryDataIds(int index);
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdsBytes(int index);
   }
   /**
    * <pre>
@@ -20386,6 +20733,7 @@ com.google.protobuf.Any defaultValue) {
       DeleteBinaryDataByIDsRequestOrBuilder {
     private DeleteBinaryDataByIDsRequest() {
       binaryIds_ = emptyProtobufList();
+      binaryDataIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     public static final int BINARY_IDS_FIELD_NUMBER = 2;
     private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.BinaryID> binaryIds_;
@@ -20479,6 +20827,99 @@ com.google.protobuf.Any defaultValue) {
     private void removeBinaryIds(int index) {
       ensureBinaryIdsIsMutable();
       binaryIds_.remove(index);
+    }
+
+    public static final int BINARY_DATA_IDS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> binaryDataIds_;
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @return A list containing the binaryDataIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getBinaryDataIdsList() {
+      return binaryDataIds_;
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @return The count of binaryDataIds.
+     */
+    @java.lang.Override
+    public int getBinaryDataIdsCount() {
+      return binaryDataIds_.size();
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataIds(int index) {
+      return binaryDataIds_.get(index);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the binaryDataIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          binaryDataIds_.get(index));
+    }
+    private void ensureBinaryDataIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          binaryDataIds_;  if (!tmp.isModifiable()) {
+        binaryDataIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The binaryDataIds to set.
+     */
+    private void setBinaryDataIds(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.set(index, value);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param value The binaryDataIds to add.
+     */
+    private void addBinaryDataIds(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.add(value);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param values The binaryDataIds to add.
+     */
+    private void addAllBinaryDataIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureBinaryDataIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, binaryDataIds_);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     */
+    private void clearBinaryDataIds() {
+      binaryDataIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param value The bytes of the binaryDataIds to add.
+     */
+    private void addBinaryDataIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.add(value.toStringUtf8());
     }
 
     public static viam.app.data.v1.Data.DeleteBinaryDataByIDsRequest parseFrom(
@@ -20684,6 +21125,98 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @return A list containing the binaryDataIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getBinaryDataIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getBinaryDataIdsList());
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @return The count of binaryDataIds.
+       */
+      @java.lang.Override
+      public int getBinaryDataIdsCount() {
+        return instance.getBinaryDataIdsCount();
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param index The index of the element to return.
+       * @return The binaryDataIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataIds(int index) {
+        return instance.getBinaryDataIds(index);
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the binaryDataIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdsBytes(int index) {
+        return instance.getBinaryDataIdsBytes(index);
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The binaryDataIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataIds(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param value The binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBinaryDataIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addBinaryDataIds(value);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param values The binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBinaryDataIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllBinaryDataIds(values);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataIds() {
+        copyOnWrite();
+        instance.clearBinaryDataIds();
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param value The bytes of the binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBinaryDataIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addBinaryDataIdsBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.DeleteBinaryDataByIDsRequest)
     }
     @java.lang.Override
@@ -20702,9 +21235,11 @@ com.google.protobuf.Any defaultValue) {
             java.lang.Object[] objects = new java.lang.Object[] {
               "binaryIds_",
               viam.app.data.v1.Data.BinaryID.class,
+              "binaryDataIds_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0002\u0002\u0001\u0000\u0001\u0000\u0002\u001b";
+                "\u0000\u0002\u0000\u0000\u0002\u0003\u0002\u0000\u0002\u0000\u0002\u001b\u0003\u021a" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -21031,6 +21566,31 @@ com.google.protobuf.Any defaultValue) {
     int getBinaryIdsCount();
 
     /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @return A list containing the binaryDataIds.
+     */
+    java.util.List<java.lang.String>
+        getBinaryDataIdsList();
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @return The count of binaryDataIds.
+     */
+    int getBinaryDataIdsCount();
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    java.lang.String getBinaryDataIds(int index);
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdsBytes(int index);
+
+    /**
      * <code>repeated string tags = 2 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
@@ -21069,6 +21629,7 @@ com.google.protobuf.Any defaultValue) {
       AddTagsToBinaryDataByIDsRequestOrBuilder {
     private AddTagsToBinaryDataByIDsRequest() {
       binaryIds_ = emptyProtobufList();
+      binaryDataIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     public static final int BINARY_IDS_FIELD_NUMBER = 3;
@@ -21163,6 +21724,99 @@ com.google.protobuf.Any defaultValue) {
     private void removeBinaryIds(int index) {
       ensureBinaryIdsIsMutable();
       binaryIds_.remove(index);
+    }
+
+    public static final int BINARY_DATA_IDS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> binaryDataIds_;
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @return A list containing the binaryDataIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getBinaryDataIdsList() {
+      return binaryDataIds_;
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @return The count of binaryDataIds.
+     */
+    @java.lang.Override
+    public int getBinaryDataIdsCount() {
+      return binaryDataIds_.size();
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataIds(int index) {
+      return binaryDataIds_.get(index);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the binaryDataIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          binaryDataIds_.get(index));
+    }
+    private void ensureBinaryDataIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          binaryDataIds_;  if (!tmp.isModifiable()) {
+        binaryDataIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The binaryDataIds to set.
+     */
+    private void setBinaryDataIds(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.set(index, value);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param value The binaryDataIds to add.
+     */
+    private void addBinaryDataIds(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.add(value);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param values The binaryDataIds to add.
+     */
+    private void addAllBinaryDataIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureBinaryDataIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, binaryDataIds_);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     */
+    private void clearBinaryDataIds() {
+      binaryDataIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param value The bytes of the binaryDataIds to add.
+     */
+    private void addBinaryDataIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.add(value.toStringUtf8());
     }
 
     public static final int TAGS_FIELD_NUMBER = 2;
@@ -21462,6 +22116,98 @@ com.google.protobuf.Any defaultValue) {
       }
 
       /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @return A list containing the binaryDataIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getBinaryDataIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getBinaryDataIdsList());
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @return The count of binaryDataIds.
+       */
+      @java.lang.Override
+      public int getBinaryDataIdsCount() {
+        return instance.getBinaryDataIdsCount();
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param index The index of the element to return.
+       * @return The binaryDataIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataIds(int index) {
+        return instance.getBinaryDataIds(index);
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the binaryDataIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdsBytes(int index) {
+        return instance.getBinaryDataIdsBytes(index);
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The binaryDataIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataIds(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param value The binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBinaryDataIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addBinaryDataIds(value);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param values The binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBinaryDataIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllBinaryDataIds(values);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataIds() {
+        copyOnWrite();
+        instance.clearBinaryDataIds();
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param value The bytes of the binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBinaryDataIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addBinaryDataIdsBytes(value);
+        return this;
+      }
+
+      /**
        * <code>repeated string tags = 2 [json_name = "tags"];</code>
        * @return A list containing the tags.
        */
@@ -21572,10 +22318,11 @@ com.google.protobuf.Any defaultValue) {
               "tags_",
               "binaryIds_",
               viam.app.data.v1.Data.BinaryID.class,
+              "binaryDataIds_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0002\u0003\u0002\u0000\u0002\u0000\u0002\u021a\u0003\u001b" +
-                "";
+                "\u0000\u0003\u0000\u0000\u0002\u0004\u0003\u0000\u0003\u0000\u0002\u021a\u0003\u001b" +
+                "\u0004\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -22525,6 +23272,31 @@ com.google.protobuf.Any defaultValue) {
     int getBinaryIdsCount();
 
     /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @return A list containing the binaryDataIds.
+     */
+    java.util.List<java.lang.String>
+        getBinaryDataIdsList();
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @return The count of binaryDataIds.
+     */
+    int getBinaryDataIdsCount();
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    java.lang.String getBinaryDataIds(int index);
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdsBytes(int index);
+
+    /**
      * <code>repeated string tags = 2 [json_name = "tags"];</code>
      * @return A list containing the tags.
      */
@@ -22563,6 +23335,7 @@ com.google.protobuf.Any defaultValue) {
       RemoveTagsFromBinaryDataByIDsRequestOrBuilder {
     private RemoveTagsFromBinaryDataByIDsRequest() {
       binaryIds_ = emptyProtobufList();
+      binaryDataIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     public static final int BINARY_IDS_FIELD_NUMBER = 3;
@@ -22657,6 +23430,99 @@ com.google.protobuf.Any defaultValue) {
     private void removeBinaryIds(int index) {
       ensureBinaryIdsIsMutable();
       binaryIds_.remove(index);
+    }
+
+    public static final int BINARY_DATA_IDS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> binaryDataIds_;
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @return A list containing the binaryDataIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getBinaryDataIdsList() {
+      return binaryDataIds_;
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @return The count of binaryDataIds.
+     */
+    @java.lang.Override
+    public int getBinaryDataIdsCount() {
+      return binaryDataIds_.size();
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataIds(int index) {
+      return binaryDataIds_.get(index);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the binaryDataIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          binaryDataIds_.get(index));
+    }
+    private void ensureBinaryDataIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          binaryDataIds_;  if (!tmp.isModifiable()) {
+        binaryDataIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The binaryDataIds to set.
+     */
+    private void setBinaryDataIds(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.set(index, value);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param value The binaryDataIds to add.
+     */
+    private void addBinaryDataIds(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.add(value);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param values The binaryDataIds to add.
+     */
+    private void addAllBinaryDataIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureBinaryDataIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, binaryDataIds_);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     */
+    private void clearBinaryDataIds() {
+      binaryDataIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+     * @param value The bytes of the binaryDataIds to add.
+     */
+    private void addBinaryDataIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.add(value.toStringUtf8());
     }
 
     public static final int TAGS_FIELD_NUMBER = 2;
@@ -22956,6 +23822,98 @@ com.google.protobuf.Any defaultValue) {
       }
 
       /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @return A list containing the binaryDataIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getBinaryDataIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getBinaryDataIdsList());
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @return The count of binaryDataIds.
+       */
+      @java.lang.Override
+      public int getBinaryDataIdsCount() {
+        return instance.getBinaryDataIdsCount();
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param index The index of the element to return.
+       * @return The binaryDataIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataIds(int index) {
+        return instance.getBinaryDataIds(index);
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the binaryDataIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdsBytes(int index) {
+        return instance.getBinaryDataIdsBytes(index);
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The binaryDataIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataIds(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param value The binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBinaryDataIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addBinaryDataIds(value);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param values The binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBinaryDataIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllBinaryDataIds(values);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataIds() {
+        copyOnWrite();
+        instance.clearBinaryDataIds();
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
+       * @param value The bytes of the binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBinaryDataIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addBinaryDataIdsBytes(value);
+        return this;
+      }
+
+      /**
        * <code>repeated string tags = 2 [json_name = "tags"];</code>
        * @return A list containing the tags.
        */
@@ -23066,10 +24024,11 @@ com.google.protobuf.Any defaultValue) {
               "tags_",
               "binaryIds_",
               viam.app.data.v1.Data.BinaryID.class,
+              "binaryDataIds_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0002\u0003\u0002\u0000\u0002\u0000\u0002\u021a\u0003\u001b" +
-                "";
+                "\u0000\u0003\u0000\u0000\u0002\u0004\u0003\u0000\u0003\u0000\u0002\u021a\u0003\u001b" +
+                "\u0004\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -24861,6 +25820,18 @@ com.google.protobuf.Any defaultValue) {
     viam.app.data.v1.Data.BinaryID getBinaryId();
 
     /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    java.lang.String getBinaryDataId();
+    /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdBytes();
+
+    /**
      * <code>string label = 2 [json_name = "label"];</code>
      * @return The label.
      */
@@ -24910,6 +25881,7 @@ com.google.protobuf.Any defaultValue) {
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.AddBoundingBoxToImageByIDRequest)
       AddBoundingBoxToImageByIDRequestOrBuilder {
     private AddBoundingBoxToImageByIDRequest() {
+      binaryDataId_ = "";
       label_ = "";
     }
     private int bitField0_;
@@ -24957,6 +25929,53 @@ com.google.protobuf.Any defaultValue) {
      */
     private void clearBinaryId() {  binaryId_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int BINARY_DATA_ID_FIELD_NUMBER = 8;
+    private java.lang.String binaryDataId_;
+    /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataId() {
+      return binaryDataId_;
+    }
+    /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(binaryDataId_);
+    }
+    /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     * @param value The binaryDataId to set.
+     */
+    private void setBinaryDataId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      binaryDataId_ = value;
+    }
+    /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     */
+    private void clearBinaryDataId() {
+
+      binaryDataId_ = getDefaultInstance().getBinaryDataId();
+    }
+    /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     * @param value The bytes for binaryDataId to set.
+     */
+    private void setBinaryDataIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      binaryDataId_ = value.toStringUtf8();
+
     }
 
     public static final int LABEL_FIELD_NUMBER = 2;
@@ -25260,6 +26279,55 @@ com.google.protobuf.Any defaultValue) {
       }
 
       /**
+       * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+       * @return The binaryDataId.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataId() {
+        return instance.getBinaryDataId();
+      }
+      /**
+       * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+       * @return The bytes for binaryDataId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdBytes() {
+        return instance.getBinaryDataIdBytes();
+      }
+      /**
+       * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+       * @param value The binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataId(value);
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataId() {
+        copyOnWrite();
+        instance.clearBinaryDataId();
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+       * @param value The bytes for binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBinaryDataIdBytes(value);
+        return this;
+      }
+
+      /**
        * <code>string label = 2 [json_name = "label"];</code>
        * @return The label.
        */
@@ -25443,10 +26511,11 @@ com.google.protobuf.Any defaultValue) {
               "xMaxNormalized_",
               "yMaxNormalized_",
               "binaryId_",
+              "binaryDataId_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0001\u0002\u0007\u0006\u0000\u0000\u0000\u0002\u0208\u0003\u0000" +
-                "\u0004\u0000\u0005\u0000\u0006\u0000\u0007\u1009\u0000";
+                "\u0000\u0007\u0000\u0001\u0002\b\u0007\u0000\u0000\u0000\u0002\u0208\u0003\u0000" +
+                "\u0004\u0000\u0005\u0000\u0006\u0000\u0007\u1009\u0000\b\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -25819,6 +26888,18 @@ com.google.protobuf.Any defaultValue) {
     viam.app.data.v1.Data.BinaryID getBinaryId();
 
     /**
+     * <code>string binary_data_id = 4 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    java.lang.String getBinaryDataId();
+    /**
+     * <code>string binary_data_id = 4 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdBytes();
+
+    /**
      * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
      * @return The bboxId.
      */
@@ -25843,6 +26924,7 @@ com.google.protobuf.Any defaultValue) {
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest)
       RemoveBoundingBoxFromImageByIDRequestOrBuilder {
     private RemoveBoundingBoxFromImageByIDRequest() {
+      binaryDataId_ = "";
       bboxId_ = "";
     }
     private int bitField0_;
@@ -25890,6 +26972,53 @@ com.google.protobuf.Any defaultValue) {
      */
     private void clearBinaryId() {  binaryId_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int BINARY_DATA_ID_FIELD_NUMBER = 4;
+    private java.lang.String binaryDataId_;
+    /**
+     * <code>string binary_data_id = 4 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataId() {
+      return binaryDataId_;
+    }
+    /**
+     * <code>string binary_data_id = 4 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(binaryDataId_);
+    }
+    /**
+     * <code>string binary_data_id = 4 [json_name = "binaryDataId"];</code>
+     * @param value The binaryDataId to set.
+     */
+    private void setBinaryDataId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      binaryDataId_ = value;
+    }
+    /**
+     * <code>string binary_data_id = 4 [json_name = "binaryDataId"];</code>
+     */
+    private void clearBinaryDataId() {
+
+      binaryDataId_ = getDefaultInstance().getBinaryDataId();
+    }
+    /**
+     * <code>string binary_data_id = 4 [json_name = "binaryDataId"];</code>
+     * @param value The bytes for binaryDataId to set.
+     */
+    private void setBinaryDataIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      binaryDataId_ = value.toStringUtf8();
+
     }
 
     public static final int BBOX_ID_FIELD_NUMBER = 2;
@@ -26088,6 +27217,55 @@ com.google.protobuf.Any defaultValue) {
       }
 
       /**
+       * <code>string binary_data_id = 4 [json_name = "binaryDataId"];</code>
+       * @return The binaryDataId.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataId() {
+        return instance.getBinaryDataId();
+      }
+      /**
+       * <code>string binary_data_id = 4 [json_name = "binaryDataId"];</code>
+       * @return The bytes for binaryDataId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdBytes() {
+        return instance.getBinaryDataIdBytes();
+      }
+      /**
+       * <code>string binary_data_id = 4 [json_name = "binaryDataId"];</code>
+       * @param value The binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataId(value);
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 4 [json_name = "binaryDataId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataId() {
+        copyOnWrite();
+        instance.clearBinaryDataId();
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 4 [json_name = "binaryDataId"];</code>
+       * @param value The bytes for binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBinaryDataIdBytes(value);
+        return this;
+      }
+
+      /**
        * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
        * @return The bboxId.
        */
@@ -26155,10 +27333,11 @@ com.google.protobuf.Any defaultValue) {
               "bitField0_",
               "bboxId_",
               "binaryId_",
+              "binaryDataId_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0002\u0003\u0002\u0000\u0000\u0000\u0002\u0208\u0003\u1009" +
-                "\u0000";
+                "\u0000\u0003\u0000\u0001\u0002\u0004\u0003\u0000\u0000\u0000\u0002\u0208\u0003\u1009" +
+                "\u0000\u0004\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -26411,6 +27590,18 @@ com.google.protobuf.Any defaultValue) {
     viam.app.data.v1.Data.BinaryID getBinaryId();
 
     /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    java.lang.String getBinaryDataId();
+    /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdBytes();
+
+    /**
      * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
      * @return The bboxId.
      */
@@ -26496,6 +27687,7 @@ com.google.protobuf.Any defaultValue) {
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.UpdateBoundingBoxRequest)
       UpdateBoundingBoxRequestOrBuilder {
     private UpdateBoundingBoxRequest() {
+      binaryDataId_ = "";
       bboxId_ = "";
       label_ = "";
     }
@@ -26544,6 +27736,53 @@ com.google.protobuf.Any defaultValue) {
      */
     private void clearBinaryId() {  binaryId_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int BINARY_DATA_ID_FIELD_NUMBER = 8;
+    private java.lang.String binaryDataId_;
+    /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataId() {
+      return binaryDataId_;
+    }
+    /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(binaryDataId_);
+    }
+    /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     * @param value The binaryDataId to set.
+     */
+    private void setBinaryDataId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      binaryDataId_ = value;
+    }
+    /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     */
+    private void clearBinaryDataId() {
+
+      binaryDataId_ = getDefaultInstance().getBinaryDataId();
+    }
+    /**
+     * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+     * @param value The bytes for binaryDataId to set.
+     */
+    private void setBinaryDataIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      binaryDataId_ = value.toStringUtf8();
+
     }
 
     public static final int BBOX_ID_FIELD_NUMBER = 2;
@@ -26933,6 +28172,55 @@ com.google.protobuf.Any defaultValue) {
       }
 
       /**
+       * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+       * @return The binaryDataId.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataId() {
+        return instance.getBinaryDataId();
+      }
+      /**
+       * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+       * @return The bytes for binaryDataId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdBytes() {
+        return instance.getBinaryDataIdBytes();
+      }
+      /**
+       * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+       * @param value The binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataId(value);
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataId() {
+        copyOnWrite();
+        instance.clearBinaryDataId();
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
+       * @param value The bytes for binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBinaryDataIdBytes(value);
+        return this;
+      }
+
+      /**
        * <code>string bbox_id = 2 [json_name = "bboxId"];</code>
        * @return The bboxId.
        */
@@ -27206,11 +28494,12 @@ com.google.protobuf.Any defaultValue) {
               "yMinNormalized_",
               "xMaxNormalized_",
               "yMaxNormalized_",
+              "binaryDataId_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "\u0208\u0003\u1208\u0001\u0004\u1000\u0002\u0005\u1000\u0003\u0006\u1000\u0004\u0007" +
-                "\u1000\u0005";
+                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0000\u0000\u0001\u1009\u0000\u0002\u0208\u0003" +
+                "\u1208\u0001\u0004\u1000\u0002\u0005\u1000\u0003\u0006\u1000\u0004\u0007\u1000\u0005" +
+                "\b\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -29548,6 +30837,31 @@ com.google.protobuf.Any defaultValue) {
     int getBinaryIdsCount();
 
     /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @return A list containing the binaryDataIds.
+     */
+    java.util.List<java.lang.String>
+        getBinaryDataIdsList();
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @return The count of binaryDataIds.
+     */
+    int getBinaryDataIdsCount();
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    java.lang.String getBinaryDataIds(int index);
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdsBytes(int index);
+
+    /**
      * <code>string dataset_id = 2 [json_name = "datasetId"];</code>
      * @return The datasetId.
      */
@@ -29573,6 +30887,7 @@ com.google.protobuf.Any defaultValue) {
       AddBinaryDataToDatasetByIDsRequestOrBuilder {
     private AddBinaryDataToDatasetByIDsRequest() {
       binaryIds_ = emptyProtobufList();
+      binaryDataIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       datasetId_ = "";
     }
     public static final int BINARY_IDS_FIELD_NUMBER = 1;
@@ -29667,6 +30982,99 @@ com.google.protobuf.Any defaultValue) {
     private void removeBinaryIds(int index) {
       ensureBinaryIdsIsMutable();
       binaryIds_.remove(index);
+    }
+
+    public static final int BINARY_DATA_IDS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> binaryDataIds_;
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @return A list containing the binaryDataIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getBinaryDataIdsList() {
+      return binaryDataIds_;
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @return The count of binaryDataIds.
+     */
+    @java.lang.Override
+    public int getBinaryDataIdsCount() {
+      return binaryDataIds_.size();
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataIds(int index) {
+      return binaryDataIds_.get(index);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the binaryDataIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          binaryDataIds_.get(index));
+    }
+    private void ensureBinaryDataIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          binaryDataIds_;  if (!tmp.isModifiable()) {
+        binaryDataIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The binaryDataIds to set.
+     */
+    private void setBinaryDataIds(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.set(index, value);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param value The binaryDataIds to add.
+     */
+    private void addBinaryDataIds(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.add(value);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param values The binaryDataIds to add.
+     */
+    private void addAllBinaryDataIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureBinaryDataIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, binaryDataIds_);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     */
+    private void clearBinaryDataIds() {
+      binaryDataIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param value The bytes of the binaryDataIds to add.
+     */
+    private void addBinaryDataIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.add(value.toStringUtf8());
     }
 
     public static final int DATASET_ID_FIELD_NUMBER = 2;
@@ -29920,6 +31328,98 @@ com.google.protobuf.Any defaultValue) {
       }
 
       /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @return A list containing the binaryDataIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getBinaryDataIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getBinaryDataIdsList());
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @return The count of binaryDataIds.
+       */
+      @java.lang.Override
+      public int getBinaryDataIdsCount() {
+        return instance.getBinaryDataIdsCount();
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param index The index of the element to return.
+       * @return The binaryDataIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataIds(int index) {
+        return instance.getBinaryDataIds(index);
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the binaryDataIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdsBytes(int index) {
+        return instance.getBinaryDataIdsBytes(index);
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The binaryDataIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataIds(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param value The binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBinaryDataIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addBinaryDataIds(value);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param values The binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBinaryDataIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllBinaryDataIds(values);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataIds() {
+        copyOnWrite();
+        instance.clearBinaryDataIds();
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param value The bytes of the binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBinaryDataIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addBinaryDataIdsBytes(value);
+        return this;
+      }
+
+      /**
        * <code>string dataset_id = 2 [json_name = "datasetId"];</code>
        * @return The datasetId.
        */
@@ -29987,10 +31487,11 @@ com.google.protobuf.Any defaultValue) {
               "binaryIds_",
               viam.app.data.v1.Data.BinaryID.class,
               "datasetId_",
+              "binaryDataIds_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u0208" +
-                "";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0002\u0000\u0001\u001b\u0002\u0208" +
+                "\u0003\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -30246,6 +31747,31 @@ com.google.protobuf.Any defaultValue) {
     int getBinaryIdsCount();
 
     /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @return A list containing the binaryDataIds.
+     */
+    java.util.List<java.lang.String>
+        getBinaryDataIdsList();
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @return The count of binaryDataIds.
+     */
+    int getBinaryDataIdsCount();
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    java.lang.String getBinaryDataIds(int index);
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdsBytes(int index);
+
+    /**
      * <code>string dataset_id = 2 [json_name = "datasetId"];</code>
      * @return The datasetId.
      */
@@ -30271,6 +31797,7 @@ com.google.protobuf.Any defaultValue) {
       RemoveBinaryDataFromDatasetByIDsRequestOrBuilder {
     private RemoveBinaryDataFromDatasetByIDsRequest() {
       binaryIds_ = emptyProtobufList();
+      binaryDataIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       datasetId_ = "";
     }
     public static final int BINARY_IDS_FIELD_NUMBER = 1;
@@ -30365,6 +31892,99 @@ com.google.protobuf.Any defaultValue) {
     private void removeBinaryIds(int index) {
       ensureBinaryIdsIsMutable();
       binaryIds_.remove(index);
+    }
+
+    public static final int BINARY_DATA_IDS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> binaryDataIds_;
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @return A list containing the binaryDataIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getBinaryDataIdsList() {
+      return binaryDataIds_;
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @return The count of binaryDataIds.
+     */
+    @java.lang.Override
+    public int getBinaryDataIdsCount() {
+      return binaryDataIds_.size();
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the element to return.
+     * @return The binaryDataIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataIds(int index) {
+      return binaryDataIds_.get(index);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the binaryDataIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          binaryDataIds_.get(index));
+    }
+    private void ensureBinaryDataIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          binaryDataIds_;  if (!tmp.isModifiable()) {
+        binaryDataIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The binaryDataIds to set.
+     */
+    private void setBinaryDataIds(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.set(index, value);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param value The binaryDataIds to add.
+     */
+    private void addBinaryDataIds(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.add(value);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param values The binaryDataIds to add.
+     */
+    private void addAllBinaryDataIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureBinaryDataIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, binaryDataIds_);
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     */
+    private void clearBinaryDataIds() {
+      binaryDataIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+     * @param value The bytes of the binaryDataIds to add.
+     */
+    private void addBinaryDataIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureBinaryDataIdsIsMutable();
+      binaryDataIds_.add(value.toStringUtf8());
     }
 
     public static final int DATASET_ID_FIELD_NUMBER = 2;
@@ -30618,6 +32238,98 @@ com.google.protobuf.Any defaultValue) {
       }
 
       /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @return A list containing the binaryDataIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getBinaryDataIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getBinaryDataIdsList());
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @return The count of binaryDataIds.
+       */
+      @java.lang.Override
+      public int getBinaryDataIdsCount() {
+        return instance.getBinaryDataIdsCount();
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param index The index of the element to return.
+       * @return The binaryDataIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataIds(int index) {
+        return instance.getBinaryDataIds(index);
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the binaryDataIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdsBytes(int index) {
+        return instance.getBinaryDataIdsBytes(index);
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The binaryDataIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataIds(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param value The binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBinaryDataIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addBinaryDataIds(value);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param values The binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllBinaryDataIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllBinaryDataIds(values);
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataIds() {
+        copyOnWrite();
+        instance.clearBinaryDataIds();
+        return this;
+      }
+      /**
+       * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
+       * @param value The bytes of the binaryDataIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addBinaryDataIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addBinaryDataIdsBytes(value);
+        return this;
+      }
+
+      /**
        * <code>string dataset_id = 2 [json_name = "datasetId"];</code>
        * @return The datasetId.
        */
@@ -30685,10 +32397,11 @@ com.google.protobuf.Any defaultValue) {
               "binaryIds_",
               viam.app.data.v1.Data.BinaryID.class,
               "datasetId_",
+              "binaryDataIds_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u0208" +
-                "";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0002\u0000\u0001\u001b\u0002\u0208" +
+                "\u0003\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

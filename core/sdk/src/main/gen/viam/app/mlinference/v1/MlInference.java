@@ -62,6 +62,18 @@ public final class MlInference {
     viam.app.data.v1.Data.BinaryID getBinaryId();
 
     /**
+     * <code>string binary_data_id = 5 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    java.lang.String getBinaryDataId();
+    /**
+     * <code>string binary_data_id = 5 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdBytes();
+
+    /**
      * <code>string organization_id = 4 [json_name = "organizationId"];</code>
      * @return The organizationId.
      */
@@ -84,6 +96,7 @@ public final class MlInference {
     private GetInferenceRequest() {
       registryItemId_ = "";
       registryItemVersion_ = "";
+      binaryDataId_ = "";
       organizationId_ = "";
     }
     private int bitField0_;
@@ -255,6 +268,53 @@ public final class MlInference {
      */
     private void clearBinaryId() {  binaryId_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int BINARY_DATA_ID_FIELD_NUMBER = 5;
+    private java.lang.String binaryDataId_;
+    /**
+     * <code>string binary_data_id = 5 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataId() {
+      return binaryDataId_;
+    }
+    /**
+     * <code>string binary_data_id = 5 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(binaryDataId_);
+    }
+    /**
+     * <code>string binary_data_id = 5 [json_name = "binaryDataId"];</code>
+     * @param value The binaryDataId to set.
+     */
+    private void setBinaryDataId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      binaryDataId_ = value;
+    }
+    /**
+     * <code>string binary_data_id = 5 [json_name = "binaryDataId"];</code>
+     */
+    private void clearBinaryDataId() {
+
+      binaryDataId_ = getDefaultInstance().getBinaryDataId();
+    }
+    /**
+     * <code>string binary_data_id = 5 [json_name = "binaryDataId"];</code>
+     * @param value The bytes for binaryDataId to set.
+     */
+    private void setBinaryDataIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      binaryDataId_ = value.toStringUtf8();
+
     }
 
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 4;
@@ -577,6 +637,55 @@ public final class MlInference {
       }
 
       /**
+       * <code>string binary_data_id = 5 [json_name = "binaryDataId"];</code>
+       * @return The binaryDataId.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataId() {
+        return instance.getBinaryDataId();
+      }
+      /**
+       * <code>string binary_data_id = 5 [json_name = "binaryDataId"];</code>
+       * @return The bytes for binaryDataId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdBytes() {
+        return instance.getBinaryDataIdBytes();
+      }
+      /**
+       * <code>string binary_data_id = 5 [json_name = "binaryDataId"];</code>
+       * @param value The binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataId(value);
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 5 [json_name = "binaryDataId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataId() {
+        copyOnWrite();
+        instance.clearBinaryDataId();
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 5 [json_name = "binaryDataId"];</code>
+       * @param value The bytes for binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBinaryDataIdBytes(value);
+        return this;
+      }
+
+      /**
        * <code>string organization_id = 4 [json_name = "organizationId"];</code>
        * @return The organizationId.
        */
@@ -646,10 +755,11 @@ public final class MlInference {
               "registryItemVersion_",
               "binaryId_",
               "organizationId_",
+              "binaryDataId_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u1009\u0000\u0004\u0208";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u1009\u0000\u0004\u0208\u0005\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

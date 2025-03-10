@@ -756,6 +756,18 @@ public final class DataSync {
      */
     com.google.protobuf.ByteString
         getFileIdBytes();
+
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    java.lang.String getBinaryDataId();
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdBytes();
   }
   /**
    * <pre>
@@ -771,6 +783,7 @@ public final class DataSync {
       DataCaptureUploadResponseOrBuilder {
     private DataCaptureUploadResponse() {
       fileId_ = "";
+      binaryDataId_ = "";
     }
     public static final int FILE_ID_FIELD_NUMBER = 1;
     private java.lang.String fileId_;
@@ -816,6 +829,53 @@ public final class DataSync {
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       fileId_ = value.toStringUtf8();
+
+    }
+
+    public static final int BINARY_DATA_ID_FIELD_NUMBER = 2;
+    private java.lang.String binaryDataId_;
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataId() {
+      return binaryDataId_;
+    }
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(binaryDataId_);
+    }
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @param value The binaryDataId to set.
+     */
+    private void setBinaryDataId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      binaryDataId_ = value;
+    }
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     */
+    private void clearBinaryDataId() {
+
+      binaryDataId_ = getDefaultInstance().getBinaryDataId();
+    }
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @param value The bytes for binaryDataId to set.
+     */
+    private void setBinaryDataIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      binaryDataId_ = value.toStringUtf8();
 
     }
 
@@ -969,6 +1029,55 @@ public final class DataSync {
         return this;
       }
 
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @return The binaryDataId.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataId() {
+        return instance.getBinaryDataId();
+      }
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @return The bytes for binaryDataId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdBytes() {
+        return instance.getBinaryDataIdBytes();
+      }
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @param value The binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataId(value);
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataId() {
+        copyOnWrite();
+        instance.clearBinaryDataId();
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @param value The bytes for binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBinaryDataIdBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.DataCaptureUploadResponse)
     }
     @java.lang.Override
@@ -986,9 +1095,11 @@ public final class DataSync {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "fileId_",
+              "binaryDataId_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -1532,6 +1643,18 @@ public final class DataSync {
      */
     com.google.protobuf.ByteString
         getFileIdBytes();
+
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    java.lang.String getBinaryDataId();
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdBytes();
   }
   /**
    * <pre>
@@ -1547,6 +1670,7 @@ public final class DataSync {
       FileUploadResponseOrBuilder {
     private FileUploadResponse() {
       fileId_ = "";
+      binaryDataId_ = "";
     }
     public static final int FILE_ID_FIELD_NUMBER = 1;
     private java.lang.String fileId_;
@@ -1592,6 +1716,53 @@ public final class DataSync {
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       fileId_ = value.toStringUtf8();
+
+    }
+
+    public static final int BINARY_DATA_ID_FIELD_NUMBER = 2;
+    private java.lang.String binaryDataId_;
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataId() {
+      return binaryDataId_;
+    }
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(binaryDataId_);
+    }
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @param value The binaryDataId to set.
+     */
+    private void setBinaryDataId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      binaryDataId_ = value;
+    }
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     */
+    private void clearBinaryDataId() {
+
+      binaryDataId_ = getDefaultInstance().getBinaryDataId();
+    }
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @param value The bytes for binaryDataId to set.
+     */
+    private void setBinaryDataIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      binaryDataId_ = value.toStringUtf8();
 
     }
 
@@ -1745,6 +1916,55 @@ public final class DataSync {
         return this;
       }
 
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @return The binaryDataId.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataId() {
+        return instance.getBinaryDataId();
+      }
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @return The bytes for binaryDataId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdBytes() {
+        return instance.getBinaryDataIdBytes();
+      }
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @param value The binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataId(value);
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataId() {
+        copyOnWrite();
+        instance.clearBinaryDataId();
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @param value The bytes for binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBinaryDataIdBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.FileUploadResponse)
     }
     @java.lang.Override
@@ -1762,9 +1982,11 @@ public final class DataSync {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "fileId_",
+              "binaryDataId_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -2284,6 +2506,18 @@ public final class DataSync {
      */
     com.google.protobuf.ByteString
         getFileIdBytes();
+
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    java.lang.String getBinaryDataId();
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdBytes();
   }
   /**
    * <pre>
@@ -2299,6 +2533,7 @@ public final class DataSync {
       StreamingDataCaptureUploadResponseOrBuilder {
     private StreamingDataCaptureUploadResponse() {
       fileId_ = "";
+      binaryDataId_ = "";
     }
     public static final int FILE_ID_FIELD_NUMBER = 1;
     private java.lang.String fileId_;
@@ -2344,6 +2579,53 @@ public final class DataSync {
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       fileId_ = value.toStringUtf8();
+
+    }
+
+    public static final int BINARY_DATA_ID_FIELD_NUMBER = 2;
+    private java.lang.String binaryDataId_;
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataId() {
+      return binaryDataId_;
+    }
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(binaryDataId_);
+    }
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @param value The binaryDataId to set.
+     */
+    private void setBinaryDataId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      binaryDataId_ = value;
+    }
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     */
+    private void clearBinaryDataId() {
+
+      binaryDataId_ = getDefaultInstance().getBinaryDataId();
+    }
+    /**
+     * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+     * @param value The bytes for binaryDataId to set.
+     */
+    private void setBinaryDataIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      binaryDataId_ = value.toStringUtf8();
 
     }
 
@@ -2497,6 +2779,55 @@ public final class DataSync {
         return this;
       }
 
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @return The binaryDataId.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataId() {
+        return instance.getBinaryDataId();
+      }
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @return The bytes for binaryDataId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdBytes() {
+        return instance.getBinaryDataIdBytes();
+      }
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @param value The binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataId(value);
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataId() {
+        copyOnWrite();
+        instance.clearBinaryDataId();
+        return this;
+      }
+      /**
+       * <code>string binary_data_id = 2 [json_name = "binaryDataId"];</code>
+       * @param value The bytes for binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBinaryDataIdBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.StreamingDataCaptureUploadResponse)
     }
     @java.lang.Override
@@ -2514,9 +2845,11 @@ public final class DataSync {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "fileId_",
+              "binaryDataId_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
