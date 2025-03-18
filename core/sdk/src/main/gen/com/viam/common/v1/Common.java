@@ -4058,6 +4058,440 @@ public final class Common {
     }
   }
 
+  public interface MeshOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.Mesh)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Content type of mesh (e.g. ply)
+     * </pre>
+     *
+     * <code>string content_type = 1 [json_name = "contentType"];</code>
+     * @return The contentType.
+     */
+    java.lang.String getContentType();
+    /**
+     * <pre>
+     * Content type of mesh (e.g. ply)
+     * </pre>
+     *
+     * <code>string content_type = 1 [json_name = "contentType"];</code>
+     * @return The bytes for contentType.
+     */
+    com.google.protobuf.ByteString
+        getContentTypeBytes();
+
+    /**
+     * <pre>
+     * Contents of mesh data in binary form defined by content_type
+     * </pre>
+     *
+     * <code>bytes mesh = 2 [json_name = "mesh"];</code>
+     * @return The mesh.
+     */
+    com.google.protobuf.ByteString getMesh();
+  }
+  /**
+   * Protobuf type {@code viam.common.v1.Mesh}
+   */
+  public  static final class Mesh extends
+      com.google.protobuf.GeneratedMessageLite<
+          Mesh, Mesh.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.Mesh)
+      MeshOrBuilder {
+    private Mesh() {
+      contentType_ = "";
+      mesh_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    public static final int CONTENT_TYPE_FIELD_NUMBER = 1;
+    private java.lang.String contentType_;
+    /**
+     * <pre>
+     * Content type of mesh (e.g. ply)
+     * </pre>
+     *
+     * <code>string content_type = 1 [json_name = "contentType"];</code>
+     * @return The contentType.
+     */
+    @java.lang.Override
+    public java.lang.String getContentType() {
+      return contentType_;
+    }
+    /**
+     * <pre>
+     * Content type of mesh (e.g. ply)
+     * </pre>
+     *
+     * <code>string content_type = 1 [json_name = "contentType"];</code>
+     * @return The bytes for contentType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContentTypeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(contentType_);
+    }
+    /**
+     * <pre>
+     * Content type of mesh (e.g. ply)
+     * </pre>
+     *
+     * <code>string content_type = 1 [json_name = "contentType"];</code>
+     * @param value The contentType to set.
+     */
+    private void setContentType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      contentType_ = value;
+    }
+    /**
+     * <pre>
+     * Content type of mesh (e.g. ply)
+     * </pre>
+     *
+     * <code>string content_type = 1 [json_name = "contentType"];</code>
+     */
+    private void clearContentType() {
+
+      contentType_ = getDefaultInstance().getContentType();
+    }
+    /**
+     * <pre>
+     * Content type of mesh (e.g. ply)
+     * </pre>
+     *
+     * <code>string content_type = 1 [json_name = "contentType"];</code>
+     * @param value The bytes for contentType to set.
+     */
+    private void setContentTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      contentType_ = value.toStringUtf8();
+
+    }
+
+    public static final int MESH_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString mesh_;
+    /**
+     * <pre>
+     * Contents of mesh data in binary form defined by content_type
+     * </pre>
+     *
+     * <code>bytes mesh = 2 [json_name = "mesh"];</code>
+     * @return The mesh.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMesh() {
+      return mesh_;
+    }
+    /**
+     * <pre>
+     * Contents of mesh data in binary form defined by content_type
+     * </pre>
+     *
+     * <code>bytes mesh = 2 [json_name = "mesh"];</code>
+     * @param value The mesh to set.
+     */
+    private void setMesh(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mesh_ = value;
+    }
+    /**
+     * <pre>
+     * Contents of mesh data in binary form defined by content_type
+     * </pre>
+     *
+     * <code>bytes mesh = 2 [json_name = "mesh"];</code>
+     */
+    private void clearMesh() {
+
+      mesh_ = getDefaultInstance().getMesh();
+    }
+
+    public static com.viam.common.v1.Common.Mesh parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.Mesh parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.Mesh parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.Mesh parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.Mesh parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.Mesh parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.Mesh parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.Mesh parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.Mesh parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.Mesh parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.Mesh parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.Mesh parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.Mesh prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.common.v1.Mesh}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.Mesh, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.Mesh)
+        com.viam.common.v1.Common.MeshOrBuilder {
+      // Construct using com.viam.common.v1.Common.Mesh.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * Content type of mesh (e.g. ply)
+       * </pre>
+       *
+       * <code>string content_type = 1 [json_name = "contentType"];</code>
+       * @return The contentType.
+       */
+      @java.lang.Override
+      public java.lang.String getContentType() {
+        return instance.getContentType();
+      }
+      /**
+       * <pre>
+       * Content type of mesh (e.g. ply)
+       * </pre>
+       *
+       * <code>string content_type = 1 [json_name = "contentType"];</code>
+       * @return The bytes for contentType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getContentTypeBytes() {
+        return instance.getContentTypeBytes();
+      }
+      /**
+       * <pre>
+       * Content type of mesh (e.g. ply)
+       * </pre>
+       *
+       * <code>string content_type = 1 [json_name = "contentType"];</code>
+       * @param value The contentType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentType(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setContentType(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Content type of mesh (e.g. ply)
+       * </pre>
+       *
+       * <code>string content_type = 1 [json_name = "contentType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContentType() {
+        copyOnWrite();
+        instance.clearContentType();
+        return this;
+      }
+      /**
+       * <pre>
+       * Content type of mesh (e.g. ply)
+       * </pre>
+       *
+       * <code>string content_type = 1 [json_name = "contentType"];</code>
+       * @param value The bytes for contentType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContentTypeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setContentTypeBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Contents of mesh data in binary form defined by content_type
+       * </pre>
+       *
+       * <code>bytes mesh = 2 [json_name = "mesh"];</code>
+       * @return The mesh.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMesh() {
+        return instance.getMesh();
+      }
+      /**
+       * <pre>
+       * Contents of mesh data in binary form defined by content_type
+       * </pre>
+       *
+       * <code>bytes mesh = 2 [json_name = "mesh"];</code>
+       * @param value The mesh to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMesh(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMesh(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Contents of mesh data in binary form defined by content_type
+       * </pre>
+       *
+       * <code>bytes mesh = 2 [json_name = "mesh"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMesh() {
+        copyOnWrite();
+        instance.clearMesh();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.Mesh)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.Mesh();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "contentType_",
+              "mesh_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\n" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.Mesh> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.Mesh.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.Mesh>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.Mesh)
+    private static final com.viam.common.v1.Common.Mesh DEFAULT_INSTANCE;
+    static {
+      Mesh defaultInstance = new Mesh();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Mesh.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.Mesh getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<Mesh> PARSER;
+
+    public static com.google.protobuf.Parser<Mesh> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface GeometryOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.common.v1.Geometry)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -4115,6 +4549,17 @@ public final class Common {
     com.viam.common.v1.Common.Capsule getCapsule();
 
     /**
+     * <code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code>
+     * @return Whether the mesh field is set.
+     */
+    boolean hasMesh();
+    /**
+     * <code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code>
+     * @return The mesh.
+     */
+    com.viam.common.v1.Common.Mesh getMesh();
+
+    /**
      * <pre>
      * Label of the geometry. If none supplied, will be an empty string.
      * </pre>
@@ -4158,6 +4603,7 @@ public final class Common {
       SPHERE(2),
       BOX(3),
       CAPSULE(5),
+      MESH(6),
       GEOMETRYTYPE_NOT_SET(0);
       private final int value;
       private GeometryTypeCase(int value) {
@@ -4176,6 +4622,7 @@ public final class Common {
           case 2: return SPHERE;
           case 3: return BOX;
           case 5: return CAPSULE;
+          case 6: return MESH;
           case 0: return GEOMETRYTYPE_NOT_SET;
           default: return null;
         }
@@ -4408,6 +4855,56 @@ public final class Common {
      */
     private void clearCapsule() {
       if (geometryTypeCase_ == 5) {
+        geometryTypeCase_ = 0;
+        geometryType_ = null;
+      }
+    }
+
+    public static final int MESH_FIELD_NUMBER = 6;
+    /**
+     * <code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code>
+     */
+    @java.lang.Override
+    public boolean hasMesh() {
+      return geometryTypeCase_ == 6;
+    }
+    /**
+     * <code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Mesh getMesh() {
+      if (geometryTypeCase_ == 6) {
+         return (com.viam.common.v1.Common.Mesh) geometryType_;
+      }
+      return com.viam.common.v1.Common.Mesh.getDefaultInstance();
+    }
+    /**
+     * <code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code>
+     */
+    private void setMesh(com.viam.common.v1.Common.Mesh value) {
+      value.getClass();
+  geometryType_ = value;
+      geometryTypeCase_ = 6;
+    }
+    /**
+     * <code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code>
+     */
+    private void mergeMesh(com.viam.common.v1.Common.Mesh value) {
+      value.getClass();
+  if (geometryTypeCase_ == 6 &&
+          geometryType_ != com.viam.common.v1.Common.Mesh.getDefaultInstance()) {
+        geometryType_ = com.viam.common.v1.Common.Mesh.newBuilder((com.viam.common.v1.Common.Mesh) geometryType_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        geometryType_ = value;
+      }
+      geometryTypeCase_ = 6;
+    }
+    /**
+     * <code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code>
+     */
+    private void clearMesh() {
+      if (geometryTypeCase_ == 6) {
         geometryTypeCase_ = 0;
         geometryType_ = null;
       }
@@ -4809,6 +5306,54 @@ public final class Common {
       }
 
       /**
+       * <code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code>
+       */
+      @java.lang.Override
+      public boolean hasMesh() {
+        return instance.hasMesh();
+      }
+      /**
+       * <code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Mesh getMesh() {
+        return instance.getMesh();
+      }
+      /**
+       * <code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code>
+       */
+      public Builder setMesh(com.viam.common.v1.Common.Mesh value) {
+        copyOnWrite();
+        instance.setMesh(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code>
+       */
+      public Builder setMesh(
+          com.viam.common.v1.Common.Mesh.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMesh(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code>
+       */
+      public Builder mergeMesh(com.viam.common.v1.Common.Mesh value) {
+        copyOnWrite();
+        instance.mergeMesh(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code>
+       */
+      public Builder clearMesh() {
+        copyOnWrite();
+        instance.clearMesh();
+        return this;
+      }
+
+      /**
        * <pre>
        * Label of the geometry. If none supplied, will be an empty string.
        * </pre>
@@ -4901,10 +5446,11 @@ public final class Common {
               com.viam.common.v1.Common.RectangularPrism.class,
               "label_",
               com.viam.common.v1.Common.Capsule.class,
+              com.viam.common.v1.Common.Mesh.class,
             };
             java.lang.String info =
-                "\u0000\u0005\u0001\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "<\u0000\u0003<\u0000\u0004\u0208\u0005<\u0000";
+                "\u0000\u0006\u0001\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "<\u0000\u0003<\u0000\u0004\u0208\u0005<\u0000\u0006<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

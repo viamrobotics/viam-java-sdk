@@ -2634,6 +2634,58 @@ public final class Vision {
      */
     com.google.protobuf.ByteString
         getClassNameBytes();
+
+    /**
+     * <pre>
+     * the four corners of the box, in proportion to the respective image dimension
+     * </pre>
+     *
+     * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
+     * @return Whether the xMinNormalized field is set.
+     */
+    boolean hasXMinNormalized();
+    /**
+     * <pre>
+     * the four corners of the box, in proportion to the respective image dimension
+     * </pre>
+     *
+     * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
+     * @return The xMinNormalized.
+     */
+    double getXMinNormalized();
+
+    /**
+     * <code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code>
+     * @return Whether the yMinNormalized field is set.
+     */
+    boolean hasYMinNormalized();
+    /**
+     * <code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code>
+     * @return The yMinNormalized.
+     */
+    double getYMinNormalized();
+
+    /**
+     * <code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code>
+     * @return Whether the xMaxNormalized field is set.
+     */
+    boolean hasXMaxNormalized();
+    /**
+     * <code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code>
+     * @return The xMaxNormalized.
+     */
+    double getXMaxNormalized();
+
+    /**
+     * <code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code>
+     * @return Whether the yMaxNormalized field is set.
+     */
+    boolean hasYMaxNormalized();
+    /**
+     * <code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code>
+     * @return The yMaxNormalized.
+     */
+    double getYMaxNormalized();
   }
   /**
    * Protobuf type {@code viam.service.vision.v1.Detection}
@@ -2902,6 +2954,158 @@ public final class Vision {
       checkByteStringIsUtf8(value);
       className_ = value.toStringUtf8();
 
+    }
+
+    public static final int X_MIN_NORMALIZED_FIELD_NUMBER = 7;
+    private double xMinNormalized_;
+    /**
+     * <pre>
+     * the four corners of the box, in proportion to the respective image dimension
+     * </pre>
+     *
+     * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
+     * @return Whether the xMinNormalized field is set.
+     */
+    @java.lang.Override
+    public boolean hasXMinNormalized() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * the four corners of the box, in proportion to the respective image dimension
+     * </pre>
+     *
+     * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
+     * @return The xMinNormalized.
+     */
+    @java.lang.Override
+    public double getXMinNormalized() {
+      return xMinNormalized_;
+    }
+    /**
+     * <pre>
+     * the four corners of the box, in proportion to the respective image dimension
+     * </pre>
+     *
+     * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
+     * @param value The xMinNormalized to set.
+     */
+    private void setXMinNormalized(double value) {
+      bitField0_ |= 0x00000010;
+      xMinNormalized_ = value;
+    }
+    /**
+     * <pre>
+     * the four corners of the box, in proportion to the respective image dimension
+     * </pre>
+     *
+     * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
+     */
+    private void clearXMinNormalized() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      xMinNormalized_ = 0D;
+    }
+
+    public static final int Y_MIN_NORMALIZED_FIELD_NUMBER = 8;
+    private double yMinNormalized_;
+    /**
+     * <code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code>
+     * @return Whether the yMinNormalized field is set.
+     */
+    @java.lang.Override
+    public boolean hasYMinNormalized() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code>
+     * @return The yMinNormalized.
+     */
+    @java.lang.Override
+    public double getYMinNormalized() {
+      return yMinNormalized_;
+    }
+    /**
+     * <code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code>
+     * @param value The yMinNormalized to set.
+     */
+    private void setYMinNormalized(double value) {
+      bitField0_ |= 0x00000020;
+      yMinNormalized_ = value;
+    }
+    /**
+     * <code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code>
+     */
+    private void clearYMinNormalized() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      yMinNormalized_ = 0D;
+    }
+
+    public static final int X_MAX_NORMALIZED_FIELD_NUMBER = 9;
+    private double xMaxNormalized_;
+    /**
+     * <code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code>
+     * @return Whether the xMaxNormalized field is set.
+     */
+    @java.lang.Override
+    public boolean hasXMaxNormalized() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code>
+     * @return The xMaxNormalized.
+     */
+    @java.lang.Override
+    public double getXMaxNormalized() {
+      return xMaxNormalized_;
+    }
+    /**
+     * <code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code>
+     * @param value The xMaxNormalized to set.
+     */
+    private void setXMaxNormalized(double value) {
+      bitField0_ |= 0x00000040;
+      xMaxNormalized_ = value;
+    }
+    /**
+     * <code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code>
+     */
+    private void clearXMaxNormalized() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      xMaxNormalized_ = 0D;
+    }
+
+    public static final int Y_MAX_NORMALIZED_FIELD_NUMBER = 10;
+    private double yMaxNormalized_;
+    /**
+     * <code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code>
+     * @return Whether the yMaxNormalized field is set.
+     */
+    @java.lang.Override
+    public boolean hasYMaxNormalized() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code>
+     * @return The yMaxNormalized.
+     */
+    @java.lang.Override
+    public double getYMaxNormalized() {
+      return yMaxNormalized_;
+    }
+    /**
+     * <code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code>
+     * @param value The yMaxNormalized to set.
+     */
+    private void setYMaxNormalized(double value) {
+      bitField0_ |= 0x00000080;
+      yMaxNormalized_ = value;
+    }
+    /**
+     * <code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code>
+     */
+    private void clearYMaxNormalized() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      yMaxNormalized_ = 0D;
     }
 
     public static com.viam.service.vision.v1.Vision.Detection parseFrom(
@@ -3270,6 +3474,166 @@ public final class Vision {
         return this;
       }
 
+      /**
+       * <pre>
+       * the four corners of the box, in proportion to the respective image dimension
+       * </pre>
+       *
+       * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
+       * @return Whether the xMinNormalized field is set.
+       */
+      @java.lang.Override
+      public boolean hasXMinNormalized() {
+        return instance.hasXMinNormalized();
+      }
+      /**
+       * <pre>
+       * the four corners of the box, in proportion to the respective image dimension
+       * </pre>
+       *
+       * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
+       * @return The xMinNormalized.
+       */
+      @java.lang.Override
+      public double getXMinNormalized() {
+        return instance.getXMinNormalized();
+      }
+      /**
+       * <pre>
+       * the four corners of the box, in proportion to the respective image dimension
+       * </pre>
+       *
+       * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
+       * @param value The xMinNormalized to set.
+       * @return This builder for chaining.
+       */
+      public Builder setXMinNormalized(double value) {
+        copyOnWrite();
+        instance.setXMinNormalized(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * the four corners of the box, in proportion to the respective image dimension
+       * </pre>
+       *
+       * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearXMinNormalized() {
+        copyOnWrite();
+        instance.clearXMinNormalized();
+        return this;
+      }
+
+      /**
+       * <code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code>
+       * @return Whether the yMinNormalized field is set.
+       */
+      @java.lang.Override
+      public boolean hasYMinNormalized() {
+        return instance.hasYMinNormalized();
+      }
+      /**
+       * <code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code>
+       * @return The yMinNormalized.
+       */
+      @java.lang.Override
+      public double getYMinNormalized() {
+        return instance.getYMinNormalized();
+      }
+      /**
+       * <code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code>
+       * @param value The yMinNormalized to set.
+       * @return This builder for chaining.
+       */
+      public Builder setYMinNormalized(double value) {
+        copyOnWrite();
+        instance.setYMinNormalized(value);
+        return this;
+      }
+      /**
+       * <code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearYMinNormalized() {
+        copyOnWrite();
+        instance.clearYMinNormalized();
+        return this;
+      }
+
+      /**
+       * <code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code>
+       * @return Whether the xMaxNormalized field is set.
+       */
+      @java.lang.Override
+      public boolean hasXMaxNormalized() {
+        return instance.hasXMaxNormalized();
+      }
+      /**
+       * <code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code>
+       * @return The xMaxNormalized.
+       */
+      @java.lang.Override
+      public double getXMaxNormalized() {
+        return instance.getXMaxNormalized();
+      }
+      /**
+       * <code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code>
+       * @param value The xMaxNormalized to set.
+       * @return This builder for chaining.
+       */
+      public Builder setXMaxNormalized(double value) {
+        copyOnWrite();
+        instance.setXMaxNormalized(value);
+        return this;
+      }
+      /**
+       * <code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearXMaxNormalized() {
+        copyOnWrite();
+        instance.clearXMaxNormalized();
+        return this;
+      }
+
+      /**
+       * <code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code>
+       * @return Whether the yMaxNormalized field is set.
+       */
+      @java.lang.Override
+      public boolean hasYMaxNormalized() {
+        return instance.hasYMaxNormalized();
+      }
+      /**
+       * <code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code>
+       * @return The yMaxNormalized.
+       */
+      @java.lang.Override
+      public double getYMaxNormalized() {
+        return instance.getYMaxNormalized();
+      }
+      /**
+       * <code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code>
+       * @param value The yMaxNormalized to set.
+       * @return This builder for chaining.
+       */
+      public Builder setYMaxNormalized(double value) {
+        copyOnWrite();
+        instance.setYMaxNormalized(value);
+        return this;
+      }
+      /**
+       * <code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearYMaxNormalized() {
+        copyOnWrite();
+        instance.clearYMaxNormalized();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.Detection)
     }
     @java.lang.Override
@@ -3293,10 +3657,15 @@ public final class Vision {
               "yMax_",
               "confidence_",
               "className_",
+              "xMinNormalized_",
+              "yMinNormalized_",
+              "xMaxNormalized_",
+              "yMaxNormalized_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u1002\u0000\u0002" +
-                "\u1002\u0001\u0003\u1002\u0002\u0004\u1002\u0003\u0005\u0000\u0006\u0208";
+                "\u0000\n\u0000\u0001\u0001\n\n\u0000\u0000\u0000\u0001\u1002\u0000\u0002\u1002\u0001" +
+                "\u0003\u1002\u0002\u0004\u1002\u0003\u0005\u0000\u0006\u0208\u0007\u1000\u0004\b" +
+                "\u1000\u0005\t\u1000\u0006\n\u1000\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
