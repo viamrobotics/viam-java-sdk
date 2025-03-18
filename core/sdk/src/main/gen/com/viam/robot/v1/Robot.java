@@ -664,6 +664,938 @@ public final class Robot {
     }
   }
 
+  public interface ListTunnelsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.ListTunnelsRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.ListTunnelsRequest}
+   */
+  public  static final class ListTunnelsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListTunnelsRequest, ListTunnelsRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.ListTunnelsRequest)
+      ListTunnelsRequestOrBuilder {
+    private ListTunnelsRequest() {
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.ListTunnelsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.ListTunnelsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.ListTunnelsRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.ListTunnelsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.ListTunnelsRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.ListTunnelsRequest)
+        com.viam.robot.v1.Robot.ListTunnelsRequestOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.ListTunnelsRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.ListTunnelsRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.ListTunnelsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.ListTunnelsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.ListTunnelsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.ListTunnelsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.ListTunnelsRequest)
+    private static final com.viam.robot.v1.Robot.ListTunnelsRequest DEFAULT_INSTANCE;
+    static {
+      ListTunnelsRequest defaultInstance = new ListTunnelsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListTunnelsRequest.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.ListTunnelsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListTunnelsRequest> PARSER;
+
+    public static com.google.protobuf.Parser<ListTunnelsRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListTunnelsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.ListTunnelsResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    java.util.List<com.viam.robot.v1.Robot.Tunnel> 
+        getTunnelsList();
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    com.viam.robot.v1.Robot.Tunnel getTunnels(int index);
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    int getTunnelsCount();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.ListTunnelsResponse}
+   */
+  public  static final class ListTunnelsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListTunnelsResponse, ListTunnelsResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.ListTunnelsResponse)
+      ListTunnelsResponseOrBuilder {
+    private ListTunnelsResponse() {
+      tunnels_ = emptyProtobufList();
+    }
+    public static final int TUNNELS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.robot.v1.Robot.Tunnel> tunnels_;
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.robot.v1.Robot.Tunnel> getTunnelsList() {
+      return tunnels_;
+    }
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    public java.util.List<? extends com.viam.robot.v1.Robot.TunnelOrBuilder> 
+        getTunnelsOrBuilderList() {
+      return tunnels_;
+    }
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    @java.lang.Override
+    public int getTunnelsCount() {
+      return tunnels_.size();
+    }
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.Tunnel getTunnels(int index) {
+      return tunnels_.get(index);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    public com.viam.robot.v1.Robot.TunnelOrBuilder getTunnelsOrBuilder(
+        int index) {
+      return tunnels_.get(index);
+    }
+    private void ensureTunnelsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.robot.v1.Robot.Tunnel> tmp = tunnels_;
+      if (!tmp.isModifiable()) {
+        tunnels_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    private void setTunnels(
+        int index, com.viam.robot.v1.Robot.Tunnel value) {
+      value.getClass();
+  ensureTunnelsIsMutable();
+      tunnels_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    private void addTunnels(com.viam.robot.v1.Robot.Tunnel value) {
+      value.getClass();
+  ensureTunnelsIsMutable();
+      tunnels_.add(value);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    private void addTunnels(
+        int index, com.viam.robot.v1.Robot.Tunnel value) {
+      value.getClass();
+  ensureTunnelsIsMutable();
+      tunnels_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    private void addAllTunnels(
+        java.lang.Iterable<? extends com.viam.robot.v1.Robot.Tunnel> values) {
+      ensureTunnelsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, tunnels_);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    private void clearTunnels() {
+      tunnels_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+     */
+    private void removeTunnels(int index) {
+      ensureTunnelsIsMutable();
+      tunnels_.remove(index);
+    }
+
+    public static com.viam.robot.v1.Robot.ListTunnelsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.ListTunnelsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.ListTunnelsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.ListTunnelsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.ListTunnelsResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.ListTunnelsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.ListTunnelsResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.ListTunnelsResponse)
+        com.viam.robot.v1.Robot.ListTunnelsResponseOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.ListTunnelsResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.robot.v1.Robot.Tunnel> getTunnelsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getTunnelsList());
+      }
+      /**
+       * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+       */
+      @java.lang.Override
+      public int getTunnelsCount() {
+        return instance.getTunnelsCount();
+      }/**
+       * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+       */
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.Tunnel getTunnels(int index) {
+        return instance.getTunnels(index);
+      }
+      /**
+       * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+       */
+      public Builder setTunnels(
+          int index, com.viam.robot.v1.Robot.Tunnel value) {
+        copyOnWrite();
+        instance.setTunnels(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+       */
+      public Builder setTunnels(
+          int index, com.viam.robot.v1.Robot.Tunnel.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTunnels(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+       */
+      public Builder addTunnels(com.viam.robot.v1.Robot.Tunnel value) {
+        copyOnWrite();
+        instance.addTunnels(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+       */
+      public Builder addTunnels(
+          int index, com.viam.robot.v1.Robot.Tunnel value) {
+        copyOnWrite();
+        instance.addTunnels(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+       */
+      public Builder addTunnels(
+          com.viam.robot.v1.Robot.Tunnel.Builder builderForValue) {
+        copyOnWrite();
+        instance.addTunnels(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+       */
+      public Builder addTunnels(
+          int index, com.viam.robot.v1.Robot.Tunnel.Builder builderForValue) {
+        copyOnWrite();
+        instance.addTunnels(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+       */
+      public Builder addAllTunnels(
+          java.lang.Iterable<? extends com.viam.robot.v1.Robot.Tunnel> values) {
+        copyOnWrite();
+        instance.addAllTunnels(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+       */
+      public Builder clearTunnels() {
+        copyOnWrite();
+        instance.clearTunnels();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.Tunnel tunnels = 1 [json_name = "tunnels"];</code>
+       */
+      public Builder removeTunnels(int index) {
+        copyOnWrite();
+        instance.removeTunnels(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.ListTunnelsResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.ListTunnelsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "tunnels_",
+              com.viam.robot.v1.Robot.Tunnel.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.ListTunnelsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.ListTunnelsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.ListTunnelsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.ListTunnelsResponse)
+    private static final com.viam.robot.v1.Robot.ListTunnelsResponse DEFAULT_INSTANCE;
+    static {
+      ListTunnelsResponse defaultInstance = new ListTunnelsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListTunnelsResponse.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.ListTunnelsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListTunnelsResponse> PARSER;
+
+    public static com.google.protobuf.Parser<ListTunnelsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface TunnelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.Tunnel)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>uint32 port = 1 [json_name = "port"];</code>
+     * @return The port.
+     */
+    int getPort();
+
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     * @return Whether the connectionTimeout field is set.
+     */
+    boolean hasConnectionTimeout();
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     * @return The connectionTimeout.
+     */
+    com.google.protobuf.Duration getConnectionTimeout();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.Tunnel}
+   */
+  public  static final class Tunnel extends
+      com.google.protobuf.GeneratedMessageLite<
+          Tunnel, Tunnel.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.Tunnel)
+      TunnelOrBuilder {
+    private Tunnel() {
+    }
+    private int bitField0_;
+    public static final int PORT_FIELD_NUMBER = 1;
+    private int port_;
+    /**
+     * <code>uint32 port = 1 [json_name = "port"];</code>
+     * @return The port.
+     */
+    @java.lang.Override
+    public int getPort() {
+      return port_;
+    }
+    /**
+     * <code>uint32 port = 1 [json_name = "port"];</code>
+     * @param value The port to set.
+     */
+    private void setPort(int value) {
+      
+      port_ = value;
+    }
+    /**
+     * <code>uint32 port = 1 [json_name = "port"];</code>
+     */
+    private void clearPort() {
+
+      port_ = 0;
+    }
+
+    public static final int CONNECTION_TIMEOUT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration connectionTimeout_;
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     */
+    @java.lang.Override
+    public boolean hasConnectionTimeout() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getConnectionTimeout() {
+      return connectionTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : connectionTimeout_;
+    }
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     */
+    private void setConnectionTimeout(com.google.protobuf.Duration value) {
+      value.getClass();
+  connectionTimeout_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeConnectionTimeout(com.google.protobuf.Duration value) {
+      value.getClass();
+  if (connectionTimeout_ != null &&
+          connectionTimeout_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        connectionTimeout_ =
+          com.google.protobuf.Duration.newBuilder(connectionTimeout_).mergeFrom(value).buildPartial();
+      } else {
+        connectionTimeout_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+     */
+    private void clearConnectionTimeout() {  connectionTimeout_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.robot.v1.Robot.Tunnel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.Tunnel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.Tunnel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.Tunnel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.Tunnel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.Tunnel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.Tunnel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.Tunnel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.Tunnel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.Tunnel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.Tunnel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.Tunnel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.Tunnel prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.Tunnel}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.Tunnel, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.Tunnel)
+        com.viam.robot.v1.Robot.TunnelOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.Tunnel.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>uint32 port = 1 [json_name = "port"];</code>
+       * @return The port.
+       */
+      @java.lang.Override
+      public int getPort() {
+        return instance.getPort();
+      }
+      /**
+       * <code>uint32 port = 1 [json_name = "port"];</code>
+       * @param value The port to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPort(int value) {
+        copyOnWrite();
+        instance.setPort(value);
+        return this;
+      }
+      /**
+       * <code>uint32 port = 1 [json_name = "port"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPort() {
+        copyOnWrite();
+        instance.clearPort();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+       */
+      @java.lang.Override
+      public boolean hasConnectionTimeout() {
+        return instance.hasConnectionTimeout();
+      }
+      /**
+       * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getConnectionTimeout() {
+        return instance.getConnectionTimeout();
+      }
+      /**
+       * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+       */
+      public Builder setConnectionTimeout(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.setConnectionTimeout(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+       */
+      public Builder setConnectionTimeout(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setConnectionTimeout(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+       */
+      public Builder mergeConnectionTimeout(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.mergeConnectionTimeout(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration connection_timeout = 2 [json_name = "connectionTimeout"];</code>
+       */
+      public Builder clearConnectionTimeout() {  copyOnWrite();
+        instance.clearConnectionTimeout();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.Tunnel)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.Tunnel();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "port_",
+              "connectionTimeout_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u000b\u0002\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.Tunnel> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.Tunnel.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.Tunnel>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.Tunnel)
+    private static final com.viam.robot.v1.Robot.Tunnel DEFAULT_INSTANCE;
+    static {
+      Tunnel defaultInstance = new Tunnel();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Tunnel.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.Tunnel getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<Tunnel> PARSER;
+
+    public static com.google.protobuf.Parser<Tunnel> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface FrameSystemConfigOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.robot.v1.FrameSystemConfig)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -17525,7 +18457,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=351
+     *     See robot/v1/robot.proto;l=367
      * @return The robotPartId.
      */
     @java.lang.Deprecated java.lang.String getRobotPartId();
@@ -17536,7 +18468,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=351
+     *     See robot/v1/robot.proto;l=367
      * @return The bytes for robotPartId.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -17614,7 +18546,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=351
+     *     See robot/v1/robot.proto;l=367
      * @return The robotPartId.
      */
     @java.lang.Override
@@ -17628,7 +18560,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=351
+     *     See robot/v1/robot.proto;l=367
      * @return The bytes for robotPartId.
      */
     @java.lang.Override
@@ -17643,7 +18575,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=351
+     *     See robot/v1/robot.proto;l=367
      * @param value The robotPartId to set.
      */
     private void setRobotPartId(
@@ -17659,7 +18591,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=351
+     *     See robot/v1/robot.proto;l=367
      */
     private void clearRobotPartId() {
 
@@ -17672,7 +18604,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=351
+     *     See robot/v1/robot.proto;l=367
      * @param value The bytes for robotPartId to set.
      */
     private void setRobotPartIdBytes(
@@ -17974,7 +18906,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=351
+       *     See robot/v1/robot.proto;l=367
        * @return The robotPartId.
        */
       @java.lang.Override
@@ -17988,7 +18920,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=351
+       *     See robot/v1/robot.proto;l=367
        * @return The bytes for robotPartId.
        */
       @java.lang.Override
@@ -18003,7 +18935,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=351
+       *     See robot/v1/robot.proto;l=367
        * @param value The robotPartId to set.
        * @return This builder for chaining.
        */
@@ -18020,7 +18952,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=351
+       *     See robot/v1/robot.proto;l=367
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearRobotPartId() {
@@ -18035,7 +18967,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=351
+       *     See robot/v1/robot.proto;l=367
        * @param value The bytes for robotPartId to set.
        * @return This builder for chaining.
        */

@@ -708,6 +708,36 @@ public final class RobotServiceGrpc {
     return getTunnelMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.ListTunnelsRequest,
+      com.viam.robot.v1.Robot.ListTunnelsResponse> getListTunnelsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListTunnels",
+      requestType = com.viam.robot.v1.Robot.ListTunnelsRequest.class,
+      responseType = com.viam.robot.v1.Robot.ListTunnelsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.ListTunnelsRequest,
+      com.viam.robot.v1.Robot.ListTunnelsResponse> getListTunnelsMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.ListTunnelsRequest, com.viam.robot.v1.Robot.ListTunnelsResponse> getListTunnelsMethod;
+    if ((getListTunnelsMethod = RobotServiceGrpc.getListTunnelsMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getListTunnelsMethod = RobotServiceGrpc.getListTunnelsMethod) == null) {
+          RobotServiceGrpc.getListTunnelsMethod = getListTunnelsMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.ListTunnelsRequest, com.viam.robot.v1.Robot.ListTunnelsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTunnels"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.ListTunnelsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.ListTunnelsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getListTunnelsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -970,6 +1000,16 @@ public final class RobotServiceGrpc {
     default io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TunnelRequest> tunnel(
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TunnelResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getTunnelMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListTunnels lists all available tunnels configured on the robot.
+     * </pre>
+     */
+    default void listTunnels(com.viam.robot.v1.Robot.ListTunnelsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.ListTunnelsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTunnelsMethod(), responseObserver);
     }
   }
 
@@ -1241,6 +1281,17 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getTunnelMethod(), getCallOptions()), responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListTunnels lists all available tunnels configured on the robot.
+     * </pre>
+     */
+    public void listTunnels(com.viam.robot.v1.Robot.ListTunnelsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.ListTunnelsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListTunnelsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1464,6 +1515,16 @@ public final class RobotServiceGrpc {
     public com.viam.robot.v1.Robot.GetVersionResponse getVersion(com.viam.robot.v1.Robot.GetVersionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetVersionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListTunnels lists all available tunnels configured on the robot.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.ListTunnelsResponse listTunnels(com.viam.robot.v1.Robot.ListTunnelsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListTunnelsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1698,6 +1759,17 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetVersionMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ListTunnels lists all available tunnels configured on the robot.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.ListTunnelsResponse> listTunnels(
+        com.viam.robot.v1.Robot.ListTunnelsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListTunnelsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_OPERATIONS = 0;
@@ -1722,7 +1794,8 @@ public final class RobotServiceGrpc {
   private static final int METHODID_SHUTDOWN = 19;
   private static final int METHODID_GET_MACHINE_STATUS = 20;
   private static final int METHODID_GET_VERSION = 21;
-  private static final int METHODID_TUNNEL = 22;
+  private static final int METHODID_LIST_TUNNELS = 22;
+  private static final int METHODID_TUNNEL = 23;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1828,6 +1901,10 @@ public final class RobotServiceGrpc {
         case METHODID_GET_VERSION:
           serviceImpl.getVersion((com.viam.robot.v1.Robot.GetVersionRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetVersionResponse>) responseObserver);
+          break;
+        case METHODID_LIST_TUNNELS:
+          serviceImpl.listTunnels((com.viam.robot.v1.Robot.ListTunnelsRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.ListTunnelsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2011,6 +2088,13 @@ public final class RobotServiceGrpc {
               com.viam.robot.v1.Robot.TunnelRequest,
               com.viam.robot.v1.Robot.TunnelResponse>(
                 service, METHODID_TUNNEL)))
+        .addMethod(
+          getListTunnelsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.ListTunnelsRequest,
+              com.viam.robot.v1.Robot.ListTunnelsResponse>(
+                service, METHODID_LIST_TUNNELS)))
         .build();
   }
 
@@ -2046,6 +2130,7 @@ public final class RobotServiceGrpc {
               .addMethod(getGetMachineStatusMethod())
               .addMethod(getGetVersionMethod())
               .addMethod(getTunnelMethod())
+              .addMethod(getListTunnelsMethod())
               .build();
         }
       }
