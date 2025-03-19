@@ -10,9 +10,6 @@ import com.viam.common.v1.Common.ResourceName;
 import com.viam.common.v1.Common.Transform;
 import com.viam.robot.v1.Robot.BlockForOperationRequest;
 import com.viam.robot.v1.Robot.CancelOperationRequest;
-import com.viam.robot.v1.Robot.DiscoverComponentsRequest;
-import com.viam.robot.v1.Robot.Discovery;
-import com.viam.robot.v1.Robot.DiscoveryQuery;
 import com.viam.robot.v1.Robot.FrameSystemConfig;
 import com.viam.robot.v1.Robot.FrameSystemConfigRequest;
 import com.viam.robot.v1.Robot.GetOperationsRequest;
@@ -263,12 +260,6 @@ public class RobotClient implements Closeable {
 
   public void transformPointCloud() {
     throw new UnsupportedOperationException();
-  }
-
-  public List<Discovery> discoverComponents(final List<DiscoveryQuery> queries) {
-    return robotClient.discoverComponents(
-            DiscoverComponentsRequest.newBuilder().addAllQueries(queries).build())
-        .getDiscoveryList();
   }
 
   public void stopAll() {
