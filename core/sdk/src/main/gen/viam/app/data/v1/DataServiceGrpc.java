@@ -708,6 +708,156 @@ public final class DataServiceGrpc {
     return getRemoveBinaryDataFromDatasetByIDsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetDataPipelineRequest,
+      viam.app.data.v1.Data.GetDataPipelineResponse> getGetDataPipelineMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDataPipeline",
+      requestType = viam.app.data.v1.Data.GetDataPipelineRequest.class,
+      responseType = viam.app.data.v1.Data.GetDataPipelineResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetDataPipelineRequest,
+      viam.app.data.v1.Data.GetDataPipelineResponse> getGetDataPipelineMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetDataPipelineRequest, viam.app.data.v1.Data.GetDataPipelineResponse> getGetDataPipelineMethod;
+    if ((getGetDataPipelineMethod = DataServiceGrpc.getGetDataPipelineMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getGetDataPipelineMethod = DataServiceGrpc.getGetDataPipelineMethod) == null) {
+          DataServiceGrpc.getGetDataPipelineMethod = getGetDataPipelineMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.GetDataPipelineRequest, viam.app.data.v1.Data.GetDataPipelineResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDataPipeline"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.GetDataPipelineRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.GetDataPipelineResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetDataPipelineMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.ListDataPipelinesRequest,
+      viam.app.data.v1.Data.ListDataPipelinesResponse> getListDataPipelinesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListDataPipelines",
+      requestType = viam.app.data.v1.Data.ListDataPipelinesRequest.class,
+      responseType = viam.app.data.v1.Data.ListDataPipelinesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.ListDataPipelinesRequest,
+      viam.app.data.v1.Data.ListDataPipelinesResponse> getListDataPipelinesMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.ListDataPipelinesRequest, viam.app.data.v1.Data.ListDataPipelinesResponse> getListDataPipelinesMethod;
+    if ((getListDataPipelinesMethod = DataServiceGrpc.getListDataPipelinesMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getListDataPipelinesMethod = DataServiceGrpc.getListDataPipelinesMethod) == null) {
+          DataServiceGrpc.getListDataPipelinesMethod = getListDataPipelinesMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.ListDataPipelinesRequest, viam.app.data.v1.Data.ListDataPipelinesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDataPipelines"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.ListDataPipelinesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.ListDataPipelinesResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getListDataPipelinesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateDataPipelineRequest,
+      viam.app.data.v1.Data.CreateDataPipelineResponse> getCreateDataPipelineMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateDataPipeline",
+      requestType = viam.app.data.v1.Data.CreateDataPipelineRequest.class,
+      responseType = viam.app.data.v1.Data.CreateDataPipelineResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateDataPipelineRequest,
+      viam.app.data.v1.Data.CreateDataPipelineResponse> getCreateDataPipelineMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateDataPipelineRequest, viam.app.data.v1.Data.CreateDataPipelineResponse> getCreateDataPipelineMethod;
+    if ((getCreateDataPipelineMethod = DataServiceGrpc.getCreateDataPipelineMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getCreateDataPipelineMethod = DataServiceGrpc.getCreateDataPipelineMethod) == null) {
+          DataServiceGrpc.getCreateDataPipelineMethod = getCreateDataPipelineMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.CreateDataPipelineRequest, viam.app.data.v1.Data.CreateDataPipelineResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateDataPipeline"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.CreateDataPipelineRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.CreateDataPipelineResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getCreateDataPipelineMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.UpdateDataPipelineRequest,
+      viam.app.data.v1.Data.UpdateDataPipelineResponse> getUpdateDataPipelineMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateDataPipeline",
+      requestType = viam.app.data.v1.Data.UpdateDataPipelineRequest.class,
+      responseType = viam.app.data.v1.Data.UpdateDataPipelineResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.UpdateDataPipelineRequest,
+      viam.app.data.v1.Data.UpdateDataPipelineResponse> getUpdateDataPipelineMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.UpdateDataPipelineRequest, viam.app.data.v1.Data.UpdateDataPipelineResponse> getUpdateDataPipelineMethod;
+    if ((getUpdateDataPipelineMethod = DataServiceGrpc.getUpdateDataPipelineMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getUpdateDataPipelineMethod = DataServiceGrpc.getUpdateDataPipelineMethod) == null) {
+          DataServiceGrpc.getUpdateDataPipelineMethod = getUpdateDataPipelineMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.UpdateDataPipelineRequest, viam.app.data.v1.Data.UpdateDataPipelineResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateDataPipeline"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.UpdateDataPipelineRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.UpdateDataPipelineResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUpdateDataPipelineMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteDataPipelineRequest,
+      viam.app.data.v1.Data.DeleteDataPipelineResponse> getDeleteDataPipelineMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteDataPipeline",
+      requestType = viam.app.data.v1.Data.DeleteDataPipelineRequest.class,
+      responseType = viam.app.data.v1.Data.DeleteDataPipelineResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteDataPipelineRequest,
+      viam.app.data.v1.Data.DeleteDataPipelineResponse> getDeleteDataPipelineMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteDataPipelineRequest, viam.app.data.v1.Data.DeleteDataPipelineResponse> getDeleteDataPipelineMethod;
+    if ((getDeleteDataPipelineMethod = DataServiceGrpc.getDeleteDataPipelineMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getDeleteDataPipelineMethod = DataServiceGrpc.getDeleteDataPipelineMethod) == null) {
+          DataServiceGrpc.getDeleteDataPipelineMethod = getDeleteDataPipelineMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.DeleteDataPipelineRequest, viam.app.data.v1.Data.DeleteDataPipelineResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteDataPipeline"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.DeleteDataPipelineRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.DeleteDataPipelineResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getDeleteDataPipelineMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -990,6 +1140,56 @@ public final class DataServiceGrpc {
     default void removeBinaryDataFromDatasetByIDs(viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveBinaryDataFromDatasetByIDsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetDataPipeline retrieves a specific data pipeline by its id.
+     * </pre>
+     */
+    default void getDataPipeline(viam.app.data.v1.Data.GetDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetDataPipelineResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDataPipelineMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListDataPipelines returns a list of data pipelines based on organization id.
+     * </pre>
+     */
+    default void listDataPipelines(viam.app.data.v1.Data.ListDataPipelinesRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListDataPipelinesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDataPipelinesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateDataPipeline creates a new data pipeline with the provided configuration.
+     * </pre>
+     */
+    default void createDataPipeline(viam.app.data.v1.Data.CreateDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateDataPipelineResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateDataPipelineMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateDataPipeline modifies an existing data pipeline's configuration.
+     * </pre>
+     */
+    default void updateDataPipeline(viam.app.data.v1.Data.UpdateDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.UpdateDataPipelineResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDataPipelineMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteDataPipeline deletes a data pipeline from the database.
+     * </pre>
+     */
+    default void deleteDataPipeline(viam.app.data.v1.Data.DeleteDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteDataPipelineResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDataPipelineMethod(), responseObserver);
     }
   }
 
@@ -1281,6 +1481,61 @@ public final class DataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveBinaryDataFromDatasetByIDsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetDataPipeline retrieves a specific data pipeline by its id.
+     * </pre>
+     */
+    public void getDataPipeline(viam.app.data.v1.Data.GetDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetDataPipelineResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDataPipelineMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListDataPipelines returns a list of data pipelines based on organization id.
+     * </pre>
+     */
+    public void listDataPipelines(viam.app.data.v1.Data.ListDataPipelinesRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListDataPipelinesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListDataPipelinesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateDataPipeline creates a new data pipeline with the provided configuration.
+     * </pre>
+     */
+    public void createDataPipeline(viam.app.data.v1.Data.CreateDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateDataPipelineResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateDataPipelineMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateDataPipeline modifies an existing data pipeline's configuration.
+     * </pre>
+     */
+    public void updateDataPipeline(viam.app.data.v1.Data.UpdateDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.UpdateDataPipelineResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateDataPipelineMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteDataPipeline deletes a data pipeline from the database.
+     * </pre>
+     */
+    public void deleteDataPipeline(viam.app.data.v1.Data.DeleteDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteDataPipelineResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteDataPipelineMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1534,6 +1789,56 @@ public final class DataServiceGrpc {
     public viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse removeBinaryDataFromDatasetByIDs(viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveBinaryDataFromDatasetByIDsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetDataPipeline retrieves a specific data pipeline by its id.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.GetDataPipelineResponse getDataPipeline(viam.app.data.v1.Data.GetDataPipelineRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDataPipelineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListDataPipelines returns a list of data pipelines based on organization id.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.ListDataPipelinesResponse listDataPipelines(viam.app.data.v1.Data.ListDataPipelinesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListDataPipelinesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateDataPipeline creates a new data pipeline with the provided configuration.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.CreateDataPipelineResponse createDataPipeline(viam.app.data.v1.Data.CreateDataPipelineRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateDataPipelineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateDataPipeline modifies an existing data pipeline's configuration.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.UpdateDataPipelineResponse updateDataPipeline(viam.app.data.v1.Data.UpdateDataPipelineRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateDataPipelineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteDataPipeline deletes a data pipeline from the database.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.DeleteDataPipelineResponse deleteDataPipeline(viam.app.data.v1.Data.DeleteDataPipelineRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteDataPipelineMethod(), getCallOptions(), request);
     }
   }
 
@@ -1800,6 +2105,61 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveBinaryDataFromDatasetByIDsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GetDataPipeline retrieves a specific data pipeline by its id.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.GetDataPipelineResponse> getDataPipeline(
+        viam.app.data.v1.Data.GetDataPipelineRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDataPipelineMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListDataPipelines returns a list of data pipelines based on organization id.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.ListDataPipelinesResponse> listDataPipelines(
+        viam.app.data.v1.Data.ListDataPipelinesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListDataPipelinesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * CreateDataPipeline creates a new data pipeline with the provided configuration.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.CreateDataPipelineResponse> createDataPipeline(
+        viam.app.data.v1.Data.CreateDataPipelineRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateDataPipelineMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateDataPipeline modifies an existing data pipeline's configuration.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.UpdateDataPipelineResponse> updateDataPipeline(
+        viam.app.data.v1.Data.UpdateDataPipelineRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateDataPipelineMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteDataPipeline deletes a data pipeline from the database.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.DeleteDataPipelineResponse> deleteDataPipeline(
+        viam.app.data.v1.Data.DeleteDataPipelineRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteDataPipelineMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TABULAR_DATA_BY_FILTER = 0;
@@ -1825,6 +2185,11 @@ public final class DataServiceGrpc {
   private static final int METHODID_CONFIGURE_DATABASE_USER = 20;
   private static final int METHODID_ADD_BINARY_DATA_TO_DATASET_BY_IDS = 21;
   private static final int METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS = 22;
+  private static final int METHODID_GET_DATA_PIPELINE = 23;
+  private static final int METHODID_LIST_DATA_PIPELINES = 24;
+  private static final int METHODID_CREATE_DATA_PIPELINE = 25;
+  private static final int METHODID_UPDATE_DATA_PIPELINE = 26;
+  private static final int METHODID_DELETE_DATA_PIPELINE = 27;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1934,6 +2299,26 @@ public final class DataServiceGrpc {
         case METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS:
           serviceImpl.removeBinaryDataFromDatasetByIDs((viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse>) responseObserver);
+          break;
+        case METHODID_GET_DATA_PIPELINE:
+          serviceImpl.getDataPipeline((viam.app.data.v1.Data.GetDataPipelineRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetDataPipelineResponse>) responseObserver);
+          break;
+        case METHODID_LIST_DATA_PIPELINES:
+          serviceImpl.listDataPipelines((viam.app.data.v1.Data.ListDataPipelinesRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListDataPipelinesResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_DATA_PIPELINE:
+          serviceImpl.createDataPipeline((viam.app.data.v1.Data.CreateDataPipelineRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateDataPipelineResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_DATA_PIPELINE:
+          serviceImpl.updateDataPipeline((viam.app.data.v1.Data.UpdateDataPipelineRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.UpdateDataPipelineResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_DATA_PIPELINE:
+          serviceImpl.deleteDataPipeline((viam.app.data.v1.Data.DeleteDataPipelineRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteDataPipelineResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2114,6 +2499,41 @@ public final class DataServiceGrpc {
               viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest,
               viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse>(
                 service, METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS)))
+        .addMethod(
+          getGetDataPipelineMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.GetDataPipelineRequest,
+              viam.app.data.v1.Data.GetDataPipelineResponse>(
+                service, METHODID_GET_DATA_PIPELINE)))
+        .addMethod(
+          getListDataPipelinesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.ListDataPipelinesRequest,
+              viam.app.data.v1.Data.ListDataPipelinesResponse>(
+                service, METHODID_LIST_DATA_PIPELINES)))
+        .addMethod(
+          getCreateDataPipelineMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.CreateDataPipelineRequest,
+              viam.app.data.v1.Data.CreateDataPipelineResponse>(
+                service, METHODID_CREATE_DATA_PIPELINE)))
+        .addMethod(
+          getUpdateDataPipelineMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.UpdateDataPipelineRequest,
+              viam.app.data.v1.Data.UpdateDataPipelineResponse>(
+                service, METHODID_UPDATE_DATA_PIPELINE)))
+        .addMethod(
+          getDeleteDataPipelineMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.DeleteDataPipelineRequest,
+              viam.app.data.v1.Data.DeleteDataPipelineResponse>(
+                service, METHODID_DELETE_DATA_PIPELINE)))
         .build();
   }
 
@@ -2149,6 +2569,11 @@ public final class DataServiceGrpc {
               .addMethod(getConfigureDatabaseUserMethod())
               .addMethod(getAddBinaryDataToDatasetByIDsMethod())
               .addMethod(getRemoveBinaryDataFromDatasetByIDsMethod())
+              .addMethod(getGetDataPipelineMethod())
+              .addMethod(getListDataPipelinesMethod())
+              .addMethod(getCreateDataPipelineMethod())
+              .addMethod(getUpdateDataPipelineMethod())
+              .addMethod(getDeleteDataPipelineMethod())
               .build();
         }
       }

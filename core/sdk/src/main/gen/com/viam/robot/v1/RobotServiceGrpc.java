@@ -228,36 +228,6 @@ public final class RobotServiceGrpc {
     return getGetModelsFromModulesMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.DiscoverComponentsRequest,
-      com.viam.robot.v1.Robot.DiscoverComponentsResponse> getDiscoverComponentsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DiscoverComponents",
-      requestType = com.viam.robot.v1.Robot.DiscoverComponentsRequest.class,
-      responseType = com.viam.robot.v1.Robot.DiscoverComponentsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.DiscoverComponentsRequest,
-      com.viam.robot.v1.Robot.DiscoverComponentsResponse> getDiscoverComponentsMethod() {
-    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.DiscoverComponentsRequest, com.viam.robot.v1.Robot.DiscoverComponentsResponse> getDiscoverComponentsMethod;
-    if ((getDiscoverComponentsMethod = RobotServiceGrpc.getDiscoverComponentsMethod) == null) {
-      synchronized (RobotServiceGrpc.class) {
-        if ((getDiscoverComponentsMethod = RobotServiceGrpc.getDiscoverComponentsMethod) == null) {
-          RobotServiceGrpc.getDiscoverComponentsMethod = getDiscoverComponentsMethod =
-              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.DiscoverComponentsRequest, com.viam.robot.v1.Robot.DiscoverComponentsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DiscoverComponents"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.robot.v1.Robot.DiscoverComponentsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.robot.v1.Robot.DiscoverComponentsResponse.getDefaultInstance()))
-              .build();
-        }
-      }
-    }
-    return getDiscoverComponentsMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.FrameSystemConfigRequest,
       com.viam.robot.v1.Robot.FrameSystemConfigResponse> getFrameSystemConfigMethod;
 
@@ -848,18 +818,6 @@ public final class RobotServiceGrpc {
     }
 
     /**
-     * <pre>
-     * DiscoverComponents returns the list of discovered component configurations.
-     * This API is deprecated
-     * </pre>
-     */
-    @java.lang.Deprecated
-    default void discoverComponents(com.viam.robot.v1.Robot.DiscoverComponentsRequest request,
-        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.DiscoverComponentsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDiscoverComponentsMethod(), responseObserver);
-    }
-
-    /**
      */
     default void frameSystemConfig(com.viam.robot.v1.Robot.FrameSystemConfigRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.FrameSystemConfigResponse> responseObserver) {
@@ -1112,19 +1070,6 @@ public final class RobotServiceGrpc {
     }
 
     /**
-     * <pre>
-     * DiscoverComponents returns the list of discovered component configurations.
-     * This API is deprecated
-     * </pre>
-     */
-    @java.lang.Deprecated
-    public void discoverComponents(com.viam.robot.v1.Robot.DiscoverComponentsRequest request,
-        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.DiscoverComponentsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDiscoverComponentsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
      */
     public void frameSystemConfig(com.viam.robot.v1.Robot.FrameSystemConfigRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.FrameSystemConfigResponse> responseObserver) {
@@ -1372,18 +1317,6 @@ public final class RobotServiceGrpc {
     }
 
     /**
-     * <pre>
-     * DiscoverComponents returns the list of discovered component configurations.
-     * This API is deprecated
-     * </pre>
-     */
-    @java.lang.Deprecated
-    public com.viam.robot.v1.Robot.DiscoverComponentsResponse discoverComponents(com.viam.robot.v1.Robot.DiscoverComponentsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDiscoverComponentsMethod(), getCallOptions(), request);
-    }
-
-    /**
      */
     public com.viam.robot.v1.Robot.FrameSystemConfigResponse frameSystemConfig(com.viam.robot.v1.Robot.FrameSystemConfigRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1613,19 +1546,6 @@ public final class RobotServiceGrpc {
     }
 
     /**
-     * <pre>
-     * DiscoverComponents returns the list of discovered component configurations.
-     * This API is deprecated
-     * </pre>
-     */
-    @java.lang.Deprecated
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.DiscoverComponentsResponse> discoverComponents(
-        com.viam.robot.v1.Robot.DiscoverComponentsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDiscoverComponentsMethod(), getCallOptions()), request);
-    }
-
-    /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.FrameSystemConfigResponse> frameSystemConfig(
         com.viam.robot.v1.Robot.FrameSystemConfigRequest request) {
@@ -1779,23 +1699,22 @@ public final class RobotServiceGrpc {
   private static final int METHODID_CANCEL_OPERATION = 4;
   private static final int METHODID_BLOCK_FOR_OPERATION = 5;
   private static final int METHODID_GET_MODELS_FROM_MODULES = 6;
-  private static final int METHODID_DISCOVER_COMPONENTS = 7;
-  private static final int METHODID_FRAME_SYSTEM_CONFIG = 8;
-  private static final int METHODID_TRANSFORM_POSE = 9;
-  private static final int METHODID_TRANSFORM_PCD = 10;
-  private static final int METHODID_GET_STATUS = 11;
-  private static final int METHODID_STREAM_STATUS = 12;
-  private static final int METHODID_STOP_ALL = 13;
-  private static final int METHODID_START_SESSION = 14;
-  private static final int METHODID_SEND_SESSION_HEARTBEAT = 15;
-  private static final int METHODID_LOG = 16;
-  private static final int METHODID_GET_CLOUD_METADATA = 17;
-  private static final int METHODID_RESTART_MODULE = 18;
-  private static final int METHODID_SHUTDOWN = 19;
-  private static final int METHODID_GET_MACHINE_STATUS = 20;
-  private static final int METHODID_GET_VERSION = 21;
-  private static final int METHODID_LIST_TUNNELS = 22;
-  private static final int METHODID_TUNNEL = 23;
+  private static final int METHODID_FRAME_SYSTEM_CONFIG = 7;
+  private static final int METHODID_TRANSFORM_POSE = 8;
+  private static final int METHODID_TRANSFORM_PCD = 9;
+  private static final int METHODID_GET_STATUS = 10;
+  private static final int METHODID_STREAM_STATUS = 11;
+  private static final int METHODID_STOP_ALL = 12;
+  private static final int METHODID_START_SESSION = 13;
+  private static final int METHODID_SEND_SESSION_HEARTBEAT = 14;
+  private static final int METHODID_LOG = 15;
+  private static final int METHODID_GET_CLOUD_METADATA = 16;
+  private static final int METHODID_RESTART_MODULE = 17;
+  private static final int METHODID_SHUTDOWN = 18;
+  private static final int METHODID_GET_MACHINE_STATUS = 19;
+  private static final int METHODID_GET_VERSION = 20;
+  private static final int METHODID_LIST_TUNNELS = 21;
+  private static final int METHODID_TUNNEL = 22;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1841,10 +1760,6 @@ public final class RobotServiceGrpc {
         case METHODID_GET_MODELS_FROM_MODULES:
           serviceImpl.getModelsFromModules((com.viam.robot.v1.Robot.GetModelsFromModulesRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetModelsFromModulesResponse>) responseObserver);
-          break;
-        case METHODID_DISCOVER_COMPONENTS:
-          serviceImpl.discoverComponents((com.viam.robot.v1.Robot.DiscoverComponentsRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.DiscoverComponentsResponse>) responseObserver);
           break;
         case METHODID_FRAME_SYSTEM_CONFIG:
           serviceImpl.frameSystemConfig((com.viam.robot.v1.Robot.FrameSystemConfigRequest) request,
@@ -1977,13 +1892,6 @@ public final class RobotServiceGrpc {
               com.viam.robot.v1.Robot.GetModelsFromModulesResponse>(
                 service, METHODID_GET_MODELS_FROM_MODULES)))
         .addMethod(
-          getDiscoverComponentsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.viam.robot.v1.Robot.DiscoverComponentsRequest,
-              com.viam.robot.v1.Robot.DiscoverComponentsResponse>(
-                service, METHODID_DISCOVER_COMPONENTS)))
-        .addMethod(
           getFrameSystemConfigMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -2114,7 +2022,6 @@ public final class RobotServiceGrpc {
               .addMethod(getCancelOperationMethod())
               .addMethod(getBlockForOperationMethod())
               .addMethod(getGetModelsFromModulesMethod())
-              .addMethod(getDiscoverComponentsMethod())
               .addMethod(getFrameSystemConfigMethod())
               .addMethod(getTransformPoseMethod())
               .addMethod(getTransformPCDMethod())

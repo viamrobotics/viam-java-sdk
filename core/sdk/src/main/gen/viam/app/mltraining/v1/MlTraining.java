@@ -431,6 +431,17 @@ public final class MlTraining {
     viam.app.mltraining.v1.MlTraining.ModelType getModelType();
 
     /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     * @return The enum numeric value on the wire for modelFramework.
+     */
+    int getModelFrameworkValue();
+    /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     * @return The modelFramework.
+     */
+    viam.app.mltraining.v1.MlTraining.ModelFramework getModelFramework();
+
+    /**
      * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
      * @return A list containing the tags.
      */
@@ -698,6 +709,48 @@ public final class MlTraining {
     private void clearModelType() {
 
       modelType_ = 0;
+    }
+
+    public static final int MODEL_FRAMEWORK_FIELD_NUMBER = 8;
+    private int modelFramework_;
+    /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     * @return The enum numeric value on the wire for modelFramework.
+     */
+    @java.lang.Override
+    public int getModelFrameworkValue() {
+      return modelFramework_;
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     * @return The modelFramework.
+     */
+    @java.lang.Override
+    public viam.app.mltraining.v1.MlTraining.ModelFramework getModelFramework() {
+      viam.app.mltraining.v1.MlTraining.ModelFramework result = viam.app.mltraining.v1.MlTraining.ModelFramework.forNumber(modelFramework_);
+      return result == null ? viam.app.mltraining.v1.MlTraining.ModelFramework.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     * @param value The enum numeric value on the wire for modelFramework to set.
+     */
+    private void setModelFrameworkValue(int value) {
+        modelFramework_ = value;
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     * @param value The modelFramework to set.
+     */
+    private void setModelFramework(viam.app.mltraining.v1.MlTraining.ModelFramework value) {
+      modelFramework_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+     */
+    private void clearModelFramework() {
+
+      modelFramework_ = 0;
     }
 
     public static final int TAGS_FIELD_NUMBER = 6;
@@ -1133,6 +1186,52 @@ public final class MlTraining {
       }
 
       /**
+       * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+       * @return The enum numeric value on the wire for modelFramework.
+       */
+      @java.lang.Override
+      public int getModelFrameworkValue() {
+        return instance.getModelFrameworkValue();
+      }
+      /**
+       * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+       * @param value The modelFramework to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelFrameworkValue(int value) {
+        copyOnWrite();
+        instance.setModelFrameworkValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+       * @return The modelFramework.
+       */
+      @java.lang.Override
+      public viam.app.mltraining.v1.MlTraining.ModelFramework getModelFramework() {
+        return instance.getModelFramework();
+      }
+      /**
+       * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+       * @param value The enum numeric value on the wire for modelFramework to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelFramework(viam.app.mltraining.v1.MlTraining.ModelFramework value) {
+        copyOnWrite();
+        instance.setModelFramework(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelFramework() {
+        copyOnWrite();
+        instance.clearModelFramework();
+        return this;
+      }
+
+      /**
        * <code>repeated string tags = 6 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
        * @return A list containing the tags.
        */
@@ -1246,10 +1345,11 @@ public final class MlTraining {
               "modelType_",
               "tags_",
               "datasetId_",
+              "modelFramework_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0000\u0002\u0007\u0006\u0000\u0001\u0000\u0002\u0208\u0003\u0208" +
-                "\u0004\u0208\u0005\f\u0006\u021a\u0007\u0208";
+                "\u0000\u0007\u0000\u0000\u0002\b\u0007\u0000\u0001\u0000\u0002\u0208\u0003\u0208" +
+                "\u0004\u0208\u0005\f\u0006\u021a\u0007\u0208\b\f";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
