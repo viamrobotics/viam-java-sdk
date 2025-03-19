@@ -131,20 +131,23 @@ implements <a href="MlTraining.SubmitTrainingJobRequestOrBuilder.html" title="in
 <div class="col-second even-row-color"><code><a href="#DATASET_ID_FIELD_NUMBER" class="member-name-link">DATASET_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#MODEL_NAME_FIELD_NUMBER" class="member-name-link">MODEL_NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MODEL_FRAMEWORK_FIELD_NUMBER" class="member-name-link">MODEL_FRAMEWORK_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#MODEL_TYPE_FIELD_NUMBER" class="member-name-link">MODEL_TYPE_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MODEL_NAME_FIELD_NUMBER" class="member-name-link">MODEL_NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#MODEL_VERSION_FIELD_NUMBER" class="member-name-link">MODEL_VERSION_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MODEL_TYPE_FIELD_NUMBER" class="member-name-link">MODEL_TYPE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ORGANIZATION_ID_FIELD_NUMBER" class="member-name-link">ORGANIZATION_ID_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MODEL_VERSION_FIELD_NUMBER" class="member-name-link">MODEL_VERSION_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#TAGS_FIELD_NUMBER" class="member-name-link">TAGS_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ORGANIZATION_ID_FIELD_NUMBER" class="member-name-link">ORGANIZATION_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#TAGS_FIELD_NUMBER" class="member-name-link">TAGS_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -183,6 +186,16 @@ implements <a href="MlTraining.SubmitTrainingJobRequestOrBuilder.html" title="in
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MlTraining.SubmitTrainingJobRequest.html" title="class in viam.app.mltraining.v1">MlTraining.SubmitTrainingJobRequest</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MlTraining.ModelFramework.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelFramework</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelFramework()" class="member-name-link">getModelFramework</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelFrameworkValue()" class="member-name-link">getModelFrameworkValue</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelName()" class="member-name-link">getModelName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -391,6 +404,20 @@ implements <a href="MlTraining.SubmitTrainingJobRequestOrBuilder.html" title="in
 </section>
 </li>
 <li>
+<section class="detail" id="MODEL_FRAMEWORK_FIELD_NUMBER">
+<h3>MODEL_FRAMEWORK_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MODEL_FRAMEWORK_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.MODEL_FRAMEWORK_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="TAGS_FIELD_NUMBER">
 <h3>TAGS_FIELD_NUMBER</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">TAGS_FIELD_NUMBER</span></div>
@@ -539,6 +566,32 @@ implements <a href="MlTraining.SubmitTrainingJobRequestOrBuilder.html" title="in
 <dd><code><a href="MlTraining.SubmitTrainingJobRequestOrBuilder.html#getModelType()">getModelType</a></code>&nbsp;in interface&nbsp;<code><a href="MlTraining.SubmitTrainingJobRequestOrBuilder.html" title="interface in viam.app.mltraining.v1">MlTraining.SubmitTrainingJobRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The modelType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getModelFrameworkValue()">
+<h3>getModelFrameworkValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getModelFrameworkValue</span>()</div>
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MlTraining.SubmitTrainingJobRequestOrBuilder.html#getModelFrameworkValue()">getModelFrameworkValue</a></code>&nbsp;in interface&nbsp;<code><a href="MlTraining.SubmitTrainingJobRequestOrBuilder.html" title="interface in viam.app.mltraining.v1">MlTraining.SubmitTrainingJobRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire for modelFramework.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getModelFramework()">
+<h3>getModelFramework</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MlTraining.ModelFramework.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelFramework</a></span>&nbsp;<span class="element-name">getModelFramework</span>()</div>
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 8 [json_name = "modelFramework", (.tagger.v1.tags) = "bson:&#92;"model_framework&#92;" json:&#92;"model_framework&#92;""];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MlTraining.SubmitTrainingJobRequestOrBuilder.html#getModelFramework()">getModelFramework</a></code>&nbsp;in interface&nbsp;<code><a href="MlTraining.SubmitTrainingJobRequestOrBuilder.html" title="interface in viam.app.mltraining.v1">MlTraining.SubmitTrainingJobRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The modelFramework.</dd>
 </dl>
 </section>
 </li>

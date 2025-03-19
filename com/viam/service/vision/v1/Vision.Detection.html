@@ -137,13 +137,25 @@ implements <a href="Vision.DetectionOrBuilder.html" title="interface in com.viam
 <div class="col-second even-row-color"><code><a href="#X_MAX_FIELD_NUMBER" class="member-name-link">X_MAX_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#X_MIN_FIELD_NUMBER" class="member-name-link">X_MIN_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#X_MAX_NORMALIZED_FIELD_NUMBER" class="member-name-link">X_MAX_NORMALIZED_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#X_MIN_FIELD_NUMBER" class="member-name-link">X_MIN_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#X_MIN_NORMALIZED_FIELD_NUMBER" class="member-name-link">X_MIN_NORMALIZED_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#Y_MAX_FIELD_NUMBER" class="member-name-link">Y_MAX_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#Y_MIN_FIELD_NUMBER" class="member-name-link">Y_MIN_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#Y_MAX_NORMALIZED_FIELD_NUMBER" class="member-name-link">Y_MAX_NORMALIZED_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#Y_MIN_FIELD_NUMBER" class="member-name-link">Y_MIN_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#Y_MIN_NORMALIZED_FIELD_NUMBER" class="member-name-link">Y_MIN_NORMALIZED_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
@@ -196,21 +208,42 @@ implements <a href="Vision.DetectionOrBuilder.html" title="interface in com.viam
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional int64 x_max = 3 [json_name = "xMax"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getXMin()" class="member-name-link">getXMin</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getXMaxNormalized()" class="member-name-link">getXMaxNormalized</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getXMin()" class="member-name-link">getXMin</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  the four corners of the box</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getXMinNormalized()" class="member-name-link">getXMinNormalized</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ the four corners of the box, in proportion to the respective image dimension</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getYMax()" class="member-name-link">getYMax</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional int64 y_max = 4 [json_name = "yMax"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getYMin()" class="member-name-link">getYMin</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getYMaxNormalized()" class="member-name-link">getYMaxNormalized</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getYMin()" class="member-name-link">getYMin</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional int64 y_min = 2 [json_name = "yMin"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getYMinNormalized()" class="member-name-link">getYMinNormalized</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasXMax()" class="member-name-link">hasXMax</a>()</code></div>
@@ -218,10 +251,21 @@ implements <a href="Vision.DetectionOrBuilder.html" title="interface in com.viam
 <div class="block"><code>optional int64 x_max = 3 [json_name = "xMax"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasXMin()" class="member-name-link">hasXMin</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasXMaxNormalized()" class="member-name-link">hasXMaxNormalized</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasXMin()" class="member-name-link">hasXMin</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  the four corners of the box</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasXMinNormalized()" class="member-name-link">hasXMinNormalized</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ the four corners of the box, in proportion to the respective image dimension</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasYMax()" class="member-name-link">hasYMax</a>()</code></div>
@@ -229,9 +273,19 @@ implements <a href="Vision.DetectionOrBuilder.html" title="interface in com.viam
 <div class="block"><code>optional int64 y_max = 4 [json_name = "yMax"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasYMin()" class="member-name-link">hasYMin</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasYMaxNormalized()" class="member-name-link">hasYMaxNormalized</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasYMin()" class="member-name-link">hasYMin</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional int64 y_min = 2 [json_name = "yMin"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasYMinNormalized()" class="member-name-link">hasYMinNormalized</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Vision.Detection.Builder.html" title="class in com.viam.service.vision.v1">Vision.Detection.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -389,6 +443,62 @@ implements <a href="Vision.DetectionOrBuilder.html" title="interface in com.viam
 <dd>
 <ul class="see-list">
 <li><a href="../../../../../constant-values.html#com.viam.service.vision.v1.Vision.Detection.CLASS_NAME_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="X_MIN_NORMALIZED_FIELD_NUMBER">
+<h3>X_MIN_NORMALIZED_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">X_MIN_NORMALIZED_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../../constant-values.html#com.viam.service.vision.v1.Vision.Detection.X_MIN_NORMALIZED_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="Y_MIN_NORMALIZED_FIELD_NUMBER">
+<h3>Y_MIN_NORMALIZED_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">Y_MIN_NORMALIZED_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../../constant-values.html#com.viam.service.vision.v1.Vision.Detection.Y_MIN_NORMALIZED_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="X_MAX_NORMALIZED_FIELD_NUMBER">
+<h3>X_MAX_NORMALIZED_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">X_MAX_NORMALIZED_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../../constant-values.html#com.viam.service.vision.v1.Vision.Detection.X_MAX_NORMALIZED_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="Y_MAX_NORMALIZED_FIELD_NUMBER">
+<h3>Y_MAX_NORMALIZED_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">Y_MAX_NORMALIZED_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../../constant-values.html#com.viam.service.vision.v1.Vision.Detection.Y_MAX_NORMALIZED_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -562,6 +672,118 @@ implements <a href="Vision.DetectionOrBuilder.html" title="interface in com.viam
 <dd><code><a href="Vision.DetectionOrBuilder.html#getClassNameBytes()">getClassNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Vision.DetectionOrBuilder.html" title="interface in com.viam.service.vision.v1">Vision.DetectionOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for className.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasXMinNormalized()">
+<h3>hasXMinNormalized</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasXMinNormalized</span>()</div>
+<div class="block"><pre>
+ the four corners of the box, in proportion to the respective image dimension
+ </pre>
+
+ <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Vision.DetectionOrBuilder.html#hasXMinNormalized()">hasXMinNormalized</a></code>&nbsp;in interface&nbsp;<code><a href="Vision.DetectionOrBuilder.html" title="interface in com.viam.service.vision.v1">Vision.DetectionOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the xMinNormalized field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getXMinNormalized()">
+<h3>getXMinNormalized</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getXMinNormalized</span>()</div>
+<div class="block"><pre>
+ the four corners of the box, in proportion to the respective image dimension
+ </pre>
+
+ <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Vision.DetectionOrBuilder.html#getXMinNormalized()">getXMinNormalized</a></code>&nbsp;in interface&nbsp;<code><a href="Vision.DetectionOrBuilder.html" title="interface in com.viam.service.vision.v1">Vision.DetectionOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The xMinNormalized.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasYMinNormalized()">
+<h3>hasYMinNormalized</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasYMinNormalized</span>()</div>
+<div class="block"><code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Vision.DetectionOrBuilder.html#hasYMinNormalized()">hasYMinNormalized</a></code>&nbsp;in interface&nbsp;<code><a href="Vision.DetectionOrBuilder.html" title="interface in com.viam.service.vision.v1">Vision.DetectionOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the yMinNormalized field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getYMinNormalized()">
+<h3>getYMinNormalized</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getYMinNormalized</span>()</div>
+<div class="block"><code>optional double y_min_normalized = 8 [json_name = "yMinNormalized"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Vision.DetectionOrBuilder.html#getYMinNormalized()">getYMinNormalized</a></code>&nbsp;in interface&nbsp;<code><a href="Vision.DetectionOrBuilder.html" title="interface in com.viam.service.vision.v1">Vision.DetectionOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The yMinNormalized.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasXMaxNormalized()">
+<h3>hasXMaxNormalized</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasXMaxNormalized</span>()</div>
+<div class="block"><code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Vision.DetectionOrBuilder.html#hasXMaxNormalized()">hasXMaxNormalized</a></code>&nbsp;in interface&nbsp;<code><a href="Vision.DetectionOrBuilder.html" title="interface in com.viam.service.vision.v1">Vision.DetectionOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the xMaxNormalized field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getXMaxNormalized()">
+<h3>getXMaxNormalized</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getXMaxNormalized</span>()</div>
+<div class="block"><code>optional double x_max_normalized = 9 [json_name = "xMaxNormalized"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Vision.DetectionOrBuilder.html#getXMaxNormalized()">getXMaxNormalized</a></code>&nbsp;in interface&nbsp;<code><a href="Vision.DetectionOrBuilder.html" title="interface in com.viam.service.vision.v1">Vision.DetectionOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The xMaxNormalized.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasYMaxNormalized()">
+<h3>hasYMaxNormalized</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasYMaxNormalized</span>()</div>
+<div class="block"><code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Vision.DetectionOrBuilder.html#hasYMaxNormalized()">hasYMaxNormalized</a></code>&nbsp;in interface&nbsp;<code><a href="Vision.DetectionOrBuilder.html" title="interface in com.viam.service.vision.v1">Vision.DetectionOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the yMaxNormalized field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getYMaxNormalized()">
+<h3>getYMaxNormalized</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getYMaxNormalized</span>()</div>
+<div class="block"><code>optional double y_max_normalized = 10 [json_name = "yMaxNormalized"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Vision.DetectionOrBuilder.html#getYMaxNormalized()">getYMaxNormalized</a></code>&nbsp;in interface&nbsp;<code><a href="Vision.DetectionOrBuilder.html" title="interface in com.viam.service.vision.v1">Vision.DetectionOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The yMaxNormalized.</dd>
 </dl>
 </section>
 </li>

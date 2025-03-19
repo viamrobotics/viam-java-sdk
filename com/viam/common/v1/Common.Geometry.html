@@ -148,8 +148,11 @@ implements <a href="Common.GeometryOrBuilder.html" title="interface in com.viam.
 <div class="col-second odd-row-color"><code><a href="#LABEL_FIELD_NUMBER" class="member-name-link">LABEL_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#SPHERE_FIELD_NUMBER" class="member-name-link">SPHERE_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MESH_FIELD_NUMBER" class="member-name-link">MESH_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#SPHERE_FIELD_NUMBER" class="member-name-link">SPHERE_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -209,26 +212,36 @@ implements <a href="Common.GeometryOrBuilder.html" title="interface in com.viam.
 <div class="block">
  Label of the geometry.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Sphere.html" title="class in com.viam.common.v1">Common.Sphere</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSphere()" class="member-name-link">getSphere</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Mesh.html" title="class in com.viam.common.v1">Common.Mesh</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMesh()" class="member-name-link">getMesh</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Sphere.html" title="class in com.viam.common.v1">Common.Sphere</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSphere()" class="member-name-link">getSphere</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.common.v1.Sphere sphere = 2 [json_name = "sphere"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasBox()" class="member-name-link">hasBox</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasBox()" class="member-name-link">hasBox</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.common.v1.RectangularPrism box = 3 [json_name = "box"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCapsule()" class="member-name-link">hasCapsule</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCapsule()" class="member-name-link">hasCapsule</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.common.v1.Capsule capsule = 5 [json_name = "capsule"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCenter()" class="member-name-link">hasCenter</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCenter()" class="member-name-link">hasCenter</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Pose of a geometries center point</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMesh()" class="member-name-link">hasMesh</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSphere()" class="member-name-link">hasSphere</a>()</code></div>
@@ -363,6 +376,20 @@ implements <a href="Common.GeometryOrBuilder.html" title="interface in com.viam.
 <dd>
 <ul class="see-list">
 <li><a href="../../../../constant-values.html#com.viam.common.v1.Common.Geometry.CAPSULE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="MESH_FIELD_NUMBER">
+<h3>MESH_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MESH_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#com.viam.common.v1.Common.Geometry.MESH_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -509,6 +536,32 @@ implements <a href="Common.GeometryOrBuilder.html" title="interface in com.viam.
 <dd><code><a href="Common.GeometryOrBuilder.html#getCapsule()">getCapsule</a></code>&nbsp;in interface&nbsp;<code><a href="Common.GeometryOrBuilder.html" title="interface in com.viam.common.v1">Common.GeometryOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The capsule.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasMesh()">
+<h3>hasMesh</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMesh</span>()</div>
+<div class="block"><code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Common.GeometryOrBuilder.html#hasMesh()">hasMesh</a></code>&nbsp;in interface&nbsp;<code><a href="Common.GeometryOrBuilder.html" title="interface in com.viam.common.v1">Common.GeometryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the mesh field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMesh()">
+<h3>getMesh</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Common.Mesh.html" title="class in com.viam.common.v1">Common.Mesh</a></span>&nbsp;<span class="element-name">getMesh</span>()</div>
+<div class="block"><code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Common.GeometryOrBuilder.html#getMesh()">getMesh</a></code>&nbsp;in interface&nbsp;<code><a href="Common.GeometryOrBuilder.html" title="interface in com.viam.common.v1">Common.GeometryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The mesh.</dd>
 </dl>
 </section>
 </li>
