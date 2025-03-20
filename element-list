@@ -70,6 +70,7 @@ tagger.v1
 viam.app.agent.v1
 viam.app.cloudslam.v1
 viam.app.data.v1
+viam.app.datapipelines.v1
 viam.app.dataset.v1
 viam.app.datasync.v1
 viam.app.mlinference.v1
