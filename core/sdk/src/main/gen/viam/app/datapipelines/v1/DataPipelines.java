@@ -1446,11 +1446,19 @@ public final class DataPipelines {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
+     * <pre>
+     * The ID of the data pipeline to retrieve.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * The ID of the data pipeline to retrieve.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -1471,6 +1479,10 @@ public final class DataPipelines {
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.String id_;
     /**
+     * <pre>
+     * The ID of the data pipeline to retrieve.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -1479,6 +1491,10 @@ public final class DataPipelines {
       return id_;
     }
     /**
+     * <pre>
+     * The ID of the data pipeline to retrieve.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -1488,6 +1504,10 @@ public final class DataPipelines {
       return com.google.protobuf.ByteString.copyFromUtf8(id_);
     }
     /**
+     * <pre>
+     * The ID of the data pipeline to retrieve.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      */
@@ -1498,6 +1518,10 @@ public final class DataPipelines {
       id_ = value;
     }
     /**
+     * <pre>
+     * The ID of the data pipeline to retrieve.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      */
     private void clearId() {
@@ -1505,6 +1529,10 @@ public final class DataPipelines {
       id_ = getDefaultInstance().getId();
     }
     /**
+     * <pre>
+     * The ID of the data pipeline to retrieve.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      */
@@ -1613,6 +1641,10 @@ public final class DataPipelines {
 
 
       /**
+       * <pre>
+       * The ID of the data pipeline to retrieve.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
@@ -1621,6 +1653,10 @@ public final class DataPipelines {
         return instance.getId();
       }
       /**
+       * <pre>
+       * The ID of the data pipeline to retrieve.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
@@ -1630,6 +1666,10 @@ public final class DataPipelines {
         return instance.getIdBytes();
       }
       /**
+       * <pre>
+       * The ID of the data pipeline to retrieve.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1641,6 +1681,10 @@ public final class DataPipelines {
         return this;
       }
       /**
+       * <pre>
+       * The ID of the data pipeline to retrieve.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @return This builder for chaining.
        */
@@ -1650,6 +1694,10 @@ public final class DataPipelines {
         return this;
       }
       /**
+       * <pre>
+       * The ID of the data pipeline to retrieve.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -2031,11 +2079,19 @@ public final class DataPipelines {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
      * @return The organizationId.
      */
     java.lang.String getOrganizationId();
     /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
      * @return The bytes for organizationId.
      */
@@ -2056,6 +2112,10 @@ public final class DataPipelines {
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
     private java.lang.String organizationId_;
     /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
      * @return The organizationId.
      */
@@ -2064,6 +2124,10 @@ public final class DataPipelines {
       return organizationId_;
     }
     /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
      * @return The bytes for organizationId.
      */
@@ -2073,6 +2137,10 @@ public final class DataPipelines {
       return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
     }
     /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
      * @param value The organizationId to set.
      */
@@ -2083,6 +2151,10 @@ public final class DataPipelines {
       organizationId_ = value;
     }
     /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
      */
     private void clearOrganizationId() {
@@ -2090,6 +2162,10 @@ public final class DataPipelines {
       organizationId_ = getDefaultInstance().getOrganizationId();
     }
     /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
      * <code>string organization_id = 1 [json_name = "organizationId"];</code>
      * @param value The bytes for organizationId to set.
      */
@@ -2198,6 +2274,10 @@ public final class DataPipelines {
 
 
       /**
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @return The organizationId.
        */
@@ -2206,6 +2286,10 @@ public final class DataPipelines {
         return instance.getOrganizationId();
       }
       /**
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @return The bytes for organizationId.
        */
@@ -2215,6 +2299,10 @@ public final class DataPipelines {
         return instance.getOrganizationIdBytes();
       }
       /**
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @param value The organizationId to set.
        * @return This builder for chaining.
@@ -2226,6 +2314,10 @@ public final class DataPipelines {
         return this;
       }
       /**
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @return This builder for chaining.
        */
@@ -2235,6 +2327,10 @@ public final class DataPipelines {
         return this;
       }
       /**
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
        * <code>string organization_id = 1 [json_name = "organizationId"];</code>
        * @param value The bytes for organizationId to set.
        * @return This builder for chaining.
@@ -2722,15 +2818,98 @@ public final class DataPipelines {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code>
-     * @return Whether the dataPipeline field is set.
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
      */
-    boolean hasDataPipeline();
+    java.lang.String getOrganizationId();
     /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code>
-     * @return The dataPipeline.
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
      */
-    viam.app.datapipelines.v1.DataPipelines.DataPipeline getDataPipeline();
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return A list containing the mqlBinary.
+     */
+    java.util.List<com.google.protobuf.ByteString> getMqlBinaryList();
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return The count of mqlBinary.
+     */
+    int getMqlBinaryCount();
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param index The index of the element to return.
+     * @return The mqlBinary at the given index.
+     */
+    com.google.protobuf.ByteString getMqlBinary(int index);
+
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     * @return The schedule.
+     */
+    java.lang.String getSchedule();
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     * @return The bytes for schedule.
+     */
+    com.google.protobuf.ByteString
+        getScheduleBytes();
   }
   /**
    * Protobuf type {@code viam.app.datapipelines.v1.CreateDataPipelineRequest}
@@ -2741,52 +2920,322 @@ public final class DataPipelines {
       // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.CreateDataPipelineRequest)
       CreateDataPipelineRequestOrBuilder {
     private CreateDataPipelineRequest() {
+      organizationId_ = "";
+      name_ = "";
+      mqlBinary_ = emptyProtobufList();
+      schedule_ = "";
     }
-    private int bitField0_;
-    public static final int DATA_PIPELINE_FIELD_NUMBER = 1;
-    private viam.app.datapipelines.v1.DataPipelines.DataPipeline dataPipeline_;
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String organizationId_;
     /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code>
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
      */
     @java.lang.Override
-    public boolean hasDataPipeline() {
-      return ((bitField0_ & 0x00000001) != 0);
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
     }
     /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code>
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
      */
     @java.lang.Override
-    public viam.app.datapipelines.v1.DataPipelines.DataPipeline getDataPipeline() {
-      return dataPipeline_ == null ? viam.app.datapipelines.v1.DataPipelines.DataPipeline.getDefaultInstance() : dataPipeline_;
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
     }
     /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code>
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
      */
-    private void setDataPipeline(viam.app.datapipelines.v1.DataPipelines.DataPipeline value) {
-      value.getClass();
-  dataPipeline_ = value;
-      bitField0_ |= 0x00000001;
-      }
-    /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeDataPipeline(viam.app.datapipelines.v1.DataPipelines.DataPipeline value) {
-      value.getClass();
-  if (dataPipeline_ != null &&
-          dataPipeline_ != viam.app.datapipelines.v1.DataPipelines.DataPipeline.getDefaultInstance()) {
-        dataPipeline_ =
-          viam.app.datapipelines.v1.DataPipelines.DataPipeline.newBuilder(dataPipeline_).mergeFrom(value).buildPartial();
-      } else {
-        dataPipeline_ = value;
-      }
-      bitField0_ |= 0x00000001;
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
     }
     /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code>
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
      */
-    private void clearDataPipeline() {  dataPipeline_ = null;
-      bitField0_ = (bitField0_ & ~0x00000001);
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private java.lang.String name_;
+    /**
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int MQL_BINARY_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> mqlBinary_;
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return A list containing the mqlBinary.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getMqlBinaryList() {
+      return mqlBinary_;
+    }
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return The count of mqlBinary.
+     */
+    @java.lang.Override
+    public int getMqlBinaryCount() {
+      return mqlBinary_.size();
+    }
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param index The index of the element to return.
+     * @return The mqlBinary at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMqlBinary(int index) {
+      return mqlBinary_.get(index);
+    }
+    private void ensureMqlBinaryIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> tmp = mqlBinary_;
+      if (!tmp.isModifiable()) {
+        mqlBinary_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param index The index to set the value at.
+     * @param value The mqlBinary to set.
+     */
+    private void setMqlBinary(
+        int index, com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureMqlBinaryIsMutable();
+      mqlBinary_.set(index, value);
+    }
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param value The mqlBinary to add.
+     */
+    private void addMqlBinary(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureMqlBinaryIsMutable();
+      mqlBinary_.add(value);
+    }
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param values The mqlBinary to add.
+     */
+    private void addAllMqlBinary(
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+      ensureMqlBinaryIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, mqlBinary_);
+    }
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     */
+    private void clearMqlBinary() {
+      mqlBinary_ = emptyProtobufList();
+    }
+
+    public static final int SCHEDULE_FIELD_NUMBER = 4;
+    private java.lang.String schedule_;
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     * @return The schedule.
+     */
+    @java.lang.Override
+    public java.lang.String getSchedule() {
+      return schedule_;
+    }
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     * @return The bytes for schedule.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScheduleBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(schedule_);
+    }
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     * @param value The schedule to set.
+     */
+    private void setSchedule(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      schedule_ = value;
+    }
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     */
+    private void clearSchedule() {
+
+      schedule_ = getDefaultInstance().getSchedule();
+    }
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     * @param value The bytes for schedule to set.
+     */
+    private void setScheduleBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      schedule_ = value.toStringUtf8();
+
     }
 
     public static viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineRequest parseFrom(
@@ -2887,49 +3336,318 @@ public final class DataPipelines {
 
 
       /**
-       * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code>
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The organizationId.
        */
       @java.lang.Override
-      public boolean hasDataPipeline() {
-        return instance.hasDataPipeline();
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
       }
       /**
-       * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code>
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
        */
       @java.lang.Override
-      public viam.app.datapipelines.v1.DataPipelines.DataPipeline getDataPipeline() {
-        return instance.getDataPipeline();
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
       }
       /**
-       * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code>
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
        */
-      public Builder setDataPipeline(viam.app.datapipelines.v1.DataPipelines.DataPipeline value) {
+      public Builder setOrganizationId(
+          java.lang.String value) {
         copyOnWrite();
-        instance.setDataPipeline(value);
-        return this;
-        }
-      /**
-       * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code>
-       */
-      public Builder setDataPipeline(
-          viam.app.datapipelines.v1.DataPipelines.DataPipeline.Builder builderForValue) {
-        copyOnWrite();
-        instance.setDataPipeline(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code>
-       */
-      public Builder mergeDataPipeline(viam.app.datapipelines.v1.DataPipelines.DataPipeline value) {
-        copyOnWrite();
-        instance.mergeDataPipeline(value);
+        instance.setOrganizationId(value);
         return this;
       }
       /**
-       * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code>
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
        */
-      public Builder clearDataPipeline() {  copyOnWrite();
-        instance.clearDataPipeline();
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * A unique identifier at the org level.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <pre>
+       * A unique identifier at the org level.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <pre>
+       * A unique identifier at the org level.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A unique identifier at the org level.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <pre>
+       * A unique identifier at the org level.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @return A list containing the mqlBinary.
+       */
+      @java.lang.Override
+      public java.util.List<com.google.protobuf.ByteString>
+          getMqlBinaryList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getMqlBinaryList());
+      }
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @return The count of mqlBinary.
+       */
+      @java.lang.Override
+      public int getMqlBinaryCount() {
+        return instance.getMqlBinaryCount();
+      }
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param index The index of the element to return.
+       * @return The mqlBinary at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMqlBinary(int index) {
+        return instance.getMqlBinary(index);
+      }
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param value The mqlBinary to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMqlBinary(
+          int index, com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMqlBinary(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param value The mqlBinary to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMqlBinary(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addMqlBinary(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param values The mqlBinary to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMqlBinary(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        copyOnWrite();
+        instance.addAllMqlBinary(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMqlBinary() {
+        copyOnWrite();
+        instance.clearMqlBinary();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * A cron expression representing the expected execution schedule in UTC (note this also
+       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+       * </pre>
+       *
+       * <code>string schedule = 4 [json_name = "schedule"];</code>
+       * @return The schedule.
+       */
+      @java.lang.Override
+      public java.lang.String getSchedule() {
+        return instance.getSchedule();
+      }
+      /**
+       * <pre>
+       * A cron expression representing the expected execution schedule in UTC (note this also
+       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+       * </pre>
+       *
+       * <code>string schedule = 4 [json_name = "schedule"];</code>
+       * @return The bytes for schedule.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getScheduleBytes() {
+        return instance.getScheduleBytes();
+      }
+      /**
+       * <pre>
+       * A cron expression representing the expected execution schedule in UTC (note this also
+       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+       * </pre>
+       *
+       * <code>string schedule = 4 [json_name = "schedule"];</code>
+       * @param value The schedule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchedule(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setSchedule(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A cron expression representing the expected execution schedule in UTC (note this also
+       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+       * </pre>
+       *
+       * <code>string schedule = 4 [json_name = "schedule"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchedule() {
+        copyOnWrite();
+        instance.clearSchedule();
+        return this;
+      }
+      /**
+       * <pre>
+       * A cron expression representing the expected execution schedule in UTC (note this also
+       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+       * </pre>
+       *
+       * <code>string schedule = 4 [json_name = "schedule"];</code>
+       * @param value The bytes for schedule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScheduleBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setScheduleBytes(value);
         return this;
       }
 
@@ -2949,11 +3667,14 @@ public final class DataPipelines {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "bitField0_",
-              "dataPipeline_",
+              "organizationId_",
+              "name_",
+              "mqlBinary_",
+              "schedule_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u001c\u0004\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3013,11 +3734,19 @@ public final class DataPipelines {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
+     * <pre>
+     * The ID of the newly created data pipeline.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * The ID of the newly created data pipeline.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -3038,6 +3767,10 @@ public final class DataPipelines {
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.String id_;
     /**
+     * <pre>
+     * The ID of the newly created data pipeline.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -3046,6 +3779,10 @@ public final class DataPipelines {
       return id_;
     }
     /**
+     * <pre>
+     * The ID of the newly created data pipeline.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -3055,6 +3792,10 @@ public final class DataPipelines {
       return com.google.protobuf.ByteString.copyFromUtf8(id_);
     }
     /**
+     * <pre>
+     * The ID of the newly created data pipeline.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      */
@@ -3065,6 +3806,10 @@ public final class DataPipelines {
       id_ = value;
     }
     /**
+     * <pre>
+     * The ID of the newly created data pipeline.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      */
     private void clearId() {
@@ -3072,6 +3817,10 @@ public final class DataPipelines {
       id_ = getDefaultInstance().getId();
     }
     /**
+     * <pre>
+     * The ID of the newly created data pipeline.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      */
@@ -3180,6 +3929,10 @@ public final class DataPipelines {
 
 
       /**
+       * <pre>
+       * The ID of the newly created data pipeline.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
@@ -3188,6 +3941,10 @@ public final class DataPipelines {
         return instance.getId();
       }
       /**
+       * <pre>
+       * The ID of the newly created data pipeline.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
@@ -3197,6 +3954,10 @@ public final class DataPipelines {
         return instance.getIdBytes();
       }
       /**
+       * <pre>
+       * The ID of the newly created data pipeline.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -3208,6 +3969,10 @@ public final class DataPipelines {
         return this;
       }
       /**
+       * <pre>
+       * The ID of the newly created data pipeline.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @return This builder for chaining.
        */
@@ -3217,6 +3982,10 @@ public final class DataPipelines {
         return this;
       }
       /**
+       * <pre>
+       * The ID of the newly created data pipeline.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -3307,11 +4076,19 @@ public final class DataPipelines {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
+     * <pre>
+     * The ID of the data pipeline to update.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * The ID of the data pipeline to update.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -3319,15 +4096,88 @@ public final class DataPipelines {
         getIdBytes();
 
     /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code>
-     * @return Whether the dataPipeline field is set.
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
      */
-    boolean hasDataPipeline();
+    java.lang.String getName();
     /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code>
-     * @return The dataPipeline.
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
      */
-    viam.app.datapipelines.v1.DataPipelines.DataPipeline getDataPipeline();
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return A list containing the mqlBinary.
+     */
+    java.util.List<com.google.protobuf.ByteString> getMqlBinaryList();
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return The count of mqlBinary.
+     */
+    int getMqlBinaryCount();
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param index The index of the element to return.
+     * @return The mqlBinary at the given index.
+     */
+    com.google.protobuf.ByteString getMqlBinary(int index);
+
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     * @return The schedule.
+     */
+    java.lang.String getSchedule();
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     * @return The bytes for schedule.
+     */
+    com.google.protobuf.ByteString
+        getScheduleBytes();
+
+    /**
+     * <pre>
+     * Whether or not the pipeline is enabled.
+     * </pre>
+     *
+     * <code>bool enabled = 5 [json_name = "enabled"];</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
   }
   /**
    * Protobuf type {@code viam.app.datapipelines.v1.UpdateDataPipelineRequest}
@@ -3339,11 +4189,17 @@ public final class DataPipelines {
       UpdateDataPipelineRequestOrBuilder {
     private UpdateDataPipelineRequest() {
       id_ = "";
+      name_ = "";
+      mqlBinary_ = emptyProtobufList();
+      schedule_ = "";
     }
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.String id_;
     /**
+     * <pre>
+     * The ID of the data pipeline to update.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -3352,6 +4208,10 @@ public final class DataPipelines {
       return id_;
     }
     /**
+     * <pre>
+     * The ID of the data pipeline to update.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -3361,6 +4221,10 @@ public final class DataPipelines {
       return com.google.protobuf.ByteString.copyFromUtf8(id_);
     }
     /**
+     * <pre>
+     * The ID of the data pipeline to update.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      */
@@ -3371,6 +4235,10 @@ public final class DataPipelines {
       id_ = value;
     }
     /**
+     * <pre>
+     * The ID of the data pipeline to update.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      */
     private void clearId() {
@@ -3378,6 +4246,10 @@ public final class DataPipelines {
       id_ = getDefaultInstance().getId();
     }
     /**
+     * <pre>
+     * The ID of the data pipeline to update.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      */
@@ -3388,50 +4260,288 @@ public final class DataPipelines {
 
     }
 
-    public static final int DATA_PIPELINE_FIELD_NUMBER = 2;
-    private viam.app.datapipelines.v1.DataPipelines.DataPipeline dataPipeline_;
+    public static final int NAME_FIELD_NUMBER = 2;
+    private java.lang.String name_;
     /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code>
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
      */
     @java.lang.Override
-    public boolean hasDataPipeline() {
-      return ((bitField0_ & 0x00000001) != 0);
+    public java.lang.String getName() {
+      return name_;
     }
     /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code>
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
      */
     @java.lang.Override
-    public viam.app.datapipelines.v1.DataPipelines.DataPipeline getDataPipeline() {
-      return dataPipeline_ == null ? viam.app.datapipelines.v1.DataPipelines.DataPipeline.getDefaultInstance() : dataPipeline_;
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
     }
     /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code>
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The name to set.
      */
-    private void setDataPipeline(viam.app.datapipelines.v1.DataPipelines.DataPipeline value) {
-      value.getClass();
-  dataPipeline_ = value;
-      bitField0_ |= 0x00000001;
-      }
-    /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeDataPipeline(viam.app.datapipelines.v1.DataPipelines.DataPipeline value) {
-      value.getClass();
-  if (dataPipeline_ != null &&
-          dataPipeline_ != viam.app.datapipelines.v1.DataPipelines.DataPipeline.getDefaultInstance()) {
-        dataPipeline_ =
-          viam.app.datapipelines.v1.DataPipelines.DataPipeline.newBuilder(dataPipeline_).mergeFrom(value).buildPartial();
-      } else {
-        dataPipeline_ = value;
-      }
-      bitField0_ |= 0x00000001;
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
     }
     /**
-     * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code>
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
      */
-    private void clearDataPipeline() {  dataPipeline_ = null;
-      bitField0_ = (bitField0_ & ~0x00000001);
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * A unique identifier at the org level.
+     * </pre>
+     *
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int MQL_BINARY_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> mqlBinary_;
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return A list containing the mqlBinary.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getMqlBinaryList() {
+      return mqlBinary_;
+    }
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return The count of mqlBinary.
+     */
+    @java.lang.Override
+    public int getMqlBinaryCount() {
+      return mqlBinary_.size();
+    }
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param index The index of the element to return.
+     * @return The mqlBinary at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMqlBinary(int index) {
+      return mqlBinary_.get(index);
+    }
+    private void ensureMqlBinaryIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> tmp = mqlBinary_;
+      if (!tmp.isModifiable()) {
+        mqlBinary_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param index The index to set the value at.
+     * @param value The mqlBinary to set.
+     */
+    private void setMqlBinary(
+        int index, com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureMqlBinaryIsMutable();
+      mqlBinary_.set(index, value);
+    }
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param value The mqlBinary to add.
+     */
+    private void addMqlBinary(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureMqlBinaryIsMutable();
+      mqlBinary_.add(value);
+    }
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param values The mqlBinary to add.
+     */
+    private void addAllMqlBinary(
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+      ensureMqlBinaryIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, mqlBinary_);
+    }
+    /**
+     * <pre>
+     * A MongoDB aggregation pipeline as a list of BSON documents, where
+     * each document is one stage in the pipeline.
+     * </pre>
+     *
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     */
+    private void clearMqlBinary() {
+      mqlBinary_ = emptyProtobufList();
+    }
+
+    public static final int SCHEDULE_FIELD_NUMBER = 4;
+    private java.lang.String schedule_;
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     * @return The schedule.
+     */
+    @java.lang.Override
+    public java.lang.String getSchedule() {
+      return schedule_;
+    }
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     * @return The bytes for schedule.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScheduleBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(schedule_);
+    }
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     * @param value The schedule to set.
+     */
+    private void setSchedule(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      schedule_ = value;
+    }
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     */
+    private void clearSchedule() {
+
+      schedule_ = getDefaultInstance().getSchedule();
+    }
+    /**
+     * <pre>
+     * A cron expression representing the expected execution schedule in UTC (note this also
+     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+     * </pre>
+     *
+     * <code>string schedule = 4 [json_name = "schedule"];</code>
+     * @param value The bytes for schedule to set.
+     */
+    private void setScheduleBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      schedule_ = value.toStringUtf8();
+
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 5;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Whether or not the pipeline is enabled.
+     * </pre>
+     *
+     * <code>bool enabled = 5 [json_name = "enabled"];</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+    /**
+     * <pre>
+     * Whether or not the pipeline is enabled.
+     * </pre>
+     *
+     * <code>bool enabled = 5 [json_name = "enabled"];</code>
+     * @param value The enabled to set.
+     */
+    private void setEnabled(boolean value) {
+      
+      enabled_ = value;
+    }
+    /**
+     * <pre>
+     * Whether or not the pipeline is enabled.
+     * </pre>
+     *
+     * <code>bool enabled = 5 [json_name = "enabled"];</code>
+     */
+    private void clearEnabled() {
+
+      enabled_ = false;
     }
 
     public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseFrom(
@@ -3532,6 +4642,10 @@ public final class DataPipelines {
 
 
       /**
+       * <pre>
+       * The ID of the data pipeline to update.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
@@ -3540,6 +4654,10 @@ public final class DataPipelines {
         return instance.getId();
       }
       /**
+       * <pre>
+       * The ID of the data pipeline to update.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
@@ -3549,6 +4667,10 @@ public final class DataPipelines {
         return instance.getIdBytes();
       }
       /**
+       * <pre>
+       * The ID of the data pipeline to update.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -3560,6 +4682,10 @@ public final class DataPipelines {
         return this;
       }
       /**
+       * <pre>
+       * The ID of the data pipeline to update.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @return This builder for chaining.
        */
@@ -3569,6 +4695,10 @@ public final class DataPipelines {
         return this;
       }
       /**
+       * <pre>
+       * The ID of the data pipeline to update.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -3581,49 +4711,289 @@ public final class DataPipelines {
       }
 
       /**
-       * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code>
+       * <pre>
+       * A unique identifier at the org level.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
        */
       @java.lang.Override
-      public boolean hasDataPipeline() {
-        return instance.hasDataPipeline();
+      public java.lang.String getName() {
+        return instance.getName();
       }
       /**
-       * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code>
+       * <pre>
+       * A unique identifier at the org level.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
        */
       @java.lang.Override
-      public viam.app.datapipelines.v1.DataPipelines.DataPipeline getDataPipeline() {
-        return instance.getDataPipeline();
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
       }
       /**
-       * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code>
+       * <pre>
+       * A unique identifier at the org level.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
-      public Builder setDataPipeline(viam.app.datapipelines.v1.DataPipelines.DataPipeline value) {
+      public Builder setName(
+          java.lang.String value) {
         copyOnWrite();
-        instance.setDataPipeline(value);
-        return this;
-        }
-      /**
-       * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code>
-       */
-      public Builder setDataPipeline(
-          viam.app.datapipelines.v1.DataPipelines.DataPipeline.Builder builderForValue) {
-        copyOnWrite();
-        instance.setDataPipeline(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code>
-       */
-      public Builder mergeDataPipeline(viam.app.datapipelines.v1.DataPipelines.DataPipeline value) {
-        copyOnWrite();
-        instance.mergeDataPipeline(value);
+        instance.setName(value);
         return this;
       }
       /**
-       * <code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code>
+       * <pre>
+       * A unique identifier at the org level.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
        */
-      public Builder clearDataPipeline() {  copyOnWrite();
-        instance.clearDataPipeline();
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <pre>
+       * A unique identifier at the org level.
+       * </pre>
+       *
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @return A list containing the mqlBinary.
+       */
+      @java.lang.Override
+      public java.util.List<com.google.protobuf.ByteString>
+          getMqlBinaryList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getMqlBinaryList());
+      }
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @return The count of mqlBinary.
+       */
+      @java.lang.Override
+      public int getMqlBinaryCount() {
+        return instance.getMqlBinaryCount();
+      }
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param index The index of the element to return.
+       * @return The mqlBinary at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMqlBinary(int index) {
+        return instance.getMqlBinary(index);
+      }
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param value The mqlBinary to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMqlBinary(
+          int index, com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMqlBinary(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param value The mqlBinary to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMqlBinary(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addMqlBinary(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param values The mqlBinary to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMqlBinary(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        copyOnWrite();
+        instance.addAllMqlBinary(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * A MongoDB aggregation pipeline as a list of BSON documents, where
+       * each document is one stage in the pipeline.
+       * </pre>
+       *
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMqlBinary() {
+        copyOnWrite();
+        instance.clearMqlBinary();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * A cron expression representing the expected execution schedule in UTC (note this also
+       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+       * </pre>
+       *
+       * <code>string schedule = 4 [json_name = "schedule"];</code>
+       * @return The schedule.
+       */
+      @java.lang.Override
+      public java.lang.String getSchedule() {
+        return instance.getSchedule();
+      }
+      /**
+       * <pre>
+       * A cron expression representing the expected execution schedule in UTC (note this also
+       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+       * </pre>
+       *
+       * <code>string schedule = 4 [json_name = "schedule"];</code>
+       * @return The bytes for schedule.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getScheduleBytes() {
+        return instance.getScheduleBytes();
+      }
+      /**
+       * <pre>
+       * A cron expression representing the expected execution schedule in UTC (note this also
+       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+       * </pre>
+       *
+       * <code>string schedule = 4 [json_name = "schedule"];</code>
+       * @param value The schedule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchedule(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setSchedule(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A cron expression representing the expected execution schedule in UTC (note this also
+       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+       * </pre>
+       *
+       * <code>string schedule = 4 [json_name = "schedule"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchedule() {
+        copyOnWrite();
+        instance.clearSchedule();
+        return this;
+      }
+      /**
+       * <pre>
+       * A cron expression representing the expected execution schedule in UTC (note this also
+       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
+       * </pre>
+       *
+       * <code>string schedule = 4 [json_name = "schedule"];</code>
+       * @param value The bytes for schedule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScheduleBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setScheduleBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Whether or not the pipeline is enabled.
+       * </pre>
+       *
+       * <code>bool enabled = 5 [json_name = "enabled"];</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return instance.getEnabled();
+      }
+      /**
+       * <pre>
+       * Whether or not the pipeline is enabled.
+       * </pre>
+       *
+       * <code>bool enabled = 5 [json_name = "enabled"];</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+        copyOnWrite();
+        instance.setEnabled(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether or not the pipeline is enabled.
+       * </pre>
+       *
+       * <code>bool enabled = 5 [json_name = "enabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        copyOnWrite();
+        instance.clearEnabled();
         return this;
       }
 
@@ -3643,13 +5013,15 @@ public final class DataPipelines {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "bitField0_",
               "id_",
-              "dataPipeline_",
+              "name_",
+              "mqlBinary_",
+              "schedule_",
+              "enabled_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000";
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u001c\u0004\u0208\u0005\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3707,18 +5079,6 @@ public final class DataPipelines {
   public interface UpdateDataPipelineResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.UpdateDataPipelineResponse)
       com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
   }
   /**
    * Protobuf type {@code viam.app.datapipelines.v1.UpdateDataPipelineResponse}
@@ -3729,55 +5089,7 @@ public final class DataPipelines {
       // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.UpdateDataPipelineResponse)
       UpdateDataPipelineResponseOrBuilder {
     private UpdateDataPipelineResponse() {
-      id_ = "";
     }
-    public static final int ID_FIELD_NUMBER = 1;
-    private java.lang.String id_;
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public java.lang.String getId() {
-      return id_;
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(id_);
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The id to set.
-     */
-    private void setId(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      id_ = value;
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     */
-    private void clearId() {
-
-      id_ = getDefaultInstance().getId();
-    }
-    /**
-     * <code>string id = 1 [json_name = "id"];</code>
-     * @param value The bytes for id to set.
-     */
-    private void setIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      id_ = value.toStringUtf8();
-
-    }
-
     public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3875,55 +5187,6 @@ public final class DataPipelines {
       }
 
 
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @return The id.
-       */
-      @java.lang.Override
-      public java.lang.String getId() {
-        return instance.getId();
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @return The bytes for id.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        return instance.getIdBytes();
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setId(value);
-        return this;
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        copyOnWrite();
-        instance.clearId();
-        return this;
-      }
-      /**
-       * <code>string id = 1 [json_name = "id"];</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setIdBytes(value);
-        return this;
-      }
-
       // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.UpdateDataPipelineResponse)
     }
     @java.lang.Override
@@ -3939,11 +5202,8 @@ public final class DataPipelines {
           return new Builder();
         }
         case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "id_",
-            };
-            java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -4003,11 +5263,19 @@ public final class DataPipelines {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
+     * <pre>
+     * The ID of the data pipeline to delete.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * The ID of the data pipeline to delete.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -4028,6 +5296,10 @@ public final class DataPipelines {
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.String id_;
     /**
+     * <pre>
+     * The ID of the data pipeline to delete.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -4036,6 +5308,10 @@ public final class DataPipelines {
       return id_;
     }
     /**
+     * <pre>
+     * The ID of the data pipeline to delete.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -4045,6 +5321,10 @@ public final class DataPipelines {
       return com.google.protobuf.ByteString.copyFromUtf8(id_);
     }
     /**
+     * <pre>
+     * The ID of the data pipeline to delete.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      */
@@ -4055,6 +5335,10 @@ public final class DataPipelines {
       id_ = value;
     }
     /**
+     * <pre>
+     * The ID of the data pipeline to delete.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      */
     private void clearId() {
@@ -4062,6 +5346,10 @@ public final class DataPipelines {
       id_ = getDefaultInstance().getId();
     }
     /**
+     * <pre>
+     * The ID of the data pipeline to delete.
+     * </pre>
+     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      */
@@ -4170,6 +5458,10 @@ public final class DataPipelines {
 
 
       /**
+       * <pre>
+       * The ID of the data pipeline to delete.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
@@ -4178,6 +5470,10 @@ public final class DataPipelines {
         return instance.getId();
       }
       /**
+       * <pre>
+       * The ID of the data pipeline to delete.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
@@ -4187,6 +5483,10 @@ public final class DataPipelines {
         return instance.getIdBytes();
       }
       /**
+       * <pre>
+       * The ID of the data pipeline to delete.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -4198,6 +5498,10 @@ public final class DataPipelines {
         return this;
       }
       /**
+       * <pre>
+       * The ID of the data pipeline to delete.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @return This builder for chaining.
        */
@@ -4207,6 +5511,10 @@ public final class DataPipelines {
         return this;
       }
       /**
+       * <pre>
+       * The ID of the data pipeline to delete.
+       * </pre>
+       *
        * <code>string id = 1 [json_name = "id"];</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
