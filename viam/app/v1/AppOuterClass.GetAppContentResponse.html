@@ -128,8 +128,11 @@ implements <a href="AppOuterClass.GetAppContentResponseOrBuilder.html" title="in
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#URL_FIELD_NUMBER" class="member-name-link">URL_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#BLOB_PATH_FIELD_NUMBER" class="member-name-link">BLOB_PATH_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#ENTRYPOINT_FIELD_NUMBER" class="member-name-link">ENTRYPOINT_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -155,18 +158,28 @@ implements <a href="AppOuterClass.GetAppContentResponseOrBuilder.html" title="in
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg0,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg1)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBlobPath()" class="member-name-link">getBlobPath</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string blob_path = 1 [json_name = "blobPath"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBlobPathBytes()" class="member-name-link">getBlobPathBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string blob_path = 1 [json_name = "blobPath"];</code></div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="AppOuterClass.GetAppContentResponse.html" title="class in viam.app.v1">AppOuterClass.GetAppContentResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUrl()" class="member-name-link">getUrl</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEntrypoint()" class="member-name-link">getEntrypoint</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string url = 1 [json_name = "url"];</code></div>
+<div class="block"><code>string entrypoint = 2 [json_name = "entrypoint"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUrlBytes()" class="member-name-link">getUrlBytes</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEntrypointBytes()" class="member-name-link">getEntrypointBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string url = 1 [json_name = "url"];</code></div>
+<div class="block"><code>string entrypoint = 2 [json_name = "entrypoint"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="AppOuterClass.GetAppContentResponse.Builder.html" title="class in viam.app.v1">AppOuterClass.GetAppContentResponse.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -246,14 +259,28 @@ implements <a href="AppOuterClass.GetAppContentResponseOrBuilder.html" title="in
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="URL_FIELD_NUMBER">
-<h3>URL_FIELD_NUMBER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">URL_FIELD_NUMBER</span></div>
+<section class="detail" id="BLOB_PATH_FIELD_NUMBER">
+<h3>BLOB_PATH_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">BLOB_PATH_FIELD_NUMBER</span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list">
-<li><a href="../../../constant-values.html#viam.app.v1.AppOuterClass.GetAppContentResponse.URL_FIELD_NUMBER">Constant Field Values</a></li>
+<li><a href="../../../constant-values.html#viam.app.v1.AppOuterClass.GetAppContentResponse.BLOB_PATH_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ENTRYPOINT_FIELD_NUMBER">
+<h3>ENTRYPOINT_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ENTRYPOINT_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.AppOuterClass.GetAppContentResponse.ENTRYPOINT_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -268,28 +295,54 @@ implements <a href="AppOuterClass.GetAppContentResponseOrBuilder.html" title="in
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getUrl()">
-<h3>getUrl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getUrl</span>()</div>
-<div class="block"><code>string url = 1 [json_name = "url"];</code></div>
+<section class="detail" id="getBlobPath()">
+<h3>getBlobPath</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getBlobPath</span>()</div>
+<div class="block"><code>string blob_path = 1 [json_name = "blobPath"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="AppOuterClass.GetAppContentResponseOrBuilder.html#getUrl()">getUrl</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetAppContentResponseOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetAppContentResponseOrBuilder</a></code></dd>
+<dd><code><a href="AppOuterClass.GetAppContentResponseOrBuilder.html#getBlobPath()">getBlobPath</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetAppContentResponseOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetAppContentResponseOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>The url.</dd>
+<dd>The blobPath.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getUrlBytes()">
-<h3>getUrlBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getUrlBytes</span>()</div>
-<div class="block"><code>string url = 1 [json_name = "url"];</code></div>
+<section class="detail" id="getBlobPathBytes()">
+<h3>getBlobPathBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getBlobPathBytes</span>()</div>
+<div class="block"><code>string blob_path = 1 [json_name = "blobPath"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="AppOuterClass.GetAppContentResponseOrBuilder.html#getUrlBytes()">getUrlBytes</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetAppContentResponseOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetAppContentResponseOrBuilder</a></code></dd>
+<dd><code><a href="AppOuterClass.GetAppContentResponseOrBuilder.html#getBlobPathBytes()">getBlobPathBytes</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetAppContentResponseOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetAppContentResponseOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>The bytes for url.</dd>
+<dd>The bytes for blobPath.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEntrypoint()">
+<h3>getEntrypoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getEntrypoint</span>()</div>
+<div class="block"><code>string entrypoint = 2 [json_name = "entrypoint"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.GetAppContentResponseOrBuilder.html#getEntrypoint()">getEntrypoint</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetAppContentResponseOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetAppContentResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The entrypoint.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEntrypointBytes()">
+<h3>getEntrypointBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getEntrypointBytes</span>()</div>
+<div class="block"><code>string entrypoint = 2 [json_name = "entrypoint"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.GetAppContentResponseOrBuilder.html#getEntrypointBytes()">getEntrypointBytes</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetAppContentResponseOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetAppContentResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for entrypoint.</dd>
 </dl>
 </section>
 </li>

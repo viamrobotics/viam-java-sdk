@@ -128,11 +128,20 @@ implements <a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#DATA_PIPELINE_FIELD_NUMBER" class="member-name-link">DATA_PIPELINE_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ENABLED_FIELD_NUMBER" class="member-name-link">ENABLED_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#MQL_BINARY_FIELD_NUMBER" class="member-name-link">MQL_BINARY_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#SCHEDULE_FIELD_NUMBER" class="member-name-link">SCHEDULE_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -158,28 +167,73 @@ implements <a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg0,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg1)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataPipelines.DataPipeline.html" title="class in viam.app.datapipelines.v1">DataPipelines.DataPipeline</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDataPipeline()" class="member-name-link">getDataPipeline</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnabled()" class="member-name-link">getEnabled</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Whether or not the pipeline is enabled.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
+<div class="block">
+ The ID of the data pipeline to update.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIdBytes()" class="member-name-link">getIdBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
+<div class="block">
+ The ID of the data pipeline to update.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDataPipeline()" class="member-name-link">hasDataPipeline</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinary(int)" class="member-name-link">getMqlBinary</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code></div>
+<div class="block">
+ A MongoDB aggregation pipeline as a list of BSON documents, where
+ each document is one stage in the pipeline.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinaryCount()" class="member-name-link">getMqlBinaryCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A MongoDB aggregation pipeline as a list of BSON documents, where
+ each document is one stage in the pipeline.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.google.protobuf.ByteString&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinaryList()" class="member-name-link">getMqlBinaryList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A MongoDB aggregation pipeline as a list of BSON documents, where
+ each document is one stage in the pipeline.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A unique identifier at the org level.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A unique identifier at the org level.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSchedule()" class="member-name-link">getSchedule</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A cron expression representing the expected execution schedule in UTC (note this also
+ defines the input time window; an hourly schedule would process 1 hour of data at a time).</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getScheduleBytes()" class="member-name-link">getScheduleBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A cron expression representing the expected execution schedule in UTC (note this also
+ defines the input time window; an hourly schedule would process 1 hour of data at a time).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.Builder.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -273,14 +327,56 @@ implements <a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title
 </section>
 </li>
 <li>
-<section class="detail" id="DATA_PIPELINE_FIELD_NUMBER">
-<h3>DATA_PIPELINE_FIELD_NUMBER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">DATA_PIPELINE_FIELD_NUMBER</span></div>
+<section class="detail" id="NAME_FIELD_NUMBER">
+<h3>NAME_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">NAME_FIELD_NUMBER</span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list">
-<li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest.DATA_PIPELINE_FIELD_NUMBER">Constant Field Values</a></li>
+<li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest.NAME_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="MQL_BINARY_FIELD_NUMBER">
+<h3>MQL_BINARY_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MQL_BINARY_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest.MQL_BINARY_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="SCHEDULE_FIELD_NUMBER">
+<h3>SCHEDULE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">SCHEDULE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest.SCHEDULE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ENABLED_FIELD_NUMBER">
+<h3>ENABLED_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ENABLED_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest.ENABLED_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -298,7 +394,11 @@ implements <a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
+<div class="block"><pre>
+ The ID of the data pipeline to update.
+ </pre>
+
+ <code>string id = 1 [json_name = "id"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
@@ -311,7 +411,11 @@ implements <a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title
 <section class="detail" id="getIdBytes()">
 <h3>getIdBytes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getIdBytes</span>()</div>
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
+<div class="block"><pre>
+ The ID of the data pipeline to update.
+ </pre>
+
+ <code>string id = 1 [json_name = "id"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getIdBytes()">getIdBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
@@ -321,28 +425,145 @@ implements <a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title
 </section>
 </li>
 <li>
-<section class="detail" id="hasDataPipeline()">
-<h3>hasDataPipeline</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasDataPipeline</span>()</div>
-<div class="block"><code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code></div>
+<section class="detail" id="getName()">
+<h3>getName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
+<div class="block"><pre>
+ A unique identifier at the org level.
+ </pre>
+
+ <code>string name = 2 [json_name = "name"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#hasDataPipeline()">hasDataPipeline</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
+<dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>Whether the dataPipeline field is set.</dd>
+<dd>The name.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getDataPipeline()">
-<h3>getDataPipeline</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataPipelines.DataPipeline.html" title="class in viam.app.datapipelines.v1">DataPipelines.DataPipeline</a></span>&nbsp;<span class="element-name">getDataPipeline</span>()</div>
-<div class="block"><code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 2 [json_name = "dataPipeline"];</code></div>
+<section class="detail" id="getNameBytes()">
+<h3>getNameBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getNameBytes</span>()</div>
+<div class="block"><pre>
+ A unique identifier at the org level.
+ </pre>
+
+ <code>string name = 2 [json_name = "name"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getDataPipeline()">getDataPipeline</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
+<dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getNameBytes()">getNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>The dataPipeline.</dd>
+<dd>The bytes for name.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMqlBinaryList()">
+<h3>getMqlBinaryList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.google.protobuf.ByteString&gt;</span>&nbsp;<span class="element-name">getMqlBinaryList</span>()</div>
+<div class="block"><pre>
+ A MongoDB aggregation pipeline as a list of BSON documents, where
+ each document is one stage in the pipeline.
+ </pre>
+
+ <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getMqlBinaryList()">getMqlBinaryList</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>A list containing the mqlBinary.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMqlBinaryCount()">
+<h3>getMqlBinaryCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMqlBinaryCount</span>()</div>
+<div class="block"><pre>
+ A MongoDB aggregation pipeline as a list of BSON documents, where
+ each document is one stage in the pipeline.
+ </pre>
+
+ <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getMqlBinaryCount()">getMqlBinaryCount</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The count of mqlBinary.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMqlBinary(int)">
+<h3>getMqlBinary</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getMqlBinary</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ A MongoDB aggregation pipeline as a list of BSON documents, where
+ each document is one stage in the pipeline.
+ </pre>
+
+ <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getMqlBinary(int)">getMqlBinary</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index of the element to return.</dd>
+<dt>Returns:</dt>
+<dd>The mqlBinary at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSchedule()">
+<h3>getSchedule</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getSchedule</span>()</div>
+<div class="block"><pre>
+ A cron expression representing the expected execution schedule in UTC (note this also
+ defines the input time window; an hourly schedule would process 1 hour of data at a time).
+ </pre>
+
+ <code>string schedule = 4 [json_name = "schedule"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getSchedule()">getSchedule</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The schedule.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getScheduleBytes()">
+<h3>getScheduleBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getScheduleBytes</span>()</div>
+<div class="block"><pre>
+ A cron expression representing the expected execution schedule in UTC (note this also
+ defines the input time window; an hourly schedule would process 1 hour of data at a time).
+ </pre>
+
+ <code>string schedule = 4 [json_name = "schedule"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getScheduleBytes()">getScheduleBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for schedule.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEnabled()">
+<h3>getEnabled</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getEnabled</span>()</div>
+<div class="block"><pre>
+ Whether or not the pipeline is enabled.
+ </pre>
+
+ <code>bool enabled = 5 [json_name = "enabled"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getEnabled()">getEnabled</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The enabled.</dd>
 </dl>
 </section>
 </li>

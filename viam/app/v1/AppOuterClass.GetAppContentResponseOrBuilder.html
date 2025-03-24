@@ -102,14 +102,24 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUrl()" class="member-name-link">getUrl</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBlobPath()" class="member-name-link">getBlobPath</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>string url = 1 [json_name = "url"];</code></div>
+<div class="block"><code>string blob_path = 1 [json_name = "blobPath"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUrlBytes()" class="member-name-link">getUrlBytes</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBlobPathBytes()" class="member-name-link">getBlobPathBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>string url = 1 [json_name = "url"];</code></div>
+<div class="block"><code>string blob_path = 1 [json_name = "blobPath"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEntrypoint()" class="member-name-link">getEntrypoint</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>string entrypoint = 2 [json_name = "entrypoint"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEntrypointBytes()" class="member-name-link">getEntrypointBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>string entrypoint = 2 [json_name = "entrypoint"];</code></div>
 </div>
 </div>
 </div>
@@ -129,24 +139,46 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getUrl()">
-<h3>getUrl</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getUrl</span>()</div>
-<div class="block"><code>string url = 1 [json_name = "url"];</code></div>
+<section class="detail" id="getBlobPath()">
+<h3>getBlobPath</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getBlobPath</span>()</div>
+<div class="block"><code>string blob_path = 1 [json_name = "blobPath"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>The url.</dd>
+<dd>The blobPath.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getUrlBytes()">
-<h3>getUrlBytes</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getUrlBytes</span>()</div>
-<div class="block"><code>string url = 1 [json_name = "url"];</code></div>
+<section class="detail" id="getBlobPathBytes()">
+<h3>getBlobPathBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getBlobPathBytes</span>()</div>
+<div class="block"><code>string blob_path = 1 [json_name = "blobPath"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>The bytes for url.</dd>
+<dd>The bytes for blobPath.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEntrypoint()">
+<h3>getEntrypoint</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getEntrypoint</span>()</div>
+<div class="block"><code>string entrypoint = 2 [json_name = "entrypoint"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The entrypoint.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEntrypointBytes()">
+<h3>getEntrypointBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getEntrypointBytes</span>()</div>
+<div class="block"><code>string entrypoint = 2 [json_name = "entrypoint"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for entrypoint.</dd>
 </dl>
 </section>
 </li>

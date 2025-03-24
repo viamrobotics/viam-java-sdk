@@ -128,8 +128,17 @@ implements <a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#DATA_PIPELINE_FIELD_NUMBER" class="member-name-link">DATA_PIPELINE_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MQL_BINARY_FIELD_NUMBER" class="member-name-link">MQL_BINARY_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#ORGANIZATION_ID_FIELD_NUMBER" class="member-name-link">ORGANIZATION_ID_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#SCHEDULE_FIELD_NUMBER" class="member-name-link">SCHEDULE_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -155,70 +164,119 @@ implements <a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg0,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg1)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataPipelines.DataPipeline.html" title="class in viam.app.datapipelines.v1">DataPipelines.DataPipeline</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDataPipeline()" class="member-name-link">getDataPipeline</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinary(int)" class="member-name-link">getMqlBinary</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A MongoDB aggregation pipeline as a list of BSON documents, where
+ each document is one stage in the pipeline.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDataPipeline()" class="member-name-link">hasDataPipeline</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinaryCount()" class="member-name-link">getMqlBinaryCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code></div>
+<div class="block">
+ A MongoDB aggregation pipeline as a list of BSON documents, where
+ each document is one stage in the pipeline.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.Builder.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.google.protobuf.ByteString&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinaryList()" class="member-name-link">getMqlBinaryList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A MongoDB aggregation pipeline as a list of BSON documents, where
+ each document is one stage in the pipeline.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A unique identifier at the org level.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A unique identifier at the org level.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The associated Viam organization ID.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The associated Viam organization ID.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSchedule()" class="member-name-link">getSchedule</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A cron expression representing the expected execution schedule in UTC (note this also
+ defines the input time window; an hourly schedule would process 1 hour of data at a time).</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getScheduleBytes()" class="member-name-link">getScheduleBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A cron expression representing the expected execution schedule in UTC (note this also
+ defines the input time window; an hourly schedule would process 1 hour of data at a time).</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.Builder.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineRequest)" class="member-name-link">newBuilder</a><wbr>(<a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a>&nbsp;prototype)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.Builder.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineRequest)" class="member-name-link">newBuilder</a><wbr>(<a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a>&nbsp;prototype)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser&lt;<a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser&lt;<a href="DataPipelines.CreateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequest</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -246,14 +304,56 @@ implements <a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="DATA_PIPELINE_FIELD_NUMBER">
-<h3>DATA_PIPELINE_FIELD_NUMBER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">DATA_PIPELINE_FIELD_NUMBER</span></div>
+<section class="detail" id="ORGANIZATION_ID_FIELD_NUMBER">
+<h3>ORGANIZATION_ID_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ORGANIZATION_ID_FIELD_NUMBER</span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list">
-<li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineRequest.DATA_PIPELINE_FIELD_NUMBER">Constant Field Values</a></li>
+<li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineRequest.ORGANIZATION_ID_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="NAME_FIELD_NUMBER">
+<h3>NAME_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">NAME_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineRequest.NAME_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="MQL_BINARY_FIELD_NUMBER">
+<h3>MQL_BINARY_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MQL_BINARY_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineRequest.MQL_BINARY_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="SCHEDULE_FIELD_NUMBER">
+<h3>SCHEDULE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">SCHEDULE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineRequest.SCHEDULE_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -268,28 +368,162 @@ implements <a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="hasDataPipeline()">
-<h3>hasDataPipeline</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasDataPipeline</span>()</div>
-<div class="block"><code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code></div>
+<section class="detail" id="getOrganizationId()">
+<h3>getOrganizationId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getOrganizationId</span>()</div>
+<div class="block"><pre>
+ The associated Viam organization ID.
+ </pre>
+
+ <code>string organization_id = 1 [json_name = "organizationId"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html#hasDataPipeline()">hasDataPipeline</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequestOrBuilder</a></code></dd>
+<dd><code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html#getOrganizationId()">getOrganizationId</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>Whether the dataPipeline field is set.</dd>
+<dd>The organizationId.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getDataPipeline()">
-<h3>getDataPipeline</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataPipelines.DataPipeline.html" title="class in viam.app.datapipelines.v1">DataPipelines.DataPipeline</a></span>&nbsp;<span class="element-name">getDataPipeline</span>()</div>
-<div class="block"><code>.viam.app.datapipelines.v1.DataPipeline data_pipeline = 1 [json_name = "dataPipeline"];</code></div>
+<section class="detail" id="getOrganizationIdBytes()">
+<h3>getOrganizationIdBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getOrganizationIdBytes</span>()</div>
+<div class="block"><pre>
+ The associated Viam organization ID.
+ </pre>
+
+ <code>string organization_id = 1 [json_name = "organizationId"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html#getDataPipeline()">getDataPipeline</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequestOrBuilder</a></code></dd>
+<dd><code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html#getOrganizationIdBytes()">getOrganizationIdBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>The dataPipeline.</dd>
+<dd>The bytes for organizationId.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getName()">
+<h3>getName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
+<div class="block"><pre>
+ A unique identifier at the org level.
+ </pre>
+
+ <code>string name = 2 [json_name = "name"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The name.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getNameBytes()">
+<h3>getNameBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getNameBytes</span>()</div>
+<div class="block"><pre>
+ A unique identifier at the org level.
+ </pre>
+
+ <code>string name = 2 [json_name = "name"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html#getNameBytes()">getNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for name.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMqlBinaryList()">
+<h3>getMqlBinaryList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.google.protobuf.ByteString&gt;</span>&nbsp;<span class="element-name">getMqlBinaryList</span>()</div>
+<div class="block"><pre>
+ A MongoDB aggregation pipeline as a list of BSON documents, where
+ each document is one stage in the pipeline.
+ </pre>
+
+ <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html#getMqlBinaryList()">getMqlBinaryList</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>A list containing the mqlBinary.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMqlBinaryCount()">
+<h3>getMqlBinaryCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMqlBinaryCount</span>()</div>
+<div class="block"><pre>
+ A MongoDB aggregation pipeline as a list of BSON documents, where
+ each document is one stage in the pipeline.
+ </pre>
+
+ <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html#getMqlBinaryCount()">getMqlBinaryCount</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The count of mqlBinary.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMqlBinary(int)">
+<h3>getMqlBinary</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getMqlBinary</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ A MongoDB aggregation pipeline as a list of BSON documents, where
+ each document is one stage in the pipeline.
+ </pre>
+
+ <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html#getMqlBinary(int)">getMqlBinary</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index of the element to return.</dd>
+<dt>Returns:</dt>
+<dd>The mqlBinary at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSchedule()">
+<h3>getSchedule</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getSchedule</span>()</div>
+<div class="block"><pre>
+ A cron expression representing the expected execution schedule in UTC (note this also
+ defines the input time window; an hourly schedule would process 1 hour of data at a time).
+ </pre>
+
+ <code>string schedule = 4 [json_name = "schedule"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html#getSchedule()">getSchedule</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The schedule.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getScheduleBytes()">
+<h3>getScheduleBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getScheduleBytes</span>()</div>
+<div class="block"><pre>
+ A cron expression representing the expected execution schedule in UTC (note this also
+ defines the input time window; an hourly schedule would process 1 hour of data at a time).
+ </pre>
+
+ <code>string schedule = 4 [json_name = "schedule"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html#getScheduleBytes()">getScheduleBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.CreateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.CreateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for schedule.</dd>
 </dl>
 </section>
 </li>
