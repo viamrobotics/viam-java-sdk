@@ -3,9 +3,9 @@ package com.viam.sdk.core.component.button
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
 import com.viam.common.v1.Common
+import com.viam.component.button.v1.Button.*
 import com.viam.component.button.v1.ButtonServiceGrpc
 import com.viam.component.button.v1.ButtonServiceGrpc.ButtonServiceBlockingStub
-import com.viam.component.button.v1.PushRequest
 import com.viam.sdk.core.resource.ResourceManager
 import io.grpc.inprocess.InProcessChannelBuilder
 import io.grpc.inprocess.InProcessServerBuilder
