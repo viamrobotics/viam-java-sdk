@@ -1,9 +1,8 @@
 package com.viam.sdk.core.component.button
 
 import com.viam.common.v1.Common.*
+import com.viam.component.button.v1.Button.*
 import com.viam.component.button.v1.ButtonServiceGrpc
-import com.viam.component.button.v1.PushRequest
-import com.viam.component.button.v1.PushResponse
 import com.viam.sdk.core.resource.ResourceManager
 import com.viam.sdk.core.resource.ResourceRPCService
 import io.grpc.stub.StreamObserver

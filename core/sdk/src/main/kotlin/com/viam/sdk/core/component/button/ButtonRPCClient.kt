@@ -6,7 +6,7 @@ import com.viam.common.v1.Common
 import com.viam.common.v1.Common.GetGeometriesRequest
 import com.viam.component.button.v1.ButtonServiceGrpc
 import com.viam.component.button.v1.ButtonServiceGrpc.ButtonServiceBlockingStub
-import com.viam.component.button.v1.PushRequest
+import com.viam.component.button.v1.Button.*
 import com.viam.sdk.core.rpc.Channel
 import java.util.*
 import kotlin.jvm.optionals.getOrDefault
