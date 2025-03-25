@@ -102,6 +102,12 @@ public class ResourceManager implements Closeable {
                 BoardRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
+                Button.SUBTYPE,
+                ButtonServiceGrpc.SERVICE_NAME,
+                ButtonRPCService::new,
+                ButtonRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
                 Camera.SUBTYPE,
                 CameraServiceGrpc.SERVICE_NAME,
                 CameraRPCService::new,
