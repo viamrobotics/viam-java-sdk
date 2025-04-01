@@ -102,6 +102,16 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBillingTier()" class="member-name-link">getBillingTier</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>optional string billing_tier = 5 [json_name = "billingTier"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBillingTierBytes()" class="member-name-link">getBillingTierBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>optional string billing_tier = 5 [json_name = "billingTier"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrgCid()" class="member-name-link">getOrgCid</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>optional string org_cid = 3 [json_name = "orgCid"];</code></div>
@@ -142,13 +152,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block"><code>optional string public_namespace = 4 [json_name = "publicNamespace"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasOrgCid()" class="member-name-link">hasOrgCid</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasBillingTier()" class="member-name-link">hasBillingTier</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>optional string org_cid = 3 [json_name = "orgCid"];</code></div>
+<div class="block"><code>optional string billing_tier = 5 [json_name = "billingTier"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPublicNamespace()" class="member-name-link">hasPublicNamespace</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasOrgCid()" class="member-name-link">hasOrgCid</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>optional string org_cid = 3 [json_name = "orgCid"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPublicNamespace()" class="member-name-link">hasPublicNamespace</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>optional string public_namespace = 4 [json_name = "publicNamespace"];</code></div>
 </div>
 </div>
@@ -275,6 +290,39 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The bytes for publicNamespace.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasBillingTier()">
+<h3>hasBillingTier</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasBillingTier</span>()</div>
+<div class="block"><code>optional string billing_tier = 5 [json_name = "billingTier"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the billingTier field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBillingTier()">
+<h3>getBillingTier</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getBillingTier</span>()</div>
+<div class="block"><code>optional string billing_tier = 5 [json_name = "billingTier"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The billingTier.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBillingTierBytes()">
+<h3>getBillingTierBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getBillingTierBytes</span>()</div>
+<div class="block"><code>optional string billing_tier = 5 [json_name = "billingTier"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for billingTier.</dd>
 </dl>
 </section>
 </li>

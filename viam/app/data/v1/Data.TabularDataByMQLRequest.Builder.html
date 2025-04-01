@@ -146,45 +146,73 @@ implements <a href="Data.TabularDataByMQLRequestOrBuilder.html" title="interface
 <div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearUseRecentData()" class="member-name-link">clearUseRecentData</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearUseDataPipeline()" class="member-name-link">clearUseDataPipeline</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ if set, MQL query will target the sink collection for the data pipeline name
+ referenced by this value under the given organization.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearUseRecentData()" class="member-name-link">clearUseRecentData</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinary(int)" class="member-name-link">getMqlBinary</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- mql_binary accepts a MongoDB aggregation pipeline as a list of BSON documents, where each
- document is one stage in the pipeline.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinaryCount()" class="member-name-link">getMqlBinaryCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinary(int)" class="member-name-link">getMqlBinary</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  mql_binary accepts a MongoDB aggregation pipeline as a list of BSON documents, where each
  document is one stage in the pipeline.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.google.protobuf.ByteString&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinaryList()" class="member-name-link">getMqlBinaryList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinaryCount()" class="member-name-link">getMqlBinaryCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  mql_binary accepts a MongoDB aggregation pipeline as a list of BSON documents, where each
  document is one stage in the pipeline.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.google.protobuf.ByteString&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinaryList()" class="member-name-link">getMqlBinaryList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ mql_binary accepts a MongoDB aggregation pipeline as a list of BSON documents, where each
+ document is one stage in the pipeline.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUseDataPipeline()" class="member-name-link">getUseDataPipeline</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+<div class="block">
+ if set, MQL query will target the sink collection for the data pipeline name
+ referenced by this value under the given organization.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUseDataPipelineBytes()" class="member-name-link">getUseDataPipelineBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ if set, MQL query will target the sink collection for the data pipeline name
+ referenced by this value under the given organization.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUseRecentData()" class="member-name-link">getUseRecentData</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUseRecentData()" class="member-name-link">getUseRecentData</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasUseDataPipeline()" class="member-name-link">hasUseDataPipeline</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code></div>
+<div class="block">
+ if set, MQL query will target the sink collection for the data pipeline name
+ referenced by this value under the given organization.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasUseRecentData()" class="member-name-link">hasUseRecentData</a>()</code></div>
@@ -208,6 +236,20 @@ implements <a href="Data.TabularDataByMQLRequestOrBuilder.html" title="interface
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrganizationIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setOrganizationIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUseDataPipeline(java.lang.String)" class="member-name-link">setUseDataPipeline</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ if set, MQL query will target the sink collection for the data pipeline name
+ referenced by this value under the given organization.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUseDataPipelineBytes(com.google.protobuf.ByteString)" class="member-name-link">setUseDataPipelineBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ if set, MQL query will target the sink collection for the data pipeline name
+ referenced by this value under the given organization.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUseRecentData(boolean)" class="member-name-link">setUseRecentData</a><wbr>(boolean&nbsp;value)</code></div>
@@ -482,6 +524,112 @@ implements <a href="Data.TabularDataByMQLRequestOrBuilder.html" title="interface
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></span>&nbsp;<span class="element-name">clearUseRecentData</span>()</div>
 <div class="block"><code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code></div>
 <dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasUseDataPipeline()">
+<h3>hasUseDataPipeline</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasUseDataPipeline</span>()</div>
+<div class="block"><pre>
+ if set, MQL query will target the sink collection for the data pipeline name
+ referenced by this value under the given organization.
+ </pre>
+
+ <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.TabularDataByMQLRequestOrBuilder.html#hasUseDataPipeline()">hasUseDataPipeline</a></code>&nbsp;in interface&nbsp;<code><a href="Data.TabularDataByMQLRequestOrBuilder.html" title="interface in viam.app.data.v1">Data.TabularDataByMQLRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the useDataPipeline field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUseDataPipeline()">
+<h3>getUseDataPipeline</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getUseDataPipeline</span>()</div>
+<div class="block"><pre>
+ if set, MQL query will target the sink collection for the data pipeline name
+ referenced by this value under the given organization.
+ </pre>
+
+ <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.TabularDataByMQLRequestOrBuilder.html#getUseDataPipeline()">getUseDataPipeline</a></code>&nbsp;in interface&nbsp;<code><a href="Data.TabularDataByMQLRequestOrBuilder.html" title="interface in viam.app.data.v1">Data.TabularDataByMQLRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The useDataPipeline.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUseDataPipelineBytes()">
+<h3>getUseDataPipelineBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getUseDataPipelineBytes</span>()</div>
+<div class="block"><pre>
+ if set, MQL query will target the sink collection for the data pipeline name
+ referenced by this value under the given organization.
+ </pre>
+
+ <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.TabularDataByMQLRequestOrBuilder.html#getUseDataPipelineBytes()">getUseDataPipelineBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Data.TabularDataByMQLRequestOrBuilder.html" title="interface in viam.app.data.v1">Data.TabularDataByMQLRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for useDataPipeline.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setUseDataPipeline(java.lang.String)">
+<h3>setUseDataPipeline</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></span>&nbsp;<span class="element-name">setUseDataPipeline</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ if set, MQL query will target the sink collection for the data pipeline name
+ referenced by this value under the given organization.
+ </pre>
+
+ <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The useDataPipeline to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearUseDataPipeline()">
+<h3>clearUseDataPipeline</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></span>&nbsp;<span class="element-name">clearUseDataPipeline</span>()</div>
+<div class="block"><pre>
+ if set, MQL query will target the sink collection for the data pipeline name
+ referenced by this value under the given organization.
+ </pre>
+
+ <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setUseDataPipelineBytes(com.google.protobuf.ByteString)">
+<h3>setUseDataPipelineBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></span>&nbsp;<span class="element-name">setUseDataPipelineBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="block"><pre>
+ if set, MQL query will target the sink collection for the data pipeline name
+ referenced by this value under the given organization.
+ </pre>
+
+ <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The bytes for useDataPipeline to set.</dd>
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
 </dl>
