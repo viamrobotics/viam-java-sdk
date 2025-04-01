@@ -3452,7 +3452,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=102
+     *     See app/v1/billing.proto;l=106
      * @return The cloudStorageUsageCost.
      */
     @java.lang.Deprecated double getCloudStorageUsageCost();
@@ -3460,7 +3460,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=103
+     *     See app/v1/billing.proto;l=107
      * @return The dataUploadUsageCost.
      */
     @java.lang.Deprecated double getDataUploadUsageCost();
@@ -3468,7 +3468,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=104
+     *     See app/v1/billing.proto;l=108
      * @return The dataEgresUsageCost.
      */
     @java.lang.Deprecated double getDataEgresUsageCost();
@@ -3476,7 +3476,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=105
+     *     See app/v1/billing.proto;l=109
      * @return The remoteControlUsageCost.
      */
     @java.lang.Deprecated double getRemoteControlUsageCost();
@@ -3484,7 +3484,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=106
+     *     See app/v1/billing.proto;l=110
      * @return The standardComputeUsageCost.
      */
     @java.lang.Deprecated double getStandardComputeUsageCost();
@@ -3492,7 +3492,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=107
+     *     See app/v1/billing.proto;l=111
      * @return The discountAmount.
      */
     @java.lang.Deprecated double getDiscountAmount();
@@ -3500,7 +3500,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=108
+     *     See app/v1/billing.proto;l=112
      * @return The totalUsageWithDiscount.
      */
     @java.lang.Deprecated double getTotalUsageWithDiscount();
@@ -3508,7 +3508,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=109
+     *     See app/v1/billing.proto;l=113
      * @return The totalUsageWithoutDiscount.
      */
     @java.lang.Deprecated double getTotalUsageWithoutDiscount();
@@ -3516,7 +3516,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=110
+     *     See app/v1/billing.proto;l=114
      * @return The perMachineUsageCost.
      */
     @java.lang.Deprecated double getPerMachineUsageCost();
@@ -3524,7 +3524,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=111
+     *     See app/v1/billing.proto;l=115
      * @return The binaryDataCloudStorageUsageCost.
      */
     @java.lang.Deprecated double getBinaryDataCloudStorageUsageCost();
@@ -3532,7 +3532,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=112
+     *     See app/v1/billing.proto;l=116
      * @return The otherCloudStorageUsageCost.
      */
     @java.lang.Deprecated double getOtherCloudStorageUsageCost();
@@ -3770,7 +3770,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=102
+     *     See app/v1/billing.proto;l=106
      * @return The cloudStorageUsageCost.
      */
     @java.lang.Override
@@ -3784,7 +3784,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=102
+     *     See app/v1/billing.proto;l=106
      * @param value The cloudStorageUsageCost to set.
      */
     private void setCloudStorageUsageCost(double value) {
@@ -3798,7 +3798,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=102
+     *     See app/v1/billing.proto;l=106
      */
     private void clearCloudStorageUsageCost() {
 
@@ -3810,7 +3810,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=103
+     *     See app/v1/billing.proto;l=107
      * @return The dataUploadUsageCost.
      */
     @java.lang.Override
@@ -3820,7 +3820,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=103
+     *     See app/v1/billing.proto;l=107
      * @param value The dataUploadUsageCost to set.
      */
     private void setDataUploadUsageCost(double value) {
@@ -3830,7 +3830,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=103
+     *     See app/v1/billing.proto;l=107
      */
     private void clearDataUploadUsageCost() {
 
@@ -3842,7 +3842,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=104
+     *     See app/v1/billing.proto;l=108
      * @return The dataEgresUsageCost.
      */
     @java.lang.Override
@@ -3852,7 +3852,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=104
+     *     See app/v1/billing.proto;l=108
      * @param value The dataEgresUsageCost to set.
      */
     private void setDataEgresUsageCost(double value) {
@@ -3862,7 +3862,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=104
+     *     See app/v1/billing.proto;l=108
      */
     private void clearDataEgresUsageCost() {
 
@@ -3874,7 +3874,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=105
+     *     See app/v1/billing.proto;l=109
      * @return The remoteControlUsageCost.
      */
     @java.lang.Override
@@ -3884,7 +3884,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=105
+     *     See app/v1/billing.proto;l=109
      * @param value The remoteControlUsageCost to set.
      */
     private void setRemoteControlUsageCost(double value) {
@@ -3894,7 +3894,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=105
+     *     See app/v1/billing.proto;l=109
      */
     private void clearRemoteControlUsageCost() {
 
@@ -3906,7 +3906,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=106
+     *     See app/v1/billing.proto;l=110
      * @return The standardComputeUsageCost.
      */
     @java.lang.Override
@@ -3916,7 +3916,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=106
+     *     See app/v1/billing.proto;l=110
      * @param value The standardComputeUsageCost to set.
      */
     private void setStandardComputeUsageCost(double value) {
@@ -3926,7 +3926,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=106
+     *     See app/v1/billing.proto;l=110
      */
     private void clearStandardComputeUsageCost() {
 
@@ -3938,7 +3938,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=107
+     *     See app/v1/billing.proto;l=111
      * @return The discountAmount.
      */
     @java.lang.Override
@@ -3948,7 +3948,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=107
+     *     See app/v1/billing.proto;l=111
      * @param value The discountAmount to set.
      */
     private void setDiscountAmount(double value) {
@@ -3958,7 +3958,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=107
+     *     See app/v1/billing.proto;l=111
      */
     private void clearDiscountAmount() {
 
@@ -3970,7 +3970,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=108
+     *     See app/v1/billing.proto;l=112
      * @return The totalUsageWithDiscount.
      */
     @java.lang.Override
@@ -3980,7 +3980,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=108
+     *     See app/v1/billing.proto;l=112
      * @param value The totalUsageWithDiscount to set.
      */
     private void setTotalUsageWithDiscount(double value) {
@@ -3990,7 +3990,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=108
+     *     See app/v1/billing.proto;l=112
      */
     private void clearTotalUsageWithDiscount() {
 
@@ -4002,7 +4002,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=109
+     *     See app/v1/billing.proto;l=113
      * @return The totalUsageWithoutDiscount.
      */
     @java.lang.Override
@@ -4012,7 +4012,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=109
+     *     See app/v1/billing.proto;l=113
      * @param value The totalUsageWithoutDiscount to set.
      */
     private void setTotalUsageWithoutDiscount(double value) {
@@ -4022,7 +4022,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=109
+     *     See app/v1/billing.proto;l=113
      */
     private void clearTotalUsageWithoutDiscount() {
 
@@ -4034,7 +4034,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=110
+     *     See app/v1/billing.proto;l=114
      * @return The perMachineUsageCost.
      */
     @java.lang.Override
@@ -4044,7 +4044,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=110
+     *     See app/v1/billing.proto;l=114
      * @param value The perMachineUsageCost to set.
      */
     private void setPerMachineUsageCost(double value) {
@@ -4054,7 +4054,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=110
+     *     See app/v1/billing.proto;l=114
      */
     private void clearPerMachineUsageCost() {
 
@@ -4066,7 +4066,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=111
+     *     See app/v1/billing.proto;l=115
      * @return The binaryDataCloudStorageUsageCost.
      */
     @java.lang.Override
@@ -4076,7 +4076,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=111
+     *     See app/v1/billing.proto;l=115
      * @param value The binaryDataCloudStorageUsageCost to set.
      */
     private void setBinaryDataCloudStorageUsageCost(double value) {
@@ -4086,7 +4086,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=111
+     *     See app/v1/billing.proto;l=115
      */
     private void clearBinaryDataCloudStorageUsageCost() {
 
@@ -4098,7 +4098,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=112
+     *     See app/v1/billing.proto;l=116
      * @return The otherCloudStorageUsageCost.
      */
     @java.lang.Override
@@ -4108,7 +4108,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=112
+     *     See app/v1/billing.proto;l=116
      * @param value The otherCloudStorageUsageCost to set.
      */
     private void setOtherCloudStorageUsageCost(double value) {
@@ -4118,7 +4118,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=112
+     *     See app/v1/billing.proto;l=116
      */
     private void clearOtherCloudStorageUsageCost() {
 
@@ -4453,7 +4453,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=102
+       *     See app/v1/billing.proto;l=106
        * @return The cloudStorageUsageCost.
        */
       @java.lang.Override
@@ -4467,7 +4467,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=102
+       *     See app/v1/billing.proto;l=106
        * @param value The cloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4483,7 +4483,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=102
+       *     See app/v1/billing.proto;l=106
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearCloudStorageUsageCost() {
@@ -4495,7 +4495,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=103
+       *     See app/v1/billing.proto;l=107
        * @return The dataUploadUsageCost.
        */
       @java.lang.Override
@@ -4505,7 +4505,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=103
+       *     See app/v1/billing.proto;l=107
        * @param value The dataUploadUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4517,7 +4517,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=103
+       *     See app/v1/billing.proto;l=107
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDataUploadUsageCost() {
@@ -4529,7 +4529,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=104
+       *     See app/v1/billing.proto;l=108
        * @return The dataEgresUsageCost.
        */
       @java.lang.Override
@@ -4539,7 +4539,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=104
+       *     See app/v1/billing.proto;l=108
        * @param value The dataEgresUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4551,7 +4551,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=104
+       *     See app/v1/billing.proto;l=108
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDataEgresUsageCost() {
@@ -4563,7 +4563,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=105
+       *     See app/v1/billing.proto;l=109
        * @return The remoteControlUsageCost.
        */
       @java.lang.Override
@@ -4573,7 +4573,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=105
+       *     See app/v1/billing.proto;l=109
        * @param value The remoteControlUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4585,7 +4585,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=105
+       *     See app/v1/billing.proto;l=109
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearRemoteControlUsageCost() {
@@ -4597,7 +4597,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=106
+       *     See app/v1/billing.proto;l=110
        * @return The standardComputeUsageCost.
        */
       @java.lang.Override
@@ -4607,7 +4607,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=106
+       *     See app/v1/billing.proto;l=110
        * @param value The standardComputeUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4619,7 +4619,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=106
+       *     See app/v1/billing.proto;l=110
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearStandardComputeUsageCost() {
@@ -4631,7 +4631,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=107
+       *     See app/v1/billing.proto;l=111
        * @return The discountAmount.
        */
       @java.lang.Override
@@ -4641,7 +4641,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=107
+       *     See app/v1/billing.proto;l=111
        * @param value The discountAmount to set.
        * @return This builder for chaining.
        */
@@ -4653,7 +4653,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=107
+       *     See app/v1/billing.proto;l=111
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDiscountAmount() {
@@ -4665,7 +4665,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=108
+       *     See app/v1/billing.proto;l=112
        * @return The totalUsageWithDiscount.
        */
       @java.lang.Override
@@ -4675,7 +4675,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=108
+       *     See app/v1/billing.proto;l=112
        * @param value The totalUsageWithDiscount to set.
        * @return This builder for chaining.
        */
@@ -4687,7 +4687,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=108
+       *     See app/v1/billing.proto;l=112
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalUsageWithDiscount() {
@@ -4699,7 +4699,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=109
+       *     See app/v1/billing.proto;l=113
        * @return The totalUsageWithoutDiscount.
        */
       @java.lang.Override
@@ -4709,7 +4709,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=109
+       *     See app/v1/billing.proto;l=113
        * @param value The totalUsageWithoutDiscount to set.
        * @return This builder for chaining.
        */
@@ -4721,7 +4721,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=109
+       *     See app/v1/billing.proto;l=113
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalUsageWithoutDiscount() {
@@ -4733,7 +4733,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=110
+       *     See app/v1/billing.proto;l=114
        * @return The perMachineUsageCost.
        */
       @java.lang.Override
@@ -4743,7 +4743,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=110
+       *     See app/v1/billing.proto;l=114
        * @param value The perMachineUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4755,7 +4755,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=110
+       *     See app/v1/billing.proto;l=114
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearPerMachineUsageCost() {
@@ -4767,7 +4767,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=111
+       *     See app/v1/billing.proto;l=115
        * @return The binaryDataCloudStorageUsageCost.
        */
       @java.lang.Override
@@ -4777,7 +4777,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=111
+       *     See app/v1/billing.proto;l=115
        * @param value The binaryDataCloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4789,7 +4789,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=111
+       *     See app/v1/billing.proto;l=115
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearBinaryDataCloudStorageUsageCost() {
@@ -4801,7 +4801,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=112
+       *     See app/v1/billing.proto;l=116
        * @return The otherCloudStorageUsageCost.
        */
       @java.lang.Override
@@ -4811,7 +4811,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=112
+       *     See app/v1/billing.proto;l=116
        * @param value The otherCloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4823,7 +4823,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=112
+       *     See app/v1/billing.proto;l=116
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearOtherCloudStorageUsageCost() {
@@ -8083,6 +8083,1171 @@ public final class Billing {
     private static volatile com.google.protobuf.Parser<SendPaymentRequiredEmailResponse> PARSER;
 
     public static com.google.protobuf.Parser<SendPaymentRequiredEmailResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetAvailableBillingTiersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetAvailableBillingTiersRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetAvailableBillingTiersRequest}
+   */
+  public  static final class GetAvailableBillingTiersRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetAvailableBillingTiersRequest, GetAvailableBillingTiersRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetAvailableBillingTiersRequest)
+      GetAvailableBillingTiersRequestOrBuilder {
+    private GetAvailableBillingTiersRequest() {
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.GetAvailableBillingTiersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.GetAvailableBillingTiersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.GetAvailableBillingTiersRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetAvailableBillingTiersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.GetAvailableBillingTiersRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetAvailableBillingTiersRequest)
+        viam.app.v1.Billing.GetAvailableBillingTiersRequestOrBuilder {
+      // Construct using viam.app.v1.Billing.GetAvailableBillingTiersRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetAvailableBillingTiersRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.GetAvailableBillingTiersRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.GetAvailableBillingTiersRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.GetAvailableBillingTiersRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.GetAvailableBillingTiersRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetAvailableBillingTiersRequest)
+    private static final viam.app.v1.Billing.GetAvailableBillingTiersRequest DEFAULT_INSTANCE;
+    static {
+      GetAvailableBillingTiersRequest defaultInstance = new GetAvailableBillingTiersRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetAvailableBillingTiersRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.GetAvailableBillingTiersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetAvailableBillingTiersRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetAvailableBillingTiersRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetAvailableBillingTiersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetAvailableBillingTiersResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+     * @return A list containing the tiers.
+     */
+    java.util.List<java.lang.String>
+        getTiersList();
+    /**
+     * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+     * @return The count of tiers.
+     */
+    int getTiersCount();
+    /**
+     * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+     * @param index The index of the element to return.
+     * @return The tiers at the given index.
+     */
+    java.lang.String getTiers(int index);
+    /**
+     * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+     * @param index The index of the element to return.
+     * @return The tiers at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTiersBytes(int index);
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetAvailableBillingTiersResponse}
+   */
+  public  static final class GetAvailableBillingTiersResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetAvailableBillingTiersResponse, GetAvailableBillingTiersResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetAvailableBillingTiersResponse)
+      GetAvailableBillingTiersResponseOrBuilder {
+    private GetAvailableBillingTiersResponse() {
+      tiers_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    public static final int TIERS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> tiers_;
+    /**
+     * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+     * @return A list containing the tiers.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getTiersList() {
+      return tiers_;
+    }
+    /**
+     * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+     * @return The count of tiers.
+     */
+    @java.lang.Override
+    public int getTiersCount() {
+      return tiers_.size();
+    }
+    /**
+     * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+     * @param index The index of the element to return.
+     * @return The tiers at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getTiers(int index) {
+      return tiers_.get(index);
+    }
+    /**
+     * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tiers at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTiersBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          tiers_.get(index));
+    }
+    private void ensureTiersIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          tiers_;  if (!tmp.isModifiable()) {
+        tiers_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+     * @param index The index to set the value at.
+     * @param value The tiers to set.
+     */
+    private void setTiers(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTiersIsMutable();
+      tiers_.set(index, value);
+    }
+    /**
+     * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+     * @param value The tiers to add.
+     */
+    private void addTiers(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTiersIsMutable();
+      tiers_.add(value);
+    }
+    /**
+     * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+     * @param values The tiers to add.
+     */
+    private void addAllTiers(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTiersIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, tiers_);
+    }
+    /**
+     * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+     */
+    private void clearTiers() {
+      tiers_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+     * @param value The bytes of the tiers to add.
+     */
+    private void addTiersBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureTiersIsMutable();
+      tiers_.add(value.toStringUtf8());
+    }
+
+    public static viam.app.v1.Billing.GetAvailableBillingTiersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.GetAvailableBillingTiersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.GetAvailableBillingTiersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.GetAvailableBillingTiersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.GetAvailableBillingTiersResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetAvailableBillingTiersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.GetAvailableBillingTiersResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetAvailableBillingTiersResponse)
+        viam.app.v1.Billing.GetAvailableBillingTiersResponseOrBuilder {
+      // Construct using viam.app.v1.Billing.GetAvailableBillingTiersResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+       * @return A list containing the tiers.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getTiersList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getTiersList());
+      }
+      /**
+       * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+       * @return The count of tiers.
+       */
+      @java.lang.Override
+      public int getTiersCount() {
+        return instance.getTiersCount();
+      }
+      /**
+       * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+       * @param index The index of the element to return.
+       * @return The tiers at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getTiers(int index) {
+        return instance.getTiers(index);
+      }
+      /**
+       * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tiers at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTiersBytes(int index) {
+        return instance.getTiersBytes(index);
+      }
+      /**
+       * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+       * @param index The index to set the value at.
+       * @param value The tiers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTiers(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setTiers(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+       * @param value The tiers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTiers(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addTiers(value);
+        return this;
+      }
+      /**
+       * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+       * @param values The tiers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTiers(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllTiers(values);
+        return this;
+      }
+      /**
+       * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTiers() {
+        copyOnWrite();
+        instance.clearTiers();
+        return this;
+      }
+      /**
+       * <code>repeated string tiers = 1 [json_name = "tiers"];</code>
+       * @param value The bytes of the tiers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTiersBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addTiersBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetAvailableBillingTiersResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.GetAvailableBillingTiersResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "tiers_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.GetAvailableBillingTiersResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.GetAvailableBillingTiersResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.GetAvailableBillingTiersResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetAvailableBillingTiersResponse)
+    private static final viam.app.v1.Billing.GetAvailableBillingTiersResponse DEFAULT_INSTANCE;
+    static {
+      GetAvailableBillingTiersResponse defaultInstance = new GetAvailableBillingTiersResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetAvailableBillingTiersResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.GetAvailableBillingTiersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetAvailableBillingTiersResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetAvailableBillingTiersResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateOrganizationBillingTierRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateOrganizationBillingTierRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>string billing_tier = 2 [json_name = "billingTier"];</code>
+     * @return The billingTier.
+     */
+    java.lang.String getBillingTier();
+    /**
+     * <code>string billing_tier = 2 [json_name = "billingTier"];</code>
+     * @return The bytes for billingTier.
+     */
+    com.google.protobuf.ByteString
+        getBillingTierBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateOrganizationBillingTierRequest}
+   */
+  public  static final class UpdateOrganizationBillingTierRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateOrganizationBillingTierRequest, UpdateOrganizationBillingTierRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateOrganizationBillingTierRequest)
+      UpdateOrganizationBillingTierRequestOrBuilder {
+    private UpdateOrganizationBillingTierRequest() {
+      organizationId_ = "";
+      billingTier_ = "";
+    }
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int BILLING_TIER_FIELD_NUMBER = 2;
+    private java.lang.String billingTier_;
+    /**
+     * <code>string billing_tier = 2 [json_name = "billingTier"];</code>
+     * @return The billingTier.
+     */
+    @java.lang.Override
+    public java.lang.String getBillingTier() {
+      return billingTier_;
+    }
+    /**
+     * <code>string billing_tier = 2 [json_name = "billingTier"];</code>
+     * @return The bytes for billingTier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBillingTierBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(billingTier_);
+    }
+    /**
+     * <code>string billing_tier = 2 [json_name = "billingTier"];</code>
+     * @param value The billingTier to set.
+     */
+    private void setBillingTier(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      billingTier_ = value;
+    }
+    /**
+     * <code>string billing_tier = 2 [json_name = "billingTier"];</code>
+     */
+    private void clearBillingTier() {
+
+      billingTier_ = getDefaultInstance().getBillingTier();
+    }
+    /**
+     * <code>string billing_tier = 2 [json_name = "billingTier"];</code>
+     * @param value The bytes for billingTier to set.
+     */
+    private void setBillingTierBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      billingTier_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.UpdateOrganizationBillingTierRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateOrganizationBillingTierRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.UpdateOrganizationBillingTierRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateOrganizationBillingTierRequest)
+        viam.app.v1.Billing.UpdateOrganizationBillingTierRequestOrBuilder {
+      // Construct using viam.app.v1.Billing.UpdateOrganizationBillingTierRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string billing_tier = 2 [json_name = "billingTier"];</code>
+       * @return The billingTier.
+       */
+      @java.lang.Override
+      public java.lang.String getBillingTier() {
+        return instance.getBillingTier();
+      }
+      /**
+       * <code>string billing_tier = 2 [json_name = "billingTier"];</code>
+       * @return The bytes for billingTier.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBillingTierBytes() {
+        return instance.getBillingTierBytes();
+      }
+      /**
+       * <code>string billing_tier = 2 [json_name = "billingTier"];</code>
+       * @param value The billingTier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBillingTier(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBillingTier(value);
+        return this;
+      }
+      /**
+       * <code>string billing_tier = 2 [json_name = "billingTier"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBillingTier() {
+        copyOnWrite();
+        instance.clearBillingTier();
+        return this;
+      }
+      /**
+       * <code>string billing_tier = 2 [json_name = "billingTier"];</code>
+       * @param value The bytes for billingTier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBillingTierBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBillingTierBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateOrganizationBillingTierRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.UpdateOrganizationBillingTierRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "organizationId_",
+              "billingTier_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.UpdateOrganizationBillingTierRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.UpdateOrganizationBillingTierRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.UpdateOrganizationBillingTierRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateOrganizationBillingTierRequest)
+    private static final viam.app.v1.Billing.UpdateOrganizationBillingTierRequest DEFAULT_INSTANCE;
+    static {
+      UpdateOrganizationBillingTierRequest defaultInstance = new UpdateOrganizationBillingTierRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateOrganizationBillingTierRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateOrganizationBillingTierRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateOrganizationBillingTierRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateOrganizationBillingTierResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateOrganizationBillingTierResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateOrganizationBillingTierResponse}
+   */
+  public  static final class UpdateOrganizationBillingTierResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateOrganizationBillingTierResponse, UpdateOrganizationBillingTierResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateOrganizationBillingTierResponse)
+      UpdateOrganizationBillingTierResponseOrBuilder {
+    private UpdateOrganizationBillingTierResponse() {
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.UpdateOrganizationBillingTierResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateOrganizationBillingTierResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.UpdateOrganizationBillingTierResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateOrganizationBillingTierResponse)
+        viam.app.v1.Billing.UpdateOrganizationBillingTierResponseOrBuilder {
+      // Construct using viam.app.v1.Billing.UpdateOrganizationBillingTierResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateOrganizationBillingTierResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.UpdateOrganizationBillingTierResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.UpdateOrganizationBillingTierResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.UpdateOrganizationBillingTierResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.UpdateOrganizationBillingTierResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateOrganizationBillingTierResponse)
+    private static final viam.app.v1.Billing.UpdateOrganizationBillingTierResponse DEFAULT_INSTANCE;
+    static {
+      UpdateOrganizationBillingTierResponse defaultInstance = new UpdateOrganizationBillingTierResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateOrganizationBillingTierResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.UpdateOrganizationBillingTierResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateOrganizationBillingTierResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateOrganizationBillingTierResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
