@@ -54,6 +54,7 @@ import com.viam.sdk.core.component.sensor.SensorRPCService;
 import com.viam.sdk.core.component.servo.Servo;
 import com.viam.sdk.core.component.servo.ServoRPCClient;
 import com.viam.sdk.core.component.servo.ServoRPCService;
+import com.viam.sdk.core.component.switch.*;
 import com.viam.sdk.core.exception.DuplicateResourceException;
 import com.viam.sdk.core.exception.ResourceNotFoundException;
 import com.viam.sdk.core.service.datamanager.DataManager;
@@ -172,6 +173,12 @@ public class ResourceManager implements Closeable {
                 ServoServiceGrpc.SERVICE_NAME,
                 ServoRPCService::new,
                 ServoRPCClient::new
+        ));
+        Registry.registerSubtype(new ResourceRegistration<>(
+                Switch.SUBTYPE,
+                SwitchServiceGrpc.SERVICE_NAME,
+                SwitchRPCService::new,
+                SwitchRPCClient::new
         ));
 
         // SERVICES
