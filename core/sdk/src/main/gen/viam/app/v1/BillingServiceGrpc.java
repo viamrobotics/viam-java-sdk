@@ -165,6 +165,66 @@ public final class BillingServiceGrpc {
     return getSendPaymentRequiredEmailMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.Billing.GetAvailableBillingTiersRequest,
+      viam.app.v1.Billing.GetAvailableBillingTiersResponse> getGetAvailableBillingTiersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAvailableBillingTiers",
+      requestType = viam.app.v1.Billing.GetAvailableBillingTiersRequest.class,
+      responseType = viam.app.v1.Billing.GetAvailableBillingTiersResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.Billing.GetAvailableBillingTiersRequest,
+      viam.app.v1.Billing.GetAvailableBillingTiersResponse> getGetAvailableBillingTiersMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.Billing.GetAvailableBillingTiersRequest, viam.app.v1.Billing.GetAvailableBillingTiersResponse> getGetAvailableBillingTiersMethod;
+    if ((getGetAvailableBillingTiersMethod = BillingServiceGrpc.getGetAvailableBillingTiersMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getGetAvailableBillingTiersMethod = BillingServiceGrpc.getGetAvailableBillingTiersMethod) == null) {
+          BillingServiceGrpc.getGetAvailableBillingTiersMethod = getGetAvailableBillingTiersMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.Billing.GetAvailableBillingTiersRequest, viam.app.v1.Billing.GetAvailableBillingTiersResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAvailableBillingTiers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.GetAvailableBillingTiersRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.GetAvailableBillingTiersResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetAvailableBillingTiersMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.Billing.UpdateOrganizationBillingTierRequest,
+      viam.app.v1.Billing.UpdateOrganizationBillingTierResponse> getUpdateOrganizationBillingTierMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateOrganizationBillingTier",
+      requestType = viam.app.v1.Billing.UpdateOrganizationBillingTierRequest.class,
+      responseType = viam.app.v1.Billing.UpdateOrganizationBillingTierResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.Billing.UpdateOrganizationBillingTierRequest,
+      viam.app.v1.Billing.UpdateOrganizationBillingTierResponse> getUpdateOrganizationBillingTierMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.Billing.UpdateOrganizationBillingTierRequest, viam.app.v1.Billing.UpdateOrganizationBillingTierResponse> getUpdateOrganizationBillingTierMethod;
+    if ((getUpdateOrganizationBillingTierMethod = BillingServiceGrpc.getUpdateOrganizationBillingTierMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getUpdateOrganizationBillingTierMethod = BillingServiceGrpc.getUpdateOrganizationBillingTierMethod) == null) {
+          BillingServiceGrpc.getUpdateOrganizationBillingTierMethod = getUpdateOrganizationBillingTierMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.Billing.UpdateOrganizationBillingTierRequest, viam.app.v1.Billing.UpdateOrganizationBillingTierResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateOrganizationBillingTier"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.UpdateOrganizationBillingTierRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.UpdateOrganizationBillingTierResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUpdateOrganizationBillingTierMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -262,6 +322,26 @@ public final class BillingServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.Billing.SendPaymentRequiredEmailResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendPaymentRequiredEmailMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Get available billing tiers that can be assigned to organizations
+     * </pre>
+     */
+    default void getAvailableBillingTiers(viam.app.v1.Billing.GetAvailableBillingTiersRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.GetAvailableBillingTiersResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAvailableBillingTiersMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update an organization's billing tier
+     * </pre>
+     */
+    default void updateOrganizationBillingTier(viam.app.v1.Billing.UpdateOrganizationBillingTierRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.UpdateOrganizationBillingTierResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateOrganizationBillingTierMethod(), responseObserver);
+    }
   }
 
   /**
@@ -345,6 +425,28 @@ public final class BillingServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSendPaymentRequiredEmailMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Get available billing tiers that can be assigned to organizations
+     * </pre>
+     */
+    public void getAvailableBillingTiers(viam.app.v1.Billing.GetAvailableBillingTiersRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.GetAvailableBillingTiersResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAvailableBillingTiersMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update an organization's billing tier
+     * </pre>
+     */
+    public void updateOrganizationBillingTier(viam.app.v1.Billing.UpdateOrganizationBillingTierRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.UpdateOrganizationBillingTierResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateOrganizationBillingTierMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -413,6 +515,26 @@ public final class BillingServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSendPaymentRequiredEmailMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Get available billing tiers that can be assigned to organizations
+     * </pre>
+     */
+    public viam.app.v1.Billing.GetAvailableBillingTiersResponse getAvailableBillingTiers(viam.app.v1.Billing.GetAvailableBillingTiersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAvailableBillingTiersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update an organization's billing tier
+     * </pre>
+     */
+    public viam.app.v1.Billing.UpdateOrganizationBillingTierResponse updateOrganizationBillingTier(viam.app.v1.Billing.UpdateOrganizationBillingTierRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateOrganizationBillingTierMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -474,6 +596,28 @@ public final class BillingServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSendPaymentRequiredEmailMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Get available billing tiers that can be assigned to organizations
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.Billing.GetAvailableBillingTiersResponse> getAvailableBillingTiers(
+        viam.app.v1.Billing.GetAvailableBillingTiersRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAvailableBillingTiersMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Update an organization's billing tier
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.Billing.UpdateOrganizationBillingTierResponse> updateOrganizationBillingTier(
+        viam.app.v1.Billing.UpdateOrganizationBillingTierRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateOrganizationBillingTierMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CURRENT_MONTH_USAGE = 0;
@@ -481,6 +625,8 @@ public final class BillingServiceGrpc {
   private static final int METHODID_GET_INVOICES_SUMMARY = 2;
   private static final int METHODID_GET_INVOICE_PDF = 3;
   private static final int METHODID_SEND_PAYMENT_REQUIRED_EMAIL = 4;
+  private static final int METHODID_GET_AVAILABLE_BILLING_TIERS = 5;
+  private static final int METHODID_UPDATE_ORGANIZATION_BILLING_TIER = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -518,6 +664,14 @@ public final class BillingServiceGrpc {
         case METHODID_SEND_PAYMENT_REQUIRED_EMAIL:
           serviceImpl.sendPaymentRequiredEmail((viam.app.v1.Billing.SendPaymentRequiredEmailRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.Billing.SendPaymentRequiredEmailResponse>) responseObserver);
+          break;
+        case METHODID_GET_AVAILABLE_BILLING_TIERS:
+          serviceImpl.getAvailableBillingTiers((viam.app.v1.Billing.GetAvailableBillingTiersRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.Billing.GetAvailableBillingTiersResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_ORGANIZATION_BILLING_TIER:
+          serviceImpl.updateOrganizationBillingTier((viam.app.v1.Billing.UpdateOrganizationBillingTierRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.Billing.UpdateOrganizationBillingTierResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -572,6 +726,20 @@ public final class BillingServiceGrpc {
               viam.app.v1.Billing.SendPaymentRequiredEmailRequest,
               viam.app.v1.Billing.SendPaymentRequiredEmailResponse>(
                 service, METHODID_SEND_PAYMENT_REQUIRED_EMAIL)))
+        .addMethod(
+          getGetAvailableBillingTiersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.Billing.GetAvailableBillingTiersRequest,
+              viam.app.v1.Billing.GetAvailableBillingTiersResponse>(
+                service, METHODID_GET_AVAILABLE_BILLING_TIERS)))
+        .addMethod(
+          getUpdateOrganizationBillingTierMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.Billing.UpdateOrganizationBillingTierRequest,
+              viam.app.v1.Billing.UpdateOrganizationBillingTierResponse>(
+                service, METHODID_UPDATE_ORGANIZATION_BILLING_TIER)))
         .build();
   }
 
@@ -589,6 +757,8 @@ public final class BillingServiceGrpc {
               .addMethod(getGetInvoicesSummaryMethod())
               .addMethod(getGetInvoicePdfMethod())
               .addMethod(getSendPaymentRequiredEmailMethod())
+              .addMethod(getGetAvailableBillingTiersMethod())
+              .addMethod(getUpdateOrganizationBillingTierMethod())
               .build();
         }
       }
