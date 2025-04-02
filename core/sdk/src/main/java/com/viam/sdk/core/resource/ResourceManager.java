@@ -17,6 +17,7 @@ import com.viam.component.movementsensor.v1.MovementSensorServiceGrpc;
 import com.viam.component.powersensor.v1.PowerSensorServiceGrpc;
 import com.viam.component.sensor.v1.SensorServiceGrpc;
 import com.viam.component.v1.PoseTrackerServiceGrpc;
+import com.viam.component.nswitch.v1.SwitchServiceGrpc;
 import com.viam.sdk.core.component.base.*;
 import com.viam.sdk.core.component.button.*;
 import com.viam.sdk.core.component.arm.*;
