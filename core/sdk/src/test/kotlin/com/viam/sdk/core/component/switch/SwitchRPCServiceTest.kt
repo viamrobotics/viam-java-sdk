@@ -1,11 +1,11 @@
-package com.viam.sdk.core.component.switch
+package com.viam.sdk.core.component.nswitch
 
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
 import com.viam.common.v1.Common
-import com.viam.component.switch.v1.*
-import com.viam.component.switch.v1.SwitchServiceGrpc
-import com.viam.component.switch.v1.SwitchServiceGrpc.SwitchServiceBlockingStub
+import com.viam.component.nswitch.v1.*
+import com.viam.component.nswitch.v1.SwitchServiceGrpc
+import com.viam.component.nswitch.v1.SwitchServiceGrpc.SwitchServiceBlockingStub
 import com.viam.sdk.core.resource.ResourceManager
 import io.grpc.inprocess.InProcessChannelBuilder
 import io.grpc.inprocess.InProcessServerBuilder

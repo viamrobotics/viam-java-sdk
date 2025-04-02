@@ -1,8 +1,8 @@
-package com.viam.sdk.core.component.switch
+package com.viam.sdk.core.component.nswitch
 
 import com.viam.common.v1.Common.*
-import com.viam.component.switch.v1.Switch.*
-import com.viam.component.switch.v1.SwitchServiceGrpc
+import com.viam.component.nswitch.v1.Switch.*
+import com.viam.component.nswitch.v1.SwitchServiceGrpc
 import com.viam.sdk.core.resource.ResourceManager
 import com.viam.sdk.core.resource.ResourceRPCService
 import io.grpc.stub.StreamObserver

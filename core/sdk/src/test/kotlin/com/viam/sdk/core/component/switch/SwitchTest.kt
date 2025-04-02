@@ -1,4 +1,4 @@
-package com.viam.sdk.core.component.switch
+package com.viam.sdk.core.component.nswitch
 
 import com.google.protobuf.Struct
 import org.junit.jupiter.api.BeforeEach
