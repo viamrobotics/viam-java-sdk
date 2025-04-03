@@ -247,6 +247,149 @@ public final class Data {
     // @@protoc_insertion_point(enum_scope:viam.app.data.v1.TagsFilterType)
   }
 
+  /**
+   * <pre>
+   * TabularDataSourceType specifies the data source type for TabularDataByMQL queries.
+   * </pre>
+   *
+   * Protobuf enum {@code viam.app.data.v1.TabularDataSourceType}
+   */
+  public enum TabularDataSourceType
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>TABULAR_DATA_SOURCE_TYPE_UNSPECIFIED = 0;</code>
+     */
+    TABULAR_DATA_SOURCE_TYPE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * TABULAR_DATA_SOURCE_TYPE_STANDARD indicates reading from standard storage. This is
+     * the default option and available for all data synced to Viam.
+     * </pre>
+     *
+     * <code>TABULAR_DATA_SOURCE_TYPE_STANDARD = 1;</code>
+     */
+    TABULAR_DATA_SOURCE_TYPE_STANDARD(1),
+    /**
+     * <pre>
+     * TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE indicates reading from hot storage. This is a
+     * premium feature requiring opting in specific data sources.
+     * See docs at https://docs.viam.com/data-ai/capture-data/advanced/advanced-data-capture-sync/#capture-to-the-hot-data-store
+     * </pre>
+     *
+     * <code>TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE = 2;</code>
+     */
+    TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE(2),
+    /**
+     * <pre>
+     * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK indicates reading the output data of
+     * a data pipeline. When using this, a pipeline ID needs to be specified.
+     * </pre>
+     *
+     * <code>TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK = 3;</code>
+     */
+    TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>TABULAR_DATA_SOURCE_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int TABULAR_DATA_SOURCE_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * TABULAR_DATA_SOURCE_TYPE_STANDARD indicates reading from standard storage. This is
+     * the default option and available for all data synced to Viam.
+     * </pre>
+     *
+     * <code>TABULAR_DATA_SOURCE_TYPE_STANDARD = 1;</code>
+     */
+    public static final int TABULAR_DATA_SOURCE_TYPE_STANDARD_VALUE = 1;
+    /**
+     * <pre>
+     * TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE indicates reading from hot storage. This is a
+     * premium feature requiring opting in specific data sources.
+     * See docs at https://docs.viam.com/data-ai/capture-data/advanced/advanced-data-capture-sync/#capture-to-the-hot-data-store
+     * </pre>
+     *
+     * <code>TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE = 2;</code>
+     */
+    public static final int TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE_VALUE = 2;
+    /**
+     * <pre>
+     * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK indicates reading the output data of
+     * a data pipeline. When using this, a pipeline ID needs to be specified.
+     * </pre>
+     *
+     * <code>TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK = 3;</code>
+     */
+    public static final int TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK_VALUE = 3;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static TabularDataSourceType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static TabularDataSourceType forNumber(int value) {
+      switch (value) {
+        case 0: return TABULAR_DATA_SOURCE_TYPE_UNSPECIFIED;
+        case 1: return TABULAR_DATA_SOURCE_TYPE_STANDARD;
+        case 2: return TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE;
+        case 3: return TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<TabularDataSourceType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        TabularDataSourceType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<TabularDataSourceType>() {
+            @java.lang.Override
+            public TabularDataSourceType findValueByNumber(int number) {
+              return TabularDataSourceType.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return TabularDataSourceTypeVerifier.INSTANCE;
+    }
+
+    private static final class TabularDataSourceTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new TabularDataSourceTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return TabularDataSourceType.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private TabularDataSourceType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.data.v1.TabularDataSourceType)
+  }
+
   public interface DataRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.DataRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -8476,6 +8619,507 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
+  public interface TabularDataSourceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.TabularDataSource)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.app.data.v1.TabularDataSourceType type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.viam.app.data.v1.TabularDataSourceType type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    viam.app.data.v1.Data.TabularDataSourceType getType();
+
+    /**
+     * <pre>
+     * pipeline_id is the ID of the pipeline to query. Required when using
+     * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+     * </pre>
+     *
+     * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+     * @return Whether the pipelineId field is set.
+     */
+    boolean hasPipelineId();
+    /**
+     * <pre>
+     * pipeline_id is the ID of the pipeline to query. Required when using
+     * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+     * </pre>
+     *
+     * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+     * @return The pipelineId.
+     */
+    java.lang.String getPipelineId();
+    /**
+     * <pre>
+     * pipeline_id is the ID of the pipeline to query. Required when using
+     * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+     * </pre>
+     *
+     * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+     * @return The bytes for pipelineId.
+     */
+    com.google.protobuf.ByteString
+        getPipelineIdBytes();
+  }
+  /**
+   * <pre>
+   * TabularDataSource specifies the data source for user queries to execute on.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.TabularDataSource}
+   */
+  public  static final class TabularDataSource extends
+      com.google.protobuf.GeneratedMessageLite<
+          TabularDataSource, TabularDataSource.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.TabularDataSource)
+      TabularDataSourceOrBuilder {
+    private TabularDataSource() {
+      pipelineId_ = "";
+    }
+    private int bitField0_;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
+    /**
+     * <code>.viam.app.data.v1.TabularDataSourceType type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.viam.app.data.v1.TabularDataSourceType type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.TabularDataSourceType getType() {
+      viam.app.data.v1.Data.TabularDataSourceType result = viam.app.data.v1.Data.TabularDataSourceType.forNumber(type_);
+      return result == null ? viam.app.data.v1.Data.TabularDataSourceType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.data.v1.TabularDataSourceType type = 1 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     */
+    private void setTypeValue(int value) {
+        type_ = value;
+    }
+    /**
+     * <code>.viam.app.data.v1.TabularDataSourceType type = 1 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(viam.app.data.v1.Data.TabularDataSourceType value) {
+      type_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.data.v1.TabularDataSourceType type = 1 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = 0;
+    }
+
+    public static final int PIPELINE_ID_FIELD_NUMBER = 2;
+    private java.lang.String pipelineId_;
+    /**
+     * <pre>
+     * pipeline_id is the ID of the pipeline to query. Required when using
+     * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+     * </pre>
+     *
+     * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+     * @return Whether the pipelineId field is set.
+     */
+    @java.lang.Override
+    public boolean hasPipelineId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * pipeline_id is the ID of the pipeline to query. Required when using
+     * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+     * </pre>
+     *
+     * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+     * @return The pipelineId.
+     */
+    @java.lang.Override
+    public java.lang.String getPipelineId() {
+      return pipelineId_;
+    }
+    /**
+     * <pre>
+     * pipeline_id is the ID of the pipeline to query. Required when using
+     * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+     * </pre>
+     *
+     * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+     * @return The bytes for pipelineId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPipelineIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(pipelineId_);
+    }
+    /**
+     * <pre>
+     * pipeline_id is the ID of the pipeline to query. Required when using
+     * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+     * </pre>
+     *
+     * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+     * @param value The pipelineId to set.
+     */
+    private void setPipelineId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      pipelineId_ = value;
+    }
+    /**
+     * <pre>
+     * pipeline_id is the ID of the pipeline to query. Required when using
+     * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+     * </pre>
+     *
+     * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+     */
+    private void clearPipelineId() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      pipelineId_ = getDefaultInstance().getPipelineId();
+    }
+    /**
+     * <pre>
+     * pipeline_id is the ID of the pipeline to query. Required when using
+     * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+     * </pre>
+     *
+     * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+     * @param value The bytes for pipelineId to set.
+     */
+    private void setPipelineIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      pipelineId_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
+    }
+
+    public static viam.app.data.v1.Data.TabularDataSource parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.TabularDataSource parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.TabularDataSource parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.TabularDataSource parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.TabularDataSource parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.TabularDataSource parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.TabularDataSource parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.TabularDataSource parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.TabularDataSource parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.TabularDataSource parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.TabularDataSource parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.TabularDataSource parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.TabularDataSource prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * TabularDataSource specifies the data source for user queries to execute on.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.TabularDataSource}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.TabularDataSource, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.TabularDataSource)
+        viam.app.data.v1.Data.TabularDataSourceOrBuilder {
+      // Construct using viam.app.data.v1.Data.TabularDataSource.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.viam.app.data.v1.TabularDataSourceType type = 1 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
+      }
+      /**
+       * <code>.viam.app.data.v1.TabularDataSourceType type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        copyOnWrite();
+        instance.setTypeValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.TabularDataSourceType type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.TabularDataSourceType getType() {
+        return instance.getType();
+      }
+      /**
+       * <code>.viam.app.data.v1.TabularDataSourceType type = 1 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(viam.app.data.v1.Data.TabularDataSourceType value) {
+        copyOnWrite();
+        instance.setType(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.TabularDataSourceType type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        copyOnWrite();
+        instance.clearType();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * pipeline_id is the ID of the pipeline to query. Required when using
+       * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+       * </pre>
+       *
+       * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+       * @return Whether the pipelineId field is set.
+       */
+      @java.lang.Override
+      public boolean hasPipelineId() {
+        return instance.hasPipelineId();
+      }
+      /**
+       * <pre>
+       * pipeline_id is the ID of the pipeline to query. Required when using
+       * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+       * </pre>
+       *
+       * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+       * @return The pipelineId.
+       */
+      @java.lang.Override
+      public java.lang.String getPipelineId() {
+        return instance.getPipelineId();
+      }
+      /**
+       * <pre>
+       * pipeline_id is the ID of the pipeline to query. Required when using
+       * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+       * </pre>
+       *
+       * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+       * @return The bytes for pipelineId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPipelineIdBytes() {
+        return instance.getPipelineIdBytes();
+      }
+      /**
+       * <pre>
+       * pipeline_id is the ID of the pipeline to query. Required when using
+       * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+       * </pre>
+       *
+       * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+       * @param value The pipelineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPipelineId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPipelineId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * pipeline_id is the ID of the pipeline to query. Required when using
+       * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+       * </pre>
+       *
+       * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPipelineId() {
+        copyOnWrite();
+        instance.clearPipelineId();
+        return this;
+      }
+      /**
+       * <pre>
+       * pipeline_id is the ID of the pipeline to query. Required when using
+       * TABULAR_DATA_SOURCE_TYPE_PIPELINE_SINK.
+       * </pre>
+       *
+       * <code>optional string pipeline_id = 2 [json_name = "pipelineId"];</code>
+       * @param value The bytes for pipelineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPipelineIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPipelineIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.TabularDataSource)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.TabularDataSource();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "type_",
+              "pipelineId_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\f\u0002\u1208" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.TabularDataSource> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.TabularDataSource.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.TabularDataSource>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.TabularDataSource)
+    private static final viam.app.data.v1.Data.TabularDataSource DEFAULT_INSTANCE;
+    static {
+      TabularDataSource defaultInstance = new TabularDataSource();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        TabularDataSource.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.TabularDataSource getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<TabularDataSource> PARSER;
+
+    public static com.google.protobuf.Parser<TabularDataSource> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface TabularDataByMQLRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.TabularDataByMQLRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -8528,11 +9172,19 @@ com.google.protobuf.Any defaultValue) {
     com.google.protobuf.ByteString getMqlBinary(int index);
 
     /**
+     * <pre>
+     * Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.
+     * </pre>
+     *
      * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
      * @return Whether the useRecentData field is set.
      */
     boolean hasUseRecentData();
     /**
+     * <pre>
+     * Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.
+     * </pre>
+     *
      * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
      * @return The useRecentData.
      */
@@ -8540,35 +9192,24 @@ com.google.protobuf.Any defaultValue) {
 
     /**
      * <pre>
-     * if set, MQL query will target the sink collection for the data pipeline name
-     * referenced by this value under the given organization.
+     * data_source is an optional field that can be used to specify the data source for the query.
+     * If not specified, the query will run on "standard" storage.
      * </pre>
      *
-     * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-     * @return Whether the useDataPipeline field is set.
+     * <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code>
+     * @return Whether the dataSource field is set.
      */
-    boolean hasUseDataPipeline();
+    boolean hasDataSource();
     /**
      * <pre>
-     * if set, MQL query will target the sink collection for the data pipeline name
-     * referenced by this value under the given organization.
+     * data_source is an optional field that can be used to specify the data source for the query.
+     * If not specified, the query will run on "standard" storage.
      * </pre>
      *
-     * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-     * @return The useDataPipeline.
+     * <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code>
+     * @return The dataSource.
      */
-    java.lang.String getUseDataPipeline();
-    /**
-     * <pre>
-     * if set, MQL query will target the sink collection for the data pipeline name
-     * referenced by this value under the given organization.
-     * </pre>
-     *
-     * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-     * @return The bytes for useDataPipeline.
-     */
-    com.google.protobuf.ByteString
-        getUseDataPipelineBytes();
+    viam.app.data.v1.Data.TabularDataSource getDataSource();
   }
   /**
    * <pre>
@@ -8585,7 +9226,6 @@ com.google.protobuf.Any defaultValue) {
     private TabularDataByMQLRequest() {
       organizationId_ = "";
       mqlBinary_ = emptyProtobufList();
-      useDataPipeline_ = "";
     }
     private int bitField0_;
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
@@ -8752,6 +9392,10 @@ com.google.protobuf.Any defaultValue) {
     public static final int USE_RECENT_DATA_FIELD_NUMBER = 4;
     private boolean useRecentData_;
     /**
+     * <pre>
+     * Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.
+     * </pre>
+     *
      * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
      * @return Whether the useRecentData field is set.
      */
@@ -8760,6 +9404,10 @@ com.google.protobuf.Any defaultValue) {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.
+     * </pre>
+     *
      * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
      * @return The useRecentData.
      */
@@ -8768,6 +9416,10 @@ com.google.protobuf.Any defaultValue) {
       return useRecentData_;
     }
     /**
+     * <pre>
+     * Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.
+     * </pre>
+     *
      * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
      * @param value The useRecentData to set.
      */
@@ -8776,6 +9428,10 @@ com.google.protobuf.Any defaultValue) {
       useRecentData_ = value;
     }
     /**
+     * <pre>
+     * Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.
+     * </pre>
+     *
      * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
      */
     private void clearUseRecentData() {
@@ -8783,89 +9439,75 @@ com.google.protobuf.Any defaultValue) {
       useRecentData_ = false;
     }
 
-    public static final int USE_DATA_PIPELINE_FIELD_NUMBER = 5;
-    private java.lang.String useDataPipeline_;
+    public static final int DATA_SOURCE_FIELD_NUMBER = 6;
+    private viam.app.data.v1.Data.TabularDataSource dataSource_;
     /**
      * <pre>
-     * if set, MQL query will target the sink collection for the data pipeline name
-     * referenced by this value under the given organization.
+     * data_source is an optional field that can be used to specify the data source for the query.
+     * If not specified, the query will run on "standard" storage.
      * </pre>
      *
-     * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-     * @return Whether the useDataPipeline field is set.
+     * <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code>
      */
     @java.lang.Override
-    public boolean hasUseDataPipeline() {
+    public boolean hasDataSource() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * if set, MQL query will target the sink collection for the data pipeline name
-     * referenced by this value under the given organization.
+     * data_source is an optional field that can be used to specify the data source for the query.
+     * If not specified, the query will run on "standard" storage.
      * </pre>
      *
-     * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-     * @return The useDataPipeline.
+     * <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code>
      */
     @java.lang.Override
-    public java.lang.String getUseDataPipeline() {
-      return useDataPipeline_;
+    public viam.app.data.v1.Data.TabularDataSource getDataSource() {
+      return dataSource_ == null ? viam.app.data.v1.Data.TabularDataSource.getDefaultInstance() : dataSource_;
     }
     /**
      * <pre>
-     * if set, MQL query will target the sink collection for the data pipeline name
-     * referenced by this value under the given organization.
+     * data_source is an optional field that can be used to specify the data source for the query.
+     * If not specified, the query will run on "standard" storage.
      * </pre>
      *
-     * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-     * @return The bytes for useDataPipeline.
+     * <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUseDataPipelineBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(useDataPipeline_);
-    }
-    /**
-     * <pre>
-     * if set, MQL query will target the sink collection for the data pipeline name
-     * referenced by this value under the given organization.
-     * </pre>
-     *
-     * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-     * @param value The useDataPipeline to set.
-     */
-    private void setUseDataPipeline(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  bitField0_ |= 0x00000002;
-      useDataPipeline_ = value;
-    }
-    /**
-     * <pre>
-     * if set, MQL query will target the sink collection for the data pipeline name
-     * referenced by this value under the given organization.
-     * </pre>
-     *
-     * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-     */
-    private void clearUseDataPipeline() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      useDataPipeline_ = getDefaultInstance().getUseDataPipeline();
-    }
-    /**
-     * <pre>
-     * if set, MQL query will target the sink collection for the data pipeline name
-     * referenced by this value under the given organization.
-     * </pre>
-     *
-     * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-     * @param value The bytes for useDataPipeline to set.
-     */
-    private void setUseDataPipelineBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      useDataPipeline_ = value.toStringUtf8();
+    private void setDataSource(viam.app.data.v1.Data.TabularDataSource value) {
+      value.getClass();
+  dataSource_ = value;
       bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * data_source is an optional field that can be used to specify the data source for the query.
+     * If not specified, the query will run on "standard" storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDataSource(viam.app.data.v1.Data.TabularDataSource value) {
+      value.getClass();
+  if (dataSource_ != null &&
+          dataSource_ != viam.app.data.v1.Data.TabularDataSource.getDefaultInstance()) {
+        dataSource_ =
+          viam.app.data.v1.Data.TabularDataSource.newBuilder(dataSource_).mergeFrom(value).buildPartial();
+      } else {
+        dataSource_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * data_source is an optional field that can be used to specify the data source for the query.
+     * If not specified, the query will run on "standard" storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code>
+     */
+    private void clearDataSource() {  dataSource_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.data.v1.Data.TabularDataByMQLRequest parseFrom(
@@ -9130,6 +9772,10 @@ com.google.protobuf.Any defaultValue) {
       }
 
       /**
+       * <pre>
+       * Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.
+       * </pre>
+       *
        * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
        * @return Whether the useRecentData field is set.
        */
@@ -9138,6 +9784,10 @@ com.google.protobuf.Any defaultValue) {
         return instance.hasUseRecentData();
       }
       /**
+       * <pre>
+       * Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.
+       * </pre>
+       *
        * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
        * @return The useRecentData.
        */
@@ -9146,6 +9796,10 @@ com.google.protobuf.Any defaultValue) {
         return instance.getUseRecentData();
       }
       /**
+       * <pre>
+       * Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.
+       * </pre>
+       *
        * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
        * @param value The useRecentData to set.
        * @return This builder for chaining.
@@ -9156,6 +9810,10 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.
+       * </pre>
+       *
        * <code>optional bool use_recent_data = 4 [json_name = "useRecentData"];</code>
        * @return This builder for chaining.
        */
@@ -9167,88 +9825,78 @@ com.google.protobuf.Any defaultValue) {
 
       /**
        * <pre>
-       * if set, MQL query will target the sink collection for the data pipeline name
-       * referenced by this value under the given organization.
+       * data_source is an optional field that can be used to specify the data source for the query.
+       * If not specified, the query will run on "standard" storage.
        * </pre>
        *
-       * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-       * @return Whether the useDataPipeline field is set.
+       * <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code>
        */
       @java.lang.Override
-      public boolean hasUseDataPipeline() {
-        return instance.hasUseDataPipeline();
+      public boolean hasDataSource() {
+        return instance.hasDataSource();
       }
       /**
        * <pre>
-       * if set, MQL query will target the sink collection for the data pipeline name
-       * referenced by this value under the given organization.
+       * data_source is an optional field that can be used to specify the data source for the query.
+       * If not specified, the query will run on "standard" storage.
        * </pre>
        *
-       * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-       * @return The useDataPipeline.
+       * <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code>
        */
       @java.lang.Override
-      public java.lang.String getUseDataPipeline() {
-        return instance.getUseDataPipeline();
+      public viam.app.data.v1.Data.TabularDataSource getDataSource() {
+        return instance.getDataSource();
       }
       /**
        * <pre>
-       * if set, MQL query will target the sink collection for the data pipeline name
-       * referenced by this value under the given organization.
+       * data_source is an optional field that can be used to specify the data source for the query.
+       * If not specified, the query will run on "standard" storage.
        * </pre>
        *
-       * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-       * @return The bytes for useDataPipeline.
+       * <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code>
        */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getUseDataPipelineBytes() {
-        return instance.getUseDataPipelineBytes();
-      }
-      /**
-       * <pre>
-       * if set, MQL query will target the sink collection for the data pipeline name
-       * referenced by this value under the given organization.
-       * </pre>
-       *
-       * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-       * @param value The useDataPipeline to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUseDataPipeline(
-          java.lang.String value) {
+      public Builder setDataSource(viam.app.data.v1.Data.TabularDataSource value) {
         copyOnWrite();
-        instance.setUseDataPipeline(value);
+        instance.setDataSource(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * data_source is an optional field that can be used to specify the data source for the query.
+       * If not specified, the query will run on "standard" storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code>
+       */
+      public Builder setDataSource(
+          viam.app.data.v1.Data.TabularDataSource.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDataSource(builderForValue.build());
         return this;
       }
       /**
        * <pre>
-       * if set, MQL query will target the sink collection for the data pipeline name
-       * referenced by this value under the given organization.
+       * data_source is an optional field that can be used to specify the data source for the query.
+       * If not specified, the query will run on "standard" storage.
        * </pre>
        *
-       * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-       * @return This builder for chaining.
+       * <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code>
        */
-      public Builder clearUseDataPipeline() {
+      public Builder mergeDataSource(viam.app.data.v1.Data.TabularDataSource value) {
         copyOnWrite();
-        instance.clearUseDataPipeline();
+        instance.mergeDataSource(value);
         return this;
       }
       /**
        * <pre>
-       * if set, MQL query will target the sink collection for the data pipeline name
-       * referenced by this value under the given organization.
+       * data_source is an optional field that can be used to specify the data source for the query.
+       * If not specified, the query will run on "standard" storage.
        * </pre>
        *
-       * <code>optional string use_data_pipeline = 5 [json_name = "useDataPipeline"];</code>
-       * @param value The bytes for useDataPipeline to set.
-       * @return This builder for chaining.
+       * <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code>
        */
-      public Builder setUseDataPipelineBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setUseDataPipelineBytes(value);
+      public Builder clearDataSource() {  copyOnWrite();
+        instance.clearDataSource();
         return this;
       }
 
@@ -9272,11 +9920,11 @@ com.google.protobuf.Any defaultValue) {
               "organizationId_",
               "mqlBinary_",
               "useRecentData_",
-              "useDataPipeline_",
+              "dataSource_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0005\u0004\u0000\u0001\u0000\u0001\u0208\u0003\u001c" +
-                "\u0004\u1007\u0000\u0005\u1208\u0001";
+                "\u0000\u0004\u0000\u0001\u0001\u0006\u0004\u0000\u0001\u0000\u0001\u0208\u0003\u001c" +
+                "\u0004\u1007\u0000\u0006\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
