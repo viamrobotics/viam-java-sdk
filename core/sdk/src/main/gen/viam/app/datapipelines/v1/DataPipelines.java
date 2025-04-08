@@ -4168,16 +4168,6 @@ public final class DataPipelines {
      */
     com.google.protobuf.ByteString
         getScheduleBytes();
-
-    /**
-     * <pre>
-     * Whether or not the pipeline is enabled.
-     * </pre>
-     *
-     * <code>bool enabled = 5 [json_name = "enabled"];</code>
-     * @return The enabled.
-     */
-    boolean getEnabled();
   }
   /**
    * Protobuf type {@code viam.app.datapipelines.v1.UpdateDataPipelineRequest}
@@ -4504,44 +4494,6 @@ public final class DataPipelines {
       checkByteStringIsUtf8(value);
       schedule_ = value.toStringUtf8();
 
-    }
-
-    public static final int ENABLED_FIELD_NUMBER = 5;
-    private boolean enabled_;
-    /**
-     * <pre>
-     * Whether or not the pipeline is enabled.
-     * </pre>
-     *
-     * <code>bool enabled = 5 [json_name = "enabled"];</code>
-     * @return The enabled.
-     */
-    @java.lang.Override
-    public boolean getEnabled() {
-      return enabled_;
-    }
-    /**
-     * <pre>
-     * Whether or not the pipeline is enabled.
-     * </pre>
-     *
-     * <code>bool enabled = 5 [json_name = "enabled"];</code>
-     * @param value The enabled to set.
-     */
-    private void setEnabled(boolean value) {
-      
-      enabled_ = value;
-    }
-    /**
-     * <pre>
-     * Whether or not the pipeline is enabled.
-     * </pre>
-     *
-     * <code>bool enabled = 5 [json_name = "enabled"];</code>
-     */
-    private void clearEnabled() {
-
-      enabled_ = false;
     }
 
     public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseFrom(
@@ -4957,46 +4909,6 @@ public final class DataPipelines {
         return this;
       }
 
-      /**
-       * <pre>
-       * Whether or not the pipeline is enabled.
-       * </pre>
-       *
-       * <code>bool enabled = 5 [json_name = "enabled"];</code>
-       * @return The enabled.
-       */
-      @java.lang.Override
-      public boolean getEnabled() {
-        return instance.getEnabled();
-      }
-      /**
-       * <pre>
-       * Whether or not the pipeline is enabled.
-       * </pre>
-       *
-       * <code>bool enabled = 5 [json_name = "enabled"];</code>
-       * @param value The enabled to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEnabled(boolean value) {
-        copyOnWrite();
-        instance.setEnabled(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Whether or not the pipeline is enabled.
-       * </pre>
-       *
-       * <code>bool enabled = 5 [json_name = "enabled"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEnabled() {
-        copyOnWrite();
-        instance.clearEnabled();
-        return this;
-      }
-
       // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.UpdateDataPipelineRequest)
     }
     @java.lang.Override
@@ -5017,11 +4929,10 @@ public final class DataPipelines {
               "name_",
               "mqlBinary_",
               "schedule_",
-              "enabled_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u001c\u0004\u0208\u0005\u0007";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u001c\u0004\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -5778,6 +5689,1054 @@ public final class DataPipelines {
     private static volatile com.google.protobuf.Parser<DeleteDataPipelineResponse> PARSER;
 
     public static com.google.protobuf.Parser<DeleteDataPipelineResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface EnableDataPipelineRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.EnableDataPipelineRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The ID of the data pipeline to enable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * The ID of the data pipeline to enable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.datapipelines.v1.EnableDataPipelineRequest}
+   */
+  public  static final class EnableDataPipelineRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          EnableDataPipelineRequest, EnableDataPipelineRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.EnableDataPipelineRequest)
+      EnableDataPipelineRequestOrBuilder {
+    private EnableDataPipelineRequest() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <pre>
+     * The ID of the data pipeline to enable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline to enable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline to enable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline to enable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline to enable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.datapipelines.v1.EnableDataPipelineRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.EnableDataPipelineRequest)
+        viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequestOrBuilder {
+      // Construct using viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * The ID of the data pipeline to enable.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline to enable.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline to enable.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline to enable.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline to enable.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.EnableDataPipelineRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.EnableDataPipelineRequest)
+    private static final viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest DEFAULT_INSTANCE;
+    static {
+      EnableDataPipelineRequest defaultInstance = new EnableDataPipelineRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        EnableDataPipelineRequest.class, defaultInstance);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<EnableDataPipelineRequest> PARSER;
+
+    public static com.google.protobuf.Parser<EnableDataPipelineRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface EnableDataPipelineResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.EnableDataPipelineResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.datapipelines.v1.EnableDataPipelineResponse}
+   */
+  public  static final class EnableDataPipelineResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          EnableDataPipelineResponse, EnableDataPipelineResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.EnableDataPipelineResponse)
+      EnableDataPipelineResponseOrBuilder {
+    private EnableDataPipelineResponse() {
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.datapipelines.v1.EnableDataPipelineResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.EnableDataPipelineResponse)
+        viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponseOrBuilder {
+      // Construct using viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.EnableDataPipelineResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.EnableDataPipelineResponse)
+    private static final viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse DEFAULT_INSTANCE;
+    static {
+      EnableDataPipelineResponse defaultInstance = new EnableDataPipelineResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        EnableDataPipelineResponse.class, defaultInstance);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<EnableDataPipelineResponse> PARSER;
+
+    public static com.google.protobuf.Parser<EnableDataPipelineResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DisableDataPipelineRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.DisableDataPipelineRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The ID of the data pipeline to disable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * The ID of the data pipeline to disable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.datapipelines.v1.DisableDataPipelineRequest}
+   */
+  public  static final class DisableDataPipelineRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          DisableDataPipelineRequest, DisableDataPipelineRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.DisableDataPipelineRequest)
+      DisableDataPipelineRequestOrBuilder {
+    private DisableDataPipelineRequest() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <pre>
+     * The ID of the data pipeline to disable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline to disable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline to disable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline to disable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline to disable.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.datapipelines.v1.DisableDataPipelineRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.DisableDataPipelineRequest)
+        viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequestOrBuilder {
+      // Construct using viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * The ID of the data pipeline to disable.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline to disable.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline to disable.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline to disable.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline to disable.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.DisableDataPipelineRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.DisableDataPipelineRequest)
+    private static final viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest DEFAULT_INSTANCE;
+    static {
+      DisableDataPipelineRequest defaultInstance = new DisableDataPipelineRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DisableDataPipelineRequest.class, defaultInstance);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DisableDataPipelineRequest> PARSER;
+
+    public static com.google.protobuf.Parser<DisableDataPipelineRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DisableDataPipelineResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.DisableDataPipelineResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.datapipelines.v1.DisableDataPipelineResponse}
+   */
+  public  static final class DisableDataPipelineResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          DisableDataPipelineResponse, DisableDataPipelineResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.DisableDataPipelineResponse)
+      DisableDataPipelineResponseOrBuilder {
+    private DisableDataPipelineResponse() {
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.datapipelines.v1.DisableDataPipelineResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.DisableDataPipelineResponse)
+        viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponseOrBuilder {
+      // Construct using viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.DisableDataPipelineResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.DisableDataPipelineResponse)
+    private static final viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse DEFAULT_INSTANCE;
+    static {
+      DisableDataPipelineResponse defaultInstance = new DisableDataPipelineResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DisableDataPipelineResponse.class, defaultInstance);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DisableDataPipelineResponse> PARSER;
+
+    public static com.google.protobuf.Parser<DisableDataPipelineResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
