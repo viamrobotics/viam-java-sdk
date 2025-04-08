@@ -168,6 +168,66 @@ public final class DataPipelinesServiceGrpc {
     return getDeleteDataPipelineMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest,
+      viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse> getEnableDataPipelineMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EnableDataPipeline",
+      requestType = viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest.class,
+      responseType = viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest,
+      viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse> getEnableDataPipelineMethod() {
+    io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest, viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse> getEnableDataPipelineMethod;
+    if ((getEnableDataPipelineMethod = DataPipelinesServiceGrpc.getEnableDataPipelineMethod) == null) {
+      synchronized (DataPipelinesServiceGrpc.class) {
+        if ((getEnableDataPipelineMethod = DataPipelinesServiceGrpc.getEnableDataPipelineMethod) == null) {
+          DataPipelinesServiceGrpc.getEnableDataPipelineMethod = getEnableDataPipelineMethod =
+              io.grpc.MethodDescriptor.<viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest, viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnableDataPipeline"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getEnableDataPipelineMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest,
+      viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse> getDisableDataPipelineMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DisableDataPipeline",
+      requestType = viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest.class,
+      responseType = viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest,
+      viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse> getDisableDataPipelineMethod() {
+    io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest, viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse> getDisableDataPipelineMethod;
+    if ((getDisableDataPipelineMethod = DataPipelinesServiceGrpc.getDisableDataPipelineMethod) == null) {
+      synchronized (DataPipelinesServiceGrpc.class) {
+        if ((getDisableDataPipelineMethod = DataPipelinesServiceGrpc.getDisableDataPipelineMethod) == null) {
+          DataPipelinesServiceGrpc.getDisableDataPipelineMethod = getDisableDataPipelineMethod =
+              io.grpc.MethodDescriptor.<viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest, viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DisableDataPipeline"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getDisableDataPipelineMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -268,6 +328,26 @@ public final class DataPipelinesServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.DeleteDataPipelineResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDataPipelineMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * EnableDataPipeline enables a data pipeline.
+     * </pre>
+     */
+    default void enableDataPipeline(viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableDataPipelineMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DisableDataPipeline disables a data pipeline.
+     * </pre>
+     */
+    default void disableDataPipeline(viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableDataPipelineMethod(), responseObserver);
+    }
   }
 
   /**
@@ -357,6 +437,28 @@ public final class DataPipelinesServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteDataPipelineMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * EnableDataPipeline enables a data pipeline.
+     * </pre>
+     */
+    public void enableDataPipeline(viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEnableDataPipelineMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DisableDataPipeline disables a data pipeline.
+     * </pre>
+     */
+    public void disableDataPipeline(viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDisableDataPipelineMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -426,6 +528,26 @@ public final class DataPipelinesServiceGrpc {
     public viam.app.datapipelines.v1.DataPipelines.DeleteDataPipelineResponse deleteDataPipeline(viam.app.datapipelines.v1.DataPipelines.DeleteDataPipelineRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteDataPipelineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * EnableDataPipeline enables a data pipeline.
+     * </pre>
+     */
+    public viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse enableDataPipeline(viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEnableDataPipelineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DisableDataPipeline disables a data pipeline.
+     * </pre>
+     */
+    public viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse disableDataPipeline(viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDisableDataPipelineMethod(), getCallOptions(), request);
     }
   }
 
@@ -502,6 +624,28 @@ public final class DataPipelinesServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteDataPipelineMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * EnableDataPipeline enables a data pipeline.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse> enableDataPipeline(
+        viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEnableDataPipelineMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DisableDataPipeline disables a data pipeline.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse> disableDataPipeline(
+        viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDisableDataPipelineMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_DATA_PIPELINE = 0;
@@ -509,6 +653,8 @@ public final class DataPipelinesServiceGrpc {
   private static final int METHODID_CREATE_DATA_PIPELINE = 2;
   private static final int METHODID_UPDATE_DATA_PIPELINE = 3;
   private static final int METHODID_DELETE_DATA_PIPELINE = 4;
+  private static final int METHODID_ENABLE_DATA_PIPELINE = 5;
+  private static final int METHODID_DISABLE_DATA_PIPELINE = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -546,6 +692,14 @@ public final class DataPipelinesServiceGrpc {
         case METHODID_DELETE_DATA_PIPELINE:
           serviceImpl.deleteDataPipeline((viam.app.datapipelines.v1.DataPipelines.DeleteDataPipelineRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.DeleteDataPipelineResponse>) responseObserver);
+          break;
+        case METHODID_ENABLE_DATA_PIPELINE:
+          serviceImpl.enableDataPipeline((viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse>) responseObserver);
+          break;
+        case METHODID_DISABLE_DATA_PIPELINE:
+          serviceImpl.disableDataPipeline((viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -600,6 +754,20 @@ public final class DataPipelinesServiceGrpc {
               viam.app.datapipelines.v1.DataPipelines.DeleteDataPipelineRequest,
               viam.app.datapipelines.v1.DataPipelines.DeleteDataPipelineResponse>(
                 service, METHODID_DELETE_DATA_PIPELINE)))
+        .addMethod(
+          getEnableDataPipelineMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest,
+              viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse>(
+                service, METHODID_ENABLE_DATA_PIPELINE)))
+        .addMethod(
+          getDisableDataPipelineMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest,
+              viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse>(
+                service, METHODID_DISABLE_DATA_PIPELINE)))
         .build();
   }
 
@@ -617,6 +785,8 @@ public final class DataPipelinesServiceGrpc {
               .addMethod(getCreateDataPipelineMethod())
               .addMethod(getUpdateDataPipelineMethod())
               .addMethod(getDeleteDataPipelineMethod())
+              .addMethod(getEnableDataPipelineMethod())
+              .addMethod(getDisableDataPipelineMethod())
               .build();
         }
       }

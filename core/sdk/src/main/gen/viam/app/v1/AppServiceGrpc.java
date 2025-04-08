@@ -2208,6 +2208,36 @@ public final class AppServiceGrpc {
     return getDeleteFragmentMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListNestedFragmentsRequest,
+      viam.app.v1.AppOuterClass.ListNestedFragmentsResponse> getListNestedFragmentsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListNestedFragments",
+      requestType = viam.app.v1.AppOuterClass.ListNestedFragmentsRequest.class,
+      responseType = viam.app.v1.AppOuterClass.ListNestedFragmentsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListNestedFragmentsRequest,
+      viam.app.v1.AppOuterClass.ListNestedFragmentsResponse> getListNestedFragmentsMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListNestedFragmentsRequest, viam.app.v1.AppOuterClass.ListNestedFragmentsResponse> getListNestedFragmentsMethod;
+    if ((getListNestedFragmentsMethod = AppServiceGrpc.getListNestedFragmentsMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getListNestedFragmentsMethod = AppServiceGrpc.getListNestedFragmentsMethod) == null) {
+          AppServiceGrpc.getListNestedFragmentsMethod = getListNestedFragmentsMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.ListNestedFragmentsRequest, viam.app.v1.AppOuterClass.ListNestedFragmentsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListNestedFragments"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.ListNestedFragmentsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.ListNestedFragmentsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getListNestedFragmentsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListMachineFragmentsRequest,
       viam.app.v1.AppOuterClass.ListMachineFragmentsResponse> getListMachineFragmentsMethod;
 
@@ -2686,6 +2716,36 @@ public final class AppServiceGrpc {
       }
     }
     return getDeleteRegistryItemMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.RenameRegistryItemRequest,
+      viam.app.v1.AppOuterClass.RenameRegistryItemResponse> getRenameRegistryItemMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RenameRegistryItem",
+      requestType = viam.app.v1.AppOuterClass.RenameRegistryItemRequest.class,
+      responseType = viam.app.v1.AppOuterClass.RenameRegistryItemResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.RenameRegistryItemRequest,
+      viam.app.v1.AppOuterClass.RenameRegistryItemResponse> getRenameRegistryItemMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.RenameRegistryItemRequest, viam.app.v1.AppOuterClass.RenameRegistryItemResponse> getRenameRegistryItemMethod;
+    if ((getRenameRegistryItemMethod = AppServiceGrpc.getRenameRegistryItemMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getRenameRegistryItemMethod = AppServiceGrpc.getRenameRegistryItemMethod) == null) {
+          AppServiceGrpc.getRenameRegistryItemMethod = getRenameRegistryItemMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.RenameRegistryItemRequest, viam.app.v1.AppOuterClass.RenameRegistryItemResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RenameRegistryItem"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.RenameRegistryItemRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.RenameRegistryItemResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getRenameRegistryItemMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.TransferRegistryItemRequest,
@@ -3813,6 +3873,16 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * List nested fragments for a fragment
+     * </pre>
+     */
+    default void listNestedFragments(viam.app.v1.AppOuterClass.ListNestedFragmentsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListNestedFragmentsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListNestedFragmentsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Gets top level and nested fragments for a machine, as well as any other specified fragment ids
      * </pre>
      */
@@ -3954,6 +4024,13 @@ public final class AppServiceGrpc {
     default void deleteRegistryItem(viam.app.v1.AppOuterClass.DeleteRegistryItemRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeleteRegistryItemResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRegistryItemMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void renameRegistryItem(viam.app.v1.AppOuterClass.RenameRegistryItemRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.RenameRegistryItemResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRenameRegistryItemMethod(), responseObserver);
     }
 
     /**
@@ -4838,6 +4915,17 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * List nested fragments for a fragment
+     * </pre>
+     */
+    public void listNestedFragments(viam.app.v1.AppOuterClass.ListNestedFragmentsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListNestedFragmentsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListNestedFragmentsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Gets top level and nested fragments for a machine, as well as any other specified fragment ids
      * </pre>
      */
@@ -4995,6 +5083,14 @@ public final class AppServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeleteRegistryItemResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteRegistryItemMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void renameRegistryItem(viam.app.v1.AppOuterClass.RenameRegistryItemRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.RenameRegistryItemResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRenameRegistryItemMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -5806,6 +5902,16 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * List nested fragments for a fragment
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListNestedFragmentsResponse listNestedFragments(viam.app.v1.AppOuterClass.ListNestedFragmentsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListNestedFragmentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Gets top level and nested fragments for a machine, as well as any other specified fragment ids
      * </pre>
      */
@@ -5947,6 +6053,13 @@ public final class AppServiceGrpc {
     public viam.app.v1.AppOuterClass.DeleteRegistryItemResponse deleteRegistryItem(viam.app.v1.AppOuterClass.DeleteRegistryItemRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteRegistryItemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.RenameRegistryItemResponse renameRegistryItem(viam.app.v1.AppOuterClass.RenameRegistryItemRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRenameRegistryItemMethod(), getCallOptions(), request);
     }
 
     /**
@@ -6802,6 +6915,17 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * List nested fragments for a fragment
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.ListNestedFragmentsResponse> listNestedFragments(
+        viam.app.v1.AppOuterClass.ListNestedFragmentsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListNestedFragmentsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Gets top level and nested fragments for a machine, as well as any other specified fragment ids
      * </pre>
      */
@@ -6959,6 +7083,14 @@ public final class AppServiceGrpc {
         viam.app.v1.AppOuterClass.DeleteRegistryItemRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteRegistryItemMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.RenameRegistryItemResponse> renameRegistryItem(
+        viam.app.v1.AppOuterClass.RenameRegistryItemRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRenameRegistryItemMethod(), getCallOptions()), request);
     }
 
     /**
@@ -7131,35 +7263,37 @@ public final class AppServiceGrpc {
   private static final int METHODID_CREATE_FRAGMENT = 70;
   private static final int METHODID_UPDATE_FRAGMENT = 71;
   private static final int METHODID_DELETE_FRAGMENT = 72;
-  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 73;
-  private static final int METHODID_LIST_MACHINE_SUMMARIES = 74;
-  private static final int METHODID_GET_FRAGMENT_HISTORY = 75;
-  private static final int METHODID_GET_FRAGMENT_USAGE = 76;
-  private static final int METHODID_SET_FRAGMENT_TAG = 77;
-  private static final int METHODID_DELETE_FRAGMENT_TAG = 78;
-  private static final int METHODID_ADD_ROLE = 79;
-  private static final int METHODID_REMOVE_ROLE = 80;
-  private static final int METHODID_CHANGE_ROLE = 81;
-  private static final int METHODID_LIST_AUTHORIZATIONS = 82;
-  private static final int METHODID_CHECK_PERMISSIONS = 83;
-  private static final int METHODID_GET_REGISTRY_ITEM = 84;
-  private static final int METHODID_CREATE_REGISTRY_ITEM = 85;
-  private static final int METHODID_UPDATE_REGISTRY_ITEM = 86;
-  private static final int METHODID_LIST_REGISTRY_ITEMS = 87;
-  private static final int METHODID_DELETE_REGISTRY_ITEM = 88;
-  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 89;
-  private static final int METHODID_CREATE_MODULE = 90;
-  private static final int METHODID_UPDATE_MODULE = 91;
-  private static final int METHODID_GET_MODULE = 92;
-  private static final int METHODID_LIST_MODULES = 93;
-  private static final int METHODID_CREATE_KEY = 94;
-  private static final int METHODID_DELETE_KEY = 95;
-  private static final int METHODID_LIST_KEYS = 96;
-  private static final int METHODID_RENAME_KEY = 97;
-  private static final int METHODID_ROTATE_KEY = 98;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 99;
-  private static final int METHODID_GET_APP_CONTENT = 100;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 101;
+  private static final int METHODID_LIST_NESTED_FRAGMENTS = 73;
+  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 74;
+  private static final int METHODID_LIST_MACHINE_SUMMARIES = 75;
+  private static final int METHODID_GET_FRAGMENT_HISTORY = 76;
+  private static final int METHODID_GET_FRAGMENT_USAGE = 77;
+  private static final int METHODID_SET_FRAGMENT_TAG = 78;
+  private static final int METHODID_DELETE_FRAGMENT_TAG = 79;
+  private static final int METHODID_ADD_ROLE = 80;
+  private static final int METHODID_REMOVE_ROLE = 81;
+  private static final int METHODID_CHANGE_ROLE = 82;
+  private static final int METHODID_LIST_AUTHORIZATIONS = 83;
+  private static final int METHODID_CHECK_PERMISSIONS = 84;
+  private static final int METHODID_GET_REGISTRY_ITEM = 85;
+  private static final int METHODID_CREATE_REGISTRY_ITEM = 86;
+  private static final int METHODID_UPDATE_REGISTRY_ITEM = 87;
+  private static final int METHODID_LIST_REGISTRY_ITEMS = 88;
+  private static final int METHODID_DELETE_REGISTRY_ITEM = 89;
+  private static final int METHODID_RENAME_REGISTRY_ITEM = 90;
+  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 91;
+  private static final int METHODID_CREATE_MODULE = 92;
+  private static final int METHODID_UPDATE_MODULE = 93;
+  private static final int METHODID_GET_MODULE = 94;
+  private static final int METHODID_LIST_MODULES = 95;
+  private static final int METHODID_CREATE_KEY = 96;
+  private static final int METHODID_DELETE_KEY = 97;
+  private static final int METHODID_LIST_KEYS = 98;
+  private static final int METHODID_RENAME_KEY = 99;
+  private static final int METHODID_ROTATE_KEY = 100;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 101;
+  private static final int METHODID_GET_APP_CONTENT = 102;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 103;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -7470,6 +7604,10 @@ public final class AppServiceGrpc {
           serviceImpl.deleteFragment((viam.app.v1.AppOuterClass.DeleteFragmentRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeleteFragmentResponse>) responseObserver);
           break;
+        case METHODID_LIST_NESTED_FRAGMENTS:
+          serviceImpl.listNestedFragments((viam.app.v1.AppOuterClass.ListNestedFragmentsRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListNestedFragmentsResponse>) responseObserver);
+          break;
         case METHODID_LIST_MACHINE_FRAGMENTS:
           serviceImpl.listMachineFragments((viam.app.v1.AppOuterClass.ListMachineFragmentsRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListMachineFragmentsResponse>) responseObserver);
@@ -7533,6 +7671,10 @@ public final class AppServiceGrpc {
         case METHODID_DELETE_REGISTRY_ITEM:
           serviceImpl.deleteRegistryItem((viam.app.v1.AppOuterClass.DeleteRegistryItemRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeleteRegistryItemResponse>) responseObserver);
+          break;
+        case METHODID_RENAME_REGISTRY_ITEM:
+          serviceImpl.renameRegistryItem((viam.app.v1.AppOuterClass.RenameRegistryItemRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.RenameRegistryItemResponse>) responseObserver);
           break;
         case METHODID_TRANSFER_REGISTRY_ITEM:
           serviceImpl.transferRegistryItem((viam.app.v1.AppOuterClass.TransferRegistryItemRequest) request,
@@ -8115,6 +8257,13 @@ public final class AppServiceGrpc {
               viam.app.v1.AppOuterClass.DeleteFragmentResponse>(
                 service, METHODID_DELETE_FRAGMENT)))
         .addMethod(
+          getListNestedFragmentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.ListNestedFragmentsRequest,
+              viam.app.v1.AppOuterClass.ListNestedFragmentsResponse>(
+                service, METHODID_LIST_NESTED_FRAGMENTS)))
+        .addMethod(
           getListMachineFragmentsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -8226,6 +8375,13 @@ public final class AppServiceGrpc {
               viam.app.v1.AppOuterClass.DeleteRegistryItemRequest,
               viam.app.v1.AppOuterClass.DeleteRegistryItemResponse>(
                 service, METHODID_DELETE_REGISTRY_ITEM)))
+        .addMethod(
+          getRenameRegistryItemMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.RenameRegistryItemRequest,
+              viam.app.v1.AppOuterClass.RenameRegistryItemResponse>(
+                service, METHODID_RENAME_REGISTRY_ITEM)))
         .addMethod(
           getTransferRegistryItemMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -8402,6 +8558,7 @@ public final class AppServiceGrpc {
               .addMethod(getCreateFragmentMethod())
               .addMethod(getUpdateFragmentMethod())
               .addMethod(getDeleteFragmentMethod())
+              .addMethod(getListNestedFragmentsMethod())
               .addMethod(getListMachineFragmentsMethod())
               .addMethod(getListMachineSummariesMethod())
               .addMethod(getGetFragmentHistoryMethod())
@@ -8418,6 +8575,7 @@ public final class AppServiceGrpc {
               .addMethod(getUpdateRegistryItemMethod())
               .addMethod(getListRegistryItemsMethod())
               .addMethod(getDeleteRegistryItemMethod())
+              .addMethod(getRenameRegistryItemMethod())
               .addMethod(getTransferRegistryItemMethod())
               .addMethod(getCreateModuleMethod())
               .addMethod(getUpdateModuleMethod())
