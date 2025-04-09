@@ -10,6 +10,122 @@ public final class DataPipelines {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
+  /**
+   * Protobuf enum {@code viam.app.datapipelines.v1.PipelineRunStatus}
+   */
+  public enum PipelineRunStatus
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>PIPELINE_RUN_STATUS_UNSPECIFIED = 0;</code>
+     */
+    PIPELINE_RUN_STATUS_UNSPECIFIED(0),
+    /**
+     * <code>PIPELINE_RUN_STATUS_SCHEDULED = 1;</code>
+     */
+    PIPELINE_RUN_STATUS_SCHEDULED(1),
+    /**
+     * <code>PIPELINE_RUN_STATUS_STARTED = 2;</code>
+     */
+    PIPELINE_RUN_STATUS_STARTED(2),
+    /**
+     * <code>PIPELINE_RUN_STATUS_COMPLETED = 3;</code>
+     */
+    PIPELINE_RUN_STATUS_COMPLETED(3),
+    /**
+     * <code>PIPELINE_RUN_STATUS_FAILED = 4;</code>
+     */
+    PIPELINE_RUN_STATUS_FAILED(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>PIPELINE_RUN_STATUS_UNSPECIFIED = 0;</code>
+     */
+    public static final int PIPELINE_RUN_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>PIPELINE_RUN_STATUS_SCHEDULED = 1;</code>
+     */
+    public static final int PIPELINE_RUN_STATUS_SCHEDULED_VALUE = 1;
+    /**
+     * <code>PIPELINE_RUN_STATUS_STARTED = 2;</code>
+     */
+    public static final int PIPELINE_RUN_STATUS_STARTED_VALUE = 2;
+    /**
+     * <code>PIPELINE_RUN_STATUS_COMPLETED = 3;</code>
+     */
+    public static final int PIPELINE_RUN_STATUS_COMPLETED_VALUE = 3;
+    /**
+     * <code>PIPELINE_RUN_STATUS_FAILED = 4;</code>
+     */
+    public static final int PIPELINE_RUN_STATUS_FAILED_VALUE = 4;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PipelineRunStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static PipelineRunStatus forNumber(int value) {
+      switch (value) {
+        case 0: return PIPELINE_RUN_STATUS_UNSPECIFIED;
+        case 1: return PIPELINE_RUN_STATUS_SCHEDULED;
+        case 2: return PIPELINE_RUN_STATUS_STARTED;
+        case 3: return PIPELINE_RUN_STATUS_COMPLETED;
+        case 4: return PIPELINE_RUN_STATUS_FAILED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PipelineRunStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PipelineRunStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PipelineRunStatus>() {
+            @java.lang.Override
+            public PipelineRunStatus findValueByNumber(int number) {
+              return PipelineRunStatus.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return PipelineRunStatusVerifier.INSTANCE;
+    }
+
+    private static final class PipelineRunStatusVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new PipelineRunStatusVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return PipelineRunStatus.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private PipelineRunStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.datapipelines.v1.PipelineRunStatus)
+  }
+
   public interface DataPipelineOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.DataPipeline)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -6737,6 +6853,2487 @@ public final class DataPipelines {
     private static volatile com.google.protobuf.Parser<DisableDataPipelineResponse> PARSER;
 
     public static com.google.protobuf.Parser<DisableDataPipelineResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListPipelineRunsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.ListPipelineRunsRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The ID of the data pipeline to list runs for.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * The ID of the data pipeline to list runs for.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * pagination fields
+     * </pre>
+     *
+     * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    int getPageSize();
+
+    /**
+     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.datapipelines.v1.ListPipelineRunsRequest}
+   */
+  public  static final class ListPipelineRunsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListPipelineRunsRequest, ListPipelineRunsRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.ListPipelineRunsRequest)
+      ListPipelineRunsRequestOrBuilder {
+    private ListPipelineRunsRequest() {
+      id_ = "";
+      pageToken_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <pre>
+     * The ID of the data pipeline to list runs for.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline to list runs for.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline to list runs for.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline to list runs for.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline to list runs for.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private int pageSize_;
+    /**
+     * <pre>
+     * pagination fields
+     * </pre>
+     *
+     * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public int getPageSize() {
+      return pageSize_;
+    }
+    /**
+     * <pre>
+     * pagination fields
+     * </pre>
+     *
+     * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
+     * @param value The pageSize to set.
+     */
+    private void setPageSize(int value) {
+      
+      pageSize_ = value;
+    }
+    /**
+     * <pre>
+     * pagination fields
+     * </pre>
+     *
+     * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
+     */
+    private void clearPageSize() {
+
+      pageSize_ = 0;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private java.lang.String pageToken_;
+    /**
+     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      return pageToken_;
+    }
+    /**
+     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(pageToken_);
+    }
+    /**
+     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * @param value The pageToken to set.
+     */
+    private void setPageToken(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      pageToken_ = value;
+    }
+    /**
+     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     */
+    private void clearPageToken() {
+
+      pageToken_ = getDefaultInstance().getPageToken();
+    }
+    /**
+     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * @param value The bytes for pageToken to set.
+     */
+    private void setPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      pageToken_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.datapipelines.v1.ListPipelineRunsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.ListPipelineRunsRequest)
+        viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequestOrBuilder {
+      // Construct using viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * The ID of the data pipeline to list runs for.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline to list runs for.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline to list runs for.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline to list runs for.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline to list runs for.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * pagination fields
+       * </pre>
+       *
+       * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public int getPageSize() {
+        return instance.getPageSize();
+      }
+      /**
+       * <pre>
+       * pagination fields
+       * </pre>
+       *
+       * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(int value) {
+        copyOnWrite();
+        instance.setPageSize(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination fields
+       * </pre>
+       *
+       * <code>uint32 page_size = 2 [json_name = "pageSize"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        copyOnWrite();
+        instance.clearPageSize();
+        return this;
+      }
+
+      /**
+       * <code>string page_token = 3 [json_name = "pageToken"];</code>
+       * @return The pageToken.
+       */
+      @java.lang.Override
+      public java.lang.String getPageToken() {
+        return instance.getPageToken();
+      }
+      /**
+       * <code>string page_token = 3 [json_name = "pageToken"];</code>
+       * @return The bytes for pageToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        return instance.getPageTokenBytes();
+      }
+      /**
+       * <code>string page_token = 3 [json_name = "pageToken"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPageToken(value);
+        return this;
+      }
+      /**
+       * <code>string page_token = 3 [json_name = "pageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        copyOnWrite();
+        instance.clearPageToken();
+        return this;
+      }
+      /**
+       * <code>string page_token = 3 [json_name = "pageToken"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPageTokenBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.ListPipelineRunsRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+              "pageSize_",
+              "pageToken_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u000b" +
+                "\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.ListPipelineRunsRequest)
+    private static final viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest DEFAULT_INSTANCE;
+    static {
+      ListPipelineRunsRequest defaultInstance = new ListPipelineRunsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListPipelineRunsRequest.class, defaultInstance);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListPipelineRunsRequest> PARSER;
+
+    public static com.google.protobuf.Parser<ListPipelineRunsRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListPipelineRunsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.ListPipelineRunsResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The ID of the data pipeline the runs are for.
+     * </pre>
+     *
+     * <code>string pipeline_id = 1 [json_name = "pipelineId"];</code>
+     * @return The pipelineId.
+     */
+    java.lang.String getPipelineId();
+    /**
+     * <pre>
+     * The ID of the data pipeline the runs are for.
+     * </pre>
+     *
+     * <code>string pipeline_id = 1 [json_name = "pipelineId"];</code>
+     * @return The bytes for pipelineId.
+     */
+    com.google.protobuf.ByteString
+        getPipelineIdBytes();
+
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    java.util.List<viam.app.datapipelines.v1.DataPipelines.PipelineRun> 
+        getRunsList();
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    viam.app.datapipelines.v1.DataPipelines.PipelineRun getRuns(int index);
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    int getRunsCount();
+
+    /**
+     * <pre>
+     * A token to retrieve the next page of results.
+     * </pre>
+     *
+     * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * A token to retrieve the next page of results.
+     * </pre>
+     *
+     * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.datapipelines.v1.ListPipelineRunsResponse}
+   */
+  public  static final class ListPipelineRunsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListPipelineRunsResponse, ListPipelineRunsResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.ListPipelineRunsResponse)
+      ListPipelineRunsResponseOrBuilder {
+    private ListPipelineRunsResponse() {
+      pipelineId_ = "";
+      runs_ = emptyProtobufList();
+      nextPageToken_ = "";
+    }
+    public static final int PIPELINE_ID_FIELD_NUMBER = 1;
+    private java.lang.String pipelineId_;
+    /**
+     * <pre>
+     * The ID of the data pipeline the runs are for.
+     * </pre>
+     *
+     * <code>string pipeline_id = 1 [json_name = "pipelineId"];</code>
+     * @return The pipelineId.
+     */
+    @java.lang.Override
+    public java.lang.String getPipelineId() {
+      return pipelineId_;
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline the runs are for.
+     * </pre>
+     *
+     * <code>string pipeline_id = 1 [json_name = "pipelineId"];</code>
+     * @return The bytes for pipelineId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPipelineIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(pipelineId_);
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline the runs are for.
+     * </pre>
+     *
+     * <code>string pipeline_id = 1 [json_name = "pipelineId"];</code>
+     * @param value The pipelineId to set.
+     */
+    private void setPipelineId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      pipelineId_ = value;
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline the runs are for.
+     * </pre>
+     *
+     * <code>string pipeline_id = 1 [json_name = "pipelineId"];</code>
+     */
+    private void clearPipelineId() {
+
+      pipelineId_ = getDefaultInstance().getPipelineId();
+    }
+    /**
+     * <pre>
+     * The ID of the data pipeline the runs are for.
+     * </pre>
+     *
+     * <code>string pipeline_id = 1 [json_name = "pipelineId"];</code>
+     * @param value The bytes for pipelineId to set.
+     */
+    private void setPipelineIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      pipelineId_ = value.toStringUtf8();
+
+    }
+
+    public static final int RUNS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.datapipelines.v1.DataPipelines.PipelineRun> runs_;
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.datapipelines.v1.DataPipelines.PipelineRun> getRunsList() {
+      return runs_;
+    }
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    public java.util.List<? extends viam.app.datapipelines.v1.DataPipelines.PipelineRunOrBuilder> 
+        getRunsOrBuilderList() {
+      return runs_;
+    }
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    @java.lang.Override
+    public int getRunsCount() {
+      return runs_.size();
+    }
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    @java.lang.Override
+    public viam.app.datapipelines.v1.DataPipelines.PipelineRun getRuns(int index) {
+      return runs_.get(index);
+    }
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    public viam.app.datapipelines.v1.DataPipelines.PipelineRunOrBuilder getRunsOrBuilder(
+        int index) {
+      return runs_.get(index);
+    }
+    private void ensureRunsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.datapipelines.v1.DataPipelines.PipelineRun> tmp = runs_;
+      if (!tmp.isModifiable()) {
+        runs_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    private void setRuns(
+        int index, viam.app.datapipelines.v1.DataPipelines.PipelineRun value) {
+      value.getClass();
+  ensureRunsIsMutable();
+      runs_.set(index, value);
+    }
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    private void addRuns(viam.app.datapipelines.v1.DataPipelines.PipelineRun value) {
+      value.getClass();
+  ensureRunsIsMutable();
+      runs_.add(value);
+    }
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    private void addRuns(
+        int index, viam.app.datapipelines.v1.DataPipelines.PipelineRun value) {
+      value.getClass();
+  ensureRunsIsMutable();
+      runs_.add(index, value);
+    }
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    private void addAllRuns(
+        java.lang.Iterable<? extends viam.app.datapipelines.v1.DataPipelines.PipelineRun> values) {
+      ensureRunsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, runs_);
+    }
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    private void clearRuns() {
+      runs_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * The runs that were run.
+     * </pre>
+     *
+     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     */
+    private void removeRuns(int index) {
+      ensureRunsIsMutable();
+      runs_.remove(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 3;
+    private java.lang.String nextPageToken_;
+    /**
+     * <pre>
+     * A token to retrieve the next page of results.
+     * </pre>
+     *
+     * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      return nextPageToken_;
+    }
+    /**
+     * <pre>
+     * A token to retrieve the next page of results.
+     * </pre>
+     *
+     * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(nextPageToken_);
+    }
+    /**
+     * <pre>
+     * A token to retrieve the next page of results.
+     * </pre>
+     *
+     * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+     * @param value The nextPageToken to set.
+     */
+    private void setNextPageToken(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      nextPageToken_ = value;
+    }
+    /**
+     * <pre>
+     * A token to retrieve the next page of results.
+     * </pre>
+     *
+     * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+     */
+    private void clearNextPageToken() {
+
+      nextPageToken_ = getDefaultInstance().getNextPageToken();
+    }
+    /**
+     * <pre>
+     * A token to retrieve the next page of results.
+     * </pre>
+     *
+     * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+     * @param value The bytes for nextPageToken to set.
+     */
+    private void setNextPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      nextPageToken_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.datapipelines.v1.ListPipelineRunsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.ListPipelineRunsResponse)
+        viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponseOrBuilder {
+      // Construct using viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * The ID of the data pipeline the runs are for.
+       * </pre>
+       *
+       * <code>string pipeline_id = 1 [json_name = "pipelineId"];</code>
+       * @return The pipelineId.
+       */
+      @java.lang.Override
+      public java.lang.String getPipelineId() {
+        return instance.getPipelineId();
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline the runs are for.
+       * </pre>
+       *
+       * <code>string pipeline_id = 1 [json_name = "pipelineId"];</code>
+       * @return The bytes for pipelineId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPipelineIdBytes() {
+        return instance.getPipelineIdBytes();
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline the runs are for.
+       * </pre>
+       *
+       * <code>string pipeline_id = 1 [json_name = "pipelineId"];</code>
+       * @param value The pipelineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPipelineId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPipelineId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline the runs are for.
+       * </pre>
+       *
+       * <code>string pipeline_id = 1 [json_name = "pipelineId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPipelineId() {
+        copyOnWrite();
+        instance.clearPipelineId();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the data pipeline the runs are for.
+       * </pre>
+       *
+       * <code>string pipeline_id = 1 [json_name = "pipelineId"];</code>
+       * @param value The bytes for pipelineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPipelineIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPipelineIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The runs that were run.
+       * </pre>
+       *
+       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.datapipelines.v1.DataPipelines.PipelineRun> getRunsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getRunsList());
+      }
+      /**
+       * <pre>
+       * The runs that were run.
+       * </pre>
+       *
+       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       */
+      @java.lang.Override
+      public int getRunsCount() {
+        return instance.getRunsCount();
+      }/**
+       * <pre>
+       * The runs that were run.
+       * </pre>
+       *
+       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       */
+      @java.lang.Override
+      public viam.app.datapipelines.v1.DataPipelines.PipelineRun getRuns(int index) {
+        return instance.getRuns(index);
+      }
+      /**
+       * <pre>
+       * The runs that were run.
+       * </pre>
+       *
+       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       */
+      public Builder setRuns(
+          int index, viam.app.datapipelines.v1.DataPipelines.PipelineRun value) {
+        copyOnWrite();
+        instance.setRuns(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The runs that were run.
+       * </pre>
+       *
+       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       */
+      public Builder setRuns(
+          int index, viam.app.datapipelines.v1.DataPipelines.PipelineRun.Builder builderForValue) {
+        copyOnWrite();
+        instance.setRuns(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The runs that were run.
+       * </pre>
+       *
+       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       */
+      public Builder addRuns(viam.app.datapipelines.v1.DataPipelines.PipelineRun value) {
+        copyOnWrite();
+        instance.addRuns(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The runs that were run.
+       * </pre>
+       *
+       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       */
+      public Builder addRuns(
+          int index, viam.app.datapipelines.v1.DataPipelines.PipelineRun value) {
+        copyOnWrite();
+        instance.addRuns(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The runs that were run.
+       * </pre>
+       *
+       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       */
+      public Builder addRuns(
+          viam.app.datapipelines.v1.DataPipelines.PipelineRun.Builder builderForValue) {
+        copyOnWrite();
+        instance.addRuns(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The runs that were run.
+       * </pre>
+       *
+       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       */
+      public Builder addRuns(
+          int index, viam.app.datapipelines.v1.DataPipelines.PipelineRun.Builder builderForValue) {
+        copyOnWrite();
+        instance.addRuns(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The runs that were run.
+       * </pre>
+       *
+       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       */
+      public Builder addAllRuns(
+          java.lang.Iterable<? extends viam.app.datapipelines.v1.DataPipelines.PipelineRun> values) {
+        copyOnWrite();
+        instance.addAllRuns(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * The runs that were run.
+       * </pre>
+       *
+       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       */
+      public Builder clearRuns() {
+        copyOnWrite();
+        instance.clearRuns();
+        return this;
+      }
+      /**
+       * <pre>
+       * The runs that were run.
+       * </pre>
+       *
+       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       */
+      public Builder removeRuns(int index) {
+        copyOnWrite();
+        instance.removeRuns(index);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * A token to retrieve the next page of results.
+       * </pre>
+       *
+       * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+       * @return The nextPageToken.
+       */
+      @java.lang.Override
+      public java.lang.String getNextPageToken() {
+        return instance.getNextPageToken();
+      }
+      /**
+       * <pre>
+       * A token to retrieve the next page of results.
+       * </pre>
+       *
+       * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+       * @return The bytes for nextPageToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        return instance.getNextPageTokenBytes();
+      }
+      /**
+       * <pre>
+       * A token to retrieve the next page of results.
+       * </pre>
+       *
+       * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setNextPageToken(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A token to retrieve the next page of results.
+       * </pre>
+       *
+       * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        copyOnWrite();
+        instance.clearNextPageToken();
+        return this;
+      }
+      /**
+       * <pre>
+       * A token to retrieve the next page of results.
+       * </pre>
+       *
+       * <code>string next_page_token = 3 [json_name = "nextPageToken"];</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNextPageTokenBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.ListPipelineRunsResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "pipelineId_",
+              "runs_",
+              viam.app.datapipelines.v1.DataPipelines.PipelineRun.class,
+              "nextPageToken_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u0208\u0002\u001b" +
+                "\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.ListPipelineRunsResponse)
+    private static final viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse DEFAULT_INSTANCE;
+    static {
+      ListPipelineRunsResponse defaultInstance = new ListPipelineRunsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListPipelineRunsResponse.class, defaultInstance);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListPipelineRunsResponse> PARSER;
+
+    public static com.google.protobuf.Parser<ListPipelineRunsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PipelineRunOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.PipelineRun)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The ID of the run.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * The ID of the run.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * The time the run started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime"];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * The time the run started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime"];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+
+    /**
+     * <pre>
+     * The time the run ended.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime"];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <pre>
+     * The time the run ended.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime"];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+
+    /**
+     * <pre>
+     * The start time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_start_time = 4 [json_name = "dataStartTime"];</code>
+     * @return Whether the dataStartTime field is set.
+     */
+    boolean hasDataStartTime();
+    /**
+     * <pre>
+     * The start time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_start_time = 4 [json_name = "dataStartTime"];</code>
+     * @return The dataStartTime.
+     */
+    com.google.protobuf.Timestamp getDataStartTime();
+
+    /**
+     * <pre>
+     * The end time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_end_time = 5 [json_name = "dataEndTime"];</code>
+     * @return Whether the dataEndTime field is set.
+     */
+    boolean hasDataEndTime();
+    /**
+     * <pre>
+     * The end time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_end_time = 5 [json_name = "dataEndTime"];</code>
+     * @return The dataEndTime.
+     */
+    com.google.protobuf.Timestamp getDataEndTime();
+
+    /**
+     * <pre>
+     * The status of the run.
+     * </pre>
+     *
+     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * The status of the run.
+     * </pre>
+     *
+     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     * @return The status.
+     */
+    viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus getStatus();
+  }
+  /**
+   * Protobuf type {@code viam.app.datapipelines.v1.PipelineRun}
+   */
+  public  static final class PipelineRun extends
+      com.google.protobuf.GeneratedMessageLite<
+          PipelineRun, PipelineRun.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.PipelineRun)
+      PipelineRunOrBuilder {
+    private PipelineRun() {
+      id_ = "";
+    }
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <pre>
+     * The ID of the run.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <pre>
+     * The ID of the run.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <pre>
+     * The ID of the run.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <pre>
+     * The ID of the run.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <pre>
+     * The ID of the run.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * The time the run started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The time the run started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * The time the run started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime"];</code>
+     */
+    private void setStartTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  startTime_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * The time the run started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeStartTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (startTime_ != null &&
+          startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        startTime_ =
+          com.google.protobuf.Timestamp.newBuilder(startTime_).mergeFrom(value).buildPartial();
+      } else {
+        startTime_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * The time the run started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime"];</code>
+     */
+    private void clearStartTime() {  startTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <pre>
+     * The time the run ended.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The time the run ended.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <pre>
+     * The time the run ended.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime"];</code>
+     */
+    private void setEndTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  endTime_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * The time the run ended.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeEndTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (endTime_ != null &&
+          endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        endTime_ =
+          com.google.protobuf.Timestamp.newBuilder(endTime_).mergeFrom(value).buildPartial();
+      } else {
+        endTime_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * The time the run ended.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime"];</code>
+     */
+    private void clearEndTime() {  endTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int DATA_START_TIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp dataStartTime_;
+    /**
+     * <pre>
+     * The start time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_start_time = 4 [json_name = "dataStartTime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasDataStartTime() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The start time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_start_time = 4 [json_name = "dataStartTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDataStartTime() {
+      return dataStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dataStartTime_;
+    }
+    /**
+     * <pre>
+     * The start time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_start_time = 4 [json_name = "dataStartTime"];</code>
+     */
+    private void setDataStartTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  dataStartTime_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <pre>
+     * The start time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_start_time = 4 [json_name = "dataStartTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDataStartTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (dataStartTime_ != null &&
+          dataStartTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        dataStartTime_ =
+          com.google.protobuf.Timestamp.newBuilder(dataStartTime_).mergeFrom(value).buildPartial();
+      } else {
+        dataStartTime_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * The start time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_start_time = 4 [json_name = "dataStartTime"];</code>
+     */
+    private void clearDataStartTime() {  dataStartTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static final int DATA_END_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp dataEndTime_;
+    /**
+     * <pre>
+     * The end time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_end_time = 5 [json_name = "dataEndTime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasDataEndTime() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The end time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_end_time = 5 [json_name = "dataEndTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDataEndTime() {
+      return dataEndTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dataEndTime_;
+    }
+    /**
+     * <pre>
+     * The end time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_end_time = 5 [json_name = "dataEndTime"];</code>
+     */
+    private void setDataEndTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  dataEndTime_ = value;
+      bitField0_ |= 0x00000008;
+      }
+    /**
+     * <pre>
+     * The end time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_end_time = 5 [json_name = "dataEndTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDataEndTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (dataEndTime_ != null &&
+          dataEndTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        dataEndTime_ =
+          com.google.protobuf.Timestamp.newBuilder(dataEndTime_).mergeFrom(value).buildPartial();
+      } else {
+        dataEndTime_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * The end time of the data that was processed in the run.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_end_time = 5 [json_name = "dataEndTime"];</code>
+     */
+    private void clearDataEndTime() {  dataEndTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 6;
+    private int status_;
+    /**
+     * <pre>
+     * The status of the run.
+     * </pre>
+     *
+     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override
+    public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * The status of the run.
+     * </pre>
+     *
+     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus getStatus() {
+      viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus result = viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus.forNumber(status_);
+      return result == null ? viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The status of the run.
+     * </pre>
+     *
+     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     */
+    private void setStatusValue(int value) {
+        status_ = value;
+    }
+    /**
+     * <pre>
+     * The status of the run.
+     * </pre>
+     *
+     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     * @param value The status to set.
+     */
+    private void setStatus(viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus value) {
+      status_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * The status of the run.
+     * </pre>
+     *
+     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     */
+    private void clearStatus() {
+
+      status_ = 0;
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.PipelineRun prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.datapipelines.v1.PipelineRun}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.datapipelines.v1.DataPipelines.PipelineRun, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.PipelineRun)
+        viam.app.datapipelines.v1.DataPipelines.PipelineRunOrBuilder {
+      // Construct using viam.app.datapipelines.v1.DataPipelines.PipelineRun.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * The ID of the run.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <pre>
+       * The ID of the run.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <pre>
+       * The ID of the run.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the run.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the run.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The time the run started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasStartTime() {
+        return instance.hasStartTime();
+      }
+      /**
+       * <pre>
+       * The time the run started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getStartTime() {
+        return instance.getStartTime();
+      }
+      /**
+       * <pre>
+       * The time the run started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime"];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setStartTime(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * The time the run started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime"];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setStartTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the run started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime"];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeStartTime(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the run started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 2 [json_name = "startTime"];</code>
+       */
+      public Builder clearStartTime() {  copyOnWrite();
+        instance.clearStartTime();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The time the run ended.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasEndTime() {
+        return instance.hasEndTime();
+      }
+      /**
+       * <pre>
+       * The time the run ended.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getEndTime() {
+        return instance.getEndTime();
+      }
+      /**
+       * <pre>
+       * The time the run ended.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime"];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setEndTime(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * The time the run ended.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime"];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setEndTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the run ended.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime"];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeEndTime(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the run ended.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 3 [json_name = "endTime"];</code>
+       */
+      public Builder clearEndTime() {  copyOnWrite();
+        instance.clearEndTime();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The start time of the data that was processed in the run.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_start_time = 4 [json_name = "dataStartTime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasDataStartTime() {
+        return instance.hasDataStartTime();
+      }
+      /**
+       * <pre>
+       * The start time of the data that was processed in the run.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_start_time = 4 [json_name = "dataStartTime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getDataStartTime() {
+        return instance.getDataStartTime();
+      }
+      /**
+       * <pre>
+       * The start time of the data that was processed in the run.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_start_time = 4 [json_name = "dataStartTime"];</code>
+       */
+      public Builder setDataStartTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setDataStartTime(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * The start time of the data that was processed in the run.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_start_time = 4 [json_name = "dataStartTime"];</code>
+       */
+      public Builder setDataStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDataStartTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The start time of the data that was processed in the run.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_start_time = 4 [json_name = "dataStartTime"];</code>
+       */
+      public Builder mergeDataStartTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeDataStartTime(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The start time of the data that was processed in the run.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_start_time = 4 [json_name = "dataStartTime"];</code>
+       */
+      public Builder clearDataStartTime() {  copyOnWrite();
+        instance.clearDataStartTime();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The end time of the data that was processed in the run.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_end_time = 5 [json_name = "dataEndTime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasDataEndTime() {
+        return instance.hasDataEndTime();
+      }
+      /**
+       * <pre>
+       * The end time of the data that was processed in the run.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_end_time = 5 [json_name = "dataEndTime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getDataEndTime() {
+        return instance.getDataEndTime();
+      }
+      /**
+       * <pre>
+       * The end time of the data that was processed in the run.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_end_time = 5 [json_name = "dataEndTime"];</code>
+       */
+      public Builder setDataEndTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setDataEndTime(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * The end time of the data that was processed in the run.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_end_time = 5 [json_name = "dataEndTime"];</code>
+       */
+      public Builder setDataEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDataEndTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The end time of the data that was processed in the run.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_end_time = 5 [json_name = "dataEndTime"];</code>
+       */
+      public Builder mergeDataEndTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeDataEndTime(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The end time of the data that was processed in the run.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_end_time = 5 [json_name = "dataEndTime"];</code>
+       */
+      public Builder clearDataEndTime() {  copyOnWrite();
+        instance.clearDataEndTime();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The status of the run.
+       * </pre>
+       *
+       * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override
+      public int getStatusValue() {
+        return instance.getStatusValue();
+      }
+      /**
+       * <pre>
+       * The status of the run.
+       * </pre>
+       *
+       * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        copyOnWrite();
+        instance.setStatusValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The status of the run.
+       * </pre>
+       *
+       * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus getStatus() {
+        return instance.getStatus();
+      }
+      /**
+       * <pre>
+       * The status of the run.
+       * </pre>
+       *
+       * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus value) {
+        copyOnWrite();
+        instance.setStatus(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The status of the run.
+       * </pre>
+       *
+       * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        copyOnWrite();
+        instance.clearStatus();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.PipelineRun)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.datapipelines.v1.DataPipelines.PipelineRun();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "id_",
+              "startTime_",
+              "endTime_",
+              "dataStartTime_",
+              "dataEndTime_",
+              "status_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001\u0004\u1009\u0002\u0005\u1009\u0003\u0006\f";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.PipelineRun> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.datapipelines.v1.DataPipelines.PipelineRun.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.PipelineRun>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.PipelineRun)
+    private static final viam.app.datapipelines.v1.DataPipelines.PipelineRun DEFAULT_INSTANCE;
+    static {
+      PipelineRun defaultInstance = new PipelineRun();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PipelineRun.class, defaultInstance);
+    }
+
+    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PipelineRun> PARSER;
+
+    public static com.google.protobuf.Parser<PipelineRun> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
