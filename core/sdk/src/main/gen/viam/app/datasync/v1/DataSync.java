@@ -1633,15 +1633,19 @@ public final class DataSync {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.FileUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=52
      * @return The fileId.
      */
-    java.lang.String getFileId();
+    @java.lang.Deprecated java.lang.String getFileId();
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.FileUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=52
      * @return The bytes for fileId.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getFileIdBytes();
 
     /**
@@ -1675,24 +1679,30 @@ public final class DataSync {
     public static final int FILE_ID_FIELD_NUMBER = 1;
     private java.lang.String fileId_;
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.FileUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=52
      * @return The fileId.
      */
     @java.lang.Override
-    public java.lang.String getFileId() {
+    @java.lang.Deprecated public java.lang.String getFileId() {
       return fileId_;
     }
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.FileUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=52
      * @return The bytes for fileId.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getFileIdBytes() {
       return com.google.protobuf.ByteString.copyFromUtf8(fileId_);
     }
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.FileUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=52
      * @param value The fileId to set.
      */
     private void setFileId(
@@ -1702,14 +1712,18 @@ public final class DataSync {
       fileId_ = value;
     }
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.FileUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=52
      */
     private void clearFileId() {
 
       fileId_ = getDefaultInstance().getFileId();
     }
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.FileUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=52
      * @param value The bytes for fileId to set.
      */
     private void setFileIdBytes(
@@ -1868,48 +1882,58 @@ public final class DataSync {
 
 
       /**
-       * <code>string file_id = 1 [json_name = "fileId"];</code>
+       * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.FileUploadResponse.file_id is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=52
        * @return The fileId.
        */
       @java.lang.Override
-      public java.lang.String getFileId() {
+      @java.lang.Deprecated public java.lang.String getFileId() {
         return instance.getFileId();
       }
       /**
-       * <code>string file_id = 1 [json_name = "fileId"];</code>
+       * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.FileUploadResponse.file_id is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=52
        * @return The bytes for fileId.
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getFileIdBytes() {
         return instance.getFileIdBytes();
       }
       /**
-       * <code>string file_id = 1 [json_name = "fileId"];</code>
+       * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.FileUploadResponse.file_id is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=52
        * @param value The fileId to set.
        * @return This builder for chaining.
        */
-      public Builder setFileId(
+      @java.lang.Deprecated public Builder setFileId(
           java.lang.String value) {
         copyOnWrite();
         instance.setFileId(value);
         return this;
       }
       /**
-       * <code>string file_id = 1 [json_name = "fileId"];</code>
+       * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.FileUploadResponse.file_id is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=52
        * @return This builder for chaining.
        */
-      public Builder clearFileId() {
+      @java.lang.Deprecated public Builder clearFileId() {
         copyOnWrite();
         instance.clearFileId();
         return this;
       }
       /**
-       * <code>string file_id = 1 [json_name = "fileId"];</code>
+       * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.FileUploadResponse.file_id is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=52
        * @param value The bytes for fileId to set.
        * @return This builder for chaining.
        */
-      public Builder setFileIdBytes(
+      @java.lang.Deprecated public Builder setFileIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
         instance.setFileIdBytes(value);
@@ -2496,15 +2520,19 @@ public final class DataSync {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.StreamingDataCaptureUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=67
      * @return The fileId.
      */
-    java.lang.String getFileId();
+    @java.lang.Deprecated java.lang.String getFileId();
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.StreamingDataCaptureUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=67
      * @return The bytes for fileId.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getFileIdBytes();
 
     /**
@@ -2538,24 +2566,30 @@ public final class DataSync {
     public static final int FILE_ID_FIELD_NUMBER = 1;
     private java.lang.String fileId_;
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.StreamingDataCaptureUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=67
      * @return The fileId.
      */
     @java.lang.Override
-    public java.lang.String getFileId() {
+    @java.lang.Deprecated public java.lang.String getFileId() {
       return fileId_;
     }
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.StreamingDataCaptureUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=67
      * @return The bytes for fileId.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getFileIdBytes() {
       return com.google.protobuf.ByteString.copyFromUtf8(fileId_);
     }
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.StreamingDataCaptureUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=67
      * @param value The fileId to set.
      */
     private void setFileId(
@@ -2565,14 +2599,18 @@ public final class DataSync {
       fileId_ = value;
     }
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.StreamingDataCaptureUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=67
      */
     private void clearFileId() {
 
       fileId_ = getDefaultInstance().getFileId();
     }
     /**
-     * <code>string file_id = 1 [json_name = "fileId"];</code>
+     * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.StreamingDataCaptureUploadResponse.file_id is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=67
      * @param value The bytes for fileId to set.
      */
     private void setFileIdBytes(
@@ -2731,48 +2769,58 @@ public final class DataSync {
 
 
       /**
-       * <code>string file_id = 1 [json_name = "fileId"];</code>
+       * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.StreamingDataCaptureUploadResponse.file_id is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=67
        * @return The fileId.
        */
       @java.lang.Override
-      public java.lang.String getFileId() {
+      @java.lang.Deprecated public java.lang.String getFileId() {
         return instance.getFileId();
       }
       /**
-       * <code>string file_id = 1 [json_name = "fileId"];</code>
+       * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.StreamingDataCaptureUploadResponse.file_id is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=67
        * @return The bytes for fileId.
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getFileIdBytes() {
         return instance.getFileIdBytes();
       }
       /**
-       * <code>string file_id = 1 [json_name = "fileId"];</code>
+       * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.StreamingDataCaptureUploadResponse.file_id is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=67
        * @param value The fileId to set.
        * @return This builder for chaining.
        */
-      public Builder setFileId(
+      @java.lang.Deprecated public Builder setFileId(
           java.lang.String value) {
         copyOnWrite();
         instance.setFileId(value);
         return this;
       }
       /**
-       * <code>string file_id = 1 [json_name = "fileId"];</code>
+       * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.StreamingDataCaptureUploadResponse.file_id is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=67
        * @return This builder for chaining.
        */
-      public Builder clearFileId() {
+      @java.lang.Deprecated public Builder clearFileId() {
         copyOnWrite();
         instance.clearFileId();
         return this;
       }
       /**
-       * <code>string file_id = 1 [json_name = "fileId"];</code>
+       * <code>string file_id = 1 [json_name = "fileId", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.StreamingDataCaptureUploadResponse.file_id is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=67
        * @param value The bytes for fileId to set.
        * @return This builder for chaining.
        */
-      public Builder setFileIdBytes(
+      @java.lang.Deprecated public Builder setFileIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
         instance.setFileIdBytes(value);
