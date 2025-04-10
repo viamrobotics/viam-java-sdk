@@ -15413,7 +15413,7 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
-  public interface BinaryIDOrBuilder extends
+  @java.lang.Deprecated public interface BinaryIDOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.BinaryID)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -15460,7 +15460,7 @@ com.google.protobuf.Any defaultValue) {
    *
    * Protobuf type {@code viam.app.data.v1.BinaryID}
    */
-  public  static final class BinaryID extends
+  @java.lang.Deprecated public  static final class BinaryID extends
       com.google.protobuf.GeneratedMessageLite<
           BinaryID, BinaryID.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.BinaryID)
@@ -15947,18 +15947,18 @@ com.google.protobuf.Any defaultValue) {
     boolean getIncludeBinary();
 
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    java.util.List<viam.app.data.v1.Data.BinaryID> 
+    @java.lang.Deprecated java.util.List<viam.app.data.v1.Data.BinaryID> 
         getBinaryIdsList();
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    viam.app.data.v1.Data.BinaryID getBinaryIds(int index);
+    @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryIds(int index);
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    int getBinaryIdsCount();
+    @java.lang.Deprecated int getBinaryIdsCount();
 
     /**
      * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
@@ -16030,37 +16030,37 @@ com.google.protobuf.Any defaultValue) {
     public static final int BINARY_IDS_FIELD_NUMBER = 3;
     private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.BinaryID> binaryIds_;
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
+    @java.lang.Deprecated public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
       return binaryIds_;
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    public java.util.List<? extends viam.app.data.v1.Data.BinaryIDOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends viam.app.data.v1.Data.BinaryIDOrBuilder> 
         getBinaryIdsOrBuilderList() {
       return binaryIds_;
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getBinaryIdsCount() {
+    @java.lang.Deprecated public int getBinaryIdsCount() {
       return binaryIds_.size();
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
       return binaryIds_.get(index);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    public viam.app.data.v1.Data.BinaryIDOrBuilder getBinaryIdsOrBuilder(
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryIDOrBuilder getBinaryIdsOrBuilder(
         int index) {
       return binaryIds_.get(index);
     }
@@ -16073,7 +16073,7 @@ com.google.protobuf.Any defaultValue) {
     }
 
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void setBinaryIds(
         int index, viam.app.data.v1.Data.BinaryID value) {
@@ -16082,7 +16082,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.set(index, value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
       value.getClass();
@@ -16090,7 +16090,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.add(value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addBinaryIds(
         int index, viam.app.data.v1.Data.BinaryID value) {
@@ -16099,7 +16099,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.add(index, value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addAllBinaryIds(
         java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryID> values) {
@@ -16108,13 +16108,13 @@ com.google.protobuf.Any defaultValue) {
           values, binaryIds_);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void clearBinaryIds() {
       binaryIds_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void removeBinaryIds(int index) {
       ensureBinaryIdsIsMutable();
@@ -16344,39 +16344,39 @@ com.google.protobuf.Any defaultValue) {
       }
 
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
+      @java.lang.Deprecated public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
         return java.util.Collections.unmodifiableList(
             instance.getBinaryIdsList());
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public int getBinaryIdsCount() {
+      @java.lang.Deprecated public int getBinaryIdsCount() {
         return instance.getBinaryIdsCount();
       }/**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
+      @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
         return instance.getBinaryIds(index);
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder setBinaryIds(
+      @java.lang.Deprecated public Builder setBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.setBinaryIds(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder setBinaryIds(
+      @java.lang.Deprecated public Builder setBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.setBinaryIds(index,
@@ -16384,35 +16384,35 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
+      @java.lang.Deprecated public Builder addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.addBinaryIds(value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.addBinaryIds(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.addBinaryIds(builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.addBinaryIds(index,
@@ -16420,26 +16420,26 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addAllBinaryIds(
+      @java.lang.Deprecated public Builder addAllBinaryIds(
           java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryID> values) {
         copyOnWrite();
         instance.addAllBinaryIds(values);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder clearBinaryIds() {
+      @java.lang.Deprecated public Builder clearBinaryIds() {
         copyOnWrite();
         instance.clearBinaryIds();
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder removeBinaryIds(int index) {
+      @java.lang.Deprecated public Builder removeBinaryIds(int index) {
         copyOnWrite();
         instance.removeBinaryIds(index);
         return this;
@@ -18916,15 +18916,19 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", deprecated = true];</code>
+     * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
+     *     See app/data/v1/data.proto;l=383
      * @return The id.
      */
-    java.lang.String getId();
+    @java.lang.Deprecated java.lang.String getId();
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", deprecated = true];</code>
+     * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
+     *     See app/data/v1/data.proto;l=383
      * @return The bytes for id.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getIdBytes();
 
     /**
@@ -19068,24 +19072,30 @@ com.google.protobuf.Any defaultValue) {
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.String id_;
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", deprecated = true];</code>
+     * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
+     *     See app/data/v1/data.proto;l=383
      * @return The id.
      */
     @java.lang.Override
-    public java.lang.String getId() {
+    @java.lang.Deprecated public java.lang.String getId() {
       return id_;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", deprecated = true];</code>
+     * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
+     *     See app/data/v1/data.proto;l=383
      * @return The bytes for id.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getIdBytes() {
       return com.google.protobuf.ByteString.copyFromUtf8(id_);
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", deprecated = true];</code>
+     * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
+     *     See app/data/v1/data.proto;l=383
      * @param value The id to set.
      */
     private void setId(
@@ -19095,14 +19105,18 @@ com.google.protobuf.Any defaultValue) {
       id_ = value;
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", deprecated = true];</code>
+     * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
+     *     See app/data/v1/data.proto;l=383
      */
     private void clearId() {
 
       id_ = getDefaultInstance().getId();
     }
     /**
-     * <code>string id = 1 [json_name = "id"];</code>
+     * <code>string id = 1 [json_name = "id", deprecated = true];</code>
+     * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
+     *     See app/data/v1/data.proto;l=383
      * @param value The bytes for id to set.
      */
     private void setIdBytes(
@@ -19679,48 +19693,58 @@ com.google.protobuf.Any defaultValue) {
 
 
       /**
-       * <code>string id = 1 [json_name = "id"];</code>
+       * <code>string id = 1 [json_name = "id", deprecated = true];</code>
+       * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
+       *     See app/data/v1/data.proto;l=383
        * @return The id.
        */
       @java.lang.Override
-      public java.lang.String getId() {
+      @java.lang.Deprecated public java.lang.String getId() {
         return instance.getId();
       }
       /**
-       * <code>string id = 1 [json_name = "id"];</code>
+       * <code>string id = 1 [json_name = "id", deprecated = true];</code>
+       * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
+       *     See app/data/v1/data.proto;l=383
        * @return The bytes for id.
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getIdBytes() {
         return instance.getIdBytes();
       }
       /**
-       * <code>string id = 1 [json_name = "id"];</code>
+       * <code>string id = 1 [json_name = "id", deprecated = true];</code>
+       * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
+       *     See app/data/v1/data.proto;l=383
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
+      @java.lang.Deprecated public Builder setId(
           java.lang.String value) {
         copyOnWrite();
         instance.setId(value);
         return this;
       }
       /**
-       * <code>string id = 1 [json_name = "id"];</code>
+       * <code>string id = 1 [json_name = "id", deprecated = true];</code>
+       * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
+       *     See app/data/v1/data.proto;l=383
        * @return This builder for chaining.
        */
-      public Builder clearId() {
+      @java.lang.Deprecated public Builder clearId() {
         copyOnWrite();
         instance.clearId();
         return this;
       }
       /**
-       * <code>string id = 1 [json_name = "id"];</code>
+       * <code>string id = 1 [json_name = "id", deprecated = true];</code>
+       * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
+       *     See app/data/v1/data.proto;l=383
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
-      public Builder setIdBytes(
+      @java.lang.Deprecated public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
         instance.setIdBytes(value);
@@ -21535,18 +21559,18 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
-    java.util.List<viam.app.data.v1.Data.BinaryID> 
+    @java.lang.Deprecated java.util.List<viam.app.data.v1.Data.BinaryID> 
         getBinaryIdsList();
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
-    viam.app.data.v1.Data.BinaryID getBinaryIds(int index);
+    @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryIds(int index);
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
-    int getBinaryIdsCount();
+    @java.lang.Deprecated int getBinaryIdsCount();
 
     /**
      * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
@@ -21592,37 +21616,37 @@ com.google.protobuf.Any defaultValue) {
     public static final int BINARY_IDS_FIELD_NUMBER = 2;
     private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.BinaryID> binaryIds_;
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
+    @java.lang.Deprecated public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
       return binaryIds_;
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
-    public java.util.List<? extends viam.app.data.v1.Data.BinaryIDOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends viam.app.data.v1.Data.BinaryIDOrBuilder> 
         getBinaryIdsOrBuilderList() {
       return binaryIds_;
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getBinaryIdsCount() {
+    @java.lang.Deprecated public int getBinaryIdsCount() {
       return binaryIds_.size();
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
       return binaryIds_.get(index);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
-    public viam.app.data.v1.Data.BinaryIDOrBuilder getBinaryIdsOrBuilder(
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryIDOrBuilder getBinaryIdsOrBuilder(
         int index) {
       return binaryIds_.get(index);
     }
@@ -21635,7 +21659,7 @@ com.google.protobuf.Any defaultValue) {
     }
 
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void setBinaryIds(
         int index, viam.app.data.v1.Data.BinaryID value) {
@@ -21644,7 +21668,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.set(index, value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
       value.getClass();
@@ -21652,7 +21676,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.add(value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addBinaryIds(
         int index, viam.app.data.v1.Data.BinaryID value) {
@@ -21661,7 +21685,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.add(index, value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addAllBinaryIds(
         java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryID> values) {
@@ -21670,13 +21694,13 @@ com.google.protobuf.Any defaultValue) {
           values, binaryIds_);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void clearBinaryIds() {
       binaryIds_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void removeBinaryIds(int index) {
       ensureBinaryIdsIsMutable();
@@ -21878,39 +21902,39 @@ com.google.protobuf.Any defaultValue) {
 
 
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
+      @java.lang.Deprecated public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
         return java.util.Collections.unmodifiableList(
             instance.getBinaryIdsList());
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public int getBinaryIdsCount() {
+      @java.lang.Deprecated public int getBinaryIdsCount() {
         return instance.getBinaryIdsCount();
       }/**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
+      @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
         return instance.getBinaryIds(index);
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder setBinaryIds(
+      @java.lang.Deprecated public Builder setBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.setBinaryIds(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder setBinaryIds(
+      @java.lang.Deprecated public Builder setBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.setBinaryIds(index,
@@ -21918,35 +21942,35 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
+      @java.lang.Deprecated public Builder addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.addBinaryIds(value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.addBinaryIds(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.addBinaryIds(builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.addBinaryIds(index,
@@ -21954,26 +21978,26 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addAllBinaryIds(
+      @java.lang.Deprecated public Builder addAllBinaryIds(
           java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryID> values) {
         copyOnWrite();
         instance.addAllBinaryIds(values);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder clearBinaryIds() {
+      @java.lang.Deprecated public Builder clearBinaryIds() {
         copyOnWrite();
         instance.clearBinaryIds();
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 2 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder removeBinaryIds(int index) {
+      @java.lang.Deprecated public Builder removeBinaryIds(int index) {
         copyOnWrite();
         instance.removeBinaryIds(index);
         return this;
@@ -22406,18 +22430,18 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    java.util.List<viam.app.data.v1.Data.BinaryID> 
+    @java.lang.Deprecated java.util.List<viam.app.data.v1.Data.BinaryID> 
         getBinaryIdsList();
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    viam.app.data.v1.Data.BinaryID getBinaryIds(int index);
+    @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryIds(int index);
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    int getBinaryIdsCount();
+    @java.lang.Deprecated int getBinaryIdsCount();
 
     /**
      * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
@@ -22489,37 +22513,37 @@ com.google.protobuf.Any defaultValue) {
     public static final int BINARY_IDS_FIELD_NUMBER = 3;
     private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.BinaryID> binaryIds_;
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
+    @java.lang.Deprecated public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
       return binaryIds_;
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    public java.util.List<? extends viam.app.data.v1.Data.BinaryIDOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends viam.app.data.v1.Data.BinaryIDOrBuilder> 
         getBinaryIdsOrBuilderList() {
       return binaryIds_;
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getBinaryIdsCount() {
+    @java.lang.Deprecated public int getBinaryIdsCount() {
       return binaryIds_.size();
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
       return binaryIds_.get(index);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    public viam.app.data.v1.Data.BinaryIDOrBuilder getBinaryIdsOrBuilder(
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryIDOrBuilder getBinaryIdsOrBuilder(
         int index) {
       return binaryIds_.get(index);
     }
@@ -22532,7 +22556,7 @@ com.google.protobuf.Any defaultValue) {
     }
 
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void setBinaryIds(
         int index, viam.app.data.v1.Data.BinaryID value) {
@@ -22541,7 +22565,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.set(index, value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
       value.getClass();
@@ -22549,7 +22573,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.add(value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addBinaryIds(
         int index, viam.app.data.v1.Data.BinaryID value) {
@@ -22558,7 +22582,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.add(index, value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addAllBinaryIds(
         java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryID> values) {
@@ -22567,13 +22591,13 @@ com.google.protobuf.Any defaultValue) {
           values, binaryIds_);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void clearBinaryIds() {
       binaryIds_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void removeBinaryIds(int index) {
       ensureBinaryIdsIsMutable();
@@ -22868,39 +22892,39 @@ com.google.protobuf.Any defaultValue) {
 
 
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
+      @java.lang.Deprecated public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
         return java.util.Collections.unmodifiableList(
             instance.getBinaryIdsList());
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public int getBinaryIdsCount() {
+      @java.lang.Deprecated public int getBinaryIdsCount() {
         return instance.getBinaryIdsCount();
       }/**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
+      @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
         return instance.getBinaryIds(index);
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder setBinaryIds(
+      @java.lang.Deprecated public Builder setBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.setBinaryIds(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder setBinaryIds(
+      @java.lang.Deprecated public Builder setBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.setBinaryIds(index,
@@ -22908,35 +22932,35 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
+      @java.lang.Deprecated public Builder addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.addBinaryIds(value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.addBinaryIds(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.addBinaryIds(builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.addBinaryIds(index,
@@ -22944,26 +22968,26 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addAllBinaryIds(
+      @java.lang.Deprecated public Builder addAllBinaryIds(
           java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryID> values) {
         copyOnWrite();
         instance.addAllBinaryIds(values);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder clearBinaryIds() {
+      @java.lang.Deprecated public Builder clearBinaryIds() {
         copyOnWrite();
         instance.clearBinaryIds();
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder removeBinaryIds(int index) {
+      @java.lang.Deprecated public Builder removeBinaryIds(int index) {
         copyOnWrite();
         instance.removeBinaryIds(index);
         return this;
@@ -24112,18 +24136,18 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    java.util.List<viam.app.data.v1.Data.BinaryID> 
+    @java.lang.Deprecated java.util.List<viam.app.data.v1.Data.BinaryID> 
         getBinaryIdsList();
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    viam.app.data.v1.Data.BinaryID getBinaryIds(int index);
+    @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryIds(int index);
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    int getBinaryIdsCount();
+    @java.lang.Deprecated int getBinaryIdsCount();
 
     /**
      * <code>repeated string binary_data_ids = 4 [json_name = "binaryDataIds"];</code>
@@ -24195,37 +24219,37 @@ com.google.protobuf.Any defaultValue) {
     public static final int BINARY_IDS_FIELD_NUMBER = 3;
     private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.BinaryID> binaryIds_;
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
+    @java.lang.Deprecated public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
       return binaryIds_;
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    public java.util.List<? extends viam.app.data.v1.Data.BinaryIDOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends viam.app.data.v1.Data.BinaryIDOrBuilder> 
         getBinaryIdsOrBuilderList() {
       return binaryIds_;
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getBinaryIdsCount() {
+    @java.lang.Deprecated public int getBinaryIdsCount() {
       return binaryIds_.size();
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
       return binaryIds_.get(index);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
-    public viam.app.data.v1.Data.BinaryIDOrBuilder getBinaryIdsOrBuilder(
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryIDOrBuilder getBinaryIdsOrBuilder(
         int index) {
       return binaryIds_.get(index);
     }
@@ -24238,7 +24262,7 @@ com.google.protobuf.Any defaultValue) {
     }
 
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void setBinaryIds(
         int index, viam.app.data.v1.Data.BinaryID value) {
@@ -24247,7 +24271,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.set(index, value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
       value.getClass();
@@ -24255,7 +24279,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.add(value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addBinaryIds(
         int index, viam.app.data.v1.Data.BinaryID value) {
@@ -24264,7 +24288,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.add(index, value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addAllBinaryIds(
         java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryID> values) {
@@ -24273,13 +24297,13 @@ com.google.protobuf.Any defaultValue) {
           values, binaryIds_);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void clearBinaryIds() {
       binaryIds_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void removeBinaryIds(int index) {
       ensureBinaryIdsIsMutable();
@@ -24574,39 +24598,39 @@ com.google.protobuf.Any defaultValue) {
 
 
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
+      @java.lang.Deprecated public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
         return java.util.Collections.unmodifiableList(
             instance.getBinaryIdsList());
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public int getBinaryIdsCount() {
+      @java.lang.Deprecated public int getBinaryIdsCount() {
         return instance.getBinaryIdsCount();
       }/**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
+      @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
         return instance.getBinaryIds(index);
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder setBinaryIds(
+      @java.lang.Deprecated public Builder setBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.setBinaryIds(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder setBinaryIds(
+      @java.lang.Deprecated public Builder setBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.setBinaryIds(index,
@@ -24614,35 +24638,35 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
+      @java.lang.Deprecated public Builder addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.addBinaryIds(value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.addBinaryIds(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.addBinaryIds(builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.addBinaryIds(index,
@@ -24650,26 +24674,26 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addAllBinaryIds(
+      @java.lang.Deprecated public Builder addAllBinaryIds(
           java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryID> values) {
         copyOnWrite();
         instance.addAllBinaryIds(values);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder clearBinaryIds() {
+      @java.lang.Deprecated public Builder clearBinaryIds() {
         copyOnWrite();
         instance.clearBinaryIds();
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 3 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder removeBinaryIds(int index) {
+      @java.lang.Deprecated public Builder removeBinaryIds(int index) {
         copyOnWrite();
         instance.removeBinaryIds(index);
         return this;
@@ -26663,15 +26687,19 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
+     * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
+     *     See app/data/v1/data.proto;l=500
      * @return Whether the binaryId field is set.
      */
-    boolean hasBinaryId();
+    @java.lang.Deprecated boolean hasBinaryId();
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
+     * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
+     *     See app/data/v1/data.proto;l=500
      * @return The binaryId.
      */
-    viam.app.data.v1.Data.BinaryID getBinaryId();
+    @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
 
     /**
      * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
@@ -26742,21 +26770,21 @@ com.google.protobuf.Any defaultValue) {
     public static final int BINARY_ID_FIELD_NUMBER = 7;
     private viam.app.data.v1.Data.BinaryID binaryId_;
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasBinaryId() {
+    @java.lang.Deprecated public boolean hasBinaryId() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      */
     @java.lang.Override
-    public viam.app.data.v1.Data.BinaryID getBinaryId() {
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryId() {
       return binaryId_ == null ? viam.app.data.v1.Data.BinaryID.getDefaultInstance() : binaryId_;
     }
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      */
     private void setBinaryId(viam.app.data.v1.Data.BinaryID value) {
       value.getClass();
@@ -26764,7 +26792,7 @@ com.google.protobuf.Any defaultValue) {
       bitField0_ |= 0x00000001;
       }
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeBinaryId(viam.app.data.v1.Data.BinaryID value) {
@@ -26779,7 +26807,7 @@ com.google.protobuf.Any defaultValue) {
       bitField0_ |= 0x00000001;
     }
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      */
     private void clearBinaryId() {  binaryId_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -27086,48 +27114,48 @@ com.google.protobuf.Any defaultValue) {
 
 
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasBinaryId() {
+      @java.lang.Deprecated public boolean hasBinaryId() {
         return instance.hasBinaryId();
       }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
        */
       @java.lang.Override
-      public viam.app.data.v1.Data.BinaryID getBinaryId() {
+      @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryId() {
         return instance.getBinaryId();
       }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
        */
-      public Builder setBinaryId(viam.app.data.v1.Data.BinaryID value) {
+      @java.lang.Deprecated public Builder setBinaryId(viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.setBinaryId(value);
         return this;
         }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
        */
-      public Builder setBinaryId(
+      @java.lang.Deprecated public Builder setBinaryId(
           viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.setBinaryId(builderForValue.build());
         return this;
       }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
        */
-      public Builder mergeBinaryId(viam.app.data.v1.Data.BinaryID value) {
+      @java.lang.Deprecated public Builder mergeBinaryId(viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.mergeBinaryId(value);
         return this;
       }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
        */
-      public Builder clearBinaryId() {  copyOnWrite();
+      @java.lang.Deprecated public Builder clearBinaryId() {  copyOnWrite();
         instance.clearBinaryId();
         return this;
       }
@@ -27731,15 +27759,19 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
+     * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
+     *     See app/data/v1/data.proto;l=519
      * @return Whether the binaryId field is set.
      */
-    boolean hasBinaryId();
+    @java.lang.Deprecated boolean hasBinaryId();
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
+     * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
+     *     See app/data/v1/data.proto;l=519
      * @return The binaryId.
      */
-    viam.app.data.v1.Data.BinaryID getBinaryId();
+    @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
 
     /**
      * <code>string binary_data_id = 4 [json_name = "binaryDataId"];</code>
@@ -27785,21 +27817,21 @@ com.google.protobuf.Any defaultValue) {
     public static final int BINARY_ID_FIELD_NUMBER = 3;
     private viam.app.data.v1.Data.BinaryID binaryId_;
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasBinaryId() {
+    @java.lang.Deprecated public boolean hasBinaryId() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      */
     @java.lang.Override
-    public viam.app.data.v1.Data.BinaryID getBinaryId() {
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryId() {
       return binaryId_ == null ? viam.app.data.v1.Data.BinaryID.getDefaultInstance() : binaryId_;
     }
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      */
     private void setBinaryId(viam.app.data.v1.Data.BinaryID value) {
       value.getClass();
@@ -27807,7 +27839,7 @@ com.google.protobuf.Any defaultValue) {
       bitField0_ |= 0x00000001;
       }
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeBinaryId(viam.app.data.v1.Data.BinaryID value) {
@@ -27822,7 +27854,7 @@ com.google.protobuf.Any defaultValue) {
       bitField0_ |= 0x00000001;
     }
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      */
     private void clearBinaryId() {  binaryId_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -28024,48 +28056,48 @@ com.google.protobuf.Any defaultValue) {
 
 
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasBinaryId() {
+      @java.lang.Deprecated public boolean hasBinaryId() {
         return instance.hasBinaryId();
       }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
        */
       @java.lang.Override
-      public viam.app.data.v1.Data.BinaryID getBinaryId() {
+      @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryId() {
         return instance.getBinaryId();
       }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
        */
-      public Builder setBinaryId(viam.app.data.v1.Data.BinaryID value) {
+      @java.lang.Deprecated public Builder setBinaryId(viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.setBinaryId(value);
         return this;
         }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
        */
-      public Builder setBinaryId(
+      @java.lang.Deprecated public Builder setBinaryId(
           viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.setBinaryId(builderForValue.build());
         return this;
       }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
        */
-      public Builder mergeBinaryId(viam.app.data.v1.Data.BinaryID value) {
+      @java.lang.Deprecated public Builder mergeBinaryId(viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.mergeBinaryId(value);
         return this;
       }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
        */
-      public Builder clearBinaryId() {  copyOnWrite();
+      @java.lang.Deprecated public Builder clearBinaryId() {  copyOnWrite();
         instance.clearBinaryId();
         return this;
       }
@@ -28433,15 +28465,19 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
+     * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
+     *     See app/data/v1/data.proto;l=531
      * @return Whether the binaryId field is set.
      */
-    boolean hasBinaryId();
+    @java.lang.Deprecated boolean hasBinaryId();
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
+     * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
+     *     See app/data/v1/data.proto;l=531
      * @return The binaryId.
      */
-    viam.app.data.v1.Data.BinaryID getBinaryId();
+    @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
 
     /**
      * <code>string binary_data_id = 8 [json_name = "binaryDataId"];</code>
@@ -28549,21 +28585,21 @@ com.google.protobuf.Any defaultValue) {
     public static final int BINARY_ID_FIELD_NUMBER = 1;
     private viam.app.data.v1.Data.BinaryID binaryId_;
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasBinaryId() {
+    @java.lang.Deprecated public boolean hasBinaryId() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      */
     @java.lang.Override
-    public viam.app.data.v1.Data.BinaryID getBinaryId() {
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryId() {
       return binaryId_ == null ? viam.app.data.v1.Data.BinaryID.getDefaultInstance() : binaryId_;
     }
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      */
     private void setBinaryId(viam.app.data.v1.Data.BinaryID value) {
       value.getClass();
@@ -28571,7 +28607,7 @@ com.google.protobuf.Any defaultValue) {
       bitField0_ |= 0x00000001;
       }
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
     private void mergeBinaryId(viam.app.data.v1.Data.BinaryID value) {
@@ -28586,7 +28622,7 @@ com.google.protobuf.Any defaultValue) {
       bitField0_ |= 0x00000001;
     }
     /**
-     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+     * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      */
     private void clearBinaryId() {  binaryId_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -28979,48 +29015,48 @@ com.google.protobuf.Any defaultValue) {
 
 
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasBinaryId() {
+      @java.lang.Deprecated public boolean hasBinaryId() {
         return instance.hasBinaryId();
       }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
        */
       @java.lang.Override
-      public viam.app.data.v1.Data.BinaryID getBinaryId() {
+      @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryId() {
         return instance.getBinaryId();
       }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
        */
-      public Builder setBinaryId(viam.app.data.v1.Data.BinaryID value) {
+      @java.lang.Deprecated public Builder setBinaryId(viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.setBinaryId(value);
         return this;
         }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
        */
-      public Builder setBinaryId(
+      @java.lang.Deprecated public Builder setBinaryId(
           viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.setBinaryId(builderForValue.build());
         return this;
       }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
        */
-      public Builder mergeBinaryId(viam.app.data.v1.Data.BinaryID value) {
+      @java.lang.Deprecated public Builder mergeBinaryId(viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.mergeBinaryId(value);
         return this;
       }
       /**
-       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId"];</code>
+       * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
        */
-      public Builder clearBinaryId() {  copyOnWrite();
+      @java.lang.Deprecated public Builder clearBinaryId() {  copyOnWrite();
         instance.clearBinaryId();
         return this;
       }
@@ -31677,18 +31713,18 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
-    java.util.List<viam.app.data.v1.Data.BinaryID> 
+    @java.lang.Deprecated java.util.List<viam.app.data.v1.Data.BinaryID> 
         getBinaryIdsList();
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
-    viam.app.data.v1.Data.BinaryID getBinaryIds(int index);
+    @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryIds(int index);
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
-    int getBinaryIdsCount();
+    @java.lang.Deprecated int getBinaryIdsCount();
 
     /**
      * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
@@ -31747,37 +31783,37 @@ com.google.protobuf.Any defaultValue) {
     public static final int BINARY_IDS_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.BinaryID> binaryIds_;
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
+    @java.lang.Deprecated public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
       return binaryIds_;
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
-    public java.util.List<? extends viam.app.data.v1.Data.BinaryIDOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends viam.app.data.v1.Data.BinaryIDOrBuilder> 
         getBinaryIdsOrBuilderList() {
       return binaryIds_;
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getBinaryIdsCount() {
+    @java.lang.Deprecated public int getBinaryIdsCount() {
       return binaryIds_.size();
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
       return binaryIds_.get(index);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
-    public viam.app.data.v1.Data.BinaryIDOrBuilder getBinaryIdsOrBuilder(
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryIDOrBuilder getBinaryIdsOrBuilder(
         int index) {
       return binaryIds_.get(index);
     }
@@ -31790,7 +31826,7 @@ com.google.protobuf.Any defaultValue) {
     }
 
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void setBinaryIds(
         int index, viam.app.data.v1.Data.BinaryID value) {
@@ -31799,7 +31835,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.set(index, value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
       value.getClass();
@@ -31807,7 +31843,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.add(value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addBinaryIds(
         int index, viam.app.data.v1.Data.BinaryID value) {
@@ -31816,7 +31852,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.add(index, value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addAllBinaryIds(
         java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryID> values) {
@@ -31825,13 +31861,13 @@ com.google.protobuf.Any defaultValue) {
           values, binaryIds_);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void clearBinaryIds() {
       binaryIds_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void removeBinaryIds(int index) {
       ensureBinaryIdsIsMutable();
@@ -32080,39 +32116,39 @@ com.google.protobuf.Any defaultValue) {
 
 
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
+      @java.lang.Deprecated public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
         return java.util.Collections.unmodifiableList(
             instance.getBinaryIdsList());
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public int getBinaryIdsCount() {
+      @java.lang.Deprecated public int getBinaryIdsCount() {
         return instance.getBinaryIdsCount();
       }/**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
+      @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
         return instance.getBinaryIds(index);
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder setBinaryIds(
+      @java.lang.Deprecated public Builder setBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.setBinaryIds(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder setBinaryIds(
+      @java.lang.Deprecated public Builder setBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.setBinaryIds(index,
@@ -32120,35 +32156,35 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
+      @java.lang.Deprecated public Builder addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.addBinaryIds(value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.addBinaryIds(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.addBinaryIds(builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.addBinaryIds(index,
@@ -32156,26 +32192,26 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addAllBinaryIds(
+      @java.lang.Deprecated public Builder addAllBinaryIds(
           java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryID> values) {
         copyOnWrite();
         instance.addAllBinaryIds(values);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder clearBinaryIds() {
+      @java.lang.Deprecated public Builder clearBinaryIds() {
         copyOnWrite();
         instance.clearBinaryIds();
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder removeBinaryIds(int index) {
+      @java.lang.Deprecated public Builder removeBinaryIds(int index) {
         copyOnWrite();
         instance.removeBinaryIds(index);
         return this;
@@ -32587,18 +32623,18 @@ com.google.protobuf.Any defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
-    java.util.List<viam.app.data.v1.Data.BinaryID> 
+    @java.lang.Deprecated java.util.List<viam.app.data.v1.Data.BinaryID> 
         getBinaryIdsList();
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
-    viam.app.data.v1.Data.BinaryID getBinaryIds(int index);
+    @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryIds(int index);
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
-    int getBinaryIdsCount();
+    @java.lang.Deprecated int getBinaryIdsCount();
 
     /**
      * <code>repeated string binary_data_ids = 3 [json_name = "binaryDataIds"];</code>
@@ -32657,37 +32693,37 @@ com.google.protobuf.Any defaultValue) {
     public static final int BINARY_IDS_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.BinaryID> binaryIds_;
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
+    @java.lang.Deprecated public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
       return binaryIds_;
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
-    public java.util.List<? extends viam.app.data.v1.Data.BinaryIDOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends viam.app.data.v1.Data.BinaryIDOrBuilder> 
         getBinaryIdsOrBuilderList() {
       return binaryIds_;
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public int getBinaryIdsCount() {
+    @java.lang.Deprecated public int getBinaryIdsCount() {
       return binaryIds_.size();
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     @java.lang.Override
-    public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
       return binaryIds_.get(index);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
-    public viam.app.data.v1.Data.BinaryIDOrBuilder getBinaryIdsOrBuilder(
+    @java.lang.Deprecated public viam.app.data.v1.Data.BinaryIDOrBuilder getBinaryIdsOrBuilder(
         int index) {
       return binaryIds_.get(index);
     }
@@ -32700,7 +32736,7 @@ com.google.protobuf.Any defaultValue) {
     }
 
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void setBinaryIds(
         int index, viam.app.data.v1.Data.BinaryID value) {
@@ -32709,7 +32745,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.set(index, value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
       value.getClass();
@@ -32717,7 +32753,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.add(value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addBinaryIds(
         int index, viam.app.data.v1.Data.BinaryID value) {
@@ -32726,7 +32762,7 @@ com.google.protobuf.Any defaultValue) {
       binaryIds_.add(index, value);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void addAllBinaryIds(
         java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryID> values) {
@@ -32735,13 +32771,13 @@ com.google.protobuf.Any defaultValue) {
           values, binaryIds_);
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void clearBinaryIds() {
       binaryIds_ = emptyProtobufList();
     }
     /**
-     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+     * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
      */
     private void removeBinaryIds(int index) {
       ensureBinaryIdsIsMutable();
@@ -32990,39 +33026,39 @@ com.google.protobuf.Any defaultValue) {
 
 
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
+      @java.lang.Deprecated public java.util.List<viam.app.data.v1.Data.BinaryID> getBinaryIdsList() {
         return java.util.Collections.unmodifiableList(
             instance.getBinaryIdsList());
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public int getBinaryIdsCount() {
+      @java.lang.Deprecated public int getBinaryIdsCount() {
         return instance.getBinaryIdsCount();
       }/**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
       @java.lang.Override
-      public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
+      @java.lang.Deprecated public viam.app.data.v1.Data.BinaryID getBinaryIds(int index) {
         return instance.getBinaryIds(index);
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder setBinaryIds(
+      @java.lang.Deprecated public Builder setBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.setBinaryIds(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder setBinaryIds(
+      @java.lang.Deprecated public Builder setBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.setBinaryIds(index,
@@ -33030,35 +33066,35 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
+      @java.lang.Deprecated public Builder addBinaryIds(viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.addBinaryIds(value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID value) {
         copyOnWrite();
         instance.addBinaryIds(index, value);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.addBinaryIds(builderForValue.build());
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addBinaryIds(
+      @java.lang.Deprecated public Builder addBinaryIds(
           int index, viam.app.data.v1.Data.BinaryID.Builder builderForValue) {
         copyOnWrite();
         instance.addBinaryIds(index,
@@ -33066,26 +33102,26 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder addAllBinaryIds(
+      @java.lang.Deprecated public Builder addAllBinaryIds(
           java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryID> values) {
         copyOnWrite();
         instance.addAllBinaryIds(values);
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder clearBinaryIds() {
+      @java.lang.Deprecated public Builder clearBinaryIds() {
         copyOnWrite();
         instance.clearBinaryIds();
         return this;
       }
       /**
-       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds"];</code>
+       * <code>repeated .viam.app.data.v1.BinaryID binary_ids = 1 [json_name = "binaryIds", deprecated = true];</code>
        */
-      public Builder removeBinaryIds(int index) {
+      @java.lang.Deprecated public Builder removeBinaryIds(int index) {
         copyOnWrite();
         instance.removeBinaryIds(index);
         return this;
