@@ -89,6 +89,286 @@ public  final class QuotaFailure extends
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <pre>
+     * The API Service from which the `QuotaFailure.Violation` orginates. In
+     * some cases, Quota issues originate from an API Service other than the one
+     * that was called. In other words, a dependency of the called API Service
+     * could be the cause of the `QuotaFailure`, and this field would have the
+     * dependency API service name.
+     *
+     * For example, if the called API is Kubernetes Engine API
+     * (container.googleapis.com), and a quota violation occurs in the
+     * Kubernetes Engine API itself, this field would be
+     * "container.googleapis.com". On the other hand, if the quota violation
+     * occurs when the Kubernetes Engine API creates VMs in the Compute Engine
+     * API (compute.googleapis.com), this field would be
+     * "compute.googleapis.com".
+     * </pre>
+     *
+     * <code>string api_service = 3 [json_name = "apiService"];</code>
+     * @return The apiService.
+     */
+    java.lang.String getApiService();
+    /**
+     * <pre>
+     * The API Service from which the `QuotaFailure.Violation` orginates. In
+     * some cases, Quota issues originate from an API Service other than the one
+     * that was called. In other words, a dependency of the called API Service
+     * could be the cause of the `QuotaFailure`, and this field would have the
+     * dependency API service name.
+     *
+     * For example, if the called API is Kubernetes Engine API
+     * (container.googleapis.com), and a quota violation occurs in the
+     * Kubernetes Engine API itself, this field would be
+     * "container.googleapis.com". On the other hand, if the quota violation
+     * occurs when the Kubernetes Engine API creates VMs in the Compute Engine
+     * API (compute.googleapis.com), this field would be
+     * "compute.googleapis.com".
+     * </pre>
+     *
+     * <code>string api_service = 3 [json_name = "apiService"];</code>
+     * @return The bytes for apiService.
+     */
+    com.google.protobuf.ByteString
+        getApiServiceBytes();
+
+    /**
+     * <pre>
+     * The metric of the violated quota. A quota metric is a named counter to
+     * measure usage, such as API requests or CPUs. When an activity occurs in a
+     * service, such as Virtual Machine allocation, one or more quota metrics
+     * may be affected.
+     *
+     * For example, "compute.googleapis.com/cpus_per_vm_family",
+     * "storage.googleapis.com/internet_egress_bandwidth".
+     * </pre>
+     *
+     * <code>string quota_metric = 4 [json_name = "quotaMetric"];</code>
+     * @return The quotaMetric.
+     */
+    java.lang.String getQuotaMetric();
+    /**
+     * <pre>
+     * The metric of the violated quota. A quota metric is a named counter to
+     * measure usage, such as API requests or CPUs. When an activity occurs in a
+     * service, such as Virtual Machine allocation, one or more quota metrics
+     * may be affected.
+     *
+     * For example, "compute.googleapis.com/cpus_per_vm_family",
+     * "storage.googleapis.com/internet_egress_bandwidth".
+     * </pre>
+     *
+     * <code>string quota_metric = 4 [json_name = "quotaMetric"];</code>
+     * @return The bytes for quotaMetric.
+     */
+    com.google.protobuf.ByteString
+        getQuotaMetricBytes();
+
+    /**
+     * <pre>
+     * The id of the violated quota. Also know as "limit name", this is the
+     * unique identifier of a quota in the context of an API service.
+     *
+     * For example, "CPUS-PER-VM-FAMILY-per-project-region".
+     * </pre>
+     *
+     * <code>string quota_id = 5 [json_name = "quotaId"];</code>
+     * @return The quotaId.
+     */
+    java.lang.String getQuotaId();
+    /**
+     * <pre>
+     * The id of the violated quota. Also know as "limit name", this is the
+     * unique identifier of a quota in the context of an API service.
+     *
+     * For example, "CPUS-PER-VM-FAMILY-per-project-region".
+     * </pre>
+     *
+     * <code>string quota_id = 5 [json_name = "quotaId"];</code>
+     * @return The bytes for quotaId.
+     */
+    com.google.protobuf.ByteString
+        getQuotaIdBytes();
+
+    /**
+     * <pre>
+     * The dimensions of the violated quota. Every non-global quota is enforced
+     * on a set of dimensions. While quota metric defines what to count, the
+     * dimensions specify for what aspects the counter should be increased.
+     *
+     * For example, the quota "CPUs per region per VM family" enforces a limit
+     * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+     * "region" and "vm_family". And if the violation occurred in region
+     * "us-central1" and for VM family "n1", the quota_dimensions would be,
+     *
+     * {
+     * "region": "us-central1",
+     * "vm_family": "n1",
+     * }
+     *
+     * When a quota is enforced globally, the quota_dimensions would always be
+     * empty.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+     */
+    int getQuotaDimensionsCount();
+    /**
+     * <pre>
+     * The dimensions of the violated quota. Every non-global quota is enforced
+     * on a set of dimensions. While quota metric defines what to count, the
+     * dimensions specify for what aspects the counter should be increased.
+     *
+     * For example, the quota "CPUs per region per VM family" enforces a limit
+     * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+     * "region" and "vm_family". And if the violation occurred in region
+     * "us-central1" and for VM family "n1", the quota_dimensions would be,
+     *
+     * {
+     * "region": "us-central1",
+     * "vm_family": "n1",
+     * }
+     *
+     * When a quota is enforced globally, the quota_dimensions would always be
+     * empty.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+     */
+    boolean containsQuotaDimensions(
+        java.lang.String key);
+    /**
+     * Use {@link #getQuotaDimensionsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getQuotaDimensions();
+    /**
+     * <pre>
+     * The dimensions of the violated quota. Every non-global quota is enforced
+     * on a set of dimensions. While quota metric defines what to count, the
+     * dimensions specify for what aspects the counter should be increased.
+     *
+     * For example, the quota "CPUs per region per VM family" enforces a limit
+     * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+     * "region" and "vm_family". And if the violation occurred in region
+     * "us-central1" and for VM family "n1", the quota_dimensions would be,
+     *
+     * {
+     * "region": "us-central1",
+     * "vm_family": "n1",
+     * }
+     *
+     * When a quota is enforced globally, the quota_dimensions would always be
+     * empty.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getQuotaDimensionsMap();
+    /**
+     * <pre>
+     * The dimensions of the violated quota. Every non-global quota is enforced
+     * on a set of dimensions. While quota metric defines what to count, the
+     * dimensions specify for what aspects the counter should be increased.
+     *
+     * For example, the quota "CPUs per region per VM family" enforces a limit
+     * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+     * "region" and "vm_family". And if the violation occurred in region
+     * "us-central1" and for VM family "n1", the quota_dimensions would be,
+     *
+     * {
+     * "region": "us-central1",
+     * "vm_family": "n1",
+     * }
+     *
+     * When a quota is enforced globally, the quota_dimensions would always be
+     * empty.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+     */
+
+    /* nullable */
+java.lang.String getQuotaDimensionsOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue);
+    /**
+     * <pre>
+     * The dimensions of the violated quota. Every non-global quota is enforced
+     * on a set of dimensions. While quota metric defines what to count, the
+     * dimensions specify for what aspects the counter should be increased.
+     *
+     * For example, the quota "CPUs per region per VM family" enforces a limit
+     * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+     * "region" and "vm_family". And if the violation occurred in region
+     * "us-central1" and for VM family "n1", the quota_dimensions would be,
+     *
+     * {
+     * "region": "us-central1",
+     * "vm_family": "n1",
+     * }
+     *
+     * When a quota is enforced globally, the quota_dimensions would always be
+     * empty.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+     */
+
+    java.lang.String getQuotaDimensionsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * The enforced quota value at the time of the `QuotaFailure`.
+     *
+     * For example, if the enforced quota value at the time of the
+     * `QuotaFailure` on the number of CPUs is "10", then the value of this
+     * field would reflect this quantity.
+     * </pre>
+     *
+     * <code>int64 quota_value = 7 [json_name = "quotaValue"];</code>
+     * @return The quotaValue.
+     */
+    long getQuotaValue();
+
+    /**
+     * <pre>
+     * The new quota value being rolled out at the time of the violation. At the
+     * completion of the rollout, this value will be enforced in place of
+     * quota_value. If no rollout is in progress at the time of the violation,
+     * this field is not set.
+     *
+     * For example, if at the time of the violation a rollout is in progress
+     * changing the number of CPUs quota from 10 to 20, 20 would be the value of
+     * this field.
+     * </pre>
+     *
+     * <code>optional int64 future_quota_value = 8 [json_name = "futureQuotaValue"];</code>
+     * @return Whether the futureQuotaValue field is set.
+     */
+    boolean hasFutureQuotaValue();
+    /**
+     * <pre>
+     * The new quota value being rolled out at the time of the violation. At the
+     * completion of the rollout, this value will be enforced in place of
+     * quota_value. If no rollout is in progress at the time of the violation,
+     * this field is not set.
+     *
+     * For example, if at the time of the violation a rollout is in progress
+     * changing the number of CPUs quota from 10 to 20, 20 would be the value of
+     * this field.
+     * </pre>
+     *
+     * <code>optional int64 future_quota_value = 8 [json_name = "futureQuotaValue"];</code>
+     * @return The futureQuotaValue.
+     */
+    long getFutureQuotaValue();
   }
   /**
    * <pre>
@@ -106,7 +386,11 @@ public  final class QuotaFailure extends
     private Violation() {
       subject_ = "";
       description_ = "";
+      apiService_ = "";
+      quotaMetric_ = "";
+      quotaId_ = "";
     }
+    private int bitField0_;
     public static final int SUBJECT_FIELD_NUMBER = 1;
     private java.lang.String subject_;
     /**
@@ -279,6 +563,630 @@ public  final class QuotaFailure extends
       checkByteStringIsUtf8(value);
       description_ = value.toStringUtf8();
 
+    }
+
+    public static final int API_SERVICE_FIELD_NUMBER = 3;
+    private java.lang.String apiService_;
+    /**
+     * <pre>
+     * The API Service from which the `QuotaFailure.Violation` orginates. In
+     * some cases, Quota issues originate from an API Service other than the one
+     * that was called. In other words, a dependency of the called API Service
+     * could be the cause of the `QuotaFailure`, and this field would have the
+     * dependency API service name.
+     *
+     * For example, if the called API is Kubernetes Engine API
+     * (container.googleapis.com), and a quota violation occurs in the
+     * Kubernetes Engine API itself, this field would be
+     * "container.googleapis.com". On the other hand, if the quota violation
+     * occurs when the Kubernetes Engine API creates VMs in the Compute Engine
+     * API (compute.googleapis.com), this field would be
+     * "compute.googleapis.com".
+     * </pre>
+     *
+     * <code>string api_service = 3 [json_name = "apiService"];</code>
+     * @return The apiService.
+     */
+    @java.lang.Override
+    public java.lang.String getApiService() {
+      return apiService_;
+    }
+    /**
+     * <pre>
+     * The API Service from which the `QuotaFailure.Violation` orginates. In
+     * some cases, Quota issues originate from an API Service other than the one
+     * that was called. In other words, a dependency of the called API Service
+     * could be the cause of the `QuotaFailure`, and this field would have the
+     * dependency API service name.
+     *
+     * For example, if the called API is Kubernetes Engine API
+     * (container.googleapis.com), and a quota violation occurs in the
+     * Kubernetes Engine API itself, this field would be
+     * "container.googleapis.com". On the other hand, if the quota violation
+     * occurs when the Kubernetes Engine API creates VMs in the Compute Engine
+     * API (compute.googleapis.com), this field would be
+     * "compute.googleapis.com".
+     * </pre>
+     *
+     * <code>string api_service = 3 [json_name = "apiService"];</code>
+     * @return The bytes for apiService.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApiServiceBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(apiService_);
+    }
+    /**
+     * <pre>
+     * The API Service from which the `QuotaFailure.Violation` orginates. In
+     * some cases, Quota issues originate from an API Service other than the one
+     * that was called. In other words, a dependency of the called API Service
+     * could be the cause of the `QuotaFailure`, and this field would have the
+     * dependency API service name.
+     *
+     * For example, if the called API is Kubernetes Engine API
+     * (container.googleapis.com), and a quota violation occurs in the
+     * Kubernetes Engine API itself, this field would be
+     * "container.googleapis.com". On the other hand, if the quota violation
+     * occurs when the Kubernetes Engine API creates VMs in the Compute Engine
+     * API (compute.googleapis.com), this field would be
+     * "compute.googleapis.com".
+     * </pre>
+     *
+     * <code>string api_service = 3 [json_name = "apiService"];</code>
+     * @param value The apiService to set.
+     */
+    private void setApiService(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      apiService_ = value;
+    }
+    /**
+     * <pre>
+     * The API Service from which the `QuotaFailure.Violation` orginates. In
+     * some cases, Quota issues originate from an API Service other than the one
+     * that was called. In other words, a dependency of the called API Service
+     * could be the cause of the `QuotaFailure`, and this field would have the
+     * dependency API service name.
+     *
+     * For example, if the called API is Kubernetes Engine API
+     * (container.googleapis.com), and a quota violation occurs in the
+     * Kubernetes Engine API itself, this field would be
+     * "container.googleapis.com". On the other hand, if the quota violation
+     * occurs when the Kubernetes Engine API creates VMs in the Compute Engine
+     * API (compute.googleapis.com), this field would be
+     * "compute.googleapis.com".
+     * </pre>
+     *
+     * <code>string api_service = 3 [json_name = "apiService"];</code>
+     */
+    private void clearApiService() {
+
+      apiService_ = getDefaultInstance().getApiService();
+    }
+    /**
+     * <pre>
+     * The API Service from which the `QuotaFailure.Violation` orginates. In
+     * some cases, Quota issues originate from an API Service other than the one
+     * that was called. In other words, a dependency of the called API Service
+     * could be the cause of the `QuotaFailure`, and this field would have the
+     * dependency API service name.
+     *
+     * For example, if the called API is Kubernetes Engine API
+     * (container.googleapis.com), and a quota violation occurs in the
+     * Kubernetes Engine API itself, this field would be
+     * "container.googleapis.com". On the other hand, if the quota violation
+     * occurs when the Kubernetes Engine API creates VMs in the Compute Engine
+     * API (compute.googleapis.com), this field would be
+     * "compute.googleapis.com".
+     * </pre>
+     *
+     * <code>string api_service = 3 [json_name = "apiService"];</code>
+     * @param value The bytes for apiService to set.
+     */
+    private void setApiServiceBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      apiService_ = value.toStringUtf8();
+
+    }
+
+    public static final int QUOTA_METRIC_FIELD_NUMBER = 4;
+    private java.lang.String quotaMetric_;
+    /**
+     * <pre>
+     * The metric of the violated quota. A quota metric is a named counter to
+     * measure usage, such as API requests or CPUs. When an activity occurs in a
+     * service, such as Virtual Machine allocation, one or more quota metrics
+     * may be affected.
+     *
+     * For example, "compute.googleapis.com/cpus_per_vm_family",
+     * "storage.googleapis.com/internet_egress_bandwidth".
+     * </pre>
+     *
+     * <code>string quota_metric = 4 [json_name = "quotaMetric"];</code>
+     * @return The quotaMetric.
+     */
+    @java.lang.Override
+    public java.lang.String getQuotaMetric() {
+      return quotaMetric_;
+    }
+    /**
+     * <pre>
+     * The metric of the violated quota. A quota metric is a named counter to
+     * measure usage, such as API requests or CPUs. When an activity occurs in a
+     * service, such as Virtual Machine allocation, one or more quota metrics
+     * may be affected.
+     *
+     * For example, "compute.googleapis.com/cpus_per_vm_family",
+     * "storage.googleapis.com/internet_egress_bandwidth".
+     * </pre>
+     *
+     * <code>string quota_metric = 4 [json_name = "quotaMetric"];</code>
+     * @return The bytes for quotaMetric.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuotaMetricBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(quotaMetric_);
+    }
+    /**
+     * <pre>
+     * The metric of the violated quota. A quota metric is a named counter to
+     * measure usage, such as API requests or CPUs. When an activity occurs in a
+     * service, such as Virtual Machine allocation, one or more quota metrics
+     * may be affected.
+     *
+     * For example, "compute.googleapis.com/cpus_per_vm_family",
+     * "storage.googleapis.com/internet_egress_bandwidth".
+     * </pre>
+     *
+     * <code>string quota_metric = 4 [json_name = "quotaMetric"];</code>
+     * @param value The quotaMetric to set.
+     */
+    private void setQuotaMetric(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      quotaMetric_ = value;
+    }
+    /**
+     * <pre>
+     * The metric of the violated quota. A quota metric is a named counter to
+     * measure usage, such as API requests or CPUs. When an activity occurs in a
+     * service, such as Virtual Machine allocation, one or more quota metrics
+     * may be affected.
+     *
+     * For example, "compute.googleapis.com/cpus_per_vm_family",
+     * "storage.googleapis.com/internet_egress_bandwidth".
+     * </pre>
+     *
+     * <code>string quota_metric = 4 [json_name = "quotaMetric"];</code>
+     */
+    private void clearQuotaMetric() {
+
+      quotaMetric_ = getDefaultInstance().getQuotaMetric();
+    }
+    /**
+     * <pre>
+     * The metric of the violated quota. A quota metric is a named counter to
+     * measure usage, such as API requests or CPUs. When an activity occurs in a
+     * service, such as Virtual Machine allocation, one or more quota metrics
+     * may be affected.
+     *
+     * For example, "compute.googleapis.com/cpus_per_vm_family",
+     * "storage.googleapis.com/internet_egress_bandwidth".
+     * </pre>
+     *
+     * <code>string quota_metric = 4 [json_name = "quotaMetric"];</code>
+     * @param value The bytes for quotaMetric to set.
+     */
+    private void setQuotaMetricBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      quotaMetric_ = value.toStringUtf8();
+
+    }
+
+    public static final int QUOTA_ID_FIELD_NUMBER = 5;
+    private java.lang.String quotaId_;
+    /**
+     * <pre>
+     * The id of the violated quota. Also know as "limit name", this is the
+     * unique identifier of a quota in the context of an API service.
+     *
+     * For example, "CPUS-PER-VM-FAMILY-per-project-region".
+     * </pre>
+     *
+     * <code>string quota_id = 5 [json_name = "quotaId"];</code>
+     * @return The quotaId.
+     */
+    @java.lang.Override
+    public java.lang.String getQuotaId() {
+      return quotaId_;
+    }
+    /**
+     * <pre>
+     * The id of the violated quota. Also know as "limit name", this is the
+     * unique identifier of a quota in the context of an API service.
+     *
+     * For example, "CPUS-PER-VM-FAMILY-per-project-region".
+     * </pre>
+     *
+     * <code>string quota_id = 5 [json_name = "quotaId"];</code>
+     * @return The bytes for quotaId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuotaIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(quotaId_);
+    }
+    /**
+     * <pre>
+     * The id of the violated quota. Also know as "limit name", this is the
+     * unique identifier of a quota in the context of an API service.
+     *
+     * For example, "CPUS-PER-VM-FAMILY-per-project-region".
+     * </pre>
+     *
+     * <code>string quota_id = 5 [json_name = "quotaId"];</code>
+     * @param value The quotaId to set.
+     */
+    private void setQuotaId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      quotaId_ = value;
+    }
+    /**
+     * <pre>
+     * The id of the violated quota. Also know as "limit name", this is the
+     * unique identifier of a quota in the context of an API service.
+     *
+     * For example, "CPUS-PER-VM-FAMILY-per-project-region".
+     * </pre>
+     *
+     * <code>string quota_id = 5 [json_name = "quotaId"];</code>
+     */
+    private void clearQuotaId() {
+
+      quotaId_ = getDefaultInstance().getQuotaId();
+    }
+    /**
+     * <pre>
+     * The id of the violated quota. Also know as "limit name", this is the
+     * unique identifier of a quota in the context of an API service.
+     *
+     * For example, "CPUS-PER-VM-FAMILY-per-project-region".
+     * </pre>
+     *
+     * <code>string quota_id = 5 [json_name = "quotaId"];</code>
+     * @param value The bytes for quotaId to set.
+     */
+    private void setQuotaIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      quotaId_ = value.toStringUtf8();
+
+    }
+
+    public static final int QUOTA_DIMENSIONS_FIELD_NUMBER = 6;
+    private static final class QuotaDimensionsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, java.lang.String> quotaDimensions_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    internalGetQuotaDimensions() {
+      return quotaDimensions_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    internalGetMutableQuotaDimensions() {
+      if (!quotaDimensions_.isMutable()) {
+        quotaDimensions_ = quotaDimensions_.mutableCopy();
+      }
+      return quotaDimensions_;
+    }
+    @java.lang.Override
+
+    public int getQuotaDimensionsCount() {
+      return internalGetQuotaDimensions().size();
+    }
+    /**
+     * <pre>
+     * The dimensions of the violated quota. Every non-global quota is enforced
+     * on a set of dimensions. While quota metric defines what to count, the
+     * dimensions specify for what aspects the counter should be increased.
+     *
+     * For example, the quota "CPUs per region per VM family" enforces a limit
+     * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+     * "region" and "vm_family". And if the violation occurred in region
+     * "us-central1" and for VM family "n1", the quota_dimensions would be,
+     *
+     * {
+     * "region": "us-central1",
+     * "vm_family": "n1",
+     * }
+     *
+     * When a quota is enforced globally, the quota_dimensions would always be
+     * empty.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsQuotaDimensions(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetQuotaDimensions().containsKey(key);
+    }
+    /**
+     * Use {@link #getQuotaDimensionsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getQuotaDimensions() {
+      return getQuotaDimensionsMap();
+    }
+    /**
+     * <pre>
+     * The dimensions of the violated quota. Every non-global quota is enforced
+     * on a set of dimensions. While quota metric defines what to count, the
+     * dimensions specify for what aspects the counter should be increased.
+     *
+     * For example, the quota "CPUs per region per VM family" enforces a limit
+     * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+     * "region" and "vm_family". And if the violation occurred in region
+     * "us-central1" and for VM family "n1", the quota_dimensions would be,
+     *
+     * {
+     * "region": "us-central1",
+     * "vm_family": "n1",
+     * }
+     *
+     * When a quota is enforced globally, the quota_dimensions would always be
+     * empty.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getQuotaDimensionsMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetQuotaDimensions());
+    }
+    /**
+     * <pre>
+     * The dimensions of the violated quota. Every non-global quota is enforced
+     * on a set of dimensions. While quota metric defines what to count, the
+     * dimensions specify for what aspects the counter should be increased.
+     *
+     * For example, the quota "CPUs per region per VM family" enforces a limit
+     * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+     * "region" and "vm_family". And if the violation occurred in region
+     * "us-central1" and for VM family "n1", the quota_dimensions would be,
+     *
+     * {
+     * "region": "us-central1",
+     * "vm_family": "n1",
+     * }
+     *
+     * When a quota is enforced globally, the quota_dimensions would always be
+     * empty.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+java.lang.String getQuotaDimensionsOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetQuotaDimensions();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * The dimensions of the violated quota. Every non-global quota is enforced
+     * on a set of dimensions. While quota metric defines what to count, the
+     * dimensions specify for what aspects the counter should be increased.
+     *
+     * For example, the quota "CPUs per region per VM family" enforces a limit
+     * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+     * "region" and "vm_family". And if the violation occurred in region
+     * "us-central1" and for VM family "n1", the quota_dimensions would be,
+     *
+     * {
+     * "region": "us-central1",
+     * "vm_family": "n1",
+     * }
+     *
+     * When a quota is enforced globally, the quota_dimensions would always be
+     * empty.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getQuotaDimensionsOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetQuotaDimensions();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <pre>
+     * The dimensions of the violated quota. Every non-global quota is enforced
+     * on a set of dimensions. While quota metric defines what to count, the
+     * dimensions specify for what aspects the counter should be increased.
+     *
+     * For example, the quota "CPUs per region per VM family" enforces a limit
+     * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+     * "region" and "vm_family". And if the violation occurred in region
+     * "us-central1" and for VM family "n1", the quota_dimensions would be,
+     *
+     * {
+     * "region": "us-central1",
+     * "vm_family": "n1",
+     * }
+     *
+     * When a quota is enforced globally, the quota_dimensions would always be
+     * empty.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+     */
+    private java.util.Map<java.lang.String, java.lang.String>
+    getMutableQuotaDimensionsMap() {
+      return internalGetMutableQuotaDimensions();
+    }
+
+    public static final int QUOTA_VALUE_FIELD_NUMBER = 7;
+    private long quotaValue_;
+    /**
+     * <pre>
+     * The enforced quota value at the time of the `QuotaFailure`.
+     *
+     * For example, if the enforced quota value at the time of the
+     * `QuotaFailure` on the number of CPUs is "10", then the value of this
+     * field would reflect this quantity.
+     * </pre>
+     *
+     * <code>int64 quota_value = 7 [json_name = "quotaValue"];</code>
+     * @return The quotaValue.
+     */
+    @java.lang.Override
+    public long getQuotaValue() {
+      return quotaValue_;
+    }
+    /**
+     * <pre>
+     * The enforced quota value at the time of the `QuotaFailure`.
+     *
+     * For example, if the enforced quota value at the time of the
+     * `QuotaFailure` on the number of CPUs is "10", then the value of this
+     * field would reflect this quantity.
+     * </pre>
+     *
+     * <code>int64 quota_value = 7 [json_name = "quotaValue"];</code>
+     * @param value The quotaValue to set.
+     */
+    private void setQuotaValue(long value) {
+      
+      quotaValue_ = value;
+    }
+    /**
+     * <pre>
+     * The enforced quota value at the time of the `QuotaFailure`.
+     *
+     * For example, if the enforced quota value at the time of the
+     * `QuotaFailure` on the number of CPUs is "10", then the value of this
+     * field would reflect this quantity.
+     * </pre>
+     *
+     * <code>int64 quota_value = 7 [json_name = "quotaValue"];</code>
+     */
+    private void clearQuotaValue() {
+
+      quotaValue_ = 0L;
+    }
+
+    public static final int FUTURE_QUOTA_VALUE_FIELD_NUMBER = 8;
+    private long futureQuotaValue_;
+    /**
+     * <pre>
+     * The new quota value being rolled out at the time of the violation. At the
+     * completion of the rollout, this value will be enforced in place of
+     * quota_value. If no rollout is in progress at the time of the violation,
+     * this field is not set.
+     *
+     * For example, if at the time of the violation a rollout is in progress
+     * changing the number of CPUs quota from 10 to 20, 20 would be the value of
+     * this field.
+     * </pre>
+     *
+     * <code>optional int64 future_quota_value = 8 [json_name = "futureQuotaValue"];</code>
+     * @return Whether the futureQuotaValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasFutureQuotaValue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The new quota value being rolled out at the time of the violation. At the
+     * completion of the rollout, this value will be enforced in place of
+     * quota_value. If no rollout is in progress at the time of the violation,
+     * this field is not set.
+     *
+     * For example, if at the time of the violation a rollout is in progress
+     * changing the number of CPUs quota from 10 to 20, 20 would be the value of
+     * this field.
+     * </pre>
+     *
+     * <code>optional int64 future_quota_value = 8 [json_name = "futureQuotaValue"];</code>
+     * @return The futureQuotaValue.
+     */
+    @java.lang.Override
+    public long getFutureQuotaValue() {
+      return futureQuotaValue_;
+    }
+    /**
+     * <pre>
+     * The new quota value being rolled out at the time of the violation. At the
+     * completion of the rollout, this value will be enforced in place of
+     * quota_value. If no rollout is in progress at the time of the violation,
+     * this field is not set.
+     *
+     * For example, if at the time of the violation a rollout is in progress
+     * changing the number of CPUs quota from 10 to 20, 20 would be the value of
+     * this field.
+     * </pre>
+     *
+     * <code>optional int64 future_quota_value = 8 [json_name = "futureQuotaValue"];</code>
+     * @param value The futureQuotaValue to set.
+     */
+    private void setFutureQuotaValue(long value) {
+      bitField0_ |= 0x00000001;
+      futureQuotaValue_ = value;
+    }
+    /**
+     * <pre>
+     * The new quota value being rolled out at the time of the violation. At the
+     * completion of the rollout, this value will be enforced in place of
+     * quota_value. If no rollout is in progress at the time of the violation,
+     * this field is not set.
+     *
+     * For example, if at the time of the violation a rollout is in progress
+     * changing the number of CPUs quota from 10 to 20, 20 would be the value of
+     * this field.
+     * </pre>
+     *
+     * <code>optional int64 future_quota_value = 8 [json_name = "futureQuotaValue"];</code>
+     */
+    private void clearFutureQuotaValue() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      futureQuotaValue_ = 0L;
     }
 
     public static com.google.rpc.QuotaFailure.Violation parseFrom(
@@ -561,6 +1469,683 @@ public  final class QuotaFailure extends
         return this;
       }
 
+      /**
+       * <pre>
+       * The API Service from which the `QuotaFailure.Violation` orginates. In
+       * some cases, Quota issues originate from an API Service other than the one
+       * that was called. In other words, a dependency of the called API Service
+       * could be the cause of the `QuotaFailure`, and this field would have the
+       * dependency API service name.
+       *
+       * For example, if the called API is Kubernetes Engine API
+       * (container.googleapis.com), and a quota violation occurs in the
+       * Kubernetes Engine API itself, this field would be
+       * "container.googleapis.com". On the other hand, if the quota violation
+       * occurs when the Kubernetes Engine API creates VMs in the Compute Engine
+       * API (compute.googleapis.com), this field would be
+       * "compute.googleapis.com".
+       * </pre>
+       *
+       * <code>string api_service = 3 [json_name = "apiService"];</code>
+       * @return The apiService.
+       */
+      @java.lang.Override
+      public java.lang.String getApiService() {
+        return instance.getApiService();
+      }
+      /**
+       * <pre>
+       * The API Service from which the `QuotaFailure.Violation` orginates. In
+       * some cases, Quota issues originate from an API Service other than the one
+       * that was called. In other words, a dependency of the called API Service
+       * could be the cause of the `QuotaFailure`, and this field would have the
+       * dependency API service name.
+       *
+       * For example, if the called API is Kubernetes Engine API
+       * (container.googleapis.com), and a quota violation occurs in the
+       * Kubernetes Engine API itself, this field would be
+       * "container.googleapis.com". On the other hand, if the quota violation
+       * occurs when the Kubernetes Engine API creates VMs in the Compute Engine
+       * API (compute.googleapis.com), this field would be
+       * "compute.googleapis.com".
+       * </pre>
+       *
+       * <code>string api_service = 3 [json_name = "apiService"];</code>
+       * @return The bytes for apiService.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getApiServiceBytes() {
+        return instance.getApiServiceBytes();
+      }
+      /**
+       * <pre>
+       * The API Service from which the `QuotaFailure.Violation` orginates. In
+       * some cases, Quota issues originate from an API Service other than the one
+       * that was called. In other words, a dependency of the called API Service
+       * could be the cause of the `QuotaFailure`, and this field would have the
+       * dependency API service name.
+       *
+       * For example, if the called API is Kubernetes Engine API
+       * (container.googleapis.com), and a quota violation occurs in the
+       * Kubernetes Engine API itself, this field would be
+       * "container.googleapis.com". On the other hand, if the quota violation
+       * occurs when the Kubernetes Engine API creates VMs in the Compute Engine
+       * API (compute.googleapis.com), this field would be
+       * "compute.googleapis.com".
+       * </pre>
+       *
+       * <code>string api_service = 3 [json_name = "apiService"];</code>
+       * @param value The apiService to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApiService(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setApiService(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The API Service from which the `QuotaFailure.Violation` orginates. In
+       * some cases, Quota issues originate from an API Service other than the one
+       * that was called. In other words, a dependency of the called API Service
+       * could be the cause of the `QuotaFailure`, and this field would have the
+       * dependency API service name.
+       *
+       * For example, if the called API is Kubernetes Engine API
+       * (container.googleapis.com), and a quota violation occurs in the
+       * Kubernetes Engine API itself, this field would be
+       * "container.googleapis.com". On the other hand, if the quota violation
+       * occurs when the Kubernetes Engine API creates VMs in the Compute Engine
+       * API (compute.googleapis.com), this field would be
+       * "compute.googleapis.com".
+       * </pre>
+       *
+       * <code>string api_service = 3 [json_name = "apiService"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApiService() {
+        copyOnWrite();
+        instance.clearApiService();
+        return this;
+      }
+      /**
+       * <pre>
+       * The API Service from which the `QuotaFailure.Violation` orginates. In
+       * some cases, Quota issues originate from an API Service other than the one
+       * that was called. In other words, a dependency of the called API Service
+       * could be the cause of the `QuotaFailure`, and this field would have the
+       * dependency API service name.
+       *
+       * For example, if the called API is Kubernetes Engine API
+       * (container.googleapis.com), and a quota violation occurs in the
+       * Kubernetes Engine API itself, this field would be
+       * "container.googleapis.com". On the other hand, if the quota violation
+       * occurs when the Kubernetes Engine API creates VMs in the Compute Engine
+       * API (compute.googleapis.com), this field would be
+       * "compute.googleapis.com".
+       * </pre>
+       *
+       * <code>string api_service = 3 [json_name = "apiService"];</code>
+       * @param value The bytes for apiService to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApiServiceBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setApiServiceBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The metric of the violated quota. A quota metric is a named counter to
+       * measure usage, such as API requests or CPUs. When an activity occurs in a
+       * service, such as Virtual Machine allocation, one or more quota metrics
+       * may be affected.
+       *
+       * For example, "compute.googleapis.com/cpus_per_vm_family",
+       * "storage.googleapis.com/internet_egress_bandwidth".
+       * </pre>
+       *
+       * <code>string quota_metric = 4 [json_name = "quotaMetric"];</code>
+       * @return The quotaMetric.
+       */
+      @java.lang.Override
+      public java.lang.String getQuotaMetric() {
+        return instance.getQuotaMetric();
+      }
+      /**
+       * <pre>
+       * The metric of the violated quota. A quota metric is a named counter to
+       * measure usage, such as API requests or CPUs. When an activity occurs in a
+       * service, such as Virtual Machine allocation, one or more quota metrics
+       * may be affected.
+       *
+       * For example, "compute.googleapis.com/cpus_per_vm_family",
+       * "storage.googleapis.com/internet_egress_bandwidth".
+       * </pre>
+       *
+       * <code>string quota_metric = 4 [json_name = "quotaMetric"];</code>
+       * @return The bytes for quotaMetric.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getQuotaMetricBytes() {
+        return instance.getQuotaMetricBytes();
+      }
+      /**
+       * <pre>
+       * The metric of the violated quota. A quota metric is a named counter to
+       * measure usage, such as API requests or CPUs. When an activity occurs in a
+       * service, such as Virtual Machine allocation, one or more quota metrics
+       * may be affected.
+       *
+       * For example, "compute.googleapis.com/cpus_per_vm_family",
+       * "storage.googleapis.com/internet_egress_bandwidth".
+       * </pre>
+       *
+       * <code>string quota_metric = 4 [json_name = "quotaMetric"];</code>
+       * @param value The quotaMetric to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuotaMetric(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setQuotaMetric(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The metric of the violated quota. A quota metric is a named counter to
+       * measure usage, such as API requests or CPUs. When an activity occurs in a
+       * service, such as Virtual Machine allocation, one or more quota metrics
+       * may be affected.
+       *
+       * For example, "compute.googleapis.com/cpus_per_vm_family",
+       * "storage.googleapis.com/internet_egress_bandwidth".
+       * </pre>
+       *
+       * <code>string quota_metric = 4 [json_name = "quotaMetric"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuotaMetric() {
+        copyOnWrite();
+        instance.clearQuotaMetric();
+        return this;
+      }
+      /**
+       * <pre>
+       * The metric of the violated quota. A quota metric is a named counter to
+       * measure usage, such as API requests or CPUs. When an activity occurs in a
+       * service, such as Virtual Machine allocation, one or more quota metrics
+       * may be affected.
+       *
+       * For example, "compute.googleapis.com/cpus_per_vm_family",
+       * "storage.googleapis.com/internet_egress_bandwidth".
+       * </pre>
+       *
+       * <code>string quota_metric = 4 [json_name = "quotaMetric"];</code>
+       * @param value The bytes for quotaMetric to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuotaMetricBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setQuotaMetricBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The id of the violated quota. Also know as "limit name", this is the
+       * unique identifier of a quota in the context of an API service.
+       *
+       * For example, "CPUS-PER-VM-FAMILY-per-project-region".
+       * </pre>
+       *
+       * <code>string quota_id = 5 [json_name = "quotaId"];</code>
+       * @return The quotaId.
+       */
+      @java.lang.Override
+      public java.lang.String getQuotaId() {
+        return instance.getQuotaId();
+      }
+      /**
+       * <pre>
+       * The id of the violated quota. Also know as "limit name", this is the
+       * unique identifier of a quota in the context of an API service.
+       *
+       * For example, "CPUS-PER-VM-FAMILY-per-project-region".
+       * </pre>
+       *
+       * <code>string quota_id = 5 [json_name = "quotaId"];</code>
+       * @return The bytes for quotaId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getQuotaIdBytes() {
+        return instance.getQuotaIdBytes();
+      }
+      /**
+       * <pre>
+       * The id of the violated quota. Also know as "limit name", this is the
+       * unique identifier of a quota in the context of an API service.
+       *
+       * For example, "CPUS-PER-VM-FAMILY-per-project-region".
+       * </pre>
+       *
+       * <code>string quota_id = 5 [json_name = "quotaId"];</code>
+       * @param value The quotaId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuotaId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setQuotaId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The id of the violated quota. Also know as "limit name", this is the
+       * unique identifier of a quota in the context of an API service.
+       *
+       * For example, "CPUS-PER-VM-FAMILY-per-project-region".
+       * </pre>
+       *
+       * <code>string quota_id = 5 [json_name = "quotaId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuotaId() {
+        copyOnWrite();
+        instance.clearQuotaId();
+        return this;
+      }
+      /**
+       * <pre>
+       * The id of the violated quota. Also know as "limit name", this is the
+       * unique identifier of a quota in the context of an API service.
+       *
+       * For example, "CPUS-PER-VM-FAMILY-per-project-region".
+       * </pre>
+       *
+       * <code>string quota_id = 5 [json_name = "quotaId"];</code>
+       * @param value The bytes for quotaId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuotaIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setQuotaIdBytes(value);
+        return this;
+      }
+
+      @java.lang.Override
+
+      public int getQuotaDimensionsCount() {
+        return instance.getQuotaDimensionsMap().size();
+      }
+      /**
+       * <pre>
+       * The dimensions of the violated quota. Every non-global quota is enforced
+       * on a set of dimensions. While quota metric defines what to count, the
+       * dimensions specify for what aspects the counter should be increased.
+       *
+       * For example, the quota "CPUs per region per VM family" enforces a limit
+       * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+       * "region" and "vm_family". And if the violation occurred in region
+       * "us-central1" and for VM family "n1", the quota_dimensions would be,
+       *
+       * {
+       * "region": "us-central1",
+       * "vm_family": "n1",
+       * }
+       *
+       * When a quota is enforced globally, the quota_dimensions would always be
+       * empty.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsQuotaDimensions(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getQuotaDimensionsMap().containsKey(key);
+      }
+
+      public Builder clearQuotaDimensions() {
+        copyOnWrite();
+        instance.getMutableQuotaDimensionsMap().clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * The dimensions of the violated quota. Every non-global quota is enforced
+       * on a set of dimensions. While quota metric defines what to count, the
+       * dimensions specify for what aspects the counter should be increased.
+       *
+       * For example, the quota "CPUs per region per VM family" enforces a limit
+       * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+       * "region" and "vm_family". And if the violation occurred in region
+       * "us-central1" and for VM family "n1", the quota_dimensions would be,
+       *
+       * {
+       * "region": "us-central1",
+       * "vm_family": "n1",
+       * }
+       *
+       * When a quota is enforced globally, the quota_dimensions would always be
+       * empty.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+       */
+
+      public Builder removeQuotaDimensions(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableQuotaDimensionsMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getQuotaDimensionsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getQuotaDimensions() {
+        return getQuotaDimensionsMap();
+      }
+      /**
+       * <pre>
+       * The dimensions of the violated quota. Every non-global quota is enforced
+       * on a set of dimensions. While quota metric defines what to count, the
+       * dimensions specify for what aspects the counter should be increased.
+       *
+       * For example, the quota "CPUs per region per VM family" enforces a limit
+       * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+       * "region" and "vm_family". And if the violation occurred in region
+       * "us-central1" and for VM family "n1", the quota_dimensions would be,
+       *
+       * {
+       * "region": "us-central1",
+       * "vm_family": "n1",
+       * }
+       *
+       * When a quota is enforced globally, the quota_dimensions would always be
+       * empty.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, java.lang.String> getQuotaDimensionsMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getQuotaDimensionsMap());
+      }
+      /**
+       * <pre>
+       * The dimensions of the violated quota. Every non-global quota is enforced
+       * on a set of dimensions. While quota metric defines what to count, the
+       * dimensions specify for what aspects the counter should be increased.
+       *
+       * For example, the quota "CPUs per region per VM family" enforces a limit
+       * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+       * "region" and "vm_family". And if the violation occurred in region
+       * "us-central1" and for VM family "n1", the quota_dimensions would be,
+       *
+       * {
+       * "region": "us-central1",
+       * "vm_family": "n1",
+       * }
+       *
+       * When a quota is enforced globally, the quota_dimensions would always be
+       * empty.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+       */
+      @java.lang.Override
+
+      public /* nullable */
+java.lang.String getQuotaDimensionsOrDefault(
+          java.lang.String key,
+          /* nullable */
+java.lang.String defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, java.lang.String> map =
+            instance.getQuotaDimensionsMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * The dimensions of the violated quota. Every non-global quota is enforced
+       * on a set of dimensions. While quota metric defines what to count, the
+       * dimensions specify for what aspects the counter should be increased.
+       *
+       * For example, the quota "CPUs per region per VM family" enforces a limit
+       * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+       * "region" and "vm_family". And if the violation occurred in region
+       * "us-central1" and for VM family "n1", the quota_dimensions would be,
+       *
+       * {
+       * "region": "us-central1",
+       * "vm_family": "n1",
+       * }
+       *
+       * When a quota is enforced globally, the quota_dimensions would always be
+       * empty.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getQuotaDimensionsOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, java.lang.String> map =
+            instance.getQuotaDimensionsMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <pre>
+       * The dimensions of the violated quota. Every non-global quota is enforced
+       * on a set of dimensions. While quota metric defines what to count, the
+       * dimensions specify for what aspects the counter should be increased.
+       *
+       * For example, the quota "CPUs per region per VM family" enforces a limit
+       * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+       * "region" and "vm_family". And if the violation occurred in region
+       * "us-central1" and for VM family "n1", the quota_dimensions would be,
+       *
+       * {
+       * "region": "us-central1",
+       * "vm_family": "n1",
+       * }
+       *
+       * When a quota is enforced globally, the quota_dimensions would always be
+       * empty.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+       */
+      public Builder putQuotaDimensions(
+          java.lang.String key,
+          java.lang.String value) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableQuotaDimensionsMap().put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The dimensions of the violated quota. Every non-global quota is enforced
+       * on a set of dimensions. While quota metric defines what to count, the
+       * dimensions specify for what aspects the counter should be increased.
+       *
+       * For example, the quota "CPUs per region per VM family" enforces a limit
+       * on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+       * "region" and "vm_family". And if the violation occurred in region
+       * "us-central1" and for VM family "n1", the quota_dimensions would be,
+       *
+       * {
+       * "region": "us-central1",
+       * "vm_family": "n1",
+       * }
+       *
+       * When a quota is enforced globally, the quota_dimensions would always be
+       * empty.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; quota_dimensions = 6 [json_name = "quotaDimensions"];</code>
+       */
+      public Builder putAllQuotaDimensions(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        copyOnWrite();
+        instance.getMutableQuotaDimensionsMap().putAll(values);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The enforced quota value at the time of the `QuotaFailure`.
+       *
+       * For example, if the enforced quota value at the time of the
+       * `QuotaFailure` on the number of CPUs is "10", then the value of this
+       * field would reflect this quantity.
+       * </pre>
+       *
+       * <code>int64 quota_value = 7 [json_name = "quotaValue"];</code>
+       * @return The quotaValue.
+       */
+      @java.lang.Override
+      public long getQuotaValue() {
+        return instance.getQuotaValue();
+      }
+      /**
+       * <pre>
+       * The enforced quota value at the time of the `QuotaFailure`.
+       *
+       * For example, if the enforced quota value at the time of the
+       * `QuotaFailure` on the number of CPUs is "10", then the value of this
+       * field would reflect this quantity.
+       * </pre>
+       *
+       * <code>int64 quota_value = 7 [json_name = "quotaValue"];</code>
+       * @param value The quotaValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuotaValue(long value) {
+        copyOnWrite();
+        instance.setQuotaValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The enforced quota value at the time of the `QuotaFailure`.
+       *
+       * For example, if the enforced quota value at the time of the
+       * `QuotaFailure` on the number of CPUs is "10", then the value of this
+       * field would reflect this quantity.
+       * </pre>
+       *
+       * <code>int64 quota_value = 7 [json_name = "quotaValue"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuotaValue() {
+        copyOnWrite();
+        instance.clearQuotaValue();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The new quota value being rolled out at the time of the violation. At the
+       * completion of the rollout, this value will be enforced in place of
+       * quota_value. If no rollout is in progress at the time of the violation,
+       * this field is not set.
+       *
+       * For example, if at the time of the violation a rollout is in progress
+       * changing the number of CPUs quota from 10 to 20, 20 would be the value of
+       * this field.
+       * </pre>
+       *
+       * <code>optional int64 future_quota_value = 8 [json_name = "futureQuotaValue"];</code>
+       * @return Whether the futureQuotaValue field is set.
+       */
+      @java.lang.Override
+      public boolean hasFutureQuotaValue() {
+        return instance.hasFutureQuotaValue();
+      }
+      /**
+       * <pre>
+       * The new quota value being rolled out at the time of the violation. At the
+       * completion of the rollout, this value will be enforced in place of
+       * quota_value. If no rollout is in progress at the time of the violation,
+       * this field is not set.
+       *
+       * For example, if at the time of the violation a rollout is in progress
+       * changing the number of CPUs quota from 10 to 20, 20 would be the value of
+       * this field.
+       * </pre>
+       *
+       * <code>optional int64 future_quota_value = 8 [json_name = "futureQuotaValue"];</code>
+       * @return The futureQuotaValue.
+       */
+      @java.lang.Override
+      public long getFutureQuotaValue() {
+        return instance.getFutureQuotaValue();
+      }
+      /**
+       * <pre>
+       * The new quota value being rolled out at the time of the violation. At the
+       * completion of the rollout, this value will be enforced in place of
+       * quota_value. If no rollout is in progress at the time of the violation,
+       * this field is not set.
+       *
+       * For example, if at the time of the violation a rollout is in progress
+       * changing the number of CPUs quota from 10 to 20, 20 would be the value of
+       * this field.
+       * </pre>
+       *
+       * <code>optional int64 future_quota_value = 8 [json_name = "futureQuotaValue"];</code>
+       * @param value The futureQuotaValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFutureQuotaValue(long value) {
+        copyOnWrite();
+        instance.setFutureQuotaValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The new quota value being rolled out at the time of the violation. At the
+       * completion of the rollout, this value will be enforced in place of
+       * quota_value. If no rollout is in progress at the time of the violation,
+       * this field is not set.
+       *
+       * For example, if at the time of the violation a rollout is in progress
+       * changing the number of CPUs quota from 10 to 20, 20 would be the value of
+       * this field.
+       * </pre>
+       *
+       * <code>optional int64 future_quota_value = 8 [json_name = "futureQuotaValue"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFutureQuotaValue() {
+        copyOnWrite();
+        instance.clearFutureQuotaValue();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:google.rpc.QuotaFailure.Violation)
     }
     @java.lang.Override
@@ -577,12 +2162,20 @@ public  final class QuotaFailure extends
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "subject_",
               "description_",
+              "apiService_",
+              "quotaMetric_",
+              "quotaId_",
+              "quotaDimensions_",
+              QuotaDimensionsDefaultEntryHolder.defaultEntry,
+              "quotaValue_",
+              "futureQuotaValue_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "";
+                "\u0000\b\u0000\u0001\u0001\b\b\u0001\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
+                "\u0004\u0208\u0005\u0208\u00062\u0007\u0002\b\u1002\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

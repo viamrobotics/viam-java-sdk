@@ -11005,6 +11005,12 @@ java.lang.String defaultValue) {
      * <code>repeated .viam.app.v1.TrafficTunnelEndpoint traffic_tunnel_endpoints = 6 [json_name = "trafficTunnelEndpoints"];</code>
      */
     int getTrafficTunnelEndpointsCount();
+
+    /**
+     * <code>bool no_tls = 7 [json_name = "noTls"];</code>
+     * @return The noTls.
+     */
+    boolean getNoTls();
   }
   /**
    * Protobuf type {@code viam.app.v1.NetworkConfig}
@@ -11348,6 +11354,32 @@ java.lang.String defaultValue) {
     private void removeTrafficTunnelEndpoints(int index) {
       ensureTrafficTunnelEndpointsIsMutable();
       trafficTunnelEndpoints_.remove(index);
+    }
+
+    public static final int NO_TLS_FIELD_NUMBER = 7;
+    private boolean noTls_;
+    /**
+     * <code>bool no_tls = 7 [json_name = "noTls"];</code>
+     * @return The noTls.
+     */
+    @java.lang.Override
+    public boolean getNoTls() {
+      return noTls_;
+    }
+    /**
+     * <code>bool no_tls = 7 [json_name = "noTls"];</code>
+     * @param value The noTls to set.
+     */
+    private void setNoTls(boolean value) {
+      
+      noTls_ = value;
+    }
+    /**
+     * <code>bool no_tls = 7 [json_name = "noTls"];</code>
+     */
+    private void clearNoTls() {
+
+      noTls_ = false;
     }
 
     public static viam.app.v1.Robot.NetworkConfig parseFrom(
@@ -11792,6 +11824,34 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <code>bool no_tls = 7 [json_name = "noTls"];</code>
+       * @return The noTls.
+       */
+      @java.lang.Override
+      public boolean getNoTls() {
+        return instance.getNoTls();
+      }
+      /**
+       * <code>bool no_tls = 7 [json_name = "noTls"];</code>
+       * @param value The noTls to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNoTls(boolean value) {
+        copyOnWrite();
+        instance.setNoTls(value);
+        return this;
+      }
+      /**
+       * <code>bool no_tls = 7 [json_name = "noTls"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNoTls() {
+        copyOnWrite();
+        instance.clearNoTls();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.NetworkConfig)
     }
     @java.lang.Override
@@ -11816,10 +11876,11 @@ java.lang.String defaultValue) {
               "sessions_",
               "trafficTunnelEndpoints_",
               viam.app.v1.Robot.TrafficTunnelEndpoint.class,
+              "noTls_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000\u0006\u001b";
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000\u0006\u001b\u0007\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
