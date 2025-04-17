@@ -111,20 +111,30 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string id = 1 [json_name = "id"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLastKnownUpdate()" class="member-name-link">getLastKnownUpdate</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>string name = 2 [json_name = "name"];</code></div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_known_update = 4 [json_name = "lastKnownUpdate"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string name = 2 [json_name = "name"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Struct</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRobotConfig()" class="member-name-link">getRobotConfig</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>string name = 2 [json_name = "name"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRobotConfig()" class="member-name-link">getRobotConfig</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.google.protobuf.Struct robot_config = 3 [json_name = "robotConfig"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLastKnownUpdate()" class="member-name-link">hasLastKnownUpdate</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>optional .google.protobuf.Timestamp last_known_update = 4 [json_name = "lastKnownUpdate"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasRobotConfig()" class="member-name-link">hasRobotConfig</a>()</code></div>
@@ -211,6 +221,28 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The robotConfig.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasLastKnownUpdate()">
+<h3>hasLastKnownUpdate</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLastKnownUpdate</span>()</div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_known_update = 4 [json_name = "lastKnownUpdate"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the lastKnownUpdate field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLastKnownUpdate()">
+<h3>getLastKnownUpdate</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.Timestamp</span>&nbsp;<span class="element-name">getLastKnownUpdate</span>()</div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_known_update = 4 [json_name = "lastKnownUpdate"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The lastKnownUpdate.</dd>
 </dl>
 </section>
 </li>

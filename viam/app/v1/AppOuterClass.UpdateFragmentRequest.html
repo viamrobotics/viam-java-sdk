@@ -134,14 +134,17 @@ implements <a href="AppOuterClass.UpdateFragmentRequestOrBuilder.html" title="in
 <div class="col-second odd-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#LAST_KNOWN_UPDATE_FIELD_NUMBER" class="member-name-link">LAST_KNOWN_UPDATE_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#PUBLIC_FIELD_NUMBER" class="member-name-link">PUBLIC_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#VISIBILITY_FIELD_NUMBER" class="member-name-link">VISIBILITY_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#PUBLIC_FIELD_NUMBER" class="member-name-link">PUBLIC_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#VISIBILITY_FIELD_NUMBER" class="member-name-link">VISIBILITY_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -185,35 +188,45 @@ implements <a href="AppOuterClass.UpdateFragmentRequestOrBuilder.html" title="in
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string id = 1 [json_name = "id"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastKnownUpdate()" class="member-name-link">getLastKnownUpdate</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string name = 2 [json_name = "name"];</code></div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_known_update = 6 [json_name = "lastKnownUpdate"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string name = 2 [json_name = "name"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublic()" class="member-name-link">getPublic</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional bool public = 4 [json_name = "public"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.FragmentVisibility.html" title="enum class in viam.app.v1">AppOuterClass.FragmentVisibility</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibility()" class="member-name-link">getVisibility</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional .viam.app.v1.FragmentVisibility visibility = 5 [json_name = "visibility"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibilityValue()" class="member-name-link">getVisibilityValue</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional .viam.app.v1.FragmentVisibility visibility = 5 [json_name = "visibility"];</code></div>
+<div class="block"><code>string name = 2 [json_name = "name"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasConfig()" class="member-name-link">hasConfig</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublic()" class="member-name-link">getPublic</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional bool public = 4 [json_name = "public"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.FragmentVisibility.html" title="enum class in viam.app.v1">AppOuterClass.FragmentVisibility</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibility()" class="member-name-link">getVisibility</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .viam.app.v1.FragmentVisibility visibility = 5 [json_name = "visibility"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisibilityValue()" class="member-name-link">getVisibilityValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .viam.app.v1.FragmentVisibility visibility = 5 [json_name = "visibility"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasConfig()" class="member-name-link">hasConfig</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Struct config = 3 [json_name = "config"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLastKnownUpdate()" class="member-name-link">hasLastKnownUpdate</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .google.protobuf.Timestamp last_known_update = 6 [json_name = "lastKnownUpdate"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPublic()" class="member-name-link">hasPublic</a>()</code></div>
@@ -372,6 +385,20 @@ implements <a href="AppOuterClass.UpdateFragmentRequestOrBuilder.html" title="in
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="LAST_KNOWN_UPDATE_FIELD_NUMBER">
+<h3>LAST_KNOWN_UPDATE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">LAST_KNOWN_UPDATE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.AppOuterClass.UpdateFragmentRequest.LAST_KNOWN_UPDATE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -520,6 +547,32 @@ implements <a href="AppOuterClass.UpdateFragmentRequestOrBuilder.html" title="in
 <dd><code><a href="AppOuterClass.UpdateFragmentRequestOrBuilder.html#getVisibility()">getVisibility</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.UpdateFragmentRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.UpdateFragmentRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The visibility.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasLastKnownUpdate()">
+<h3>hasLastKnownUpdate</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLastKnownUpdate</span>()</div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_known_update = 6 [json_name = "lastKnownUpdate"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.UpdateFragmentRequestOrBuilder.html#hasLastKnownUpdate()">hasLastKnownUpdate</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.UpdateFragmentRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.UpdateFragmentRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the lastKnownUpdate field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLastKnownUpdate()">
+<h3>getLastKnownUpdate</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Timestamp</span>&nbsp;<span class="element-name">getLastKnownUpdate</span>()</div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_known_update = 6 [json_name = "lastKnownUpdate"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.UpdateFragmentRequestOrBuilder.html#getLastKnownUpdate()">getLastKnownUpdate</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.UpdateFragmentRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.UpdateFragmentRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The lastKnownUpdate.</dd>
 </dl>
 </section>
 </li>
