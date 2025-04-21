@@ -11,53 +11,53 @@ public final class DataPipelines {
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
   /**
-   * Protobuf enum {@code viam.app.datapipelines.v1.PipelineRunStatus}
+   * Protobuf enum {@code viam.app.datapipelines.v1.DataPipelineRunStatus}
    */
-  public enum PipelineRunStatus
+  public enum DataPipelineRunStatus
       implements com.google.protobuf.Internal.EnumLite {
     /**
-     * <code>PIPELINE_RUN_STATUS_UNSPECIFIED = 0;</code>
+     * <code>DATA_PIPELINE_RUN_STATUS_UNSPECIFIED = 0;</code>
      */
-    PIPELINE_RUN_STATUS_UNSPECIFIED(0),
+    DATA_PIPELINE_RUN_STATUS_UNSPECIFIED(0),
     /**
-     * <code>PIPELINE_RUN_STATUS_SCHEDULED = 1;</code>
+     * <code>DATA_PIPELINE_RUN_STATUS_SCHEDULED = 1;</code>
      */
-    PIPELINE_RUN_STATUS_SCHEDULED(1),
+    DATA_PIPELINE_RUN_STATUS_SCHEDULED(1),
     /**
-     * <code>PIPELINE_RUN_STATUS_STARTED = 2;</code>
+     * <code>DATA_PIPELINE_RUN_STATUS_STARTED = 2;</code>
      */
-    PIPELINE_RUN_STATUS_STARTED(2),
+    DATA_PIPELINE_RUN_STATUS_STARTED(2),
     /**
-     * <code>PIPELINE_RUN_STATUS_COMPLETED = 3;</code>
+     * <code>DATA_PIPELINE_RUN_STATUS_COMPLETED = 3;</code>
      */
-    PIPELINE_RUN_STATUS_COMPLETED(3),
+    DATA_PIPELINE_RUN_STATUS_COMPLETED(3),
     /**
-     * <code>PIPELINE_RUN_STATUS_FAILED = 4;</code>
+     * <code>DATA_PIPELINE_RUN_STATUS_FAILED = 4;</code>
      */
-    PIPELINE_RUN_STATUS_FAILED(4),
+    DATA_PIPELINE_RUN_STATUS_FAILED(4),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>PIPELINE_RUN_STATUS_UNSPECIFIED = 0;</code>
+     * <code>DATA_PIPELINE_RUN_STATUS_UNSPECIFIED = 0;</code>
      */
-    public static final int PIPELINE_RUN_STATUS_UNSPECIFIED_VALUE = 0;
+    public static final int DATA_PIPELINE_RUN_STATUS_UNSPECIFIED_VALUE = 0;
     /**
-     * <code>PIPELINE_RUN_STATUS_SCHEDULED = 1;</code>
+     * <code>DATA_PIPELINE_RUN_STATUS_SCHEDULED = 1;</code>
      */
-    public static final int PIPELINE_RUN_STATUS_SCHEDULED_VALUE = 1;
+    public static final int DATA_PIPELINE_RUN_STATUS_SCHEDULED_VALUE = 1;
     /**
-     * <code>PIPELINE_RUN_STATUS_STARTED = 2;</code>
+     * <code>DATA_PIPELINE_RUN_STATUS_STARTED = 2;</code>
      */
-    public static final int PIPELINE_RUN_STATUS_STARTED_VALUE = 2;
+    public static final int DATA_PIPELINE_RUN_STATUS_STARTED_VALUE = 2;
     /**
-     * <code>PIPELINE_RUN_STATUS_COMPLETED = 3;</code>
+     * <code>DATA_PIPELINE_RUN_STATUS_COMPLETED = 3;</code>
      */
-    public static final int PIPELINE_RUN_STATUS_COMPLETED_VALUE = 3;
+    public static final int DATA_PIPELINE_RUN_STATUS_COMPLETED_VALUE = 3;
     /**
-     * <code>PIPELINE_RUN_STATUS_FAILED = 4;</code>
+     * <code>DATA_PIPELINE_RUN_STATUS_FAILED = 4;</code>
      */
-    public static final int PIPELINE_RUN_STATUS_FAILED_VALUE = 4;
+    public static final int DATA_PIPELINE_RUN_STATUS_FAILED_VALUE = 4;
 
 
     @java.lang.Override
@@ -75,55 +75,55 @@ public final class DataPipelines {
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static PipelineRunStatus valueOf(int value) {
+    public static DataPipelineRunStatus valueOf(int value) {
       return forNumber(value);
     }
 
-    public static PipelineRunStatus forNumber(int value) {
+    public static DataPipelineRunStatus forNumber(int value) {
       switch (value) {
-        case 0: return PIPELINE_RUN_STATUS_UNSPECIFIED;
-        case 1: return PIPELINE_RUN_STATUS_SCHEDULED;
-        case 2: return PIPELINE_RUN_STATUS_STARTED;
-        case 3: return PIPELINE_RUN_STATUS_COMPLETED;
-        case 4: return PIPELINE_RUN_STATUS_FAILED;
+        case 0: return DATA_PIPELINE_RUN_STATUS_UNSPECIFIED;
+        case 1: return DATA_PIPELINE_RUN_STATUS_SCHEDULED;
+        case 2: return DATA_PIPELINE_RUN_STATUS_STARTED;
+        case 3: return DATA_PIPELINE_RUN_STATUS_COMPLETED;
+        case 4: return DATA_PIPELINE_RUN_STATUS_FAILED;
         default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<PipelineRunStatus>
+    public static com.google.protobuf.Internal.EnumLiteMap<DataPipelineRunStatus>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        PipelineRunStatus> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<PipelineRunStatus>() {
+        DataPipelineRunStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DataPipelineRunStatus>() {
             @java.lang.Override
-            public PipelineRunStatus findValueByNumber(int number) {
-              return PipelineRunStatus.forNumber(number);
+            public DataPipelineRunStatus findValueByNumber(int number) {
+              return DataPipelineRunStatus.forNumber(number);
             }
           };
 
     public static com.google.protobuf.Internal.EnumVerifier 
         internalGetVerifier() {
-      return PipelineRunStatusVerifier.INSTANCE;
+      return DataPipelineRunStatusVerifier.INSTANCE;
     }
 
-    private static final class PipelineRunStatusVerifier implements 
+    private static final class DataPipelineRunStatusVerifier implements 
          com.google.protobuf.Internal.EnumVerifier { 
-            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new PipelineRunStatusVerifier();
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new DataPipelineRunStatusVerifier();
             @java.lang.Override
             public boolean isInRange(int number) {
-              return PipelineRunStatus.forNumber(number) != null;
+              return DataPipelineRunStatus.forNumber(number) != null;
             }
           };
 
     private final int value;
 
-    private PipelineRunStatus(int value) {
+    private DataPipelineRunStatus(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:viam.app.datapipelines.v1.PipelineRunStatus)
+    // @@protoc_insertion_point(enum_scope:viam.app.datapipelines.v1.DataPipelineRunStatus)
   }
 
   public interface DataPipelineOrBuilder extends
@@ -6857,8 +6857,8 @@ public final class DataPipelines {
     }
   }
 
-  public interface ListPipelineRunsRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.ListPipelineRunsRequest)
+  public interface ListDataPipelineRunsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.ListDataPipelineRunsRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -6904,14 +6904,14 @@ public final class DataPipelines {
         getPageTokenBytes();
   }
   /**
-   * Protobuf type {@code viam.app.datapipelines.v1.ListPipelineRunsRequest}
+   * Protobuf type {@code viam.app.datapipelines.v1.ListDataPipelineRunsRequest}
    */
-  public  static final class ListPipelineRunsRequest extends
+  public  static final class ListDataPipelineRunsRequest extends
       com.google.protobuf.GeneratedMessageLite<
-          ListPipelineRunsRequest, ListPipelineRunsRequest.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.ListPipelineRunsRequest)
-      ListPipelineRunsRequestOrBuilder {
-    private ListPipelineRunsRequest() {
+          ListDataPipelineRunsRequest, ListDataPipelineRunsRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.ListDataPipelineRunsRequest)
+      ListDataPipelineRunsRequestOrBuilder {
+    private ListDataPipelineRunsRequest() {
       id_ = "";
       pageToken_ = "";
     }
@@ -7067,50 +7067,50 @@ public final class DataPipelines {
 
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(byte[] data)
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(java.io.InputStream input)
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7118,24 +7118,24 @@ public final class DataPipelines {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseDelimitedFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7146,19 +7146,19 @@ public final class DataPipelines {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest prototype) {
+    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code viam.app.datapipelines.v1.ListPipelineRunsRequest}
+     * Protobuf type {@code viam.app.datapipelines.v1.ListDataPipelineRunsRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.ListPipelineRunsRequest)
-        viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequestOrBuilder {
-      // Construct using viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest.newBuilder()
+          viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.ListDataPipelineRunsRequest)
+        viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequestOrBuilder {
+      // Construct using viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -7322,7 +7322,7 @@ public final class DataPipelines {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.ListPipelineRunsRequest)
+      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.ListDataPipelineRunsRequest)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -7331,7 +7331,7 @@ public final class DataPipelines {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest();
+          return new viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -7352,13 +7352,13 @@ public final class DataPipelines {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest> parser = PARSER;
+          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest> parser = PARSER;
           if (parser == null) {
-            synchronized (viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest.class) {
+            synchronized (viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest>(
+                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -7377,30 +7377,30 @@ public final class DataPipelines {
     }
 
 
-    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.ListPipelineRunsRequest)
-    private static final viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.ListDataPipelineRunsRequest)
+    private static final viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest DEFAULT_INSTANCE;
     static {
-      ListPipelineRunsRequest defaultInstance = new ListPipelineRunsRequest();
+      ListDataPipelineRunsRequest defaultInstance = new ListDataPipelineRunsRequest();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        ListPipelineRunsRequest.class, defaultInstance);
+        ListDataPipelineRunsRequest.class, defaultInstance);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest getDefaultInstance() {
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<ListPipelineRunsRequest> PARSER;
+    private static volatile com.google.protobuf.Parser<ListDataPipelineRunsRequest> PARSER;
 
-    public static com.google.protobuf.Parser<ListPipelineRunsRequest> parser() {
+    public static com.google.protobuf.Parser<ListDataPipelineRunsRequest> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
 
-  public interface ListPipelineRunsResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.ListPipelineRunsResponse)
+  public interface ListDataPipelineRunsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.ListDataPipelineRunsResponse)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -7428,24 +7428,24 @@ public final class DataPipelines {
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
-    java.util.List<viam.app.datapipelines.v1.DataPipelines.PipelineRun> 
+    java.util.List<viam.app.datapipelines.v1.DataPipelines.DataPipelineRun> 
         getRunsList();
     /**
      * <pre>
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
-    viam.app.datapipelines.v1.DataPipelines.PipelineRun getRuns(int index);
+    viam.app.datapipelines.v1.DataPipelines.DataPipelineRun getRuns(int index);
     /**
      * <pre>
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
     int getRunsCount();
 
@@ -7470,14 +7470,14 @@ public final class DataPipelines {
         getNextPageTokenBytes();
   }
   /**
-   * Protobuf type {@code viam.app.datapipelines.v1.ListPipelineRunsResponse}
+   * Protobuf type {@code viam.app.datapipelines.v1.ListDataPipelineRunsResponse}
    */
-  public  static final class ListPipelineRunsResponse extends
+  public  static final class ListDataPipelineRunsResponse extends
       com.google.protobuf.GeneratedMessageLite<
-          ListPipelineRunsResponse, ListPipelineRunsResponse.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.ListPipelineRunsResponse)
-      ListPipelineRunsResponseOrBuilder {
-    private ListPipelineRunsResponse() {
+          ListDataPipelineRunsResponse, ListDataPipelineRunsResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.ListDataPipelineRunsResponse)
+      ListDataPipelineRunsResponseOrBuilder {
+    private ListDataPipelineRunsResponse() {
       pipelineId_ = "";
       runs_ = emptyProtobufList();
       nextPageToken_ = "";
@@ -7550,16 +7550,16 @@ public final class DataPipelines {
     }
 
     public static final int RUNS_FIELD_NUMBER = 2;
-    private com.google.protobuf.Internal.ProtobufList<viam.app.datapipelines.v1.DataPipelines.PipelineRun> runs_;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.datapipelines.v1.DataPipelines.DataPipelineRun> runs_;
     /**
      * <pre>
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
     @java.lang.Override
-    public java.util.List<viam.app.datapipelines.v1.DataPipelines.PipelineRun> getRunsList() {
+    public java.util.List<viam.app.datapipelines.v1.DataPipelines.DataPipelineRun> getRunsList() {
       return runs_;
     }
     /**
@@ -7567,9 +7567,9 @@ public final class DataPipelines {
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
-    public java.util.List<? extends viam.app.datapipelines.v1.DataPipelines.PipelineRunOrBuilder> 
+    public java.util.List<? extends viam.app.datapipelines.v1.DataPipelines.DataPipelineRunOrBuilder> 
         getRunsOrBuilderList() {
       return runs_;
     }
@@ -7578,7 +7578,7 @@ public final class DataPipelines {
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
     @java.lang.Override
     public int getRunsCount() {
@@ -7589,10 +7589,10 @@ public final class DataPipelines {
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
     @java.lang.Override
-    public viam.app.datapipelines.v1.DataPipelines.PipelineRun getRuns(int index) {
+    public viam.app.datapipelines.v1.DataPipelines.DataPipelineRun getRuns(int index) {
       return runs_.get(index);
     }
     /**
@@ -7600,14 +7600,14 @@ public final class DataPipelines {
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
-    public viam.app.datapipelines.v1.DataPipelines.PipelineRunOrBuilder getRunsOrBuilder(
+    public viam.app.datapipelines.v1.DataPipelines.DataPipelineRunOrBuilder getRunsOrBuilder(
         int index) {
       return runs_.get(index);
     }
     private void ensureRunsIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<viam.app.datapipelines.v1.DataPipelines.PipelineRun> tmp = runs_;
+      com.google.protobuf.Internal.ProtobufList<viam.app.datapipelines.v1.DataPipelines.DataPipelineRun> tmp = runs_;
       if (!tmp.isModifiable()) {
         runs_ =
             com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
@@ -7619,10 +7619,10 @@ public final class DataPipelines {
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
     private void setRuns(
-        int index, viam.app.datapipelines.v1.DataPipelines.PipelineRun value) {
+        int index, viam.app.datapipelines.v1.DataPipelines.DataPipelineRun value) {
       value.getClass();
   ensureRunsIsMutable();
       runs_.set(index, value);
@@ -7632,9 +7632,9 @@ public final class DataPipelines {
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
-    private void addRuns(viam.app.datapipelines.v1.DataPipelines.PipelineRun value) {
+    private void addRuns(viam.app.datapipelines.v1.DataPipelines.DataPipelineRun value) {
       value.getClass();
   ensureRunsIsMutable();
       runs_.add(value);
@@ -7644,10 +7644,10 @@ public final class DataPipelines {
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
     private void addRuns(
-        int index, viam.app.datapipelines.v1.DataPipelines.PipelineRun value) {
+        int index, viam.app.datapipelines.v1.DataPipelines.DataPipelineRun value) {
       value.getClass();
   ensureRunsIsMutable();
       runs_.add(index, value);
@@ -7657,10 +7657,10 @@ public final class DataPipelines {
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
     private void addAllRuns(
-        java.lang.Iterable<? extends viam.app.datapipelines.v1.DataPipelines.PipelineRun> values) {
+        java.lang.Iterable<? extends viam.app.datapipelines.v1.DataPipelines.DataPipelineRun> values) {
       ensureRunsIsMutable();
       com.google.protobuf.AbstractMessageLite.addAll(
           values, runs_);
@@ -7670,7 +7670,7 @@ public final class DataPipelines {
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
     private void clearRuns() {
       runs_ = emptyProtobufList();
@@ -7680,7 +7680,7 @@ public final class DataPipelines {
      * The runs that were run.
      * </pre>
      *
-     * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+     * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
      */
     private void removeRuns(int index) {
       ensureRunsIsMutable();
@@ -7754,50 +7754,50 @@ public final class DataPipelines {
 
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(byte[] data)
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(java.io.InputStream input)
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7805,24 +7805,24 @@ public final class DataPipelines {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseDelimitedFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7833,19 +7833,19 @@ public final class DataPipelines {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse prototype) {
+    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code viam.app.datapipelines.v1.ListPipelineRunsResponse}
+     * Protobuf type {@code viam.app.datapipelines.v1.ListDataPipelineRunsResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.ListPipelineRunsResponse)
-        viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponseOrBuilder {
-      // Construct using viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse.newBuilder()
+          viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.ListDataPipelineRunsResponse)
+        viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponseOrBuilder {
+      // Construct using viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -7925,10 +7925,10 @@ public final class DataPipelines {
        * The runs that were run.
        * </pre>
        *
-       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
        */
       @java.lang.Override
-      public java.util.List<viam.app.datapipelines.v1.DataPipelines.PipelineRun> getRunsList() {
+      public java.util.List<viam.app.datapipelines.v1.DataPipelines.DataPipelineRun> getRunsList() {
         return java.util.Collections.unmodifiableList(
             instance.getRunsList());
       }
@@ -7937,7 +7937,7 @@ public final class DataPipelines {
        * The runs that were run.
        * </pre>
        *
-       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
        */
       @java.lang.Override
       public int getRunsCount() {
@@ -7947,10 +7947,10 @@ public final class DataPipelines {
        * The runs that were run.
        * </pre>
        *
-       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
        */
       @java.lang.Override
-      public viam.app.datapipelines.v1.DataPipelines.PipelineRun getRuns(int index) {
+      public viam.app.datapipelines.v1.DataPipelines.DataPipelineRun getRuns(int index) {
         return instance.getRuns(index);
       }
       /**
@@ -7958,10 +7958,10 @@ public final class DataPipelines {
        * The runs that were run.
        * </pre>
        *
-       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
        */
       public Builder setRuns(
-          int index, viam.app.datapipelines.v1.DataPipelines.PipelineRun value) {
+          int index, viam.app.datapipelines.v1.DataPipelines.DataPipelineRun value) {
         copyOnWrite();
         instance.setRuns(index, value);
         return this;
@@ -7971,10 +7971,10 @@ public final class DataPipelines {
        * The runs that were run.
        * </pre>
        *
-       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
        */
       public Builder setRuns(
-          int index, viam.app.datapipelines.v1.DataPipelines.PipelineRun.Builder builderForValue) {
+          int index, viam.app.datapipelines.v1.DataPipelines.DataPipelineRun.Builder builderForValue) {
         copyOnWrite();
         instance.setRuns(index,
             builderForValue.build());
@@ -7985,9 +7985,9 @@ public final class DataPipelines {
        * The runs that were run.
        * </pre>
        *
-       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
        */
-      public Builder addRuns(viam.app.datapipelines.v1.DataPipelines.PipelineRun value) {
+      public Builder addRuns(viam.app.datapipelines.v1.DataPipelines.DataPipelineRun value) {
         copyOnWrite();
         instance.addRuns(value);
         return this;
@@ -7997,10 +7997,10 @@ public final class DataPipelines {
        * The runs that were run.
        * </pre>
        *
-       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
        */
       public Builder addRuns(
-          int index, viam.app.datapipelines.v1.DataPipelines.PipelineRun value) {
+          int index, viam.app.datapipelines.v1.DataPipelines.DataPipelineRun value) {
         copyOnWrite();
         instance.addRuns(index, value);
         return this;
@@ -8010,10 +8010,10 @@ public final class DataPipelines {
        * The runs that were run.
        * </pre>
        *
-       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
        */
       public Builder addRuns(
-          viam.app.datapipelines.v1.DataPipelines.PipelineRun.Builder builderForValue) {
+          viam.app.datapipelines.v1.DataPipelines.DataPipelineRun.Builder builderForValue) {
         copyOnWrite();
         instance.addRuns(builderForValue.build());
         return this;
@@ -8023,10 +8023,10 @@ public final class DataPipelines {
        * The runs that were run.
        * </pre>
        *
-       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
        */
       public Builder addRuns(
-          int index, viam.app.datapipelines.v1.DataPipelines.PipelineRun.Builder builderForValue) {
+          int index, viam.app.datapipelines.v1.DataPipelines.DataPipelineRun.Builder builderForValue) {
         copyOnWrite();
         instance.addRuns(index,
             builderForValue.build());
@@ -8037,10 +8037,10 @@ public final class DataPipelines {
        * The runs that were run.
        * </pre>
        *
-       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
        */
       public Builder addAllRuns(
-          java.lang.Iterable<? extends viam.app.datapipelines.v1.DataPipelines.PipelineRun> values) {
+          java.lang.Iterable<? extends viam.app.datapipelines.v1.DataPipelines.DataPipelineRun> values) {
         copyOnWrite();
         instance.addAllRuns(values);
         return this;
@@ -8050,7 +8050,7 @@ public final class DataPipelines {
        * The runs that were run.
        * </pre>
        *
-       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
        */
       public Builder clearRuns() {
         copyOnWrite();
@@ -8062,7 +8062,7 @@ public final class DataPipelines {
        * The runs that were run.
        * </pre>
        *
-       * <code>repeated .viam.app.datapipelines.v1.PipelineRun runs = 2 [json_name = "runs"];</code>
+       * <code>repeated .viam.app.datapipelines.v1.DataPipelineRun runs = 2 [json_name = "runs"];</code>
        */
       public Builder removeRuns(int index) {
         copyOnWrite();
@@ -8139,7 +8139,7 @@ public final class DataPipelines {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.ListPipelineRunsResponse)
+      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.ListDataPipelineRunsResponse)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -8148,7 +8148,7 @@ public final class DataPipelines {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse();
+          return new viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -8157,7 +8157,7 @@ public final class DataPipelines {
             java.lang.Object[] objects = new java.lang.Object[] {
               "pipelineId_",
               "runs_",
-              viam.app.datapipelines.v1.DataPipelines.PipelineRun.class,
+              viam.app.datapipelines.v1.DataPipelines.DataPipelineRun.class,
               "nextPageToken_",
             };
             java.lang.String info =
@@ -8170,13 +8170,13 @@ public final class DataPipelines {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse> parser = PARSER;
+          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse> parser = PARSER;
           if (parser == null) {
-            synchronized (viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse.class) {
+            synchronized (viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse>(
+                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -8195,30 +8195,30 @@ public final class DataPipelines {
     }
 
 
-    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.ListPipelineRunsResponse)
-    private static final viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.ListDataPipelineRunsResponse)
+    private static final viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse DEFAULT_INSTANCE;
     static {
-      ListPipelineRunsResponse defaultInstance = new ListPipelineRunsResponse();
+      ListDataPipelineRunsResponse defaultInstance = new ListDataPipelineRunsResponse();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        ListPipelineRunsResponse.class, defaultInstance);
+        ListDataPipelineRunsResponse.class, defaultInstance);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse getDefaultInstance() {
+    public static viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<ListPipelineRunsResponse> PARSER;
+    private static volatile com.google.protobuf.Parser<ListDataPipelineRunsResponse> PARSER;
 
-    public static com.google.protobuf.Parser<ListPipelineRunsResponse> parser() {
+    public static com.google.protobuf.Parser<ListDataPipelineRunsResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
 
-  public interface PipelineRunOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.PipelineRun)
+  public interface DataPipelineRunOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.DataPipelineRun)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
@@ -8322,7 +8322,7 @@ public final class DataPipelines {
      * The status of the run.
      * </pre>
      *
-     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     * <code>.viam.app.datapipelines.v1.DataPipelineRunStatus status = 6 [json_name = "status"];</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
@@ -8331,20 +8331,20 @@ public final class DataPipelines {
      * The status of the run.
      * </pre>
      *
-     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     * <code>.viam.app.datapipelines.v1.DataPipelineRunStatus status = 6 [json_name = "status"];</code>
      * @return The status.
      */
-    viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus getStatus();
+    viam.app.datapipelines.v1.DataPipelines.DataPipelineRunStatus getStatus();
   }
   /**
-   * Protobuf type {@code viam.app.datapipelines.v1.PipelineRun}
+   * Protobuf type {@code viam.app.datapipelines.v1.DataPipelineRun}
    */
-  public  static final class PipelineRun extends
+  public  static final class DataPipelineRun extends
       com.google.protobuf.GeneratedMessageLite<
-          PipelineRun, PipelineRun.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.PipelineRun)
-      PipelineRunOrBuilder {
-    private PipelineRun() {
+          DataPipelineRun, DataPipelineRun.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.DataPipelineRun)
+      DataPipelineRunOrBuilder {
+    private DataPipelineRun() {
       id_ = "";
     }
     private int bitField0_;
@@ -8686,7 +8686,7 @@ public final class DataPipelines {
      * The status of the run.
      * </pre>
      *
-     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     * <code>.viam.app.datapipelines.v1.DataPipelineRunStatus status = 6 [json_name = "status"];</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override
@@ -8698,20 +8698,20 @@ public final class DataPipelines {
      * The status of the run.
      * </pre>
      *
-     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     * <code>.viam.app.datapipelines.v1.DataPipelineRunStatus status = 6 [json_name = "status"];</code>
      * @return The status.
      */
     @java.lang.Override
-    public viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus getStatus() {
-      viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus result = viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus.forNumber(status_);
-      return result == null ? viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus.UNRECOGNIZED : result;
+    public viam.app.datapipelines.v1.DataPipelines.DataPipelineRunStatus getStatus() {
+      viam.app.datapipelines.v1.DataPipelines.DataPipelineRunStatus result = viam.app.datapipelines.v1.DataPipelines.DataPipelineRunStatus.forNumber(status_);
+      return result == null ? viam.app.datapipelines.v1.DataPipelines.DataPipelineRunStatus.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * The status of the run.
      * </pre>
      *
-     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     * <code>.viam.app.datapipelines.v1.DataPipelineRunStatus status = 6 [json_name = "status"];</code>
      * @param value The enum numeric value on the wire for status to set.
      */
     private void setStatusValue(int value) {
@@ -8722,10 +8722,10 @@ public final class DataPipelines {
      * The status of the run.
      * </pre>
      *
-     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     * <code>.viam.app.datapipelines.v1.DataPipelineRunStatus status = 6 [json_name = "status"];</code>
      * @param value The status to set.
      */
-    private void setStatus(viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus value) {
+    private void setStatus(viam.app.datapipelines.v1.DataPipelines.DataPipelineRunStatus value) {
       status_ = value.getNumber();
 
     }
@@ -8734,57 +8734,57 @@ public final class DataPipelines {
      * The status of the run.
      * </pre>
      *
-     * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+     * <code>.viam.app.datapipelines.v1.DataPipelineRunStatus status = 6 [json_name = "status"];</code>
      */
     private void clearStatus() {
 
       status_ = 0;
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(byte[] data)
+    public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(java.io.InputStream input)
+    public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8792,24 +8792,24 @@ public final class DataPipelines {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseDelimitedFrom(java.io.InputStream input)
+    public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseDelimitedFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8820,19 +8820,19 @@ public final class DataPipelines {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.PipelineRun prototype) {
+    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.DataPipelineRun prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code viam.app.datapipelines.v1.PipelineRun}
+     * Protobuf type {@code viam.app.datapipelines.v1.DataPipelineRun}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          viam.app.datapipelines.v1.DataPipelines.PipelineRun, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.PipelineRun)
-        viam.app.datapipelines.v1.DataPipelines.PipelineRunOrBuilder {
-      // Construct using viam.app.datapipelines.v1.DataPipelines.PipelineRun.newBuilder()
+          viam.app.datapipelines.v1.DataPipelines.DataPipelineRun, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.DataPipelineRun)
+        viam.app.datapipelines.v1.DataPipelines.DataPipelineRunOrBuilder {
+      // Construct using viam.app.datapipelines.v1.DataPipelines.DataPipelineRun.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -9196,7 +9196,7 @@ public final class DataPipelines {
        * The status of the run.
        * </pre>
        *
-       * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+       * <code>.viam.app.datapipelines.v1.DataPipelineRunStatus status = 6 [json_name = "status"];</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override
@@ -9208,7 +9208,7 @@ public final class DataPipelines {
        * The status of the run.
        * </pre>
        *
-       * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+       * <code>.viam.app.datapipelines.v1.DataPipelineRunStatus status = 6 [json_name = "status"];</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -9222,11 +9222,11 @@ public final class DataPipelines {
        * The status of the run.
        * </pre>
        *
-       * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+       * <code>.viam.app.datapipelines.v1.DataPipelineRunStatus status = 6 [json_name = "status"];</code>
        * @return The status.
        */
       @java.lang.Override
-      public viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus getStatus() {
+      public viam.app.datapipelines.v1.DataPipelines.DataPipelineRunStatus getStatus() {
         return instance.getStatus();
       }
       /**
@@ -9234,11 +9234,11 @@ public final class DataPipelines {
        * The status of the run.
        * </pre>
        *
-       * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+       * <code>.viam.app.datapipelines.v1.DataPipelineRunStatus status = 6 [json_name = "status"];</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(viam.app.datapipelines.v1.DataPipelines.PipelineRunStatus value) {
+      public Builder setStatus(viam.app.datapipelines.v1.DataPipelines.DataPipelineRunStatus value) {
         copyOnWrite();
         instance.setStatus(value);
         return this;
@@ -9248,7 +9248,7 @@ public final class DataPipelines {
        * The status of the run.
        * </pre>
        *
-       * <code>.viam.app.datapipelines.v1.PipelineRunStatus status = 6 [json_name = "status"];</code>
+       * <code>.viam.app.datapipelines.v1.DataPipelineRunStatus status = 6 [json_name = "status"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -9257,7 +9257,7 @@ public final class DataPipelines {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.PipelineRun)
+      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.DataPipelineRun)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -9266,7 +9266,7 @@ public final class DataPipelines {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new viam.app.datapipelines.v1.DataPipelines.PipelineRun();
+          return new viam.app.datapipelines.v1.DataPipelines.DataPipelineRun();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -9291,13 +9291,13 @@ public final class DataPipelines {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.PipelineRun> parser = PARSER;
+          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.DataPipelineRun> parser = PARSER;
           if (parser == null) {
-            synchronized (viam.app.datapipelines.v1.DataPipelines.PipelineRun.class) {
+            synchronized (viam.app.datapipelines.v1.DataPipelines.DataPipelineRun.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.PipelineRun>(
+                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.DataPipelineRun>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -9316,24 +9316,24 @@ public final class DataPipelines {
     }
 
 
-    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.PipelineRun)
-    private static final viam.app.datapipelines.v1.DataPipelines.PipelineRun DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.DataPipelineRun)
+    private static final viam.app.datapipelines.v1.DataPipelines.DataPipelineRun DEFAULT_INSTANCE;
     static {
-      PipelineRun defaultInstance = new PipelineRun();
+      DataPipelineRun defaultInstance = new DataPipelineRun();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        PipelineRun.class, defaultInstance);
+        DataPipelineRun.class, defaultInstance);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.PipelineRun getDefaultInstance() {
+    public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<PipelineRun> PARSER;
+    private static volatile com.google.protobuf.Parser<DataPipelineRun> PARSER;
 
-    public static com.google.protobuf.Parser<PipelineRun> parser() {
+    public static com.google.protobuf.Parser<DataPipelineRun> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

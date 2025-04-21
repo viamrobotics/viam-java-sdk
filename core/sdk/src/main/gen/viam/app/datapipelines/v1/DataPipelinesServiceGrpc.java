@@ -228,34 +228,34 @@ public final class DataPipelinesServiceGrpc {
     return getDisableDataPipelineMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest,
-      viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse> getListPipelineRunsMethod;
+  private static volatile io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest,
+      viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse> getListDataPipelineRunsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListPipelineRuns",
-      requestType = viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest.class,
-      responseType = viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "ListDataPipelineRuns",
+      requestType = viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest.class,
+      responseType = viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest,
-      viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse> getListPipelineRunsMethod() {
-    io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest, viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse> getListPipelineRunsMethod;
-    if ((getListPipelineRunsMethod = DataPipelinesServiceGrpc.getListPipelineRunsMethod) == null) {
+  public static io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest,
+      viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse> getListDataPipelineRunsMethod() {
+    io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest, viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse> getListDataPipelineRunsMethod;
+    if ((getListDataPipelineRunsMethod = DataPipelinesServiceGrpc.getListDataPipelineRunsMethod) == null) {
       synchronized (DataPipelinesServiceGrpc.class) {
-        if ((getListPipelineRunsMethod = DataPipelinesServiceGrpc.getListPipelineRunsMethod) == null) {
-          DataPipelinesServiceGrpc.getListPipelineRunsMethod = getListPipelineRunsMethod =
-              io.grpc.MethodDescriptor.<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest, viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse>newBuilder()
+        if ((getListDataPipelineRunsMethod = DataPipelinesServiceGrpc.getListDataPipelineRunsMethod) == null) {
+          DataPipelinesServiceGrpc.getListDataPipelineRunsMethod = getListDataPipelineRunsMethod =
+              io.grpc.MethodDescriptor.<viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest, viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPipelineRuns"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDataPipelineRuns"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest.getDefaultInstance()))
+                  viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse.getDefaultInstance()))
+                  viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse.getDefaultInstance()))
               .build();
         }
       }
     }
-    return getListPipelineRunsMethod;
+    return getListDataPipelineRunsMethod;
   }
 
   /**
@@ -381,12 +381,12 @@ public final class DataPipelinesServiceGrpc {
 
     /**
      * <pre>
-     * ListPipelineRuns lists the runs of a data pipeline.
+     * ListDataPipelineRuns lists the runs of a data pipeline.
      * </pre>
      */
-    default void listPipelineRuns(viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest request,
-        io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPipelineRunsMethod(), responseObserver);
+    default void listDataPipelineRuns(viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDataPipelineRunsMethod(), responseObserver);
     }
   }
 
@@ -502,13 +502,13 @@ public final class DataPipelinesServiceGrpc {
 
     /**
      * <pre>
-     * ListPipelineRuns lists the runs of a data pipeline.
+     * ListDataPipelineRuns lists the runs of a data pipeline.
      * </pre>
      */
-    public void listPipelineRuns(viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest request,
-        io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse> responseObserver) {
+    public void listDataPipelineRuns(viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListPipelineRunsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListDataPipelineRunsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -603,12 +603,12 @@ public final class DataPipelinesServiceGrpc {
 
     /**
      * <pre>
-     * ListPipelineRuns lists the runs of a data pipeline.
+     * ListDataPipelineRuns lists the runs of a data pipeline.
      * </pre>
      */
-    public viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse listPipelineRuns(viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest request) {
+    public viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse listDataPipelineRuns(viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListPipelineRunsMethod(), getCallOptions(), request);
+          getChannel(), getListDataPipelineRunsMethod(), getCallOptions(), request);
     }
   }
 
@@ -710,13 +710,13 @@ public final class DataPipelinesServiceGrpc {
 
     /**
      * <pre>
-     * ListPipelineRuns lists the runs of a data pipeline.
+     * ListDataPipelineRuns lists the runs of a data pipeline.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse> listPipelineRuns(
-        viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse> listDataPipelineRuns(
+        viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListPipelineRunsMethod(), getCallOptions()), request);
+          getChannel().newCall(getListDataPipelineRunsMethod(), getCallOptions()), request);
     }
   }
 
@@ -727,7 +727,7 @@ public final class DataPipelinesServiceGrpc {
   private static final int METHODID_DELETE_DATA_PIPELINE = 4;
   private static final int METHODID_ENABLE_DATA_PIPELINE = 5;
   private static final int METHODID_DISABLE_DATA_PIPELINE = 6;
-  private static final int METHODID_LIST_PIPELINE_RUNS = 7;
+  private static final int METHODID_LIST_DATA_PIPELINE_RUNS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -774,9 +774,9 @@ public final class DataPipelinesServiceGrpc {
           serviceImpl.disableDataPipeline((viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse>) responseObserver);
           break;
-        case METHODID_LIST_PIPELINE_RUNS:
-          serviceImpl.listPipelineRuns((viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest) request,
-              (io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse>) responseObserver);
+        case METHODID_LIST_DATA_PIPELINE_RUNS:
+          serviceImpl.listDataPipelineRuns((viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -846,12 +846,12 @@ public final class DataPipelinesServiceGrpc {
               viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse>(
                 service, METHODID_DISABLE_DATA_PIPELINE)))
         .addMethod(
-          getListPipelineRunsMethod(),
+          getListDataPipelineRunsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsRequest,
-              viam.app.datapipelines.v1.DataPipelines.ListPipelineRunsResponse>(
-                service, METHODID_LIST_PIPELINE_RUNS)))
+              viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest,
+              viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse>(
+                service, METHODID_LIST_DATA_PIPELINE_RUNS)))
         .build();
   }
 
@@ -871,7 +871,7 @@ public final class DataPipelinesServiceGrpc {
               .addMethod(getDeleteDataPipelineMethod())
               .addMethod(getEnableDataPipelineMethod())
               .addMethod(getDisableDataPipelineMethod())
-              .addMethod(getListPipelineRunsMethod())
+              .addMethod(getListDataPipelineRunsMethod())
               .build();
         }
       }
