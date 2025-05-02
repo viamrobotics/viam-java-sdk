@@ -3946,6 +3946,31 @@ public final class Module {
      */
     com.google.protobuf.ByteString
         getDependenciesBytes(int index);
+
+    /**
+     * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+     * @return A list containing the optionalDependencies.
+     */
+    java.util.List<java.lang.String>
+        getOptionalDependenciesList();
+    /**
+     * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+     * @return The count of optionalDependencies.
+     */
+    int getOptionalDependenciesCount();
+    /**
+     * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+     * @param index The index of the element to return.
+     * @return The optionalDependencies at the given index.
+     */
+    java.lang.String getOptionalDependencies(int index);
+    /**
+     * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+     * @param index The index of the element to return.
+     * @return The optionalDependencies at the given index.
+     */
+    com.google.protobuf.ByteString
+        getOptionalDependenciesBytes(int index);
   }
   /**
    * Protobuf type {@code viam.module.v1.ValidateConfigResponse}
@@ -3957,6 +3982,7 @@ public final class Module {
       ValidateConfigResponseOrBuilder {
     private ValidateConfigResponse() {
       dependencies_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      optionalDependencies_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     public static final int DEPENDENCIES_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<java.lang.String> dependencies_;
@@ -4049,6 +4075,99 @@ public final class Module {
       checkByteStringIsUtf8(value);
       ensureDependenciesIsMutable();
       dependencies_.add(value.toStringUtf8());
+    }
+
+    public static final int OPTIONAL_DEPENDENCIES_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> optionalDependencies_;
+    /**
+     * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+     * @return A list containing the optionalDependencies.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getOptionalDependenciesList() {
+      return optionalDependencies_;
+    }
+    /**
+     * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+     * @return The count of optionalDependencies.
+     */
+    @java.lang.Override
+    public int getOptionalDependenciesCount() {
+      return optionalDependencies_.size();
+    }
+    /**
+     * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+     * @param index The index of the element to return.
+     * @return The optionalDependencies at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getOptionalDependencies(int index) {
+      return optionalDependencies_.get(index);
+    }
+    /**
+     * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the optionalDependencies at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOptionalDependenciesBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          optionalDependencies_.get(index));
+    }
+    private void ensureOptionalDependenciesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          optionalDependencies_;  if (!tmp.isModifiable()) {
+        optionalDependencies_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+     * @param index The index to set the value at.
+     * @param value The optionalDependencies to set.
+     */
+    private void setOptionalDependencies(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureOptionalDependenciesIsMutable();
+      optionalDependencies_.set(index, value);
+    }
+    /**
+     * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+     * @param value The optionalDependencies to add.
+     */
+    private void addOptionalDependencies(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureOptionalDependenciesIsMutable();
+      optionalDependencies_.add(value);
+    }
+    /**
+     * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+     * @param values The optionalDependencies to add.
+     */
+    private void addAllOptionalDependencies(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureOptionalDependenciesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, optionalDependencies_);
+    }
+    /**
+     * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+     */
+    private void clearOptionalDependencies() {
+      optionalDependencies_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+     * @param value The bytes of the optionalDependencies to add.
+     */
+    private void addOptionalDependenciesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureOptionalDependenciesIsMutable();
+      optionalDependencies_.add(value.toStringUtf8());
     }
 
     public static viam.module.v1.Module.ValidateConfigResponse parseFrom(
@@ -4240,6 +4359,98 @@ public final class Module {
         return this;
       }
 
+      /**
+       * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+       * @return A list containing the optionalDependencies.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getOptionalDependenciesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getOptionalDependenciesList());
+      }
+      /**
+       * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+       * @return The count of optionalDependencies.
+       */
+      @java.lang.Override
+      public int getOptionalDependenciesCount() {
+        return instance.getOptionalDependenciesCount();
+      }
+      /**
+       * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+       * @param index The index of the element to return.
+       * @return The optionalDependencies at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getOptionalDependencies(int index) {
+        return instance.getOptionalDependencies(index);
+      }
+      /**
+       * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the optionalDependencies at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOptionalDependenciesBytes(int index) {
+        return instance.getOptionalDependenciesBytes(index);
+      }
+      /**
+       * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+       * @param index The index to set the value at.
+       * @param value The optionalDependencies to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOptionalDependencies(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setOptionalDependencies(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+       * @param value The optionalDependencies to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOptionalDependencies(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addOptionalDependencies(value);
+        return this;
+      }
+      /**
+       * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+       * @param values The optionalDependencies to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOptionalDependencies(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllOptionalDependencies(values);
+        return this;
+      }
+      /**
+       * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOptionalDependencies() {
+        copyOnWrite();
+        instance.clearOptionalDependencies();
+        return this;
+      }
+      /**
+       * <code>repeated string optional_dependencies = 2 [json_name = "optionalDependencies"];</code>
+       * @param value The bytes of the optionalDependencies to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOptionalDependenciesBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addOptionalDependenciesBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.module.v1.ValidateConfigResponse)
     }
     @java.lang.Override
@@ -4257,9 +4468,11 @@ public final class Module {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "dependencies_",
+              "optionalDependencies_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u021a";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0002\u0000\u0001\u021a\u0002\u021a" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
