@@ -261,8 +261,8 @@ public final class ModuleServiceGrpc {
 
     /**
      * <pre>
-     * ValidateConfig determines whether the given config is valid and registers/returns implicit
-     * dependencies.
+     * ValidateConfig determines whether the given config is valid and registers/returns
+     * both required and optional implicit dependencies.
      * </pre>
      */
     default void validateConfig(viam.module.v1.Module.ValidateConfigRequest request,
@@ -350,8 +350,8 @@ public final class ModuleServiceGrpc {
 
     /**
      * <pre>
-     * ValidateConfig determines whether the given config is valid and registers/returns implicit
-     * dependencies.
+     * ValidateConfig determines whether the given config is valid and registers/returns
+     * both required and optional implicit dependencies.
      * </pre>
      */
     public void validateConfig(viam.module.v1.Module.ValidateConfigRequest request,
@@ -422,8 +422,8 @@ public final class ModuleServiceGrpc {
 
     /**
      * <pre>
-     * ValidateConfig determines whether the given config is valid and registers/returns implicit
-     * dependencies.
+     * ValidateConfig determines whether the given config is valid and registers/returns
+     * both required and optional implicit dependencies.
      * </pre>
      */
     public viam.module.v1.Module.ValidateConfigResponse validateConfig(viam.module.v1.Module.ValidateConfigRequest request) {
@@ -497,8 +497,8 @@ public final class ModuleServiceGrpc {
 
     /**
      * <pre>
-     * ValidateConfig determines whether the given config is valid and registers/returns implicit
-     * dependencies.
+     * ValidateConfig determines whether the given config is valid and registers/returns
+     * both required and optional implicit dependencies.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<viam.module.v1.Module.ValidateConfigResponse> validateConfig(
