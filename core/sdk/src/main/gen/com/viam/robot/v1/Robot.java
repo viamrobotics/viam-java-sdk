@@ -4136,8 +4136,8 @@ public final class Robot {
 
     /**
      * <pre>
-     * the point clouds to transform. This should be in the PCD format
-     * encoded into bytes: https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+     * the point clouds to transform. This should be in the PCD format,
+     * [encoded into bytes](https://pointclouds.org/documentation/tutorials/pcd_file_format.html).
      * </pre>
      *
      * <code>bytes point_cloud_pcd = 1 [json_name = "pointCloudPcd"];</code>
@@ -4206,8 +4206,8 @@ public final class Robot {
     private com.google.protobuf.ByteString pointCloudPcd_;
     /**
      * <pre>
-     * the point clouds to transform. This should be in the PCD format
-     * encoded into bytes: https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+     * the point clouds to transform. This should be in the PCD format,
+     * [encoded into bytes](https://pointclouds.org/documentation/tutorials/pcd_file_format.html).
      * </pre>
      *
      * <code>bytes point_cloud_pcd = 1 [json_name = "pointCloudPcd"];</code>
@@ -4219,8 +4219,8 @@ public final class Robot {
     }
     /**
      * <pre>
-     * the point clouds to transform. This should be in the PCD format
-     * encoded into bytes: https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+     * the point clouds to transform. This should be in the PCD format,
+     * [encoded into bytes](https://pointclouds.org/documentation/tutorials/pcd_file_format.html).
      * </pre>
      *
      * <code>bytes point_cloud_pcd = 1 [json_name = "pointCloudPcd"];</code>
@@ -4233,8 +4233,8 @@ public final class Robot {
     }
     /**
      * <pre>
-     * the point clouds to transform. This should be in the PCD format
-     * encoded into bytes: https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+     * the point clouds to transform. This should be in the PCD format,
+     * [encoded into bytes](https://pointclouds.org/documentation/tutorials/pcd_file_format.html).
      * </pre>
      *
      * <code>bytes point_cloud_pcd = 1 [json_name = "pointCloudPcd"];</code>
@@ -4487,8 +4487,8 @@ public final class Robot {
 
       /**
        * <pre>
-       * the point clouds to transform. This should be in the PCD format
-       * encoded into bytes: https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+       * the point clouds to transform. This should be in the PCD format,
+       * [encoded into bytes](https://pointclouds.org/documentation/tutorials/pcd_file_format.html).
        * </pre>
        *
        * <code>bytes point_cloud_pcd = 1 [json_name = "pointCloudPcd"];</code>
@@ -4500,8 +4500,8 @@ public final class Robot {
       }
       /**
        * <pre>
-       * the point clouds to transform. This should be in the PCD format
-       * encoded into bytes: https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+       * the point clouds to transform. This should be in the PCD format,
+       * [encoded into bytes](https://pointclouds.org/documentation/tutorials/pcd_file_format.html).
        * </pre>
        *
        * <code>bytes point_cloud_pcd = 1 [json_name = "pointCloudPcd"];</code>
@@ -4515,8 +4515,8 @@ public final class Robot {
       }
       /**
        * <pre>
-       * the point clouds to transform. This should be in the PCD format
-       * encoded into bytes: https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+       * the point clouds to transform. This should be in the PCD format,
+       * [encoded into bytes](https://pointclouds.org/documentation/tutorials/pcd_file_format.html).
        * </pre>
        *
        * <code>bytes point_cloud_pcd = 1 [json_name = "pointCloudPcd"];</code>
