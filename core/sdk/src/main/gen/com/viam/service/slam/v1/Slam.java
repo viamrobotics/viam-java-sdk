@@ -1406,8 +1406,8 @@ public final class Slam {
      * format where XY is the ground plane and positive Z is up, following
      * the Right Hand Rule.
      *
-     * Read more about the pointcloud format here:
-     * https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+     * Read more about the pointcloud format
+     * [in the docs](https://pointclouds.org/documentation/tutorials/pcd_file_format.html)
      *
      * Viam expects pointcloud data with fields "x y z" or "x y z rgb", and for
      * this to be specified in the pointcloud header in the FIELDS entry. If color
@@ -1446,8 +1446,8 @@ public final class Slam {
      * format where XY is the ground plane and positive Z is up, following
      * the Right Hand Rule.
      *
-     * Read more about the pointcloud format here:
-     * https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+     * Read more about the pointcloud format
+     * [in the docs](https://pointclouds.org/documentation/tutorials/pcd_file_format.html)
      *
      * Viam expects pointcloud data with fields "x y z" or "x y z rgb", and for
      * this to be specified in the pointcloud header in the FIELDS entry. If color
@@ -1475,8 +1475,8 @@ public final class Slam {
      * format where XY is the ground plane and positive Z is up, following
      * the Right Hand Rule.
      *
-     * Read more about the pointcloud format here:
-     * https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+     * Read more about the pointcloud format
+     * [in the docs](https://pointclouds.org/documentation/tutorials/pcd_file_format.html)
      *
      * Viam expects pointcloud data with fields "x y z" or "x y z rgb", and for
      * this to be specified in the pointcloud header in the FIELDS entry. If color
@@ -1505,8 +1505,8 @@ public final class Slam {
      * format where XY is the ground plane and positive Z is up, following
      * the Right Hand Rule.
      *
-     * Read more about the pointcloud format here:
-     * https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+     * Read more about the pointcloud format
+     * [in the docs](https://pointclouds.org/documentation/tutorials/pcd_file_format.html)
      *
      * Viam expects pointcloud data with fields "x y z" or "x y z rgb", and for
      * this to be specified in the pointcloud header in the FIELDS entry. If color
@@ -1631,8 +1631,8 @@ public final class Slam {
        * format where XY is the ground plane and positive Z is up, following
        * the Right Hand Rule.
        *
-       * Read more about the pointcloud format here:
-       * https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+       * Read more about the pointcloud format
+       * [in the docs](https://pointclouds.org/documentation/tutorials/pcd_file_format.html)
        *
        * Viam expects pointcloud data with fields "x y z" or "x y z rgb", and for
        * this to be specified in the pointcloud header in the FIELDS entry. If color
@@ -1660,8 +1660,8 @@ public final class Slam {
        * format where XY is the ground plane and positive Z is up, following
        * the Right Hand Rule.
        *
-       * Read more about the pointcloud format here:
-       * https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+       * Read more about the pointcloud format
+       * [in the docs](https://pointclouds.org/documentation/tutorials/pcd_file_format.html)
        *
        * Viam expects pointcloud data with fields "x y z" or "x y z rgb", and for
        * this to be specified in the pointcloud header in the FIELDS entry. If color
@@ -1691,8 +1691,8 @@ public final class Slam {
        * format where XY is the ground plane and positive Z is up, following
        * the Right Hand Rule.
        *
-       * Read more about the pointcloud format here:
-       * https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+       * Read more about the pointcloud format
+       * [in the docs](https://pointclouds.org/documentation/tutorials/pcd_file_format.html)
        *
        * Viam expects pointcloud data with fields "x y z" or "x y z rgb", and for
        * this to be specified in the pointcloud header in the FIELDS entry. If color
