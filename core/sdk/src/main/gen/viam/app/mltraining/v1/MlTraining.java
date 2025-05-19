@@ -4665,6 +4665,42 @@ java.lang.String defaultValue) {
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
+
+    /**
+     * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+     */
+    int getArgumentsCount();
+    /**
+     * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+     */
+    boolean containsArguments(
+        java.lang.String key);
+    /**
+     * Use {@link #getArgumentsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getArguments();
+    /**
+     * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getArgumentsMap();
+    /**
+     * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+     */
+
+    /* nullable */
+java.lang.String getArgumentsOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+     */
+
+    java.lang.String getArgumentsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code viam.app.mltraining.v1.TrainingJobMetadata}
@@ -5535,6 +5571,101 @@ java.lang.String defaultValue) {
       checkByteStringIsUtf8(value);
       ensureTagsIsMutable();
       tags_.add(value.toStringUtf8());
+    }
+
+    public static final int ARGUMENTS_FIELD_NUMBER = 21;
+    private static final class ArgumentsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, java.lang.String> arguments_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    internalGetArguments() {
+      return arguments_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    internalGetMutableArguments() {
+      if (!arguments_.isMutable()) {
+        arguments_ = arguments_.mutableCopy();
+      }
+      return arguments_;
+    }
+    @java.lang.Override
+
+    public int getArgumentsCount() {
+      return internalGetArguments().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsArguments(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetArguments().containsKey(key);
+    }
+    /**
+     * Use {@link #getArgumentsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getArguments() {
+      return getArgumentsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getArgumentsMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetArguments());
+    }
+    /**
+     * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+java.lang.String getArgumentsOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetArguments();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getArgumentsOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetArguments();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+     */
+    private java.util.Map<java.lang.String, java.lang.String>
+    getMutableArgumentsMap() {
+      return internalGetMutableArguments();
     }
 
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseFrom(
@@ -6519,6 +6650,106 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      @java.lang.Override
+
+      public int getArgumentsCount() {
+        return instance.getArgumentsMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsArguments(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getArgumentsMap().containsKey(key);
+      }
+
+      public Builder clearArguments() {
+        copyOnWrite();
+        instance.getMutableArgumentsMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+       */
+
+      public Builder removeArguments(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableArgumentsMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getArgumentsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getArguments() {
+        return getArgumentsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, java.lang.String> getArgumentsMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getArgumentsMap());
+      }
+      /**
+       * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+       */
+      @java.lang.Override
+
+      public /* nullable */
+java.lang.String getArgumentsOrDefault(
+          java.lang.String key,
+          /* nullable */
+java.lang.String defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, java.lang.String> map =
+            instance.getArgumentsMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getArgumentsOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, java.lang.String> map =
+            instance.getArgumentsMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+       */
+      public Builder putArguments(
+          java.lang.String key,
+          java.lang.String value) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableArgumentsMap().put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; arguments = 21 [json_name = "arguments", (.tagger.v1.tags) = "bson:&#92;"arguments&#92;" json:&#92;"arguments&#92;""];</code>
+       */
+      public Builder putAllArguments(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        copyOnWrite();
+        instance.getMutableArgumentsMap().putAll(values);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.TrainingJobMetadata)
     }
     @java.lang.Override
@@ -6554,12 +6785,14 @@ java.lang.String defaultValue) {
               "isCustomJob_",
               "registryItemId_",
               "registryItemVersion_",
+              "arguments_",
+              ArgumentsDefaultEntryHolder.defaultEntry,
             };
             java.lang.String info =
-                "\u0000\u0012\u0000\u0001\u0002\u0014\u0012\u0000\u0001\u0000\u0002\f\u0003\u1009" +
+                "\u0000\u0013\u0000\u0001\u0002\u0015\u0013\u0001\u0001\u0000\u0002\f\u0003\u1009" +
                 "\u0001\u0004\u1009\u0002\u0005\u0208\u0007\u0208\b\u1009\u0000\t\u1009\u0003\n\u1009" +
                 "\u0004\u000b\u0208\f\u0208\r\u0208\u000e\u0208\u000f\f\u0010\u021a\u0011\f\u0012" +
-                "\u0007\u0013\u0208\u0014\u0208";
+                "\u0007\u0013\u0208\u0014\u0208\u00152";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
