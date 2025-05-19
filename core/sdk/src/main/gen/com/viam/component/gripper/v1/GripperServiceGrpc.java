@@ -198,6 +198,36 @@ public final class GripperServiceGrpc {
     return getGetGeometriesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetKinematicsRequest,
+      com.viam.common.v1.Common.GetKinematicsResponse> getGetKinematicsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetKinematics",
+      requestType = com.viam.common.v1.Common.GetKinematicsRequest.class,
+      responseType = com.viam.common.v1.Common.GetKinematicsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetKinematicsRequest,
+      com.viam.common.v1.Common.GetKinematicsResponse> getGetKinematicsMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetKinematicsRequest, com.viam.common.v1.Common.GetKinematicsResponse> getGetKinematicsMethod;
+    if ((getGetKinematicsMethod = GripperServiceGrpc.getGetKinematicsMethod) == null) {
+      synchronized (GripperServiceGrpc.class) {
+        if ((getGetKinematicsMethod = GripperServiceGrpc.getGetKinematicsMethod) == null) {
+          GripperServiceGrpc.getGetKinematicsMethod = getGetKinematicsMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetKinematicsRequest, com.viam.common.v1.Common.GetKinematicsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetKinematics"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetKinematicsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetKinematicsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetKinematicsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -308,6 +338,16 @@ public final class GripperServiceGrpc {
         io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGeometriesMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetKinematics returns the kinematics file for the component
+     * </pre>
+     */
+    default void getKinematics(com.viam.common.v1.Common.GetKinematicsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetKinematicsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetKinematicsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -408,6 +448,17 @@ public final class GripperServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetKinematics returns the kinematics file for the component
+     * </pre>
+     */
+    public void getKinematics(com.viam.common.v1.Common.GetKinematicsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetKinematicsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetKinematicsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -487,6 +538,16 @@ public final class GripperServiceGrpc {
     public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetKinematics returns the kinematics file for the component
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetKinematicsResponse getKinematics(com.viam.common.v1.Common.GetKinematicsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetKinematicsMethod(), getCallOptions(), request);
     }
   }
 
@@ -574,6 +635,17 @@ public final class GripperServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GetKinematics returns the kinematics file for the component
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetKinematicsResponse> getKinematics(
+        com.viam.common.v1.Common.GetKinematicsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetKinematicsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_OPEN = 0;
@@ -582,6 +654,7 @@ public final class GripperServiceGrpc {
   private static final int METHODID_IS_MOVING = 3;
   private static final int METHODID_DO_COMMAND = 4;
   private static final int METHODID_GET_GEOMETRIES = 5;
+  private static final int METHODID_GET_KINEMATICS = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -623,6 +696,10 @@ public final class GripperServiceGrpc {
         case METHODID_GET_GEOMETRIES:
           serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse>) responseObserver);
+          break;
+        case METHODID_GET_KINEMATICS:
+          serviceImpl.getKinematics((com.viam.common.v1.Common.GetKinematicsRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetKinematicsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -684,6 +761,13 @@ public final class GripperServiceGrpc {
               com.viam.common.v1.Common.GetGeometriesRequest,
               com.viam.common.v1.Common.GetGeometriesResponse>(
                 service, METHODID_GET_GEOMETRIES)))
+        .addMethod(
+          getGetKinematicsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetKinematicsRequest,
+              com.viam.common.v1.Common.GetKinematicsResponse>(
+                service, METHODID_GET_KINEMATICS)))
         .build();
   }
 
@@ -702,6 +786,7 @@ public final class GripperServiceGrpc {
               .addMethod(getIsMovingMethod())
               .addMethod(getDoCommandMethod())
               .addMethod(getGetGeometriesMethod())
+              .addMethod(getGetKinematicsMethod())
               .build();
         }
       }
