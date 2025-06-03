@@ -3026,6 +3026,25 @@ public final class DataPipelines {
      */
     com.google.protobuf.ByteString
         getScheduleBytes();
+
+    /**
+     * <pre>
+     * When true, pipeline runs will be scheduled for the organization's past data.
+     * </pre>
+     *
+     * <code>optional bool enable_backfill = 5 [json_name = "enableBackfill"];</code>
+     * @return Whether the enableBackfill field is set.
+     */
+    boolean hasEnableBackfill();
+    /**
+     * <pre>
+     * When true, pipeline runs will be scheduled for the organization's past data.
+     * </pre>
+     *
+     * <code>optional bool enable_backfill = 5 [json_name = "enableBackfill"];</code>
+     * @return The enableBackfill.
+     */
+    boolean getEnableBackfill();
   }
   /**
    * Protobuf type {@code viam.app.datapipelines.v1.CreateDataPipelineRequest}
@@ -3041,6 +3060,7 @@ public final class DataPipelines {
       mqlBinary_ = emptyProtobufList();
       schedule_ = "";
     }
+    private int bitField0_;
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
     private java.lang.String organizationId_;
     /**
@@ -3352,6 +3372,56 @@ public final class DataPipelines {
       checkByteStringIsUtf8(value);
       schedule_ = value.toStringUtf8();
 
+    }
+
+    public static final int ENABLE_BACKFILL_FIELD_NUMBER = 5;
+    private boolean enableBackfill_;
+    /**
+     * <pre>
+     * When true, pipeline runs will be scheduled for the organization's past data.
+     * </pre>
+     *
+     * <code>optional bool enable_backfill = 5 [json_name = "enableBackfill"];</code>
+     * @return Whether the enableBackfill field is set.
+     */
+    @java.lang.Override
+    public boolean hasEnableBackfill() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * When true, pipeline runs will be scheduled for the organization's past data.
+     * </pre>
+     *
+     * <code>optional bool enable_backfill = 5 [json_name = "enableBackfill"];</code>
+     * @return The enableBackfill.
+     */
+    @java.lang.Override
+    public boolean getEnableBackfill() {
+      return enableBackfill_;
+    }
+    /**
+     * <pre>
+     * When true, pipeline runs will be scheduled for the organization's past data.
+     * </pre>
+     *
+     * <code>optional bool enable_backfill = 5 [json_name = "enableBackfill"];</code>
+     * @param value The enableBackfill to set.
+     */
+    private void setEnableBackfill(boolean value) {
+      bitField0_ |= 0x00000001;
+      enableBackfill_ = value;
+    }
+    /**
+     * <pre>
+     * When true, pipeline runs will be scheduled for the organization's past data.
+     * </pre>
+     *
+     * <code>optional bool enable_backfill = 5 [json_name = "enableBackfill"];</code>
+     */
+    private void clearEnableBackfill() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      enableBackfill_ = false;
     }
 
     public static viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineRequest parseFrom(
@@ -3767,6 +3837,58 @@ public final class DataPipelines {
         return this;
       }
 
+      /**
+       * <pre>
+       * When true, pipeline runs will be scheduled for the organization's past data.
+       * </pre>
+       *
+       * <code>optional bool enable_backfill = 5 [json_name = "enableBackfill"];</code>
+       * @return Whether the enableBackfill field is set.
+       */
+      @java.lang.Override
+      public boolean hasEnableBackfill() {
+        return instance.hasEnableBackfill();
+      }
+      /**
+       * <pre>
+       * When true, pipeline runs will be scheduled for the organization's past data.
+       * </pre>
+       *
+       * <code>optional bool enable_backfill = 5 [json_name = "enableBackfill"];</code>
+       * @return The enableBackfill.
+       */
+      @java.lang.Override
+      public boolean getEnableBackfill() {
+        return instance.getEnableBackfill();
+      }
+      /**
+       * <pre>
+       * When true, pipeline runs will be scheduled for the organization's past data.
+       * </pre>
+       *
+       * <code>optional bool enable_backfill = 5 [json_name = "enableBackfill"];</code>
+       * @param value The enableBackfill to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableBackfill(boolean value) {
+        copyOnWrite();
+        instance.setEnableBackfill(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * When true, pipeline runs will be scheduled for the organization's past data.
+       * </pre>
+       *
+       * <code>optional bool enable_backfill = 5 [json_name = "enableBackfill"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableBackfill() {
+        copyOnWrite();
+        instance.clearEnableBackfill();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.CreateDataPipelineRequest)
     }
     @java.lang.Override
@@ -3783,14 +3905,16 @@ public final class DataPipelines {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "organizationId_",
               "name_",
               "mqlBinary_",
               "schedule_",
+              "enableBackfill_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u001c\u0004\u0208";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u001c\u0004\u0208\u0005\u1007\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

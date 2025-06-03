@@ -1578,6 +1578,36 @@ public final class AppServiceGrpc {
     return getGetRobotPartMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationRequest,
+      viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationResponse> getGetRobotPartByNameAndLocationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetRobotPartByNameAndLocation",
+      requestType = viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationRequest.class,
+      responseType = viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationRequest,
+      viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationResponse> getGetRobotPartByNameAndLocationMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationRequest, viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationResponse> getGetRobotPartByNameAndLocationMethod;
+    if ((getGetRobotPartByNameAndLocationMethod = AppServiceGrpc.getGetRobotPartByNameAndLocationMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getGetRobotPartByNameAndLocationMethod = AppServiceGrpc.getGetRobotPartByNameAndLocationMethod) == null) {
+          AppServiceGrpc.getGetRobotPartByNameAndLocationMethod = getGetRobotPartByNameAndLocationMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationRequest, viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRobotPartByNameAndLocation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetRobotPartByNameAndLocationMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.GetRobotPartLogsRequest,
       viam.app.v1.AppOuterClass.GetRobotPartLogsResponse> getGetRobotPartLogsMethod;
 
@@ -3693,6 +3723,16 @@ public final class AppServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get a specific robot part by name and location
+     * </pre>
+     */
+    default void getRobotPartByNameAndLocation(viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRobotPartByNameAndLocationMethod(), responseObserver);
+    }
+
+    /**
      */
     default void getRobotPartLogs(viam.app.v1.AppOuterClass.GetRobotPartLogsRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetRobotPartLogsResponse> responseObserver) {
@@ -4724,6 +4764,17 @@ public final class AppServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get a specific robot part by name and location
+     * </pre>
+     */
+    public void getRobotPartByNameAndLocation(viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetRobotPartByNameAndLocationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      */
     public void getRobotPartLogs(viam.app.v1.AppOuterClass.GetRobotPartLogsRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetRobotPartLogsResponse> responseObserver) {
@@ -5742,6 +5793,16 @@ public final class AppServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get a specific robot part by name and location
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationResponse getRobotPartByNameAndLocation(viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetRobotPartByNameAndLocationMethod(), getCallOptions(), request);
+    }
+
+    /**
      */
     public viam.app.v1.AppOuterClass.GetRobotPartLogsResponse getRobotPartLogs(viam.app.v1.AppOuterClass.GetRobotPartLogsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -6753,6 +6814,17 @@ public final class AppServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Get a specific robot part by name and location
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationResponse> getRobotPartByNameAndLocation(
+        viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetRobotPartByNameAndLocationMethod(), getCallOptions()), request);
+    }
+
+    /**
      */
     public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.GetRobotPartLogsResponse> getRobotPartLogs(
         viam.app.v1.AppOuterClass.GetRobotPartLogsRequest request) {
@@ -7314,59 +7386,60 @@ public final class AppServiceGrpc {
   private static final int METHODID_GET_ROVER_RENTAL_ROBOTS = 49;
   private static final int METHODID_GET_ROBOT_PARTS = 50;
   private static final int METHODID_GET_ROBOT_PART = 51;
-  private static final int METHODID_GET_ROBOT_PART_LOGS = 52;
-  private static final int METHODID_TAIL_ROBOT_PART_LOGS = 53;
-  private static final int METHODID_GET_ROBOT_PART_HISTORY = 54;
-  private static final int METHODID_UPDATE_ROBOT_PART = 55;
-  private static final int METHODID_NEW_ROBOT_PART = 56;
-  private static final int METHODID_DELETE_ROBOT_PART = 57;
-  private static final int METHODID_GET_ROBOT_PART_METADATA = 58;
-  private static final int METHODID_UPDATE_ROBOT_PART_METADATA = 59;
-  private static final int METHODID_GET_ROBOT_APIKEYS = 60;
-  private static final int METHODID_MARK_PART_AS_MAIN = 61;
-  private static final int METHODID_MARK_PART_FOR_RESTART = 62;
-  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 63;
-  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 64;
-  private static final int METHODID_LIST_ROBOTS = 65;
-  private static final int METHODID_NEW_ROBOT = 66;
-  private static final int METHODID_UPDATE_ROBOT = 67;
-  private static final int METHODID_DELETE_ROBOT = 68;
-  private static final int METHODID_LIST_FRAGMENTS = 69;
-  private static final int METHODID_GET_FRAGMENT = 70;
-  private static final int METHODID_CREATE_FRAGMENT = 71;
-  private static final int METHODID_UPDATE_FRAGMENT = 72;
-  private static final int METHODID_DELETE_FRAGMENT = 73;
-  private static final int METHODID_LIST_NESTED_FRAGMENTS = 74;
-  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 75;
-  private static final int METHODID_LIST_MACHINE_SUMMARIES = 76;
-  private static final int METHODID_GET_FRAGMENT_HISTORY = 77;
-  private static final int METHODID_GET_FRAGMENT_USAGE = 78;
-  private static final int METHODID_SET_FRAGMENT_TAG = 79;
-  private static final int METHODID_DELETE_FRAGMENT_TAG = 80;
-  private static final int METHODID_ADD_ROLE = 81;
-  private static final int METHODID_REMOVE_ROLE = 82;
-  private static final int METHODID_CHANGE_ROLE = 83;
-  private static final int METHODID_LIST_AUTHORIZATIONS = 84;
-  private static final int METHODID_CHECK_PERMISSIONS = 85;
-  private static final int METHODID_GET_REGISTRY_ITEM = 86;
-  private static final int METHODID_CREATE_REGISTRY_ITEM = 87;
-  private static final int METHODID_UPDATE_REGISTRY_ITEM = 88;
-  private static final int METHODID_LIST_REGISTRY_ITEMS = 89;
-  private static final int METHODID_DELETE_REGISTRY_ITEM = 90;
-  private static final int METHODID_RENAME_REGISTRY_ITEM = 91;
-  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 92;
-  private static final int METHODID_CREATE_MODULE = 93;
-  private static final int METHODID_UPDATE_MODULE = 94;
-  private static final int METHODID_GET_MODULE = 95;
-  private static final int METHODID_LIST_MODULES = 96;
-  private static final int METHODID_CREATE_KEY = 97;
-  private static final int METHODID_DELETE_KEY = 98;
-  private static final int METHODID_LIST_KEYS = 99;
-  private static final int METHODID_RENAME_KEY = 100;
-  private static final int METHODID_ROTATE_KEY = 101;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 102;
-  private static final int METHODID_GET_APP_CONTENT = 103;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 104;
+  private static final int METHODID_GET_ROBOT_PART_BY_NAME_AND_LOCATION = 52;
+  private static final int METHODID_GET_ROBOT_PART_LOGS = 53;
+  private static final int METHODID_TAIL_ROBOT_PART_LOGS = 54;
+  private static final int METHODID_GET_ROBOT_PART_HISTORY = 55;
+  private static final int METHODID_UPDATE_ROBOT_PART = 56;
+  private static final int METHODID_NEW_ROBOT_PART = 57;
+  private static final int METHODID_DELETE_ROBOT_PART = 58;
+  private static final int METHODID_GET_ROBOT_PART_METADATA = 59;
+  private static final int METHODID_UPDATE_ROBOT_PART_METADATA = 60;
+  private static final int METHODID_GET_ROBOT_APIKEYS = 61;
+  private static final int METHODID_MARK_PART_AS_MAIN = 62;
+  private static final int METHODID_MARK_PART_FOR_RESTART = 63;
+  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 64;
+  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 65;
+  private static final int METHODID_LIST_ROBOTS = 66;
+  private static final int METHODID_NEW_ROBOT = 67;
+  private static final int METHODID_UPDATE_ROBOT = 68;
+  private static final int METHODID_DELETE_ROBOT = 69;
+  private static final int METHODID_LIST_FRAGMENTS = 70;
+  private static final int METHODID_GET_FRAGMENT = 71;
+  private static final int METHODID_CREATE_FRAGMENT = 72;
+  private static final int METHODID_UPDATE_FRAGMENT = 73;
+  private static final int METHODID_DELETE_FRAGMENT = 74;
+  private static final int METHODID_LIST_NESTED_FRAGMENTS = 75;
+  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 76;
+  private static final int METHODID_LIST_MACHINE_SUMMARIES = 77;
+  private static final int METHODID_GET_FRAGMENT_HISTORY = 78;
+  private static final int METHODID_GET_FRAGMENT_USAGE = 79;
+  private static final int METHODID_SET_FRAGMENT_TAG = 80;
+  private static final int METHODID_DELETE_FRAGMENT_TAG = 81;
+  private static final int METHODID_ADD_ROLE = 82;
+  private static final int METHODID_REMOVE_ROLE = 83;
+  private static final int METHODID_CHANGE_ROLE = 84;
+  private static final int METHODID_LIST_AUTHORIZATIONS = 85;
+  private static final int METHODID_CHECK_PERMISSIONS = 86;
+  private static final int METHODID_GET_REGISTRY_ITEM = 87;
+  private static final int METHODID_CREATE_REGISTRY_ITEM = 88;
+  private static final int METHODID_UPDATE_REGISTRY_ITEM = 89;
+  private static final int METHODID_LIST_REGISTRY_ITEMS = 90;
+  private static final int METHODID_DELETE_REGISTRY_ITEM = 91;
+  private static final int METHODID_RENAME_REGISTRY_ITEM = 92;
+  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 93;
+  private static final int METHODID_CREATE_MODULE = 94;
+  private static final int METHODID_UPDATE_MODULE = 95;
+  private static final int METHODID_GET_MODULE = 96;
+  private static final int METHODID_LIST_MODULES = 97;
+  private static final int METHODID_CREATE_KEY = 98;
+  private static final int METHODID_DELETE_KEY = 99;
+  private static final int METHODID_LIST_KEYS = 100;
+  private static final int METHODID_RENAME_KEY = 101;
+  private static final int METHODID_ROTATE_KEY = 102;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 103;
+  private static final int METHODID_GET_APP_CONTENT = 104;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 105;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -7592,6 +7665,10 @@ public final class AppServiceGrpc {
         case METHODID_GET_ROBOT_PART:
           serviceImpl.getRobotPart((viam.app.v1.AppOuterClass.GetRobotPartRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetRobotPartResponse>) responseObserver);
+          break;
+        case METHODID_GET_ROBOT_PART_BY_NAME_AND_LOCATION:
+          serviceImpl.getRobotPartByNameAndLocation((viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationResponse>) responseObserver);
           break;
         case METHODID_GET_ROBOT_PART_LOGS:
           serviceImpl.getRobotPartLogs((viam.app.v1.AppOuterClass.GetRobotPartLogsRequest) request,
@@ -8187,6 +8264,13 @@ public final class AppServiceGrpc {
               viam.app.v1.AppOuterClass.GetRobotPartResponse>(
                 service, METHODID_GET_ROBOT_PART)))
         .addMethod(
+          getGetRobotPartByNameAndLocationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationRequest,
+              viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationResponse>(
+                service, METHODID_GET_ROBOT_PART_BY_NAME_AND_LOCATION)))
+        .addMethod(
           getGetRobotPartLogsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -8621,6 +8705,7 @@ public final class AppServiceGrpc {
               .addMethod(getGetRoverRentalRobotsMethod())
               .addMethod(getGetRobotPartsMethod())
               .addMethod(getGetRobotPartMethod())
+              .addMethod(getGetRobotPartByNameAndLocationMethod())
               .addMethod(getGetRobotPartLogsMethod())
               .addMethod(getTailRobotPartLogsMethod())
               .addMethod(getGetRobotPartHistoryMethod())
