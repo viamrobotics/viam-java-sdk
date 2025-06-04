@@ -138,6 +138,36 @@ public final class ProvisioningServiceGrpc {
     return getGetNetworkListMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.provisioning.v1.Provisioning.ExitProvisioningRequest,
+      viam.provisioning.v1.Provisioning.ExitProvisioningResponse> getExitProvisioningMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ExitProvisioning",
+      requestType = viam.provisioning.v1.Provisioning.ExitProvisioningRequest.class,
+      responseType = viam.provisioning.v1.Provisioning.ExitProvisioningResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.provisioning.v1.Provisioning.ExitProvisioningRequest,
+      viam.provisioning.v1.Provisioning.ExitProvisioningResponse> getExitProvisioningMethod() {
+    io.grpc.MethodDescriptor<viam.provisioning.v1.Provisioning.ExitProvisioningRequest, viam.provisioning.v1.Provisioning.ExitProvisioningResponse> getExitProvisioningMethod;
+    if ((getExitProvisioningMethod = ProvisioningServiceGrpc.getExitProvisioningMethod) == null) {
+      synchronized (ProvisioningServiceGrpc.class) {
+        if ((getExitProvisioningMethod = ProvisioningServiceGrpc.getExitProvisioningMethod) == null) {
+          ProvisioningServiceGrpc.getExitProvisioningMethod = getExitProvisioningMethod =
+              io.grpc.MethodDescriptor.<viam.provisioning.v1.Provisioning.ExitProvisioningRequest, viam.provisioning.v1.Provisioning.ExitProvisioningResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExitProvisioning"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.provisioning.v1.Provisioning.ExitProvisioningRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.provisioning.v1.Provisioning.ExitProvisioningResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getExitProvisioningMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -228,6 +258,17 @@ public final class ProvisioningServiceGrpc {
         io.grpc.stub.StreamObserver<viam.provisioning.v1.Provisioning.GetNetworkListResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetNetworkListMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * ExitProvisioning is called when "done" with all other calls.
+     * It causes the device to exit provisioning mode to try any newly added wifi networks and resume normal operation.
+     * </pre>
+     */
+    default void exitProvisioning(viam.provisioning.v1.Provisioning.ExitProvisioningRequest request,
+        io.grpc.stub.StreamObserver<viam.provisioning.v1.Provisioning.ExitProvisioningResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExitProvisioningMethod(), responseObserver);
+    }
   }
 
   /**
@@ -306,6 +347,18 @@ public final class ProvisioningServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetNetworkListMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * ExitProvisioning is called when "done" with all other calls.
+     * It causes the device to exit provisioning mode to try any newly added wifi networks and resume normal operation.
+     * </pre>
+     */
+    public void exitProvisioning(viam.provisioning.v1.Provisioning.ExitProvisioningRequest request,
+        io.grpc.stub.StreamObserver<viam.provisioning.v1.Provisioning.ExitProvisioningResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getExitProvisioningMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -365,6 +418,17 @@ public final class ProvisioningServiceGrpc {
     public viam.provisioning.v1.Provisioning.GetNetworkListResponse getNetworkList(viam.provisioning.v1.Provisioning.GetNetworkListRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetNetworkListMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ExitProvisioning is called when "done" with all other calls.
+     * It causes the device to exit provisioning mode to try any newly added wifi networks and resume normal operation.
+     * </pre>
+     */
+    public viam.provisioning.v1.Provisioning.ExitProvisioningResponse exitProvisioning(viam.provisioning.v1.Provisioning.ExitProvisioningRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getExitProvisioningMethod(), getCallOptions(), request);
     }
   }
 
@@ -430,12 +494,25 @@ public final class ProvisioningServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetNetworkListMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ExitProvisioning is called when "done" with all other calls.
+     * It causes the device to exit provisioning mode to try any newly added wifi networks and resume normal operation.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.provisioning.v1.Provisioning.ExitProvisioningResponse> exitProvisioning(
+        viam.provisioning.v1.Provisioning.ExitProvisioningRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getExitProvisioningMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_SMART_MACHINE_STATUS = 0;
   private static final int METHODID_SET_NETWORK_CREDENTIALS = 1;
   private static final int METHODID_SET_SMART_MACHINE_CREDENTIALS = 2;
   private static final int METHODID_GET_NETWORK_LIST = 3;
+  private static final int METHODID_EXIT_PROVISIONING = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -469,6 +546,10 @@ public final class ProvisioningServiceGrpc {
         case METHODID_GET_NETWORK_LIST:
           serviceImpl.getNetworkList((viam.provisioning.v1.Provisioning.GetNetworkListRequest) request,
               (io.grpc.stub.StreamObserver<viam.provisioning.v1.Provisioning.GetNetworkListResponse>) responseObserver);
+          break;
+        case METHODID_EXIT_PROVISIONING:
+          serviceImpl.exitProvisioning((viam.provisioning.v1.Provisioning.ExitProvisioningRequest) request,
+              (io.grpc.stub.StreamObserver<viam.provisioning.v1.Provisioning.ExitProvisioningResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -516,6 +597,13 @@ public final class ProvisioningServiceGrpc {
               viam.provisioning.v1.Provisioning.GetNetworkListRequest,
               viam.provisioning.v1.Provisioning.GetNetworkListResponse>(
                 service, METHODID_GET_NETWORK_LIST)))
+        .addMethod(
+          getExitProvisioningMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.provisioning.v1.Provisioning.ExitProvisioningRequest,
+              viam.provisioning.v1.Provisioning.ExitProvisioningResponse>(
+                service, METHODID_EXIT_PROVISIONING)))
         .build();
   }
 
@@ -532,6 +620,7 @@ public final class ProvisioningServiceGrpc {
               .addMethod(getSetNetworkCredentialsMethod())
               .addMethod(getSetSmartMachineCredentialsMethod())
               .addMethod(getGetNetworkListMethod())
+              .addMethod(getExitProvisioningMethod())
               .build();
         }
       }
