@@ -128,20 +128,23 @@ implements <a href="Provisioning.GetSmartMachineStatusResponseOrBuilder.html" ti
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ERRORS_FIELD_NUMBER" class="member-name-link">ERRORS_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#AGENT_VERSION_FIELD_NUMBER" class="member-name-link">AGENT_VERSION_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#HAS_SMART_MACHINE_CREDENTIALS_FIELD_NUMBER" class="member-name-link">HAS_SMART_MACHINE_CREDENTIALS_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ERRORS_FIELD_NUMBER" class="member-name-link">ERRORS_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#IS_ONLINE_FIELD_NUMBER" class="member-name-link">IS_ONLINE_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#HAS_SMART_MACHINE_CREDENTIALS_FIELD_NUMBER" class="member-name-link">HAS_SMART_MACHINE_CREDENTIALS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#LATEST_CONNECTION_ATTEMPT_FIELD_NUMBER" class="member-name-link">LATEST_CONNECTION_ATTEMPT_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#IS_ONLINE_FIELD_NUMBER" class="member-name-link">IS_ONLINE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#PROVISIONING_INFO_FIELD_NUMBER" class="member-name-link">PROVISIONING_INFO_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#LATEST_CONNECTION_ATTEMPT_FIELD_NUMBER" class="member-name-link">LATEST_CONNECTION_ATTEMPT_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#PROVISIONING_INFO_FIELD_NUMBER" class="member-name-link">PROVISIONING_INFO_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -167,6 +170,16 @@ implements <a href="Provisioning.GetSmartMachineStatusResponseOrBuilder.html" ti
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg0,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg1)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAgentVersion()" class="member-name-link">getAgentVersion</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string agent_version = 6 [json_name = "agentVersion"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAgentVersionBytes()" class="member-name-link">getAgentVersionBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string agent_version = 6 [json_name = "agentVersion"];</code></div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Provisioning.GetSmartMachineStatusResponse.html" title="class in viam.provisioning.v1">Provisioning.GetSmartMachineStatusResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -367,6 +380,20 @@ implements <a href="Provisioning.GetSmartMachineStatusResponseOrBuilder.html" ti
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="AGENT_VERSION_FIELD_NUMBER">
+<h3>AGENT_VERSION_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">AGENT_VERSION_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.provisioning.v1.Provisioning.GetSmartMachineStatusResponse.AGENT_VERSION_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -506,6 +533,32 @@ implements <a href="Provisioning.GetSmartMachineStatusResponseOrBuilder.html" ti
 <dd><code>index</code> - The index of the value to return.</dd>
 <dt>Returns:</dt>
 <dd>The bytes of the errors at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAgentVersion()">
+<h3>getAgentVersion</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAgentVersion</span>()</div>
+<div class="block"><code>string agent_version = 6 [json_name = "agentVersion"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Provisioning.GetSmartMachineStatusResponseOrBuilder.html#getAgentVersion()">getAgentVersion</a></code>&nbsp;in interface&nbsp;<code><a href="Provisioning.GetSmartMachineStatusResponseOrBuilder.html" title="interface in viam.provisioning.v1">Provisioning.GetSmartMachineStatusResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The agentVersion.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAgentVersionBytes()">
+<h3>getAgentVersionBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getAgentVersionBytes</span>()</div>
+<div class="block"><code>string agent_version = 6 [json_name = "agentVersion"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Provisioning.GetSmartMachineStatusResponseOrBuilder.html#getAgentVersionBytes()">getAgentVersionBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Provisioning.GetSmartMachineStatusResponseOrBuilder.html" title="interface in viam.provisioning.v1">Provisioning.GetSmartMachineStatusResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for agentVersion.</dd>
 </dl>
 </section>
 </li>
