@@ -283,6 +283,34 @@ public final class DataPipelines {
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
+
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+     * @return Whether the dataSourceType field is set.
+     */
+    boolean hasDataSourceType();
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+     * @return The enum numeric value on the wire for dataSourceType.
+     */
+    int getDataSourceTypeValue();
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+     * @return The dataSourceType.
+     */
+    viam.app.data.v1.Data.TabularDataSourceType getDataSourceType();
   }
   /**
    * Protobuf type {@code viam.app.datapipelines.v1.DataPipeline}
@@ -828,6 +856,80 @@ public final class DataPipelines {
      */
     private void clearUpdatedAt() {  updatedAt_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int DATA_SOURCE_TYPE_FIELD_NUMBER = 9;
+    private int dataSourceType_;
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+     * @return Whether the dataSourceType field is set.
+     */
+    @java.lang.Override
+    public boolean hasDataSourceType() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+     * @return The enum numeric value on the wire for dataSourceType.
+     */
+    @java.lang.Override
+    public int getDataSourceTypeValue() {
+      return dataSourceType_;
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+     * @return The dataSourceType.
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.TabularDataSourceType getDataSourceType() {
+      viam.app.data.v1.Data.TabularDataSourceType result = viam.app.data.v1.Data.TabularDataSourceType.forNumber(dataSourceType_);
+      return result == null ? viam.app.data.v1.Data.TabularDataSourceType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+     * @param value The enum numeric value on the wire for dataSourceType to set.
+     */
+    private void setDataSourceTypeValue(int value) {
+      bitField0_ |= 0x00000004;  dataSourceType_ = value;
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+     * @param value The dataSourceType to set.
+     */
+    private void setDataSourceType(viam.app.data.v1.Data.TabularDataSourceType value) {
+      dataSourceType_ = value.getNumber();
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+     */
+    private void clearDataSourceType() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      dataSourceType_ = 0;
     }
 
     public static viam.app.datapipelines.v1.DataPipelines.DataPipeline parseFrom(
@@ -1474,6 +1576,84 @@ public final class DataPipelines {
         return this;
       }
 
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+       * @return Whether the dataSourceType field is set.
+       */
+      @java.lang.Override
+      public boolean hasDataSourceType() {
+        return instance.hasDataSourceType();
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+       * @return The enum numeric value on the wire for dataSourceType.
+       */
+      @java.lang.Override
+      public int getDataSourceTypeValue() {
+        return instance.getDataSourceTypeValue();
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+       * @param value The dataSourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSourceTypeValue(int value) {
+        copyOnWrite();
+        instance.setDataSourceTypeValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+       * @return The dataSourceType.
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.TabularDataSourceType getDataSourceType() {
+        return instance.getDataSourceType();
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+       * @param value The enum numeric value on the wire for dataSourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSourceType(viam.app.data.v1.Data.TabularDataSourceType value) {
+        copyOnWrite();
+        instance.setDataSourceType(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 9 [json_name = "dataSourceType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataSourceType() {
+        copyOnWrite();
+        instance.clearDataSourceType();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.DataPipeline)
     }
     @java.lang.Override
@@ -1499,10 +1679,12 @@ public final class DataPipelines {
               "enabled_",
               "createdOn_",
               "updatedAt_",
+              "dataSourceType_",
             };
             java.lang.String info =
-                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0001\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
-                "\u0004\u001c\u0005\u0208\u0006\u0007\u0007\u1009\u0000\b\u1009\u0001";
+                "\u0000\t\u0000\u0001\u0001\t\t\u0000\u0001\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
+                "\u0004\u001c\u0005\u0208\u0006\u0007\u0007\u1009\u0000\b\u1009\u0001\t\u100c\u0002" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3045,6 +3227,34 @@ public final class DataPipelines {
      * @return The enableBackfill.
      */
     boolean getEnableBackfill();
+
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+     * @return Whether the dataSourceType field is set.
+     */
+    boolean hasDataSourceType();
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+     * @return The enum numeric value on the wire for dataSourceType.
+     */
+    int getDataSourceTypeValue();
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+     * @return The dataSourceType.
+     */
+    viam.app.data.v1.Data.TabularDataSourceType getDataSourceType();
   }
   /**
    * Protobuf type {@code viam.app.datapipelines.v1.CreateDataPipelineRequest}
@@ -3422,6 +3632,80 @@ public final class DataPipelines {
     private void clearEnableBackfill() {
       bitField0_ = (bitField0_ & ~0x00000001);
       enableBackfill_ = false;
+    }
+
+    public static final int DATA_SOURCE_TYPE_FIELD_NUMBER = 6;
+    private int dataSourceType_;
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+     * @return Whether the dataSourceType field is set.
+     */
+    @java.lang.Override
+    public boolean hasDataSourceType() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+     * @return The enum numeric value on the wire for dataSourceType.
+     */
+    @java.lang.Override
+    public int getDataSourceTypeValue() {
+      return dataSourceType_;
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+     * @return The dataSourceType.
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.TabularDataSourceType getDataSourceType() {
+      viam.app.data.v1.Data.TabularDataSourceType result = viam.app.data.v1.Data.TabularDataSourceType.forNumber(dataSourceType_);
+      return result == null ? viam.app.data.v1.Data.TabularDataSourceType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+     * @param value The enum numeric value on the wire for dataSourceType to set.
+     */
+    private void setDataSourceTypeValue(int value) {
+      bitField0_ |= 0x00000002;  dataSourceType_ = value;
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+     * @param value The dataSourceType to set.
+     */
+    private void setDataSourceType(viam.app.data.v1.Data.TabularDataSourceType value) {
+      dataSourceType_ = value.getNumber();
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+     */
+    private void clearDataSourceType() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      dataSourceType_ = 0;
     }
 
     public static viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineRequest parseFrom(
@@ -3889,6 +4173,84 @@ public final class DataPipelines {
         return this;
       }
 
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+       * @return Whether the dataSourceType field is set.
+       */
+      @java.lang.Override
+      public boolean hasDataSourceType() {
+        return instance.hasDataSourceType();
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+       * @return The enum numeric value on the wire for dataSourceType.
+       */
+      @java.lang.Override
+      public int getDataSourceTypeValue() {
+        return instance.getDataSourceTypeValue();
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+       * @param value The dataSourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSourceTypeValue(int value) {
+        copyOnWrite();
+        instance.setDataSourceTypeValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+       * @return The dataSourceType.
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.TabularDataSourceType getDataSourceType() {
+        return instance.getDataSourceType();
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+       * @param value The enum numeric value on the wire for dataSourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSourceType(viam.app.data.v1.Data.TabularDataSourceType value) {
+        copyOnWrite();
+        instance.setDataSourceType(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataSourceType() {
+        copyOnWrite();
+        instance.clearDataSourceType();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.CreateDataPipelineRequest)
     }
     @java.lang.Override
@@ -3911,10 +4273,11 @@ public final class DataPipelines {
               "mqlBinary_",
               "schedule_",
               "enableBackfill_",
+              "dataSourceType_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u001c\u0004\u0208\u0005\u1007\u0000";
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u001c\u0004\u0208\u0005\u1007\u0000\u0006\u100c\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -4408,6 +4771,34 @@ public final class DataPipelines {
      */
     com.google.protobuf.ByteString
         getScheduleBytes();
+
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+     * @return Whether the dataSourceType field is set.
+     */
+    boolean hasDataSourceType();
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+     * @return The enum numeric value on the wire for dataSourceType.
+     */
+    int getDataSourceTypeValue();
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+     * @return The dataSourceType.
+     */
+    viam.app.data.v1.Data.TabularDataSourceType getDataSourceType();
   }
   /**
    * Protobuf type {@code viam.app.datapipelines.v1.UpdateDataPipelineRequest}
@@ -4423,6 +4814,7 @@ public final class DataPipelines {
       mqlBinary_ = emptyProtobufList();
       schedule_ = "";
     }
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.String id_;
     /**
@@ -4734,6 +5126,80 @@ public final class DataPipelines {
       checkByteStringIsUtf8(value);
       schedule_ = value.toStringUtf8();
 
+    }
+
+    public static final int DATA_SOURCE_TYPE_FIELD_NUMBER = 5;
+    private int dataSourceType_;
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+     * @return Whether the dataSourceType field is set.
+     */
+    @java.lang.Override
+    public boolean hasDataSourceType() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+     * @return The enum numeric value on the wire for dataSourceType.
+     */
+    @java.lang.Override
+    public int getDataSourceTypeValue() {
+      return dataSourceType_;
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+     * @return The dataSourceType.
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.TabularDataSourceType getDataSourceType() {
+      viam.app.data.v1.Data.TabularDataSourceType result = viam.app.data.v1.Data.TabularDataSourceType.forNumber(dataSourceType_);
+      return result == null ? viam.app.data.v1.Data.TabularDataSourceType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+     * @param value The enum numeric value on the wire for dataSourceType to set.
+     */
+    private void setDataSourceTypeValue(int value) {
+      bitField0_ |= 0x00000001;  dataSourceType_ = value;
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+     * @param value The dataSourceType to set.
+     */
+    private void setDataSourceType(viam.app.data.v1.Data.TabularDataSourceType value) {
+      dataSourceType_ = value.getNumber();
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * The type of data source for the pipeline. If not specified, default is standard data storage.
+     * </pre>
+     *
+     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+     */
+    private void clearDataSourceType() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      dataSourceType_ = 0;
     }
 
     public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseFrom(
@@ -5149,6 +5615,84 @@ public final class DataPipelines {
         return this;
       }
 
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+       * @return Whether the dataSourceType field is set.
+       */
+      @java.lang.Override
+      public boolean hasDataSourceType() {
+        return instance.hasDataSourceType();
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+       * @return The enum numeric value on the wire for dataSourceType.
+       */
+      @java.lang.Override
+      public int getDataSourceTypeValue() {
+        return instance.getDataSourceTypeValue();
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+       * @param value The dataSourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSourceTypeValue(int value) {
+        copyOnWrite();
+        instance.setDataSourceTypeValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+       * @return The dataSourceType.
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.TabularDataSourceType getDataSourceType() {
+        return instance.getDataSourceType();
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+       * @param value The enum numeric value on the wire for dataSourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSourceType(viam.app.data.v1.Data.TabularDataSourceType value) {
+        copyOnWrite();
+        instance.setDataSourceType(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of data source for the pipeline. If not specified, default is standard data storage.
+       * </pre>
+       *
+       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataSourceType() {
+        copyOnWrite();
+        instance.clearDataSourceType();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.UpdateDataPipelineRequest)
     }
     @java.lang.Override
@@ -5165,14 +5709,16 @@ public final class DataPipelines {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "id_",
               "name_",
               "mqlBinary_",
               "schedule_",
+              "dataSourceType_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u001c\u0004\u0208";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u001c\u0004\u0208\u0005\u100c\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
