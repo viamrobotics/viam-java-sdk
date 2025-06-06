@@ -101,6 +101,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../data/v1/Data.TabularDataSourceType.html" title="enum class in viam.app.data.v1">Data.TabularDataSourceType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDataSourceType()" class="member-name-link">getDataSourceType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The type of data source for the pipeline.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDataSourceTypeValue()" class="member-name-link">getDataSourceTypeValue</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The type of data source for the pipeline.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEnableBackfill()" class="member-name-link">getEnableBackfill</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -167,8 +179,14 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  defines the input time window; an hourly schedule would process 1 hour of data at a time).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasEnableBackfill()" class="member-name-link">hasEnableBackfill</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasDataSourceType()" class="member-name-link">hasDataSourceType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The type of data source for the pipeline.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasEnableBackfill()" class="member-name-link">hasEnableBackfill</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  When true, pipeline runs will be scheduled for the organization's past data.</div>
 </div>
@@ -358,6 +376,51 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The enableBackfill.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasDataSourceType()">
+<h3>hasDataSourceType</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasDataSourceType</span>()</div>
+<div class="block"><pre>
+ The type of data source for the pipeline. If not specified, default is standard data storage.
+ </pre>
+
+ <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the dataSourceType field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDataSourceTypeValue()">
+<h3>getDataSourceTypeValue</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getDataSourceTypeValue</span>()</div>
+<div class="block"><pre>
+ The type of data source for the pipeline. If not specified, default is standard data storage.
+ </pre>
+
+ <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire for dataSourceType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDataSourceType()">
+<h3>getDataSourceType</h3>
+<div class="member-signature"><span class="return-type"><a href="../../data/v1/Data.TabularDataSourceType.html" title="enum class in viam.app.data.v1">Data.TabularDataSourceType</a></span>&nbsp;<span class="element-name">getDataSourceType</span>()</div>
+<div class="block"><pre>
+ The type of data source for the pipeline. If not specified, default is standard data storage.
+ </pre>
+
+ <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 6 [json_name = "dataSourceType"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The dataSourceType.</dd>
 </dl>
 </section>
 </li>

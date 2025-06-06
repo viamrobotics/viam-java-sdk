@@ -128,17 +128,20 @@ implements <a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#DATA_SOURCE_TYPE_FIELD_NUMBER" class="member-name-link">DATA_SOURCE_TYPE_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#MQL_BINARY_FIELD_NUMBER" class="member-name-link">MQL_BINARY_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MQL_BINARY_FIELD_NUMBER" class="member-name-link">MQL_BINARY_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#SCHEDULE_FIELD_NUMBER" class="member-name-link">SCHEDULE_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#SCHEDULE_FIELD_NUMBER" class="member-name-link">SCHEDULE_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -164,6 +167,18 @@ implements <a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg0,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg1)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../data/v1/Data.TabularDataSourceType.html" title="enum class in viam.app.data.v1">Data.TabularDataSourceType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDataSourceType()" class="member-name-link">getDataSourceType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The type of data source for the pipeline.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDataSourceTypeValue()" class="member-name-link">getDataSourceTypeValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The type of data source for the pipeline.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -226,57 +241,63 @@ implements <a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title
  A cron expression representing the expected execution schedule in UTC (note this also
  defines the input time window; an hourly schedule would process 1 hour of data at a time).</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.Builder.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDataSourceType()" class="member-name-link">hasDataSourceType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The type of data source for the pipeline.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.Builder.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest)" class="member-name-link">newBuilder</a><wbr>(<a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a>&nbsp;prototype)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.Builder.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest)" class="member-name-link">newBuilder</a><wbr>(<a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a>&nbsp;prototype)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser&lt;<a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser&lt;<a href="DataPipelines.UpdateDataPipelineRequest.html" title="class in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequest</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -354,6 +375,20 @@ implements <a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title
 <dd>
 <ul class="see-list">
 <li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest.SCHEDULE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="DATA_SOURCE_TYPE_FIELD_NUMBER">
+<h3>DATA_SOURCE_TYPE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">DATA_SOURCE_TYPE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest.DATA_SOURCE_TYPE_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -524,6 +559,57 @@ implements <a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title
 <dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getScheduleBytes()">getScheduleBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for schedule.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasDataSourceType()">
+<h3>hasDataSourceType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasDataSourceType</span>()</div>
+<div class="block"><pre>
+ The type of data source for the pipeline. If not specified, default is standard data storage.
+ </pre>
+
+ <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#hasDataSourceType()">hasDataSourceType</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the dataSourceType field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDataSourceTypeValue()">
+<h3>getDataSourceTypeValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getDataSourceTypeValue</span>()</div>
+<div class="block"><pre>
+ The type of data source for the pipeline. If not specified, default is standard data storage.
+ </pre>
+
+ <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getDataSourceTypeValue()">getDataSourceTypeValue</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire for dataSourceType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDataSourceType()">
+<h3>getDataSourceType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../data/v1/Data.TabularDataSourceType.html" title="enum class in viam.app.data.v1">Data.TabularDataSourceType</a></span>&nbsp;<span class="element-name">getDataSourceType</span>()</div>
+<div class="block"><pre>
+ The type of data source for the pipeline. If not specified, default is standard data storage.
+ </pre>
+
+ <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html#getDataSourceType()">getDataSourceType</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.UpdateDataPipelineRequestOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.UpdateDataPipelineRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The dataSourceType.</dd>
 </dl>
 </section>
 </li>
