@@ -138,6 +138,36 @@ public final class GripperServiceGrpc {
     return getIsMovingMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest,
+      com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse> getIsHoldingSomethingMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "IsHoldingSomething",
+      requestType = com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest.class,
+      responseType = com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest,
+      com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse> getIsHoldingSomethingMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest, com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse> getIsHoldingSomethingMethod;
+    if ((getIsHoldingSomethingMethod = GripperServiceGrpc.getIsHoldingSomethingMethod) == null) {
+      synchronized (GripperServiceGrpc.class) {
+        if ((getIsHoldingSomethingMethod = GripperServiceGrpc.getIsHoldingSomethingMethod) == null) {
+          GripperServiceGrpc.getIsHoldingSomethingMethod = getIsHoldingSomethingMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest, com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "IsHoldingSomething"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getIsHoldingSomethingMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
       com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
 
@@ -321,6 +351,16 @@ public final class GripperServiceGrpc {
 
     /**
      * <pre>
+     * IsHoldingSomething returns whether the gripper is currently holding onto an object
+     * </pre>
+     */
+    default void isHoldingSomething(com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIsHoldingSomethingMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -429,6 +469,17 @@ public final class GripperServiceGrpc {
 
     /**
      * <pre>
+     * IsHoldingSomething returns whether the gripper is currently holding onto an object
+     * </pre>
+     */
+    public void isHoldingSomething(com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getIsHoldingSomethingMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -518,6 +569,16 @@ public final class GripperServiceGrpc {
     public com.viam.component.gripper.v1.Gripper.IsMovingResponse isMoving(com.viam.component.gripper.v1.Gripper.IsMovingRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getIsMovingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * IsHoldingSomething returns whether the gripper is currently holding onto an object
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse isHoldingSomething(com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getIsHoldingSomethingMethod(), getCallOptions(), request);
     }
 
     /**
@@ -616,6 +677,17 @@ public final class GripperServiceGrpc {
 
     /**
      * <pre>
+     * IsHoldingSomething returns whether the gripper is currently holding onto an object
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse> isHoldingSomething(
+        com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getIsHoldingSomethingMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -652,9 +724,10 @@ public final class GripperServiceGrpc {
   private static final int METHODID_GRAB = 1;
   private static final int METHODID_STOP = 2;
   private static final int METHODID_IS_MOVING = 3;
-  private static final int METHODID_DO_COMMAND = 4;
-  private static final int METHODID_GET_GEOMETRIES = 5;
-  private static final int METHODID_GET_KINEMATICS = 6;
+  private static final int METHODID_IS_HOLDING_SOMETHING = 4;
+  private static final int METHODID_DO_COMMAND = 5;
+  private static final int METHODID_GET_GEOMETRIES = 6;
+  private static final int METHODID_GET_KINEMATICS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -688,6 +761,10 @@ public final class GripperServiceGrpc {
         case METHODID_IS_MOVING:
           serviceImpl.isMoving((com.viam.component.gripper.v1.Gripper.IsMovingRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.IsMovingResponse>) responseObserver);
+          break;
+        case METHODID_IS_HOLDING_SOMETHING:
+          serviceImpl.isHoldingSomething((com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse>) responseObserver);
           break;
         case METHODID_DO_COMMAND:
           serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
@@ -748,6 +825,13 @@ public final class GripperServiceGrpc {
               com.viam.component.gripper.v1.Gripper.IsMovingResponse>(
                 service, METHODID_IS_MOVING)))
         .addMethod(
+          getIsHoldingSomethingMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest,
+              com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse>(
+                service, METHODID_IS_HOLDING_SOMETHING)))
+        .addMethod(
           getDoCommandMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -784,6 +868,7 @@ public final class GripperServiceGrpc {
               .addMethod(getGrabMethod())
               .addMethod(getStopMethod())
               .addMethod(getIsMovingMethod())
+              .addMethod(getIsHoldingSomethingMethod())
               .addMethod(getDoCommandMethod())
               .addMethod(getGetGeometriesMethod())
               .addMethod(getGetKinematicsMethod())
