@@ -2520,6 +2520,761 @@ public final class Gripper {
     }
   }
 
+  public interface IsHoldingSomethingRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.gripper.v1.IsHoldingSomethingRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * Protobuf type {@code viam.component.gripper.v1.IsHoldingSomethingRequest}
+   */
+  public  static final class IsHoldingSomethingRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          IsHoldingSomethingRequest, IsHoldingSomethingRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.gripper.v1.IsHoldingSomethingRequest)
+      IsHoldingSomethingRequestOrBuilder {
+    private IsHoldingSomethingRequest() {
+      name_ = "";
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.component.gripper.v1.IsHoldingSomethingRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.gripper.v1.IsHoldingSomethingRequest)
+        com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequestOrBuilder {
+      // Construct using com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.component.gripper.v1.IsHoldingSomethingRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.gripper.v1.IsHoldingSomethingRequest)
+    private static final com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest DEFAULT_INSTANCE;
+    static {
+      IsHoldingSomethingRequest defaultInstance = new IsHoldingSomethingRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        IsHoldingSomethingRequest.class, defaultInstance);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<IsHoldingSomethingRequest> PARSER;
+
+    public static com.google.protobuf.Parser<IsHoldingSomethingRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface IsHoldingSomethingResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.gripper.v1.IsHoldingSomethingResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>bool is_holding_something = 1 [json_name = "isHoldingSomething"];</code>
+     * @return The isHoldingSomething.
+     */
+    boolean getIsHoldingSomething();
+
+    /**
+     * <code>.google.protobuf.Struct meta = 99 [json_name = "meta"];</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <code>.google.protobuf.Struct meta = 99 [json_name = "meta"];</code>
+     * @return The meta.
+     */
+    com.google.protobuf.Struct getMeta();
+  }
+  /**
+   * Protobuf type {@code viam.component.gripper.v1.IsHoldingSomethingResponse}
+   */
+  public  static final class IsHoldingSomethingResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          IsHoldingSomethingResponse, IsHoldingSomethingResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.gripper.v1.IsHoldingSomethingResponse)
+      IsHoldingSomethingResponseOrBuilder {
+    private IsHoldingSomethingResponse() {
+    }
+    private int bitField0_;
+    public static final int IS_HOLDING_SOMETHING_FIELD_NUMBER = 1;
+    private boolean isHoldingSomething_;
+    /**
+     * <code>bool is_holding_something = 1 [json_name = "isHoldingSomething"];</code>
+     * @return The isHoldingSomething.
+     */
+    @java.lang.Override
+    public boolean getIsHoldingSomething() {
+      return isHoldingSomething_;
+    }
+    /**
+     * <code>bool is_holding_something = 1 [json_name = "isHoldingSomething"];</code>
+     * @param value The isHoldingSomething to set.
+     */
+    private void setIsHoldingSomething(boolean value) {
+      
+      isHoldingSomething_ = value;
+    }
+    /**
+     * <code>bool is_holding_something = 1 [json_name = "isHoldingSomething"];</code>
+     */
+    private void clearIsHoldingSomething() {
+
+      isHoldingSomething_ = false;
+    }
+
+    public static final int META_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct meta_;
+    /**
+     * <code>.google.protobuf.Struct meta = 99 [json_name = "meta"];</code>
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Struct meta = 99 [json_name = "meta"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getMeta() {
+      return meta_ == null ? com.google.protobuf.Struct.getDefaultInstance() : meta_;
+    }
+    /**
+     * <code>.google.protobuf.Struct meta = 99 [json_name = "meta"];</code>
+     */
+    private void setMeta(com.google.protobuf.Struct value) {
+      value.getClass();
+  meta_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Struct meta = 99 [json_name = "meta"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMeta(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (meta_ != null &&
+          meta_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        meta_ =
+          com.google.protobuf.Struct.newBuilder(meta_).mergeFrom(value).buildPartial();
+      } else {
+        meta_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Struct meta = 99 [json_name = "meta"];</code>
+     */
+    private void clearMeta() {  meta_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.component.gripper.v1.IsHoldingSomethingResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.gripper.v1.IsHoldingSomethingResponse)
+        com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponseOrBuilder {
+      // Construct using com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>bool is_holding_something = 1 [json_name = "isHoldingSomething"];</code>
+       * @return The isHoldingSomething.
+       */
+      @java.lang.Override
+      public boolean getIsHoldingSomething() {
+        return instance.getIsHoldingSomething();
+      }
+      /**
+       * <code>bool is_holding_something = 1 [json_name = "isHoldingSomething"];</code>
+       * @param value The isHoldingSomething to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsHoldingSomething(boolean value) {
+        copyOnWrite();
+        instance.setIsHoldingSomething(value);
+        return this;
+      }
+      /**
+       * <code>bool is_holding_something = 1 [json_name = "isHoldingSomething"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsHoldingSomething() {
+        copyOnWrite();
+        instance.clearIsHoldingSomething();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Struct meta = 99 [json_name = "meta"];</code>
+       */
+      @java.lang.Override
+      public boolean hasMeta() {
+        return instance.hasMeta();
+      }
+      /**
+       * <code>.google.protobuf.Struct meta = 99 [json_name = "meta"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getMeta() {
+        return instance.getMeta();
+      }
+      /**
+       * <code>.google.protobuf.Struct meta = 99 [json_name = "meta"];</code>
+       */
+      public Builder setMeta(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setMeta(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Struct meta = 99 [json_name = "meta"];</code>
+       */
+      public Builder setMeta(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMeta(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct meta = 99 [json_name = "meta"];</code>
+       */
+      public Builder mergeMeta(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeMeta(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct meta = 99 [json_name = "meta"];</code>
+       */
+      public Builder clearMeta() {  copyOnWrite();
+        instance.clearMeta();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.component.gripper.v1.IsHoldingSomethingResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "isHoldingSomething_",
+              "meta_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0007c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.gripper.v1.IsHoldingSomethingResponse)
+    private static final com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse DEFAULT_INSTANCE;
+    static {
+      IsHoldingSomethingResponse defaultInstance = new IsHoldingSomethingResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        IsHoldingSomethingResponse.class, defaultInstance);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<IsHoldingSomethingResponse> PARSER;
+
+    public static com.google.protobuf.Parser<IsHoldingSomethingResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
 
   static {
   }
