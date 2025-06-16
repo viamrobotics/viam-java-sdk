@@ -141,21 +141,27 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Grab requests a gripper of the underlying robot to grab.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gripper.IsMovingResponse.html" title="class in com.viam.component.gripper.v1">Gripper.IsMovingResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isMoving(com.viam.component.gripper.v1.Gripper.IsMovingRequest)" class="member-name-link">isMoving</a><wbr>(<a href="Gripper.IsMovingRequest.html" title="class in com.viam.component.gripper.v1">Gripper.IsMovingRequest</a>&nbsp;request)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gripper.IsHoldingSomethingResponse.html" title="class in com.viam.component.gripper.v1">Gripper.IsHoldingSomethingResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isHoldingSomething(com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest)" class="member-name-link">isHoldingSomething</a><wbr>(<a href="Gripper.IsHoldingSomethingRequest.html" title="class in com.viam.component.gripper.v1">Gripper.IsHoldingSomethingRequest</a>&nbsp;request)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ IsHoldingSomething returns whether the gripper is currently holding onto an object</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gripper.IsMovingResponse.html" title="class in com.viam.component.gripper.v1">Gripper.IsMovingResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isMoving(com.viam.component.gripper.v1.Gripper.IsMovingRequest)" class="member-name-link">isMoving</a><wbr>(<a href="Gripper.IsMovingRequest.html" title="class in com.viam.component.gripper.v1">Gripper.IsMovingRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  IsMoving reports if a component is in motion</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gripper.OpenResponse.html" title="class in com.viam.component.gripper.v1">Gripper.OpenResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#open(com.viam.component.gripper.v1.Gripper.OpenRequest)" class="member-name-link">open</a><wbr>(<a href="Gripper.OpenRequest.html" title="class in com.viam.component.gripper.v1">Gripper.OpenRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gripper.OpenResponse.html" title="class in com.viam.component.gripper.v1">Gripper.OpenResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#open(com.viam.component.gripper.v1.Gripper.OpenRequest)" class="member-name-link">open</a><wbr>(<a href="Gripper.OpenRequest.html" title="class in com.viam.component.gripper.v1">Gripper.OpenRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Open opens a gripper of the underlying robot.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gripper.StopResponse.html" title="class in com.viam.component.gripper.v1">Gripper.StopResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.gripper.v1.Gripper.StopRequest)" class="member-name-link">stop</a><wbr>(<a href="Gripper.StopRequest.html" title="class in com.viam.component.gripper.v1">Gripper.StopRequest</a>&nbsp;request)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Gripper.StopResponse.html" title="class in com.viam.component.gripper.v1">Gripper.StopResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.gripper.v1.Gripper.StopRequest)" class="member-name-link">stop</a><wbr>(<a href="Gripper.StopRequest.html" title="class in com.viam.component.gripper.v1">Gripper.StopRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Stop stops a robot's gripper</div>
 </div>
@@ -226,6 +232,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Gripper.IsMovingResponse.html" title="class in com.viam.component.gripper.v1">Gripper.IsMovingResponse</a></span>&nbsp;<span class="element-name">isMoving</span><wbr><span class="parameters">(<a href="Gripper.IsMovingRequest.html" title="class in com.viam.component.gripper.v1">Gripper.IsMovingRequest</a>&nbsp;request)</span></div>
 <div class="block"><pre>
  IsMoving reports if a component is in motion
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="isHoldingSomething(com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest)">
+<h3>isHoldingSomething</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Gripper.IsHoldingSomethingResponse.html" title="class in com.viam.component.gripper.v1">Gripper.IsHoldingSomethingResponse</a></span>&nbsp;<span class="element-name">isHoldingSomething</span><wbr><span class="parameters">(<a href="Gripper.IsHoldingSomethingRequest.html" title="class in com.viam.component.gripper.v1">Gripper.IsHoldingSomethingRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ IsHoldingSomething returns whether the gripper is currently holding onto an object
  </pre></div>
 </section>
 </li>
