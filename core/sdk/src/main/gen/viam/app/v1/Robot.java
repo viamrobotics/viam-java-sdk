@@ -26064,6 +26064,16 @@ java.lang.String defaultValue);
      * @return The firstRunTimeout.
      */
     com.google.protobuf.Duration getFirstRunTimeout();
+
+    /**
+     * <pre>
+     * whether we are starting a module in TCP mode
+     * </pre>
+     *
+     * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+     * @return The tcpMode.
+     */
+    boolean getTcpMode();
   }
   /**
    * <pre>
@@ -26645,6 +26655,44 @@ java.lang.String defaultValue) {
      */
     private void clearFirstRunTimeout() {  firstRunTimeout_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int TCP_MODE_FIELD_NUMBER = 9;
+    private boolean tcpMode_;
+    /**
+     * <pre>
+     * whether we are starting a module in TCP mode
+     * </pre>
+     *
+     * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+     * @return The tcpMode.
+     */
+    @java.lang.Override
+    public boolean getTcpMode() {
+      return tcpMode_;
+    }
+    /**
+     * <pre>
+     * whether we are starting a module in TCP mode
+     * </pre>
+     *
+     * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+     * @param value The tcpMode to set.
+     */
+    private void setTcpMode(boolean value) {
+      
+      tcpMode_ = value;
+    }
+    /**
+     * <pre>
+     * whether we are starting a module in TCP mode
+     * </pre>
+     *
+     * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+     */
+    private void clearTcpMode() {
+
+      tcpMode_ = false;
     }
 
     public static viam.app.v1.Robot.ModuleConfig parseFrom(
@@ -27343,6 +27391,46 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * whether we are starting a module in TCP mode
+       * </pre>
+       *
+       * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+       * @return The tcpMode.
+       */
+      @java.lang.Override
+      public boolean getTcpMode() {
+        return instance.getTcpMode();
+      }
+      /**
+       * <pre>
+       * whether we are starting a module in TCP mode
+       * </pre>
+       *
+       * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+       * @param value The tcpMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTcpMode(boolean value) {
+        copyOnWrite();
+        instance.setTcpMode(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * whether we are starting a module in TCP mode
+       * </pre>
+       *
+       * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTcpMode() {
+        copyOnWrite();
+        instance.clearTcpMode();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ModuleConfig)
     }
     @java.lang.Override
@@ -27369,10 +27457,11 @@ java.lang.String defaultValue) {
               EnvDefaultEntryHolder.defaultEntry,
               "status_",
               "firstRunTimeout_",
+              "tcpMode_",
             };
             java.lang.String info =
-                "\u0000\b\u0000\u0001\u0001\b\b\u0001\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
-                "\u0004\u0208\u0005\u0208\u00062\u0007\u1009\u0000\b\u1009\u0001";
+                "\u0000\t\u0000\u0001\u0001\t\t\u0001\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
+                "\u0004\u0208\u0005\u0208\u00062\u0007\u1009\u0000\b\u1009\u0001\t\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
