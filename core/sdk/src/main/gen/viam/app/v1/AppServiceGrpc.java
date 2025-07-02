@@ -2028,6 +2028,66 @@ public final class AppServiceGrpc {
     return getListRobotsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListRobotsForLocationsRequest,
+      viam.app.v1.AppOuterClass.ListRobotsForLocationsResponse> getListRobotsForLocationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListRobotsForLocations",
+      requestType = viam.app.v1.AppOuterClass.ListRobotsForLocationsRequest.class,
+      responseType = viam.app.v1.AppOuterClass.ListRobotsForLocationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListRobotsForLocationsRequest,
+      viam.app.v1.AppOuterClass.ListRobotsForLocationsResponse> getListRobotsForLocationsMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListRobotsForLocationsRequest, viam.app.v1.AppOuterClass.ListRobotsForLocationsResponse> getListRobotsForLocationsMethod;
+    if ((getListRobotsForLocationsMethod = AppServiceGrpc.getListRobotsForLocationsMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getListRobotsForLocationsMethod = AppServiceGrpc.getListRobotsForLocationsMethod) == null) {
+          AppServiceGrpc.getListRobotsForLocationsMethod = getListRobotsForLocationsMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.ListRobotsForLocationsRequest, viam.app.v1.AppOuterClass.ListRobotsForLocationsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRobotsForLocations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.ListRobotsForLocationsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.ListRobotsForLocationsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getListRobotsForLocationsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListRobotsForOrgRequest,
+      viam.app.v1.AppOuterClass.ListRobotsForOrgResponse> getListRobotsForOrgMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListRobotsForOrg",
+      requestType = viam.app.v1.AppOuterClass.ListRobotsForOrgRequest.class,
+      responseType = viam.app.v1.AppOuterClass.ListRobotsForOrgResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListRobotsForOrgRequest,
+      viam.app.v1.AppOuterClass.ListRobotsForOrgResponse> getListRobotsForOrgMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListRobotsForOrgRequest, viam.app.v1.AppOuterClass.ListRobotsForOrgResponse> getListRobotsForOrgMethod;
+    if ((getListRobotsForOrgMethod = AppServiceGrpc.getListRobotsForOrgMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getListRobotsForOrgMethod = AppServiceGrpc.getListRobotsForOrgMethod) == null) {
+          AppServiceGrpc.getListRobotsForOrgMethod = getListRobotsForOrgMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.ListRobotsForOrgRequest, viam.app.v1.AppOuterClass.ListRobotsForOrgResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRobotsForOrg"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.ListRobotsForOrgRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.ListRobotsForOrgResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getListRobotsForOrgMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.NewRobotRequest,
       viam.app.v1.AppOuterClass.NewRobotResponse> getNewRobotMethod;
 
@@ -3198,6 +3258,36 @@ public final class AppServiceGrpc {
     return getGetAppContentMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.GetAppBrandingRequest,
+      viam.app.v1.AppOuterClass.GetAppBrandingResponse> getGetAppBrandingMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAppBranding",
+      requestType = viam.app.v1.AppOuterClass.GetAppBrandingRequest.class,
+      responseType = viam.app.v1.AppOuterClass.GetAppBrandingResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.GetAppBrandingRequest,
+      viam.app.v1.AppOuterClass.GetAppBrandingResponse> getGetAppBrandingMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.GetAppBrandingRequest, viam.app.v1.AppOuterClass.GetAppBrandingResponse> getGetAppBrandingMethod;
+    if ((getGetAppBrandingMethod = AppServiceGrpc.getGetAppBrandingMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getGetAppBrandingMethod = AppServiceGrpc.getGetAppBrandingMethod) == null) {
+          AppServiceGrpc.getGetAppBrandingMethod = getGetAppBrandingMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.GetAppBrandingRequest, viam.app.v1.AppOuterClass.GetAppBrandingResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAppBranding"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.GetAppBrandingRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.GetAppBrandingResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetAppBrandingMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -3863,12 +3953,32 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
-     * Get a list of robots
+     * Get a list of robots at a location
      * </pre>
      */
     default void listRobots(viam.app.v1.AppOuterClass.ListRobotsRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListRobotsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRobotsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get a list of robots at multiple locations
+     * </pre>
+     */
+    default void listRobotsForLocations(viam.app.v1.AppOuterClass.ListRobotsForLocationsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListRobotsForLocationsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRobotsForLocationsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get a list of robots at an org
+     * </pre>
+     */
+    default void listRobotsForOrg(viam.app.v1.AppOuterClass.ListRobotsForOrgRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListRobotsForOrgResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRobotsForOrgMethod(), responseObserver);
     }
 
     /**
@@ -4202,6 +4312,13 @@ public final class AppServiceGrpc {
     default void getAppContent(viam.app.v1.AppOuterClass.GetAppContentRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetAppContentResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAppContentMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getAppBranding(viam.app.v1.AppOuterClass.GetAppBrandingRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetAppBrandingResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAppBrandingMethod(), responseObserver);
     }
   }
 
@@ -4918,13 +5035,35 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
-     * Get a list of robots
+     * Get a list of robots at a location
      * </pre>
      */
     public void listRobots(viam.app.v1.AppOuterClass.ListRobotsRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListRobotsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListRobotsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get a list of robots at multiple locations
+     * </pre>
+     */
+    public void listRobotsForLocations(viam.app.v1.AppOuterClass.ListRobotsForLocationsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListRobotsForLocationsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListRobotsForLocationsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get a list of robots at an org
+     * </pre>
+     */
+    public void listRobotsForOrg(viam.app.v1.AppOuterClass.ListRobotsForOrgRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListRobotsForOrgResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListRobotsForOrgMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -5297,6 +5436,14 @@ public final class AppServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetAppContentResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAppContentMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getAppBranding(viam.app.v1.AppOuterClass.GetAppBrandingRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetAppBrandingResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAppBrandingMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -5934,12 +6081,32 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
-     * Get a list of robots
+     * Get a list of robots at a location
      * </pre>
      */
     public viam.app.v1.AppOuterClass.ListRobotsResponse listRobots(viam.app.v1.AppOuterClass.ListRobotsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListRobotsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a list of robots at multiple locations
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListRobotsForLocationsResponse listRobotsForLocations(viam.app.v1.AppOuterClass.ListRobotsForLocationsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListRobotsForLocationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a list of robots at an org
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListRobotsForOrgResponse listRobotsForOrg(viam.app.v1.AppOuterClass.ListRobotsForOrgRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListRobotsForOrgMethod(), getCallOptions(), request);
     }
 
     /**
@@ -6266,6 +6433,13 @@ public final class AppServiceGrpc {
     public viam.app.v1.AppOuterClass.GetAppContentResponse getAppContent(viam.app.v1.AppOuterClass.GetAppContentRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAppContentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.GetAppBrandingResponse getAppBranding(viam.app.v1.AppOuterClass.GetAppBrandingRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAppBrandingMethod(), getCallOptions(), request);
     }
   }
 
@@ -6960,13 +7134,35 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
-     * Get a list of robots
+     * Get a list of robots at a location
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.ListRobotsResponse> listRobots(
         viam.app.v1.AppOuterClass.ListRobotsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListRobotsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Get a list of robots at multiple locations
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.ListRobotsForLocationsResponse> listRobotsForLocations(
+        viam.app.v1.AppOuterClass.ListRobotsForLocationsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListRobotsForLocationsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Get a list of robots at an org
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.ListRobotsForOrgResponse> listRobotsForOrg(
+        viam.app.v1.AppOuterClass.ListRobotsForOrgRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListRobotsForOrgMethod(), getCallOptions()), request);
     }
 
     /**
@@ -7332,6 +7528,14 @@ public final class AppServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAppContentMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.GetAppBrandingResponse> getAppBranding(
+        viam.app.v1.AppOuterClass.GetAppBrandingRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAppBrandingMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_USER_IDBY_EMAIL = 0;
@@ -7401,45 +7605,48 @@ public final class AppServiceGrpc {
   private static final int METHODID_CREATE_ROBOT_PART_SECRET = 64;
   private static final int METHODID_DELETE_ROBOT_PART_SECRET = 65;
   private static final int METHODID_LIST_ROBOTS = 66;
-  private static final int METHODID_NEW_ROBOT = 67;
-  private static final int METHODID_UPDATE_ROBOT = 68;
-  private static final int METHODID_DELETE_ROBOT = 69;
-  private static final int METHODID_LIST_FRAGMENTS = 70;
-  private static final int METHODID_GET_FRAGMENT = 71;
-  private static final int METHODID_CREATE_FRAGMENT = 72;
-  private static final int METHODID_UPDATE_FRAGMENT = 73;
-  private static final int METHODID_DELETE_FRAGMENT = 74;
-  private static final int METHODID_LIST_NESTED_FRAGMENTS = 75;
-  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 76;
-  private static final int METHODID_LIST_MACHINE_SUMMARIES = 77;
-  private static final int METHODID_GET_FRAGMENT_HISTORY = 78;
-  private static final int METHODID_GET_FRAGMENT_USAGE = 79;
-  private static final int METHODID_SET_FRAGMENT_TAG = 80;
-  private static final int METHODID_DELETE_FRAGMENT_TAG = 81;
-  private static final int METHODID_ADD_ROLE = 82;
-  private static final int METHODID_REMOVE_ROLE = 83;
-  private static final int METHODID_CHANGE_ROLE = 84;
-  private static final int METHODID_LIST_AUTHORIZATIONS = 85;
-  private static final int METHODID_CHECK_PERMISSIONS = 86;
-  private static final int METHODID_GET_REGISTRY_ITEM = 87;
-  private static final int METHODID_CREATE_REGISTRY_ITEM = 88;
-  private static final int METHODID_UPDATE_REGISTRY_ITEM = 89;
-  private static final int METHODID_LIST_REGISTRY_ITEMS = 90;
-  private static final int METHODID_DELETE_REGISTRY_ITEM = 91;
-  private static final int METHODID_RENAME_REGISTRY_ITEM = 92;
-  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 93;
-  private static final int METHODID_CREATE_MODULE = 94;
-  private static final int METHODID_UPDATE_MODULE = 95;
-  private static final int METHODID_GET_MODULE = 96;
-  private static final int METHODID_LIST_MODULES = 97;
-  private static final int METHODID_CREATE_KEY = 98;
-  private static final int METHODID_DELETE_KEY = 99;
-  private static final int METHODID_LIST_KEYS = 100;
-  private static final int METHODID_RENAME_KEY = 101;
-  private static final int METHODID_ROTATE_KEY = 102;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 103;
-  private static final int METHODID_GET_APP_CONTENT = 104;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 105;
+  private static final int METHODID_LIST_ROBOTS_FOR_LOCATIONS = 67;
+  private static final int METHODID_LIST_ROBOTS_FOR_ORG = 68;
+  private static final int METHODID_NEW_ROBOT = 69;
+  private static final int METHODID_UPDATE_ROBOT = 70;
+  private static final int METHODID_DELETE_ROBOT = 71;
+  private static final int METHODID_LIST_FRAGMENTS = 72;
+  private static final int METHODID_GET_FRAGMENT = 73;
+  private static final int METHODID_CREATE_FRAGMENT = 74;
+  private static final int METHODID_UPDATE_FRAGMENT = 75;
+  private static final int METHODID_DELETE_FRAGMENT = 76;
+  private static final int METHODID_LIST_NESTED_FRAGMENTS = 77;
+  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 78;
+  private static final int METHODID_LIST_MACHINE_SUMMARIES = 79;
+  private static final int METHODID_GET_FRAGMENT_HISTORY = 80;
+  private static final int METHODID_GET_FRAGMENT_USAGE = 81;
+  private static final int METHODID_SET_FRAGMENT_TAG = 82;
+  private static final int METHODID_DELETE_FRAGMENT_TAG = 83;
+  private static final int METHODID_ADD_ROLE = 84;
+  private static final int METHODID_REMOVE_ROLE = 85;
+  private static final int METHODID_CHANGE_ROLE = 86;
+  private static final int METHODID_LIST_AUTHORIZATIONS = 87;
+  private static final int METHODID_CHECK_PERMISSIONS = 88;
+  private static final int METHODID_GET_REGISTRY_ITEM = 89;
+  private static final int METHODID_CREATE_REGISTRY_ITEM = 90;
+  private static final int METHODID_UPDATE_REGISTRY_ITEM = 91;
+  private static final int METHODID_LIST_REGISTRY_ITEMS = 92;
+  private static final int METHODID_DELETE_REGISTRY_ITEM = 93;
+  private static final int METHODID_RENAME_REGISTRY_ITEM = 94;
+  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 95;
+  private static final int METHODID_CREATE_MODULE = 96;
+  private static final int METHODID_UPDATE_MODULE = 97;
+  private static final int METHODID_GET_MODULE = 98;
+  private static final int METHODID_LIST_MODULES = 99;
+  private static final int METHODID_CREATE_KEY = 100;
+  private static final int METHODID_DELETE_KEY = 101;
+  private static final int METHODID_LIST_KEYS = 102;
+  private static final int METHODID_RENAME_KEY = 103;
+  private static final int METHODID_ROTATE_KEY = 104;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 105;
+  private static final int METHODID_GET_APP_CONTENT = 106;
+  private static final int METHODID_GET_APP_BRANDING = 107;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 108;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -7726,6 +7933,14 @@ public final class AppServiceGrpc {
           serviceImpl.listRobots((viam.app.v1.AppOuterClass.ListRobotsRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListRobotsResponse>) responseObserver);
           break;
+        case METHODID_LIST_ROBOTS_FOR_LOCATIONS:
+          serviceImpl.listRobotsForLocations((viam.app.v1.AppOuterClass.ListRobotsForLocationsRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListRobotsForLocationsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_ROBOTS_FOR_ORG:
+          serviceImpl.listRobotsForOrg((viam.app.v1.AppOuterClass.ListRobotsForOrgRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListRobotsForOrgResponse>) responseObserver);
+          break;
         case METHODID_NEW_ROBOT:
           serviceImpl.newRobot((viam.app.v1.AppOuterClass.NewRobotRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.NewRobotResponse>) responseObserver);
@@ -7877,6 +8092,10 @@ public final class AppServiceGrpc {
         case METHODID_GET_APP_CONTENT:
           serviceImpl.getAppContent((viam.app.v1.AppOuterClass.GetAppContentRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetAppContentResponse>) responseObserver);
+          break;
+        case METHODID_GET_APP_BRANDING:
+          serviceImpl.getAppBranding((viam.app.v1.AppOuterClass.GetAppBrandingRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetAppBrandingResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -8369,6 +8588,20 @@ public final class AppServiceGrpc {
               viam.app.v1.AppOuterClass.ListRobotsResponse>(
                 service, METHODID_LIST_ROBOTS)))
         .addMethod(
+          getListRobotsForLocationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.ListRobotsForLocationsRequest,
+              viam.app.v1.AppOuterClass.ListRobotsForLocationsResponse>(
+                service, METHODID_LIST_ROBOTS_FOR_LOCATIONS)))
+        .addMethod(
+          getListRobotsForOrgMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.ListRobotsForOrgRequest,
+              viam.app.v1.AppOuterClass.ListRobotsForOrgResponse>(
+                service, METHODID_LIST_ROBOTS_FOR_ORG)))
+        .addMethod(
           getNewRobotMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -8641,6 +8874,13 @@ public final class AppServiceGrpc {
               viam.app.v1.AppOuterClass.GetAppContentRequest,
               viam.app.v1.AppOuterClass.GetAppContentResponse>(
                 service, METHODID_GET_APP_CONTENT)))
+        .addMethod(
+          getGetAppBrandingMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.GetAppBrandingRequest,
+              viam.app.v1.AppOuterClass.GetAppBrandingResponse>(
+                service, METHODID_GET_APP_BRANDING)))
         .build();
   }
 
@@ -8720,6 +8960,8 @@ public final class AppServiceGrpc {
               .addMethod(getCreateRobotPartSecretMethod())
               .addMethod(getDeleteRobotPartSecretMethod())
               .addMethod(getListRobotsMethod())
+              .addMethod(getListRobotsForLocationsMethod())
+              .addMethod(getListRobotsForOrgMethod())
               .addMethod(getNewRobotMethod())
               .addMethod(getUpdateRobotMethod())
               .addMethod(getDeleteRobotMethod())
@@ -8759,6 +9001,7 @@ public final class AppServiceGrpc {
               .addMethod(getRotateKeyMethod())
               .addMethod(getCreateKeyFromExistingKeyAuthorizationsMethod())
               .addMethod(getGetAppContentMethod())
+              .addMethod(getGetAppBrandingMethod())
               .build();
         }
       }

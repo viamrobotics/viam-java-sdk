@@ -356,6 +356,20 @@ public final class Robot {
      * @return The disableLogDeduplication.
      */
     boolean getDisableLogDeduplication();
+
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    java.util.List<viam.app.v1.Robot.JobConfig> 
+        getJobsList();
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    viam.app.v1.Robot.JobConfig getJobs(int index);
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    int getJobsCount();
   }
   /**
    * Protobuf type {@code viam.app.v1.RobotConfig}
@@ -375,6 +389,7 @@ public final class Robot {
       overwriteFragmentStatus_ = emptyProtobufList();
       log_ = emptyProtobufList();
       revision_ = "";
+      jobs_ = emptyProtobufList();
     }
     private int bitField0_;
     public static final int CLOUD_FIELD_NUMBER = 1;
@@ -1541,6 +1556,100 @@ public final class Robot {
     private void clearDisableLogDeduplication() {
 
       disableLogDeduplication_ = false;
+    }
+
+    public static final int JOBS_FIELD_NUMBER = 18;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.JobConfig> jobs_;
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.Robot.JobConfig> getJobsList() {
+      return jobs_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.Robot.JobConfigOrBuilder> 
+        getJobsOrBuilderList() {
+      return jobs_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    @java.lang.Override
+    public int getJobsCount() {
+      return jobs_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.JobConfig getJobs(int index) {
+      return jobs_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    public viam.app.v1.Robot.JobConfigOrBuilder getJobsOrBuilder(
+        int index) {
+      return jobs_.get(index);
+    }
+    private void ensureJobsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.JobConfig> tmp = jobs_;
+      if (!tmp.isModifiable()) {
+        jobs_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    private void setJobs(
+        int index, viam.app.v1.Robot.JobConfig value) {
+      value.getClass();
+  ensureJobsIsMutable();
+      jobs_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    private void addJobs(viam.app.v1.Robot.JobConfig value) {
+      value.getClass();
+  ensureJobsIsMutable();
+      jobs_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    private void addJobs(
+        int index, viam.app.v1.Robot.JobConfig value) {
+      value.getClass();
+  ensureJobsIsMutable();
+      jobs_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    private void addAllJobs(
+        java.lang.Iterable<? extends viam.app.v1.Robot.JobConfig> values) {
+      ensureJobsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, jobs_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    private void clearJobs() {
+      jobs_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+     */
+    private void removeJobs(int index) {
+      ensureJobsIsMutable();
+      jobs_.remove(index);
     }
 
     public static viam.app.v1.Robot.RobotConfig parseFrom(
@@ -2884,6 +2993,108 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.Robot.JobConfig> getJobsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getJobsList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+       */
+      @java.lang.Override
+      public int getJobsCount() {
+        return instance.getJobsCount();
+      }/**
+       * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.JobConfig getJobs(int index) {
+        return instance.getJobs(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+       */
+      public Builder setJobs(
+          int index, viam.app.v1.Robot.JobConfig value) {
+        copyOnWrite();
+        instance.setJobs(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+       */
+      public Builder setJobs(
+          int index, viam.app.v1.Robot.JobConfig.Builder builderForValue) {
+        copyOnWrite();
+        instance.setJobs(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+       */
+      public Builder addJobs(viam.app.v1.Robot.JobConfig value) {
+        copyOnWrite();
+        instance.addJobs(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+       */
+      public Builder addJobs(
+          int index, viam.app.v1.Robot.JobConfig value) {
+        copyOnWrite();
+        instance.addJobs(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+       */
+      public Builder addJobs(
+          viam.app.v1.Robot.JobConfig.Builder builderForValue) {
+        copyOnWrite();
+        instance.addJobs(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+       */
+      public Builder addJobs(
+          int index, viam.app.v1.Robot.JobConfig.Builder builderForValue) {
+        copyOnWrite();
+        instance.addJobs(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+       */
+      public Builder addAllJobs(
+          java.lang.Iterable<? extends viam.app.v1.Robot.JobConfig> values) {
+        copyOnWrite();
+        instance.addAllJobs(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+       */
+      public Builder clearJobs() {
+        copyOnWrite();
+        instance.clearJobs();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
+       */
+      public Builder removeJobs(int index) {
+        copyOnWrite();
+        instance.removeJobs(index);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RobotConfig)
     }
     @java.lang.Override
@@ -2926,12 +3137,14 @@ public final class Robot {
               "revision_",
               "maintenance_",
               "disableLogDeduplication_",
+              "jobs_",
+              viam.app.v1.Robot.JobConfig.class,
             };
             java.lang.String info =
-                "\u0000\u0011\u0000\u0001\u0001\u0011\u0011\u0000\b\u0000\u0001\u1009\u0000\u0002" +
+                "\u0000\u0012\u0000\u0001\u0001\u0012\u0012\u0000\t\u0000\u0001\u1009\u0000\u0002" +
                 "\u001b\u0003\u001b\u0004\u001b\u0005\u001b\u0006\u1009\u0001\u0007\u1009\u0002\b" +
                 "\u1007\u0003\t\u001b\n\u1007\u0004\u000b\u001b\f\u001b\r\u0007\u000e\u001b\u000f" +
-                "\u0208\u0010\u1009\u0005\u0011\u0007";
+                "\u0208\u0010\u1009\u0005\u0011\u0007\u0012\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3397,6 +3610,1007 @@ public final class Robot {
     private static volatile com.google.protobuf.Parser<LogPatternConfig> PARSER;
 
     public static com.google.protobuf.Parser<LogPatternConfig> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface JobConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.JobConfig)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * unique name of the job.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * unique name of the job.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * a unix-cron string or a Golang-parsable duration string,
+     * specifies the interval at which the job is run.
+     * </pre>
+     *
+     * <code>string schedule = 2 [json_name = "schedule"];</code>
+     * @return The schedule.
+     */
+    java.lang.String getSchedule();
+    /**
+     * <pre>
+     * a unix-cron string or a Golang-parsable duration string,
+     * specifies the interval at which the job is run.
+     * </pre>
+     *
+     * <code>string schedule = 2 [json_name = "schedule"];</code>
+     * @return The bytes for schedule.
+     */
+    com.google.protobuf.ByteString
+        getScheduleBytes();
+
+    /**
+     * <pre>
+     * the resource associated with this job.
+     * </pre>
+     *
+     * <code>string resource = 3 [json_name = "resource"];</code>
+     * @return The resource.
+     */
+    java.lang.String getResource();
+    /**
+     * <pre>
+     * the resource associated with this job.
+     * </pre>
+     *
+     * <code>string resource = 3 [json_name = "resource"];</code>
+     * @return The bytes for resource.
+     */
+    com.google.protobuf.ByteString
+        getResourceBytes();
+
+    /**
+     * <pre>
+     * the gRPC request of this job's resource.
+     * </pre>
+     *
+     * <code>string method = 4 [json_name = "method"];</code>
+     * @return The method.
+     */
+    java.lang.String getMethod();
+    /**
+     * <pre>
+     * the gRPC request of this job's resource.
+     * </pre>
+     *
+     * <code>string method = 4 [json_name = "method"];</code>
+     * @return The bytes for method.
+     */
+    com.google.protobuf.ByteString
+        getMethodBytes();
+
+    /**
+     * <pre>
+     * in case method is "DoCommand", specifies the
+     * command argument of the gRPC request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct command = 5 [json_name = "command"];</code>
+     * @return Whether the command field is set.
+     */
+    boolean hasCommand();
+    /**
+     * <pre>
+     * in case method is "DoCommand", specifies the
+     * command argument of the gRPC request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct command = 5 [json_name = "command"];</code>
+     * @return The command.
+     */
+    com.google.protobuf.Struct getCommand();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.JobConfig}
+   */
+  public  static final class JobConfig extends
+      com.google.protobuf.GeneratedMessageLite<
+          JobConfig, JobConfig.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.JobConfig)
+      JobConfigOrBuilder {
+    private JobConfig() {
+      name_ = "";
+      schedule_ = "";
+      resource_ = "";
+      method_ = "";
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <pre>
+     * unique name of the job.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <pre>
+     * unique name of the job.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * unique name of the job.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * unique name of the job.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * unique name of the job.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int SCHEDULE_FIELD_NUMBER = 2;
+    private java.lang.String schedule_;
+    /**
+     * <pre>
+     * a unix-cron string or a Golang-parsable duration string,
+     * specifies the interval at which the job is run.
+     * </pre>
+     *
+     * <code>string schedule = 2 [json_name = "schedule"];</code>
+     * @return The schedule.
+     */
+    @java.lang.Override
+    public java.lang.String getSchedule() {
+      return schedule_;
+    }
+    /**
+     * <pre>
+     * a unix-cron string or a Golang-parsable duration string,
+     * specifies the interval at which the job is run.
+     * </pre>
+     *
+     * <code>string schedule = 2 [json_name = "schedule"];</code>
+     * @return The bytes for schedule.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScheduleBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(schedule_);
+    }
+    /**
+     * <pre>
+     * a unix-cron string or a Golang-parsable duration string,
+     * specifies the interval at which the job is run.
+     * </pre>
+     *
+     * <code>string schedule = 2 [json_name = "schedule"];</code>
+     * @param value The schedule to set.
+     */
+    private void setSchedule(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      schedule_ = value;
+    }
+    /**
+     * <pre>
+     * a unix-cron string or a Golang-parsable duration string,
+     * specifies the interval at which the job is run.
+     * </pre>
+     *
+     * <code>string schedule = 2 [json_name = "schedule"];</code>
+     */
+    private void clearSchedule() {
+
+      schedule_ = getDefaultInstance().getSchedule();
+    }
+    /**
+     * <pre>
+     * a unix-cron string or a Golang-parsable duration string,
+     * specifies the interval at which the job is run.
+     * </pre>
+     *
+     * <code>string schedule = 2 [json_name = "schedule"];</code>
+     * @param value The bytes for schedule to set.
+     */
+    private void setScheduleBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      schedule_ = value.toStringUtf8();
+
+    }
+
+    public static final int RESOURCE_FIELD_NUMBER = 3;
+    private java.lang.String resource_;
+    /**
+     * <pre>
+     * the resource associated with this job.
+     * </pre>
+     *
+     * <code>string resource = 3 [json_name = "resource"];</code>
+     * @return The resource.
+     */
+    @java.lang.Override
+    public java.lang.String getResource() {
+      return resource_;
+    }
+    /**
+     * <pre>
+     * the resource associated with this job.
+     * </pre>
+     *
+     * <code>string resource = 3 [json_name = "resource"];</code>
+     * @return The bytes for resource.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(resource_);
+    }
+    /**
+     * <pre>
+     * the resource associated with this job.
+     * </pre>
+     *
+     * <code>string resource = 3 [json_name = "resource"];</code>
+     * @param value The resource to set.
+     */
+    private void setResource(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      resource_ = value;
+    }
+    /**
+     * <pre>
+     * the resource associated with this job.
+     * </pre>
+     *
+     * <code>string resource = 3 [json_name = "resource"];</code>
+     */
+    private void clearResource() {
+
+      resource_ = getDefaultInstance().getResource();
+    }
+    /**
+     * <pre>
+     * the resource associated with this job.
+     * </pre>
+     *
+     * <code>string resource = 3 [json_name = "resource"];</code>
+     * @param value The bytes for resource to set.
+     */
+    private void setResourceBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      resource_ = value.toStringUtf8();
+
+    }
+
+    public static final int METHOD_FIELD_NUMBER = 4;
+    private java.lang.String method_;
+    /**
+     * <pre>
+     * the gRPC request of this job's resource.
+     * </pre>
+     *
+     * <code>string method = 4 [json_name = "method"];</code>
+     * @return The method.
+     */
+    @java.lang.Override
+    public java.lang.String getMethod() {
+      return method_;
+    }
+    /**
+     * <pre>
+     * the gRPC request of this job's resource.
+     * </pre>
+     *
+     * <code>string method = 4 [json_name = "method"];</code>
+     * @return The bytes for method.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMethodBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(method_);
+    }
+    /**
+     * <pre>
+     * the gRPC request of this job's resource.
+     * </pre>
+     *
+     * <code>string method = 4 [json_name = "method"];</code>
+     * @param value The method to set.
+     */
+    private void setMethod(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      method_ = value;
+    }
+    /**
+     * <pre>
+     * the gRPC request of this job's resource.
+     * </pre>
+     *
+     * <code>string method = 4 [json_name = "method"];</code>
+     */
+    private void clearMethod() {
+
+      method_ = getDefaultInstance().getMethod();
+    }
+    /**
+     * <pre>
+     * the gRPC request of this job's resource.
+     * </pre>
+     *
+     * <code>string method = 4 [json_name = "method"];</code>
+     * @param value The bytes for method to set.
+     */
+    private void setMethodBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      method_ = value.toStringUtf8();
+
+    }
+
+    public static final int COMMAND_FIELD_NUMBER = 5;
+    private com.google.protobuf.Struct command_;
+    /**
+     * <pre>
+     * in case method is "DoCommand", specifies the
+     * command argument of the gRPC request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct command = 5 [json_name = "command"];</code>
+     */
+    @java.lang.Override
+    public boolean hasCommand() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * in case method is "DoCommand", specifies the
+     * command argument of the gRPC request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct command = 5 [json_name = "command"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getCommand() {
+      return command_ == null ? com.google.protobuf.Struct.getDefaultInstance() : command_;
+    }
+    /**
+     * <pre>
+     * in case method is "DoCommand", specifies the
+     * command argument of the gRPC request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct command = 5 [json_name = "command"];</code>
+     */
+    private void setCommand(com.google.protobuf.Struct value) {
+      value.getClass();
+  command_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * in case method is "DoCommand", specifies the
+     * command argument of the gRPC request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct command = 5 [json_name = "command"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCommand(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (command_ != null &&
+          command_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        command_ =
+          com.google.protobuf.Struct.newBuilder(command_).mergeFrom(value).buildPartial();
+      } else {
+        command_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * in case method is "DoCommand", specifies the
+     * command argument of the gRPC request.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct command = 5 [json_name = "command"];</code>
+     */
+    private void clearCommand() {  command_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.v1.Robot.JobConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.JobConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.JobConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.JobConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.JobConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.JobConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.JobConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.JobConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Robot.JobConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Robot.JobConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.JobConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.JobConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Robot.JobConfig prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.JobConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Robot.JobConfig, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.JobConfig)
+        viam.app.v1.Robot.JobConfigOrBuilder {
+      // Construct using viam.app.v1.Robot.JobConfig.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * unique name of the job.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <pre>
+       * unique name of the job.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <pre>
+       * unique name of the job.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * unique name of the job.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique name of the job.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * a unix-cron string or a Golang-parsable duration string,
+       * specifies the interval at which the job is run.
+       * </pre>
+       *
+       * <code>string schedule = 2 [json_name = "schedule"];</code>
+       * @return The schedule.
+       */
+      @java.lang.Override
+      public java.lang.String getSchedule() {
+        return instance.getSchedule();
+      }
+      /**
+       * <pre>
+       * a unix-cron string or a Golang-parsable duration string,
+       * specifies the interval at which the job is run.
+       * </pre>
+       *
+       * <code>string schedule = 2 [json_name = "schedule"];</code>
+       * @return The bytes for schedule.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getScheduleBytes() {
+        return instance.getScheduleBytes();
+      }
+      /**
+       * <pre>
+       * a unix-cron string or a Golang-parsable duration string,
+       * specifies the interval at which the job is run.
+       * </pre>
+       *
+       * <code>string schedule = 2 [json_name = "schedule"];</code>
+       * @param value The schedule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchedule(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setSchedule(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * a unix-cron string or a Golang-parsable duration string,
+       * specifies the interval at which the job is run.
+       * </pre>
+       *
+       * <code>string schedule = 2 [json_name = "schedule"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchedule() {
+        copyOnWrite();
+        instance.clearSchedule();
+        return this;
+      }
+      /**
+       * <pre>
+       * a unix-cron string or a Golang-parsable duration string,
+       * specifies the interval at which the job is run.
+       * </pre>
+       *
+       * <code>string schedule = 2 [json_name = "schedule"];</code>
+       * @param value The bytes for schedule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScheduleBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setScheduleBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * the resource associated with this job.
+       * </pre>
+       *
+       * <code>string resource = 3 [json_name = "resource"];</code>
+       * @return The resource.
+       */
+      @java.lang.Override
+      public java.lang.String getResource() {
+        return instance.getResource();
+      }
+      /**
+       * <pre>
+       * the resource associated with this job.
+       * </pre>
+       *
+       * <code>string resource = 3 [json_name = "resource"];</code>
+       * @return The bytes for resource.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getResourceBytes() {
+        return instance.getResourceBytes();
+      }
+      /**
+       * <pre>
+       * the resource associated with this job.
+       * </pre>
+       *
+       * <code>string resource = 3 [json_name = "resource"];</code>
+       * @param value The resource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResource(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setResource(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * the resource associated with this job.
+       * </pre>
+       *
+       * <code>string resource = 3 [json_name = "resource"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResource() {
+        copyOnWrite();
+        instance.clearResource();
+        return this;
+      }
+      /**
+       * <pre>
+       * the resource associated with this job.
+       * </pre>
+       *
+       * <code>string resource = 3 [json_name = "resource"];</code>
+       * @param value The bytes for resource to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setResourceBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * the gRPC request of this job's resource.
+       * </pre>
+       *
+       * <code>string method = 4 [json_name = "method"];</code>
+       * @return The method.
+       */
+      @java.lang.Override
+      public java.lang.String getMethod() {
+        return instance.getMethod();
+      }
+      /**
+       * <pre>
+       * the gRPC request of this job's resource.
+       * </pre>
+       *
+       * <code>string method = 4 [json_name = "method"];</code>
+       * @return The bytes for method.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMethodBytes() {
+        return instance.getMethodBytes();
+      }
+      /**
+       * <pre>
+       * the gRPC request of this job's resource.
+       * </pre>
+       *
+       * <code>string method = 4 [json_name = "method"];</code>
+       * @param value The method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethod(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMethod(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * the gRPC request of this job's resource.
+       * </pre>
+       *
+       * <code>string method = 4 [json_name = "method"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethod() {
+        copyOnWrite();
+        instance.clearMethod();
+        return this;
+      }
+      /**
+       * <pre>
+       * the gRPC request of this job's resource.
+       * </pre>
+       *
+       * <code>string method = 4 [json_name = "method"];</code>
+       * @param value The bytes for method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMethodBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * in case method is "DoCommand", specifies the
+       * command argument of the gRPC request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct command = 5 [json_name = "command"];</code>
+       */
+      @java.lang.Override
+      public boolean hasCommand() {
+        return instance.hasCommand();
+      }
+      /**
+       * <pre>
+       * in case method is "DoCommand", specifies the
+       * command argument of the gRPC request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct command = 5 [json_name = "command"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getCommand() {
+        return instance.getCommand();
+      }
+      /**
+       * <pre>
+       * in case method is "DoCommand", specifies the
+       * command argument of the gRPC request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct command = 5 [json_name = "command"];</code>
+       */
+      public Builder setCommand(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setCommand(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * in case method is "DoCommand", specifies the
+       * command argument of the gRPC request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct command = 5 [json_name = "command"];</code>
+       */
+      public Builder setCommand(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCommand(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * in case method is "DoCommand", specifies the
+       * command argument of the gRPC request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct command = 5 [json_name = "command"];</code>
+       */
+      public Builder mergeCommand(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeCommand(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * in case method is "DoCommand", specifies the
+       * command argument of the gRPC request.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct command = 5 [json_name = "command"];</code>
+       */
+      public Builder clearCommand() {  copyOnWrite();
+        instance.clearCommand();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.JobConfig)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Robot.JobConfig();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "schedule_",
+              "resource_",
+              "method_",
+              "command_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Robot.JobConfig> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Robot.JobConfig.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Robot.JobConfig>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.JobConfig)
+    private static final viam.app.v1.Robot.JobConfig DEFAULT_INSTANCE;
+    static {
+      JobConfig defaultInstance = new JobConfig();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        JobConfig.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Robot.JobConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<JobConfig> PARSER;
+
+    public static com.google.protobuf.Parser<JobConfig> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -4241,7 +5455,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=78
+     *     See app/v1/robot.proto;l=94
      * @return The locationSecret.
      */
     @java.lang.Deprecated java.lang.String getLocationSecret();
@@ -4252,7 +5466,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=78
+     *     See app/v1/robot.proto;l=94
      * @return The bytes for locationSecret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -4651,7 +5865,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=78
+     *     See app/v1/robot.proto;l=94
      * @return The locationSecret.
      */
     @java.lang.Override
@@ -4665,7 +5879,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=78
+     *     See app/v1/robot.proto;l=94
      * @return The bytes for locationSecret.
      */
     @java.lang.Override
@@ -4680,7 +5894,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=78
+     *     See app/v1/robot.proto;l=94
      * @param value The locationSecret to set.
      */
     private void setLocationSecret(
@@ -4696,7 +5910,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=78
+     *     See app/v1/robot.proto;l=94
      */
     private void clearLocationSecret() {
 
@@ -4709,7 +5923,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=78
+     *     See app/v1/robot.proto;l=94
      * @param value The bytes for locationSecret to set.
      */
     private void setLocationSecretBytes(
@@ -5462,7 +6676,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=78
+       *     See app/v1/robot.proto;l=94
        * @return The locationSecret.
        */
       @java.lang.Override
@@ -5476,7 +6690,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=78
+       *     See app/v1/robot.proto;l=94
        * @return The bytes for locationSecret.
        */
       @java.lang.Override
@@ -5491,7 +6705,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=78
+       *     See app/v1/robot.proto;l=94
        * @param value The locationSecret to set.
        * @return This builder for chaining.
        */
@@ -5508,7 +6722,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=78
+       *     See app/v1/robot.proto;l=94
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLocationSecret() {
@@ -5523,7 +6737,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=78
+       *     See app/v1/robot.proto;l=94
        * @param value The bytes for locationSecret to set.
        * @return This builder for chaining.
        */
@@ -26064,6 +27278,16 @@ java.lang.String defaultValue);
      * @return The firstRunTimeout.
      */
     com.google.protobuf.Duration getFirstRunTimeout();
+
+    /**
+     * <pre>
+     * whether we are starting a module in TCP mode
+     * </pre>
+     *
+     * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+     * @return The tcpMode.
+     */
+    boolean getTcpMode();
   }
   /**
    * <pre>
@@ -26645,6 +27869,44 @@ java.lang.String defaultValue) {
      */
     private void clearFirstRunTimeout() {  firstRunTimeout_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int TCP_MODE_FIELD_NUMBER = 9;
+    private boolean tcpMode_;
+    /**
+     * <pre>
+     * whether we are starting a module in TCP mode
+     * </pre>
+     *
+     * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+     * @return The tcpMode.
+     */
+    @java.lang.Override
+    public boolean getTcpMode() {
+      return tcpMode_;
+    }
+    /**
+     * <pre>
+     * whether we are starting a module in TCP mode
+     * </pre>
+     *
+     * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+     * @param value The tcpMode to set.
+     */
+    private void setTcpMode(boolean value) {
+      
+      tcpMode_ = value;
+    }
+    /**
+     * <pre>
+     * whether we are starting a module in TCP mode
+     * </pre>
+     *
+     * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+     */
+    private void clearTcpMode() {
+
+      tcpMode_ = false;
     }
 
     public static viam.app.v1.Robot.ModuleConfig parseFrom(
@@ -27343,6 +28605,46 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * whether we are starting a module in TCP mode
+       * </pre>
+       *
+       * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+       * @return The tcpMode.
+       */
+      @java.lang.Override
+      public boolean getTcpMode() {
+        return instance.getTcpMode();
+      }
+      /**
+       * <pre>
+       * whether we are starting a module in TCP mode
+       * </pre>
+       *
+       * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+       * @param value The tcpMode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTcpMode(boolean value) {
+        copyOnWrite();
+        instance.setTcpMode(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * whether we are starting a module in TCP mode
+       * </pre>
+       *
+       * <code>bool tcp_mode = 9 [json_name = "tcpMode"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTcpMode() {
+        copyOnWrite();
+        instance.clearTcpMode();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ModuleConfig)
     }
     @java.lang.Override
@@ -27369,10 +28671,11 @@ java.lang.String defaultValue) {
               EnvDefaultEntryHolder.defaultEntry,
               "status_",
               "firstRunTimeout_",
+              "tcpMode_",
             };
             java.lang.String info =
-                "\u0000\b\u0000\u0001\u0001\b\b\u0001\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
-                "\u0004\u0208\u0005\u0208\u00062\u0007\u1009\u0000\b\u1009\u0001";
+                "\u0000\t\u0000\u0001\u0001\t\t\u0001\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
+                "\u0004\u0208\u0005\u0208\u00062\u0007\u1009\u0000\b\u1009\u0001\t\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
