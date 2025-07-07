@@ -10393,6 +10393,17 @@ com.google.protobuf.Any defaultValue) {
      * @return The interval.
      */
     viam.app.data.v1.Data.CaptureInterval getInterval();
+
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 6 [json_name = "additionalParameters"];</code>
+     * @return Whether the additionalParameters field is set.
+     */
+    boolean hasAdditionalParameters();
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 6 [json_name = "additionalParameters"];</code>
+     * @return The additionalParameters.
+     */
+    com.google.protobuf.Struct getAdditionalParameters();
   }
   /**
    * <pre>
@@ -10645,6 +10656,52 @@ com.google.protobuf.Any defaultValue) {
      */
     private void clearInterval() {  interval_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int ADDITIONAL_PARAMETERS_FIELD_NUMBER = 6;
+    private com.google.protobuf.Struct additionalParameters_;
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 6 [json_name = "additionalParameters"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAdditionalParameters() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 6 [json_name = "additionalParameters"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getAdditionalParameters() {
+      return additionalParameters_ == null ? com.google.protobuf.Struct.getDefaultInstance() : additionalParameters_;
+    }
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 6 [json_name = "additionalParameters"];</code>
+     */
+    private void setAdditionalParameters(com.google.protobuf.Struct value) {
+      value.getClass();
+  additionalParameters_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 6 [json_name = "additionalParameters"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAdditionalParameters(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (additionalParameters_ != null &&
+          additionalParameters_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        additionalParameters_ =
+          com.google.protobuf.Struct.newBuilder(additionalParameters_).mergeFrom(value).buildPartial();
+      } else {
+        additionalParameters_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 6 [json_name = "additionalParameters"];</code>
+     */
+    private void clearAdditionalParameters() {  additionalParameters_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.data.v1.Data.ExportTabularDataRequest parseFrom(
@@ -10991,6 +11048,53 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>optional .google.protobuf.Struct additional_parameters = 6 [json_name = "additionalParameters"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAdditionalParameters() {
+        return instance.hasAdditionalParameters();
+      }
+      /**
+       * <code>optional .google.protobuf.Struct additional_parameters = 6 [json_name = "additionalParameters"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getAdditionalParameters() {
+        return instance.getAdditionalParameters();
+      }
+      /**
+       * <code>optional .google.protobuf.Struct additional_parameters = 6 [json_name = "additionalParameters"];</code>
+       */
+      public Builder setAdditionalParameters(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setAdditionalParameters(value);
+        return this;
+        }
+      /**
+       * <code>optional .google.protobuf.Struct additional_parameters = 6 [json_name = "additionalParameters"];</code>
+       */
+      public Builder setAdditionalParameters(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAdditionalParameters(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>optional .google.protobuf.Struct additional_parameters = 6 [json_name = "additionalParameters"];</code>
+       */
+      public Builder mergeAdditionalParameters(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeAdditionalParameters(value);
+        return this;
+      }
+      /**
+       * <code>optional .google.protobuf.Struct additional_parameters = 6 [json_name = "additionalParameters"];</code>
+       */
+      public Builder clearAdditionalParameters() {  copyOnWrite();
+        instance.clearAdditionalParameters();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.ExportTabularDataRequest)
     }
     @java.lang.Override
@@ -11013,10 +11117,11 @@ com.google.protobuf.Any defaultValue) {
               "resourceSubtype_",
               "methodName_",
               "interval_",
+              "additionalParameters_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000";
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000\u0006\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -12835,6 +12940,17 @@ com.google.protobuf.Any defaultValue) {
      */
     com.google.protobuf.ByteString
         getResourceSubtypeBytes();
+
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 5 [json_name = "additionalParameters"];</code>
+     * @return Whether the additionalParameters field is set.
+     */
+    boolean hasAdditionalParameters();
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 5 [json_name = "additionalParameters"];</code>
+     * @return The additionalParameters.
+     */
+    com.google.protobuf.Struct getAdditionalParameters();
   }
   /**
    * <pre>
@@ -12854,6 +12970,7 @@ com.google.protobuf.Any defaultValue) {
       methodName_ = "";
       resourceSubtype_ = "";
     }
+    private int bitField0_;
     public static final int PART_ID_FIELD_NUMBER = 1;
     private java.lang.String partId_;
     /**
@@ -13040,6 +13157,52 @@ com.google.protobuf.Any defaultValue) {
       checkByteStringIsUtf8(value);
       resourceSubtype_ = value.toStringUtf8();
 
+    }
+
+    public static final int ADDITIONAL_PARAMETERS_FIELD_NUMBER = 5;
+    private com.google.protobuf.Struct additionalParameters_;
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 5 [json_name = "additionalParameters"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAdditionalParameters() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 5 [json_name = "additionalParameters"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getAdditionalParameters() {
+      return additionalParameters_ == null ? com.google.protobuf.Struct.getDefaultInstance() : additionalParameters_;
+    }
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 5 [json_name = "additionalParameters"];</code>
+     */
+    private void setAdditionalParameters(com.google.protobuf.Struct value) {
+      value.getClass();
+  additionalParameters_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 5 [json_name = "additionalParameters"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAdditionalParameters(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (additionalParameters_ != null &&
+          additionalParameters_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        additionalParameters_ =
+          com.google.protobuf.Struct.newBuilder(additionalParameters_).mergeFrom(value).buildPartial();
+      } else {
+        additionalParameters_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>optional .google.protobuf.Struct additional_parameters = 5 [json_name = "additionalParameters"];</code>
+     */
+    private void clearAdditionalParameters() {  additionalParameters_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.data.v1.Data.GetLatestTabularDataRequest parseFrom(
@@ -13339,6 +13502,53 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>optional .google.protobuf.Struct additional_parameters = 5 [json_name = "additionalParameters"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAdditionalParameters() {
+        return instance.hasAdditionalParameters();
+      }
+      /**
+       * <code>optional .google.protobuf.Struct additional_parameters = 5 [json_name = "additionalParameters"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getAdditionalParameters() {
+        return instance.getAdditionalParameters();
+      }
+      /**
+       * <code>optional .google.protobuf.Struct additional_parameters = 5 [json_name = "additionalParameters"];</code>
+       */
+      public Builder setAdditionalParameters(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setAdditionalParameters(value);
+        return this;
+        }
+      /**
+       * <code>optional .google.protobuf.Struct additional_parameters = 5 [json_name = "additionalParameters"];</code>
+       */
+      public Builder setAdditionalParameters(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAdditionalParameters(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>optional .google.protobuf.Struct additional_parameters = 5 [json_name = "additionalParameters"];</code>
+       */
+      public Builder mergeAdditionalParameters(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeAdditionalParameters(value);
+        return this;
+      }
+      /**
+       * <code>optional .google.protobuf.Struct additional_parameters = 5 [json_name = "additionalParameters"];</code>
+       */
+      public Builder clearAdditionalParameters() {  copyOnWrite();
+        instance.clearAdditionalParameters();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.GetLatestTabularDataRequest)
     }
     @java.lang.Override
@@ -13355,14 +13565,16 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "partId_",
               "resourceName_",
               "methodName_",
               "resourceSubtype_",
+              "additionalParameters_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -18918,14 +19130,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=383
+     *     See app/data/v1/data.proto;l=385
      * @return The id.
      */
     @java.lang.Deprecated java.lang.String getId();
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=383
+     *     See app/data/v1/data.proto;l=385
      * @return The bytes for id.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -19074,7 +19286,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=383
+     *     See app/data/v1/data.proto;l=385
      * @return The id.
      */
     @java.lang.Override
@@ -19084,7 +19296,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=383
+     *     See app/data/v1/data.proto;l=385
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -19095,7 +19307,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=383
+     *     See app/data/v1/data.proto;l=385
      * @param value The id to set.
      */
     private void setId(
@@ -19107,7 +19319,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=383
+     *     See app/data/v1/data.proto;l=385
      */
     private void clearId() {
 
@@ -19116,7 +19328,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=383
+     *     See app/data/v1/data.proto;l=385
      * @param value The bytes for id to set.
      */
     private void setIdBytes(
@@ -19695,7 +19907,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=383
+       *     See app/data/v1/data.proto;l=385
        * @return The id.
        */
       @java.lang.Override
@@ -19705,7 +19917,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=383
+       *     See app/data/v1/data.proto;l=385
        * @return The bytes for id.
        */
       @java.lang.Override
@@ -19716,7 +19928,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=383
+       *     See app/data/v1/data.proto;l=385
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -19729,7 +19941,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=383
+       *     See app/data/v1/data.proto;l=385
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearId() {
@@ -19740,7 +19952,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=383
+       *     See app/data/v1/data.proto;l=385
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -26689,14 +26901,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=500
+     *     See app/data/v1/data.proto;l=502
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=500
+     *     See app/data/v1/data.proto;l=502
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -27761,14 +27973,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=519
+     *     See app/data/v1/data.proto;l=521
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=519
+     *     See app/data/v1/data.proto;l=521
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -28467,14 +28679,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=531
+     *     See app/data/v1/data.proto;l=533
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=531
+     *     See app/data/v1/data.proto;l=533
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();

@@ -1713,6 +1713,31 @@ public final class Switch {
      * @return The numberOfPositions.
      */
     int getNumberOfPositions();
+
+    /**
+     * <code>repeated string labels = 2 [json_name = "labels"];</code>
+     * @return A list containing the labels.
+     */
+    java.util.List<java.lang.String>
+        getLabelsList();
+    /**
+     * <code>repeated string labels = 2 [json_name = "labels"];</code>
+     * @return The count of labels.
+     */
+    int getLabelsCount();
+    /**
+     * <code>repeated string labels = 2 [json_name = "labels"];</code>
+     * @param index The index of the element to return.
+     * @return The labels at the given index.
+     */
+    java.lang.String getLabels(int index);
+    /**
+     * <code>repeated string labels = 2 [json_name = "labels"];</code>
+     * @param index The index of the element to return.
+     * @return The labels at the given index.
+     */
+    com.google.protobuf.ByteString
+        getLabelsBytes(int index);
   }
   /**
    * Protobuf type {@code viam.component.switch.v1.GetNumberOfPositionsResponse}
@@ -1723,6 +1748,7 @@ public final class Switch {
       // @@protoc_insertion_point(message_implements:viam.component.switch.v1.GetNumberOfPositionsResponse)
       GetNumberOfPositionsResponseOrBuilder {
     private GetNumberOfPositionsResponse() {
+      labels_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     public static final int NUMBER_OF_POSITIONS_FIELD_NUMBER = 1;
     private int numberOfPositions_;
@@ -1748,6 +1774,99 @@ public final class Switch {
     private void clearNumberOfPositions() {
 
       numberOfPositions_ = 0;
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> labels_;
+    /**
+     * <code>repeated string labels = 2 [json_name = "labels"];</code>
+     * @return A list containing the labels.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getLabelsList() {
+      return labels_;
+    }
+    /**
+     * <code>repeated string labels = 2 [json_name = "labels"];</code>
+     * @return The count of labels.
+     */
+    @java.lang.Override
+    public int getLabelsCount() {
+      return labels_.size();
+    }
+    /**
+     * <code>repeated string labels = 2 [json_name = "labels"];</code>
+     * @param index The index of the element to return.
+     * @return The labels at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getLabels(int index) {
+      return labels_.get(index);
+    }
+    /**
+     * <code>repeated string labels = 2 [json_name = "labels"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the labels at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLabelsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          labels_.get(index));
+    }
+    private void ensureLabelsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          labels_;  if (!tmp.isModifiable()) {
+        labels_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string labels = 2 [json_name = "labels"];</code>
+     * @param index The index to set the value at.
+     * @param value The labels to set.
+     */
+    private void setLabels(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureLabelsIsMutable();
+      labels_.set(index, value);
+    }
+    /**
+     * <code>repeated string labels = 2 [json_name = "labels"];</code>
+     * @param value The labels to add.
+     */
+    private void addLabels(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureLabelsIsMutable();
+      labels_.add(value);
+    }
+    /**
+     * <code>repeated string labels = 2 [json_name = "labels"];</code>
+     * @param values The labels to add.
+     */
+    private void addAllLabels(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureLabelsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, labels_);
+    }
+    /**
+     * <code>repeated string labels = 2 [json_name = "labels"];</code>
+     */
+    private void clearLabels() {
+      labels_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string labels = 2 [json_name = "labels"];</code>
+     * @param value The bytes of the labels to add.
+     */
+    private void addLabelsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureLabelsIsMutable();
+      labels_.add(value.toStringUtf8());
     }
 
     public static com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse parseFrom(
@@ -1875,6 +1994,98 @@ public final class Switch {
         return this;
       }
 
+      /**
+       * <code>repeated string labels = 2 [json_name = "labels"];</code>
+       * @return A list containing the labels.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getLabelsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getLabelsList());
+      }
+      /**
+       * <code>repeated string labels = 2 [json_name = "labels"];</code>
+       * @return The count of labels.
+       */
+      @java.lang.Override
+      public int getLabelsCount() {
+        return instance.getLabelsCount();
+      }
+      /**
+       * <code>repeated string labels = 2 [json_name = "labels"];</code>
+       * @param index The index of the element to return.
+       * @return The labels at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getLabels(int index) {
+        return instance.getLabels(index);
+      }
+      /**
+       * <code>repeated string labels = 2 [json_name = "labels"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the labels at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLabelsBytes(int index) {
+        return instance.getLabelsBytes(index);
+      }
+      /**
+       * <code>repeated string labels = 2 [json_name = "labels"];</code>
+       * @param index The index to set the value at.
+       * @param value The labels to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabels(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setLabels(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string labels = 2 [json_name = "labels"];</code>
+       * @param value The labels to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLabels(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addLabels(value);
+        return this;
+      }
+      /**
+       * <code>repeated string labels = 2 [json_name = "labels"];</code>
+       * @param values The labels to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllLabels(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllLabels(values);
+        return this;
+      }
+      /**
+       * <code>repeated string labels = 2 [json_name = "labels"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLabels() {
+        copyOnWrite();
+        instance.clearLabels();
+        return this;
+      }
+      /**
+       * <code>repeated string labels = 2 [json_name = "labels"];</code>
+       * @param value The bytes of the labels to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLabelsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addLabelsBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.component.switch.v1.GetNumberOfPositionsResponse)
     }
     @java.lang.Override
@@ -1892,9 +2103,11 @@ public final class Switch {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "numberOfPositions_",
+              "labels_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u000b";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u000b\u0002\u021a" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
