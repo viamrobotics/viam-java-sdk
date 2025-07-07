@@ -127,24 +127,34 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block"><code>repeated string emails = 2 [json_name = "emails"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Timestamp</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLastLogin()" class="member-name-link">getLastLogin</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLastAccess()" class="member-name-link">getLastAccess</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 5 [json_name = "lastAccess"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLastLogin()" class="member-name-link">getLastLogin</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>optional .google.protobuf.Timestamp last_login = 4 [json_name = "lastLogin"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUserId()" class="member-name-link">getUserId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>string user_id = 1 [json_name = "userId"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUserIdBytes()" class="member-name-link">getUserIdBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUserId()" class="member-name-link">getUserId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string user_id = 1 [json_name = "userId"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasDateAdded()" class="member-name-link">hasDateAdded</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUserIdBytes()" class="member-name-link">getUserIdBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>string user_id = 1 [json_name = "userId"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasDateAdded()" class="member-name-link">hasDateAdded</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.google.protobuf.Timestamp date_added = 3 [json_name = "dateAdded"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLastAccess()" class="member-name-link">hasLastAccess</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 5 [json_name = "lastAccess"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLastLogin()" class="member-name-link">hasLastLogin</a>()</code></div>
@@ -279,6 +289,28 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The lastLogin.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasLastAccess()">
+<h3>hasLastAccess</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLastAccess</span>()</div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 5 [json_name = "lastAccess"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the lastAccess field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLastAccess()">
+<h3>getLastAccess</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.Timestamp</span>&nbsp;<span class="element-name">getLastAccess</span>()</div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 5 [json_name = "lastAccess"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The lastAccess.</dd>
 </dl>
 </section>
 </li>
