@@ -7115,7 +7115,7 @@ public final class Motion {
     }
   }
 
-  public interface GetPoseRequestOrBuilder extends
+  @java.lang.Deprecated public interface GetPoseRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.motion.v1.GetPoseRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -7225,7 +7225,7 @@ public final class Motion {
   /**
    * Protobuf type {@code viam.service.motion.v1.GetPoseRequest}
    */
-  public  static final class GetPoseRequest extends
+  @java.lang.Deprecated public  static final class GetPoseRequest extends
       com.google.protobuf.GeneratedMessageLite<
           GetPoseRequest, GetPoseRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.motion.v1.GetPoseRequest)
@@ -8251,7 +8251,7 @@ public final class Motion {
     }
   }
 
-  public interface GetPoseResponseOrBuilder extends
+  @java.lang.Deprecated public interface GetPoseResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.motion.v1.GetPoseResponse)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -8269,7 +8269,7 @@ public final class Motion {
   /**
    * Protobuf type {@code viam.service.motion.v1.GetPoseResponse}
    */
-  public  static final class GetPoseResponse extends
+  @java.lang.Deprecated public  static final class GetPoseResponse extends
       com.google.protobuf.GeneratedMessageLite<
           GetPoseResponse, GetPoseResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.motion.v1.GetPoseResponse)
