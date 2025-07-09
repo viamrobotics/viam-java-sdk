@@ -93,7 +93,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -114,10 +114,12 @@ loadScripts(document, 'script');</script>
  Returns the plan(s) &amp; state history of the most recent execution to move a
  component.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getPose(com.viam.service.motion.v1.Motion.GetPoseRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getPose</a><wbr>(<a href="Motion.GetPoseRequest.html" title="class in com.viam.service.motion.v1">Motion.GetPoseRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code><a href="#getPose(com.viam.service.motion.v1.Motion.GetPoseRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getPose</a><wbr>(<a href="Motion.GetPoseRequest.html" title="class in com.viam.service.motion.v1">Motion.GetPoseRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Motion.GetPoseResponse.html" title="class in com.viam.service.motion.v1">Motion.GetPoseResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#listPlanStatuses(com.viam.service.motion.v1.Motion.ListPlanStatusesRequest,io.grpc.stub.StreamObserver)" class="member-name-link">listPlanStatuses</a><wbr>(<a href="Motion.ListPlanStatusesRequest.html" title="class in com.viam.service.motion.v1">Motion.ListPlanStatusesRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Motion.ListPlanStatusesResponse.html" title="class in com.viam.service.motion.v1">Motion.ListPlanStatusesResponse</a>&gt;&nbsp;responseObserver)</code></div>
@@ -203,8 +205,10 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getPose(com.viam.service.motion.v1.Motion.GetPoseRequest,io.grpc.stub.StreamObserver)">
 <h3>getPose</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getPose</span><wbr><span class="parameters">(<a href="Motion.GetPoseRequest.html" title="class in com.viam.service.motion.v1">Motion.GetPoseRequest</a>&nbsp;request,
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getPose</span><wbr><span class="parameters">(<a href="Motion.GetPoseRequest.html" title="class in com.viam.service.motion.v1">Motion.GetPoseRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Motion.GetPoseResponse.html" title="class in com.viam.service.motion.v1">Motion.GetPoseResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
