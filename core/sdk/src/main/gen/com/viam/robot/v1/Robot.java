@@ -16754,7 +16754,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=334
+     *     See robot/v1/robot.proto;l=344
      * @return The robotPartId.
      */
     @java.lang.Deprecated java.lang.String getRobotPartId();
@@ -16765,7 +16765,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=334
+     *     See robot/v1/robot.proto;l=344
      * @return The bytes for robotPartId.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -16843,7 +16843,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=334
+     *     See robot/v1/robot.proto;l=344
      * @return The robotPartId.
      */
     @java.lang.Override
@@ -16857,7 +16857,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=334
+     *     See robot/v1/robot.proto;l=344
      * @return The bytes for robotPartId.
      */
     @java.lang.Override
@@ -16872,7 +16872,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=334
+     *     See robot/v1/robot.proto;l=344
      * @param value The robotPartId to set.
      */
     private void setRobotPartId(
@@ -16888,7 +16888,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=334
+     *     See robot/v1/robot.proto;l=344
      */
     private void clearRobotPartId() {
 
@@ -16901,7 +16901,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=334
+     *     See robot/v1/robot.proto;l=344
      * @param value The bytes for robotPartId to set.
      */
     private void setRobotPartIdBytes(
@@ -17203,7 +17203,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=334
+       *     See robot/v1/robot.proto;l=344
        * @return The robotPartId.
        */
       @java.lang.Override
@@ -17217,7 +17217,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=334
+       *     See robot/v1/robot.proto;l=344
        * @return The bytes for robotPartId.
        */
       @java.lang.Override
@@ -17232,7 +17232,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=334
+       *     See robot/v1/robot.proto;l=344
        * @param value The robotPartId to set.
        * @return This builder for chaining.
        */
@@ -17249,7 +17249,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=334
+       *     See robot/v1/robot.proto;l=344
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearRobotPartId() {
@@ -17264,7 +17264,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=334
+       *     See robot/v1/robot.proto;l=344
        * @param value The bytes for robotPartId to set.
        * @return This builder for chaining.
        */
@@ -22171,6 +22171,1324 @@ public final class Robot {
     private static volatile com.google.protobuf.Parser<GetVersionResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetVersionResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetPoseRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.GetPoseRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 1 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    java.lang.String getComponentName();
+    /**
+     * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 1 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
+
+    /**
+     * <pre>
+     * the reference frame in which the component's pose
+     * should be provided, if unset this defaults
+     * to the "world" reference frame
+     * </pre>
+     *
+     * <code>string destination_frame = 2 [json_name = "destinationFrame"];</code>
+     * @return The destinationFrame.
+     */
+    java.lang.String getDestinationFrame();
+    /**
+     * <pre>
+     * the reference frame in which the component's pose
+     * should be provided, if unset this defaults
+     * to the "world" reference frame
+     * </pre>
+     *
+     * <code>string destination_frame = 2 [json_name = "destinationFrame"];</code>
+     * @return The bytes for destinationFrame.
+     */
+    com.google.protobuf.ByteString
+        getDestinationFrameBytes();
+
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    java.util.List<com.viam.common.v1.Common.Transform> 
+        getSupplementalTransformsList();
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    com.viam.common.v1.Common.Transform getSupplementalTransforms(int index);
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    int getSupplementalTransformsCount();
+
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.GetPoseRequest}
+   */
+  public  static final class GetPoseRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPoseRequest, GetPoseRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.GetPoseRequest)
+      GetPoseRequestOrBuilder {
+    private GetPoseRequest() {
+      componentName_ = "";
+      destinationFrame_ = "";
+      supplementalTransforms_ = emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 1;
+    private java.lang.String componentName_;
+    /**
+     * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 1 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      return componentName_;
+    }
+    /**
+     * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 1 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+    }
+    /**
+     * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 1 [json_name = "componentName"];</code>
+     * @param value The componentName to set.
+     */
+    private void setComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentName_ = value;
+    }
+    /**
+     * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 1 [json_name = "componentName"];</code>
+     */
+    private void clearComponentName() {
+
+      componentName_ = getDefaultInstance().getComponentName();
+    }
+    /**
+     * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 1 [json_name = "componentName"];</code>
+     * @param value The bytes for componentName to set.
+     */
+    private void setComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentName_ = value.toStringUtf8();
+
+    }
+
+    public static final int DESTINATION_FRAME_FIELD_NUMBER = 2;
+    private java.lang.String destinationFrame_;
+    /**
+     * <pre>
+     * the reference frame in which the component's pose
+     * should be provided, if unset this defaults
+     * to the "world" reference frame
+     * </pre>
+     *
+     * <code>string destination_frame = 2 [json_name = "destinationFrame"];</code>
+     * @return The destinationFrame.
+     */
+    @java.lang.Override
+    public java.lang.String getDestinationFrame() {
+      return destinationFrame_;
+    }
+    /**
+     * <pre>
+     * the reference frame in which the component's pose
+     * should be provided, if unset this defaults
+     * to the "world" reference frame
+     * </pre>
+     *
+     * <code>string destination_frame = 2 [json_name = "destinationFrame"];</code>
+     * @return The bytes for destinationFrame.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationFrameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(destinationFrame_);
+    }
+    /**
+     * <pre>
+     * the reference frame in which the component's pose
+     * should be provided, if unset this defaults
+     * to the "world" reference frame
+     * </pre>
+     *
+     * <code>string destination_frame = 2 [json_name = "destinationFrame"];</code>
+     * @param value The destinationFrame to set.
+     */
+    private void setDestinationFrame(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      destinationFrame_ = value;
+    }
+    /**
+     * <pre>
+     * the reference frame in which the component's pose
+     * should be provided, if unset this defaults
+     * to the "world" reference frame
+     * </pre>
+     *
+     * <code>string destination_frame = 2 [json_name = "destinationFrame"];</code>
+     */
+    private void clearDestinationFrame() {
+
+      destinationFrame_ = getDefaultInstance().getDestinationFrame();
+    }
+    /**
+     * <pre>
+     * the reference frame in which the component's pose
+     * should be provided, if unset this defaults
+     * to the "world" reference frame
+     * </pre>
+     *
+     * <code>string destination_frame = 2 [json_name = "destinationFrame"];</code>
+     * @param value The bytes for destinationFrame to set.
+     */
+    private void setDestinationFrameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      destinationFrame_ = value.toStringUtf8();
+
+    }
+
+    public static final int SUPPLEMENTAL_TRANSFORMS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.Transform> supplementalTransforms_;
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.common.v1.Common.Transform> getSupplementalTransformsList() {
+      return supplementalTransforms_;
+    }
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    public java.util.List<? extends com.viam.common.v1.Common.TransformOrBuilder> 
+        getSupplementalTransformsOrBuilderList() {
+      return supplementalTransforms_;
+    }
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    @java.lang.Override
+    public int getSupplementalTransformsCount() {
+      return supplementalTransforms_.size();
+    }
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Transform getSupplementalTransforms(int index) {
+      return supplementalTransforms_.get(index);
+    }
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    public com.viam.common.v1.Common.TransformOrBuilder getSupplementalTransformsOrBuilder(
+        int index) {
+      return supplementalTransforms_.get(index);
+    }
+    private void ensureSupplementalTransformsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.Transform> tmp = supplementalTransforms_;
+      if (!tmp.isModifiable()) {
+        supplementalTransforms_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    private void setSupplementalTransforms(
+        int index, com.viam.common.v1.Common.Transform value) {
+      value.getClass();
+  ensureSupplementalTransformsIsMutable();
+      supplementalTransforms_.set(index, value);
+    }
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    private void addSupplementalTransforms(com.viam.common.v1.Common.Transform value) {
+      value.getClass();
+  ensureSupplementalTransformsIsMutable();
+      supplementalTransforms_.add(value);
+    }
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    private void addSupplementalTransforms(
+        int index, com.viam.common.v1.Common.Transform value) {
+      value.getClass();
+  ensureSupplementalTransformsIsMutable();
+      supplementalTransforms_.add(index, value);
+    }
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    private void addAllSupplementalTransforms(
+        java.lang.Iterable<? extends com.viam.common.v1.Common.Transform> values) {
+      ensureSupplementalTransformsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, supplementalTransforms_);
+    }
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    private void clearSupplementalTransforms() {
+      supplementalTransforms_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * pose information on any additional reference frames that are needed
+     * to compute the component's pose
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+     */
+    private void removeSupplementalTransforms(int index) {
+      ensureSupplementalTransformsIsMutable();
+      supplementalTransforms_.remove(index);
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.robot.v1.Robot.GetPoseRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.GetPoseRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.GetPoseRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.GetPoseRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.GetPoseRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.GetPoseRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.GetPoseRequest)
+        com.viam.robot.v1.Robot.GetPoseRequestOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.GetPoseRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * the component whose pose is being requested
+       * </pre>
+       *
+       * <code>string component_name = 1 [json_name = "componentName"];</code>
+       * @return The componentName.
+       */
+      @java.lang.Override
+      public java.lang.String getComponentName() {
+        return instance.getComponentName();
+      }
+      /**
+       * <pre>
+       * the component whose pose is being requested
+       * </pre>
+       *
+       * <code>string component_name = 1 [json_name = "componentName"];</code>
+       * @return The bytes for componentName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        return instance.getComponentNameBytes();
+      }
+      /**
+       * <pre>
+       * the component whose pose is being requested
+       * </pre>
+       *
+       * <code>string component_name = 1 [json_name = "componentName"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setComponentName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * the component whose pose is being requested
+       * </pre>
+       *
+       * <code>string component_name = 1 [json_name = "componentName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentName() {
+        copyOnWrite();
+        instance.clearComponentName();
+        return this;
+      }
+      /**
+       * <pre>
+       * the component whose pose is being requested
+       * </pre>
+       *
+       * <code>string component_name = 1 [json_name = "componentName"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setComponentNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * the reference frame in which the component's pose
+       * should be provided, if unset this defaults
+       * to the "world" reference frame
+       * </pre>
+       *
+       * <code>string destination_frame = 2 [json_name = "destinationFrame"];</code>
+       * @return The destinationFrame.
+       */
+      @java.lang.Override
+      public java.lang.String getDestinationFrame() {
+        return instance.getDestinationFrame();
+      }
+      /**
+       * <pre>
+       * the reference frame in which the component's pose
+       * should be provided, if unset this defaults
+       * to the "world" reference frame
+       * </pre>
+       *
+       * <code>string destination_frame = 2 [json_name = "destinationFrame"];</code>
+       * @return The bytes for destinationFrame.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDestinationFrameBytes() {
+        return instance.getDestinationFrameBytes();
+      }
+      /**
+       * <pre>
+       * the reference frame in which the component's pose
+       * should be provided, if unset this defaults
+       * to the "world" reference frame
+       * </pre>
+       *
+       * <code>string destination_frame = 2 [json_name = "destinationFrame"];</code>
+       * @param value The destinationFrame to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationFrame(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDestinationFrame(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * the reference frame in which the component's pose
+       * should be provided, if unset this defaults
+       * to the "world" reference frame
+       * </pre>
+       *
+       * <code>string destination_frame = 2 [json_name = "destinationFrame"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestinationFrame() {
+        copyOnWrite();
+        instance.clearDestinationFrame();
+        return this;
+      }
+      /**
+       * <pre>
+       * the reference frame in which the component's pose
+       * should be provided, if unset this defaults
+       * to the "world" reference frame
+       * </pre>
+       *
+       * <code>string destination_frame = 2 [json_name = "destinationFrame"];</code>
+       * @param value The bytes for destinationFrame to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationFrameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDestinationFrameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * pose information on any additional reference frames that are needed
+       * to compute the component's pose
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.common.v1.Common.Transform> getSupplementalTransformsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getSupplementalTransformsList());
+      }
+      /**
+       * <pre>
+       * pose information on any additional reference frames that are needed
+       * to compute the component's pose
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+       */
+      @java.lang.Override
+      public int getSupplementalTransformsCount() {
+        return instance.getSupplementalTransformsCount();
+      }/**
+       * <pre>
+       * pose information on any additional reference frames that are needed
+       * to compute the component's pose
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Transform getSupplementalTransforms(int index) {
+        return instance.getSupplementalTransforms(index);
+      }
+      /**
+       * <pre>
+       * pose information on any additional reference frames that are needed
+       * to compute the component's pose
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+       */
+      public Builder setSupplementalTransforms(
+          int index, com.viam.common.v1.Common.Transform value) {
+        copyOnWrite();
+        instance.setSupplementalTransforms(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * pose information on any additional reference frames that are needed
+       * to compute the component's pose
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+       */
+      public Builder setSupplementalTransforms(
+          int index, com.viam.common.v1.Common.Transform.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSupplementalTransforms(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * pose information on any additional reference frames that are needed
+       * to compute the component's pose
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+       */
+      public Builder addSupplementalTransforms(com.viam.common.v1.Common.Transform value) {
+        copyOnWrite();
+        instance.addSupplementalTransforms(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * pose information on any additional reference frames that are needed
+       * to compute the component's pose
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+       */
+      public Builder addSupplementalTransforms(
+          int index, com.viam.common.v1.Common.Transform value) {
+        copyOnWrite();
+        instance.addSupplementalTransforms(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * pose information on any additional reference frames that are needed
+       * to compute the component's pose
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+       */
+      public Builder addSupplementalTransforms(
+          com.viam.common.v1.Common.Transform.Builder builderForValue) {
+        copyOnWrite();
+        instance.addSupplementalTransforms(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * pose information on any additional reference frames that are needed
+       * to compute the component's pose
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+       */
+      public Builder addSupplementalTransforms(
+          int index, com.viam.common.v1.Common.Transform.Builder builderForValue) {
+        copyOnWrite();
+        instance.addSupplementalTransforms(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * pose information on any additional reference frames that are needed
+       * to compute the component's pose
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+       */
+      public Builder addAllSupplementalTransforms(
+          java.lang.Iterable<? extends com.viam.common.v1.Common.Transform> values) {
+        copyOnWrite();
+        instance.addAllSupplementalTransforms(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * pose information on any additional reference frames that are needed
+       * to compute the component's pose
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+       */
+      public Builder clearSupplementalTransforms() {
+        copyOnWrite();
+        instance.clearSupplementalTransforms();
+        return this;
+      }
+      /**
+       * <pre>
+       * pose information on any additional reference frames that are needed
+       * to compute the component's pose
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Transform supplemental_transforms = 3 [json_name = "supplementalTransforms"];</code>
+       */
+      public Builder removeSupplementalTransforms(int index) {
+        copyOnWrite();
+        instance.removeSupplementalTransforms(index);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.GetPoseRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.GetPoseRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "componentName_",
+              "destinationFrame_",
+              "supplementalTransforms_",
+              com.viam.common.v1.Common.Transform.class,
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001c\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u0208\u0003" +
+                "\u001bc\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.GetPoseRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.GetPoseRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.GetPoseRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.GetPoseRequest)
+    private static final com.viam.robot.v1.Robot.GetPoseRequest DEFAULT_INSTANCE;
+    static {
+      GetPoseRequest defaultInstance = new GetPoseRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPoseRequest.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.GetPoseRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetPoseRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetPoseRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetPoseResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.GetPoseResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.common.v1.PoseInFrame pose = 1 [json_name = "pose"];</code>
+     * @return Whether the pose field is set.
+     */
+    boolean hasPose();
+    /**
+     * <code>.viam.common.v1.PoseInFrame pose = 1 [json_name = "pose"];</code>
+     * @return The pose.
+     */
+    com.viam.common.v1.Common.PoseInFrame getPose();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.GetPoseResponse}
+   */
+  public  static final class GetPoseResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPoseResponse, GetPoseResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.GetPoseResponse)
+      GetPoseResponseOrBuilder {
+    private GetPoseResponse() {
+    }
+    private int bitField0_;
+    public static final int POSE_FIELD_NUMBER = 1;
+    private com.viam.common.v1.Common.PoseInFrame pose_;
+    /**
+     * <code>.viam.common.v1.PoseInFrame pose = 1 [json_name = "pose"];</code>
+     */
+    @java.lang.Override
+    public boolean hasPose() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.common.v1.PoseInFrame pose = 1 [json_name = "pose"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.PoseInFrame getPose() {
+      return pose_ == null ? com.viam.common.v1.Common.PoseInFrame.getDefaultInstance() : pose_;
+    }
+    /**
+     * <code>.viam.common.v1.PoseInFrame pose = 1 [json_name = "pose"];</code>
+     */
+    private void setPose(com.viam.common.v1.Common.PoseInFrame value) {
+      value.getClass();
+  pose_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.common.v1.PoseInFrame pose = 1 [json_name = "pose"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePose(com.viam.common.v1.Common.PoseInFrame value) {
+      value.getClass();
+  if (pose_ != null &&
+          pose_ != com.viam.common.v1.Common.PoseInFrame.getDefaultInstance()) {
+        pose_ =
+          com.viam.common.v1.Common.PoseInFrame.newBuilder(pose_).mergeFrom(value).buildPartial();
+      } else {
+        pose_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.PoseInFrame pose = 1 [json_name = "pose"];</code>
+     */
+    private void clearPose() {  pose_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.robot.v1.Robot.GetPoseResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.GetPoseResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.GetPoseResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.GetPoseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.GetPoseResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.GetPoseResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.GetPoseResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.GetPoseResponse)
+        com.viam.robot.v1.Robot.GetPoseResponseOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.GetPoseResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.viam.common.v1.PoseInFrame pose = 1 [json_name = "pose"];</code>
+       */
+      @java.lang.Override
+      public boolean hasPose() {
+        return instance.hasPose();
+      }
+      /**
+       * <code>.viam.common.v1.PoseInFrame pose = 1 [json_name = "pose"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.PoseInFrame getPose() {
+        return instance.getPose();
+      }
+      /**
+       * <code>.viam.common.v1.PoseInFrame pose = 1 [json_name = "pose"];</code>
+       */
+      public Builder setPose(com.viam.common.v1.Common.PoseInFrame value) {
+        copyOnWrite();
+        instance.setPose(value);
+        return this;
+        }
+      /**
+       * <code>.viam.common.v1.PoseInFrame pose = 1 [json_name = "pose"];</code>
+       */
+      public Builder setPose(
+          com.viam.common.v1.Common.PoseInFrame.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPose(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.PoseInFrame pose = 1 [json_name = "pose"];</code>
+       */
+      public Builder mergePose(com.viam.common.v1.Common.PoseInFrame value) {
+        copyOnWrite();
+        instance.mergePose(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.PoseInFrame pose = 1 [json_name = "pose"];</code>
+       */
+      public Builder clearPose() {  copyOnWrite();
+        instance.clearPose();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.GetPoseResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.GetPoseResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "pose_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.GetPoseResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.GetPoseResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.GetPoseResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.GetPoseResponse)
+    private static final com.viam.robot.v1.Robot.GetPoseResponse DEFAULT_INSTANCE;
+    static {
+      GetPoseResponse defaultInstance = new GetPoseResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPoseResponse.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.GetPoseResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetPoseResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetPoseResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

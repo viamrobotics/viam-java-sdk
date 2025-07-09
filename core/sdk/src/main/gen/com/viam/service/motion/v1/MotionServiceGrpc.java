@@ -343,6 +343,7 @@ public final class MotionServiceGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     default void getPose(com.viam.service.motion.v1.Motion.GetPoseRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.GetPoseResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPoseMethod(), responseObserver);
@@ -468,6 +469,7 @@ public final class MotionServiceGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public void getPose(com.viam.service.motion.v1.Motion.GetPoseRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.GetPoseResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -581,6 +583,7 @@ public final class MotionServiceGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public com.viam.service.motion.v1.Motion.GetPoseResponse getPose(com.viam.service.motion.v1.Motion.GetPoseRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPoseMethod(), getCallOptions(), request);
@@ -692,6 +695,7 @@ public final class MotionServiceGrpc {
 
     /**
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.viam.service.motion.v1.Motion.GetPoseResponse> getPose(
         com.viam.service.motion.v1.Motion.GetPoseRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

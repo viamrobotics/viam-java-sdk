@@ -228,96 +228,6 @@ public final class RobotServiceGrpc {
     return getGetModelsFromModulesMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.FrameSystemConfigRequest,
-      com.viam.robot.v1.Robot.FrameSystemConfigResponse> getFrameSystemConfigMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "FrameSystemConfig",
-      requestType = com.viam.robot.v1.Robot.FrameSystemConfigRequest.class,
-      responseType = com.viam.robot.v1.Robot.FrameSystemConfigResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.FrameSystemConfigRequest,
-      com.viam.robot.v1.Robot.FrameSystemConfigResponse> getFrameSystemConfigMethod() {
-    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.FrameSystemConfigRequest, com.viam.robot.v1.Robot.FrameSystemConfigResponse> getFrameSystemConfigMethod;
-    if ((getFrameSystemConfigMethod = RobotServiceGrpc.getFrameSystemConfigMethod) == null) {
-      synchronized (RobotServiceGrpc.class) {
-        if ((getFrameSystemConfigMethod = RobotServiceGrpc.getFrameSystemConfigMethod) == null) {
-          RobotServiceGrpc.getFrameSystemConfigMethod = getFrameSystemConfigMethod =
-              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.FrameSystemConfigRequest, com.viam.robot.v1.Robot.FrameSystemConfigResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FrameSystemConfig"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.robot.v1.Robot.FrameSystemConfigRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.robot.v1.Robot.FrameSystemConfigResponse.getDefaultInstance()))
-              .build();
-        }
-      }
-    }
-    return getFrameSystemConfigMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPoseRequest,
-      com.viam.robot.v1.Robot.TransformPoseResponse> getTransformPoseMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "TransformPose",
-      requestType = com.viam.robot.v1.Robot.TransformPoseRequest.class,
-      responseType = com.viam.robot.v1.Robot.TransformPoseResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPoseRequest,
-      com.viam.robot.v1.Robot.TransformPoseResponse> getTransformPoseMethod() {
-    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPoseRequest, com.viam.robot.v1.Robot.TransformPoseResponse> getTransformPoseMethod;
-    if ((getTransformPoseMethod = RobotServiceGrpc.getTransformPoseMethod) == null) {
-      synchronized (RobotServiceGrpc.class) {
-        if ((getTransformPoseMethod = RobotServiceGrpc.getTransformPoseMethod) == null) {
-          RobotServiceGrpc.getTransformPoseMethod = getTransformPoseMethod =
-              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.TransformPoseRequest, com.viam.robot.v1.Robot.TransformPoseResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TransformPose"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.robot.v1.Robot.TransformPoseRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.robot.v1.Robot.TransformPoseResponse.getDefaultInstance()))
-              .build();
-        }
-      }
-    }
-    return getTransformPoseMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPCDRequest,
-      com.viam.robot.v1.Robot.TransformPCDResponse> getTransformPCDMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "TransformPCD",
-      requestType = com.viam.robot.v1.Robot.TransformPCDRequest.class,
-      responseType = com.viam.robot.v1.Robot.TransformPCDResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPCDRequest,
-      com.viam.robot.v1.Robot.TransformPCDResponse> getTransformPCDMethod() {
-    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPCDRequest, com.viam.robot.v1.Robot.TransformPCDResponse> getTransformPCDMethod;
-    if ((getTransformPCDMethod = RobotServiceGrpc.getTransformPCDMethod) == null) {
-      synchronized (RobotServiceGrpc.class) {
-        if ((getTransformPCDMethod = RobotServiceGrpc.getTransformPCDMethod) == null) {
-          RobotServiceGrpc.getTransformPCDMethod = getTransformPCDMethod =
-              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.TransformPCDRequest, com.viam.robot.v1.Robot.TransformPCDResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TransformPCD"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.robot.v1.Robot.TransformPCDRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.robot.v1.Robot.TransformPCDResponse.getDefaultInstance()))
-              .build();
-        }
-      }
-    }
-    return getTransformPCDMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetStatusRequest,
       com.viam.robot.v1.Robot.GetStatusResponse> getGetStatusMethod;
 
@@ -708,6 +618,126 @@ public final class RobotServiceGrpc {
     return getListTunnelsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.FrameSystemConfigRequest,
+      com.viam.robot.v1.Robot.FrameSystemConfigResponse> getFrameSystemConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "FrameSystemConfig",
+      requestType = com.viam.robot.v1.Robot.FrameSystemConfigRequest.class,
+      responseType = com.viam.robot.v1.Robot.FrameSystemConfigResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.FrameSystemConfigRequest,
+      com.viam.robot.v1.Robot.FrameSystemConfigResponse> getFrameSystemConfigMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.FrameSystemConfigRequest, com.viam.robot.v1.Robot.FrameSystemConfigResponse> getFrameSystemConfigMethod;
+    if ((getFrameSystemConfigMethod = RobotServiceGrpc.getFrameSystemConfigMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getFrameSystemConfigMethod = RobotServiceGrpc.getFrameSystemConfigMethod) == null) {
+          RobotServiceGrpc.getFrameSystemConfigMethod = getFrameSystemConfigMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.FrameSystemConfigRequest, com.viam.robot.v1.Robot.FrameSystemConfigResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FrameSystemConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.FrameSystemConfigRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.FrameSystemConfigResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getFrameSystemConfigMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetPoseRequest,
+      com.viam.robot.v1.Robot.GetPoseResponse> getGetPoseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPose",
+      requestType = com.viam.robot.v1.Robot.GetPoseRequest.class,
+      responseType = com.viam.robot.v1.Robot.GetPoseResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetPoseRequest,
+      com.viam.robot.v1.Robot.GetPoseResponse> getGetPoseMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetPoseRequest, com.viam.robot.v1.Robot.GetPoseResponse> getGetPoseMethod;
+    if ((getGetPoseMethod = RobotServiceGrpc.getGetPoseMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getGetPoseMethod = RobotServiceGrpc.getGetPoseMethod) == null) {
+          RobotServiceGrpc.getGetPoseMethod = getGetPoseMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.GetPoseRequest, com.viam.robot.v1.Robot.GetPoseResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPose"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.GetPoseRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.GetPoseResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetPoseMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPoseRequest,
+      com.viam.robot.v1.Robot.TransformPoseResponse> getTransformPoseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TransformPose",
+      requestType = com.viam.robot.v1.Robot.TransformPoseRequest.class,
+      responseType = com.viam.robot.v1.Robot.TransformPoseResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPoseRequest,
+      com.viam.robot.v1.Robot.TransformPoseResponse> getTransformPoseMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPoseRequest, com.viam.robot.v1.Robot.TransformPoseResponse> getTransformPoseMethod;
+    if ((getTransformPoseMethod = RobotServiceGrpc.getTransformPoseMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getTransformPoseMethod = RobotServiceGrpc.getTransformPoseMethod) == null) {
+          RobotServiceGrpc.getTransformPoseMethod = getTransformPoseMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.TransformPoseRequest, com.viam.robot.v1.Robot.TransformPoseResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TransformPose"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.TransformPoseRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.TransformPoseResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getTransformPoseMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPCDRequest,
+      com.viam.robot.v1.Robot.TransformPCDResponse> getTransformPCDMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TransformPCD",
+      requestType = com.viam.robot.v1.Robot.TransformPCDRequest.class,
+      responseType = com.viam.robot.v1.Robot.TransformPCDResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPCDRequest,
+      com.viam.robot.v1.Robot.TransformPCDResponse> getTransformPCDMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPCDRequest, com.viam.robot.v1.Robot.TransformPCDResponse> getTransformPCDMethod;
+    if ((getTransformPCDMethod = RobotServiceGrpc.getTransformPCDMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getTransformPCDMethod = RobotServiceGrpc.getTransformPCDMethod) == null) {
+          RobotServiceGrpc.getTransformPCDMethod = getTransformPCDMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.TransformPCDRequest, com.viam.robot.v1.Robot.TransformPCDResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TransformPCD"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.TransformPCDRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.TransformPCDResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getTransformPCDMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -815,27 +845,6 @@ public final class RobotServiceGrpc {
     default void getModelsFromModules(com.viam.robot.v1.Robot.GetModelsFromModulesRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetModelsFromModulesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetModelsFromModulesMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void frameSystemConfig(com.viam.robot.v1.Robot.FrameSystemConfigRequest request,
-        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.FrameSystemConfigResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFrameSystemConfigMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void transformPose(com.viam.robot.v1.Robot.TransformPoseRequest request,
-        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPoseResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransformPoseMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest request,
-        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPCDResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransformPCDMethod(), responseObserver);
     }
 
     /**
@@ -969,6 +978,46 @@ public final class RobotServiceGrpc {
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.ListTunnelsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTunnelsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * FrameSystemConfig returns the information relevant to building the robot's frame system.
+     * </pre>
+     */
+    default void frameSystemConfig(com.viam.robot.v1.Robot.FrameSystemConfigRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.FrameSystemConfigResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFrameSystemConfigMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetPose returns the pose of a component in a desired referenceframe.
+     * </pre>
+     */
+    default void getPose(com.viam.robot.v1.Robot.GetPoseRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetPoseResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPoseMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TransformPose returns a pose in one referenceframe in a desired referenceframe.
+     * </pre>
+     */
+    default void transformPose(com.viam.robot.v1.Robot.TransformPoseRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPoseResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransformPoseMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TransformPose returns a point cloud in one referenceframe in a desired referenceframe.
+     * </pre>
+     */
+    default void transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPCDResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransformPCDMethod(), responseObserver);
+    }
   }
 
   /**
@@ -1067,30 +1116,6 @@ public final class RobotServiceGrpc {
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetModelsFromModulesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetModelsFromModulesMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void frameSystemConfig(com.viam.robot.v1.Robot.FrameSystemConfigRequest request,
-        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.FrameSystemConfigResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getFrameSystemConfigMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void transformPose(com.viam.robot.v1.Robot.TransformPoseRequest request,
-        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPoseResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getTransformPoseMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest request,
-        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPCDResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getTransformPCDMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1237,6 +1262,50 @@ public final class RobotServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListTunnelsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * FrameSystemConfig returns the information relevant to building the robot's frame system.
+     * </pre>
+     */
+    public void frameSystemConfig(com.viam.robot.v1.Robot.FrameSystemConfigRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.FrameSystemConfigResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getFrameSystemConfigMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetPose returns the pose of a component in a desired referenceframe.
+     * </pre>
+     */
+    public void getPose(com.viam.robot.v1.Robot.GetPoseRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetPoseResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPoseMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TransformPose returns a pose in one referenceframe in a desired referenceframe.
+     * </pre>
+     */
+    public void transformPose(com.viam.robot.v1.Robot.TransformPoseRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPoseResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTransformPoseMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TransformPose returns a point cloud in one referenceframe in a desired referenceframe.
+     * </pre>
+     */
+    public void transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPCDResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTransformPCDMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1314,27 +1383,6 @@ public final class RobotServiceGrpc {
     public com.viam.robot.v1.Robot.GetModelsFromModulesResponse getModelsFromModules(com.viam.robot.v1.Robot.GetModelsFromModulesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetModelsFromModulesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.viam.robot.v1.Robot.FrameSystemConfigResponse frameSystemConfig(com.viam.robot.v1.Robot.FrameSystemConfigRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getFrameSystemConfigMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.viam.robot.v1.Robot.TransformPoseResponse transformPose(com.viam.robot.v1.Robot.TransformPoseRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getTransformPoseMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.viam.robot.v1.Robot.TransformPCDResponse transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getTransformPCDMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1459,6 +1507,46 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListTunnelsMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * FrameSystemConfig returns the information relevant to building the robot's frame system.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.FrameSystemConfigResponse frameSystemConfig(com.viam.robot.v1.Robot.FrameSystemConfigRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFrameSystemConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetPose returns the pose of a component in a desired referenceframe.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.GetPoseResponse getPose(com.viam.robot.v1.Robot.GetPoseRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPoseMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TransformPose returns a pose in one referenceframe in a desired referenceframe.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.TransformPoseResponse transformPose(com.viam.robot.v1.Robot.TransformPoseRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTransformPoseMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TransformPose returns a point cloud in one referenceframe in a desired referenceframe.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.TransformPCDResponse transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTransformPCDMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1543,30 +1631,6 @@ public final class RobotServiceGrpc {
         com.viam.robot.v1.Robot.GetModelsFromModulesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetModelsFromModulesMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.FrameSystemConfigResponse> frameSystemConfig(
-        com.viam.robot.v1.Robot.FrameSystemConfigRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getFrameSystemConfigMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.TransformPoseResponse> transformPose(
-        com.viam.robot.v1.Robot.TransformPoseRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getTransformPoseMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.TransformPCDResponse> transformPCD(
-        com.viam.robot.v1.Robot.TransformPCDRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getTransformPCDMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1690,6 +1754,50 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListTunnelsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * FrameSystemConfig returns the information relevant to building the robot's frame system.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.FrameSystemConfigResponse> frameSystemConfig(
+        com.viam.robot.v1.Robot.FrameSystemConfigRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getFrameSystemConfigMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetPose returns the pose of a component in a desired referenceframe.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.GetPoseResponse> getPose(
+        com.viam.robot.v1.Robot.GetPoseRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPoseMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * TransformPose returns a pose in one referenceframe in a desired referenceframe.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.TransformPoseResponse> transformPose(
+        com.viam.robot.v1.Robot.TransformPoseRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTransformPoseMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * TransformPose returns a point cloud in one referenceframe in a desired referenceframe.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.TransformPCDResponse> transformPCD(
+        com.viam.robot.v1.Robot.TransformPCDRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTransformPCDMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_OPERATIONS = 0;
@@ -1699,22 +1807,23 @@ public final class RobotServiceGrpc {
   private static final int METHODID_CANCEL_OPERATION = 4;
   private static final int METHODID_BLOCK_FOR_OPERATION = 5;
   private static final int METHODID_GET_MODELS_FROM_MODULES = 6;
-  private static final int METHODID_FRAME_SYSTEM_CONFIG = 7;
-  private static final int METHODID_TRANSFORM_POSE = 8;
-  private static final int METHODID_TRANSFORM_PCD = 9;
-  private static final int METHODID_GET_STATUS = 10;
-  private static final int METHODID_STREAM_STATUS = 11;
-  private static final int METHODID_STOP_ALL = 12;
-  private static final int METHODID_START_SESSION = 13;
-  private static final int METHODID_SEND_SESSION_HEARTBEAT = 14;
-  private static final int METHODID_LOG = 15;
-  private static final int METHODID_GET_CLOUD_METADATA = 16;
-  private static final int METHODID_RESTART_MODULE = 17;
-  private static final int METHODID_SHUTDOWN = 18;
-  private static final int METHODID_GET_MACHINE_STATUS = 19;
-  private static final int METHODID_GET_VERSION = 20;
-  private static final int METHODID_LIST_TUNNELS = 21;
-  private static final int METHODID_TUNNEL = 22;
+  private static final int METHODID_GET_STATUS = 7;
+  private static final int METHODID_STREAM_STATUS = 8;
+  private static final int METHODID_STOP_ALL = 9;
+  private static final int METHODID_START_SESSION = 10;
+  private static final int METHODID_SEND_SESSION_HEARTBEAT = 11;
+  private static final int METHODID_LOG = 12;
+  private static final int METHODID_GET_CLOUD_METADATA = 13;
+  private static final int METHODID_RESTART_MODULE = 14;
+  private static final int METHODID_SHUTDOWN = 15;
+  private static final int METHODID_GET_MACHINE_STATUS = 16;
+  private static final int METHODID_GET_VERSION = 17;
+  private static final int METHODID_LIST_TUNNELS = 18;
+  private static final int METHODID_FRAME_SYSTEM_CONFIG = 19;
+  private static final int METHODID_GET_POSE = 20;
+  private static final int METHODID_TRANSFORM_POSE = 21;
+  private static final int METHODID_TRANSFORM_PCD = 22;
+  private static final int METHODID_TUNNEL = 23;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1760,18 +1869,6 @@ public final class RobotServiceGrpc {
         case METHODID_GET_MODELS_FROM_MODULES:
           serviceImpl.getModelsFromModules((com.viam.robot.v1.Robot.GetModelsFromModulesRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetModelsFromModulesResponse>) responseObserver);
-          break;
-        case METHODID_FRAME_SYSTEM_CONFIG:
-          serviceImpl.frameSystemConfig((com.viam.robot.v1.Robot.FrameSystemConfigRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.FrameSystemConfigResponse>) responseObserver);
-          break;
-        case METHODID_TRANSFORM_POSE:
-          serviceImpl.transformPose((com.viam.robot.v1.Robot.TransformPoseRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPoseResponse>) responseObserver);
-          break;
-        case METHODID_TRANSFORM_PCD:
-          serviceImpl.transformPCD((com.viam.robot.v1.Robot.TransformPCDRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPCDResponse>) responseObserver);
           break;
         case METHODID_GET_STATUS:
           serviceImpl.getStatus((com.viam.robot.v1.Robot.GetStatusRequest) request,
@@ -1820,6 +1917,22 @@ public final class RobotServiceGrpc {
         case METHODID_LIST_TUNNELS:
           serviceImpl.listTunnels((com.viam.robot.v1.Robot.ListTunnelsRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.ListTunnelsResponse>) responseObserver);
+          break;
+        case METHODID_FRAME_SYSTEM_CONFIG:
+          serviceImpl.frameSystemConfig((com.viam.robot.v1.Robot.FrameSystemConfigRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.FrameSystemConfigResponse>) responseObserver);
+          break;
+        case METHODID_GET_POSE:
+          serviceImpl.getPose((com.viam.robot.v1.Robot.GetPoseRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetPoseResponse>) responseObserver);
+          break;
+        case METHODID_TRANSFORM_POSE:
+          serviceImpl.transformPose((com.viam.robot.v1.Robot.TransformPoseRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPoseResponse>) responseObserver);
+          break;
+        case METHODID_TRANSFORM_PCD:
+          serviceImpl.transformPCD((com.viam.robot.v1.Robot.TransformPCDRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPCDResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1891,27 +2004,6 @@ public final class RobotServiceGrpc {
               com.viam.robot.v1.Robot.GetModelsFromModulesRequest,
               com.viam.robot.v1.Robot.GetModelsFromModulesResponse>(
                 service, METHODID_GET_MODELS_FROM_MODULES)))
-        .addMethod(
-          getFrameSystemConfigMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.viam.robot.v1.Robot.FrameSystemConfigRequest,
-              com.viam.robot.v1.Robot.FrameSystemConfigResponse>(
-                service, METHODID_FRAME_SYSTEM_CONFIG)))
-        .addMethod(
-          getTransformPoseMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.viam.robot.v1.Robot.TransformPoseRequest,
-              com.viam.robot.v1.Robot.TransformPoseResponse>(
-                service, METHODID_TRANSFORM_POSE)))
-        .addMethod(
-          getTransformPCDMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.viam.robot.v1.Robot.TransformPCDRequest,
-              com.viam.robot.v1.Robot.TransformPCDResponse>(
-                service, METHODID_TRANSFORM_PCD)))
         .addMethod(
           getGetStatusMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -2003,6 +2095,34 @@ public final class RobotServiceGrpc {
               com.viam.robot.v1.Robot.ListTunnelsRequest,
               com.viam.robot.v1.Robot.ListTunnelsResponse>(
                 service, METHODID_LIST_TUNNELS)))
+        .addMethod(
+          getFrameSystemConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.FrameSystemConfigRequest,
+              com.viam.robot.v1.Robot.FrameSystemConfigResponse>(
+                service, METHODID_FRAME_SYSTEM_CONFIG)))
+        .addMethod(
+          getGetPoseMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.GetPoseRequest,
+              com.viam.robot.v1.Robot.GetPoseResponse>(
+                service, METHODID_GET_POSE)))
+        .addMethod(
+          getTransformPoseMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.TransformPoseRequest,
+              com.viam.robot.v1.Robot.TransformPoseResponse>(
+                service, METHODID_TRANSFORM_POSE)))
+        .addMethod(
+          getTransformPCDMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.TransformPCDRequest,
+              com.viam.robot.v1.Robot.TransformPCDResponse>(
+                service, METHODID_TRANSFORM_PCD)))
         .build();
   }
 
@@ -2022,9 +2142,6 @@ public final class RobotServiceGrpc {
               .addMethod(getCancelOperationMethod())
               .addMethod(getBlockForOperationMethod())
               .addMethod(getGetModelsFromModulesMethod())
-              .addMethod(getFrameSystemConfigMethod())
-              .addMethod(getTransformPoseMethod())
-              .addMethod(getTransformPCDMethod())
               .addMethod(getGetStatusMethod())
               .addMethod(getStreamStatusMethod())
               .addMethod(getStopAllMethod())
@@ -2038,6 +2155,10 @@ public final class RobotServiceGrpc {
               .addMethod(getGetVersionMethod())
               .addMethod(getTunnelMethod())
               .addMethod(getListTunnelsMethod())
+              .addMethod(getFrameSystemConfigMethod())
+              .addMethod(getGetPoseMethod())
+              .addMethod(getTransformPoseMethod())
+              .addMethod(getTransformPCDMethod())
               .build();
         }
       }
