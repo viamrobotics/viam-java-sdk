@@ -4521,6 +4521,31 @@ com.google.protobuf.Any defaultValue);
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
+
+    /**
+     * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+     * @return A list containing the datasetIds.
+     */
+    java.util.List<java.lang.String>
+        getDatasetIdsList();
+    /**
+     * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+     * @return The count of datasetIds.
+     */
+    int getDatasetIdsCount();
+    /**
+     * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    java.lang.String getDatasetIds(int index);
+    /**
+     * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdsBytes(int index);
   }
   /**
    * <pre>
@@ -4542,6 +4567,7 @@ com.google.protobuf.Any defaultValue);
       fileName_ = "";
       fileExtension_ = "";
       tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      datasetIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     public static final int PART_ID_FIELD_NUMBER = 1;
     private java.lang.String partId_;
@@ -5053,6 +5079,99 @@ com.google.protobuf.Any defaultValue) {
       checkByteStringIsUtf8(value);
       ensureTagsIsMutable();
       tags_.add(value.toStringUtf8());
+    }
+
+    public static final int DATASET_IDS_FIELD_NUMBER = 12;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> datasetIds_;
+    /**
+     * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+     * @return A list containing the datasetIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getDatasetIdsList() {
+      return datasetIds_;
+    }
+    /**
+     * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+     * @return The count of datasetIds.
+     */
+    @java.lang.Override
+    public int getDatasetIdsCount() {
+      return datasetIds_.size();
+    }
+    /**
+     * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetIds(int index) {
+      return datasetIds_.get(index);
+    }
+    /**
+     * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the datasetIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          datasetIds_.get(index));
+    }
+    private void ensureDatasetIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          datasetIds_;  if (!tmp.isModifiable()) {
+        datasetIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The datasetIds to set.
+     */
+    private void setDatasetIds(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureDatasetIdsIsMutable();
+      datasetIds_.set(index, value);
+    }
+    /**
+     * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+     * @param value The datasetIds to add.
+     */
+    private void addDatasetIds(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureDatasetIdsIsMutable();
+      datasetIds_.add(value);
+    }
+    /**
+     * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+     * @param values The datasetIds to add.
+     */
+    private void addAllDatasetIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDatasetIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, datasetIds_);
+    }
+    /**
+     * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+     */
+    private void clearDatasetIds() {
+      datasetIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+     * @param value The bytes of the datasetIds to add.
+     */
+    private void addDatasetIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureDatasetIdsIsMutable();
+      datasetIds_.add(value.toStringUtf8());
     }
 
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseFrom(
@@ -5688,6 +5807,98 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+       * @return A list containing the datasetIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getDatasetIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getDatasetIdsList());
+      }
+      /**
+       * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+       * @return The count of datasetIds.
+       */
+      @java.lang.Override
+      public int getDatasetIdsCount() {
+        return instance.getDatasetIdsCount();
+      }
+      /**
+       * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+       * @param index The index of the element to return.
+       * @return The datasetIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getDatasetIds(int index) {
+        return instance.getDatasetIds(index);
+      }
+      /**
+       * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the datasetIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDatasetIdsBytes(int index) {
+        return instance.getDatasetIdsBytes(index);
+      }
+      /**
+       * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The datasetIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setDatasetIds(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+       * @param value The datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDatasetIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addDatasetIds(value);
+        return this;
+      }
+      /**
+       * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+       * @param values The datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDatasetIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllDatasetIds(values);
+        return this;
+      }
+      /**
+       * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetIds() {
+        copyOnWrite();
+        instance.clearDatasetIds();
+        return this;
+      }
+      /**
+       * <code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code>
+       * @param value The bytes of the datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDatasetIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addDatasetIdsBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.UploadMetadata)
     }
     @java.lang.Override
@@ -5714,10 +5925,11 @@ com.google.protobuf.Any defaultValue) {
               MethodParametersDefaultEntryHolder.defaultEntry,
               "fileExtension_",
               "tags_",
+              "datasetIds_",
             };
             java.lang.String info =
-                "\u0000\t\u0000\u0000\u0001\n\t\u0001\u0001\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
-                "\u0005\u0208\u0006\f\u0007\u0208\b2\t\u0208\n\u021a";
+                "\u0000\n\u0000\u0000\u0001\f\n\u0001\u0002\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
+                "\u0005\u0208\u0006\f\u0007\u0208\b2\t\u0208\n\u021a\f\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
