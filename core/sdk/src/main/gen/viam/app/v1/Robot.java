@@ -20206,6 +20206,26 @@ java.lang.String defaultValue) {
      */
     com.google.protobuf.ByteString
         getSecretBytes();
+
+    /**
+     * <pre>
+     * A string with which to prefix all resource names fetched from this remote.
+     * </pre>
+     *
+     * <code>string prefix = 11 [json_name = "prefix"];</code>
+     * @return The prefix.
+     */
+    java.lang.String getPrefix();
+    /**
+     * <pre>
+     * A string with which to prefix all resource names fetched from this remote.
+     * </pre>
+     *
+     * <code>string prefix = 11 [json_name = "prefix"];</code>
+     * @return The bytes for prefix.
+     */
+    com.google.protobuf.ByteString
+        getPrefixBytes();
   }
   /**
    * <pre>
@@ -20228,6 +20248,7 @@ java.lang.String defaultValue) {
       managedBy_ = "";
       serviceConfigs_ = emptyProtobufList();
       secret_ = "";
+      prefix_ = "";
     }
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
@@ -20739,6 +20760,73 @@ java.lang.String defaultValue) {
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       secret_ = value.toStringUtf8();
+
+    }
+
+    public static final int PREFIX_FIELD_NUMBER = 11;
+    private java.lang.String prefix_;
+    /**
+     * <pre>
+     * A string with which to prefix all resource names fetched from this remote.
+     * </pre>
+     *
+     * <code>string prefix = 11 [json_name = "prefix"];</code>
+     * @return The prefix.
+     */
+    @java.lang.Override
+    public java.lang.String getPrefix() {
+      return prefix_;
+    }
+    /**
+     * <pre>
+     * A string with which to prefix all resource names fetched from this remote.
+     * </pre>
+     *
+     * <code>string prefix = 11 [json_name = "prefix"];</code>
+     * @return The bytes for prefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrefixBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(prefix_);
+    }
+    /**
+     * <pre>
+     * A string with which to prefix all resource names fetched from this remote.
+     * </pre>
+     *
+     * <code>string prefix = 11 [json_name = "prefix"];</code>
+     * @param value The prefix to set.
+     */
+    private void setPrefix(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      prefix_ = value;
+    }
+    /**
+     * <pre>
+     * A string with which to prefix all resource names fetched from this remote.
+     * </pre>
+     *
+     * <code>string prefix = 11 [json_name = "prefix"];</code>
+     */
+    private void clearPrefix() {
+
+      prefix_ = getDefaultInstance().getPrefix();
+    }
+    /**
+     * <pre>
+     * A string with which to prefix all resource names fetched from this remote.
+     * </pre>
+     *
+     * <code>string prefix = 11 [json_name = "prefix"];</code>
+     * @param value The bytes for prefix to set.
+     */
+    private void setPrefixBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      prefix_ = value.toStringUtf8();
 
     }
 
@@ -21380,6 +21468,75 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * A string with which to prefix all resource names fetched from this remote.
+       * </pre>
+       *
+       * <code>string prefix = 11 [json_name = "prefix"];</code>
+       * @return The prefix.
+       */
+      @java.lang.Override
+      public java.lang.String getPrefix() {
+        return instance.getPrefix();
+      }
+      /**
+       * <pre>
+       * A string with which to prefix all resource names fetched from this remote.
+       * </pre>
+       *
+       * <code>string prefix = 11 [json_name = "prefix"];</code>
+       * @return The bytes for prefix.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPrefixBytes() {
+        return instance.getPrefixBytes();
+      }
+      /**
+       * <pre>
+       * A string with which to prefix all resource names fetched from this remote.
+       * </pre>
+       *
+       * <code>string prefix = 11 [json_name = "prefix"];</code>
+       * @param value The prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefix(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPrefix(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A string with which to prefix all resource names fetched from this remote.
+       * </pre>
+       *
+       * <code>string prefix = 11 [json_name = "prefix"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrefix() {
+        copyOnWrite();
+        instance.clearPrefix();
+        return this;
+      }
+      /**
+       * <pre>
+       * A string with which to prefix all resource names fetched from this remote.
+       * </pre>
+       *
+       * <code>string prefix = 11 [json_name = "prefix"];</code>
+       * @param value The bytes for prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPrefixBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RemoteConfig)
     }
     @java.lang.Override
@@ -21408,11 +21565,12 @@ java.lang.String defaultValue) {
               "serviceConfigs_",
               viam.app.v1.Robot.ResourceLevelServiceConfig.class,
               "secret_",
+              "prefix_",
             };
             java.lang.String info =
-                "\u0000\n\u0000\u0001\u0001\n\n\u0000\u0001\u0000\u0001\u0208\u0002\u0208\u0003\u1009" +
-                "\u0000\u0004\u1009\u0001\u0005\u0208\u0006\u0007\u0007\u1009\u0002\b\u1009\u0003" +
-                "\t\u001b\n\u0208";
+                "\u0000\u000b\u0000\u0001\u0001\u000b\u000b\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u1009\u0000\u0004\u1009\u0001\u0005\u0208\u0006\u0007\u0007\u1009\u0002\b" +
+                "\u1009\u0003\t\u001b\n\u0208\u000b\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
