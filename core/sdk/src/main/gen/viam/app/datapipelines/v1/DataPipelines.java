@@ -4674,13 +4674,13 @@ public final class DataPipelines {
     }
   }
 
-  public interface UpdateDataPipelineRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.UpdateDataPipelineRequest)
+  public interface RenameDataPipelineRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.RenameDataPipelineRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
-     * The ID of the data pipeline to update.
+     * The ID of the data pipeline to rename.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id"];</code>
@@ -4689,7 +4689,7 @@ public final class DataPipelines {
     java.lang.String getId();
     /**
      * <pre>
-     * The ID of the data pipeline to update.
+     * The ID of the data pipeline to rename.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id"];</code>
@@ -4700,7 +4700,7 @@ public final class DataPipelines {
 
     /**
      * <pre>
-     * A unique identifier at the org level.
+     * A unique identifier at the organization level.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -4709,7 +4709,7 @@ public final class DataPipelines {
     java.lang.String getName();
     /**
      * <pre>
-     * A unique identifier at the org level.
+     * A unique identifier at the organization level.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -4717,109 +4717,24 @@ public final class DataPipelines {
      */
     com.google.protobuf.ByteString
         getNameBytes();
-
-    /**
-     * <pre>
-     * A MongoDB aggregation pipeline as a list of BSON documents, where
-     * each document is one stage in the pipeline.
-     * </pre>
-     *
-     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-     * @return A list containing the mqlBinary.
-     */
-    java.util.List<com.google.protobuf.ByteString> getMqlBinaryList();
-    /**
-     * <pre>
-     * A MongoDB aggregation pipeline as a list of BSON documents, where
-     * each document is one stage in the pipeline.
-     * </pre>
-     *
-     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-     * @return The count of mqlBinary.
-     */
-    int getMqlBinaryCount();
-    /**
-     * <pre>
-     * A MongoDB aggregation pipeline as a list of BSON documents, where
-     * each document is one stage in the pipeline.
-     * </pre>
-     *
-     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-     * @param index The index of the element to return.
-     * @return The mqlBinary at the given index.
-     */
-    com.google.protobuf.ByteString getMqlBinary(int index);
-
-    /**
-     * <pre>
-     * A cron expression representing the expected execution schedule in UTC (note this also
-     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
-     * </pre>
-     *
-     * <code>string schedule = 4 [json_name = "schedule"];</code>
-     * @return The schedule.
-     */
-    java.lang.String getSchedule();
-    /**
-     * <pre>
-     * A cron expression representing the expected execution schedule in UTC (note this also
-     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
-     * </pre>
-     *
-     * <code>string schedule = 4 [json_name = "schedule"];</code>
-     * @return The bytes for schedule.
-     */
-    com.google.protobuf.ByteString
-        getScheduleBytes();
-
-    /**
-     * <pre>
-     * The type of data source for the pipeline. If not specified, default is standard data storage.
-     * </pre>
-     *
-     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-     * @return Whether the dataSourceType field is set.
-     */
-    boolean hasDataSourceType();
-    /**
-     * <pre>
-     * The type of data source for the pipeline. If not specified, default is standard data storage.
-     * </pre>
-     *
-     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-     * @return The enum numeric value on the wire for dataSourceType.
-     */
-    int getDataSourceTypeValue();
-    /**
-     * <pre>
-     * The type of data source for the pipeline. If not specified, default is standard data storage.
-     * </pre>
-     *
-     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-     * @return The dataSourceType.
-     */
-    viam.app.data.v1.Data.TabularDataSourceType getDataSourceType();
   }
   /**
-   * Protobuf type {@code viam.app.datapipelines.v1.UpdateDataPipelineRequest}
+   * Protobuf type {@code viam.app.datapipelines.v1.RenameDataPipelineRequest}
    */
-  public  static final class UpdateDataPipelineRequest extends
+  public  static final class RenameDataPipelineRequest extends
       com.google.protobuf.GeneratedMessageLite<
-          UpdateDataPipelineRequest, UpdateDataPipelineRequest.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.UpdateDataPipelineRequest)
-      UpdateDataPipelineRequestOrBuilder {
-    private UpdateDataPipelineRequest() {
+          RenameDataPipelineRequest, RenameDataPipelineRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.RenameDataPipelineRequest)
+      RenameDataPipelineRequestOrBuilder {
+    private RenameDataPipelineRequest() {
       id_ = "";
       name_ = "";
-      mqlBinary_ = emptyProtobufList();
-      schedule_ = "";
     }
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private java.lang.String id_;
     /**
      * <pre>
-     * The ID of the data pipeline to update.
+     * The ID of the data pipeline to rename.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id"];</code>
@@ -4831,7 +4746,7 @@ public final class DataPipelines {
     }
     /**
      * <pre>
-     * The ID of the data pipeline to update.
+     * The ID of the data pipeline to rename.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id"];</code>
@@ -4844,7 +4759,7 @@ public final class DataPipelines {
     }
     /**
      * <pre>
-     * The ID of the data pipeline to update.
+     * The ID of the data pipeline to rename.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id"];</code>
@@ -4858,7 +4773,7 @@ public final class DataPipelines {
     }
     /**
      * <pre>
-     * The ID of the data pipeline to update.
+     * The ID of the data pipeline to rename.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id"];</code>
@@ -4869,7 +4784,7 @@ public final class DataPipelines {
     }
     /**
      * <pre>
-     * The ID of the data pipeline to update.
+     * The ID of the data pipeline to rename.
      * </pre>
      *
      * <code>string id = 1 [json_name = "id"];</code>
@@ -4886,7 +4801,7 @@ public final class DataPipelines {
     private java.lang.String name_;
     /**
      * <pre>
-     * A unique identifier at the org level.
+     * A unique identifier at the organization level.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -4898,7 +4813,7 @@ public final class DataPipelines {
     }
     /**
      * <pre>
-     * A unique identifier at the org level.
+     * A unique identifier at the organization level.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -4911,7 +4826,7 @@ public final class DataPipelines {
     }
     /**
      * <pre>
-     * A unique identifier at the org level.
+     * A unique identifier at the organization level.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -4925,7 +4840,7 @@ public final class DataPipelines {
     }
     /**
      * <pre>
-     * A unique identifier at the org level.
+     * A unique identifier at the organization level.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -4936,7 +4851,7 @@ public final class DataPipelines {
     }
     /**
      * <pre>
-     * A unique identifier at the org level.
+     * A unique identifier at the organization level.
      * </pre>
      *
      * <code>string name = 2 [json_name = "name"];</code>
@@ -4949,303 +4864,50 @@ public final class DataPipelines {
 
     }
 
-    public static final int MQL_BINARY_FIELD_NUMBER = 3;
-    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> mqlBinary_;
-    /**
-     * <pre>
-     * A MongoDB aggregation pipeline as a list of BSON documents, where
-     * each document is one stage in the pipeline.
-     * </pre>
-     *
-     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-     * @return A list containing the mqlBinary.
-     */
-    @java.lang.Override
-    public java.util.List<com.google.protobuf.ByteString>
-        getMqlBinaryList() {
-      return mqlBinary_;
-    }
-    /**
-     * <pre>
-     * A MongoDB aggregation pipeline as a list of BSON documents, where
-     * each document is one stage in the pipeline.
-     * </pre>
-     *
-     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-     * @return The count of mqlBinary.
-     */
-    @java.lang.Override
-    public int getMqlBinaryCount() {
-      return mqlBinary_.size();
-    }
-    /**
-     * <pre>
-     * A MongoDB aggregation pipeline as a list of BSON documents, where
-     * each document is one stage in the pipeline.
-     * </pre>
-     *
-     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-     * @param index The index of the element to return.
-     * @return The mqlBinary at the given index.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getMqlBinary(int index) {
-      return mqlBinary_.get(index);
-    }
-    private void ensureMqlBinaryIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> tmp = mqlBinary_;
-      if (!tmp.isModifiable()) {
-        mqlBinary_ =
-            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
-       }
-    }
-    /**
-     * <pre>
-     * A MongoDB aggregation pipeline as a list of BSON documents, where
-     * each document is one stage in the pipeline.
-     * </pre>
-     *
-     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-     * @param index The index to set the value at.
-     * @param value The mqlBinary to set.
-     */
-    private void setMqlBinary(
-        int index, com.google.protobuf.ByteString value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  ensureMqlBinaryIsMutable();
-      mqlBinary_.set(index, value);
-    }
-    /**
-     * <pre>
-     * A MongoDB aggregation pipeline as a list of BSON documents, where
-     * each document is one stage in the pipeline.
-     * </pre>
-     *
-     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-     * @param value The mqlBinary to add.
-     */
-    private void addMqlBinary(com.google.protobuf.ByteString value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  ensureMqlBinaryIsMutable();
-      mqlBinary_.add(value);
-    }
-    /**
-     * <pre>
-     * A MongoDB aggregation pipeline as a list of BSON documents, where
-     * each document is one stage in the pipeline.
-     * </pre>
-     *
-     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-     * @param values The mqlBinary to add.
-     */
-    private void addAllMqlBinary(
-        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
-      ensureMqlBinaryIsMutable();
-      com.google.protobuf.AbstractMessageLite.addAll(
-          values, mqlBinary_);
-    }
-    /**
-     * <pre>
-     * A MongoDB aggregation pipeline as a list of BSON documents, where
-     * each document is one stage in the pipeline.
-     * </pre>
-     *
-     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-     */
-    private void clearMqlBinary() {
-      mqlBinary_ = emptyProtobufList();
-    }
-
-    public static final int SCHEDULE_FIELD_NUMBER = 4;
-    private java.lang.String schedule_;
-    /**
-     * <pre>
-     * A cron expression representing the expected execution schedule in UTC (note this also
-     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
-     * </pre>
-     *
-     * <code>string schedule = 4 [json_name = "schedule"];</code>
-     * @return The schedule.
-     */
-    @java.lang.Override
-    public java.lang.String getSchedule() {
-      return schedule_;
-    }
-    /**
-     * <pre>
-     * A cron expression representing the expected execution schedule in UTC (note this also
-     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
-     * </pre>
-     *
-     * <code>string schedule = 4 [json_name = "schedule"];</code>
-     * @return The bytes for schedule.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getScheduleBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(schedule_);
-    }
-    /**
-     * <pre>
-     * A cron expression representing the expected execution schedule in UTC (note this also
-     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
-     * </pre>
-     *
-     * <code>string schedule = 4 [json_name = "schedule"];</code>
-     * @param value The schedule to set.
-     */
-    private void setSchedule(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      schedule_ = value;
-    }
-    /**
-     * <pre>
-     * A cron expression representing the expected execution schedule in UTC (note this also
-     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
-     * </pre>
-     *
-     * <code>string schedule = 4 [json_name = "schedule"];</code>
-     */
-    private void clearSchedule() {
-
-      schedule_ = getDefaultInstance().getSchedule();
-    }
-    /**
-     * <pre>
-     * A cron expression representing the expected execution schedule in UTC (note this also
-     * defines the input time window; an hourly schedule would process 1 hour of data at a time).
-     * </pre>
-     *
-     * <code>string schedule = 4 [json_name = "schedule"];</code>
-     * @param value The bytes for schedule to set.
-     */
-    private void setScheduleBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      schedule_ = value.toStringUtf8();
-
-    }
-
-    public static final int DATA_SOURCE_TYPE_FIELD_NUMBER = 5;
-    private int dataSourceType_;
-    /**
-     * <pre>
-     * The type of data source for the pipeline. If not specified, default is standard data storage.
-     * </pre>
-     *
-     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-     * @return Whether the dataSourceType field is set.
-     */
-    @java.lang.Override
-    public boolean hasDataSourceType() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <pre>
-     * The type of data source for the pipeline. If not specified, default is standard data storage.
-     * </pre>
-     *
-     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-     * @return The enum numeric value on the wire for dataSourceType.
-     */
-    @java.lang.Override
-    public int getDataSourceTypeValue() {
-      return dataSourceType_;
-    }
-    /**
-     * <pre>
-     * The type of data source for the pipeline. If not specified, default is standard data storage.
-     * </pre>
-     *
-     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-     * @return The dataSourceType.
-     */
-    @java.lang.Override
-    public viam.app.data.v1.Data.TabularDataSourceType getDataSourceType() {
-      viam.app.data.v1.Data.TabularDataSourceType result = viam.app.data.v1.Data.TabularDataSourceType.forNumber(dataSourceType_);
-      return result == null ? viam.app.data.v1.Data.TabularDataSourceType.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * The type of data source for the pipeline. If not specified, default is standard data storage.
-     * </pre>
-     *
-     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-     * @param value The enum numeric value on the wire for dataSourceType to set.
-     */
-    private void setDataSourceTypeValue(int value) {
-      bitField0_ |= 0x00000001;  dataSourceType_ = value;
-    }
-    /**
-     * <pre>
-     * The type of data source for the pipeline. If not specified, default is standard data storage.
-     * </pre>
-     *
-     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-     * @param value The dataSourceType to set.
-     */
-    private void setDataSourceType(viam.app.data.v1.Data.TabularDataSourceType value) {
-      dataSourceType_ = value.getNumber();
-      bitField0_ |= 0x00000001;
-    }
-    /**
-     * <pre>
-     * The type of data source for the pipeline. If not specified, default is standard data storage.
-     * </pre>
-     *
-     * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-     */
-    private void clearDataSourceType() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      dataSourceType_ = 0;
-    }
-
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseFrom(byte[] data)
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseFrom(java.io.InputStream input)
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5253,24 +4915,24 @@ public final class DataPipelines {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseDelimitedFrom(java.io.InputStream input)
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseDelimitedFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5281,19 +4943,19 @@ public final class DataPipelines {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest prototype) {
+    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code viam.app.datapipelines.v1.UpdateDataPipelineRequest}
+     * Protobuf type {@code viam.app.datapipelines.v1.RenameDataPipelineRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.UpdateDataPipelineRequest)
-        viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequestOrBuilder {
-      // Construct using viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest.newBuilder()
+          viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.RenameDataPipelineRequest)
+        viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequestOrBuilder {
+      // Construct using viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
@@ -5301,7 +4963,7 @@ public final class DataPipelines {
 
       /**
        * <pre>
-       * The ID of the data pipeline to update.
+       * The ID of the data pipeline to rename.
        * </pre>
        *
        * <code>string id = 1 [json_name = "id"];</code>
@@ -5313,7 +4975,7 @@ public final class DataPipelines {
       }
       /**
        * <pre>
-       * The ID of the data pipeline to update.
+       * The ID of the data pipeline to rename.
        * </pre>
        *
        * <code>string id = 1 [json_name = "id"];</code>
@@ -5326,7 +4988,7 @@ public final class DataPipelines {
       }
       /**
        * <pre>
-       * The ID of the data pipeline to update.
+       * The ID of the data pipeline to rename.
        * </pre>
        *
        * <code>string id = 1 [json_name = "id"];</code>
@@ -5341,7 +5003,7 @@ public final class DataPipelines {
       }
       /**
        * <pre>
-       * The ID of the data pipeline to update.
+       * The ID of the data pipeline to rename.
        * </pre>
        *
        * <code>string id = 1 [json_name = "id"];</code>
@@ -5354,7 +5016,7 @@ public final class DataPipelines {
       }
       /**
        * <pre>
-       * The ID of the data pipeline to update.
+       * The ID of the data pipeline to rename.
        * </pre>
        *
        * <code>string id = 1 [json_name = "id"];</code>
@@ -5370,7 +5032,7 @@ public final class DataPipelines {
 
       /**
        * <pre>
-       * A unique identifier at the org level.
+       * A unique identifier at the organization level.
        * </pre>
        *
        * <code>string name = 2 [json_name = "name"];</code>
@@ -5382,7 +5044,7 @@ public final class DataPipelines {
       }
       /**
        * <pre>
-       * A unique identifier at the org level.
+       * A unique identifier at the organization level.
        * </pre>
        *
        * <code>string name = 2 [json_name = "name"];</code>
@@ -5395,7 +5057,7 @@ public final class DataPipelines {
       }
       /**
        * <pre>
-       * A unique identifier at the org level.
+       * A unique identifier at the organization level.
        * </pre>
        *
        * <code>string name = 2 [json_name = "name"];</code>
@@ -5410,7 +5072,7 @@ public final class DataPipelines {
       }
       /**
        * <pre>
-       * A unique identifier at the org level.
+       * A unique identifier at the organization level.
        * </pre>
        *
        * <code>string name = 2 [json_name = "name"];</code>
@@ -5423,7 +5085,7 @@ public final class DataPipelines {
       }
       /**
        * <pre>
-       * A unique identifier at the org level.
+       * A unique identifier at the organization level.
        * </pre>
        *
        * <code>string name = 2 [json_name = "name"];</code>
@@ -5437,263 +5099,7 @@ public final class DataPipelines {
         return this;
       }
 
-      /**
-       * <pre>
-       * A MongoDB aggregation pipeline as a list of BSON documents, where
-       * each document is one stage in the pipeline.
-       * </pre>
-       *
-       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-       * @return A list containing the mqlBinary.
-       */
-      @java.lang.Override
-      public java.util.List<com.google.protobuf.ByteString>
-          getMqlBinaryList() {
-        return java.util.Collections.unmodifiableList(
-            instance.getMqlBinaryList());
-      }
-      /**
-       * <pre>
-       * A MongoDB aggregation pipeline as a list of BSON documents, where
-       * each document is one stage in the pipeline.
-       * </pre>
-       *
-       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-       * @return The count of mqlBinary.
-       */
-      @java.lang.Override
-      public int getMqlBinaryCount() {
-        return instance.getMqlBinaryCount();
-      }
-      /**
-       * <pre>
-       * A MongoDB aggregation pipeline as a list of BSON documents, where
-       * each document is one stage in the pipeline.
-       * </pre>
-       *
-       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-       * @param index The index of the element to return.
-       * @return The mqlBinary at the given index.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString getMqlBinary(int index) {
-        return instance.getMqlBinary(index);
-      }
-      /**
-       * <pre>
-       * A MongoDB aggregation pipeline as a list of BSON documents, where
-       * each document is one stage in the pipeline.
-       * </pre>
-       *
-       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-       * @param value The mqlBinary to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMqlBinary(
-          int index, com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setMqlBinary(index, value);
-        return this;
-      }
-      /**
-       * <pre>
-       * A MongoDB aggregation pipeline as a list of BSON documents, where
-       * each document is one stage in the pipeline.
-       * </pre>
-       *
-       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-       * @param value The mqlBinary to add.
-       * @return This builder for chaining.
-       */
-      public Builder addMqlBinary(com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.addMqlBinary(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * A MongoDB aggregation pipeline as a list of BSON documents, where
-       * each document is one stage in the pipeline.
-       * </pre>
-       *
-       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-       * @param values The mqlBinary to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllMqlBinary(
-          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
-        copyOnWrite();
-        instance.addAllMqlBinary(values);
-        return this;
-      }
-      /**
-       * <pre>
-       * A MongoDB aggregation pipeline as a list of BSON documents, where
-       * each document is one stage in the pipeline.
-       * </pre>
-       *
-       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMqlBinary() {
-        copyOnWrite();
-        instance.clearMqlBinary();
-        return this;
-      }
-
-      /**
-       * <pre>
-       * A cron expression representing the expected execution schedule in UTC (note this also
-       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
-       * </pre>
-       *
-       * <code>string schedule = 4 [json_name = "schedule"];</code>
-       * @return The schedule.
-       */
-      @java.lang.Override
-      public java.lang.String getSchedule() {
-        return instance.getSchedule();
-      }
-      /**
-       * <pre>
-       * A cron expression representing the expected execution schedule in UTC (note this also
-       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
-       * </pre>
-       *
-       * <code>string schedule = 4 [json_name = "schedule"];</code>
-       * @return The bytes for schedule.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getScheduleBytes() {
-        return instance.getScheduleBytes();
-      }
-      /**
-       * <pre>
-       * A cron expression representing the expected execution schedule in UTC (note this also
-       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
-       * </pre>
-       *
-       * <code>string schedule = 4 [json_name = "schedule"];</code>
-       * @param value The schedule to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSchedule(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setSchedule(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * A cron expression representing the expected execution schedule in UTC (note this also
-       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
-       * </pre>
-       *
-       * <code>string schedule = 4 [json_name = "schedule"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSchedule() {
-        copyOnWrite();
-        instance.clearSchedule();
-        return this;
-      }
-      /**
-       * <pre>
-       * A cron expression representing the expected execution schedule in UTC (note this also
-       * defines the input time window; an hourly schedule would process 1 hour of data at a time).
-       * </pre>
-       *
-       * <code>string schedule = 4 [json_name = "schedule"];</code>
-       * @param value The bytes for schedule to set.
-       * @return This builder for chaining.
-       */
-      public Builder setScheduleBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setScheduleBytes(value);
-        return this;
-      }
-
-      /**
-       * <pre>
-       * The type of data source for the pipeline. If not specified, default is standard data storage.
-       * </pre>
-       *
-       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-       * @return Whether the dataSourceType field is set.
-       */
-      @java.lang.Override
-      public boolean hasDataSourceType() {
-        return instance.hasDataSourceType();
-      }
-      /**
-       * <pre>
-       * The type of data source for the pipeline. If not specified, default is standard data storage.
-       * </pre>
-       *
-       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-       * @return The enum numeric value on the wire for dataSourceType.
-       */
-      @java.lang.Override
-      public int getDataSourceTypeValue() {
-        return instance.getDataSourceTypeValue();
-      }
-      /**
-       * <pre>
-       * The type of data source for the pipeline. If not specified, default is standard data storage.
-       * </pre>
-       *
-       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-       * @param value The dataSourceType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDataSourceTypeValue(int value) {
-        copyOnWrite();
-        instance.setDataSourceTypeValue(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * The type of data source for the pipeline. If not specified, default is standard data storage.
-       * </pre>
-       *
-       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-       * @return The dataSourceType.
-       */
-      @java.lang.Override
-      public viam.app.data.v1.Data.TabularDataSourceType getDataSourceType() {
-        return instance.getDataSourceType();
-      }
-      /**
-       * <pre>
-       * The type of data source for the pipeline. If not specified, default is standard data storage.
-       * </pre>
-       *
-       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-       * @param value The enum numeric value on the wire for dataSourceType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDataSourceType(viam.app.data.v1.Data.TabularDataSourceType value) {
-        copyOnWrite();
-        instance.setDataSourceType(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * The type of data source for the pipeline. If not specified, default is standard data storage.
-       * </pre>
-       *
-       * <code>optional .viam.app.data.v1.TabularDataSourceType data_source_type = 5 [json_name = "dataSourceType"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDataSourceType() {
-        copyOnWrite();
-        instance.clearDataSourceType();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.UpdateDataPipelineRequest)
+      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.RenameDataPipelineRequest)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -5702,23 +5108,19 @@ public final class DataPipelines {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest();
+          return new viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest();
         }
         case NEW_BUILDER: {
           return new Builder();
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "bitField0_",
               "id_",
               "name_",
-              "mqlBinary_",
-              "schedule_",
-              "dataSourceType_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u001c\u0004\u0208\u0005\u100c\u0000";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -5726,13 +5128,13 @@ public final class DataPipelines {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest> parser = PARSER;
+          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest> parser = PARSER;
           if (parser == null) {
-            synchronized (viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest.class) {
+            synchronized (viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest>(
+                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -5751,86 +5153,86 @@ public final class DataPipelines {
     }
 
 
-    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.UpdateDataPipelineRequest)
-    private static final viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.RenameDataPipelineRequest)
+    private static final viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest DEFAULT_INSTANCE;
     static {
-      UpdateDataPipelineRequest defaultInstance = new UpdateDataPipelineRequest();
+      RenameDataPipelineRequest defaultInstance = new RenameDataPipelineRequest();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        UpdateDataPipelineRequest.class, defaultInstance);
+        RenameDataPipelineRequest.class, defaultInstance);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest getDefaultInstance() {
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<UpdateDataPipelineRequest> PARSER;
+    private static volatile com.google.protobuf.Parser<RenameDataPipelineRequest> PARSER;
 
-    public static com.google.protobuf.Parser<UpdateDataPipelineRequest> parser() {
+    public static com.google.protobuf.Parser<RenameDataPipelineRequest> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
 
-  public interface UpdateDataPipelineResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.UpdateDataPipelineResponse)
+  public interface RenameDataPipelineResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.datapipelines.v1.RenameDataPipelineResponse)
       com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
-   * Protobuf type {@code viam.app.datapipelines.v1.UpdateDataPipelineResponse}
+   * Protobuf type {@code viam.app.datapipelines.v1.RenameDataPipelineResponse}
    */
-  public  static final class UpdateDataPipelineResponse extends
+  public  static final class RenameDataPipelineResponse extends
       com.google.protobuf.GeneratedMessageLite<
-          UpdateDataPipelineResponse, UpdateDataPipelineResponse.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.UpdateDataPipelineResponse)
-      UpdateDataPipelineResponseOrBuilder {
-    private UpdateDataPipelineResponse() {
+          RenameDataPipelineResponse, RenameDataPipelineResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.datapipelines.v1.RenameDataPipelineResponse)
+      RenameDataPipelineResponseOrBuilder {
+    private RenameDataPipelineResponse() {
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse parseFrom(byte[] data)
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, data, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse parseFrom(java.io.InputStream input)
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5838,24 +5240,24 @@ public final class DataPipelines {
           DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse parseDelimitedFrom(java.io.InputStream input)
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse parseDelimitedFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageLite.parseFrom(
           DEFAULT_INSTANCE, input);
     }
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse parseFrom(
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5866,25 +5268,25 @@ public final class DataPipelines {
     public static Builder newBuilder() {
       return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
-    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse prototype) {
+    public static Builder newBuilder(viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse prototype) {
       return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
     /**
-     * Protobuf type {@code viam.app.datapipelines.v1.UpdateDataPipelineResponse}
+     * Protobuf type {@code viam.app.datapipelines.v1.RenameDataPipelineResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
-          viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.UpdateDataPipelineResponse)
-        viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponseOrBuilder {
-      // Construct using viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse.newBuilder()
+          viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.datapipelines.v1.RenameDataPipelineResponse)
+        viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponseOrBuilder {
+      // Construct using viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse.newBuilder()
       private Builder() {
         super(DEFAULT_INSTANCE);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.UpdateDataPipelineResponse)
+      // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.RenameDataPipelineResponse)
     }
     @java.lang.Override
     @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
@@ -5893,7 +5295,7 @@ public final class DataPipelines {
         java.lang.Object arg0, java.lang.Object arg1) {
       switch (method) {
         case NEW_MUTABLE_INSTANCE: {
-          return new viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse();
+          return new viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse();
         }
         case NEW_BUILDER: {
           return new Builder();
@@ -5908,13 +5310,13 @@ public final class DataPipelines {
           return DEFAULT_INSTANCE;
         }
         case GET_PARSER: {
-          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse> parser = PARSER;
+          com.google.protobuf.Parser<viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse> parser = PARSER;
           if (parser == null) {
-            synchronized (viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse.class) {
+            synchronized (viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse.class) {
               parser = PARSER;
               if (parser == null) {
                 parser =
-                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse>(
+                    new DefaultInstanceBasedParser<viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse>(
                         DEFAULT_INSTANCE);
                 PARSER = parser;
               }
@@ -5933,24 +5335,24 @@ public final class DataPipelines {
     }
 
 
-    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.UpdateDataPipelineResponse)
-    private static final viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:viam.app.datapipelines.v1.RenameDataPipelineResponse)
+    private static final viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse DEFAULT_INSTANCE;
     static {
-      UpdateDataPipelineResponse defaultInstance = new UpdateDataPipelineResponse();
+      RenameDataPipelineResponse defaultInstance = new RenameDataPipelineResponse();
       // New instances are implicitly immutable so no need to make
       // immutable.
       DEFAULT_INSTANCE = defaultInstance;
       com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        UpdateDataPipelineResponse.class, defaultInstance);
+        RenameDataPipelineResponse.class, defaultInstance);
     }
 
-    public static viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse getDefaultInstance() {
+    public static viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static volatile com.google.protobuf.Parser<UpdateDataPipelineResponse> PARSER;
+    private static volatile com.google.protobuf.Parser<RenameDataPipelineResponse> PARSER;
 
-    public static com.google.protobuf.Parser<UpdateDataPipelineResponse> parser() {
+    public static com.google.protobuf.Parser<RenameDataPipelineResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

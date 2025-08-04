@@ -108,34 +108,34 @@ public final class DataPipelinesServiceGrpc {
     return getCreateDataPipelineMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest,
-      viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse> getUpdateDataPipelineMethod;
+  private static volatile io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest,
+      viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse> getRenameDataPipelineMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateDataPipeline",
-      requestType = viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest.class,
-      responseType = viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "RenameDataPipeline",
+      requestType = viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest.class,
+      responseType = viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest,
-      viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse> getUpdateDataPipelineMethod() {
-    io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest, viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse> getUpdateDataPipelineMethod;
-    if ((getUpdateDataPipelineMethod = DataPipelinesServiceGrpc.getUpdateDataPipelineMethod) == null) {
+  public static io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest,
+      viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse> getRenameDataPipelineMethod() {
+    io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest, viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse> getRenameDataPipelineMethod;
+    if ((getRenameDataPipelineMethod = DataPipelinesServiceGrpc.getRenameDataPipelineMethod) == null) {
       synchronized (DataPipelinesServiceGrpc.class) {
-        if ((getUpdateDataPipelineMethod = DataPipelinesServiceGrpc.getUpdateDataPipelineMethod) == null) {
-          DataPipelinesServiceGrpc.getUpdateDataPipelineMethod = getUpdateDataPipelineMethod =
-              io.grpc.MethodDescriptor.<viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest, viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse>newBuilder()
+        if ((getRenameDataPipelineMethod = DataPipelinesServiceGrpc.getRenameDataPipelineMethod) == null) {
+          DataPipelinesServiceGrpc.getRenameDataPipelineMethod = getRenameDataPipelineMethod =
+              io.grpc.MethodDescriptor.<viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest, viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateDataPipeline"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RenameDataPipeline"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest.getDefaultInstance()))
+                  viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse.getDefaultInstance()))
+                  viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse.getDefaultInstance()))
               .build();
         }
       }
     }
-    return getUpdateDataPipelineMethod;
+    return getRenameDataPipelineMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<viam.app.datapipelines.v1.DataPipelines.DeleteDataPipelineRequest,
@@ -341,12 +341,12 @@ public final class DataPipelinesServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDataPipeline modifies an existing data pipeline's configuration.
+     * RenameDataPipeline changes a data pipeline's name.
      * </pre>
      */
-    default void updateDataPipeline(viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest request,
-        io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDataPipelineMethod(), responseObserver);
+    default void renameDataPipeline(viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRenameDataPipelineMethod(), responseObserver);
     }
 
     /**
@@ -458,13 +458,13 @@ public final class DataPipelinesServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDataPipeline modifies an existing data pipeline's configuration.
+     * RenameDataPipeline changes a data pipeline's name.
      * </pre>
      */
-    public void updateDataPipeline(viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest request,
-        io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse> responseObserver) {
+    public void renameDataPipeline(viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateDataPipelineMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRenameDataPipelineMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -563,12 +563,12 @@ public final class DataPipelinesServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDataPipeline modifies an existing data pipeline's configuration.
+     * RenameDataPipeline changes a data pipeline's name.
      * </pre>
      */
-    public viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse updateDataPipeline(viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest request) {
+    public viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse renameDataPipeline(viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateDataPipelineMethod(), getCallOptions(), request);
+          getChannel(), getRenameDataPipelineMethod(), getCallOptions(), request);
     }
 
     /**
@@ -666,13 +666,13 @@ public final class DataPipelinesServiceGrpc {
 
     /**
      * <pre>
-     * UpdateDataPipeline modifies an existing data pipeline's configuration.
+     * RenameDataPipeline changes a data pipeline's name.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse> updateDataPipeline(
-        viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse> renameDataPipeline(
+        viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateDataPipelineMethod(), getCallOptions()), request);
+          getChannel().newCall(getRenameDataPipelineMethod(), getCallOptions()), request);
     }
 
     /**
@@ -723,7 +723,7 @@ public final class DataPipelinesServiceGrpc {
   private static final int METHODID_GET_DATA_PIPELINE = 0;
   private static final int METHODID_LIST_DATA_PIPELINES = 1;
   private static final int METHODID_CREATE_DATA_PIPELINE = 2;
-  private static final int METHODID_UPDATE_DATA_PIPELINE = 3;
+  private static final int METHODID_RENAME_DATA_PIPELINE = 3;
   private static final int METHODID_DELETE_DATA_PIPELINE = 4;
   private static final int METHODID_ENABLE_DATA_PIPELINE = 5;
   private static final int METHODID_DISABLE_DATA_PIPELINE = 6;
@@ -758,9 +758,9 @@ public final class DataPipelinesServiceGrpc {
           serviceImpl.createDataPipeline((viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineResponse>) responseObserver);
           break;
-        case METHODID_UPDATE_DATA_PIPELINE:
-          serviceImpl.updateDataPipeline((viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest) request,
-              (io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse>) responseObserver);
+        case METHODID_RENAME_DATA_PIPELINE:
+          serviceImpl.renameDataPipeline((viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse>) responseObserver);
           break;
         case METHODID_DELETE_DATA_PIPELINE:
           serviceImpl.deleteDataPipeline((viam.app.datapipelines.v1.DataPipelines.DeleteDataPipelineRequest) request,
@@ -818,12 +818,12 @@ public final class DataPipelinesServiceGrpc {
               viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineResponse>(
                 service, METHODID_CREATE_DATA_PIPELINE)))
         .addMethod(
-          getUpdateDataPipelineMethod(),
+          getRenameDataPipelineMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineRequest,
-              viam.app.datapipelines.v1.DataPipelines.UpdateDataPipelineResponse>(
-                service, METHODID_UPDATE_DATA_PIPELINE)))
+              viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest,
+              viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse>(
+                service, METHODID_RENAME_DATA_PIPELINE)))
         .addMethod(
           getDeleteDataPipelineMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -867,7 +867,7 @@ public final class DataPipelinesServiceGrpc {
               .addMethod(getGetDataPipelineMethod())
               .addMethod(getListDataPipelinesMethod())
               .addMethod(getCreateDataPipelineMethod())
-              .addMethod(getUpdateDataPipelineMethod())
+              .addMethod(getRenameDataPipelineMethod())
               .addMethod(getDeleteDataPipelineMethod())
               .addMethod(getEnableDataPipelineMethod())
               .addMethod(getDisableDataPipelineMethod())
