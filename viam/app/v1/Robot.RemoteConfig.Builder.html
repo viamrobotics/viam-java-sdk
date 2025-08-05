@@ -185,245 +185,275 @@ implements <a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.a
 <div class="block"><code>string name = 1 [json_name = "name"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearReconnectInterval()" class="member-name-link">clearReconnectInterval</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPrefix()" class="member-name-link">clearPrefix</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Duration reconnect_interval = 8 [json_name = "reconnectInterval"];</code></div>
+<div class="block">
+ A string with which to prefix all resource names fetched from this remote.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSecret()" class="member-name-link">clearSecret</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearReconnectInterval()" class="member-name-link">clearReconnectInterval</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Duration reconnect_interval = 8 [json_name = "reconnectInterval"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSecret()" class="member-name-link">clearSecret</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Secret is a helper for a robot location secret.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearServiceConfigs()" class="member-name-link">clearServiceConfigs</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearServiceConfigs()" class="member-name-link">clearServiceConfigs</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 9 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAddress()" class="member-name-link">getAddress</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string address = 2 [json_name = "address"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAddressBytes()" class="member-name-link">getAddressBytes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string address = 2 [json_name = "address"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteAuth.html" title="class in viam.app.v1">Robot.RemoteAuth</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuth()" class="member-name-link">getAuth</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.v1.RemoteAuth auth = 4 [json_name = "auth"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Duration</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConnectionCheckInterval()" class="member-name-link">getConnectionCheckInterval</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Duration connection_check_interval = 7 [json_name = "connectionCheckInterval"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.Frame.html" title="class in viam.app.v1">Robot.Frame</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFrame()" class="member-name-link">getFrame</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.v1.Frame frame = 3 [json_name = "frame"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInsecure()" class="member-name-link">getInsecure</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>bool insecure = 6 [json_name = "insecure"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getManagedBy()" class="member-name-link">getManagedBy</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string managed_by = 5 [json_name = "managedBy"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getManagedByBytes()" class="member-name-link">getManagedByBytes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string managed_by = 5 [json_name = "managedBy"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Duration</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReconnectInterval()" class="member-name-link">getReconnectInterval</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Duration reconnect_interval = 8 [json_name = "reconnectInterval"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecret()" class="member-name-link">getSecret</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAddress()" class="member-name-link">getAddress</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Secret is a helper for a robot location secret.</div>
+<div class="block"><code>string address = 2 [json_name = "address"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecretBytes()" class="member-name-link">getSecretBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Secret is a helper for a robot location secret.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceLevelServiceConfig.html" title="class in viam.app.v1">Robot.ResourceLevelServiceConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigs(int)" class="member-name-link">getServiceConfigs</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 9 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigsCount()" class="member-name-link">getServiceConfigsCount</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 9 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ResourceLevelServiceConfig.html" title="class in viam.app.v1">Robot.ResourceLevelServiceConfig</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigsList()" class="member-name-link">getServiceConfigsList</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 9 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAuth()" class="member-name-link">hasAuth</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.v1.RemoteAuth auth = 4 [json_name = "auth"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasConnectionCheckInterval()" class="member-name-link">hasConnectionCheckInterval</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Duration connection_check_interval = 7 [json_name = "connectionCheckInterval"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFrame()" class="member-name-link">hasFrame</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.v1.Frame frame = 3 [json_name = "frame"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasReconnectInterval()" class="member-name-link">hasReconnectInterval</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Duration reconnect_interval = 8 [json_name = "reconnectInterval"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeAuth(viam.app.v1.Robot.RemoteAuth)" class="member-name-link">mergeAuth</a><wbr>(<a href="Robot.RemoteAuth.html" title="class in viam.app.v1">Robot.RemoteAuth</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.v1.RemoteAuth auth = 4 [json_name = "auth"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeConnectionCheckInterval(com.google.protobuf.Duration)" class="member-name-link">mergeConnectionCheckInterval</a><wbr>(com.google.protobuf.Duration&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Duration connection_check_interval = 7 [json_name = "connectionCheckInterval"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrame(viam.app.v1.Robot.Frame)" class="member-name-link">mergeFrame</a><wbr>(<a href="Robot.Frame.html" title="class in viam.app.v1">Robot.Frame</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.v1.Frame frame = 3 [json_name = "frame"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeReconnectInterval(com.google.protobuf.Duration)" class="member-name-link">mergeReconnectInterval</a><wbr>(com.google.protobuf.Duration&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Duration reconnect_interval = 8 [json_name = "reconnectInterval"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeServiceConfigs(int)" class="member-name-link">removeServiceConfigs</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 9 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAddress(java.lang.String)" class="member-name-link">setAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string address = 2 [json_name = "address"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAddressBytes(com.google.protobuf.ByteString)" class="member-name-link">setAddressBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAddressBytes()" class="member-name-link">getAddressBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string address = 2 [json_name = "address"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAuth(viam.app.v1.Robot.RemoteAuth)" class="member-name-link">setAuth</a><wbr>(<a href="Robot.RemoteAuth.html" title="class in viam.app.v1">Robot.RemoteAuth</a>&nbsp;value)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteAuth.html" title="class in viam.app.v1">Robot.RemoteAuth</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuth()" class="member-name-link">getAuth</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.v1.RemoteAuth auth = 4 [json_name = "auth"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAuth(viam.app.v1.Robot.RemoteAuth.Builder)" class="member-name-link">setAuth</a><wbr>(<a href="Robot.RemoteAuth.Builder.html" title="class in viam.app.v1">Robot.RemoteAuth.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.v1.RemoteAuth auth = 4 [json_name = "auth"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setConnectionCheckInterval(com.google.protobuf.Duration)" class="member-name-link">setConnectionCheckInterval</a><wbr>(com.google.protobuf.Duration&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Duration connection_check_interval = 7 [json_name = "connectionCheckInterval"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setConnectionCheckInterval(com.google.protobuf.Duration.Builder)" class="member-name-link">setConnectionCheckInterval</a><wbr>(com.google.protobuf.Duration.Builder&nbsp;builderForValue)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Duration</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getConnectionCheckInterval()" class="member-name-link">getConnectionCheckInterval</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Duration connection_check_interval = 7 [json_name = "connectionCheckInterval"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFrame(viam.app.v1.Robot.Frame)" class="member-name-link">setFrame</a><wbr>(<a href="Robot.Frame.html" title="class in viam.app.v1">Robot.Frame</a>&nbsp;value)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.Frame.html" title="class in viam.app.v1">Robot.Frame</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFrame()" class="member-name-link">getFrame</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.v1.Frame frame = 3 [json_name = "frame"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFrame(viam.app.v1.Robot.Frame.Builder)" class="member-name-link">setFrame</a><wbr>(<a href="Robot.Frame.Builder.html" title="class in viam.app.v1">Robot.Frame.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInsecure()" class="member-name-link">getInsecure</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.v1.Frame frame = 3 [json_name = "frame"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInsecure(boolean)" class="member-name-link">setInsecure</a><wbr>(boolean&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>bool insecure = 6 [json_name = "insecure"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setManagedBy(java.lang.String)" class="member-name-link">setManagedBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string managed_by = 5 [json_name = "managedBy"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setManagedByBytes(com.google.protobuf.ByteString)" class="member-name-link">setManagedByBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getManagedBy()" class="member-name-link">getManagedBy</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string managed_by = 5 [json_name = "managedBy"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setName(java.lang.String)" class="member-name-link">setName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getManagedByBytes()" class="member-name-link">getManagedByBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
+<div class="block"><code>string managed_by = 5 [json_name = "managedBy"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string name = 1 [json_name = "name"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setReconnectInterval(com.google.protobuf.Duration)" class="member-name-link">setReconnectInterval</a><wbr>(com.google.protobuf.Duration&nbsp;value)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Duration reconnect_interval = 8 [json_name = "reconnectInterval"];</code></div>
+<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setReconnectInterval(com.google.protobuf.Duration.Builder)" class="member-name-link">setReconnectInterval</a><wbr>(com.google.protobuf.Duration.Builder&nbsp;builderForValue)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPrefix()" class="member-name-link">getPrefix</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A string with which to prefix all resource names fetched from this remote.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPrefixBytes()" class="member-name-link">getPrefixBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A string with which to prefix all resource names fetched from this remote.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Duration</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReconnectInterval()" class="member-name-link">getReconnectInterval</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Duration reconnect_interval = 8 [json_name = "reconnectInterval"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSecret(java.lang.String)" class="member-name-link">setSecret</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecret()" class="member-name-link">getSecret</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Secret is a helper for a robot location secret.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSecretBytes(com.google.protobuf.ByteString)" class="member-name-link">setSecretBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecretBytes()" class="member-name-link">getSecretBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Secret is a helper for a robot location secret.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setServiceConfigs(int,viam.app.v1.Robot.ResourceLevelServiceConfig)" class="member-name-link">setServiceConfigs</a><wbr>(int&nbsp;index,
- <a href="Robot.ResourceLevelServiceConfig.html" title="class in viam.app.v1">Robot.ResourceLevelServiceConfig</a>&nbsp;value)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ResourceLevelServiceConfig.html" title="class in viam.app.v1">Robot.ResourceLevelServiceConfig</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigs(int)" class="member-name-link">getServiceConfigs</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 9 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setServiceConfigs(int,viam.app.v1.Robot.ResourceLevelServiceConfig.Builder)" class="member-name-link">setServiceConfigs</a><wbr>(int&nbsp;index,
- <a href="Robot.ResourceLevelServiceConfig.Builder.html" title="class in viam.app.v1">Robot.ResourceLevelServiceConfig.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigsCount()" class="member-name-link">getServiceConfigsCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 9 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.ResourceLevelServiceConfig.html" title="class in viam.app.v1">Robot.ResourceLevelServiceConfig</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getServiceConfigsList()" class="member-name-link">getServiceConfigsList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 9 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAuth()" class="member-name-link">hasAuth</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.RemoteAuth auth = 4 [json_name = "auth"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasConnectionCheckInterval()" class="member-name-link">hasConnectionCheckInterval</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Duration connection_check_interval = 7 [json_name = "connectionCheckInterval"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFrame()" class="member-name-link">hasFrame</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.Frame frame = 3 [json_name = "frame"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasReconnectInterval()" class="member-name-link">hasReconnectInterval</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Duration reconnect_interval = 8 [json_name = "reconnectInterval"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeAuth(viam.app.v1.Robot.RemoteAuth)" class="member-name-link">mergeAuth</a><wbr>(<a href="Robot.RemoteAuth.html" title="class in viam.app.v1">Robot.RemoteAuth</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.RemoteAuth auth = 4 [json_name = "auth"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeConnectionCheckInterval(com.google.protobuf.Duration)" class="member-name-link">mergeConnectionCheckInterval</a><wbr>(com.google.protobuf.Duration&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Duration connection_check_interval = 7 [json_name = "connectionCheckInterval"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrame(viam.app.v1.Robot.Frame)" class="member-name-link">mergeFrame</a><wbr>(<a href="Robot.Frame.html" title="class in viam.app.v1">Robot.Frame</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.Frame frame = 3 [json_name = "frame"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeReconnectInterval(com.google.protobuf.Duration)" class="member-name-link">mergeReconnectInterval</a><wbr>(com.google.protobuf.Duration&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Duration reconnect_interval = 8 [json_name = "reconnectInterval"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeServiceConfigs(int)" class="member-name-link">removeServiceConfigs</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 9 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAddress(java.lang.String)" class="member-name-link">setAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string address = 2 [json_name = "address"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAddressBytes(com.google.protobuf.ByteString)" class="member-name-link">setAddressBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string address = 2 [json_name = "address"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAuth(viam.app.v1.Robot.RemoteAuth)" class="member-name-link">setAuth</a><wbr>(<a href="Robot.RemoteAuth.html" title="class in viam.app.v1">Robot.RemoteAuth</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.RemoteAuth auth = 4 [json_name = "auth"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAuth(viam.app.v1.Robot.RemoteAuth.Builder)" class="member-name-link">setAuth</a><wbr>(<a href="Robot.RemoteAuth.Builder.html" title="class in viam.app.v1">Robot.RemoteAuth.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.RemoteAuth auth = 4 [json_name = "auth"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setConnectionCheckInterval(com.google.protobuf.Duration)" class="member-name-link">setConnectionCheckInterval</a><wbr>(com.google.protobuf.Duration&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Duration connection_check_interval = 7 [json_name = "connectionCheckInterval"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setConnectionCheckInterval(com.google.protobuf.Duration.Builder)" class="member-name-link">setConnectionCheckInterval</a><wbr>(com.google.protobuf.Duration.Builder&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Duration connection_check_interval = 7 [json_name = "connectionCheckInterval"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFrame(viam.app.v1.Robot.Frame)" class="member-name-link">setFrame</a><wbr>(<a href="Robot.Frame.html" title="class in viam.app.v1">Robot.Frame</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.Frame frame = 3 [json_name = "frame"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFrame(viam.app.v1.Robot.Frame.Builder)" class="member-name-link">setFrame</a><wbr>(<a href="Robot.Frame.Builder.html" title="class in viam.app.v1">Robot.Frame.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.Frame frame = 3 [json_name = "frame"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInsecure(boolean)" class="member-name-link">setInsecure</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>bool insecure = 6 [json_name = "insecure"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setManagedBy(java.lang.String)" class="member-name-link">setManagedBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string managed_by = 5 [json_name = "managedBy"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setManagedByBytes(com.google.protobuf.ByteString)" class="member-name-link">setManagedByBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string managed_by = 5 [json_name = "managedBy"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setName(java.lang.String)" class="member-name-link">setName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPrefix(java.lang.String)" class="member-name-link">setPrefix</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A string with which to prefix all resource names fetched from this remote.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPrefixBytes(com.google.protobuf.ByteString)" class="member-name-link">setPrefixBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A string with which to prefix all resource names fetched from this remote.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setReconnectInterval(com.google.protobuf.Duration)" class="member-name-link">setReconnectInterval</a><wbr>(com.google.protobuf.Duration&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Duration reconnect_interval = 8 [json_name = "reconnectInterval"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setReconnectInterval(com.google.protobuf.Duration.Builder)" class="member-name-link">setReconnectInterval</a><wbr>(com.google.protobuf.Duration.Builder&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Duration reconnect_interval = 8 [json_name = "reconnectInterval"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSecret(java.lang.String)" class="member-name-link">setSecret</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Secret is a helper for a robot location secret.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSecretBytes(com.google.protobuf.ByteString)" class="member-name-link">setSecretBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Secret is a helper for a robot location secret.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setServiceConfigs(int,viam.app.v1.Robot.ResourceLevelServiceConfig)" class="member-name-link">setServiceConfigs</a><wbr>(int&nbsp;index,
+ <a href="Robot.ResourceLevelServiceConfig.html" title="class in viam.app.v1">Robot.ResourceLevelServiceConfig</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 9 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setServiceConfigs(int,viam.app.v1.Robot.ResourceLevelServiceConfig.Builder)" class="member-name-link">setServiceConfigs</a><wbr>(int&nbsp;index,
+ <a href="Robot.ResourceLevelServiceConfig.Builder.html" title="class in viam.app.v1">Robot.ResourceLevelServiceConfig.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ResourceLevelServiceConfig service_configs = 9 [json_name = "serviceConfigs", (.tagger.v1.tags) = "json:&#92;"service_config&#92;""];</code></div>
 </div>
 </div>
@@ -1072,6 +1102,89 @@ implements <a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.a
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - The bytes for secret to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPrefix()">
+<h3>getPrefix</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPrefix</span>()</div>
+<div class="block"><pre>
+ A string with which to prefix all resource names fetched from this remote.
+ </pre>
+
+ <code>string prefix = 11 [json_name = "prefix"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.RemoteConfigOrBuilder.html#getPrefix()">getPrefix</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RemoteConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The prefix.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPrefixBytes()">
+<h3>getPrefixBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getPrefixBytes</span>()</div>
+<div class="block"><pre>
+ A string with which to prefix all resource names fetched from this remote.
+ </pre>
+
+ <code>string prefix = 11 [json_name = "prefix"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.RemoteConfigOrBuilder.html#getPrefixBytes()">getPrefixBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RemoteConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for prefix.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPrefix(java.lang.String)">
+<h3>setPrefix</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></span>&nbsp;<span class="element-name">setPrefix</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ A string with which to prefix all resource names fetched from this remote.
+ </pre>
+
+ <code>string prefix = 11 [json_name = "prefix"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The prefix to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearPrefix()">
+<h3>clearPrefix</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></span>&nbsp;<span class="element-name">clearPrefix</span>()</div>
+<div class="block"><pre>
+ A string with which to prefix all resource names fetched from this remote.
+ </pre>
+
+ <code>string prefix = 11 [json_name = "prefix"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPrefixBytes(com.google.protobuf.ByteString)">
+<h3>setPrefixBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.RemoteConfig.Builder.html" title="class in viam.app.v1">Robot.RemoteConfig.Builder</a></span>&nbsp;<span class="element-name">setPrefixBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="block"><pre>
+ A string with which to prefix all resource names fetched from this remote.
+ </pre>
+
+ <code>string prefix = 11 [json_name = "prefix"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The bytes for prefix to set.</dd>
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
 </dl>

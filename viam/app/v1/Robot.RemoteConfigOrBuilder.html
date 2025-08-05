@@ -151,6 +151,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string name = 1 [json_name = "name"];</code></div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPrefix()" class="member-name-link">getPrefix</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ A string with which to prefix all resource names fetched from this remote.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPrefixBytes()" class="member-name-link">getPrefixBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ A string with which to prefix all resource names fetched from this remote.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Duration</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReconnectInterval()" class="member-name-link">getReconnectInterval</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -433,6 +445,36 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The bytes for secret.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPrefix()">
+<h3>getPrefix</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPrefix</span>()</div>
+<div class="block"><pre>
+ A string with which to prefix all resource names fetched from this remote.
+ </pre>
+
+ <code>string prefix = 11 [json_name = "prefix"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The prefix.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPrefixBytes()">
+<h3>getPrefixBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getPrefixBytes</span>()</div>
+<div class="block"><pre>
+ A string with which to prefix all resource names fetched from this remote.
+ </pre>
+
+ <code>string prefix = 11 [json_name = "prefix"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for prefix.</dd>
 </dl>
 </section>
 </li>

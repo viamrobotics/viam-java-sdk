@@ -157,14 +157,17 @@ implements <a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.a
 <div class="col-second even-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#RECONNECT_INTERVAL_FIELD_NUMBER" class="member-name-link">RECONNECT_INTERVAL_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#PREFIX_FIELD_NUMBER" class="member-name-link">PREFIX_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#SECRET_FIELD_NUMBER" class="member-name-link">SECRET_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#RECONNECT_INTERVAL_FIELD_NUMBER" class="member-name-link">RECONNECT_INTERVAL_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#SERVICE_CONFIGS_FIELD_NUMBER" class="member-name-link">SERVICE_CONFIGS_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#SECRET_FIELD_NUMBER" class="member-name-link">SECRET_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#SERVICE_CONFIGS_FIELD_NUMBER" class="member-name-link">SERVICE_CONFIGS_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -242,6 +245,18 @@ implements <a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.a
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string name = 1 [json_name = "name"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPrefix()" class="member-name-link">getPrefix</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A string with which to prefix all resource names fetched from this remote.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPrefixBytes()" class="member-name-link">getPrefixBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ A string with which to prefix all resource names fetched from this remote.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Duration</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReconnectInterval()" class="member-name-link">getReconnectInterval</a>()</code></div>
@@ -517,6 +532,20 @@ implements <a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.a
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#viam.app.v1.Robot.RemoteConfig.SECRET_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="PREFIX_FIELD_NUMBER">
+<h3>PREFIX_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">PREFIX_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.Robot.RemoteConfig.PREFIX_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -803,6 +832,40 @@ implements <a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.a
 <dd><code><a href="Robot.RemoteConfigOrBuilder.html#getSecretBytes()">getSecretBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RemoteConfigOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for secret.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPrefix()">
+<h3>getPrefix</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPrefix</span>()</div>
+<div class="block"><pre>
+ A string with which to prefix all resource names fetched from this remote.
+ </pre>
+
+ <code>string prefix = 11 [json_name = "prefix"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.RemoteConfigOrBuilder.html#getPrefix()">getPrefix</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RemoteConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The prefix.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPrefixBytes()">
+<h3>getPrefixBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getPrefixBytes</span>()</div>
+<div class="block"><pre>
+ A string with which to prefix all resource names fetched from this remote.
+ </pre>
+
+ <code>string prefix = 11 [json_name = "prefix"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.RemoteConfigOrBuilder.html#getPrefixBytes()">getPrefixBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.RemoteConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RemoteConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for prefix.</dd>
 </dl>
 </section>
 </li>
