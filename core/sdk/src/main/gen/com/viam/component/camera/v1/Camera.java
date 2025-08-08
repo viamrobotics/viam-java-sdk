@@ -1243,6 +1243,25 @@ public final class Camera {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
   }
   /**
    * Protobuf type {@code viam.component.camera.v1.GetImagesRequest}
@@ -1255,6 +1274,7 @@ public final class Camera {
     private GetImagesRequest() {
       name_ = "";
     }
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private java.lang.String name_;
     /**
@@ -1320,6 +1340,72 @@ public final class Camera {
       checkByteStringIsUtf8(value);
       name_ = value.toStringUtf8();
 
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseFrom(
@@ -1488,6 +1574,77 @@ public final class Camera {
         return this;
       }
 
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetImagesRequest)
     }
     @java.lang.Override
@@ -1504,10 +1661,13 @@ public final class Camera {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "name_",
+              "extra_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
