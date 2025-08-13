@@ -3950,6 +3950,933 @@ public final class DatasetOuterClass {
     }
   }
 
+  public interface MergeDatasetsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.MergeDatasetsRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+     * @return A list containing the datasetIds.
+     */
+    java.util.List<java.lang.String>
+        getDatasetIdsList();
+    /**
+     * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+     * @return The count of datasetIds.
+     */
+    int getDatasetIdsCount();
+    /**
+     * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    java.lang.String getDatasetIds(int index);
+    /**
+     * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdsBytes(int index);
+
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+  }
+  /**
+   * <pre>
+   * MergeDatasetsRequest merges multiple datasets specified by their dataset IDs into a new dataset.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.dataset.v1.MergeDatasetsRequest}
+   */
+  public  static final class MergeDatasetsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          MergeDatasetsRequest, MergeDatasetsRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.MergeDatasetsRequest)
+      MergeDatasetsRequestOrBuilder {
+    private MergeDatasetsRequest() {
+      datasetIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      name_ = "";
+      organizationId_ = "";
+    }
+    public static final int DATASET_IDS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> datasetIds_;
+    /**
+     * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+     * @return A list containing the datasetIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getDatasetIdsList() {
+      return datasetIds_;
+    }
+    /**
+     * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+     * @return The count of datasetIds.
+     */
+    @java.lang.Override
+    public int getDatasetIdsCount() {
+      return datasetIds_.size();
+    }
+    /**
+     * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetIds(int index) {
+      return datasetIds_.get(index);
+    }
+    /**
+     * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the datasetIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          datasetIds_.get(index));
+    }
+    private void ensureDatasetIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          datasetIds_;  if (!tmp.isModifiable()) {
+        datasetIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The datasetIds to set.
+     */
+    private void setDatasetIds(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureDatasetIdsIsMutable();
+      datasetIds_.set(index, value);
+    }
+    /**
+     * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+     * @param value The datasetIds to add.
+     */
+    private void addDatasetIds(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureDatasetIdsIsMutable();
+      datasetIds_.add(value);
+    }
+    /**
+     * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+     * @param values The datasetIds to add.
+     */
+    private void addAllDatasetIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDatasetIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, datasetIds_);
+    }
+    /**
+     * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+     */
+    private void clearDatasetIds() {
+      datasetIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+     * @param value The bytes of the datasetIds to add.
+     */
+    private void addDatasetIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureDatasetIdsIsMutable();
+      datasetIds_.add(value.toStringUtf8());
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private java.lang.String name_;
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 3;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * MergeDatasetsRequest merges multiple datasets specified by their dataset IDs into a new dataset.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.dataset.v1.MergeDatasetsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.MergeDatasetsRequest)
+        viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequestOrBuilder {
+      // Construct using viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+       * @return A list containing the datasetIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getDatasetIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getDatasetIdsList());
+      }
+      /**
+       * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+       * @return The count of datasetIds.
+       */
+      @java.lang.Override
+      public int getDatasetIdsCount() {
+        return instance.getDatasetIdsCount();
+      }
+      /**
+       * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+       * @param index The index of the element to return.
+       * @return The datasetIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getDatasetIds(int index) {
+        return instance.getDatasetIds(index);
+      }
+      /**
+       * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the datasetIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDatasetIdsBytes(int index) {
+        return instance.getDatasetIdsBytes(index);
+      }
+      /**
+       * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The datasetIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setDatasetIds(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+       * @param value The datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDatasetIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addDatasetIds(value);
+        return this;
+      }
+      /**
+       * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+       * @param values The datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDatasetIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllDatasetIds(values);
+        return this;
+      }
+      /**
+       * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetIds() {
+        copyOnWrite();
+        instance.clearDatasetIds();
+        return this;
+      }
+      /**
+       * <code>repeated string dataset_ids = 1 [json_name = "datasetIds"];</code>
+       * @param value The bytes of the datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDatasetIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addDatasetIdsBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 3 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.MergeDatasetsRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "datasetIds_",
+              "name_",
+              "organizationId_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u021a\u0002\u0208" +
+                "\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.MergeDatasetsRequest)
+    private static final viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest DEFAULT_INSTANCE;
+    static {
+      MergeDatasetsRequest defaultInstance = new MergeDatasetsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MergeDatasetsRequest.class, defaultInstance);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<MergeDatasetsRequest> PARSER;
+
+    public static com.google.protobuf.Parser<MergeDatasetsRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface MergeDatasetsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.MergeDatasetsResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The datasetId.
+     */
+    java.lang.String getDatasetId();
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The bytes for datasetId.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdBytes();
+  }
+  /**
+   * <pre>
+   * MergeDatasetsResponse returns the dataset ID of the newly created merged dataset.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.dataset.v1.MergeDatasetsResponse}
+   */
+  public  static final class MergeDatasetsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          MergeDatasetsResponse, MergeDatasetsResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.MergeDatasetsResponse)
+      MergeDatasetsResponseOrBuilder {
+    private MergeDatasetsResponse() {
+      datasetId_ = "";
+    }
+    public static final int DATASET_ID_FIELD_NUMBER = 1;
+    private java.lang.String datasetId_;
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The datasetId.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetId() {
+      return datasetId_;
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The bytes for datasetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(datasetId_);
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @param value The datasetId to set.
+     */
+    private void setDatasetId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      datasetId_ = value;
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     */
+    private void clearDatasetId() {
+
+      datasetId_ = getDefaultInstance().getDatasetId();
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @param value The bytes for datasetId to set.
+     */
+    private void setDatasetIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      datasetId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * MergeDatasetsResponse returns the dataset ID of the newly created merged dataset.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.dataset.v1.MergeDatasetsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.MergeDatasetsResponse)
+        viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponseOrBuilder {
+      // Construct using viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return The datasetId.
+       */
+      @java.lang.Override
+      public java.lang.String getDatasetId() {
+        return instance.getDatasetId();
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return The bytes for datasetId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDatasetIdBytes() {
+        return instance.getDatasetIdBytes();
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @param value The datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDatasetId(value);
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetId() {
+        copyOnWrite();
+        instance.clearDatasetId();
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @param value The bytes for datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDatasetIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.MergeDatasetsResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "datasetId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.MergeDatasetsResponse)
+    private static final viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse DEFAULT_INSTANCE;
+    static {
+      MergeDatasetsResponse defaultInstance = new MergeDatasetsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MergeDatasetsResponse.class, defaultInstance);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<MergeDatasetsResponse> PARSER;
+
+    public static com.google.protobuf.Parser<MergeDatasetsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
 
   static {
   }
