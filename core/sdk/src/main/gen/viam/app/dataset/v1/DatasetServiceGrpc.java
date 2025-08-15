@@ -168,6 +168,36 @@ public final class DatasetServiceGrpc {
     return getListDatasetsByIDsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest,
+      viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse> getMergeDatasetsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MergeDatasets",
+      requestType = viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest.class,
+      responseType = viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest,
+      viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse> getMergeDatasetsMethod() {
+    io.grpc.MethodDescriptor<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest, viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse> getMergeDatasetsMethod;
+    if ((getMergeDatasetsMethod = DatasetServiceGrpc.getMergeDatasetsMethod) == null) {
+      synchronized (DatasetServiceGrpc.class) {
+        if ((getMergeDatasetsMethod = DatasetServiceGrpc.getMergeDatasetsMethod) == null) {
+          DatasetServiceGrpc.getMergeDatasetsMethod = getMergeDatasetsMethod =
+              io.grpc.MethodDescriptor.<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest, viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MergeDatasets"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getMergeDatasetsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -268,6 +298,16 @@ public final class DatasetServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDatasetsByIDsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * MergeDatasets merges multiple datasets into a new dataset.
+     * </pre>
+     */
+    default void mergeDatasets(viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMergeDatasetsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -357,6 +397,17 @@ public final class DatasetServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListDatasetsByIDsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * MergeDatasets merges multiple datasets into a new dataset.
+     * </pre>
+     */
+    public void mergeDatasets(viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getMergeDatasetsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -426,6 +477,16 @@ public final class DatasetServiceGrpc {
     public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse listDatasetsByIDs(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListDatasetsByIDsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * MergeDatasets merges multiple datasets into a new dataset.
+     * </pre>
+     */
+    public viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse mergeDatasets(viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMergeDatasetsMethod(), getCallOptions(), request);
     }
   }
 
@@ -502,6 +563,17 @@ public final class DatasetServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListDatasetsByIDsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * MergeDatasets merges multiple datasets into a new dataset.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse> mergeDatasets(
+        viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getMergeDatasetsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_DATASET = 0;
@@ -509,6 +581,7 @@ public final class DatasetServiceGrpc {
   private static final int METHODID_RENAME_DATASET = 2;
   private static final int METHODID_LIST_DATASETS_BY_ORGANIZATION_ID = 3;
   private static final int METHODID_LIST_DATASETS_BY_IDS = 4;
+  private static final int METHODID_MERGE_DATASETS = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -546,6 +619,10 @@ public final class DatasetServiceGrpc {
         case METHODID_LIST_DATASETS_BY_IDS:
           serviceImpl.listDatasetsByIDs((viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse>) responseObserver);
+          break;
+        case METHODID_MERGE_DATASETS:
+          serviceImpl.mergeDatasets((viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -600,6 +677,13 @@ public final class DatasetServiceGrpc {
               viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest,
               viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse>(
                 service, METHODID_LIST_DATASETS_BY_IDS)))
+        .addMethod(
+          getMergeDatasetsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest,
+              viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse>(
+                service, METHODID_MERGE_DATASETS)))
         .build();
   }
 
@@ -617,6 +701,7 @@ public final class DatasetServiceGrpc {
               .addMethod(getRenameDatasetMethod())
               .addMethod(getListDatasetsByOrganizationIDMethod())
               .addMethod(getListDatasetsByIDsMethod())
+              .addMethod(getMergeDatasetsMethod())
               .build();
         }
       }

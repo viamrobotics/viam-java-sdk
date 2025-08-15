@@ -1243,6 +1243,70 @@ public final class Camera {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <pre>
+     * The names of the sensors to retrieve images from. If this is not provided,
+     * all images from all sensors will be returned.
+     * </pre>
+     *
+     * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+     * @return A list containing the filterSourceNames.
+     */
+    java.util.List<java.lang.String>
+        getFilterSourceNamesList();
+    /**
+     * <pre>
+     * The names of the sensors to retrieve images from. If this is not provided,
+     * all images from all sensors will be returned.
+     * </pre>
+     *
+     * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+     * @return The count of filterSourceNames.
+     */
+    int getFilterSourceNamesCount();
+    /**
+     * <pre>
+     * The names of the sensors to retrieve images from. If this is not provided,
+     * all images from all sensors will be returned.
+     * </pre>
+     *
+     * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+     * @param index The index of the element to return.
+     * @return The filterSourceNames at the given index.
+     */
+    java.lang.String getFilterSourceNames(int index);
+    /**
+     * <pre>
+     * The names of the sensors to retrieve images from. If this is not provided,
+     * all images from all sensors will be returned.
+     * </pre>
+     *
+     * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+     * @param index The index of the element to return.
+     * @return The filterSourceNames at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFilterSourceNamesBytes(int index);
+
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
   }
   /**
    * Protobuf type {@code viam.component.camera.v1.GetImagesRequest}
@@ -1254,7 +1318,9 @@ public final class Camera {
       GetImagesRequestOrBuilder {
     private GetImagesRequest() {
       name_ = "";
+      filterSourceNames_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private java.lang.String name_;
     /**
@@ -1320,6 +1386,210 @@ public final class Camera {
       checkByteStringIsUtf8(value);
       name_ = value.toStringUtf8();
 
+    }
+
+    public static final int FILTER_SOURCE_NAMES_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> filterSourceNames_;
+    /**
+     * <pre>
+     * The names of the sensors to retrieve images from. If this is not provided,
+     * all images from all sensors will be returned.
+     * </pre>
+     *
+     * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+     * @return A list containing the filterSourceNames.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getFilterSourceNamesList() {
+      return filterSourceNames_;
+    }
+    /**
+     * <pre>
+     * The names of the sensors to retrieve images from. If this is not provided,
+     * all images from all sensors will be returned.
+     * </pre>
+     *
+     * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+     * @return The count of filterSourceNames.
+     */
+    @java.lang.Override
+    public int getFilterSourceNamesCount() {
+      return filterSourceNames_.size();
+    }
+    /**
+     * <pre>
+     * The names of the sensors to retrieve images from. If this is not provided,
+     * all images from all sensors will be returned.
+     * </pre>
+     *
+     * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+     * @param index The index of the element to return.
+     * @return The filterSourceNames at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getFilterSourceNames(int index) {
+      return filterSourceNames_.get(index);
+    }
+    /**
+     * <pre>
+     * The names of the sensors to retrieve images from. If this is not provided,
+     * all images from all sensors will be returned.
+     * </pre>
+     *
+     * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the filterSourceNames at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterSourceNamesBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          filterSourceNames_.get(index));
+    }
+    private void ensureFilterSourceNamesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          filterSourceNames_;  if (!tmp.isModifiable()) {
+        filterSourceNames_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * The names of the sensors to retrieve images from. If this is not provided,
+     * all images from all sensors will be returned.
+     * </pre>
+     *
+     * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+     * @param index The index to set the value at.
+     * @param value The filterSourceNames to set.
+     */
+    private void setFilterSourceNames(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureFilterSourceNamesIsMutable();
+      filterSourceNames_.set(index, value);
+    }
+    /**
+     * <pre>
+     * The names of the sensors to retrieve images from. If this is not provided,
+     * all images from all sensors will be returned.
+     * </pre>
+     *
+     * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+     * @param value The filterSourceNames to add.
+     */
+    private void addFilterSourceNames(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureFilterSourceNamesIsMutable();
+      filterSourceNames_.add(value);
+    }
+    /**
+     * <pre>
+     * The names of the sensors to retrieve images from. If this is not provided,
+     * all images from all sensors will be returned.
+     * </pre>
+     *
+     * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+     * @param values The filterSourceNames to add.
+     */
+    private void addAllFilterSourceNames(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureFilterSourceNamesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, filterSourceNames_);
+    }
+    /**
+     * <pre>
+     * The names of the sensors to retrieve images from. If this is not provided,
+     * all images from all sensors will be returned.
+     * </pre>
+     *
+     * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+     */
+    private void clearFilterSourceNames() {
+      filterSourceNames_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * The names of the sensors to retrieve images from. If this is not provided,
+     * all images from all sensors will be returned.
+     * </pre>
+     *
+     * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+     * @param value The bytes of the filterSourceNames to add.
+     */
+    private void addFilterSourceNamesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureFilterSourceNamesIsMutable();
+      filterSourceNames_.add(value.toStringUtf8());
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseFrom(
@@ -1488,6 +1758,214 @@ public final class Camera {
         return this;
       }
 
+      /**
+       * <pre>
+       * The names of the sensors to retrieve images from. If this is not provided,
+       * all images from all sensors will be returned.
+       * </pre>
+       *
+       * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+       * @return A list containing the filterSourceNames.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getFilterSourceNamesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getFilterSourceNamesList());
+      }
+      /**
+       * <pre>
+       * The names of the sensors to retrieve images from. If this is not provided,
+       * all images from all sensors will be returned.
+       * </pre>
+       *
+       * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+       * @return The count of filterSourceNames.
+       */
+      @java.lang.Override
+      public int getFilterSourceNamesCount() {
+        return instance.getFilterSourceNamesCount();
+      }
+      /**
+       * <pre>
+       * The names of the sensors to retrieve images from. If this is not provided,
+       * all images from all sensors will be returned.
+       * </pre>
+       *
+       * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+       * @param index The index of the element to return.
+       * @return The filterSourceNames at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getFilterSourceNames(int index) {
+        return instance.getFilterSourceNames(index);
+      }
+      /**
+       * <pre>
+       * The names of the sensors to retrieve images from. If this is not provided,
+       * all images from all sensors will be returned.
+       * </pre>
+       *
+       * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the filterSourceNames at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFilterSourceNamesBytes(int index) {
+        return instance.getFilterSourceNamesBytes(index);
+      }
+      /**
+       * <pre>
+       * The names of the sensors to retrieve images from. If this is not provided,
+       * all images from all sensors will be returned.
+       * </pre>
+       *
+       * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+       * @param index The index to set the value at.
+       * @param value The filterSourceNames to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterSourceNames(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setFilterSourceNames(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The names of the sensors to retrieve images from. If this is not provided,
+       * all images from all sensors will be returned.
+       * </pre>
+       *
+       * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+       * @param value The filterSourceNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFilterSourceNames(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addFilterSourceNames(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The names of the sensors to retrieve images from. If this is not provided,
+       * all images from all sensors will be returned.
+       * </pre>
+       *
+       * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+       * @param values The filterSourceNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFilterSourceNames(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllFilterSourceNames(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * The names of the sensors to retrieve images from. If this is not provided,
+       * all images from all sensors will be returned.
+       * </pre>
+       *
+       * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilterSourceNames() {
+        copyOnWrite();
+        instance.clearFilterSourceNames();
+        return this;
+      }
+      /**
+       * <pre>
+       * The names of the sensors to retrieve images from. If this is not provided,
+       * all images from all sensors will be returned.
+       * </pre>
+       *
+       * <code>repeated string filter_source_names = 2 [json_name = "filterSourceNames"];</code>
+       * @param value The bytes of the filterSourceNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFilterSourceNamesBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addFilterSourceNamesBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetImagesRequest)
     }
     @java.lang.Override
@@ -1504,10 +1982,14 @@ public final class Camera {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "name_",
+              "filterSourceNames_",
+              "extra_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0001\u0000\u0001\u0208\u0002\u021ac" +
+                "\u1009\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -2275,6 +2757,26 @@ public final class Camera {
      * @return The image.
      */
     com.google.protobuf.ByteString getImage();
+
+    /**
+     * <pre>
+     * The mime type of the image
+     * </pre>
+     *
+     * <code>string mime_type = 4 [json_name = "mimeType"];</code>
+     * @return The mimeType.
+     */
+    java.lang.String getMimeType();
+    /**
+     * <pre>
+     * The mime type of the image
+     * </pre>
+     *
+     * <code>string mime_type = 4 [json_name = "mimeType"];</code>
+     * @return The bytes for mimeType.
+     */
+    com.google.protobuf.ByteString
+        getMimeTypeBytes();
   }
   /**
    * Protobuf type {@code viam.component.camera.v1.Image}
@@ -2287,6 +2789,7 @@ public final class Camera {
     private Image() {
       sourceName_ = "";
       image_ = com.google.protobuf.ByteString.EMPTY;
+      mimeType_ = "";
     }
     public static final int SOURCE_NAME_FIELD_NUMBER = 1;
     private java.lang.String sourceName_;
@@ -2454,6 +2957,73 @@ public final class Camera {
     private void clearImage() {
 
       image_ = getDefaultInstance().getImage();
+    }
+
+    public static final int MIME_TYPE_FIELD_NUMBER = 4;
+    private java.lang.String mimeType_;
+    /**
+     * <pre>
+     * The mime type of the image
+     * </pre>
+     *
+     * <code>string mime_type = 4 [json_name = "mimeType"];</code>
+     * @return The mimeType.
+     */
+    @java.lang.Override
+    public java.lang.String getMimeType() {
+      return mimeType_;
+    }
+    /**
+     * <pre>
+     * The mime type of the image
+     * </pre>
+     *
+     * <code>string mime_type = 4 [json_name = "mimeType"];</code>
+     * @return The bytes for mimeType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMimeTypeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
+    }
+    /**
+     * <pre>
+     * The mime type of the image
+     * </pre>
+     *
+     * <code>string mime_type = 4 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    private void setMimeType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mimeType_ = value;
+    }
+    /**
+     * <pre>
+     * The mime type of the image
+     * </pre>
+     *
+     * <code>string mime_type = 4 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = getDefaultInstance().getMimeType();
+    }
+    /**
+     * <pre>
+     * The mime type of the image
+     * </pre>
+     *
+     * <code>string mime_type = 4 [json_name = "mimeType"];</code>
+     * @param value The bytes for mimeType to set.
+     */
+    private void setMimeTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mimeType_ = value.toStringUtf8();
+
     }
 
     public static com.viam.component.camera.v1.Camera.Image parseFrom(
@@ -2728,6 +3298,75 @@ public final class Camera {
         return this;
       }
 
+      /**
+       * <pre>
+       * The mime type of the image
+       * </pre>
+       *
+       * <code>string mime_type = 4 [json_name = "mimeType"];</code>
+       * @return The mimeType.
+       */
+      @java.lang.Override
+      public java.lang.String getMimeType() {
+        return instance.getMimeType();
+      }
+      /**
+       * <pre>
+       * The mime type of the image
+       * </pre>
+       *
+       * <code>string mime_type = 4 [json_name = "mimeType"];</code>
+       * @return The bytes for mimeType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMimeTypeBytes() {
+        return instance.getMimeTypeBytes();
+      }
+      /**
+       * <pre>
+       * The mime type of the image
+       * </pre>
+       *
+       * <code>string mime_type = 4 [json_name = "mimeType"];</code>
+       * @param value The mimeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMimeType(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMimeType(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The mime type of the image
+       * </pre>
+       *
+       * <code>string mime_type = 4 [json_name = "mimeType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMimeType() {
+        copyOnWrite();
+        instance.clearMimeType();
+        return this;
+      }
+      /**
+       * <pre>
+       * The mime type of the image
+       * </pre>
+       *
+       * <code>string mime_type = 4 [json_name = "mimeType"];</code>
+       * @param value The bytes for mimeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMimeTypeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMimeTypeBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.Image)
     }
     @java.lang.Override
@@ -2747,10 +3386,11 @@ public final class Camera {
               "sourceName_",
               "format_",
               "image_",
+              "mimeType_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\f" +
-                "\u0003\n";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\f" +
+                "\u0003\n\u0004\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
