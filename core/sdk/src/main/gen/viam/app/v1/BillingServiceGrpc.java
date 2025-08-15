@@ -225,6 +225,36 @@ public final class BillingServiceGrpc {
     return getUpdateOrganizationBillingTierMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest,
+      viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse> getCreateInvoiceAndChargeImmediatelyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateInvoiceAndChargeImmediately",
+      requestType = viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest.class,
+      responseType = viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest,
+      viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse> getCreateInvoiceAndChargeImmediatelyMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest, viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse> getCreateInvoiceAndChargeImmediatelyMethod;
+    if ((getCreateInvoiceAndChargeImmediatelyMethod = BillingServiceGrpc.getCreateInvoiceAndChargeImmediatelyMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getCreateInvoiceAndChargeImmediatelyMethod = BillingServiceGrpc.getCreateInvoiceAndChargeImmediatelyMethod) == null) {
+          BillingServiceGrpc.getCreateInvoiceAndChargeImmediatelyMethod = getCreateInvoiceAndChargeImmediatelyMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest, viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateInvoiceAndChargeImmediately"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getCreateInvoiceAndChargeImmediatelyMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -342,6 +372,16 @@ public final class BillingServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.Billing.UpdateOrganizationBillingTierResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateOrganizationBillingTierMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Directly create a flat fee invoice for an organization and charge on the spot
+     * </pre>
+     */
+    default void createInvoiceAndChargeImmediately(viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInvoiceAndChargeImmediatelyMethod(), responseObserver);
+    }
   }
 
   /**
@@ -447,6 +487,17 @@ public final class BillingServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateOrganizationBillingTierMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Directly create a flat fee invoice for an organization and charge on the spot
+     * </pre>
+     */
+    public void createInvoiceAndChargeImmediately(viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateInvoiceAndChargeImmediatelyMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -535,6 +586,16 @@ public final class BillingServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateOrganizationBillingTierMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Directly create a flat fee invoice for an organization and charge on the spot
+     * </pre>
+     */
+    public viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse createInvoiceAndChargeImmediately(viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateInvoiceAndChargeImmediatelyMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -618,6 +679,17 @@ public final class BillingServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateOrganizationBillingTierMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Directly create a flat fee invoice for an organization and charge on the spot
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse> createInvoiceAndChargeImmediately(
+        viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateInvoiceAndChargeImmediatelyMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CURRENT_MONTH_USAGE = 0;
@@ -627,6 +699,7 @@ public final class BillingServiceGrpc {
   private static final int METHODID_SEND_PAYMENT_REQUIRED_EMAIL = 4;
   private static final int METHODID_GET_AVAILABLE_BILLING_TIERS = 5;
   private static final int METHODID_UPDATE_ORGANIZATION_BILLING_TIER = 6;
+  private static final int METHODID_CREATE_INVOICE_AND_CHARGE_IMMEDIATELY = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -672,6 +745,10 @@ public final class BillingServiceGrpc {
         case METHODID_UPDATE_ORGANIZATION_BILLING_TIER:
           serviceImpl.updateOrganizationBillingTier((viam.app.v1.Billing.UpdateOrganizationBillingTierRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.Billing.UpdateOrganizationBillingTierResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_INVOICE_AND_CHARGE_IMMEDIATELY:
+          serviceImpl.createInvoiceAndChargeImmediately((viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -740,6 +817,13 @@ public final class BillingServiceGrpc {
               viam.app.v1.Billing.UpdateOrganizationBillingTierRequest,
               viam.app.v1.Billing.UpdateOrganizationBillingTierResponse>(
                 service, METHODID_UPDATE_ORGANIZATION_BILLING_TIER)))
+        .addMethod(
+          getCreateInvoiceAndChargeImmediatelyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest,
+              viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse>(
+                service, METHODID_CREATE_INVOICE_AND_CHARGE_IMMEDIATELY)))
         .build();
   }
 
@@ -759,6 +843,7 @@ public final class BillingServiceGrpc {
               .addMethod(getSendPaymentRequiredEmailMethod())
               .addMethod(getGetAvailableBillingTiersMethod())
               .addMethod(getUpdateOrganizationBillingTierMethod())
+              .addMethod(getCreateInvoiceAndChargeImmediatelyMethod())
               .build();
         }
       }
