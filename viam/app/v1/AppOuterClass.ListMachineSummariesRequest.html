@@ -224,12 +224,14 @@ implements <a href="AppOuterClass.ListMachineSummariesRequestOrBuilder.html" tit
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+<div class="block">
+ Optional organization ID.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+<div class="block">
+ Optional organization ID.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLimit()" class="member-name-link">hasLimit</a>()</code></div>
@@ -382,7 +384,11 @@ implements <a href="AppOuterClass.ListMachineSummariesRequestOrBuilder.html" tit
 <section class="detail" id="getOrganizationId()">
 <h3>getOrganizationId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getOrganizationId</span>()</div>
-<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+<div class="block"><pre>
+ Optional organization ID. If no value is set it will search among all the organanizations the caller has access to
+ </pre>
+
+ <code>string organization_id = 1 [json_name = "organizationId"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="AppOuterClass.ListMachineSummariesRequestOrBuilder.html#getOrganizationId()">getOrganizationId</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.ListMachineSummariesRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.ListMachineSummariesRequestOrBuilder</a></code></dd>
@@ -395,7 +401,11 @@ implements <a href="AppOuterClass.ListMachineSummariesRequestOrBuilder.html" tit
 <section class="detail" id="getOrganizationIdBytes()">
 <h3>getOrganizationIdBytes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getOrganizationIdBytes</span>()</div>
-<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+<div class="block"><pre>
+ Optional organization ID. If no value is set it will search among all the organanizations the caller has access to
+ </pre>
+
+ <code>string organization_id = 1 [json_name = "organizationId"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="AppOuterClass.ListMachineSummariesRequestOrBuilder.html#getOrganizationIdBytes()">getOrganizationIdBytes</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.ListMachineSummariesRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.ListMachineSummariesRequestOrBuilder</a></code></dd>

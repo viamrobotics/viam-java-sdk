@@ -136,8 +136,11 @@ implements <a href="Data.ClassificationOrBuilder.html" title="interface in viam.
 <div class="col-second even-row-color"><code><a href="#CONFIDENCE_FIELD_NUMBER" class="member-name-link">CONFIDENCE_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#LABEL_FIELD_NUMBER" class="member-name-link">LABEL_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#LABEL_FIELD_NUMBER" class="member-name-link">LABEL_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -172,6 +175,16 @@ implements <a href="Data.ClassificationOrBuilder.html" title="interface in viam.
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Data.Classification.html" title="class in viam.app.data.v1">Data.Classification</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string id = 3 [json_name = "id"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIdBytes()" class="member-name-link">getIdBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string id = 3 [json_name = "id"];</code></div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLabel()" class="member-name-link">getLabel</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -266,6 +279,20 @@ implements <a href="Data.ClassificationOrBuilder.html" title="interface in viam.
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="ID_FIELD_NUMBER">
+<h3>ID_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ID_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.data.v1.Data.Classification.ID_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="LABEL_FIELD_NUMBER">
 <h3>LABEL_FIELD_NUMBER</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">LABEL_FIELD_NUMBER</span></div>
@@ -301,6 +328,32 @@ implements <a href="Data.ClassificationOrBuilder.html" title="interface in viam.
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="getId()">
+<h3>getId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+<div class="block"><code>string id = 3 [json_name = "id"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.ClassificationOrBuilder.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ClassificationOrBuilder.html" title="interface in viam.app.data.v1">Data.ClassificationOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The id.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getIdBytes()">
+<h3>getIdBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getIdBytes</span>()</div>
+<div class="block"><code>string id = 3 [json_name = "id"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.ClassificationOrBuilder.html#getIdBytes()">getIdBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Data.ClassificationOrBuilder.html" title="interface in viam.app.data.v1">Data.ClassificationOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for id.</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="getLabel()">
 <h3>getLabel</h3>

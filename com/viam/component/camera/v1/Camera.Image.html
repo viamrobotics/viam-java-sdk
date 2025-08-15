@@ -134,8 +134,11 @@ implements <a href="Camera.ImageOrBuilder.html" title="interface in com.viam.com
 <div class="col-second odd-row-color"><code><a href="#IMAGE_FIELD_NUMBER" class="member-name-link">IMAGE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#SOURCE_NAME_FIELD_NUMBER" class="member-name-link">SOURCE_NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MIME_TYPE_FIELD_NUMBER" class="member-name-link">MIME_TYPE_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#SOURCE_NAME_FIELD_NUMBER" class="member-name-link">SOURCE_NAME_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -181,6 +184,18 @@ implements <a href="Camera.ImageOrBuilder.html" title="interface in com.viam.com
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  image in bytes</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeType()" class="member-name-link">getMimeType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The mime type of the image</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeTypeBytes()" class="member-name-link">getMimeTypeBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The mime type of the image</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSourceName()" class="member-name-link">getSourceName</a>()</code></div>
@@ -313,6 +328,20 @@ implements <a href="Camera.ImageOrBuilder.html" title="interface in com.viam.com
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="MIME_TYPE_FIELD_NUMBER">
+<h3>MIME_TYPE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MIME_TYPE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../../constant-values.html#com.viam.component.camera.v1.Camera.Image.MIME_TYPE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -403,6 +432,40 @@ implements <a href="Camera.ImageOrBuilder.html" title="interface in com.viam.com
 <dd><code><a href="Camera.ImageOrBuilder.html#getImage()">getImage</a></code>&nbsp;in interface&nbsp;<code><a href="Camera.ImageOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.ImageOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The image.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMimeType()">
+<h3>getMimeType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getMimeType</span>()</div>
+<div class="block"><pre>
+ The mime type of the image
+ </pre>
+
+ <code>string mime_type = 4 [json_name = "mimeType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Camera.ImageOrBuilder.html#getMimeType()">getMimeType</a></code>&nbsp;in interface&nbsp;<code><a href="Camera.ImageOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.ImageOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The mimeType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMimeTypeBytes()">
+<h3>getMimeTypeBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getMimeTypeBytes</span>()</div>
+<div class="block"><pre>
+ The mime type of the image
+ </pre>
+
+ <code>string mime_type = 4 [json_name = "mimeType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Camera.ImageOrBuilder.html#getMimeTypeBytes()">getMimeTypeBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Camera.ImageOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.ImageOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for mimeType.</dd>
 </dl>
 </section>
 </li>
