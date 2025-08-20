@@ -875,6 +875,7 @@ public final class DataServiceGrpc {
      * AddTagsToBinaryDataByFilter adds string tags, unless the tags are already present, to binary data based on the given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     default void addTagsToBinaryDataByFilter(viam.app.data.v1.Data.AddTagsToBinaryDataByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddTagsToBinaryDataByFilterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddTagsToBinaryDataByFilterMethod(), responseObserver);
@@ -895,6 +896,7 @@ public final class DataServiceGrpc {
      * RemoveTagsToBinaryDataByFilter removes string tags from binary data based on the given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     default void removeTagsFromBinaryDataByFilter(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveTagsFromBinaryDataByFilterMethod(), responseObserver);
@@ -905,6 +907,7 @@ public final class DataServiceGrpc {
      * TagsByFilter gets all unique tags from data based on given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     default void tagsByFilter(viam.app.data.v1.Data.TagsByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TagsByFilterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTagsByFilterMethod(), responseObserver);
@@ -935,6 +938,7 @@ public final class DataServiceGrpc {
      * BoundingBoxLabelsByFilter gets all string labels for bounding boxes from data based on given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     default void boundingBoxLabelsByFilter(viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBoundingBoxLabelsByFilterMethod(), responseObserver);
@@ -1153,6 +1157,7 @@ public final class DataServiceGrpc {
      * AddTagsToBinaryDataByFilter adds string tags, unless the tags are already present, to binary data based on the given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     public void addTagsToBinaryDataByFilter(viam.app.data.v1.Data.AddTagsToBinaryDataByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddTagsToBinaryDataByFilterResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1175,6 +1180,7 @@ public final class DataServiceGrpc {
      * RemoveTagsToBinaryDataByFilter removes string tags from binary data based on the given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     public void removeTagsFromBinaryDataByFilter(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1186,6 +1192,7 @@ public final class DataServiceGrpc {
      * TagsByFilter gets all unique tags from data based on given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     public void tagsByFilter(viam.app.data.v1.Data.TagsByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TagsByFilterResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1219,6 +1226,7 @@ public final class DataServiceGrpc {
      * BoundingBoxLabelsByFilter gets all string labels for bounding boxes from data based on given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     public void boundingBoxLabelsByFilter(viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -1419,6 +1427,7 @@ public final class DataServiceGrpc {
      * AddTagsToBinaryDataByFilter adds string tags, unless the tags are already present, to binary data based on the given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     public viam.app.data.v1.Data.AddTagsToBinaryDataByFilterResponse addTagsToBinaryDataByFilter(viam.app.data.v1.Data.AddTagsToBinaryDataByFilterRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddTagsToBinaryDataByFilterMethod(), getCallOptions(), request);
@@ -1439,6 +1448,7 @@ public final class DataServiceGrpc {
      * RemoveTagsToBinaryDataByFilter removes string tags from binary data based on the given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     public viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterResponse removeTagsFromBinaryDataByFilter(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveTagsFromBinaryDataByFilterMethod(), getCallOptions(), request);
@@ -1449,6 +1459,7 @@ public final class DataServiceGrpc {
      * TagsByFilter gets all unique tags from data based on given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     public viam.app.data.v1.Data.TagsByFilterResponse tagsByFilter(viam.app.data.v1.Data.TagsByFilterRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTagsByFilterMethod(), getCallOptions(), request);
@@ -1479,6 +1490,7 @@ public final class DataServiceGrpc {
      * BoundingBoxLabelsByFilter gets all string labels for bounding boxes from data based on given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     public viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse boundingBoxLabelsByFilter(viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBoundingBoxLabelsByFilterMethod(), getCallOptions(), request);
@@ -1672,6 +1684,7 @@ public final class DataServiceGrpc {
      * AddTagsToBinaryDataByFilter adds string tags, unless the tags are already present, to binary data based on the given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.AddTagsToBinaryDataByFilterResponse> addTagsToBinaryDataByFilter(
         viam.app.data.v1.Data.AddTagsToBinaryDataByFilterRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1694,6 +1707,7 @@ public final class DataServiceGrpc {
      * RemoveTagsToBinaryDataByFilter removes string tags from binary data based on the given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterResponse> removeTagsFromBinaryDataByFilter(
         viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1705,6 +1719,7 @@ public final class DataServiceGrpc {
      * TagsByFilter gets all unique tags from data based on given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.TagsByFilterResponse> tagsByFilter(
         viam.app.data.v1.Data.TagsByFilterRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1738,6 +1753,7 @@ public final class DataServiceGrpc {
      * BoundingBoxLabelsByFilter gets all string labels for bounding boxes from data based on given filter.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse> boundingBoxLabelsByFilter(
         viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(

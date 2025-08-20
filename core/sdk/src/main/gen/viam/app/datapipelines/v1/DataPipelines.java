@@ -8407,6 +8407,26 @@ public final class DataPipelines {
      * @return The status.
      */
     viam.app.datapipelines.v1.DataPipelines.DataPipelineRunStatus getStatus();
+
+    /**
+     * <pre>
+     * The error message if the run failed.
+     * </pre>
+     *
+     * <code>string error_message = 7 [json_name = "errorMessage"];</code>
+     * @return The errorMessage.
+     */
+    java.lang.String getErrorMessage();
+    /**
+     * <pre>
+     * The error message if the run failed.
+     * </pre>
+     *
+     * <code>string error_message = 7 [json_name = "errorMessage"];</code>
+     * @return The bytes for errorMessage.
+     */
+    com.google.protobuf.ByteString
+        getErrorMessageBytes();
   }
   /**
    * Protobuf type {@code viam.app.datapipelines.v1.DataPipelineRun}
@@ -8418,6 +8438,7 @@ public final class DataPipelines {
       DataPipelineRunOrBuilder {
     private DataPipelineRun() {
       id_ = "";
+      errorMessage_ = "";
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
@@ -8811,6 +8832,73 @@ public final class DataPipelines {
     private void clearStatus() {
 
       status_ = 0;
+    }
+
+    public static final int ERROR_MESSAGE_FIELD_NUMBER = 7;
+    private java.lang.String errorMessage_;
+    /**
+     * <pre>
+     * The error message if the run failed.
+     * </pre>
+     *
+     * <code>string error_message = 7 [json_name = "errorMessage"];</code>
+     * @return The errorMessage.
+     */
+    @java.lang.Override
+    public java.lang.String getErrorMessage() {
+      return errorMessage_;
+    }
+    /**
+     * <pre>
+     * The error message if the run failed.
+     * </pre>
+     *
+     * <code>string error_message = 7 [json_name = "errorMessage"];</code>
+     * @return The bytes for errorMessage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorMessageBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(errorMessage_);
+    }
+    /**
+     * <pre>
+     * The error message if the run failed.
+     * </pre>
+     *
+     * <code>string error_message = 7 [json_name = "errorMessage"];</code>
+     * @param value The errorMessage to set.
+     */
+    private void setErrorMessage(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      errorMessage_ = value;
+    }
+    /**
+     * <pre>
+     * The error message if the run failed.
+     * </pre>
+     *
+     * <code>string error_message = 7 [json_name = "errorMessage"];</code>
+     */
+    private void clearErrorMessage() {
+
+      errorMessage_ = getDefaultInstance().getErrorMessage();
+    }
+    /**
+     * <pre>
+     * The error message if the run failed.
+     * </pre>
+     *
+     * <code>string error_message = 7 [json_name = "errorMessage"];</code>
+     * @param value The bytes for errorMessage to set.
+     */
+    private void setErrorMessageBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      errorMessage_ = value.toStringUtf8();
+
     }
 
     public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseFrom(
@@ -9329,6 +9417,75 @@ public final class DataPipelines {
         return this;
       }
 
+      /**
+       * <pre>
+       * The error message if the run failed.
+       * </pre>
+       *
+       * <code>string error_message = 7 [json_name = "errorMessage"];</code>
+       * @return The errorMessage.
+       */
+      @java.lang.Override
+      public java.lang.String getErrorMessage() {
+        return instance.getErrorMessage();
+      }
+      /**
+       * <pre>
+       * The error message if the run failed.
+       * </pre>
+       *
+       * <code>string error_message = 7 [json_name = "errorMessage"];</code>
+       * @return The bytes for errorMessage.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getErrorMessageBytes() {
+        return instance.getErrorMessageBytes();
+      }
+      /**
+       * <pre>
+       * The error message if the run failed.
+       * </pre>
+       *
+       * <code>string error_message = 7 [json_name = "errorMessage"];</code>
+       * @param value The errorMessage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorMessage(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setErrorMessage(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The error message if the run failed.
+       * </pre>
+       *
+       * <code>string error_message = 7 [json_name = "errorMessage"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearErrorMessage() {
+        copyOnWrite();
+        instance.clearErrorMessage();
+        return this;
+      }
+      /**
+       * <pre>
+       * The error message if the run failed.
+       * </pre>
+       *
+       * <code>string error_message = 7 [json_name = "errorMessage"];</code>
+       * @param value The bytes for errorMessage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorMessageBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setErrorMessageBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.DataPipelineRun)
     }
     @java.lang.Override
@@ -9352,10 +9509,12 @@ public final class DataPipelines {
               "dataStartTime_",
               "dataEndTime_",
               "status_",
+              "errorMessage_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u1009\u0001\u0004\u1009\u0002\u0005\u1009\u0003\u0006\f";
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001\u0004\u1009\u0002\u0005\u1009\u0003\u0006\f\u0007\u0208" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
