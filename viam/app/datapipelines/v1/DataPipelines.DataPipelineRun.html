@@ -137,14 +137,17 @@ implements <a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interfac
 <div class="col-second even-row-color"><code><a href="#END_TIME_FIELD_NUMBER" class="member-name-link">END_TIME_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ERROR_MESSAGE_FIELD_NUMBER" class="member-name-link">ERROR_MESSAGE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#START_TIME_FIELD_NUMBER" class="member-name-link">START_TIME_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#STATUS_FIELD_NUMBER" class="member-name-link">STATUS_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#START_TIME_FIELD_NUMBER" class="member-name-link">START_TIME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#STATUS_FIELD_NUMBER" class="member-name-link">STATUS_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -190,6 +193,18 @@ implements <a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interfac
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  The time the run ended.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getErrorMessage()" class="member-name-link">getErrorMessage</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The error message if the run failed.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getErrorMessageBytes()" class="member-name-link">getErrorMessageBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The error message if the run failed.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
@@ -406,6 +421,20 @@ implements <a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interfac
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="ERROR_MESSAGE_FIELD_NUMBER">
+<h3>ERROR_MESSAGE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ERROR_MESSAGE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.DataPipelineRun.ERROR_MESSAGE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -615,6 +644,40 @@ implements <a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interfac
 <dd><code><a href="DataPipelines.DataPipelineRunOrBuilder.html#getStatus()">getStatus</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.DataPipelineRunOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The status.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getErrorMessage()">
+<h3>getErrorMessage</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getErrorMessage</span>()</div>
+<div class="block"><pre>
+ The error message if the run failed.
+ </pre>
+
+ <code>string error_message = 7 [json_name = "errorMessage"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.DataPipelineRunOrBuilder.html#getErrorMessage()">getErrorMessage</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.DataPipelineRunOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The errorMessage.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getErrorMessageBytes()">
+<h3>getErrorMessageBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getErrorMessageBytes</span>()</div>
+<div class="block"><pre>
+ The error message if the run failed.
+ </pre>
+
+ <code>string error_message = 7 [json_name = "errorMessage"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.DataPipelineRunOrBuilder.html#getErrorMessageBytes()">getErrorMessageBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.DataPipelineRunOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for errorMessage.</dd>
 </dl>
 </section>
 </li>
