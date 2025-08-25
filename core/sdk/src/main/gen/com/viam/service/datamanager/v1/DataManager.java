@@ -646,6 +646,1229 @@ public final class DataManager {
     }
   }
 
+  public interface UploadBinaryDataToDatasetsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.datamanager.v1.UploadBinaryDataToDatasetsRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>bytes binary_data = 2 [json_name = "binaryData"];</code>
+     * @return The binaryData.
+     */
+    com.google.protobuf.ByteString getBinaryData();
+
+    /**
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
+     * @return A list containing the tags.
+     */
+    java.util.List<java.lang.String>
+        getTagsList();
+    /**
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
+     * @return The count of tags.
+     */
+    int getTagsCount();
+    /**
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
+     */
+    java.lang.String getTags(int index);
+    /**
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTagsBytes(int index);
+
+    /**
+     * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+     * @return A list containing the datasetIds.
+     */
+    java.util.List<java.lang.String>
+        getDatasetIdsList();
+    /**
+     * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+     * @return The count of datasetIds.
+     */
+    int getDatasetIdsCount();
+    /**
+     * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    java.lang.String getDatasetIds(int index);
+    /**
+     * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdsBytes(int index);
+
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 5 [json_name = "mimeType"];</code>
+     * @return The enum numeric value on the wire for mimeType.
+     */
+    int getMimeTypeValue();
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 5 [json_name = "mimeType"];</code>
+     * @return The mimeType.
+     */
+    viam.app.datasync.v1.DataSync.MimeType getMimeType();
+
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * Protobuf type {@code viam.service.datamanager.v1.UploadBinaryDataToDatasetsRequest}
+   */
+  public  static final class UploadBinaryDataToDatasetsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UploadBinaryDataToDatasetsRequest, UploadBinaryDataToDatasetsRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.datamanager.v1.UploadBinaryDataToDatasetsRequest)
+      UploadBinaryDataToDatasetsRequestOrBuilder {
+    private UploadBinaryDataToDatasetsRequest() {
+      name_ = "";
+      binaryData_ = com.google.protobuf.ByteString.EMPTY;
+      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      datasetIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int BINARY_DATA_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString binaryData_;
+    /**
+     * <code>bytes binary_data = 2 [json_name = "binaryData"];</code>
+     * @return The binaryData.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getBinaryData() {
+      return binaryData_;
+    }
+    /**
+     * <code>bytes binary_data = 2 [json_name = "binaryData"];</code>
+     * @param value The binaryData to set.
+     */
+    private void setBinaryData(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      binaryData_ = value;
+    }
+    /**
+     * <code>bytes binary_data = 2 [json_name = "binaryData"];</code>
+     */
+    private void clearBinaryData() {
+
+      binaryData_ = getDefaultInstance().getBinaryData();
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> tags_;
+    /**
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
+     * @return A list containing the tags.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
+     * @return The count of tags.
+     */
+    @java.lang.Override
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          tags_.get(index));
+    }
+    private void ensureTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          tags_;  if (!tmp.isModifiable()) {
+        tags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
+     * @param index The index to set the value at.
+     * @param value The tags to set.
+     */
+    private void setTags(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTagsIsMutable();
+      tags_.set(index, value);
+    }
+    /**
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
+     * @param value The tags to add.
+     */
+    private void addTags(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureTagsIsMutable();
+      tags_.add(value);
+    }
+    /**
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
+     * @param values The tags to add.
+     */
+    private void addAllTags(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, tags_);
+    }
+    /**
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
+     */
+    private void clearTags() {
+      tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string tags = 3 [json_name = "tags"];</code>
+     * @param value The bytes of the tags to add.
+     */
+    private void addTagsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureTagsIsMutable();
+      tags_.add(value.toStringUtf8());
+    }
+
+    public static final int DATASET_IDS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> datasetIds_;
+    /**
+     * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+     * @return A list containing the datasetIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getDatasetIdsList() {
+      return datasetIds_;
+    }
+    /**
+     * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+     * @return The count of datasetIds.
+     */
+    @java.lang.Override
+    public int getDatasetIdsCount() {
+      return datasetIds_.size();
+    }
+    /**
+     * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetIds(int index) {
+      return datasetIds_.get(index);
+    }
+    /**
+     * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the datasetIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          datasetIds_.get(index));
+    }
+    private void ensureDatasetIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          datasetIds_;  if (!tmp.isModifiable()) {
+        datasetIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The datasetIds to set.
+     */
+    private void setDatasetIds(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureDatasetIdsIsMutable();
+      datasetIds_.set(index, value);
+    }
+    /**
+     * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+     * @param value The datasetIds to add.
+     */
+    private void addDatasetIds(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureDatasetIdsIsMutable();
+      datasetIds_.add(value);
+    }
+    /**
+     * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+     * @param values The datasetIds to add.
+     */
+    private void addAllDatasetIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDatasetIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, datasetIds_);
+    }
+    /**
+     * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+     */
+    private void clearDatasetIds() {
+      datasetIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+     * @param value The bytes of the datasetIds to add.
+     */
+    private void addDatasetIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureDatasetIdsIsMutable();
+      datasetIds_.add(value.toStringUtf8());
+    }
+
+    public static final int MIME_TYPE_FIELD_NUMBER = 5;
+    private int mimeType_;
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 5 [json_name = "mimeType"];</code>
+     * @return The enum numeric value on the wire for mimeType.
+     */
+    @java.lang.Override
+    public int getMimeTypeValue() {
+      return mimeType_;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 5 [json_name = "mimeType"];</code>
+     * @return The mimeType.
+     */
+    @java.lang.Override
+    public viam.app.datasync.v1.DataSync.MimeType getMimeType() {
+      viam.app.datasync.v1.DataSync.MimeType result = viam.app.datasync.v1.DataSync.MimeType.forNumber(mimeType_);
+      return result == null ? viam.app.datasync.v1.DataSync.MimeType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 5 [json_name = "mimeType"];</code>
+     * @param value The enum numeric value on the wire for mimeType to set.
+     */
+    private void setMimeTypeValue(int value) {
+        mimeType_ = value;
+    }
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 5 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    private void setMimeType(viam.app.datasync.v1.DataSync.MimeType value) {
+      mimeType_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 5 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = 0;
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.datamanager.v1.UploadBinaryDataToDatasetsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.datamanager.v1.UploadBinaryDataToDatasetsRequest)
+        com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequestOrBuilder {
+      // Construct using com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>bytes binary_data = 2 [json_name = "binaryData"];</code>
+       * @return The binaryData.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getBinaryData() {
+        return instance.getBinaryData();
+      }
+      /**
+       * <code>bytes binary_data = 2 [json_name = "binaryData"];</code>
+       * @param value The binaryData to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryData(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBinaryData(value);
+        return this;
+      }
+      /**
+       * <code>bytes binary_data = 2 [json_name = "binaryData"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryData() {
+        copyOnWrite();
+        instance.clearBinaryData();
+        return this;
+      }
+
+      /**
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
+       * @return A list containing the tags.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getTagsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getTagsList());
+      }
+      /**
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
+       * @return The count of tags.
+       */
+      @java.lang.Override
+      public int getTagsCount() {
+        return instance.getTagsCount();
+      }
+      /**
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getTags(int index) {
+        return instance.getTags(index);
+      }
+      /**
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTagsBytes(int index) {
+        return instance.getTagsBytes(index);
+      }
+      /**
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTags(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setTags(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTags(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addTags(value);
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllTags(values);
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTags() {
+        copyOnWrite();
+        instance.clearTags();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 3 [json_name = "tags"];</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTagsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addTagsBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+       * @return A list containing the datasetIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getDatasetIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getDatasetIdsList());
+      }
+      /**
+       * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+       * @return The count of datasetIds.
+       */
+      @java.lang.Override
+      public int getDatasetIdsCount() {
+        return instance.getDatasetIdsCount();
+      }
+      /**
+       * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+       * @param index The index of the element to return.
+       * @return The datasetIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getDatasetIds(int index) {
+        return instance.getDatasetIds(index);
+      }
+      /**
+       * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the datasetIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDatasetIdsBytes(int index) {
+        return instance.getDatasetIdsBytes(index);
+      }
+      /**
+       * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The datasetIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setDatasetIds(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+       * @param value The datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDatasetIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addDatasetIds(value);
+        return this;
+      }
+      /**
+       * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+       * @param values The datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDatasetIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllDatasetIds(values);
+        return this;
+      }
+      /**
+       * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetIds() {
+        copyOnWrite();
+        instance.clearDatasetIds();
+        return this;
+      }
+      /**
+       * <code>repeated string dataset_ids = 4 [json_name = "datasetIds"];</code>
+       * @param value The bytes of the datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDatasetIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addDatasetIdsBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 5 [json_name = "mimeType"];</code>
+       * @return The enum numeric value on the wire for mimeType.
+       */
+      @java.lang.Override
+      public int getMimeTypeValue() {
+        return instance.getMimeTypeValue();
+      }
+      /**
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 5 [json_name = "mimeType"];</code>
+       * @param value The mimeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMimeTypeValue(int value) {
+        copyOnWrite();
+        instance.setMimeTypeValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 5 [json_name = "mimeType"];</code>
+       * @return The mimeType.
+       */
+      @java.lang.Override
+      public viam.app.datasync.v1.DataSync.MimeType getMimeType() {
+        return instance.getMimeType();
+      }
+      /**
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 5 [json_name = "mimeType"];</code>
+       * @param value The enum numeric value on the wire for mimeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMimeType(viam.app.datasync.v1.DataSync.MimeType value) {
+        copyOnWrite();
+        instance.setMimeType(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 5 [json_name = "mimeType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMimeType() {
+        copyOnWrite();
+        instance.clearMimeType();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.datamanager.v1.UploadBinaryDataToDatasetsRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "binaryData_",
+              "tags_",
+              "datasetIds_",
+              "mimeType_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0001\u0001c\u0006\u0000\u0002\u0000\u0001\u0208\u0002\n\u0003" +
+                "\u021a\u0004\u021a\u0005\fc\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.datamanager.v1.UploadBinaryDataToDatasetsRequest)
+    private static final com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest DEFAULT_INSTANCE;
+    static {
+      UploadBinaryDataToDatasetsRequest defaultInstance = new UploadBinaryDataToDatasetsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UploadBinaryDataToDatasetsRequest.class, defaultInstance);
+    }
+
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UploadBinaryDataToDatasetsRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UploadBinaryDataToDatasetsRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UploadBinaryDataToDatasetsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.datamanager.v1.UploadBinaryDataToDatasetsResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.service.datamanager.v1.UploadBinaryDataToDatasetsResponse}
+   */
+  public  static final class UploadBinaryDataToDatasetsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UploadBinaryDataToDatasetsResponse, UploadBinaryDataToDatasetsResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.datamanager.v1.UploadBinaryDataToDatasetsResponse)
+      UploadBinaryDataToDatasetsResponseOrBuilder {
+    private UploadBinaryDataToDatasetsResponse() {
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.datamanager.v1.UploadBinaryDataToDatasetsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.datamanager.v1.UploadBinaryDataToDatasetsResponse)
+        com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponseOrBuilder {
+      // Construct using com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.service.datamanager.v1.UploadBinaryDataToDatasetsResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.datamanager.v1.UploadBinaryDataToDatasetsResponse)
+    private static final com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse DEFAULT_INSTANCE;
+    static {
+      UploadBinaryDataToDatasetsResponse defaultInstance = new UploadBinaryDataToDatasetsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UploadBinaryDataToDatasetsResponse.class, defaultInstance);
+    }
+
+    public static com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UploadBinaryDataToDatasetsResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UploadBinaryDataToDatasetsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
 
   static {
   }

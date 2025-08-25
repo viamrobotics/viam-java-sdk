@@ -78,6 +78,36 @@ public final class DataManagerServiceGrpc {
     return getDoCommandMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest,
+      com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse> getUploadBinaryDataToDatasetsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UploadBinaryDataToDatasets",
+      requestType = com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest.class,
+      responseType = com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest,
+      com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse> getUploadBinaryDataToDatasetsMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest, com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse> getUploadBinaryDataToDatasetsMethod;
+    if ((getUploadBinaryDataToDatasetsMethod = DataManagerServiceGrpc.getUploadBinaryDataToDatasetsMethod) == null) {
+      synchronized (DataManagerServiceGrpc.class) {
+        if ((getUploadBinaryDataToDatasetsMethod = DataManagerServiceGrpc.getUploadBinaryDataToDatasetsMethod) == null) {
+          DataManagerServiceGrpc.getUploadBinaryDataToDatasetsMethod = getUploadBinaryDataToDatasetsMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest, com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadBinaryDataToDatasets"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUploadBinaryDataToDatasetsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -148,6 +178,16 @@ public final class DataManagerServiceGrpc {
         io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * UploadBinaryDataToDatasets uploads binary data to specified datasets.
+     * </pre>
+     */
+    default void uploadBinaryDataToDatasets(com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadBinaryDataToDatasetsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -204,6 +244,17 @@ public final class DataManagerServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * UploadBinaryDataToDatasets uploads binary data to specified datasets.
+     * </pre>
+     */
+    public void uploadBinaryDataToDatasets(com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUploadBinaryDataToDatasetsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -243,6 +294,16 @@ public final class DataManagerServiceGrpc {
     public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UploadBinaryDataToDatasets uploads binary data to specified datasets.
+     * </pre>
+     */
+    public com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse uploadBinaryDataToDatasets(com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUploadBinaryDataToDatasetsMethod(), getCallOptions(), request);
     }
   }
 
@@ -286,10 +347,22 @@ public final class DataManagerServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * UploadBinaryDataToDatasets uploads binary data to specified datasets.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse> uploadBinaryDataToDatasets(
+        com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUploadBinaryDataToDatasetsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SYNC = 0;
   private static final int METHODID_DO_COMMAND = 1;
+  private static final int METHODID_UPLOAD_BINARY_DATA_TO_DATASETS = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -315,6 +388,10 @@ public final class DataManagerServiceGrpc {
         case METHODID_DO_COMMAND:
           serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_UPLOAD_BINARY_DATA_TO_DATASETS:
+          serviceImpl.uploadBinaryDataToDatasets((com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -348,6 +425,13 @@ public final class DataManagerServiceGrpc {
               com.viam.common.v1.Common.DoCommandRequest,
               com.viam.common.v1.Common.DoCommandResponse>(
                 service, METHODID_DO_COMMAND)))
+        .addMethod(
+          getUploadBinaryDataToDatasetsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest,
+              com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse>(
+                service, METHODID_UPLOAD_BINARY_DATA_TO_DATASETS)))
         .build();
   }
 
@@ -362,6 +446,7 @@ public final class DataManagerServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .addMethod(getSyncMethod())
               .addMethod(getDoCommandMethod())
+              .addMethod(getUploadBinaryDataToDatasetsMethod())
               .build();
         }
       }

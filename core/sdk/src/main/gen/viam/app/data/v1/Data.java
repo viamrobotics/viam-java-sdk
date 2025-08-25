@@ -19240,14 +19240,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=386
+     *     See app/data/v1/data.proto;l=394
      * @return The id.
      */
     @java.lang.Deprecated java.lang.String getId();
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=386
+     *     See app/data/v1/data.proto;l=394
      * @return The bytes for id.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -19396,7 +19396,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=386
+     *     See app/data/v1/data.proto;l=394
      * @return The id.
      */
     @java.lang.Override
@@ -19406,7 +19406,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=386
+     *     See app/data/v1/data.proto;l=394
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -19417,7 +19417,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=386
+     *     See app/data/v1/data.proto;l=394
      * @param value The id to set.
      */
     private void setId(
@@ -19429,7 +19429,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=386
+     *     See app/data/v1/data.proto;l=394
      */
     private void clearId() {
 
@@ -19438,7 +19438,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=386
+     *     See app/data/v1/data.proto;l=394
      * @param value The bytes for id to set.
      */
     private void setIdBytes(
@@ -20017,7 +20017,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=386
+       *     See app/data/v1/data.proto;l=394
        * @return The id.
        */
       @java.lang.Override
@@ -20027,7 +20027,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=386
+       *     See app/data/v1/data.proto;l=394
        * @return The bytes for id.
        */
       @java.lang.Override
@@ -20038,7 +20038,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=386
+       *     See app/data/v1/data.proto;l=394
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -20051,7 +20051,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=386
+       *     See app/data/v1/data.proto;l=394
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearId() {
@@ -20062,7 +20062,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=386
+       *     See app/data/v1/data.proto;l=394
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -23759,7 +23759,7 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
-  public interface AddTagsToBinaryDataByFilterRequestOrBuilder extends
+  @java.lang.Deprecated public interface AddTagsToBinaryDataByFilterRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.AddTagsToBinaryDataByFilterRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -23806,7 +23806,7 @@ com.google.protobuf.Any defaultValue) {
    *
    * Protobuf type {@code viam.app.data.v1.AddTagsToBinaryDataByFilterRequest}
    */
-  public  static final class AddTagsToBinaryDataByFilterRequest extends
+  @java.lang.Deprecated public  static final class AddTagsToBinaryDataByFilterRequest extends
       com.google.protobuf.GeneratedMessageLite<
           AddTagsToBinaryDataByFilterRequest, AddTagsToBinaryDataByFilterRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.AddTagsToBinaryDataByFilterRequest)
@@ -24271,14 +24271,14 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
-  public interface AddTagsToBinaryDataByFilterResponseOrBuilder extends
+  @java.lang.Deprecated public interface AddTagsToBinaryDataByFilterResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.AddTagsToBinaryDataByFilterResponse)
       com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.app.data.v1.AddTagsToBinaryDataByFilterResponse}
    */
-  public  static final class AddTagsToBinaryDataByFilterResponse extends
+  @java.lang.Deprecated public  static final class AddTagsToBinaryDataByFilterResponse extends
       com.google.protobuf.GeneratedMessageLite<
           AddTagsToBinaryDataByFilterResponse, AddTagsToBinaryDataByFilterResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.AddTagsToBinaryDataByFilterResponse)
@@ -25536,7 +25536,7 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
-  public interface RemoveTagsFromBinaryDataByFilterRequestOrBuilder extends
+  @java.lang.Deprecated public interface RemoveTagsFromBinaryDataByFilterRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.RemoveTagsFromBinaryDataByFilterRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -25583,7 +25583,7 @@ com.google.protobuf.Any defaultValue) {
    *
    * Protobuf type {@code viam.app.data.v1.RemoveTagsFromBinaryDataByFilterRequest}
    */
-  public  static final class RemoveTagsFromBinaryDataByFilterRequest extends
+  @java.lang.Deprecated public  static final class RemoveTagsFromBinaryDataByFilterRequest extends
       com.google.protobuf.GeneratedMessageLite<
           RemoveTagsFromBinaryDataByFilterRequest, RemoveTagsFromBinaryDataByFilterRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.RemoveTagsFromBinaryDataByFilterRequest)
@@ -26048,7 +26048,7 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
-  public interface RemoveTagsFromBinaryDataByFilterResponseOrBuilder extends
+  @java.lang.Deprecated public interface RemoveTagsFromBinaryDataByFilterResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.RemoveTagsFromBinaryDataByFilterResponse)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -26065,7 +26065,7 @@ com.google.protobuf.Any defaultValue) {
    *
    * Protobuf type {@code viam.app.data.v1.RemoveTagsFromBinaryDataByFilterResponse}
    */
-  public  static final class RemoveTagsFromBinaryDataByFilterResponse extends
+  @java.lang.Deprecated public  static final class RemoveTagsFromBinaryDataByFilterResponse extends
       com.google.protobuf.GeneratedMessageLite<
           RemoveTagsFromBinaryDataByFilterResponse, RemoveTagsFromBinaryDataByFilterResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.RemoveTagsFromBinaryDataByFilterResponse)
@@ -26301,7 +26301,7 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
-  public interface TagsByFilterRequestOrBuilder extends
+  @java.lang.Deprecated public interface TagsByFilterRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.TagsByFilterRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -26323,7 +26323,7 @@ com.google.protobuf.Any defaultValue) {
    *
    * Protobuf type {@code viam.app.data.v1.TagsByFilterRequest}
    */
-  public  static final class TagsByFilterRequest extends
+  @java.lang.Deprecated public  static final class TagsByFilterRequest extends
       com.google.protobuf.GeneratedMessageLite<
           TagsByFilterRequest, TagsByFilterRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.TagsByFilterRequest)
@@ -26600,7 +26600,7 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
-  public interface TagsByFilterResponseOrBuilder extends
+  @java.lang.Deprecated public interface TagsByFilterResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.TagsByFilterResponse)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -26636,7 +26636,7 @@ com.google.protobuf.Any defaultValue) {
    *
    * Protobuf type {@code viam.app.data.v1.TagsByFilterResponse}
    */
-  public  static final class TagsByFilterResponse extends
+  @java.lang.Deprecated public  static final class TagsByFilterResponse extends
       com.google.protobuf.GeneratedMessageLite<
           TagsByFilterResponse, TagsByFilterResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.TagsByFilterResponse)
@@ -27011,14 +27011,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=503
+     *     See app/data/v1/data.proto;l=518
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=503
+     *     See app/data/v1/data.proto;l=518
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -28083,14 +28083,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=522
+     *     See app/data/v1/data.proto;l=537
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=522
+     *     See app/data/v1/data.proto;l=537
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -28789,14 +28789,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=534
+     *     See app/data/v1/data.proto;l=549
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=534
+     *     See app/data/v1/data.proto;l=549
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -29948,7 +29948,7 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
-  public interface BoundingBoxLabelsByFilterRequestOrBuilder extends
+  @java.lang.Deprecated public interface BoundingBoxLabelsByFilterRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.BoundingBoxLabelsByFilterRequest)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -29970,7 +29970,7 @@ com.google.protobuf.Any defaultValue) {
    *
    * Protobuf type {@code viam.app.data.v1.BoundingBoxLabelsByFilterRequest}
    */
-  public  static final class BoundingBoxLabelsByFilterRequest extends
+  @java.lang.Deprecated public  static final class BoundingBoxLabelsByFilterRequest extends
       com.google.protobuf.GeneratedMessageLite<
           BoundingBoxLabelsByFilterRequest, BoundingBoxLabelsByFilterRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.BoundingBoxLabelsByFilterRequest)
@@ -30247,7 +30247,7 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
-  public interface BoundingBoxLabelsByFilterResponseOrBuilder extends
+  @java.lang.Deprecated public interface BoundingBoxLabelsByFilterResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.BoundingBoxLabelsByFilterResponse)
       com.google.protobuf.MessageLiteOrBuilder {
 
@@ -30283,7 +30283,7 @@ com.google.protobuf.Any defaultValue) {
    *
    * Protobuf type {@code viam.app.data.v1.BoundingBoxLabelsByFilterResponse}
    */
-  public  static final class BoundingBoxLabelsByFilterResponse extends
+  @java.lang.Deprecated public  static final class BoundingBoxLabelsByFilterResponse extends
       com.google.protobuf.GeneratedMessageLite<
           BoundingBoxLabelsByFilterResponse, BoundingBoxLabelsByFilterResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.data.v1.BoundingBoxLabelsByFilterResponse)
