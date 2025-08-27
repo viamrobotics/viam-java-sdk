@@ -151,8 +151,11 @@ implements <a href="Common.GeometryOrBuilder.html" title="interface in com.viam.
 <div class="col-second even-row-color"><code><a href="#MESH_FIELD_NUMBER" class="member-name-link">MESH_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#SPHERE_FIELD_NUMBER" class="member-name-link">SPHERE_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#POINTCLOUD_FIELD_NUMBER" class="member-name-link">POINTCLOUD_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#SPHERE_FIELD_NUMBER" class="member-name-link">SPHERE_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -217,31 +220,41 @@ implements <a href="Common.GeometryOrBuilder.html" title="interface in com.viam.
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Sphere.html" title="class in com.viam.common.v1">Common.Sphere</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSphere()" class="member-name-link">getSphere</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.PointCloud.html" title="class in com.viam.common.v1">Common.PointCloud</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPointcloud()" class="member-name-link">getPointcloud</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Sphere.html" title="class in com.viam.common.v1">Common.Sphere</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSphere()" class="member-name-link">getSphere</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.common.v1.Sphere sphere = 2 [json_name = "sphere"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasBox()" class="member-name-link">hasBox</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasBox()" class="member-name-link">hasBox</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.common.v1.RectangularPrism box = 3 [json_name = "box"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCapsule()" class="member-name-link">hasCapsule</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCapsule()" class="member-name-link">hasCapsule</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.common.v1.Capsule capsule = 5 [json_name = "capsule"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCenter()" class="member-name-link">hasCenter</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCenter()" class="member-name-link">hasCenter</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Pose of a geometries center point</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMesh()" class="member-name-link">hasMesh</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMesh()" class="member-name-link">hasMesh</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.common.v1.Mesh mesh = 6 [json_name = "mesh"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPointcloud()" class="member-name-link">hasPointcloud</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSphere()" class="member-name-link">hasSphere</a>()</code></div>
@@ -390,6 +403,20 @@ implements <a href="Common.GeometryOrBuilder.html" title="interface in com.viam.
 <dd>
 <ul class="see-list">
 <li><a href="../../../../constant-values.html#com.viam.common.v1.Common.Geometry.MESH_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="POINTCLOUD_FIELD_NUMBER">
+<h3>POINTCLOUD_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">POINTCLOUD_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#com.viam.common.v1.Common.Geometry.POINTCLOUD_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -562,6 +589,32 @@ implements <a href="Common.GeometryOrBuilder.html" title="interface in com.viam.
 <dd><code><a href="Common.GeometryOrBuilder.html#getMesh()">getMesh</a></code>&nbsp;in interface&nbsp;<code><a href="Common.GeometryOrBuilder.html" title="interface in com.viam.common.v1">Common.GeometryOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The mesh.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasPointcloud()">
+<h3>hasPointcloud</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasPointcloud</span>()</div>
+<div class="block"><code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Common.GeometryOrBuilder.html#hasPointcloud()">hasPointcloud</a></code>&nbsp;in interface&nbsp;<code><a href="Common.GeometryOrBuilder.html" title="interface in com.viam.common.v1">Common.GeometryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the pointcloud field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPointcloud()">
+<h3>getPointcloud</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Common.PointCloud.html" title="class in com.viam.common.v1">Common.PointCloud</a></span>&nbsp;<span class="element-name">getPointcloud</span>()</div>
+<div class="block"><code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Common.GeometryOrBuilder.html#getPointcloud()">getPointcloud</a></code>&nbsp;in interface&nbsp;<code><a href="Common.GeometryOrBuilder.html" title="interface in com.viam.common.v1">Common.GeometryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The pointcloud.</dd>
 </dl>
 </section>
 </li>

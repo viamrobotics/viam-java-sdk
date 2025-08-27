@@ -101,37 +101,55 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Common.Geometry.html" title="class in com.viam.common.v1">Common.Geometry</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPhysicalObject()" class="member-name-link">getPhysicalObject</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMetadata()" class="member-name-link">getMetadata</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Can hold information like color, opacity, points colors, collision_allowed, etc...</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Common.Geometry.html" title="class in com.viam.common.v1">Common.Geometry</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPhysicalObject()" class="member-name-link">getPhysicalObject</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>optional .viam.common.v1.Geometry physical_object = 3 [json_name = "physicalObject"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Common.PoseInFrame.html" title="class in com.viam.common.v1">Common.PoseInFrame</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPoseInObserverFrame()" class="member-name-link">getPoseInObserverFrame</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Common.PoseInFrame.html" title="class in com.viam.common.v1">Common.PoseInFrame</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPoseInObserverFrame()" class="member-name-link">getPoseInObserverFrame</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  the pose of the above reference frame with respect to a different observer reference frame</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReferenceFrame()" class="member-name-link">getReferenceFrame</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReferenceFrame()" class="member-name-link">getReferenceFrame</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ the name of a given reference frame</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReferenceFrameBytes()" class="member-name-link">getReferenceFrameBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  the name of a given reference frame</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReferenceFrameBytes()" class="member-name-link">getReferenceFrameBytes</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUuid()" class="member-name-link">getUuid</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- the name of a given reference frame</div>
+ The UUID of the transform</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPhysicalObject()" class="member-name-link">hasPhysicalObject</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasMetadata()" class="member-name-link">hasMetadata</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>optional .viam.common.v1.Geometry physical_object = 3 [json_name = "physicalObject"];</code></div>
+<div class="block">
+ Can hold information like color, opacity, points colors, collision_allowed, etc...</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPoseInObserverFrame()" class="member-name-link">hasPoseInObserverFrame</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPhysicalObject()" class="member-name-link">hasPhysicalObject</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>optional .viam.common.v1.Geometry physical_object = 3 [json_name = "physicalObject"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPoseInObserverFrame()" class="member-name-link">hasPoseInObserverFrame</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  the pose of the above reference frame with respect to a different observer reference frame</div>
 </div>
@@ -231,6 +249,51 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The physicalObject.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUuid()">
+<h3>getUuid</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getUuid</span>()</div>
+<div class="block"><pre>
+ The UUID of the transform
+ </pre>
+
+ <code>bytes uuid = 4 [json_name = "uuid"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The uuid.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasMetadata()">
+<h3>hasMetadata</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMetadata</span>()</div>
+<div class="block"><pre>
+ Can hold information like color, opacity, points colors, collision_allowed, etc...
+ </pre>
+
+ <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the metadata field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMetadata()">
+<h3>getMetadata</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getMetadata</span>()</div>
+<div class="block"><pre>
+ Can hold information like color, opacity, points colors, collision_allowed, etc...
+ </pre>
+
+ <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The metadata.</dd>
 </dl>
 </section>
 </li>

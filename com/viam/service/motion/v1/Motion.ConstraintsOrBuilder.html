@@ -104,20 +104,17 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCollisionSpecification(int)" class="member-name-link">getCollisionSpecification</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCollisionSpecificationCount()" class="member-name-link">getCollisionSpecificationCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCollisionSpecificationList()" class="member-name-link">getCollisionSpecificationList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.LinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.LinearConstraint</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLinearConstraint(int)" class="member-name-link">getLinearConstraint</a><wbr>(int&nbsp;index)</code></div>
@@ -151,6 +148,24 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrientationConstraintList()" class="member-name-link">getOrientationConstraintList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPseudolinearConstraint(int)" class="member-name-link">getPseudolinearConstraint</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Arc constraint, Time constraint, and others will be added here when they are supported</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPseudolinearConstraintCount()" class="member-name-link">getPseudolinearConstraintCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Arc constraint, Time constraint, and others will be added here when they are supported</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPseudolinearConstraintList()" class="member-name-link">getPseudolinearConstraintList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Arc constraint, Time constraint, and others will be added here when they are supported</div>
 </div>
 </div>
 </div>
@@ -227,33 +242,54 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <section class="detail" id="getCollisionSpecificationList()">
 <h3>getCollisionSpecificationList</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a>&gt;</span>&nbsp;<span class="element-name">getCollisionSpecificationList</span>()</div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCollisionSpecification(int)">
 <h3>getCollisionSpecification</h3>
 <div class="member-signature"><span class="return-type"><a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a></span>&nbsp;<span class="element-name">getCollisionSpecification</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCollisionSpecificationCount()">
 <h3>getCollisionSpecificationCount</h3>
 <div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getCollisionSpecificationCount</span>()</div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPseudolinearConstraintList()">
+<h3>getPseudolinearConstraintList</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a>&gt;</span>&nbsp;<span class="element-name">getPseudolinearConstraintList</span>()</div>
 <div class="block"><pre>
  Arc constraint, Time constraint, and others will be added here when they are supported
  </pre>
 
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPseudolinearConstraint(int)">
+<h3>getPseudolinearConstraint</h3>
+<div class="member-signature"><span class="return-type"><a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a></span>&nbsp;<span class="element-name">getPseudolinearConstraint</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ Arc constraint, Time constraint, and others will be added here when they are supported
+ </pre>
+
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPseudolinearConstraintCount()">
+<h3>getPseudolinearConstraintCount</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getPseudolinearConstraintCount</span>()</div>
+<div class="block"><pre>
+ Arc constraint, Time constraint, and others will be added here when they are supported
+ </pre>
+
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
 </section>
 </li>
 </ul>

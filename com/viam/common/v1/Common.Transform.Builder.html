@@ -122,55 +122,91 @@ implements <a href="Common.TransformOrBuilder.html" title="interface in com.viam
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPhysicalObject()" class="member-name-link">clearPhysicalObject</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMetadata()" class="member-name-link">clearMetadata</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Can hold information like color, opacity, points colors, collision_allowed, etc...</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPhysicalObject()" class="member-name-link">clearPhysicalObject</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .viam.common.v1.Geometry physical_object = 3 [json_name = "physicalObject"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPoseInObserverFrame()" class="member-name-link">clearPoseInObserverFrame</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ the pose of the above reference frame with respect to a different observer reference frame</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearReferenceFrame()" class="member-name-link">clearReferenceFrame</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ the name of a given reference frame</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearUuid()" class="member-name-link">clearUuid</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The UUID of the transform</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMetadata()" class="member-name-link">getMetadata</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Can hold information like color, opacity, points colors, collision_allowed, etc...</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Geometry.html" title="class in com.viam.common.v1">Common.Geometry</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPhysicalObject()" class="member-name-link">getPhysicalObject</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.common.v1.Geometry physical_object = 3 [json_name = "physicalObject"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPoseInObserverFrame()" class="member-name-link">clearPoseInObserverFrame</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.PoseInFrame.html" title="class in com.viam.common.v1">Common.PoseInFrame</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPoseInObserverFrame()" class="member-name-link">getPoseInObserverFrame</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  the pose of the above reference frame with respect to a different observer reference frame</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearReferenceFrame()" class="member-name-link">clearReferenceFrame</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReferenceFrame()" class="member-name-link">getReferenceFrame</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  the name of a given reference frame</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Geometry.html" title="class in com.viam.common.v1">Common.Geometry</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPhysicalObject()" class="member-name-link">getPhysicalObject</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional .viam.common.v1.Geometry physical_object = 3 [json_name = "physicalObject"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.PoseInFrame.html" title="class in com.viam.common.v1">Common.PoseInFrame</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPoseInObserverFrame()" class="member-name-link">getPoseInObserverFrame</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- the pose of the above reference frame with respect to a different observer reference frame</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReferenceFrame()" class="member-name-link">getReferenceFrame</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReferenceFrameBytes()" class="member-name-link">getReferenceFrameBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  the name of a given reference frame</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReferenceFrameBytes()" class="member-name-link">getReferenceFrameBytes</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUuid()" class="member-name-link">getUuid</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- the name of a given reference frame</div>
+ The UUID of the transform</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPhysicalObject()" class="member-name-link">hasPhysicalObject</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMetadata()" class="member-name-link">hasMetadata</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional .viam.common.v1.Geometry physical_object = 3 [json_name = "physicalObject"];</code></div>
+<div class="block">
+ Can hold information like color, opacity, points colors, collision_allowed, etc...</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPoseInObserverFrame()" class="member-name-link">hasPoseInObserverFrame</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPhysicalObject()" class="member-name-link">hasPhysicalObject</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .viam.common.v1.Geometry physical_object = 3 [json_name = "physicalObject"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPoseInObserverFrame()" class="member-name-link">hasPoseInObserverFrame</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  the pose of the above reference frame with respect to a different observer reference frame</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeMetadata(com.google.protobuf.Struct)" class="member-name-link">mergeMetadata</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Can hold information like color, opacity, points colors, collision_allowed, etc...</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergePhysicalObject(com.viam.common.v1.Common.Geometry)" class="member-name-link">mergePhysicalObject</a><wbr>(<a href="Common.Geometry.html" title="class in com.viam.common.v1">Common.Geometry</a>&nbsp;value)</code></div>
@@ -182,6 +218,18 @@ implements <a href="Common.TransformOrBuilder.html" title="interface in com.viam
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  the pose of the above reference frame with respect to a different observer reference frame</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMetadata(com.google.protobuf.Struct)" class="member-name-link">setMetadata</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Can hold information like color, opacity, points colors, collision_allowed, etc...</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMetadata(com.google.protobuf.Struct.Builder)" class="member-name-link">setMetadata</a><wbr>(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Can hold information like color, opacity, points colors, collision_allowed, etc...</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPhysicalObject(com.viam.common.v1.Common.Geometry)" class="member-name-link">setPhysicalObject</a><wbr>(<a href="Common.Geometry.html" title="class in com.viam.common.v1">Common.Geometry</a>&nbsp;value)</code></div>
@@ -216,6 +264,12 @@ implements <a href="Common.TransformOrBuilder.html" title="interface in com.viam
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  the name of a given reference frame</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUuid(com.google.protobuf.ByteString)" class="member-name-link">setUuid</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The UUID of the transform</div>
 </div>
 </div>
 </div>
@@ -456,6 +510,133 @@ implements <a href="Common.TransformOrBuilder.html" title="interface in com.viam
 <h3>clearPhysicalObject</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></span>&nbsp;<span class="element-name">clearPhysicalObject</span>()</div>
 <div class="block"><code>optional .viam.common.v1.Geometry physical_object = 3 [json_name = "physicalObject"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getUuid()">
+<h3>getUuid</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getUuid</span>()</div>
+<div class="block"><pre>
+ The UUID of the transform
+ </pre>
+
+ <code>bytes uuid = 4 [json_name = "uuid"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Common.TransformOrBuilder.html#getUuid()">getUuid</a></code>&nbsp;in interface&nbsp;<code><a href="Common.TransformOrBuilder.html" title="interface in com.viam.common.v1">Common.TransformOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The uuid.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setUuid(com.google.protobuf.ByteString)">
+<h3>setUuid</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></span>&nbsp;<span class="element-name">setUuid</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="block"><pre>
+ The UUID of the transform
+ </pre>
+
+ <code>bytes uuid = 4 [json_name = "uuid"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The uuid to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearUuid()">
+<h3>clearUuid</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></span>&nbsp;<span class="element-name">clearUuid</span>()</div>
+<div class="block"><pre>
+ The UUID of the transform
+ </pre>
+
+ <code>bytes uuid = 4 [json_name = "uuid"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasMetadata()">
+<h3>hasMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMetadata</span>()</div>
+<div class="block"><pre>
+ Can hold information like color, opacity, points colors, collision_allowed, etc...
+ </pre>
+
+ <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Common.TransformOrBuilder.html#hasMetadata()">hasMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="Common.TransformOrBuilder.html" title="interface in com.viam.common.v1">Common.TransformOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the metadata field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMetadata()">
+<h3>getMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getMetadata</span>()</div>
+<div class="block"><pre>
+ Can hold information like color, opacity, points colors, collision_allowed, etc...
+ </pre>
+
+ <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Common.TransformOrBuilder.html#getMetadata()">getMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="Common.TransformOrBuilder.html" title="interface in com.viam.common.v1">Common.TransformOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The metadata.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMetadata(com.google.protobuf.Struct)">
+<h3>setMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></span>&nbsp;<span class="element-name">setMetadata</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
+<div class="block"><pre>
+ Can hold information like color, opacity, points colors, collision_allowed, etc...
+ </pre>
+
+ <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setMetadata(com.google.protobuf.Struct.Builder)">
+<h3>setMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></span>&nbsp;<span class="element-name">setMetadata</span><wbr><span class="parameters">(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</span></div>
+<div class="block"><pre>
+ Can hold information like color, opacity, points colors, collision_allowed, etc...
+ </pre>
+
+ <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeMetadata(com.google.protobuf.Struct)">
+<h3>mergeMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></span>&nbsp;<span class="element-name">mergeMetadata</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
+<div class="block"><pre>
+ Can hold information like color, opacity, points colors, collision_allowed, etc...
+ </pre>
+
+ <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearMetadata()">
+<h3>clearMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></span>&nbsp;<span class="element-name">clearMetadata</span>()</div>
+<div class="block"><pre>
+ Can hold information like color, opacity, points colors, collision_allowed, etc...
+ </pre>
+
+ <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code></div>
 </section>
 </li>
 </ul>

@@ -122,8 +122,7 @@ implements <a href="Motion.ConstraintsOrBuilder.html" title="interface in com.vi
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllCollisionSpecification(java.lang.Iterable)" class="member-name-link">addAllCollisionSpecification</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a>&gt;&nbsp;values)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllLinearConstraint(java.lang.Iterable)" class="member-name-link">addAllLinearConstraint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="Motion.LinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.LinearConstraint</a>&gt;&nbsp;values)</code></div>
@@ -137,113 +136,143 @@ implements <a href="Motion.ConstraintsOrBuilder.html" title="interface in com.vi
 <div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCollisionSpecification(int,com.viam.service.motion.v1.Motion.CollisionSpecification)" class="member-name-link">addCollisionSpecification</a><wbr>(int&nbsp;index,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllPseudolinearConstraint(java.lang.Iterable)" class="member-name-link">addAllPseudolinearConstraint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a>&gt;&nbsp;values)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Arc constraint, Time constraint, and others will be added here when they are supported</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCollisionSpecification(int,com.viam.service.motion.v1.Motion.CollisionSpecification)" class="member-name-link">addCollisionSpecification</a><wbr>(int&nbsp;index,
  <a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCollisionSpecification(int,com.viam.service.motion.v1.Motion.CollisionSpecification.Builder)" class="member-name-link">addCollisionSpecification</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCollisionSpecification(int,com.viam.service.motion.v1.Motion.CollisionSpecification.Builder)" class="member-name-link">addCollisionSpecification</a><wbr>(int&nbsp;index,
  <a href="Motion.CollisionSpecification.Builder.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCollisionSpecification(com.viam.service.motion.v1.Motion.CollisionSpecification)" class="member-name-link">addCollisionSpecification</a><wbr>(<a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCollisionSpecification(com.viam.service.motion.v1.Motion.CollisionSpecification.Builder)" class="member-name-link">addCollisionSpecification</a><wbr>(<a href="Motion.CollisionSpecification.Builder.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCollisionSpecification(com.viam.service.motion.v1.Motion.CollisionSpecification)" class="member-name-link">addCollisionSpecification</a><wbr>(<a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLinearConstraint(int,com.viam.service.motion.v1.Motion.LinearConstraint)" class="member-name-link">addLinearConstraint</a><wbr>(int&nbsp;index,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCollisionSpecification(com.viam.service.motion.v1.Motion.CollisionSpecification.Builder)" class="member-name-link">addCollisionSpecification</a><wbr>(<a href="Motion.CollisionSpecification.Builder.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLinearConstraint(int,com.viam.service.motion.v1.Motion.LinearConstraint)" class="member-name-link">addLinearConstraint</a><wbr>(int&nbsp;index,
  <a href="Motion.LinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.LinearConstraint</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Typed message for a specific constraint</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLinearConstraint(int,com.viam.service.motion.v1.Motion.LinearConstraint.Builder)" class="member-name-link">addLinearConstraint</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLinearConstraint(int,com.viam.service.motion.v1.Motion.LinearConstraint.Builder)" class="member-name-link">addLinearConstraint</a><wbr>(int&nbsp;index,
  <a href="Motion.LinearConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.LinearConstraint.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Typed message for a specific constraint</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLinearConstraint(com.viam.service.motion.v1.Motion.LinearConstraint)" class="member-name-link">addLinearConstraint</a><wbr>(<a href="Motion.LinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.LinearConstraint</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Typed message for a specific constraint</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLinearConstraint(com.viam.service.motion.v1.Motion.LinearConstraint.Builder)" class="member-name-link">addLinearConstraint</a><wbr>(<a href="Motion.LinearConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.LinearConstraint.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLinearConstraint(com.viam.service.motion.v1.Motion.LinearConstraint)" class="member-name-link">addLinearConstraint</a><wbr>(<a href="Motion.LinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.LinearConstraint</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Typed message for a specific constraint</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addOrientationConstraint(int,com.viam.service.motion.v1.Motion.OrientationConstraint)" class="member-name-link">addOrientationConstraint</a><wbr>(int&nbsp;index,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLinearConstraint(com.viam.service.motion.v1.Motion.LinearConstraint.Builder)" class="member-name-link">addLinearConstraint</a><wbr>(<a href="Motion.LinearConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.LinearConstraint.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Typed message for a specific constraint</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addOrientationConstraint(int,com.viam.service.motion.v1.Motion.OrientationConstraint)" class="member-name-link">addOrientationConstraint</a><wbr>(int&nbsp;index,
  <a href="Motion.OrientationConstraint.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addOrientationConstraint(int,com.viam.service.motion.v1.Motion.OrientationConstraint.Builder)" class="member-name-link">addOrientationConstraint</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addOrientationConstraint(int,com.viam.service.motion.v1.Motion.OrientationConstraint.Builder)" class="member-name-link">addOrientationConstraint</a><wbr>(int&nbsp;index,
  <a href="Motion.OrientationConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addOrientationConstraint(com.viam.service.motion.v1.Motion.OrientationConstraint)" class="member-name-link">addOrientationConstraint</a><wbr>(<a href="Motion.OrientationConstraint.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addOrientationConstraint(com.viam.service.motion.v1.Motion.OrientationConstraint.Builder)" class="member-name-link">addOrientationConstraint</a><wbr>(<a href="Motion.OrientationConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addOrientationConstraint(com.viam.service.motion.v1.Motion.OrientationConstraint)" class="member-name-link">addOrientationConstraint</a><wbr>(<a href="Motion.OrientationConstraint.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearCollisionSpecification()" class="member-name-link">clearCollisionSpecification</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addOrientationConstraint(com.viam.service.motion.v1.Motion.OrientationConstraint.Builder)" class="member-name-link">addOrientationConstraint</a><wbr>(<a href="Motion.OrientationConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addPseudolinearConstraint(int,com.viam.service.motion.v1.Motion.PseudolinearConstraint)" class="member-name-link">addPseudolinearConstraint</a><wbr>(int&nbsp;index,
+ <a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Arc constraint, Time constraint, and others will be added here when they are supported</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addPseudolinearConstraint(int,com.viam.service.motion.v1.Motion.PseudolinearConstraint.Builder)" class="member-name-link">addPseudolinearConstraint</a><wbr>(int&nbsp;index,
+ <a href="Motion.PseudolinearConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Arc constraint, Time constraint, and others will be added here when they are supported</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLinearConstraint()" class="member-name-link">clearLinearConstraint</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addPseudolinearConstraint(com.viam.service.motion.v1.Motion.PseudolinearConstraint)" class="member-name-link">addPseudolinearConstraint</a><wbr>(<a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Arc constraint, Time constraint, and others will be added here when they are supported</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addPseudolinearConstraint(com.viam.service.motion.v1.Motion.PseudolinearConstraint.Builder)" class="member-name-link">addPseudolinearConstraint</a><wbr>(<a href="Motion.PseudolinearConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Arc constraint, Time constraint, and others will be added here when they are supported</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearCollisionSpecification()" class="member-name-link">clearCollisionSpecification</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLinearConstraint()" class="member-name-link">clearLinearConstraint</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Typed message for a specific constraint</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearOrientationConstraint()" class="member-name-link">clearOrientationConstraint</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearOrientationConstraint()" class="member-name-link">clearOrientationConstraint</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPseudolinearConstraint()" class="member-name-link">clearPseudolinearConstraint</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Arc constraint, Time constraint, and others will be added here when they are supported</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCollisionSpecification(int)" class="member-name-link">getCollisionSpecification</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCollisionSpecificationCount()" class="member-name-link">getCollisionSpecificationCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCollisionSpecificationList()" class="member-name-link">getCollisionSpecificationList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.LinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.LinearConstraint</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLinearConstraint(int)" class="member-name-link">getLinearConstraint</a><wbr>(int&nbsp;index)</code></div>
@@ -278,36 +307,57 @@ implements <a href="Motion.ConstraintsOrBuilder.html" title="interface in com.vi
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeCollisionSpecification(int)" class="member-name-link">removeCollisionSpecification</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPseudolinearConstraint(int)" class="member-name-link">getPseudolinearConstraint</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Arc constraint, Time constraint, and others will be added here when they are supported</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPseudolinearConstraintCount()" class="member-name-link">getPseudolinearConstraintCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Arc constraint, Time constraint, and others will be added here when they are supported</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPseudolinearConstraintList()" class="member-name-link">getPseudolinearConstraintList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Arc constraint, Time constraint, and others will be added here when they are supported</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeLinearConstraint(int)" class="member-name-link">removeLinearConstraint</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeCollisionSpecification(int)" class="member-name-link">removeCollisionSpecification</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeLinearConstraint(int)" class="member-name-link">removeLinearConstraint</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Typed message for a specific constraint</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeOrientationConstraint(int)" class="member-name-link">removeOrientationConstraint</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeOrientationConstraint(int)" class="member-name-link">removeOrientationConstraint</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removePseudolinearConstraint(int)" class="member-name-link">removePseudolinearConstraint</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Arc constraint, Time constraint, and others will be added here when they are supported</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCollisionSpecification(int,com.viam.service.motion.v1.Motion.CollisionSpecification)" class="member-name-link">setCollisionSpecification</a><wbr>(int&nbsp;index,
  <a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCollisionSpecification(int,com.viam.service.motion.v1.Motion.CollisionSpecification.Builder)" class="member-name-link">setCollisionSpecification</a><wbr>(int&nbsp;index,
  <a href="Motion.CollisionSpecification.Builder.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLinearConstraint(int,com.viam.service.motion.v1.Motion.LinearConstraint)" class="member-name-link">setLinearConstraint</a><wbr>(int&nbsp;index,
@@ -334,6 +384,20 @@ implements <a href="Motion.ConstraintsOrBuilder.html" title="interface in com.vi
  <a href="Motion.OrientationConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPseudolinearConstraint(int,com.viam.service.motion.v1.Motion.PseudolinearConstraint)" class="member-name-link">setPseudolinearConstraint</a><wbr>(int&nbsp;index,
+ <a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Arc constraint, Time constraint, and others will be added here when they are supported</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPseudolinearConstraint(int,com.viam.service.motion.v1.Motion.PseudolinearConstraint.Builder)" class="member-name-link">setPseudolinearConstraint</a><wbr>(int&nbsp;index,
+ <a href="Motion.PseudolinearConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Arc constraint, Time constraint, and others will be added here when they are supported</div>
 </div>
 </div>
 </div>
@@ -613,11 +677,7 @@ implements <a href="Motion.ConstraintsOrBuilder.html" title="interface in com.vi
 <section class="detail" id="getCollisionSpecificationList()">
 <h3>getCollisionSpecificationList</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a>&gt;</span>&nbsp;<span class="element-name">getCollisionSpecificationList</span>()</div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Motion.ConstraintsOrBuilder.html#getCollisionSpecificationList()">getCollisionSpecificationList</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ConstraintsOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ConstraintsOrBuilder</a></code></dd>
@@ -628,11 +688,7 @@ implements <a href="Motion.ConstraintsOrBuilder.html" title="interface in com.vi
 <section class="detail" id="getCollisionSpecificationCount()">
 <h3>getCollisionSpecificationCount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getCollisionSpecificationCount</span>()</div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Motion.ConstraintsOrBuilder.html#getCollisionSpecificationCount()">getCollisionSpecificationCount</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ConstraintsOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ConstraintsOrBuilder</a></code></dd>
@@ -643,11 +699,7 @@ implements <a href="Motion.ConstraintsOrBuilder.html" title="interface in com.vi
 <section class="detail" id="getCollisionSpecification(int)">
 <h3>getCollisionSpecification</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a></span>&nbsp;<span class="element-name">getCollisionSpecification</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Motion.ConstraintsOrBuilder.html#getCollisionSpecification(int)">getCollisionSpecification</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ConstraintsOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ConstraintsOrBuilder</a></code></dd>
@@ -659,11 +711,7 @@ implements <a href="Motion.ConstraintsOrBuilder.html" title="interface in com.vi
 <h3>setCollisionSpecification</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">setCollisionSpecification</span><wbr><span class="parameters">(int&nbsp;index,
  <a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a>&nbsp;value)</span></div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </section>
 </li>
 <li>
@@ -671,22 +719,14 @@ implements <a href="Motion.ConstraintsOrBuilder.html" title="interface in com.vi
 <h3>setCollisionSpecification</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">setCollisionSpecification</span><wbr><span class="parameters">(int&nbsp;index,
  <a href="Motion.CollisionSpecification.Builder.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification.Builder</a>&nbsp;builderForValue)</span></div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addCollisionSpecification(com.viam.service.motion.v1.Motion.CollisionSpecification)">
 <h3>addCollisionSpecification</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">addCollisionSpecification</span><wbr><span class="parameters">(<a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a>&nbsp;value)</span></div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </section>
 </li>
 <li>
@@ -694,22 +734,14 @@ implements <a href="Motion.ConstraintsOrBuilder.html" title="interface in com.vi
 <h3>addCollisionSpecification</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">addCollisionSpecification</span><wbr><span class="parameters">(int&nbsp;index,
  <a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a>&nbsp;value)</span></div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addCollisionSpecification(com.viam.service.motion.v1.Motion.CollisionSpecification.Builder)">
 <h3>addCollisionSpecification</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">addCollisionSpecification</span><wbr><span class="parameters">(<a href="Motion.CollisionSpecification.Builder.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification.Builder</a>&nbsp;builderForValue)</span></div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </section>
 </li>
 <li>
@@ -717,44 +749,176 @@ implements <a href="Motion.ConstraintsOrBuilder.html" title="interface in com.vi
 <h3>addCollisionSpecification</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">addCollisionSpecification</span><wbr><span class="parameters">(int&nbsp;index,
  <a href="Motion.CollisionSpecification.Builder.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification.Builder</a>&nbsp;builderForValue)</span></div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addAllCollisionSpecification(java.lang.Iterable)">
 <h3>addAllCollisionSpecification</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">addAllCollisionSpecification</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="Motion.CollisionSpecification.html" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a>&gt;&nbsp;values)</span></div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="clearCollisionSpecification()">
 <h3>clearCollisionSpecification</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">clearCollisionSpecification</span>()</div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeCollisionSpecification(int)">
 <h3>removeCollisionSpecification</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">removeCollisionSpecification</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPseudolinearConstraintList()">
+<h3>getPseudolinearConstraintList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a>&gt;</span>&nbsp;<span class="element-name">getPseudolinearConstraintList</span>()</div>
 <div class="block"><pre>
  Arc constraint, Time constraint, and others will be added here when they are supported
  </pre>
 
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Motion.ConstraintsOrBuilder.html#getPseudolinearConstraintList()">getPseudolinearConstraintList</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ConstraintsOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ConstraintsOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPseudolinearConstraintCount()">
+<h3>getPseudolinearConstraintCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getPseudolinearConstraintCount</span>()</div>
+<div class="block"><pre>
+ Arc constraint, Time constraint, and others will be added here when they are supported
+ </pre>
+
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Motion.ConstraintsOrBuilder.html#getPseudolinearConstraintCount()">getPseudolinearConstraintCount</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ConstraintsOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ConstraintsOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPseudolinearConstraint(int)">
+<h3>getPseudolinearConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a></span>&nbsp;<span class="element-name">getPseudolinearConstraint</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ Arc constraint, Time constraint, and others will be added here when they are supported
+ </pre>
+
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Motion.ConstraintsOrBuilder.html#getPseudolinearConstraint(int)">getPseudolinearConstraint</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ConstraintsOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ConstraintsOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPseudolinearConstraint(int,com.viam.service.motion.v1.Motion.PseudolinearConstraint)">
+<h3>setPseudolinearConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">setPseudolinearConstraint</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ Arc constraint, Time constraint, and others will be added here when they are supported
+ </pre>
+
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setPseudolinearConstraint(int,com.viam.service.motion.v1.Motion.PseudolinearConstraint.Builder)">
+<h3>setPseudolinearConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">setPseudolinearConstraint</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Motion.PseudolinearConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><pre>
+ Arc constraint, Time constraint, and others will be added here when they are supported
+ </pre>
+
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addPseudolinearConstraint(com.viam.service.motion.v1.Motion.PseudolinearConstraint)">
+<h3>addPseudolinearConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">addPseudolinearConstraint</span><wbr><span class="parameters">(<a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ Arc constraint, Time constraint, and others will be added here when they are supported
+ </pre>
+
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addPseudolinearConstraint(int,com.viam.service.motion.v1.Motion.PseudolinearConstraint)">
+<h3>addPseudolinearConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">addPseudolinearConstraint</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ Arc constraint, Time constraint, and others will be added here when they are supported
+ </pre>
+
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addPseudolinearConstraint(com.viam.service.motion.v1.Motion.PseudolinearConstraint.Builder)">
+<h3>addPseudolinearConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">addPseudolinearConstraint</span><wbr><span class="parameters">(<a href="Motion.PseudolinearConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><pre>
+ Arc constraint, Time constraint, and others will be added here when they are supported
+ </pre>
+
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addPseudolinearConstraint(int,com.viam.service.motion.v1.Motion.PseudolinearConstraint.Builder)">
+<h3>addPseudolinearConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">addPseudolinearConstraint</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Motion.PseudolinearConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><pre>
+ Arc constraint, Time constraint, and others will be added here when they are supported
+ </pre>
+
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addAllPseudolinearConstraint(java.lang.Iterable)">
+<h3>addAllPseudolinearConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">addAllPseudolinearConstraint</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="Motion.PseudolinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.PseudolinearConstraint</a>&gt;&nbsp;values)</span></div>
+<div class="block"><pre>
+ Arc constraint, Time constraint, and others will be added here when they are supported
+ </pre>
+
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearPseudolinearConstraint()">
+<h3>clearPseudolinearConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">clearPseudolinearConstraint</span>()</div>
+<div class="block"><pre>
+ Arc constraint, Time constraint, and others will be added here when they are supported
+ </pre>
+
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="removePseudolinearConstraint(int)">
+<h3>removePseudolinearConstraint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.Constraints.Builder.html" title="class in com.viam.service.motion.v1">Motion.Constraints.Builder</a></span>&nbsp;<span class="element-name">removePseudolinearConstraint</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ Arc constraint, Time constraint, and others will be added here when they are supported
+ </pre>
+
+ <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code></div>
 </section>
 </li>
 </ul>

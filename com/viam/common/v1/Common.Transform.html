@@ -135,13 +135,19 @@ implements <a href="Common.TransformOrBuilder.html" title="interface in com.viam
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#PHYSICAL_OBJECT_FIELD_NUMBER" class="member-name-link">PHYSICAL_OBJECT_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#METADATA_FIELD_NUMBER" class="member-name-link">METADATA_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#POSE_IN_OBSERVER_FRAME_FIELD_NUMBER" class="member-name-link">POSE_IN_OBSERVER_FRAME_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#PHYSICAL_OBJECT_FIELD_NUMBER" class="member-name-link">PHYSICAL_OBJECT_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#REFERENCE_FRAME_FIELD_NUMBER" class="member-name-link">REFERENCE_FRAME_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#POSE_IN_OBSERVER_FRAME_FIELD_NUMBER" class="member-name-link">POSE_IN_OBSERVER_FRAME_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#REFERENCE_FRAME_FIELD_NUMBER" class="member-name-link">REFERENCE_FRAME_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#UUID_FIELD_NUMBER" class="member-name-link">UUID_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
@@ -171,91 +177,109 @@ implements <a href="Common.TransformOrBuilder.html" title="interface in com.viam
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Geometry.html" title="class in com.viam.common.v1">Common.Geometry</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPhysicalObject()" class="member-name-link">getPhysicalObject</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMetadata()" class="member-name-link">getMetadata</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Can hold information like color, opacity, points colors, collision_allowed, etc...</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.Geometry.html" title="class in com.viam.common.v1">Common.Geometry</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPhysicalObject()" class="member-name-link">getPhysicalObject</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.common.v1.Geometry physical_object = 3 [json_name = "physicalObject"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.PoseInFrame.html" title="class in com.viam.common.v1">Common.PoseInFrame</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPoseInObserverFrame()" class="member-name-link">getPoseInObserverFrame</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Common.PoseInFrame.html" title="class in com.viam.common.v1">Common.PoseInFrame</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPoseInObserverFrame()" class="member-name-link">getPoseInObserverFrame</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  the pose of the above reference frame with respect to a different observer reference frame</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReferenceFrame()" class="member-name-link">getReferenceFrame</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReferenceFrame()" class="member-name-link">getReferenceFrame</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ the name of a given reference frame</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReferenceFrameBytes()" class="member-name-link">getReferenceFrameBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  the name of a given reference frame</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReferenceFrameBytes()" class="member-name-link">getReferenceFrameBytes</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUuid()" class="member-name-link">getUuid</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- the name of a given reference frame</div>
+ The UUID of the transform</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPhysicalObject()" class="member-name-link">hasPhysicalObject</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMetadata()" class="member-name-link">hasMetadata</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional .viam.common.v1.Geometry physical_object = 3 [json_name = "physicalObject"];</code></div>
+<div class="block">
+ Can hold information like color, opacity, points colors, collision_allowed, etc...</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPoseInObserverFrame()" class="member-name-link">hasPoseInObserverFrame</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPhysicalObject()" class="member-name-link">hasPhysicalObject</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .viam.common.v1.Geometry physical_object = 3 [json_name = "physicalObject"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPoseInObserverFrame()" class="member-name-link">hasPoseInObserverFrame</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  the pose of the above reference frame with respect to a different observer reference frame</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(com.viam.common.v1.Common.Transform)" class="member-name-link">newBuilder</a><wbr>(<a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a>&nbsp;prototype)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.Builder.html" title="class in com.viam.common.v1">Common.Transform.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(com.viam.common.v1.Common.Transform)" class="member-name-link">newBuilder</a><wbr>(<a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a>&nbsp;prototype)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser&lt;<a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser&lt;<a href="Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -319,6 +343,34 @@ implements <a href="Common.TransformOrBuilder.html" title="interface in com.viam
 <dd>
 <ul class="see-list">
 <li><a href="../../../../constant-values.html#com.viam.common.v1.Common.Transform.PHYSICAL_OBJECT_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="UUID_FIELD_NUMBER">
+<h3>UUID_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">UUID_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#com.viam.common.v1.Common.Transform.UUID_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="METADATA_FIELD_NUMBER">
+<h3>METADATA_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">METADATA_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#com.viam.common.v1.Common.Transform.METADATA_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -423,6 +475,57 @@ implements <a href="Common.TransformOrBuilder.html" title="interface in com.viam
 <dd><code><a href="Common.TransformOrBuilder.html#getPhysicalObject()">getPhysicalObject</a></code>&nbsp;in interface&nbsp;<code><a href="Common.TransformOrBuilder.html" title="interface in com.viam.common.v1">Common.TransformOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The physicalObject.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUuid()">
+<h3>getUuid</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getUuid</span>()</div>
+<div class="block"><pre>
+ The UUID of the transform
+ </pre>
+
+ <code>bytes uuid = 4 [json_name = "uuid"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Common.TransformOrBuilder.html#getUuid()">getUuid</a></code>&nbsp;in interface&nbsp;<code><a href="Common.TransformOrBuilder.html" title="interface in com.viam.common.v1">Common.TransformOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The uuid.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasMetadata()">
+<h3>hasMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMetadata</span>()</div>
+<div class="block"><pre>
+ Can hold information like color, opacity, points colors, collision_allowed, etc...
+ </pre>
+
+ <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Common.TransformOrBuilder.html#hasMetadata()">hasMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="Common.TransformOrBuilder.html" title="interface in com.viam.common.v1">Common.TransformOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the metadata field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMetadata()">
+<h3>getMetadata</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getMetadata</span>()</div>
+<div class="block"><pre>
+ Can hold information like color, opacity, points colors, collision_allowed, etc...
+ </pre>
+
+ <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Common.TransformOrBuilder.html#getMetadata()">getMetadata</a></code>&nbsp;in interface&nbsp;<code><a href="Common.TransformOrBuilder.html" title="interface in com.viam.common.v1">Common.TransformOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The metadata.</dd>
 </dl>
 </section>
 </li>
