@@ -4492,6 +4492,253 @@ public final class Common {
     }
   }
 
+  public interface PointCloudOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.PointCloud)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>bytes point_cloud = 1 [json_name = "pointCloud"];</code>
+     * @return The pointCloud.
+     */
+    com.google.protobuf.ByteString getPointCloud();
+  }
+  /**
+   * Protobuf type {@code viam.common.v1.PointCloud}
+   */
+  public  static final class PointCloud extends
+      com.google.protobuf.GeneratedMessageLite<
+          PointCloud, PointCloud.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.PointCloud)
+      PointCloudOrBuilder {
+    private PointCloud() {
+      pointCloud_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    public static final int POINT_CLOUD_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString pointCloud_;
+    /**
+     * <code>bytes point_cloud = 1 [json_name = "pointCloud"];</code>
+     * @return The pointCloud.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPointCloud() {
+      return pointCloud_;
+    }
+    /**
+     * <code>bytes point_cloud = 1 [json_name = "pointCloud"];</code>
+     * @param value The pointCloud to set.
+     */
+    private void setPointCloud(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      pointCloud_ = value;
+    }
+    /**
+     * <code>bytes point_cloud = 1 [json_name = "pointCloud"];</code>
+     */
+    private void clearPointCloud() {
+
+      pointCloud_ = getDefaultInstance().getPointCloud();
+    }
+
+    public static com.viam.common.v1.Common.PointCloud parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.PointCloud parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.PointCloud parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.PointCloud parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.PointCloud parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.PointCloud parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.PointCloud parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.PointCloud parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.PointCloud parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.PointCloud parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.PointCloud parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.PointCloud parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.PointCloud prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.common.v1.PointCloud}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.PointCloud, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.PointCloud)
+        com.viam.common.v1.Common.PointCloudOrBuilder {
+      // Construct using com.viam.common.v1.Common.PointCloud.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>bytes point_cloud = 1 [json_name = "pointCloud"];</code>
+       * @return The pointCloud.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPointCloud() {
+        return instance.getPointCloud();
+      }
+      /**
+       * <code>bytes point_cloud = 1 [json_name = "pointCloud"];</code>
+       * @param value The pointCloud to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPointCloud(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPointCloud(value);
+        return this;
+      }
+      /**
+       * <code>bytes point_cloud = 1 [json_name = "pointCloud"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPointCloud() {
+        copyOnWrite();
+        instance.clearPointCloud();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.PointCloud)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.PointCloud();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "pointCloud_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\n";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.PointCloud> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.PointCloud.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.PointCloud>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.PointCloud)
+    private static final com.viam.common.v1.Common.PointCloud DEFAULT_INSTANCE;
+    static {
+      PointCloud defaultInstance = new PointCloud();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PointCloud.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.PointCloud getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PointCloud> PARSER;
+
+    public static com.google.protobuf.Parser<PointCloud> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface GeometryOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.common.v1.Geometry)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -4560,6 +4807,17 @@ public final class Common {
     com.viam.common.v1.Common.Mesh getMesh();
 
     /**
+     * <code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code>
+     * @return Whether the pointcloud field is set.
+     */
+    boolean hasPointcloud();
+    /**
+     * <code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code>
+     * @return The pointcloud.
+     */
+    com.viam.common.v1.Common.PointCloud getPointcloud();
+
+    /**
      * <pre>
      * Label of the geometry. If none supplied, will be an empty string.
      * </pre>
@@ -4604,6 +4862,7 @@ public final class Common {
       BOX(3),
       CAPSULE(5),
       MESH(6),
+      POINTCLOUD(7),
       GEOMETRYTYPE_NOT_SET(0);
       private final int value;
       private GeometryTypeCase(int value) {
@@ -4623,6 +4882,7 @@ public final class Common {
           case 3: return BOX;
           case 5: return CAPSULE;
           case 6: return MESH;
+          case 7: return POINTCLOUD;
           case 0: return GEOMETRYTYPE_NOT_SET;
           default: return null;
         }
@@ -4905,6 +5165,56 @@ public final class Common {
      */
     private void clearMesh() {
       if (geometryTypeCase_ == 6) {
+        geometryTypeCase_ = 0;
+        geometryType_ = null;
+      }
+    }
+
+    public static final int POINTCLOUD_FIELD_NUMBER = 7;
+    /**
+     * <code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code>
+     */
+    @java.lang.Override
+    public boolean hasPointcloud() {
+      return geometryTypeCase_ == 7;
+    }
+    /**
+     * <code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.PointCloud getPointcloud() {
+      if (geometryTypeCase_ == 7) {
+         return (com.viam.common.v1.Common.PointCloud) geometryType_;
+      }
+      return com.viam.common.v1.Common.PointCloud.getDefaultInstance();
+    }
+    /**
+     * <code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code>
+     */
+    private void setPointcloud(com.viam.common.v1.Common.PointCloud value) {
+      value.getClass();
+  geometryType_ = value;
+      geometryTypeCase_ = 7;
+    }
+    /**
+     * <code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code>
+     */
+    private void mergePointcloud(com.viam.common.v1.Common.PointCloud value) {
+      value.getClass();
+  if (geometryTypeCase_ == 7 &&
+          geometryType_ != com.viam.common.v1.Common.PointCloud.getDefaultInstance()) {
+        geometryType_ = com.viam.common.v1.Common.PointCloud.newBuilder((com.viam.common.v1.Common.PointCloud) geometryType_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        geometryType_ = value;
+      }
+      geometryTypeCase_ = 7;
+    }
+    /**
+     * <code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code>
+     */
+    private void clearPointcloud() {
+      if (geometryTypeCase_ == 7) {
         geometryTypeCase_ = 0;
         geometryType_ = null;
       }
@@ -5354,6 +5664,54 @@ public final class Common {
       }
 
       /**
+       * <code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code>
+       */
+      @java.lang.Override
+      public boolean hasPointcloud() {
+        return instance.hasPointcloud();
+      }
+      /**
+       * <code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.PointCloud getPointcloud() {
+        return instance.getPointcloud();
+      }
+      /**
+       * <code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code>
+       */
+      public Builder setPointcloud(com.viam.common.v1.Common.PointCloud value) {
+        copyOnWrite();
+        instance.setPointcloud(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code>
+       */
+      public Builder setPointcloud(
+          com.viam.common.v1.Common.PointCloud.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPointcloud(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code>
+       */
+      public Builder mergePointcloud(com.viam.common.v1.Common.PointCloud value) {
+        copyOnWrite();
+        instance.mergePointcloud(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.PointCloud pointcloud = 7 [json_name = "pointcloud"];</code>
+       */
+      public Builder clearPointcloud() {
+        copyOnWrite();
+        instance.clearPointcloud();
+        return this;
+      }
+
+      /**
        * <pre>
        * Label of the geometry. If none supplied, will be an empty string.
        * </pre>
@@ -5447,10 +5805,11 @@ public final class Common {
               "label_",
               com.viam.common.v1.Common.Capsule.class,
               com.viam.common.v1.Common.Mesh.class,
+              com.viam.common.v1.Common.PointCloud.class,
             };
             java.lang.String info =
-                "\u0000\u0006\u0001\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "<\u0000\u0003<\u0000\u0004\u0208\u0005<\u0000\u0006<\u0000";
+                "\u0000\u0007\u0001\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "<\u0000\u0003<\u0000\u0004\u0208\u0005<\u0000\u0006<\u0000\u0007<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -7649,6 +8008,35 @@ public final class Common {
      * @return The physicalObject.
      */
     com.viam.common.v1.Common.Geometry getPhysicalObject();
+
+    /**
+     * <pre>
+     * The UUID of the transform
+     * </pre>
+     *
+     * <code>bytes uuid = 4 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    com.google.protobuf.ByteString getUuid();
+
+    /**
+     * <pre>
+     * Can hold information like color, opacity, points colors, collision_allowed, etc...
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <pre>
+     * Can hold information like color, opacity, points colors, collision_allowed, etc...
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    com.google.protobuf.Struct getMetadata();
   }
   /**
    * <pre>
@@ -7666,6 +8054,7 @@ public final class Common {
       TransformOrBuilder {
     private Transform() {
       referenceFrame_ = "";
+      uuid_ = com.google.protobuf.ByteString.EMPTY;
     }
     private int bitField0_;
     public static final int REFERENCE_FRAME_FIELD_NUMBER = 1;
@@ -7845,6 +8234,111 @@ public final class Common {
      */
     private void clearPhysicalObject() {  physicalObject_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int UUID_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString uuid_;
+    /**
+     * <pre>
+     * The UUID of the transform
+     * </pre>
+     *
+     * <code>bytes uuid = 4 [json_name = "uuid"];</code>
+     * @return The uuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getUuid() {
+      return uuid_;
+    }
+    /**
+     * <pre>
+     * The UUID of the transform
+     * </pre>
+     *
+     * <code>bytes uuid = 4 [json_name = "uuid"];</code>
+     * @param value The uuid to set.
+     */
+    private void setUuid(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      uuid_ = value;
+    }
+    /**
+     * <pre>
+     * The UUID of the transform
+     * </pre>
+     *
+     * <code>bytes uuid = 4 [json_name = "uuid"];</code>
+     */
+    private void clearUuid() {
+
+      uuid_ = getDefaultInstance().getUuid();
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 5;
+    private com.google.protobuf.Struct metadata_;
+    /**
+     * <pre>
+     * Can hold information like color, opacity, points colors, collision_allowed, etc...
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Can hold information like color, opacity, points colors, collision_allowed, etc...
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getMetadata() {
+      return metadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <pre>
+     * Can hold information like color, opacity, points colors, collision_allowed, etc...
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code>
+     */
+    private void setMetadata(com.google.protobuf.Struct value) {
+      value.getClass();
+  metadata_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <pre>
+     * Can hold information like color, opacity, points colors, collision_allowed, etc...
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMetadata(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (metadata_ != null &&
+          metadata_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        metadata_ =
+          com.google.protobuf.Struct.newBuilder(metadata_).mergeFrom(value).buildPartial();
+      } else {
+        metadata_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * Can hold information like color, opacity, points colors, collision_allowed, etc...
+     * </pre>
+     *
+     * <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code>
+     */
+    private void clearMetadata() {  metadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static com.viam.common.v1.Common.Transform parseFrom(
@@ -8137,6 +8631,117 @@ public final class Common {
         return this;
       }
 
+      /**
+       * <pre>
+       * The UUID of the transform
+       * </pre>
+       *
+       * <code>bytes uuid = 4 [json_name = "uuid"];</code>
+       * @return The uuid.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getUuid() {
+        return instance.getUuid();
+      }
+      /**
+       * <pre>
+       * The UUID of the transform
+       * </pre>
+       *
+       * <code>bytes uuid = 4 [json_name = "uuid"];</code>
+       * @param value The uuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUuid(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUuid(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The UUID of the transform
+       * </pre>
+       *
+       * <code>bytes uuid = 4 [json_name = "uuid"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUuid() {
+        copyOnWrite();
+        instance.clearUuid();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Can hold information like color, opacity, points colors, collision_allowed, etc...
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code>
+       */
+      @java.lang.Override
+      public boolean hasMetadata() {
+        return instance.hasMetadata();
+      }
+      /**
+       * <pre>
+       * Can hold information like color, opacity, points colors, collision_allowed, etc...
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getMetadata() {
+        return instance.getMetadata();
+      }
+      /**
+       * <pre>
+       * Can hold information like color, opacity, points colors, collision_allowed, etc...
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setMetadata(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Can hold information like color, opacity, points colors, collision_allowed, etc...
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMetadata(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Can hold information like color, opacity, points colors, collision_allowed, etc...
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code>
+       */
+      public Builder mergeMetadata(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeMetadata(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Can hold information like color, opacity, points colors, collision_allowed, etc...
+       * </pre>
+       *
+       * <code>optional .google.protobuf.Struct metadata = 5 [json_name = "metadata"];</code>
+       */
+      public Builder clearMetadata() {  copyOnWrite();
+        instance.clearMetadata();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.common.v1.Transform)
     }
     @java.lang.Override
@@ -8157,10 +8762,12 @@ public final class Common {
               "referenceFrame_",
               "poseInObserverFrame_",
               "physicalObject_",
+              "uuid_",
+              "metadata_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u1009\u0001";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001\u0004\n\u0005\u1009\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

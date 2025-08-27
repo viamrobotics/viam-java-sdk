@@ -12246,30 +12246,44 @@ public final class Motion {
     int getOrientationConstraintCount();
 
     /**
-     * <pre>
-     * Arc constraint, Time constraint, and others will be added here when they are supported
-     * </pre>
-     *
      * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
      */
     java.util.List<com.viam.service.motion.v1.Motion.CollisionSpecification> 
         getCollisionSpecificationList();
     /**
-     * <pre>
-     * Arc constraint, Time constraint, and others will be added here when they are supported
-     * </pre>
-     *
      * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
      */
     com.viam.service.motion.v1.Motion.CollisionSpecification getCollisionSpecification(int index);
+    /**
+     * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
+     */
+    int getCollisionSpecificationCount();
+
     /**
      * <pre>
      * Arc constraint, Time constraint, and others will be added here when they are supported
      * </pre>
      *
-     * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
      */
-    int getCollisionSpecificationCount();
+    java.util.List<com.viam.service.motion.v1.Motion.PseudolinearConstraint> 
+        getPseudolinearConstraintList();
+    /**
+     * <pre>
+     * Arc constraint, Time constraint, and others will be added here when they are supported
+     * </pre>
+     *
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+     */
+    com.viam.service.motion.v1.Motion.PseudolinearConstraint getPseudolinearConstraint(int index);
+    /**
+     * <pre>
+     * Arc constraint, Time constraint, and others will be added here when they are supported
+     * </pre>
+     *
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+     */
+    int getPseudolinearConstraintCount();
   }
   /**
    * <pre>
@@ -12287,6 +12301,7 @@ public final class Motion {
       linearConstraint_ = emptyProtobufList();
       orientationConstraint_ = emptyProtobufList();
       collisionSpecification_ = emptyProtobufList();
+      pseudolinearConstraint_ = emptyProtobufList();
     }
     public static final int LINEAR_CONSTRAINT_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<com.viam.service.motion.v1.Motion.LinearConstraint> linearConstraint_;
@@ -12523,10 +12538,6 @@ public final class Motion {
     public static final int COLLISION_SPECIFICATION_FIELD_NUMBER = 3;
     private com.google.protobuf.Internal.ProtobufList<com.viam.service.motion.v1.Motion.CollisionSpecification> collisionSpecification_;
     /**
-     * <pre>
-     * Arc constraint, Time constraint, and others will be added here when they are supported
-     * </pre>
-     *
      * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
      */
     @java.lang.Override
@@ -12534,10 +12545,6 @@ public final class Motion {
       return collisionSpecification_;
     }
     /**
-     * <pre>
-     * Arc constraint, Time constraint, and others will be added here when they are supported
-     * </pre>
-     *
      * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
      */
     public java.util.List<? extends com.viam.service.motion.v1.Motion.CollisionSpecificationOrBuilder> 
@@ -12545,10 +12552,6 @@ public final class Motion {
       return collisionSpecification_;
     }
     /**
-     * <pre>
-     * Arc constraint, Time constraint, and others will be added here when they are supported
-     * </pre>
-     *
      * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
      */
     @java.lang.Override
@@ -12556,10 +12559,6 @@ public final class Motion {
       return collisionSpecification_.size();
     }
     /**
-     * <pre>
-     * Arc constraint, Time constraint, and others will be added here when they are supported
-     * </pre>
-     *
      * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
      */
     @java.lang.Override
@@ -12567,10 +12566,6 @@ public final class Motion {
       return collisionSpecification_.get(index);
     }
     /**
-     * <pre>
-     * Arc constraint, Time constraint, and others will be added here when they are supported
-     * </pre>
-     *
      * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
      */
     public com.viam.service.motion.v1.Motion.CollisionSpecificationOrBuilder getCollisionSpecificationOrBuilder(
@@ -12586,10 +12581,6 @@ public final class Motion {
     }
 
     /**
-     * <pre>
-     * Arc constraint, Time constraint, and others will be added here when they are supported
-     * </pre>
-     *
      * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
      */
     private void setCollisionSpecification(
@@ -12599,10 +12590,6 @@ public final class Motion {
       collisionSpecification_.set(index, value);
     }
     /**
-     * <pre>
-     * Arc constraint, Time constraint, and others will be added here when they are supported
-     * </pre>
-     *
      * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
      */
     private void addCollisionSpecification(com.viam.service.motion.v1.Motion.CollisionSpecification value) {
@@ -12611,10 +12598,6 @@ public final class Motion {
       collisionSpecification_.add(value);
     }
     /**
-     * <pre>
-     * Arc constraint, Time constraint, and others will be added here when they are supported
-     * </pre>
-     *
      * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
      */
     private void addCollisionSpecification(
@@ -12624,10 +12607,6 @@ public final class Motion {
       collisionSpecification_.add(index, value);
     }
     /**
-     * <pre>
-     * Arc constraint, Time constraint, and others will be added here when they are supported
-     * </pre>
-     *
      * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
      */
     private void addAllCollisionSpecification(
@@ -12637,25 +12616,155 @@ public final class Motion {
           values, collisionSpecification_);
     }
     /**
-     * <pre>
-     * Arc constraint, Time constraint, and others will be added here when they are supported
-     * </pre>
-     *
      * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
      */
     private void clearCollisionSpecification() {
       collisionSpecification_ = emptyProtobufList();
     }
     /**
-     * <pre>
-     * Arc constraint, Time constraint, and others will be added here when they are supported
-     * </pre>
-     *
      * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
      */
     private void removeCollisionSpecification(int index) {
       ensureCollisionSpecificationIsMutable();
       collisionSpecification_.remove(index);
+    }
+
+    public static final int PSEUDOLINEAR_CONSTRAINT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.motion.v1.Motion.PseudolinearConstraint> pseudolinearConstraint_;
+    /**
+     * <pre>
+     * Arc constraint, Time constraint, and others will be added here when they are supported
+     * </pre>
+     *
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.service.motion.v1.Motion.PseudolinearConstraint> getPseudolinearConstraintList() {
+      return pseudolinearConstraint_;
+    }
+    /**
+     * <pre>
+     * Arc constraint, Time constraint, and others will be added here when they are supported
+     * </pre>
+     *
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+     */
+    public java.util.List<? extends com.viam.service.motion.v1.Motion.PseudolinearConstraintOrBuilder> 
+        getPseudolinearConstraintOrBuilderList() {
+      return pseudolinearConstraint_;
+    }
+    /**
+     * <pre>
+     * Arc constraint, Time constraint, and others will be added here when they are supported
+     * </pre>
+     *
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+     */
+    @java.lang.Override
+    public int getPseudolinearConstraintCount() {
+      return pseudolinearConstraint_.size();
+    }
+    /**
+     * <pre>
+     * Arc constraint, Time constraint, and others will be added here when they are supported
+     * </pre>
+     *
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+     */
+    @java.lang.Override
+    public com.viam.service.motion.v1.Motion.PseudolinearConstraint getPseudolinearConstraint(int index) {
+      return pseudolinearConstraint_.get(index);
+    }
+    /**
+     * <pre>
+     * Arc constraint, Time constraint, and others will be added here when they are supported
+     * </pre>
+     *
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+     */
+    public com.viam.service.motion.v1.Motion.PseudolinearConstraintOrBuilder getPseudolinearConstraintOrBuilder(
+        int index) {
+      return pseudolinearConstraint_.get(index);
+    }
+    private void ensurePseudolinearConstraintIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.motion.v1.Motion.PseudolinearConstraint> tmp = pseudolinearConstraint_;
+      if (!tmp.isModifiable()) {
+        pseudolinearConstraint_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * Arc constraint, Time constraint, and others will be added here when they are supported
+     * </pre>
+     *
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+     */
+    private void setPseudolinearConstraint(
+        int index, com.viam.service.motion.v1.Motion.PseudolinearConstraint value) {
+      value.getClass();
+  ensurePseudolinearConstraintIsMutable();
+      pseudolinearConstraint_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Arc constraint, Time constraint, and others will be added here when they are supported
+     * </pre>
+     *
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+     */
+    private void addPseudolinearConstraint(com.viam.service.motion.v1.Motion.PseudolinearConstraint value) {
+      value.getClass();
+  ensurePseudolinearConstraintIsMutable();
+      pseudolinearConstraint_.add(value);
+    }
+    /**
+     * <pre>
+     * Arc constraint, Time constraint, and others will be added here when they are supported
+     * </pre>
+     *
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+     */
+    private void addPseudolinearConstraint(
+        int index, com.viam.service.motion.v1.Motion.PseudolinearConstraint value) {
+      value.getClass();
+  ensurePseudolinearConstraintIsMutable();
+      pseudolinearConstraint_.add(index, value);
+    }
+    /**
+     * <pre>
+     * Arc constraint, Time constraint, and others will be added here when they are supported
+     * </pre>
+     *
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+     */
+    private void addAllPseudolinearConstraint(
+        java.lang.Iterable<? extends com.viam.service.motion.v1.Motion.PseudolinearConstraint> values) {
+      ensurePseudolinearConstraintIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, pseudolinearConstraint_);
+    }
+    /**
+     * <pre>
+     * Arc constraint, Time constraint, and others will be added here when they are supported
+     * </pre>
+     *
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+     */
+    private void clearPseudolinearConstraint() {
+      pseudolinearConstraint_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Arc constraint, Time constraint, and others will be added here when they are supported
+     * </pre>
+     *
+     * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+     */
+    private void removePseudolinearConstraint(int index) {
+      ensurePseudolinearConstraintIsMutable();
+      pseudolinearConstraint_.remove(index);
     }
 
     public static com.viam.service.motion.v1.Motion.Constraints parseFrom(
@@ -13012,10 +13121,6 @@ public final class Motion {
       }
 
       /**
-       * <pre>
-       * Arc constraint, Time constraint, and others will be added here when they are supported
-       * </pre>
-       *
        * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
        */
       @java.lang.Override
@@ -13024,20 +13129,12 @@ public final class Motion {
             instance.getCollisionSpecificationList());
       }
       /**
-       * <pre>
-       * Arc constraint, Time constraint, and others will be added here when they are supported
-       * </pre>
-       *
        * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
        */
       @java.lang.Override
       public int getCollisionSpecificationCount() {
         return instance.getCollisionSpecificationCount();
       }/**
-       * <pre>
-       * Arc constraint, Time constraint, and others will be added here when they are supported
-       * </pre>
-       *
        * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
        */
       @java.lang.Override
@@ -13045,10 +13142,6 @@ public final class Motion {
         return instance.getCollisionSpecification(index);
       }
       /**
-       * <pre>
-       * Arc constraint, Time constraint, and others will be added here when they are supported
-       * </pre>
-       *
        * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
        */
       public Builder setCollisionSpecification(
@@ -13058,10 +13151,6 @@ public final class Motion {
         return this;
       }
       /**
-       * <pre>
-       * Arc constraint, Time constraint, and others will be added here when they are supported
-       * </pre>
-       *
        * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
        */
       public Builder setCollisionSpecification(
@@ -13072,10 +13161,6 @@ public final class Motion {
         return this;
       }
       /**
-       * <pre>
-       * Arc constraint, Time constraint, and others will be added here when they are supported
-       * </pre>
-       *
        * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
        */
       public Builder addCollisionSpecification(com.viam.service.motion.v1.Motion.CollisionSpecification value) {
@@ -13084,10 +13169,6 @@ public final class Motion {
         return this;
       }
       /**
-       * <pre>
-       * Arc constraint, Time constraint, and others will be added here when they are supported
-       * </pre>
-       *
        * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
        */
       public Builder addCollisionSpecification(
@@ -13097,10 +13178,6 @@ public final class Motion {
         return this;
       }
       /**
-       * <pre>
-       * Arc constraint, Time constraint, and others will be added here when they are supported
-       * </pre>
-       *
        * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
        */
       public Builder addCollisionSpecification(
@@ -13110,10 +13187,6 @@ public final class Motion {
         return this;
       }
       /**
-       * <pre>
-       * Arc constraint, Time constraint, and others will be added here when they are supported
-       * </pre>
-       *
        * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
        */
       public Builder addCollisionSpecification(
@@ -13124,10 +13197,6 @@ public final class Motion {
         return this;
       }
       /**
-       * <pre>
-       * Arc constraint, Time constraint, and others will be added here when they are supported
-       * </pre>
-       *
        * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
        */
       public Builder addAllCollisionSpecification(
@@ -13137,10 +13206,6 @@ public final class Motion {
         return this;
       }
       /**
-       * <pre>
-       * Arc constraint, Time constraint, and others will be added here when they are supported
-       * </pre>
-       *
        * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
        */
       public Builder clearCollisionSpecification() {
@@ -13149,15 +13214,161 @@ public final class Motion {
         return this;
       }
       /**
-       * <pre>
-       * Arc constraint, Time constraint, and others will be added here when they are supported
-       * </pre>
-       *
        * <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code>
        */
       public Builder removeCollisionSpecification(int index) {
         copyOnWrite();
         instance.removeCollisionSpecification(index);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Arc constraint, Time constraint, and others will be added here when they are supported
+       * </pre>
+       *
+       * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.service.motion.v1.Motion.PseudolinearConstraint> getPseudolinearConstraintList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getPseudolinearConstraintList());
+      }
+      /**
+       * <pre>
+       * Arc constraint, Time constraint, and others will be added here when they are supported
+       * </pre>
+       *
+       * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+       */
+      @java.lang.Override
+      public int getPseudolinearConstraintCount() {
+        return instance.getPseudolinearConstraintCount();
+      }/**
+       * <pre>
+       * Arc constraint, Time constraint, and others will be added here when they are supported
+       * </pre>
+       *
+       * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+       */
+      @java.lang.Override
+      public com.viam.service.motion.v1.Motion.PseudolinearConstraint getPseudolinearConstraint(int index) {
+        return instance.getPseudolinearConstraint(index);
+      }
+      /**
+       * <pre>
+       * Arc constraint, Time constraint, and others will be added here when they are supported
+       * </pre>
+       *
+       * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+       */
+      public Builder setPseudolinearConstraint(
+          int index, com.viam.service.motion.v1.Motion.PseudolinearConstraint value) {
+        copyOnWrite();
+        instance.setPseudolinearConstraint(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Arc constraint, Time constraint, and others will be added here when they are supported
+       * </pre>
+       *
+       * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+       */
+      public Builder setPseudolinearConstraint(
+          int index, com.viam.service.motion.v1.Motion.PseudolinearConstraint.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPseudolinearConstraint(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Arc constraint, Time constraint, and others will be added here when they are supported
+       * </pre>
+       *
+       * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+       */
+      public Builder addPseudolinearConstraint(com.viam.service.motion.v1.Motion.PseudolinearConstraint value) {
+        copyOnWrite();
+        instance.addPseudolinearConstraint(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Arc constraint, Time constraint, and others will be added here when they are supported
+       * </pre>
+       *
+       * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+       */
+      public Builder addPseudolinearConstraint(
+          int index, com.viam.service.motion.v1.Motion.PseudolinearConstraint value) {
+        copyOnWrite();
+        instance.addPseudolinearConstraint(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Arc constraint, Time constraint, and others will be added here when they are supported
+       * </pre>
+       *
+       * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+       */
+      public Builder addPseudolinearConstraint(
+          com.viam.service.motion.v1.Motion.PseudolinearConstraint.Builder builderForValue) {
+        copyOnWrite();
+        instance.addPseudolinearConstraint(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Arc constraint, Time constraint, and others will be added here when they are supported
+       * </pre>
+       *
+       * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+       */
+      public Builder addPseudolinearConstraint(
+          int index, com.viam.service.motion.v1.Motion.PseudolinearConstraint.Builder builderForValue) {
+        copyOnWrite();
+        instance.addPseudolinearConstraint(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Arc constraint, Time constraint, and others will be added here when they are supported
+       * </pre>
+       *
+       * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+       */
+      public Builder addAllPseudolinearConstraint(
+          java.lang.Iterable<? extends com.viam.service.motion.v1.Motion.PseudolinearConstraint> values) {
+        copyOnWrite();
+        instance.addAllPseudolinearConstraint(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Arc constraint, Time constraint, and others will be added here when they are supported
+       * </pre>
+       *
+       * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+       */
+      public Builder clearPseudolinearConstraint() {
+        copyOnWrite();
+        instance.clearPseudolinearConstraint();
+        return this;
+      }
+      /**
+       * <pre>
+       * Arc constraint, Time constraint, and others will be added here when they are supported
+       * </pre>
+       *
+       * <code>repeated .viam.service.motion.v1.PseudolinearConstraint pseudolinear_constraint = 4 [json_name = "pseudolinearConstraint"];</code>
+       */
+      public Builder removePseudolinearConstraint(int index) {
+        copyOnWrite();
+        instance.removePseudolinearConstraint(index);
         return this;
       }
 
@@ -13183,10 +13394,12 @@ public final class Motion {
               com.viam.service.motion.v1.Motion.OrientationConstraint.class,
               "collisionSpecification_",
               com.viam.service.motion.v1.Motion.CollisionSpecification.class,
+              "pseudolinearConstraint_",
+              com.viam.service.motion.v1.Motion.PseudolinearConstraint.class,
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0003\u0000\u0001\u001b\u0002\u001b" +
-                "\u0003\u001b";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0004\u0000\u0001\u001b\u0002\u001b" +
+                "\u0003\u001b\u0004\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -13678,6 +13891,371 @@ public final class Motion {
     private static volatile com.google.protobuf.Parser<LinearConstraint> PARSER;
 
     public static com.google.protobuf.Parser<LinearConstraint> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PseudolinearConstraintOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.motion.v1.PseudolinearConstraint)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional float line_tolerance_factor = 1 [json_name = "lineToleranceFactor"];</code>
+     * @return Whether the lineToleranceFactor field is set.
+     */
+    boolean hasLineToleranceFactor();
+    /**
+     * <code>optional float line_tolerance_factor = 1 [json_name = "lineToleranceFactor"];</code>
+     * @return The lineToleranceFactor.
+     */
+    float getLineToleranceFactor();
+
+    /**
+     * <code>optional float orientation_tolerance_factor = 2 [json_name = "orientationToleranceFactor"];</code>
+     * @return Whether the orientationToleranceFactor field is set.
+     */
+    boolean hasOrientationToleranceFactor();
+    /**
+     * <code>optional float orientation_tolerance_factor = 2 [json_name = "orientationToleranceFactor"];</code>
+     * @return The orientationToleranceFactor.
+     */
+    float getOrientationToleranceFactor();
+  }
+  /**
+   * <pre>
+   * PseudolinearConstraint specifies that the component being moved should not deviate from the straight-line path to their goal by
+   * more than a factor proportional to the distance from start to goal.
+   * For example, if a component is moving 100mm, then a LineToleranceFactor of 1.0 means that the component will remain within a 100mm
+   * radius of the straight-line start-goal path.
+   * </pre>
+   *
+   * Protobuf type {@code viam.service.motion.v1.PseudolinearConstraint}
+   */
+  public  static final class PseudolinearConstraint extends
+      com.google.protobuf.GeneratedMessageLite<
+          PseudolinearConstraint, PseudolinearConstraint.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.motion.v1.PseudolinearConstraint)
+      PseudolinearConstraintOrBuilder {
+    private PseudolinearConstraint() {
+    }
+    private int bitField0_;
+    public static final int LINE_TOLERANCE_FACTOR_FIELD_NUMBER = 1;
+    private float lineToleranceFactor_;
+    /**
+     * <code>optional float line_tolerance_factor = 1 [json_name = "lineToleranceFactor"];</code>
+     * @return Whether the lineToleranceFactor field is set.
+     */
+    @java.lang.Override
+    public boolean hasLineToleranceFactor() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional float line_tolerance_factor = 1 [json_name = "lineToleranceFactor"];</code>
+     * @return The lineToleranceFactor.
+     */
+    @java.lang.Override
+    public float getLineToleranceFactor() {
+      return lineToleranceFactor_;
+    }
+    /**
+     * <code>optional float line_tolerance_factor = 1 [json_name = "lineToleranceFactor"];</code>
+     * @param value The lineToleranceFactor to set.
+     */
+    private void setLineToleranceFactor(float value) {
+      bitField0_ |= 0x00000001;
+      lineToleranceFactor_ = value;
+    }
+    /**
+     * <code>optional float line_tolerance_factor = 1 [json_name = "lineToleranceFactor"];</code>
+     */
+    private void clearLineToleranceFactor() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      lineToleranceFactor_ = 0F;
+    }
+
+    public static final int ORIENTATION_TOLERANCE_FACTOR_FIELD_NUMBER = 2;
+    private float orientationToleranceFactor_;
+    /**
+     * <code>optional float orientation_tolerance_factor = 2 [json_name = "orientationToleranceFactor"];</code>
+     * @return Whether the orientationToleranceFactor field is set.
+     */
+    @java.lang.Override
+    public boolean hasOrientationToleranceFactor() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional float orientation_tolerance_factor = 2 [json_name = "orientationToleranceFactor"];</code>
+     * @return The orientationToleranceFactor.
+     */
+    @java.lang.Override
+    public float getOrientationToleranceFactor() {
+      return orientationToleranceFactor_;
+    }
+    /**
+     * <code>optional float orientation_tolerance_factor = 2 [json_name = "orientationToleranceFactor"];</code>
+     * @param value The orientationToleranceFactor to set.
+     */
+    private void setOrientationToleranceFactor(float value) {
+      bitField0_ |= 0x00000002;
+      orientationToleranceFactor_ = value;
+    }
+    /**
+     * <code>optional float orientation_tolerance_factor = 2 [json_name = "orientationToleranceFactor"];</code>
+     */
+    private void clearOrientationToleranceFactor() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      orientationToleranceFactor_ = 0F;
+    }
+
+    public static com.viam.service.motion.v1.Motion.PseudolinearConstraint parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.motion.v1.Motion.PseudolinearConstraint parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.PseudolinearConstraint parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.motion.v1.Motion.PseudolinearConstraint parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.PseudolinearConstraint parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.motion.v1.Motion.PseudolinearConstraint parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.PseudolinearConstraint parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.motion.v1.Motion.PseudolinearConstraint parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.motion.v1.Motion.PseudolinearConstraint parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.motion.v1.Motion.PseudolinearConstraint parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.PseudolinearConstraint parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.motion.v1.Motion.PseudolinearConstraint parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.motion.v1.Motion.PseudolinearConstraint prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * PseudolinearConstraint specifies that the component being moved should not deviate from the straight-line path to their goal by
+     * more than a factor proportional to the distance from start to goal.
+     * For example, if a component is moving 100mm, then a LineToleranceFactor of 1.0 means that the component will remain within a 100mm
+     * radius of the straight-line start-goal path.
+     * </pre>
+     *
+     * Protobuf type {@code viam.service.motion.v1.PseudolinearConstraint}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.motion.v1.Motion.PseudolinearConstraint, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.motion.v1.PseudolinearConstraint)
+        com.viam.service.motion.v1.Motion.PseudolinearConstraintOrBuilder {
+      // Construct using com.viam.service.motion.v1.Motion.PseudolinearConstraint.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>optional float line_tolerance_factor = 1 [json_name = "lineToleranceFactor"];</code>
+       * @return Whether the lineToleranceFactor field is set.
+       */
+      @java.lang.Override
+      public boolean hasLineToleranceFactor() {
+        return instance.hasLineToleranceFactor();
+      }
+      /**
+       * <code>optional float line_tolerance_factor = 1 [json_name = "lineToleranceFactor"];</code>
+       * @return The lineToleranceFactor.
+       */
+      @java.lang.Override
+      public float getLineToleranceFactor() {
+        return instance.getLineToleranceFactor();
+      }
+      /**
+       * <code>optional float line_tolerance_factor = 1 [json_name = "lineToleranceFactor"];</code>
+       * @param value The lineToleranceFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLineToleranceFactor(float value) {
+        copyOnWrite();
+        instance.setLineToleranceFactor(value);
+        return this;
+      }
+      /**
+       * <code>optional float line_tolerance_factor = 1 [json_name = "lineToleranceFactor"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLineToleranceFactor() {
+        copyOnWrite();
+        instance.clearLineToleranceFactor();
+        return this;
+      }
+
+      /**
+       * <code>optional float orientation_tolerance_factor = 2 [json_name = "orientationToleranceFactor"];</code>
+       * @return Whether the orientationToleranceFactor field is set.
+       */
+      @java.lang.Override
+      public boolean hasOrientationToleranceFactor() {
+        return instance.hasOrientationToleranceFactor();
+      }
+      /**
+       * <code>optional float orientation_tolerance_factor = 2 [json_name = "orientationToleranceFactor"];</code>
+       * @return The orientationToleranceFactor.
+       */
+      @java.lang.Override
+      public float getOrientationToleranceFactor() {
+        return instance.getOrientationToleranceFactor();
+      }
+      /**
+       * <code>optional float orientation_tolerance_factor = 2 [json_name = "orientationToleranceFactor"];</code>
+       * @param value The orientationToleranceFactor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrientationToleranceFactor(float value) {
+        copyOnWrite();
+        instance.setOrientationToleranceFactor(value);
+        return this;
+      }
+      /**
+       * <code>optional float orientation_tolerance_factor = 2 [json_name = "orientationToleranceFactor"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrientationToleranceFactor() {
+        copyOnWrite();
+        instance.clearOrientationToleranceFactor();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.motion.v1.PseudolinearConstraint)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.motion.v1.Motion.PseudolinearConstraint();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "lineToleranceFactor_",
+              "orientationToleranceFactor_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1001\u0000\u0002" +
+                "\u1001\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.motion.v1.Motion.PseudolinearConstraint> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.motion.v1.Motion.PseudolinearConstraint.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.motion.v1.Motion.PseudolinearConstraint>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.motion.v1.PseudolinearConstraint)
+    private static final com.viam.service.motion.v1.Motion.PseudolinearConstraint DEFAULT_INSTANCE;
+    static {
+      PseudolinearConstraint defaultInstance = new PseudolinearConstraint();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PseudolinearConstraint.class, defaultInstance);
+    }
+
+    public static com.viam.service.motion.v1.Motion.PseudolinearConstraint getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PseudolinearConstraint> PARSER;
+
+    public static com.google.protobuf.Parser<PseudolinearConstraint> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
