@@ -708,6 +708,96 @@ public final class DataServiceGrpc {
     return getRemoveBinaryDataFromDatasetByIDsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateIndexRequest,
+      viam.app.data.v1.Data.CreateIndexResponse> getCreateIndexMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateIndex",
+      requestType = viam.app.data.v1.Data.CreateIndexRequest.class,
+      responseType = viam.app.data.v1.Data.CreateIndexResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateIndexRequest,
+      viam.app.data.v1.Data.CreateIndexResponse> getCreateIndexMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateIndexRequest, viam.app.data.v1.Data.CreateIndexResponse> getCreateIndexMethod;
+    if ((getCreateIndexMethod = DataServiceGrpc.getCreateIndexMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getCreateIndexMethod = DataServiceGrpc.getCreateIndexMethod) == null) {
+          DataServiceGrpc.getCreateIndexMethod = getCreateIndexMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.CreateIndexRequest, viam.app.data.v1.Data.CreateIndexResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateIndex"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.CreateIndexRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.CreateIndexResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getCreateIndexMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.ListIndexesRequest,
+      viam.app.data.v1.Data.ListIndexesResponse> getListIndexesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListIndexes",
+      requestType = viam.app.data.v1.Data.ListIndexesRequest.class,
+      responseType = viam.app.data.v1.Data.ListIndexesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.ListIndexesRequest,
+      viam.app.data.v1.Data.ListIndexesResponse> getListIndexesMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.ListIndexesRequest, viam.app.data.v1.Data.ListIndexesResponse> getListIndexesMethod;
+    if ((getListIndexesMethod = DataServiceGrpc.getListIndexesMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getListIndexesMethod = DataServiceGrpc.getListIndexesMethod) == null) {
+          DataServiceGrpc.getListIndexesMethod = getListIndexesMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.ListIndexesRequest, viam.app.data.v1.Data.ListIndexesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListIndexes"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.ListIndexesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.ListIndexesResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getListIndexesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteIndexRequest,
+      viam.app.data.v1.Data.DeleteIndexResponse> getDeleteIndexMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteIndex",
+      requestType = viam.app.data.v1.Data.DeleteIndexRequest.class,
+      responseType = viam.app.data.v1.Data.DeleteIndexResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteIndexRequest,
+      viam.app.data.v1.Data.DeleteIndexResponse> getDeleteIndexMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteIndexRequest, viam.app.data.v1.Data.DeleteIndexResponse> getDeleteIndexMethod;
+    if ((getDeleteIndexMethod = DataServiceGrpc.getDeleteIndexMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getDeleteIndexMethod = DataServiceGrpc.getDeleteIndexMethod) == null) {
+          DataServiceGrpc.getDeleteIndexMethod = getDeleteIndexMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.DeleteIndexRequest, viam.app.data.v1.Data.DeleteIndexResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteIndex"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.DeleteIndexRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.DeleteIndexResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getDeleteIndexMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -994,6 +1084,36 @@ public final class DataServiceGrpc {
     default void removeBinaryDataFromDatasetByIDs(viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveBinaryDataFromDatasetByIDsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateIndex starts a custom index build
+     * </pre>
+     */
+    default void createIndex(viam.app.data.v1.Data.CreateIndexRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateIndexResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateIndexMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListIndexes returns all the indexes for a given collection
+     * </pre>
+     */
+    default void listIndexes(viam.app.data.v1.Data.ListIndexesRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListIndexesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListIndexesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteIndex drops the specified custom index from a collection
+     * </pre>
+     */
+    default void deleteIndex(viam.app.data.v1.Data.DeleteIndexRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteIndexResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteIndexMethod(), responseObserver);
     }
   }
 
@@ -1289,6 +1409,39 @@ public final class DataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRemoveBinaryDataFromDatasetByIDsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateIndex starts a custom index build
+     * </pre>
+     */
+    public void createIndex(viam.app.data.v1.Data.CreateIndexRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateIndexResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateIndexMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListIndexes returns all the indexes for a given collection
+     * </pre>
+     */
+    public void listIndexes(viam.app.data.v1.Data.ListIndexesRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListIndexesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListIndexesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteIndex drops the specified custom index from a collection
+     * </pre>
+     */
+    public void deleteIndex(viam.app.data.v1.Data.DeleteIndexRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteIndexResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteIndexMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1546,6 +1699,36 @@ public final class DataServiceGrpc {
     public viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse removeBinaryDataFromDatasetByIDs(viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRemoveBinaryDataFromDatasetByIDsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateIndex starts a custom index build
+     * </pre>
+     */
+    public viam.app.data.v1.Data.CreateIndexResponse createIndex(viam.app.data.v1.Data.CreateIndexRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateIndexMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListIndexes returns all the indexes for a given collection
+     * </pre>
+     */
+    public viam.app.data.v1.Data.ListIndexesResponse listIndexes(viam.app.data.v1.Data.ListIndexesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListIndexesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteIndex drops the specified custom index from a collection
+     * </pre>
+     */
+    public viam.app.data.v1.Data.DeleteIndexResponse deleteIndex(viam.app.data.v1.Data.DeleteIndexRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteIndexMethod(), getCallOptions(), request);
     }
   }
 
@@ -1816,6 +1999,39 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRemoveBinaryDataFromDatasetByIDsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * CreateIndex starts a custom index build
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.CreateIndexResponse> createIndex(
+        viam.app.data.v1.Data.CreateIndexRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateIndexMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListIndexes returns all the indexes for a given collection
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.ListIndexesResponse> listIndexes(
+        viam.app.data.v1.Data.ListIndexesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListIndexesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteIndex drops the specified custom index from a collection
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.DeleteIndexResponse> deleteIndex(
+        viam.app.data.v1.Data.DeleteIndexRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteIndexMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TABULAR_DATA_BY_FILTER = 0;
@@ -1841,6 +2057,9 @@ public final class DataServiceGrpc {
   private static final int METHODID_CONFIGURE_DATABASE_USER = 20;
   private static final int METHODID_ADD_BINARY_DATA_TO_DATASET_BY_IDS = 21;
   private static final int METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS = 22;
+  private static final int METHODID_CREATE_INDEX = 23;
+  private static final int METHODID_LIST_INDEXES = 24;
+  private static final int METHODID_DELETE_INDEX = 25;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1950,6 +2169,18 @@ public final class DataServiceGrpc {
         case METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS:
           serviceImpl.removeBinaryDataFromDatasetByIDs((viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_INDEX:
+          serviceImpl.createIndex((viam.app.data.v1.Data.CreateIndexRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateIndexResponse>) responseObserver);
+          break;
+        case METHODID_LIST_INDEXES:
+          serviceImpl.listIndexes((viam.app.data.v1.Data.ListIndexesRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListIndexesResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_INDEX:
+          serviceImpl.deleteIndex((viam.app.data.v1.Data.DeleteIndexRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteIndexResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2130,6 +2361,27 @@ public final class DataServiceGrpc {
               viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest,
               viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse>(
                 service, METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS)))
+        .addMethod(
+          getCreateIndexMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.CreateIndexRequest,
+              viam.app.data.v1.Data.CreateIndexResponse>(
+                service, METHODID_CREATE_INDEX)))
+        .addMethod(
+          getListIndexesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.ListIndexesRequest,
+              viam.app.data.v1.Data.ListIndexesResponse>(
+                service, METHODID_LIST_INDEXES)))
+        .addMethod(
+          getDeleteIndexMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.DeleteIndexRequest,
+              viam.app.data.v1.Data.DeleteIndexResponse>(
+                service, METHODID_DELETE_INDEX)))
         .build();
   }
 
@@ -2165,6 +2417,9 @@ public final class DataServiceGrpc {
               .addMethod(getConfigureDatabaseUserMethod())
               .addMethod(getAddBinaryDataToDatasetByIDsMethod())
               .addMethod(getRemoveBinaryDataFromDatasetByIDsMethod())
+              .addMethod(getCreateIndexMethod())
+              .addMethod(getListIndexesMethod())
+              .addMethod(getDeleteIndexMethod())
               .build();
         }
       }

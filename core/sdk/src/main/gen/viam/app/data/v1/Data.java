@@ -390,6 +390,210 @@ public final class Data {
     // @@protoc_insertion_point(enum_scope:viam.app.data.v1.TabularDataSourceType)
   }
 
+  /**
+   * <pre>
+   * IndexableCollection specifies the types of collections available for custom indexes
+   * </pre>
+   *
+   * Protobuf enum {@code viam.app.data.v1.IndexableCollection}
+   */
+  public enum IndexableCollection
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>INDEXABLE_COLLECTION_UNSPECIFIED = 0;</code>
+     */
+    INDEXABLE_COLLECTION_UNSPECIFIED(0),
+    /**
+     * <code>INDEXABLE_COLLECTION_HOT_STORE = 1;</code>
+     */
+    INDEXABLE_COLLECTION_HOT_STORE(1),
+    /**
+     * <code>INDEXABLE_COLLECTION_PIPELINE_SINK = 2;</code>
+     */
+    INDEXABLE_COLLECTION_PIPELINE_SINK(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>INDEXABLE_COLLECTION_UNSPECIFIED = 0;</code>
+     */
+    public static final int INDEXABLE_COLLECTION_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>INDEXABLE_COLLECTION_HOT_STORE = 1;</code>
+     */
+    public static final int INDEXABLE_COLLECTION_HOT_STORE_VALUE = 1;
+    /**
+     * <code>INDEXABLE_COLLECTION_PIPELINE_SINK = 2;</code>
+     */
+    public static final int INDEXABLE_COLLECTION_PIPELINE_SINK_VALUE = 2;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static IndexableCollection valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static IndexableCollection forNumber(int value) {
+      switch (value) {
+        case 0: return INDEXABLE_COLLECTION_UNSPECIFIED;
+        case 1: return INDEXABLE_COLLECTION_HOT_STORE;
+        case 2: return INDEXABLE_COLLECTION_PIPELINE_SINK;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<IndexableCollection>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        IndexableCollection> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<IndexableCollection>() {
+            @java.lang.Override
+            public IndexableCollection findValueByNumber(int number) {
+              return IndexableCollection.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return IndexableCollectionVerifier.INSTANCE;
+    }
+
+    private static final class IndexableCollectionVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new IndexableCollectionVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return IndexableCollection.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private IndexableCollection(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.data.v1.IndexableCollection)
+  }
+
+  /**
+   * <pre>
+   * IndexCreator specifies the entity that originally created the index
+   * </pre>
+   *
+   * Protobuf enum {@code viam.app.data.v1.IndexCreator}
+   */
+  public enum IndexCreator
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>INDEX_CREATOR_UNSPECIFIED = 0;</code>
+     */
+    INDEX_CREATOR_UNSPECIFIED(0),
+    /**
+     * <code>INDEX_CREATOR_VIAM = 1;</code>
+     */
+    INDEX_CREATOR_VIAM(1),
+    /**
+     * <code>INDEX_CREATOR_CUSTOMER = 2;</code>
+     */
+    INDEX_CREATOR_CUSTOMER(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>INDEX_CREATOR_UNSPECIFIED = 0;</code>
+     */
+    public static final int INDEX_CREATOR_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>INDEX_CREATOR_VIAM = 1;</code>
+     */
+    public static final int INDEX_CREATOR_VIAM_VALUE = 1;
+    /**
+     * <code>INDEX_CREATOR_CUSTOMER = 2;</code>
+     */
+    public static final int INDEX_CREATOR_CUSTOMER_VALUE = 2;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static IndexCreator valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static IndexCreator forNumber(int value) {
+      switch (value) {
+        case 0: return INDEX_CREATOR_UNSPECIFIED;
+        case 1: return INDEX_CREATOR_VIAM;
+        case 2: return INDEX_CREATOR_CUSTOMER;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<IndexCreator>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        IndexCreator> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<IndexCreator>() {
+            @java.lang.Override
+            public IndexCreator findValueByNumber(int number) {
+              return IndexCreator.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return IndexCreatorVerifier.INSTANCE;
+    }
+
+    private static final class IndexCreatorVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new IndexCreatorVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return IndexCreator.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private IndexCreator(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.data.v1.IndexCreator)
+  }
+
   public interface DataRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.DataRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -9210,6 +9414,35 @@ com.google.protobuf.Any defaultValue) {
      * @return The dataSource.
      */
     viam.app.data.v1.Data.TabularDataSource getDataSource();
+
+    /**
+     * <pre>
+     * query_prefix_name is an optional field that can be used to specify a saved query to run
+     * </pre>
+     *
+     * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+     * @return Whether the queryPrefixName field is set.
+     */
+    boolean hasQueryPrefixName();
+    /**
+     * <pre>
+     * query_prefix_name is an optional field that can be used to specify a saved query to run
+     * </pre>
+     *
+     * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+     * @return The queryPrefixName.
+     */
+    java.lang.String getQueryPrefixName();
+    /**
+     * <pre>
+     * query_prefix_name is an optional field that can be used to specify a saved query to run
+     * </pre>
+     *
+     * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+     * @return The bytes for queryPrefixName.
+     */
+    com.google.protobuf.ByteString
+        getQueryPrefixNameBytes();
   }
   /**
    * <pre>
@@ -9226,6 +9459,7 @@ com.google.protobuf.Any defaultValue) {
     private TabularDataByMQLRequest() {
       organizationId_ = "";
       mqlBinary_ = emptyProtobufList();
+      queryPrefixName_ = "";
     }
     private int bitField0_;
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
@@ -9508,6 +9742,85 @@ com.google.protobuf.Any defaultValue) {
      */
     private void clearDataSource() {  dataSource_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int QUERY_PREFIX_NAME_FIELD_NUMBER = 7;
+    private java.lang.String queryPrefixName_;
+    /**
+     * <pre>
+     * query_prefix_name is an optional field that can be used to specify a saved query to run
+     * </pre>
+     *
+     * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+     * @return Whether the queryPrefixName field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryPrefixName() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * query_prefix_name is an optional field that can be used to specify a saved query to run
+     * </pre>
+     *
+     * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+     * @return The queryPrefixName.
+     */
+    @java.lang.Override
+    public java.lang.String getQueryPrefixName() {
+      return queryPrefixName_;
+    }
+    /**
+     * <pre>
+     * query_prefix_name is an optional field that can be used to specify a saved query to run
+     * </pre>
+     *
+     * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+     * @return The bytes for queryPrefixName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQueryPrefixNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(queryPrefixName_);
+    }
+    /**
+     * <pre>
+     * query_prefix_name is an optional field that can be used to specify a saved query to run
+     * </pre>
+     *
+     * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+     * @param value The queryPrefixName to set.
+     */
+    private void setQueryPrefixName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000004;
+      queryPrefixName_ = value;
+    }
+    /**
+     * <pre>
+     * query_prefix_name is an optional field that can be used to specify a saved query to run
+     * </pre>
+     *
+     * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+     */
+    private void clearQueryPrefixName() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      queryPrefixName_ = getDefaultInstance().getQueryPrefixName();
+    }
+    /**
+     * <pre>
+     * query_prefix_name is an optional field that can be used to specify a saved query to run
+     * </pre>
+     *
+     * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+     * @param value The bytes for queryPrefixName to set.
+     */
+    private void setQueryPrefixNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      queryPrefixName_ = value.toStringUtf8();
+      bitField0_ |= 0x00000004;
     }
 
     public static viam.app.data.v1.Data.TabularDataByMQLRequest parseFrom(
@@ -9900,6 +10213,87 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * query_prefix_name is an optional field that can be used to specify a saved query to run
+       * </pre>
+       *
+       * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+       * @return Whether the queryPrefixName field is set.
+       */
+      @java.lang.Override
+      public boolean hasQueryPrefixName() {
+        return instance.hasQueryPrefixName();
+      }
+      /**
+       * <pre>
+       * query_prefix_name is an optional field that can be used to specify a saved query to run
+       * </pre>
+       *
+       * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+       * @return The queryPrefixName.
+       */
+      @java.lang.Override
+      public java.lang.String getQueryPrefixName() {
+        return instance.getQueryPrefixName();
+      }
+      /**
+       * <pre>
+       * query_prefix_name is an optional field that can be used to specify a saved query to run
+       * </pre>
+       *
+       * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+       * @return The bytes for queryPrefixName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getQueryPrefixNameBytes() {
+        return instance.getQueryPrefixNameBytes();
+      }
+      /**
+       * <pre>
+       * query_prefix_name is an optional field that can be used to specify a saved query to run
+       * </pre>
+       *
+       * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+       * @param value The queryPrefixName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryPrefixName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setQueryPrefixName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * query_prefix_name is an optional field that can be used to specify a saved query to run
+       * </pre>
+       *
+       * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryPrefixName() {
+        copyOnWrite();
+        instance.clearQueryPrefixName();
+        return this;
+      }
+      /**
+       * <pre>
+       * query_prefix_name is an optional field that can be used to specify a saved query to run
+       * </pre>
+       *
+       * <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code>
+       * @param value The bytes for queryPrefixName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryPrefixNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setQueryPrefixNameBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.TabularDataByMQLRequest)
     }
     @java.lang.Override
@@ -9921,10 +10315,11 @@ com.google.protobuf.Any defaultValue) {
               "mqlBinary_",
               "useRecentData_",
               "dataSource_",
+              "queryPrefixName_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0006\u0004\u0000\u0001\u0000\u0001\u0208\u0003\u001c" +
-                "\u0004\u1007\u0000\u0006\u1009\u0001";
+                "\u0000\u0005\u0000\u0001\u0001\u0007\u0005\u0000\u0001\u0000\u0001\u0208\u0003\u001c" +
+                "\u0004\u1007\u0000\u0006\u1009\u0001\u0007\u1208\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -19240,14 +19635,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=394
+     *     See app/data/v1/data.proto;l=405
      * @return The id.
      */
     @java.lang.Deprecated java.lang.String getId();
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=394
+     *     See app/data/v1/data.proto;l=405
      * @return The bytes for id.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -19396,7 +19791,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=394
+     *     See app/data/v1/data.proto;l=405
      * @return The id.
      */
     @java.lang.Override
@@ -19406,7 +19801,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=394
+     *     See app/data/v1/data.proto;l=405
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -19417,7 +19812,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=394
+     *     See app/data/v1/data.proto;l=405
      * @param value The id to set.
      */
     private void setId(
@@ -19429,7 +19824,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=394
+     *     See app/data/v1/data.proto;l=405
      */
     private void clearId() {
 
@@ -19438,7 +19833,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=394
+     *     See app/data/v1/data.proto;l=405
      * @param value The bytes for id to set.
      */
     private void setIdBytes(
@@ -20017,7 +20412,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=394
+       *     See app/data/v1/data.proto;l=405
        * @return The id.
        */
       @java.lang.Override
@@ -20027,7 +20422,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=394
+       *     See app/data/v1/data.proto;l=405
        * @return The bytes for id.
        */
       @java.lang.Override
@@ -20038,7 +20433,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=394
+       *     See app/data/v1/data.proto;l=405
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -20051,7 +20446,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=394
+       *     See app/data/v1/data.proto;l=405
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearId() {
@@ -20062,7 +20457,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=394
+       *     See app/data/v1/data.proto;l=405
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -27011,14 +27406,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=518
+     *     See app/data/v1/data.proto;l=529
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=518
+     *     See app/data/v1/data.proto;l=529
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -28083,14 +28478,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=537
+     *     See app/data/v1/data.proto;l=548
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=537
+     *     See app/data/v1/data.proto;l=548
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -28789,14 +29184,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=549
+     *     See app/data/v1/data.proto;l=560
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=549
+     *     See app/data/v1/data.proto;l=560
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -33846,6 +34241,3569 @@ com.google.protobuf.Any defaultValue) {
     private static volatile com.google.protobuf.Parser<RemoveBinaryDataFromDatasetByIDsResponse> PARSER;
 
     public static com.google.protobuf.Parser<RemoveBinaryDataFromDatasetByIDsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CreateIndexRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.CreateIndexRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @return The enum numeric value on the wire for collectionType.
+     */
+    int getCollectionTypeValue();
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @return The collectionType.
+     */
+    viam.app.data.v1.Data.IndexableCollection getCollectionType();
+
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return Whether the pipelineName field is set.
+     */
+    boolean hasPipelineName();
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return The pipelineName.
+     */
+    java.lang.String getPipelineName();
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return The bytes for pipelineName.
+     */
+    com.google.protobuf.ByteString
+        getPipelineNameBytes();
+
+    /**
+     * <pre>
+     * index_spec accepts a MongoDB index specification defined in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @return A list containing the indexSpec.
+     */
+    java.util.List<com.google.protobuf.ByteString> getIndexSpecList();
+    /**
+     * <pre>
+     * index_spec accepts a MongoDB index specification defined in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @return The count of indexSpec.
+     */
+    int getIndexSpecCount();
+    /**
+     * <pre>
+     * index_spec accepts a MongoDB index specification defined in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @param index The index of the element to return.
+     * @return The indexSpec at the given index.
+     */
+    com.google.protobuf.ByteString getIndexSpec(int index);
+  }
+  /**
+   * <pre>
+   * CreateIndexRequest starts a custom index build
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.CreateIndexRequest}
+   */
+  public  static final class CreateIndexRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreateIndexRequest, CreateIndexRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.CreateIndexRequest)
+      CreateIndexRequestOrBuilder {
+    private CreateIndexRequest() {
+      organizationId_ = "";
+      pipelineName_ = "";
+      indexSpec_ = emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int COLLECTION_TYPE_FIELD_NUMBER = 2;
+    private int collectionType_;
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @return The enum numeric value on the wire for collectionType.
+     */
+    @java.lang.Override
+    public int getCollectionTypeValue() {
+      return collectionType_;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @return The collectionType.
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.IndexableCollection getCollectionType() {
+      viam.app.data.v1.Data.IndexableCollection result = viam.app.data.v1.Data.IndexableCollection.forNumber(collectionType_);
+      return result == null ? viam.app.data.v1.Data.IndexableCollection.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @param value The enum numeric value on the wire for collectionType to set.
+     */
+    private void setCollectionTypeValue(int value) {
+        collectionType_ = value;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @param value The collectionType to set.
+     */
+    private void setCollectionType(viam.app.data.v1.Data.IndexableCollection value) {
+      collectionType_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     */
+    private void clearCollectionType() {
+
+      collectionType_ = 0;
+    }
+
+    public static final int PIPELINE_NAME_FIELD_NUMBER = 3;
+    private java.lang.String pipelineName_;
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return Whether the pipelineName field is set.
+     */
+    @java.lang.Override
+    public boolean hasPipelineName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return The pipelineName.
+     */
+    @java.lang.Override
+    public java.lang.String getPipelineName() {
+      return pipelineName_;
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return The bytes for pipelineName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPipelineNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(pipelineName_);
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @param value The pipelineName to set.
+     */
+    private void setPipelineName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      pipelineName_ = value;
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     */
+    private void clearPipelineName() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      pipelineName_ = getDefaultInstance().getPipelineName();
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @param value The bytes for pipelineName to set.
+     */
+    private void setPipelineNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      pipelineName_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
+    }
+
+    public static final int INDEX_SPEC_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> indexSpec_;
+    /**
+     * <pre>
+     * index_spec accepts a MongoDB index specification defined in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @return A list containing the indexSpec.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getIndexSpecList() {
+      return indexSpec_;
+    }
+    /**
+     * <pre>
+     * index_spec accepts a MongoDB index specification defined in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @return The count of indexSpec.
+     */
+    @java.lang.Override
+    public int getIndexSpecCount() {
+      return indexSpec_.size();
+    }
+    /**
+     * <pre>
+     * index_spec accepts a MongoDB index specification defined in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @param index The index of the element to return.
+     * @return The indexSpec at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getIndexSpec(int index) {
+      return indexSpec_.get(index);
+    }
+    private void ensureIndexSpecIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> tmp = indexSpec_;
+      if (!tmp.isModifiable()) {
+        indexSpec_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * index_spec accepts a MongoDB index specification defined in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @param index The index to set the value at.
+     * @param value The indexSpec to set.
+     */
+    private void setIndexSpec(
+        int index, com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureIndexSpecIsMutable();
+      indexSpec_.set(index, value);
+    }
+    /**
+     * <pre>
+     * index_spec accepts a MongoDB index specification defined in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @param value The indexSpec to add.
+     */
+    private void addIndexSpec(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureIndexSpecIsMutable();
+      indexSpec_.add(value);
+    }
+    /**
+     * <pre>
+     * index_spec accepts a MongoDB index specification defined in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @param values The indexSpec to add.
+     */
+    private void addAllIndexSpec(
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+      ensureIndexSpecIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, indexSpec_);
+    }
+    /**
+     * <pre>
+     * index_spec accepts a MongoDB index specification defined in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     */
+    private void clearIndexSpec() {
+      indexSpec_ = emptyProtobufList();
+    }
+
+    public static viam.app.data.v1.Data.CreateIndexRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateIndexRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateIndexRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateIndexRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateIndexRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateIndexRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateIndexRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateIndexRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.CreateIndexRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.CreateIndexRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateIndexRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateIndexRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.CreateIndexRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * CreateIndexRequest starts a custom index build
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.CreateIndexRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.CreateIndexRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.CreateIndexRequest)
+        viam.app.data.v1.Data.CreateIndexRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.CreateIndexRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @return The enum numeric value on the wire for collectionType.
+       */
+      @java.lang.Override
+      public int getCollectionTypeValue() {
+        return instance.getCollectionTypeValue();
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @param value The collectionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionTypeValue(int value) {
+        copyOnWrite();
+        instance.setCollectionTypeValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @return The collectionType.
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.IndexableCollection getCollectionType() {
+        return instance.getCollectionType();
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @param value The enum numeric value on the wire for collectionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionType(viam.app.data.v1.Data.IndexableCollection value) {
+        copyOnWrite();
+        instance.setCollectionType(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollectionType() {
+        copyOnWrite();
+        instance.clearCollectionType();
+        return this;
+      }
+
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @return Whether the pipelineName field is set.
+       */
+      @java.lang.Override
+      public boolean hasPipelineName() {
+        return instance.hasPipelineName();
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @return The pipelineName.
+       */
+      @java.lang.Override
+      public java.lang.String getPipelineName() {
+        return instance.getPipelineName();
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @return The bytes for pipelineName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPipelineNameBytes() {
+        return instance.getPipelineNameBytes();
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @param value The pipelineName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPipelineName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPipelineName(value);
+        return this;
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPipelineName() {
+        copyOnWrite();
+        instance.clearPipelineName();
+        return this;
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @param value The bytes for pipelineName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPipelineNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPipelineNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * index_spec accepts a MongoDB index specification defined in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @return A list containing the indexSpec.
+       */
+      @java.lang.Override
+      public java.util.List<com.google.protobuf.ByteString>
+          getIndexSpecList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getIndexSpecList());
+      }
+      /**
+       * <pre>
+       * index_spec accepts a MongoDB index specification defined in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @return The count of indexSpec.
+       */
+      @java.lang.Override
+      public int getIndexSpecCount() {
+        return instance.getIndexSpecCount();
+      }
+      /**
+       * <pre>
+       * index_spec accepts a MongoDB index specification defined in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @param index The index of the element to return.
+       * @return The indexSpec at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getIndexSpec(int index) {
+        return instance.getIndexSpec(index);
+      }
+      /**
+       * <pre>
+       * index_spec accepts a MongoDB index specification defined in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @param value The indexSpec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexSpec(
+          int index, com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIndexSpec(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * index_spec accepts a MongoDB index specification defined in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @param value The indexSpec to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIndexSpec(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addIndexSpec(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * index_spec accepts a MongoDB index specification defined in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @param values The indexSpec to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIndexSpec(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        copyOnWrite();
+        instance.addAllIndexSpec(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * index_spec accepts a MongoDB index specification defined in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndexSpec() {
+        copyOnWrite();
+        instance.clearIndexSpec();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.CreateIndexRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.CreateIndexRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "organizationId_",
+              "collectionType_",
+              "pipelineName_",
+              "indexSpec_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\f" +
+                "\u0003\u1208\u0000\u0004\u001c";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.CreateIndexRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.CreateIndexRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.CreateIndexRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.CreateIndexRequest)
+    private static final viam.app.data.v1.Data.CreateIndexRequest DEFAULT_INSTANCE;
+    static {
+      CreateIndexRequest defaultInstance = new CreateIndexRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CreateIndexRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.CreateIndexRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CreateIndexRequest> PARSER;
+
+    public static com.google.protobuf.Parser<CreateIndexRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CreateIndexResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.CreateIndexResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.CreateIndexResponse}
+   */
+  public  static final class CreateIndexResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreateIndexResponse, CreateIndexResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.CreateIndexResponse)
+      CreateIndexResponseOrBuilder {
+    private CreateIndexResponse() {
+    }
+    public static viam.app.data.v1.Data.CreateIndexResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateIndexResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateIndexResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateIndexResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateIndexResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateIndexResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateIndexResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateIndexResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.CreateIndexResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.CreateIndexResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateIndexResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateIndexResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.CreateIndexResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.CreateIndexResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.CreateIndexResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.CreateIndexResponse)
+        viam.app.data.v1.Data.CreateIndexResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.CreateIndexResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.CreateIndexResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.CreateIndexResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.CreateIndexResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.CreateIndexResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.CreateIndexResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.CreateIndexResponse)
+    private static final viam.app.data.v1.Data.CreateIndexResponse DEFAULT_INSTANCE;
+    static {
+      CreateIndexResponse defaultInstance = new CreateIndexResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CreateIndexResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.CreateIndexResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CreateIndexResponse> PARSER;
+
+    public static com.google.protobuf.Parser<CreateIndexResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeleteIndexRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.DeleteIndexRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @return The enum numeric value on the wire for collectionType.
+     */
+    int getCollectionTypeValue();
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @return The collectionType.
+     */
+    viam.app.data.v1.Data.IndexableCollection getCollectionType();
+
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return Whether the pipelineName field is set.
+     */
+    boolean hasPipelineName();
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return The pipelineName.
+     */
+    java.lang.String getPipelineName();
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return The bytes for pipelineName.
+     */
+    com.google.protobuf.ByteString
+        getPipelineNameBytes();
+
+    /**
+     * <code>string index_name = 4 [json_name = "indexName"];</code>
+     * @return The indexName.
+     */
+    java.lang.String getIndexName();
+    /**
+     * <code>string index_name = 4 [json_name = "indexName"];</code>
+     * @return The bytes for indexName.
+     */
+    com.google.protobuf.ByteString
+        getIndexNameBytes();
+  }
+  /**
+   * <pre>
+   * DeleteIndexRequest drops the specified custom index from a collection
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.DeleteIndexRequest}
+   */
+  public  static final class DeleteIndexRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteIndexRequest, DeleteIndexRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.DeleteIndexRequest)
+      DeleteIndexRequestOrBuilder {
+    private DeleteIndexRequest() {
+      organizationId_ = "";
+      pipelineName_ = "";
+      indexName_ = "";
+    }
+    private int bitField0_;
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int COLLECTION_TYPE_FIELD_NUMBER = 2;
+    private int collectionType_;
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @return The enum numeric value on the wire for collectionType.
+     */
+    @java.lang.Override
+    public int getCollectionTypeValue() {
+      return collectionType_;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @return The collectionType.
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.IndexableCollection getCollectionType() {
+      viam.app.data.v1.Data.IndexableCollection result = viam.app.data.v1.Data.IndexableCollection.forNumber(collectionType_);
+      return result == null ? viam.app.data.v1.Data.IndexableCollection.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @param value The enum numeric value on the wire for collectionType to set.
+     */
+    private void setCollectionTypeValue(int value) {
+        collectionType_ = value;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @param value The collectionType to set.
+     */
+    private void setCollectionType(viam.app.data.v1.Data.IndexableCollection value) {
+      collectionType_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     */
+    private void clearCollectionType() {
+
+      collectionType_ = 0;
+    }
+
+    public static final int PIPELINE_NAME_FIELD_NUMBER = 3;
+    private java.lang.String pipelineName_;
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return Whether the pipelineName field is set.
+     */
+    @java.lang.Override
+    public boolean hasPipelineName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return The pipelineName.
+     */
+    @java.lang.Override
+    public java.lang.String getPipelineName() {
+      return pipelineName_;
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return The bytes for pipelineName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPipelineNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(pipelineName_);
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @param value The pipelineName to set.
+     */
+    private void setPipelineName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      pipelineName_ = value;
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     */
+    private void clearPipelineName() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      pipelineName_ = getDefaultInstance().getPipelineName();
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @param value The bytes for pipelineName to set.
+     */
+    private void setPipelineNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      pipelineName_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
+    }
+
+    public static final int INDEX_NAME_FIELD_NUMBER = 4;
+    private java.lang.String indexName_;
+    /**
+     * <code>string index_name = 4 [json_name = "indexName"];</code>
+     * @return The indexName.
+     */
+    @java.lang.Override
+    public java.lang.String getIndexName() {
+      return indexName_;
+    }
+    /**
+     * <code>string index_name = 4 [json_name = "indexName"];</code>
+     * @return The bytes for indexName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIndexNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(indexName_);
+    }
+    /**
+     * <code>string index_name = 4 [json_name = "indexName"];</code>
+     * @param value The indexName to set.
+     */
+    private void setIndexName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      indexName_ = value;
+    }
+    /**
+     * <code>string index_name = 4 [json_name = "indexName"];</code>
+     */
+    private void clearIndexName() {
+
+      indexName_ = getDefaultInstance().getIndexName();
+    }
+    /**
+     * <code>string index_name = 4 [json_name = "indexName"];</code>
+     * @param value The bytes for indexName to set.
+     */
+    private void setIndexNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      indexName_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.data.v1.Data.DeleteIndexRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.DeleteIndexRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.DeleteIndexRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.DeleteIndexRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * DeleteIndexRequest drops the specified custom index from a collection
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.DeleteIndexRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.DeleteIndexRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.DeleteIndexRequest)
+        viam.app.data.v1.Data.DeleteIndexRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.DeleteIndexRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @return The enum numeric value on the wire for collectionType.
+       */
+      @java.lang.Override
+      public int getCollectionTypeValue() {
+        return instance.getCollectionTypeValue();
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @param value The collectionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionTypeValue(int value) {
+        copyOnWrite();
+        instance.setCollectionTypeValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @return The collectionType.
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.IndexableCollection getCollectionType() {
+        return instance.getCollectionType();
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @param value The enum numeric value on the wire for collectionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionType(viam.app.data.v1.Data.IndexableCollection value) {
+        copyOnWrite();
+        instance.setCollectionType(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollectionType() {
+        copyOnWrite();
+        instance.clearCollectionType();
+        return this;
+      }
+
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @return Whether the pipelineName field is set.
+       */
+      @java.lang.Override
+      public boolean hasPipelineName() {
+        return instance.hasPipelineName();
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @return The pipelineName.
+       */
+      @java.lang.Override
+      public java.lang.String getPipelineName() {
+        return instance.getPipelineName();
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @return The bytes for pipelineName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPipelineNameBytes() {
+        return instance.getPipelineNameBytes();
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @param value The pipelineName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPipelineName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPipelineName(value);
+        return this;
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPipelineName() {
+        copyOnWrite();
+        instance.clearPipelineName();
+        return this;
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @param value The bytes for pipelineName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPipelineNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPipelineNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string index_name = 4 [json_name = "indexName"];</code>
+       * @return The indexName.
+       */
+      @java.lang.Override
+      public java.lang.String getIndexName() {
+        return instance.getIndexName();
+      }
+      /**
+       * <code>string index_name = 4 [json_name = "indexName"];</code>
+       * @return The bytes for indexName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIndexNameBytes() {
+        return instance.getIndexNameBytes();
+      }
+      /**
+       * <code>string index_name = 4 [json_name = "indexName"];</code>
+       * @param value The indexName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setIndexName(value);
+        return this;
+      }
+      /**
+       * <code>string index_name = 4 [json_name = "indexName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndexName() {
+        copyOnWrite();
+        instance.clearIndexName();
+        return this;
+      }
+      /**
+       * <code>string index_name = 4 [json_name = "indexName"];</code>
+       * @param value The bytes for indexName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIndexNameBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.DeleteIndexRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.DeleteIndexRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "organizationId_",
+              "collectionType_",
+              "pipelineName_",
+              "indexName_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\f" +
+                "\u0003\u1208\u0000\u0004\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.DeleteIndexRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.DeleteIndexRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.DeleteIndexRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.DeleteIndexRequest)
+    private static final viam.app.data.v1.Data.DeleteIndexRequest DEFAULT_INSTANCE;
+    static {
+      DeleteIndexRequest defaultInstance = new DeleteIndexRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteIndexRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.DeleteIndexRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeleteIndexRequest> PARSER;
+
+    public static com.google.protobuf.Parser<DeleteIndexRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeleteIndexResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.DeleteIndexResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.DeleteIndexResponse}
+   */
+  public  static final class DeleteIndexResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteIndexResponse, DeleteIndexResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.DeleteIndexResponse)
+      DeleteIndexResponseOrBuilder {
+    private DeleteIndexResponse() {
+    }
+    public static viam.app.data.v1.Data.DeleteIndexResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.DeleteIndexResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.DeleteIndexResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteIndexResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.DeleteIndexResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.DeleteIndexResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.DeleteIndexResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.DeleteIndexResponse)
+        viam.app.data.v1.Data.DeleteIndexResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.DeleteIndexResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.DeleteIndexResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.DeleteIndexResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.DeleteIndexResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.DeleteIndexResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.DeleteIndexResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.DeleteIndexResponse)
+    private static final viam.app.data.v1.Data.DeleteIndexResponse DEFAULT_INSTANCE;
+    static {
+      DeleteIndexResponse defaultInstance = new DeleteIndexResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteIndexResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.DeleteIndexResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeleteIndexResponse> PARSER;
+
+    public static com.google.protobuf.Parser<DeleteIndexResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListIndexesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.ListIndexesRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @return The enum numeric value on the wire for collectionType.
+     */
+    int getCollectionTypeValue();
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @return The collectionType.
+     */
+    viam.app.data.v1.Data.IndexableCollection getCollectionType();
+
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return Whether the pipelineName field is set.
+     */
+    boolean hasPipelineName();
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return The pipelineName.
+     */
+    java.lang.String getPipelineName();
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return The bytes for pipelineName.
+     */
+    com.google.protobuf.ByteString
+        getPipelineNameBytes();
+  }
+  /**
+   * <pre>
+   * ListIndexesRequest returns all the indexes for a given collection
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.ListIndexesRequest}
+   */
+  public  static final class ListIndexesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListIndexesRequest, ListIndexesRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.ListIndexesRequest)
+      ListIndexesRequestOrBuilder {
+    private ListIndexesRequest() {
+      organizationId_ = "";
+      pipelineName_ = "";
+    }
+    private int bitField0_;
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int COLLECTION_TYPE_FIELD_NUMBER = 2;
+    private int collectionType_;
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @return The enum numeric value on the wire for collectionType.
+     */
+    @java.lang.Override
+    public int getCollectionTypeValue() {
+      return collectionType_;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @return The collectionType.
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.IndexableCollection getCollectionType() {
+      viam.app.data.v1.Data.IndexableCollection result = viam.app.data.v1.Data.IndexableCollection.forNumber(collectionType_);
+      return result == null ? viam.app.data.v1.Data.IndexableCollection.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @param value The enum numeric value on the wire for collectionType to set.
+     */
+    private void setCollectionTypeValue(int value) {
+        collectionType_ = value;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     * @param value The collectionType to set.
+     */
+    private void setCollectionType(viam.app.data.v1.Data.IndexableCollection value) {
+      collectionType_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+     */
+    private void clearCollectionType() {
+
+      collectionType_ = 0;
+    }
+
+    public static final int PIPELINE_NAME_FIELD_NUMBER = 3;
+    private java.lang.String pipelineName_;
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return Whether the pipelineName field is set.
+     */
+    @java.lang.Override
+    public boolean hasPipelineName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return The pipelineName.
+     */
+    @java.lang.Override
+    public java.lang.String getPipelineName() {
+      return pipelineName_;
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @return The bytes for pipelineName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPipelineNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(pipelineName_);
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @param value The pipelineName to set.
+     */
+    private void setPipelineName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      pipelineName_ = value;
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     */
+    private void clearPipelineName() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      pipelineName_ = getDefaultInstance().getPipelineName();
+    }
+    /**
+     * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+     * @param value The bytes for pipelineName to set.
+     */
+    private void setPipelineNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      pipelineName_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
+    }
+
+    public static viam.app.data.v1.Data.ListIndexesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListIndexesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListIndexesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListIndexesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListIndexesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListIndexesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListIndexesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ListIndexesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.ListIndexesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.ListIndexesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListIndexesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ListIndexesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.ListIndexesRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * ListIndexesRequest returns all the indexes for a given collection
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.ListIndexesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.ListIndexesRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.ListIndexesRequest)
+        viam.app.data.v1.Data.ListIndexesRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.ListIndexesRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @return The enum numeric value on the wire for collectionType.
+       */
+      @java.lang.Override
+      public int getCollectionTypeValue() {
+        return instance.getCollectionTypeValue();
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @param value The collectionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionTypeValue(int value) {
+        copyOnWrite();
+        instance.setCollectionTypeValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @return The collectionType.
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.IndexableCollection getCollectionType() {
+        return instance.getCollectionType();
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @param value The enum numeric value on the wire for collectionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionType(viam.app.data.v1.Data.IndexableCollection value) {
+        copyOnWrite();
+        instance.setCollectionType(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 2 [json_name = "collectionType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollectionType() {
+        copyOnWrite();
+        instance.clearCollectionType();
+        return this;
+      }
+
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @return Whether the pipelineName field is set.
+       */
+      @java.lang.Override
+      public boolean hasPipelineName() {
+        return instance.hasPipelineName();
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @return The pipelineName.
+       */
+      @java.lang.Override
+      public java.lang.String getPipelineName() {
+        return instance.getPipelineName();
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @return The bytes for pipelineName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPipelineNameBytes() {
+        return instance.getPipelineNameBytes();
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @param value The pipelineName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPipelineName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPipelineName(value);
+        return this;
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPipelineName() {
+        copyOnWrite();
+        instance.clearPipelineName();
+        return this;
+      }
+      /**
+       * <code>optional string pipeline_name = 3 [json_name = "pipelineName"];</code>
+       * @param value The bytes for pipelineName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPipelineNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPipelineNameBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.ListIndexesRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.ListIndexesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "organizationId_",
+              "collectionType_",
+              "pipelineName_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\f" +
+                "\u0003\u1208\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.ListIndexesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.ListIndexesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.ListIndexesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.ListIndexesRequest)
+    private static final viam.app.data.v1.Data.ListIndexesRequest DEFAULT_INSTANCE;
+    static {
+      ListIndexesRequest defaultInstance = new ListIndexesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListIndexesRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.ListIndexesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListIndexesRequest> PARSER;
+
+    public static com.google.protobuf.Parser<ListIndexesRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListIndexesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.ListIndexesResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    java.util.List<viam.app.data.v1.Data.Index> 
+        getIndexesList();
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    viam.app.data.v1.Data.Index getIndexes(int index);
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    int getIndexesCount();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.ListIndexesResponse}
+   */
+  public  static final class ListIndexesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListIndexesResponse, ListIndexesResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.ListIndexesResponse)
+      ListIndexesResponseOrBuilder {
+    private ListIndexesResponse() {
+      indexes_ = emptyProtobufList();
+    }
+    public static final int INDEXES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.Index> indexes_;
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.data.v1.Data.Index> getIndexesList() {
+      return indexes_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    public java.util.List<? extends viam.app.data.v1.Data.IndexOrBuilder> 
+        getIndexesOrBuilderList() {
+      return indexes_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    @java.lang.Override
+    public int getIndexesCount() {
+      return indexes_.size();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.Index getIndexes(int index) {
+      return indexes_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    public viam.app.data.v1.Data.IndexOrBuilder getIndexesOrBuilder(
+        int index) {
+      return indexes_.get(index);
+    }
+    private void ensureIndexesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.Index> tmp = indexes_;
+      if (!tmp.isModifiable()) {
+        indexes_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    private void setIndexes(
+        int index, viam.app.data.v1.Data.Index value) {
+      value.getClass();
+  ensureIndexesIsMutable();
+      indexes_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    private void addIndexes(viam.app.data.v1.Data.Index value) {
+      value.getClass();
+  ensureIndexesIsMutable();
+      indexes_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    private void addIndexes(
+        int index, viam.app.data.v1.Data.Index value) {
+      value.getClass();
+  ensureIndexesIsMutable();
+      indexes_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    private void addAllIndexes(
+        java.lang.Iterable<? extends viam.app.data.v1.Data.Index> values) {
+      ensureIndexesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, indexes_);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    private void clearIndexes() {
+      indexes_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+     */
+    private void removeIndexes(int index) {
+      ensureIndexesIsMutable();
+      indexes_.remove(index);
+    }
+
+    public static viam.app.data.v1.Data.ListIndexesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListIndexesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListIndexesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListIndexesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListIndexesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListIndexesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListIndexesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ListIndexesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.ListIndexesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.ListIndexesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListIndexesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ListIndexesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.ListIndexesResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.ListIndexesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.ListIndexesResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.ListIndexesResponse)
+        viam.app.data.v1.Data.ListIndexesResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.ListIndexesResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.data.v1.Data.Index> getIndexesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getIndexesList());
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+       */
+      @java.lang.Override
+      public int getIndexesCount() {
+        return instance.getIndexesCount();
+      }/**
+       * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.Index getIndexes(int index) {
+        return instance.getIndexes(index);
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+       */
+      public Builder setIndexes(
+          int index, viam.app.data.v1.Data.Index value) {
+        copyOnWrite();
+        instance.setIndexes(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+       */
+      public Builder setIndexes(
+          int index, viam.app.data.v1.Data.Index.Builder builderForValue) {
+        copyOnWrite();
+        instance.setIndexes(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+       */
+      public Builder addIndexes(viam.app.data.v1.Data.Index value) {
+        copyOnWrite();
+        instance.addIndexes(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+       */
+      public Builder addIndexes(
+          int index, viam.app.data.v1.Data.Index value) {
+        copyOnWrite();
+        instance.addIndexes(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+       */
+      public Builder addIndexes(
+          viam.app.data.v1.Data.Index.Builder builderForValue) {
+        copyOnWrite();
+        instance.addIndexes(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+       */
+      public Builder addIndexes(
+          int index, viam.app.data.v1.Data.Index.Builder builderForValue) {
+        copyOnWrite();
+        instance.addIndexes(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+       */
+      public Builder addAllIndexes(
+          java.lang.Iterable<? extends viam.app.data.v1.Data.Index> values) {
+        copyOnWrite();
+        instance.addAllIndexes(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+       */
+      public Builder clearIndexes() {
+        copyOnWrite();
+        instance.clearIndexes();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Index indexes = 1 [json_name = "indexes"];</code>
+       */
+      public Builder removeIndexes(int index) {
+        copyOnWrite();
+        instance.removeIndexes(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.ListIndexesResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.ListIndexesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "indexes_",
+              viam.app.data.v1.Data.Index.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.ListIndexesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.ListIndexesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.ListIndexesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.ListIndexesResponse)
+    private static final viam.app.data.v1.Data.ListIndexesResponse DEFAULT_INSTANCE;
+    static {
+      ListIndexesResponse defaultInstance = new ListIndexesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListIndexesResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.ListIndexesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListIndexesResponse> PARSER;
+
+    public static com.google.protobuf.Parser<ListIndexesResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface IndexOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.Index)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 1 [json_name = "collectionType"];</code>
+     * @return The enum numeric value on the wire for collectionType.
+     */
+    int getCollectionTypeValue();
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 1 [json_name = "collectionType"];</code>
+     * @return The collectionType.
+     */
+    viam.app.data.v1.Data.IndexableCollection getCollectionType();
+
+    /**
+     * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+     * @return Whether the pipelineName field is set.
+     */
+    boolean hasPipelineName();
+    /**
+     * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+     * @return The pipelineName.
+     */
+    java.lang.String getPipelineName();
+    /**
+     * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+     * @return The bytes for pipelineName.
+     */
+    com.google.protobuf.ByteString
+        getPipelineNameBytes();
+
+    /**
+     * <code>string index_name = 3 [json_name = "indexName"];</code>
+     * @return The indexName.
+     */
+    java.lang.String getIndexName();
+    /**
+     * <code>string index_name = 3 [json_name = "indexName"];</code>
+     * @return The bytes for indexName.
+     */
+    com.google.protobuf.ByteString
+        getIndexNameBytes();
+
+    /**
+     * <pre>
+     * index_spec defines a MongoDB index in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @return A list containing the indexSpec.
+     */
+    java.util.List<com.google.protobuf.ByteString> getIndexSpecList();
+    /**
+     * <pre>
+     * index_spec defines a MongoDB index in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @return The count of indexSpec.
+     */
+    int getIndexSpecCount();
+    /**
+     * <pre>
+     * index_spec defines a MongoDB index in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @param index The index of the element to return.
+     * @return The indexSpec at the given index.
+     */
+    com.google.protobuf.ByteString getIndexSpec(int index);
+
+    /**
+     * <code>.viam.app.data.v1.IndexCreator created_by = 5 [json_name = "createdBy"];</code>
+     * @return The enum numeric value on the wire for createdBy.
+     */
+    int getCreatedByValue();
+    /**
+     * <code>.viam.app.data.v1.IndexCreator created_by = 5 [json_name = "createdBy"];</code>
+     * @return The createdBy.
+     */
+    viam.app.data.v1.Data.IndexCreator getCreatedBy();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.Index}
+   */
+  public  static final class Index extends
+      com.google.protobuf.GeneratedMessageLite<
+          Index, Index.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.Index)
+      IndexOrBuilder {
+    private Index() {
+      pipelineName_ = "";
+      indexName_ = "";
+      indexSpec_ = emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int COLLECTION_TYPE_FIELD_NUMBER = 1;
+    private int collectionType_;
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 1 [json_name = "collectionType"];</code>
+     * @return The enum numeric value on the wire for collectionType.
+     */
+    @java.lang.Override
+    public int getCollectionTypeValue() {
+      return collectionType_;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 1 [json_name = "collectionType"];</code>
+     * @return The collectionType.
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.IndexableCollection getCollectionType() {
+      viam.app.data.v1.Data.IndexableCollection result = viam.app.data.v1.Data.IndexableCollection.forNumber(collectionType_);
+      return result == null ? viam.app.data.v1.Data.IndexableCollection.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 1 [json_name = "collectionType"];</code>
+     * @param value The enum numeric value on the wire for collectionType to set.
+     */
+    private void setCollectionTypeValue(int value) {
+        collectionType_ = value;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 1 [json_name = "collectionType"];</code>
+     * @param value The collectionType to set.
+     */
+    private void setCollectionType(viam.app.data.v1.Data.IndexableCollection value) {
+      collectionType_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexableCollection collection_type = 1 [json_name = "collectionType"];</code>
+     */
+    private void clearCollectionType() {
+
+      collectionType_ = 0;
+    }
+
+    public static final int PIPELINE_NAME_FIELD_NUMBER = 2;
+    private java.lang.String pipelineName_;
+    /**
+     * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+     * @return Whether the pipelineName field is set.
+     */
+    @java.lang.Override
+    public boolean hasPipelineName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+     * @return The pipelineName.
+     */
+    @java.lang.Override
+    public java.lang.String getPipelineName() {
+      return pipelineName_;
+    }
+    /**
+     * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+     * @return The bytes for pipelineName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPipelineNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(pipelineName_);
+    }
+    /**
+     * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+     * @param value The pipelineName to set.
+     */
+    private void setPipelineName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      pipelineName_ = value;
+    }
+    /**
+     * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+     */
+    private void clearPipelineName() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      pipelineName_ = getDefaultInstance().getPipelineName();
+    }
+    /**
+     * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+     * @param value The bytes for pipelineName to set.
+     */
+    private void setPipelineNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      pipelineName_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
+    }
+
+    public static final int INDEX_NAME_FIELD_NUMBER = 3;
+    private java.lang.String indexName_;
+    /**
+     * <code>string index_name = 3 [json_name = "indexName"];</code>
+     * @return The indexName.
+     */
+    @java.lang.Override
+    public java.lang.String getIndexName() {
+      return indexName_;
+    }
+    /**
+     * <code>string index_name = 3 [json_name = "indexName"];</code>
+     * @return The bytes for indexName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIndexNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(indexName_);
+    }
+    /**
+     * <code>string index_name = 3 [json_name = "indexName"];</code>
+     * @param value The indexName to set.
+     */
+    private void setIndexName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      indexName_ = value;
+    }
+    /**
+     * <code>string index_name = 3 [json_name = "indexName"];</code>
+     */
+    private void clearIndexName() {
+
+      indexName_ = getDefaultInstance().getIndexName();
+    }
+    /**
+     * <code>string index_name = 3 [json_name = "indexName"];</code>
+     * @param value The bytes for indexName to set.
+     */
+    private void setIndexNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      indexName_ = value.toStringUtf8();
+
+    }
+
+    public static final int INDEX_SPEC_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> indexSpec_;
+    /**
+     * <pre>
+     * index_spec defines a MongoDB index in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @return A list containing the indexSpec.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getIndexSpecList() {
+      return indexSpec_;
+    }
+    /**
+     * <pre>
+     * index_spec defines a MongoDB index in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @return The count of indexSpec.
+     */
+    @java.lang.Override
+    public int getIndexSpecCount() {
+      return indexSpec_.size();
+    }
+    /**
+     * <pre>
+     * index_spec defines a MongoDB index in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @param index The index of the element to return.
+     * @return The indexSpec at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getIndexSpec(int index) {
+      return indexSpec_.get(index);
+    }
+    private void ensureIndexSpecIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> tmp = indexSpec_;
+      if (!tmp.isModifiable()) {
+        indexSpec_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * index_spec defines a MongoDB index in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @param index The index to set the value at.
+     * @param value The indexSpec to set.
+     */
+    private void setIndexSpec(
+        int index, com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureIndexSpecIsMutable();
+      indexSpec_.set(index, value);
+    }
+    /**
+     * <pre>
+     * index_spec defines a MongoDB index in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @param value The indexSpec to add.
+     */
+    private void addIndexSpec(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureIndexSpecIsMutable();
+      indexSpec_.add(value);
+    }
+    /**
+     * <pre>
+     * index_spec defines a MongoDB index in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     * @param values The indexSpec to add.
+     */
+    private void addAllIndexSpec(
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+      ensureIndexSpecIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, indexSpec_);
+    }
+    /**
+     * <pre>
+     * index_spec defines a MongoDB index in JSON format
+     * </pre>
+     *
+     * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+     */
+    private void clearIndexSpec() {
+      indexSpec_ = emptyProtobufList();
+    }
+
+    public static final int CREATED_BY_FIELD_NUMBER = 5;
+    private int createdBy_;
+    /**
+     * <code>.viam.app.data.v1.IndexCreator created_by = 5 [json_name = "createdBy"];</code>
+     * @return The enum numeric value on the wire for createdBy.
+     */
+    @java.lang.Override
+    public int getCreatedByValue() {
+      return createdBy_;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexCreator created_by = 5 [json_name = "createdBy"];</code>
+     * @return The createdBy.
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.IndexCreator getCreatedBy() {
+      viam.app.data.v1.Data.IndexCreator result = viam.app.data.v1.Data.IndexCreator.forNumber(createdBy_);
+      return result == null ? viam.app.data.v1.Data.IndexCreator.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexCreator created_by = 5 [json_name = "createdBy"];</code>
+     * @param value The enum numeric value on the wire for createdBy to set.
+     */
+    private void setCreatedByValue(int value) {
+        createdBy_ = value;
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexCreator created_by = 5 [json_name = "createdBy"];</code>
+     * @param value The createdBy to set.
+     */
+    private void setCreatedBy(viam.app.data.v1.Data.IndexCreator value) {
+      createdBy_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.data.v1.IndexCreator created_by = 5 [json_name = "createdBy"];</code>
+     */
+    private void clearCreatedBy() {
+
+      createdBy_ = 0;
+    }
+
+    public static viam.app.data.v1.Data.Index parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.Index parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Index parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.Index parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Index parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.Index parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Index parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.Index parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.Index parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.Index parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Index parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.Index parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.Index prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.Index}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.Index, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.Index)
+        viam.app.data.v1.Data.IndexOrBuilder {
+      // Construct using viam.app.data.v1.Data.Index.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 1 [json_name = "collectionType"];</code>
+       * @return The enum numeric value on the wire for collectionType.
+       */
+      @java.lang.Override
+      public int getCollectionTypeValue() {
+        return instance.getCollectionTypeValue();
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 1 [json_name = "collectionType"];</code>
+       * @param value The collectionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionTypeValue(int value) {
+        copyOnWrite();
+        instance.setCollectionTypeValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 1 [json_name = "collectionType"];</code>
+       * @return The collectionType.
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.IndexableCollection getCollectionType() {
+        return instance.getCollectionType();
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 1 [json_name = "collectionType"];</code>
+       * @param value The enum numeric value on the wire for collectionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCollectionType(viam.app.data.v1.Data.IndexableCollection value) {
+        copyOnWrite();
+        instance.setCollectionType(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexableCollection collection_type = 1 [json_name = "collectionType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCollectionType() {
+        copyOnWrite();
+        instance.clearCollectionType();
+        return this;
+      }
+
+      /**
+       * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+       * @return Whether the pipelineName field is set.
+       */
+      @java.lang.Override
+      public boolean hasPipelineName() {
+        return instance.hasPipelineName();
+      }
+      /**
+       * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+       * @return The pipelineName.
+       */
+      @java.lang.Override
+      public java.lang.String getPipelineName() {
+        return instance.getPipelineName();
+      }
+      /**
+       * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+       * @return The bytes for pipelineName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPipelineNameBytes() {
+        return instance.getPipelineNameBytes();
+      }
+      /**
+       * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+       * @param value The pipelineName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPipelineName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPipelineName(value);
+        return this;
+      }
+      /**
+       * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPipelineName() {
+        copyOnWrite();
+        instance.clearPipelineName();
+        return this;
+      }
+      /**
+       * <code>optional string pipeline_name = 2 [json_name = "pipelineName"];</code>
+       * @param value The bytes for pipelineName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPipelineNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPipelineNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string index_name = 3 [json_name = "indexName"];</code>
+       * @return The indexName.
+       */
+      @java.lang.Override
+      public java.lang.String getIndexName() {
+        return instance.getIndexName();
+      }
+      /**
+       * <code>string index_name = 3 [json_name = "indexName"];</code>
+       * @return The bytes for indexName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIndexNameBytes() {
+        return instance.getIndexNameBytes();
+      }
+      /**
+       * <code>string index_name = 3 [json_name = "indexName"];</code>
+       * @param value The indexName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setIndexName(value);
+        return this;
+      }
+      /**
+       * <code>string index_name = 3 [json_name = "indexName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndexName() {
+        copyOnWrite();
+        instance.clearIndexName();
+        return this;
+      }
+      /**
+       * <code>string index_name = 3 [json_name = "indexName"];</code>
+       * @param value The bytes for indexName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIndexNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * index_spec defines a MongoDB index in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @return A list containing the indexSpec.
+       */
+      @java.lang.Override
+      public java.util.List<com.google.protobuf.ByteString>
+          getIndexSpecList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getIndexSpecList());
+      }
+      /**
+       * <pre>
+       * index_spec defines a MongoDB index in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @return The count of indexSpec.
+       */
+      @java.lang.Override
+      public int getIndexSpecCount() {
+        return instance.getIndexSpecCount();
+      }
+      /**
+       * <pre>
+       * index_spec defines a MongoDB index in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @param index The index of the element to return.
+       * @return The indexSpec at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getIndexSpec(int index) {
+        return instance.getIndexSpec(index);
+      }
+      /**
+       * <pre>
+       * index_spec defines a MongoDB index in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @param value The indexSpec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIndexSpec(
+          int index, com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIndexSpec(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * index_spec defines a MongoDB index in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @param value The indexSpec to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIndexSpec(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addIndexSpec(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * index_spec defines a MongoDB index in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @param values The indexSpec to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIndexSpec(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        copyOnWrite();
+        instance.addAllIndexSpec(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * index_spec defines a MongoDB index in JSON format
+       * </pre>
+       *
+       * <code>repeated bytes index_spec = 4 [json_name = "indexSpec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIndexSpec() {
+        copyOnWrite();
+        instance.clearIndexSpec();
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.data.v1.IndexCreator created_by = 5 [json_name = "createdBy"];</code>
+       * @return The enum numeric value on the wire for createdBy.
+       */
+      @java.lang.Override
+      public int getCreatedByValue() {
+        return instance.getCreatedByValue();
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexCreator created_by = 5 [json_name = "createdBy"];</code>
+       * @param value The createdBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedByValue(int value) {
+        copyOnWrite();
+        instance.setCreatedByValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexCreator created_by = 5 [json_name = "createdBy"];</code>
+       * @return The createdBy.
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.IndexCreator getCreatedBy() {
+        return instance.getCreatedBy();
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexCreator created_by = 5 [json_name = "createdBy"];</code>
+       * @param value The enum numeric value on the wire for createdBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedBy(viam.app.data.v1.Data.IndexCreator value) {
+        copyOnWrite();
+        instance.setCreatedBy(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.IndexCreator created_by = 5 [json_name = "createdBy"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreatedBy() {
+        copyOnWrite();
+        instance.clearCreatedBy();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.Index)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.Index();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "collectionType_",
+              "pipelineName_",
+              "indexName_",
+              "indexSpec_",
+              "createdBy_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0001\u0000\u0001\f\u0002\u1208" +
+                "\u0000\u0003\u0208\u0004\u001c\u0005\f";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.Index> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.Index.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.Index>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.Index)
+    private static final viam.app.data.v1.Data.Index DEFAULT_INSTANCE;
+    static {
+      Index defaultInstance = new Index();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Index.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.Index getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<Index> PARSER;
+
+    public static com.google.protobuf.Parser<Index> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

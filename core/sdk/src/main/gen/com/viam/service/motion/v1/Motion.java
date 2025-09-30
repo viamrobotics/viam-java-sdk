@@ -179,22 +179,26 @@ public final class Motion {
 
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
-     * @return Whether the componentName field is set.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.MoveRequest.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=75
+     * @return Whether the componentNameDeprecated field is set.
      */
-    boolean hasComponentName();
+    @java.lang.Deprecated boolean hasComponentNameDeprecated();
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
-     * @return The componentName.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.MoveRequest.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=75
+     * @return The componentNameDeprecated.
      */
-    com.viam.common.v1.Common.ResourceName getComponentName();
+    @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
 
     /**
      * <pre>
@@ -238,6 +242,26 @@ public final class Motion {
 
     /**
      * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 6 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    java.lang.String getComponentName();
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 6 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
+
+    /**
+     * <pre>
      * Additional arguments to the method
      * </pre>
      *
@@ -269,6 +293,7 @@ public final class Motion {
       MoveRequestOrBuilder {
     private MoveRequest() {
       name_ = "";
+      componentName_ = "";
     }
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
@@ -404,69 +429,69 @@ public final class Motion {
       bitField0_ = (bitField0_ & ~0x00000001);
     }
 
-    public static final int COMPONENT_NAME_FIELD_NUMBER = 3;
-    private com.viam.common.v1.Common.ResourceName componentName_;
+    public static final int COMPONENT_NAME_DEPRECATED_FIELD_NUMBER = 3;
+    private com.viam.common.v1.Common.ResourceName componentNameDeprecated_;
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasComponentName() {
+    @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.ResourceName getComponentName() {
-      return componentName_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentName_;
+    @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+      return componentNameDeprecated_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentNameDeprecated_;
     }
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void setComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  componentName_ = value;
+  componentNameDeprecated_ = value;
       bitField0_ |= 0x00000002;
       }
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  if (componentName_ != null &&
-          componentName_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
-        componentName_ =
-          com.viam.common.v1.Common.ResourceName.newBuilder(componentName_).mergeFrom(value).buildPartial();
+  if (componentNameDeprecated_ != null &&
+          componentNameDeprecated_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        componentNameDeprecated_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(componentNameDeprecated_).mergeFrom(value).buildPartial();
       } else {
-        componentName_ = value;
+        componentNameDeprecated_ = value;
       }
       bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void clearComponentName() {  componentName_ = null;
+    private void clearComponentNameDeprecated() {  componentNameDeprecated_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
     }
 
@@ -605,6 +630,73 @@ public final class Motion {
      */
     private void clearConstraints() {  constraints_ = null;
       bitField0_ = (bitField0_ & ~0x00000008);
+    }
+
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 6;
+    private java.lang.String componentName_;
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 6 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      return componentName_;
+    }
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 6 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+    }
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 6 [json_name = "componentName"];</code>
+     * @param value The componentName to set.
+     */
+    private void setComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentName_ = value;
+    }
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 6 [json_name = "componentName"];</code>
+     */
+    private void clearComponentName() {
+
+      componentName_ = getDefaultInstance().getComponentName();
+    }
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 6 [json_name = "componentName"];</code>
+     * @param value The bytes for componentName to set.
+     */
+    private void setComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentName_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -916,72 +1008,72 @@ public final class Motion {
 
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasComponentName() {
-        return instance.hasComponentName();
+      @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
+        return instance.hasComponentNameDeprecated();
       }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.ResourceName getComponentName() {
-        return instance.getComponentName();
+      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+        return instance.getComponentNameDeprecated();
       }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.setComponentName(value);
+        instance.setComponentNameDeprecated(value);
         return this;
         }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
         copyOnWrite();
-        instance.setComponentName(builderForValue.build());
+        instance.setComponentNameDeprecated(builderForValue.build());
         return this;
       }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.mergeComponentName(value);
+        instance.mergeComponentNameDeprecated(value);
         return this;
       }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder clearComponentName() {  copyOnWrite();
-        instance.clearComponentName();
+      @java.lang.Deprecated public Builder clearComponentNameDeprecated() {  copyOnWrite();
+        instance.clearComponentNameDeprecated();
         return this;
       }
 
@@ -1135,6 +1227,75 @@ public final class Motion {
 
       /**
        * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 6 [json_name = "componentName"];</code>
+       * @return The componentName.
+       */
+      @java.lang.Override
+      public java.lang.String getComponentName() {
+        return instance.getComponentName();
+      }
+      /**
+       * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 6 [json_name = "componentName"];</code>
+       * @return The bytes for componentName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        return instance.getComponentNameBytes();
+      }
+      /**
+       * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 6 [json_name = "componentName"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setComponentName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 6 [json_name = "componentName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentName() {
+        copyOnWrite();
+        instance.clearComponentName();
+        return this;
+      }
+      /**
+       * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 6 [json_name = "componentName"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setComponentNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
        * Additional arguments to the method
        * </pre>
        *
@@ -1223,14 +1384,15 @@ public final class Motion {
               "bitField0_",
               "name_",
               "destination_",
-              "componentName_",
+              "componentNameDeprecated_",
               "worldState_",
               "constraints_",
+              "componentName_",
               "extra_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0001\u0001c\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000" +
-                "\u0003\u1009\u0001\u0004\u1009\u0002\u0005\u1009\u0003c\u1009\u0004";
+                "\u0000\u0007\u0000\u0001\u0001c\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000" +
+                "\u0003\u1009\u0001\u0004\u1009\u0002\u0005\u1009\u0003\u0006\u0208c\u1009\u0004";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -1575,41 +1737,49 @@ public final class Motion {
 
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
-     * @return Whether the componentName field is set.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.MoveOnMapRequest.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=97
+     * @return Whether the componentNameDeprecated field is set.
      */
-    boolean hasComponentName();
+    @java.lang.Deprecated boolean hasComponentNameDeprecated();
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
-     * @return The componentName.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.MoveOnMapRequest.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=97
+     * @return The componentNameDeprecated.
      */
-    com.viam.common.v1.Common.ResourceName getComponentName();
+    @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
 
     /**
      * <pre>
-     * Name of the slam service from which the SLAM map is requested
+     * Deprecated, use slam_service_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName slam_service_name = 4 [json_name = "slamServiceName"];</code>
-     * @return Whether the slamServiceName field is set.
+     * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.MoveOnMapRequest.slam_service_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=99
+     * @return Whether the slamServiceNameDeprecated field is set.
      */
-    boolean hasSlamServiceName();
+    @java.lang.Deprecated boolean hasSlamServiceNameDeprecated();
     /**
      * <pre>
-     * Name of the slam service from which the SLAM map is requested
+     * Deprecated, use slam_service_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName slam_service_name = 4 [json_name = "slamServiceName"];</code>
-     * @return The slamServiceName.
+     * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.MoveOnMapRequest.slam_service_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=99
+     * @return The slamServiceNameDeprecated.
      */
-    com.viam.common.v1.Common.ResourceName getSlamServiceName();
+    @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getSlamServiceNameDeprecated();
 
     /**
      * <pre>
@@ -1658,6 +1828,46 @@ public final class Motion {
 
     /**
      * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 7 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    java.lang.String getComponentName();
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 7 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
+
+    /**
+     * <pre>
+     * Name of the slam service from which the SLAM map is requested
+     * </pre>
+     *
+     * <code>string slam_service_name = 8 [json_name = "slamServiceName"];</code>
+     * @return The slamServiceName.
+     */
+    java.lang.String getSlamServiceName();
+    /**
+     * <pre>
+     * Name of the slam service from which the SLAM map is requested
+     * </pre>
+     *
+     * <code>string slam_service_name = 8 [json_name = "slamServiceName"];</code>
+     * @return The bytes for slamServiceName.
+     */
+    com.google.protobuf.ByteString
+        getSlamServiceNameBytes();
+
+    /**
+     * <pre>
      * Additional arguments to the method
      * </pre>
      *
@@ -1686,6 +1896,8 @@ public final class Motion {
     private MoveOnMapRequest() {
       name_ = "";
       obstacles_ = emptyProtobufList();
+      componentName_ = "";
+      slamServiceName_ = "";
     }
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
@@ -1821,135 +2033,135 @@ public final class Motion {
       bitField0_ = (bitField0_ & ~0x00000001);
     }
 
-    public static final int COMPONENT_NAME_FIELD_NUMBER = 3;
-    private com.viam.common.v1.Common.ResourceName componentName_;
+    public static final int COMPONENT_NAME_DEPRECATED_FIELD_NUMBER = 3;
+    private com.viam.common.v1.Common.ResourceName componentNameDeprecated_;
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasComponentName() {
+    @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.ResourceName getComponentName() {
-      return componentName_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentName_;
+    @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+      return componentNameDeprecated_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentNameDeprecated_;
     }
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void setComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  componentName_ = value;
+  componentNameDeprecated_ = value;
       bitField0_ |= 0x00000002;
       }
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  if (componentName_ != null &&
-          componentName_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
-        componentName_ =
-          com.viam.common.v1.Common.ResourceName.newBuilder(componentName_).mergeFrom(value).buildPartial();
+  if (componentNameDeprecated_ != null &&
+          componentNameDeprecated_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        componentNameDeprecated_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(componentNameDeprecated_).mergeFrom(value).buildPartial();
       } else {
-        componentName_ = value;
+        componentNameDeprecated_ = value;
       }
       bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void clearComponentName() {  componentName_ = null;
+    private void clearComponentNameDeprecated() {  componentNameDeprecated_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
     }
 
-    public static final int SLAM_SERVICE_NAME_FIELD_NUMBER = 4;
-    private com.viam.common.v1.Common.ResourceName slamServiceName_;
+    public static final int SLAM_SERVICE_NAME_DEPRECATED_FIELD_NUMBER = 4;
+    private com.viam.common.v1.Common.ResourceName slamServiceNameDeprecated_;
     /**
      * <pre>
-     * Name of the slam service from which the SLAM map is requested
+     * Deprecated, use slam_service_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName slam_service_name = 4 [json_name = "slamServiceName"];</code>
+     * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasSlamServiceName() {
+    @java.lang.Deprecated public boolean hasSlamServiceNameDeprecated() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Name of the slam service from which the SLAM map is requested
+     * Deprecated, use slam_service_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName slam_service_name = 4 [json_name = "slamServiceName"];</code>
+     * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.ResourceName getSlamServiceName() {
-      return slamServiceName_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : slamServiceName_;
+    @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getSlamServiceNameDeprecated() {
+      return slamServiceNameDeprecated_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : slamServiceNameDeprecated_;
     }
     /**
      * <pre>
-     * Name of the slam service from which the SLAM map is requested
+     * Deprecated, use slam_service_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName slam_service_name = 4 [json_name = "slamServiceName"];</code>
+     * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
      */
-    private void setSlamServiceName(com.viam.common.v1.Common.ResourceName value) {
+    private void setSlamServiceNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  slamServiceName_ = value;
+  slamServiceNameDeprecated_ = value;
       bitField0_ |= 0x00000004;
       }
     /**
      * <pre>
-     * Name of the slam service from which the SLAM map is requested
+     * Deprecated, use slam_service_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName slam_service_name = 4 [json_name = "slamServiceName"];</code>
+     * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeSlamServiceName(com.viam.common.v1.Common.ResourceName value) {
+    private void mergeSlamServiceNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  if (slamServiceName_ != null &&
-          slamServiceName_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
-        slamServiceName_ =
-          com.viam.common.v1.Common.ResourceName.newBuilder(slamServiceName_).mergeFrom(value).buildPartial();
+  if (slamServiceNameDeprecated_ != null &&
+          slamServiceNameDeprecated_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        slamServiceNameDeprecated_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(slamServiceNameDeprecated_).mergeFrom(value).buildPartial();
       } else {
-        slamServiceName_ = value;
+        slamServiceNameDeprecated_ = value;
       }
       bitField0_ |= 0x00000004;
     }
     /**
      * <pre>
-     * Name of the slam service from which the SLAM map is requested
+     * Deprecated, use slam_service_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName slam_service_name = 4 [json_name = "slamServiceName"];</code>
+     * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
      */
-    private void clearSlamServiceName() {  slamServiceName_ = null;
+    private void clearSlamServiceNameDeprecated() {  slamServiceNameDeprecated_ = null;
       bitField0_ = (bitField0_ & ~0x00000004);
     }
 
@@ -2155,6 +2367,140 @@ public final class Motion {
     private void removeObstacles(int index) {
       ensureObstaclesIsMutable();
       obstacles_.remove(index);
+    }
+
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 7;
+    private java.lang.String componentName_;
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 7 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      return componentName_;
+    }
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 7 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+    }
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 7 [json_name = "componentName"];</code>
+     * @param value The componentName to set.
+     */
+    private void setComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentName_ = value;
+    }
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 7 [json_name = "componentName"];</code>
+     */
+    private void clearComponentName() {
+
+      componentName_ = getDefaultInstance().getComponentName();
+    }
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 7 [json_name = "componentName"];</code>
+     * @param value The bytes for componentName to set.
+     */
+    private void setComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentName_ = value.toStringUtf8();
+
+    }
+
+    public static final int SLAM_SERVICE_NAME_FIELD_NUMBER = 8;
+    private java.lang.String slamServiceName_;
+    /**
+     * <pre>
+     * Name of the slam service from which the SLAM map is requested
+     * </pre>
+     *
+     * <code>string slam_service_name = 8 [json_name = "slamServiceName"];</code>
+     * @return The slamServiceName.
+     */
+    @java.lang.Override
+    public java.lang.String getSlamServiceName() {
+      return slamServiceName_;
+    }
+    /**
+     * <pre>
+     * Name of the slam service from which the SLAM map is requested
+     * </pre>
+     *
+     * <code>string slam_service_name = 8 [json_name = "slamServiceName"];</code>
+     * @return The bytes for slamServiceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSlamServiceNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(slamServiceName_);
+    }
+    /**
+     * <pre>
+     * Name of the slam service from which the SLAM map is requested
+     * </pre>
+     *
+     * <code>string slam_service_name = 8 [json_name = "slamServiceName"];</code>
+     * @param value The slamServiceName to set.
+     */
+    private void setSlamServiceName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      slamServiceName_ = value;
+    }
+    /**
+     * <pre>
+     * Name of the slam service from which the SLAM map is requested
+     * </pre>
+     *
+     * <code>string slam_service_name = 8 [json_name = "slamServiceName"];</code>
+     */
+    private void clearSlamServiceName() {
+
+      slamServiceName_ = getDefaultInstance().getSlamServiceName();
+    }
+    /**
+     * <pre>
+     * Name of the slam service from which the SLAM map is requested
+     * </pre>
+     *
+     * <code>string slam_service_name = 8 [json_name = "slamServiceName"];</code>
+     * @param value The bytes for slamServiceName to set.
+     */
+    private void setSlamServiceNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      slamServiceName_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -2462,143 +2808,143 @@ public final class Motion {
 
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasComponentName() {
-        return instance.hasComponentName();
+      @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
+        return instance.hasComponentNameDeprecated();
       }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.ResourceName getComponentName() {
-        return instance.getComponentName();
+      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+        return instance.getComponentNameDeprecated();
       }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.setComponentName(value);
+        instance.setComponentNameDeprecated(value);
         return this;
         }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
         copyOnWrite();
-        instance.setComponentName(builderForValue.build());
+        instance.setComponentNameDeprecated(builderForValue.build());
         return this;
       }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.mergeComponentName(value);
+        instance.mergeComponentNameDeprecated(value);
         return this;
       }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder clearComponentName() {  copyOnWrite();
-        instance.clearComponentName();
+      @java.lang.Deprecated public Builder clearComponentNameDeprecated() {  copyOnWrite();
+        instance.clearComponentNameDeprecated();
         return this;
       }
 
       /**
        * <pre>
-       * Name of the slam service from which the SLAM map is requested
+       * Deprecated, use slam_service_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName slam_service_name = 4 [json_name = "slamServiceName"];</code>
+       * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasSlamServiceName() {
-        return instance.hasSlamServiceName();
+      @java.lang.Deprecated public boolean hasSlamServiceNameDeprecated() {
+        return instance.hasSlamServiceNameDeprecated();
       }
       /**
        * <pre>
-       * Name of the slam service from which the SLAM map is requested
+       * Deprecated, use slam_service_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName slam_service_name = 4 [json_name = "slamServiceName"];</code>
+       * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.ResourceName getSlamServiceName() {
-        return instance.getSlamServiceName();
+      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getSlamServiceNameDeprecated() {
+        return instance.getSlamServiceNameDeprecated();
       }
       /**
        * <pre>
-       * Name of the slam service from which the SLAM map is requested
+       * Deprecated, use slam_service_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName slam_service_name = 4 [json_name = "slamServiceName"];</code>
+       * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
        */
-      public Builder setSlamServiceName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder setSlamServiceNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.setSlamServiceName(value);
+        instance.setSlamServiceNameDeprecated(value);
         return this;
         }
       /**
        * <pre>
-       * Name of the slam service from which the SLAM map is requested
+       * Deprecated, use slam_service_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName slam_service_name = 4 [json_name = "slamServiceName"];</code>
+       * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
        */
-      public Builder setSlamServiceName(
+      @java.lang.Deprecated public Builder setSlamServiceNameDeprecated(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
         copyOnWrite();
-        instance.setSlamServiceName(builderForValue.build());
+        instance.setSlamServiceNameDeprecated(builderForValue.build());
         return this;
       }
       /**
        * <pre>
-       * Name of the slam service from which the SLAM map is requested
+       * Deprecated, use slam_service_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName slam_service_name = 4 [json_name = "slamServiceName"];</code>
+       * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
        */
-      public Builder mergeSlamServiceName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder mergeSlamServiceNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.mergeSlamServiceName(value);
+        instance.mergeSlamServiceNameDeprecated(value);
         return this;
       }
       /**
        * <pre>
-       * Name of the slam service from which the SLAM map is requested
+       * Deprecated, use slam_service_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName slam_service_name = 4 [json_name = "slamServiceName"];</code>
+       * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
        */
-      public Builder clearSlamServiceName() {  copyOnWrite();
-        instance.clearSlamServiceName();
+      @java.lang.Deprecated public Builder clearSlamServiceNameDeprecated() {  copyOnWrite();
+        instance.clearSlamServiceNameDeprecated();
         return this;
       }
 
@@ -2825,6 +3171,144 @@ public final class Motion {
 
       /**
        * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 7 [json_name = "componentName"];</code>
+       * @return The componentName.
+       */
+      @java.lang.Override
+      public java.lang.String getComponentName() {
+        return instance.getComponentName();
+      }
+      /**
+       * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 7 [json_name = "componentName"];</code>
+       * @return The bytes for componentName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        return instance.getComponentNameBytes();
+      }
+      /**
+       * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 7 [json_name = "componentName"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setComponentName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 7 [json_name = "componentName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentName() {
+        copyOnWrite();
+        instance.clearComponentName();
+        return this;
+      }
+      /**
+       * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 7 [json_name = "componentName"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setComponentNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Name of the slam service from which the SLAM map is requested
+       * </pre>
+       *
+       * <code>string slam_service_name = 8 [json_name = "slamServiceName"];</code>
+       * @return The slamServiceName.
+       */
+      @java.lang.Override
+      public java.lang.String getSlamServiceName() {
+        return instance.getSlamServiceName();
+      }
+      /**
+       * <pre>
+       * Name of the slam service from which the SLAM map is requested
+       * </pre>
+       *
+       * <code>string slam_service_name = 8 [json_name = "slamServiceName"];</code>
+       * @return The bytes for slamServiceName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSlamServiceNameBytes() {
+        return instance.getSlamServiceNameBytes();
+      }
+      /**
+       * <pre>
+       * Name of the slam service from which the SLAM map is requested
+       * </pre>
+       *
+       * <code>string slam_service_name = 8 [json_name = "slamServiceName"];</code>
+       * @param value The slamServiceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlamServiceName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setSlamServiceName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the slam service from which the SLAM map is requested
+       * </pre>
+       *
+       * <code>string slam_service_name = 8 [json_name = "slamServiceName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSlamServiceName() {
+        copyOnWrite();
+        instance.clearSlamServiceName();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the slam service from which the SLAM map is requested
+       * </pre>
+       *
+       * <code>string slam_service_name = 8 [json_name = "slamServiceName"];</code>
+       * @param value The bytes for slamServiceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSlamServiceNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setSlamServiceNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
        * Additional arguments to the method
        * </pre>
        *
@@ -2913,16 +3397,19 @@ public final class Motion {
               "bitField0_",
               "name_",
               "destination_",
-              "componentName_",
-              "slamServiceName_",
+              "componentNameDeprecated_",
+              "slamServiceNameDeprecated_",
               "motionConfiguration_",
               "obstacles_",
               com.viam.common.v1.Common.Geometry.class,
+              "componentName_",
+              "slamServiceName_",
               "extra_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0001\u0001c\u0007\u0000\u0001\u0000\u0001\u0208\u0002\u1009\u0000" +
-                "\u0003\u1009\u0001\u0004\u1009\u0002\u0005\u1009\u0003\u0006\u001bc\u1009\u0004";
+                "\u0000\t\u0000\u0001\u0001c\t\u0000\u0001\u0000\u0001\u0208\u0002\u1009\u0000\u0003" +
+                "\u1009\u0001\u0004\u1009\u0002\u0005\u1009\u0003\u0006\u001b\u0007\u0208\b\u0208" +
+                "c\u1009\u0004";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3348,26 +3835,58 @@ public final class Motion {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code>
-     * @return Whether the visionService field is set.
+     * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.ObstacleDetector.vision_service_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=121
+     * @return Whether the visionServiceDeprecated field is set.
      */
-    boolean hasVisionService();
+    @java.lang.Deprecated boolean hasVisionServiceDeprecated();
     /**
-     * <code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code>
-     * @return The visionService.
+     * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.ObstacleDetector.vision_service_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=121
+     * @return The visionServiceDeprecated.
      */
-    com.viam.common.v1.Common.ResourceName getVisionService();
+    @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getVisionServiceDeprecated();
 
     /**
-     * <code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code>
-     * @return Whether the camera field is set.
+     * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.ObstacleDetector.camera_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=122
+     * @return Whether the cameraDeprecated field is set.
      */
-    boolean hasCamera();
+    @java.lang.Deprecated boolean hasCameraDeprecated();
     /**
-     * <code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code>
+     * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.ObstacleDetector.camera_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=122
+     * @return The cameraDeprecated.
+     */
+    @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getCameraDeprecated();
+
+    /**
+     * <code>string vision_service = 3 [json_name = "visionService"];</code>
+     * @return The visionService.
+     */
+    java.lang.String getVisionService();
+    /**
+     * <code>string vision_service = 3 [json_name = "visionService"];</code>
+     * @return The bytes for visionService.
+     */
+    com.google.protobuf.ByteString
+        getVisionServiceBytes();
+
+    /**
+     * <code>string camera = 4 [json_name = "camera"];</code>
      * @return The camera.
      */
-    com.viam.common.v1.Common.ResourceName getCamera();
+    java.lang.String getCamera();
+    /**
+     * <code>string camera = 4 [json_name = "camera"];</code>
+     * @return The bytes for camera.
+     */
+    com.google.protobuf.ByteString
+        getCameraBytes();
   }
   /**
    * <pre>
@@ -3382,98 +3901,194 @@ public final class Motion {
       // @@protoc_insertion_point(message_implements:viam.service.motion.v1.ObstacleDetector)
       ObstacleDetectorOrBuilder {
     private ObstacleDetector() {
+      visionService_ = "";
+      camera_ = "";
     }
     private int bitField0_;
-    public static final int VISION_SERVICE_FIELD_NUMBER = 1;
-    private com.viam.common.v1.Common.ResourceName visionService_;
+    public static final int VISION_SERVICE_DEPRECATED_FIELD_NUMBER = 1;
+    private com.viam.common.v1.Common.ResourceName visionServiceDeprecated_;
     /**
-     * <code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code>
+     * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasVisionService() {
+    @java.lang.Deprecated public boolean hasVisionServiceDeprecated() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code>
+     * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.ResourceName getVisionService() {
-      return visionService_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : visionService_;
+    @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getVisionServiceDeprecated() {
+      return visionServiceDeprecated_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : visionServiceDeprecated_;
     }
     /**
-     * <code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code>
+     * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
      */
-    private void setVisionService(com.viam.common.v1.Common.ResourceName value) {
+    private void setVisionServiceDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  visionService_ = value;
+  visionServiceDeprecated_ = value;
       bitField0_ |= 0x00000001;
       }
     /**
-     * <code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code>
+     * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeVisionService(com.viam.common.v1.Common.ResourceName value) {
+    private void mergeVisionServiceDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  if (visionService_ != null &&
-          visionService_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
-        visionService_ =
-          com.viam.common.v1.Common.ResourceName.newBuilder(visionService_).mergeFrom(value).buildPartial();
+  if (visionServiceDeprecated_ != null &&
+          visionServiceDeprecated_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        visionServiceDeprecated_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(visionServiceDeprecated_).mergeFrom(value).buildPartial();
       } else {
-        visionService_ = value;
+        visionServiceDeprecated_ = value;
       }
       bitField0_ |= 0x00000001;
     }
     /**
-     * <code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code>
+     * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
      */
-    private void clearVisionService() {  visionService_ = null;
+    private void clearVisionServiceDeprecated() {  visionServiceDeprecated_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
     }
 
-    public static final int CAMERA_FIELD_NUMBER = 2;
-    private com.viam.common.v1.Common.ResourceName camera_;
+    public static final int CAMERA_DEPRECATED_FIELD_NUMBER = 2;
+    private com.viam.common.v1.Common.ResourceName cameraDeprecated_;
     /**
-     * <code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code>
+     * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasCamera() {
+    @java.lang.Deprecated public boolean hasCameraDeprecated() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code>
+     * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.ResourceName getCamera() {
-      return camera_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : camera_;
+    @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getCameraDeprecated() {
+      return cameraDeprecated_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : cameraDeprecated_;
     }
     /**
-     * <code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code>
+     * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
      */
-    private void setCamera(com.viam.common.v1.Common.ResourceName value) {
+    private void setCameraDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  camera_ = value;
+  cameraDeprecated_ = value;
       bitField0_ |= 0x00000002;
       }
     /**
-     * <code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code>
+     * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeCamera(com.viam.common.v1.Common.ResourceName value) {
+    private void mergeCameraDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  if (camera_ != null &&
-          camera_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
-        camera_ =
-          com.viam.common.v1.Common.ResourceName.newBuilder(camera_).mergeFrom(value).buildPartial();
+  if (cameraDeprecated_ != null &&
+          cameraDeprecated_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        cameraDeprecated_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(cameraDeprecated_).mergeFrom(value).buildPartial();
       } else {
-        camera_ = value;
+        cameraDeprecated_ = value;
       }
       bitField0_ |= 0x00000002;
     }
     /**
-     * <code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code>
+     * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
      */
-    private void clearCamera() {  camera_ = null;
+    private void clearCameraDeprecated() {  cameraDeprecated_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int VISION_SERVICE_FIELD_NUMBER = 3;
+    private java.lang.String visionService_;
+    /**
+     * <code>string vision_service = 3 [json_name = "visionService"];</code>
+     * @return The visionService.
+     */
+    @java.lang.Override
+    public java.lang.String getVisionService() {
+      return visionService_;
+    }
+    /**
+     * <code>string vision_service = 3 [json_name = "visionService"];</code>
+     * @return The bytes for visionService.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVisionServiceBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(visionService_);
+    }
+    /**
+     * <code>string vision_service = 3 [json_name = "visionService"];</code>
+     * @param value The visionService to set.
+     */
+    private void setVisionService(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      visionService_ = value;
+    }
+    /**
+     * <code>string vision_service = 3 [json_name = "visionService"];</code>
+     */
+    private void clearVisionService() {
+
+      visionService_ = getDefaultInstance().getVisionService();
+    }
+    /**
+     * <code>string vision_service = 3 [json_name = "visionService"];</code>
+     * @param value The bytes for visionService to set.
+     */
+    private void setVisionServiceBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      visionService_ = value.toStringUtf8();
+
+    }
+
+    public static final int CAMERA_FIELD_NUMBER = 4;
+    private java.lang.String camera_;
+    /**
+     * <code>string camera = 4 [json_name = "camera"];</code>
+     * @return The camera.
+     */
+    @java.lang.Override
+    public java.lang.String getCamera() {
+      return camera_;
+    }
+    /**
+     * <code>string camera = 4 [json_name = "camera"];</code>
+     * @return The bytes for camera.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCameraBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(camera_);
+    }
+    /**
+     * <code>string camera = 4 [json_name = "camera"];</code>
+     * @param value The camera to set.
+     */
+    private void setCamera(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      camera_ = value;
+    }
+    /**
+     * <code>string camera = 4 [json_name = "camera"];</code>
+     */
+    private void clearCamera() {
+
+      camera_ = getDefaultInstance().getCamera();
+    }
+    /**
+     * <code>string camera = 4 [json_name = "camera"];</code>
+     * @param value The bytes for camera to set.
+     */
+    private void setCameraBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      camera_ = value.toStringUtf8();
+
     }
 
     public static com.viam.service.motion.v1.Motion.ObstacleDetector parseFrom(
@@ -3578,96 +4193,194 @@ public final class Motion {
 
 
       /**
-       * <code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code>
+       * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasVisionService() {
-        return instance.hasVisionService();
+      @java.lang.Deprecated public boolean hasVisionServiceDeprecated() {
+        return instance.hasVisionServiceDeprecated();
       }
       /**
-       * <code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code>
+       * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.ResourceName getVisionService() {
-        return instance.getVisionService();
+      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getVisionServiceDeprecated() {
+        return instance.getVisionServiceDeprecated();
       }
       /**
-       * <code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code>
+       * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
        */
-      public Builder setVisionService(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder setVisionServiceDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.setVisionService(value);
+        instance.setVisionServiceDeprecated(value);
         return this;
         }
       /**
-       * <code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code>
+       * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
        */
-      public Builder setVisionService(
+      @java.lang.Deprecated public Builder setVisionServiceDeprecated(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
         copyOnWrite();
-        instance.setVisionService(builderForValue.build());
+        instance.setVisionServiceDeprecated(builderForValue.build());
         return this;
       }
       /**
-       * <code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code>
+       * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
        */
-      public Builder mergeVisionService(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder mergeVisionServiceDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.mergeVisionService(value);
+        instance.mergeVisionServiceDeprecated(value);
         return this;
       }
       /**
-       * <code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code>
+       * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
        */
-      public Builder clearVisionService() {  copyOnWrite();
-        instance.clearVisionService();
+      @java.lang.Deprecated public Builder clearVisionServiceDeprecated() {  copyOnWrite();
+        instance.clearVisionServiceDeprecated();
         return this;
       }
 
       /**
-       * <code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code>
+       * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasCamera() {
-        return instance.hasCamera();
+      @java.lang.Deprecated public boolean hasCameraDeprecated() {
+        return instance.hasCameraDeprecated();
       }
       /**
-       * <code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code>
+       * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.ResourceName getCamera() {
-        return instance.getCamera();
+      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getCameraDeprecated() {
+        return instance.getCameraDeprecated();
       }
       /**
-       * <code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code>
+       * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
        */
-      public Builder setCamera(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder setCameraDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.setCamera(value);
+        instance.setCameraDeprecated(value);
         return this;
         }
       /**
-       * <code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code>
+       * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
        */
-      public Builder setCamera(
+      @java.lang.Deprecated public Builder setCameraDeprecated(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
         copyOnWrite();
-        instance.setCamera(builderForValue.build());
+        instance.setCameraDeprecated(builderForValue.build());
         return this;
       }
       /**
-       * <code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code>
+       * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
        */
-      public Builder mergeCamera(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder mergeCameraDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.mergeCamera(value);
+        instance.mergeCameraDeprecated(value);
         return this;
       }
       /**
-       * <code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code>
+       * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
        */
-      public Builder clearCamera() {  copyOnWrite();
+      @java.lang.Deprecated public Builder clearCameraDeprecated() {  copyOnWrite();
+        instance.clearCameraDeprecated();
+        return this;
+      }
+
+      /**
+       * <code>string vision_service = 3 [json_name = "visionService"];</code>
+       * @return The visionService.
+       */
+      @java.lang.Override
+      public java.lang.String getVisionService() {
+        return instance.getVisionService();
+      }
+      /**
+       * <code>string vision_service = 3 [json_name = "visionService"];</code>
+       * @return The bytes for visionService.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getVisionServiceBytes() {
+        return instance.getVisionServiceBytes();
+      }
+      /**
+       * <code>string vision_service = 3 [json_name = "visionService"];</code>
+       * @param value The visionService to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVisionService(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setVisionService(value);
+        return this;
+      }
+      /**
+       * <code>string vision_service = 3 [json_name = "visionService"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVisionService() {
+        copyOnWrite();
+        instance.clearVisionService();
+        return this;
+      }
+      /**
+       * <code>string vision_service = 3 [json_name = "visionService"];</code>
+       * @param value The bytes for visionService to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVisionServiceBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setVisionServiceBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string camera = 4 [json_name = "camera"];</code>
+       * @return The camera.
+       */
+      @java.lang.Override
+      public java.lang.String getCamera() {
+        return instance.getCamera();
+      }
+      /**
+       * <code>string camera = 4 [json_name = "camera"];</code>
+       * @return The bytes for camera.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCameraBytes() {
+        return instance.getCameraBytes();
+      }
+      /**
+       * <code>string camera = 4 [json_name = "camera"];</code>
+       * @param value The camera to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCamera(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCamera(value);
+        return this;
+      }
+      /**
+       * <code>string camera = 4 [json_name = "camera"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCamera() {
+        copyOnWrite();
         instance.clearCamera();
+        return this;
+      }
+      /**
+       * <code>string camera = 4 [json_name = "camera"];</code>
+       * @param value The bytes for camera to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCameraBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCameraBytes(value);
         return this;
       }
 
@@ -3688,12 +4401,14 @@ public final class Motion {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
+              "visionServiceDeprecated_",
+              "cameraDeprecated_",
               "visionService_",
               "camera_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "\u1009\u0001";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001\u0003\u0208\u0004\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -4926,41 +5641,49 @@ public final class Motion {
 
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 4 [json_name = "componentName"];</code>
-     * @return Whether the componentName field is set.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.MoveOnGlobeRequest.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=150
+     * @return Whether the componentNameDeprecated field is set.
      */
-    boolean hasComponentName();
+    @java.lang.Deprecated boolean hasComponentNameDeprecated();
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 4 [json_name = "componentName"];</code>
-     * @return The componentName.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.MoveOnGlobeRequest.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=150
+     * @return The componentNameDeprecated.
      */
-    com.viam.common.v1.Common.ResourceName getComponentName();
+    @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
 
     /**
      * <pre>
-     * Name of the movement sensor which will be used to check robot location
+     * Deprecated, use movement_sensor_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName movement_sensor_name = 5 [json_name = "movementSensorName"];</code>
-     * @return Whether the movementSensorName field is set.
+     * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.MoveOnGlobeRequest.movement_sensor_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=152
+     * @return Whether the movementSensorNameDeprecated field is set.
      */
-    boolean hasMovementSensorName();
+    @java.lang.Deprecated boolean hasMovementSensorNameDeprecated();
     /**
      * <pre>
-     * Name of the movement sensor which will be used to check robot location
+     * Deprecated, use movement_sensor_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName movement_sensor_name = 5 [json_name = "movementSensorName"];</code>
-     * @return The movementSensorName.
+     * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.MoveOnGlobeRequest.movement_sensor_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=152
+     * @return The movementSensorNameDeprecated.
      */
-    com.viam.common.v1.Common.ResourceName getMovementSensorName();
+    @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getMovementSensorNameDeprecated();
 
     /**
      * <pre>
@@ -5035,6 +5758,46 @@ public final class Motion {
 
     /**
      * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 9 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    java.lang.String getComponentName();
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 9 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
+
+    /**
+     * <pre>
+     * Name of the movement sensor which will be used to check robot location
+     * </pre>
+     *
+     * <code>string movement_sensor_name = 10 [json_name = "movementSensorName"];</code>
+     * @return The movementSensorName.
+     */
+    java.lang.String getMovementSensorName();
+    /**
+     * <pre>
+     * Name of the movement sensor which will be used to check robot location
+     * </pre>
+     *
+     * <code>string movement_sensor_name = 10 [json_name = "movementSensorName"];</code>
+     * @return The bytes for movementSensorName.
+     */
+    com.google.protobuf.ByteString
+        getMovementSensorNameBytes();
+
+    /**
+     * <pre>
      * Additional arguments to the method
      * </pre>
      *
@@ -5064,6 +5827,8 @@ public final class Motion {
       name_ = "";
       obstacles_ = emptyProtobufList();
       boundingRegions_ = emptyProtobufList();
+      componentName_ = "";
+      movementSensorName_ = "";
     }
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
@@ -5249,135 +6014,135 @@ public final class Motion {
       heading_ = 0D;
     }
 
-    public static final int COMPONENT_NAME_FIELD_NUMBER = 4;
-    private com.viam.common.v1.Common.ResourceName componentName_;
+    public static final int COMPONENT_NAME_DEPRECATED_FIELD_NUMBER = 4;
+    private com.viam.common.v1.Common.ResourceName componentNameDeprecated_;
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 4 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasComponentName() {
+    @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 4 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.ResourceName getComponentName() {
-      return componentName_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentName_;
+    @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+      return componentNameDeprecated_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentNameDeprecated_;
     }
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 4 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void setComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  componentName_ = value;
+  componentNameDeprecated_ = value;
       bitField0_ |= 0x00000004;
       }
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 4 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  if (componentName_ != null &&
-          componentName_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
-        componentName_ =
-          com.viam.common.v1.Common.ResourceName.newBuilder(componentName_).mergeFrom(value).buildPartial();
+  if (componentNameDeprecated_ != null &&
+          componentNameDeprecated_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        componentNameDeprecated_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(componentNameDeprecated_).mergeFrom(value).buildPartial();
       } else {
-        componentName_ = value;
+        componentNameDeprecated_ = value;
       }
       bitField0_ |= 0x00000004;
     }
     /**
      * <pre>
-     * Component on the robot to move to the specified destination
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 4 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void clearComponentName() {  componentName_ = null;
+    private void clearComponentNameDeprecated() {  componentNameDeprecated_ = null;
       bitField0_ = (bitField0_ & ~0x00000004);
     }
 
-    public static final int MOVEMENT_SENSOR_NAME_FIELD_NUMBER = 5;
-    private com.viam.common.v1.Common.ResourceName movementSensorName_;
+    public static final int MOVEMENT_SENSOR_NAME_DEPRECATED_FIELD_NUMBER = 5;
+    private com.viam.common.v1.Common.ResourceName movementSensorNameDeprecated_;
     /**
      * <pre>
-     * Name of the movement sensor which will be used to check robot location
+     * Deprecated, use movement_sensor_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName movement_sensor_name = 5 [json_name = "movementSensorName"];</code>
+     * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasMovementSensorName() {
+    @java.lang.Deprecated public boolean hasMovementSensorNameDeprecated() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * Name of the movement sensor which will be used to check robot location
+     * Deprecated, use movement_sensor_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName movement_sensor_name = 5 [json_name = "movementSensorName"];</code>
+     * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.ResourceName getMovementSensorName() {
-      return movementSensorName_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : movementSensorName_;
+    @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getMovementSensorNameDeprecated() {
+      return movementSensorNameDeprecated_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : movementSensorNameDeprecated_;
     }
     /**
      * <pre>
-     * Name of the movement sensor which will be used to check robot location
+     * Deprecated, use movement_sensor_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName movement_sensor_name = 5 [json_name = "movementSensorName"];</code>
+     * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
      */
-    private void setMovementSensorName(com.viam.common.v1.Common.ResourceName value) {
+    private void setMovementSensorNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  movementSensorName_ = value;
+  movementSensorNameDeprecated_ = value;
       bitField0_ |= 0x00000008;
       }
     /**
      * <pre>
-     * Name of the movement sensor which will be used to check robot location
+     * Deprecated, use movement_sensor_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName movement_sensor_name = 5 [json_name = "movementSensorName"];</code>
+     * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeMovementSensorName(com.viam.common.v1.Common.ResourceName value) {
+    private void mergeMovementSensorNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  if (movementSensorName_ != null &&
-          movementSensorName_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
-        movementSensorName_ =
-          com.viam.common.v1.Common.ResourceName.newBuilder(movementSensorName_).mergeFrom(value).buildPartial();
+  if (movementSensorNameDeprecated_ != null &&
+          movementSensorNameDeprecated_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        movementSensorNameDeprecated_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(movementSensorNameDeprecated_).mergeFrom(value).buildPartial();
       } else {
-        movementSensorName_ = value;
+        movementSensorNameDeprecated_ = value;
       }
       bitField0_ |= 0x00000008;
     }
     /**
      * <pre>
-     * Name of the movement sensor which will be used to check robot location
+     * Deprecated, use movement_sensor_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName movement_sensor_name = 5 [json_name = "movementSensorName"];</code>
+     * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
      */
-    private void clearMovementSensorName() {  movementSensorName_ = null;
+    private void clearMovementSensorNameDeprecated() {  movementSensorNameDeprecated_ = null;
       bitField0_ = (bitField0_ & ~0x00000008);
     }
 
@@ -5721,6 +6486,140 @@ public final class Motion {
     private void removeBoundingRegions(int index) {
       ensureBoundingRegionsIsMutable();
       boundingRegions_.remove(index);
+    }
+
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 9;
+    private java.lang.String componentName_;
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 9 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      return componentName_;
+    }
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 9 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+    }
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 9 [json_name = "componentName"];</code>
+     * @param value The componentName to set.
+     */
+    private void setComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentName_ = value;
+    }
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 9 [json_name = "componentName"];</code>
+     */
+    private void clearComponentName() {
+
+      componentName_ = getDefaultInstance().getComponentName();
+    }
+    /**
+     * <pre>
+     * Component on the robot to move to the specified destination
+     * </pre>
+     *
+     * <code>string component_name = 9 [json_name = "componentName"];</code>
+     * @param value The bytes for componentName to set.
+     */
+    private void setComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentName_ = value.toStringUtf8();
+
+    }
+
+    public static final int MOVEMENT_SENSOR_NAME_FIELD_NUMBER = 10;
+    private java.lang.String movementSensorName_;
+    /**
+     * <pre>
+     * Name of the movement sensor which will be used to check robot location
+     * </pre>
+     *
+     * <code>string movement_sensor_name = 10 [json_name = "movementSensorName"];</code>
+     * @return The movementSensorName.
+     */
+    @java.lang.Override
+    public java.lang.String getMovementSensorName() {
+      return movementSensorName_;
+    }
+    /**
+     * <pre>
+     * Name of the movement sensor which will be used to check robot location
+     * </pre>
+     *
+     * <code>string movement_sensor_name = 10 [json_name = "movementSensorName"];</code>
+     * @return The bytes for movementSensorName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMovementSensorNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(movementSensorName_);
+    }
+    /**
+     * <pre>
+     * Name of the movement sensor which will be used to check robot location
+     * </pre>
+     *
+     * <code>string movement_sensor_name = 10 [json_name = "movementSensorName"];</code>
+     * @param value The movementSensorName to set.
+     */
+    private void setMovementSensorName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      movementSensorName_ = value;
+    }
+    /**
+     * <pre>
+     * Name of the movement sensor which will be used to check robot location
+     * </pre>
+     *
+     * <code>string movement_sensor_name = 10 [json_name = "movementSensorName"];</code>
+     */
+    private void clearMovementSensorName() {
+
+      movementSensorName_ = getDefaultInstance().getMovementSensorName();
+    }
+    /**
+     * <pre>
+     * Name of the movement sensor which will be used to check robot location
+     * </pre>
+     *
+     * <code>string movement_sensor_name = 10 [json_name = "movementSensorName"];</code>
+     * @param value The bytes for movementSensorName to set.
+     */
+    private void setMovementSensorNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      movementSensorName_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -6080,143 +6979,143 @@ public final class Motion {
 
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 4 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasComponentName() {
-        return instance.hasComponentName();
+      @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
+        return instance.hasComponentNameDeprecated();
       }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 4 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.ResourceName getComponentName() {
-        return instance.getComponentName();
+      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+        return instance.getComponentNameDeprecated();
       }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 4 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.setComponentName(value);
+        instance.setComponentNameDeprecated(value);
         return this;
         }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 4 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
         copyOnWrite();
-        instance.setComponentName(builderForValue.build());
+        instance.setComponentNameDeprecated(builderForValue.build());
         return this;
       }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 4 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.mergeComponentName(value);
+        instance.mergeComponentNameDeprecated(value);
         return this;
       }
       /**
        * <pre>
-       * Component on the robot to move to the specified destination
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 4 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder clearComponentName() {  copyOnWrite();
-        instance.clearComponentName();
+      @java.lang.Deprecated public Builder clearComponentNameDeprecated() {  copyOnWrite();
+        instance.clearComponentNameDeprecated();
         return this;
       }
 
       /**
        * <pre>
-       * Name of the movement sensor which will be used to check robot location
+       * Deprecated, use movement_sensor_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName movement_sensor_name = 5 [json_name = "movementSensorName"];</code>
+       * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasMovementSensorName() {
-        return instance.hasMovementSensorName();
+      @java.lang.Deprecated public boolean hasMovementSensorNameDeprecated() {
+        return instance.hasMovementSensorNameDeprecated();
       }
       /**
        * <pre>
-       * Name of the movement sensor which will be used to check robot location
+       * Deprecated, use movement_sensor_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName movement_sensor_name = 5 [json_name = "movementSensorName"];</code>
+       * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.ResourceName getMovementSensorName() {
-        return instance.getMovementSensorName();
+      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getMovementSensorNameDeprecated() {
+        return instance.getMovementSensorNameDeprecated();
       }
       /**
        * <pre>
-       * Name of the movement sensor which will be used to check robot location
+       * Deprecated, use movement_sensor_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName movement_sensor_name = 5 [json_name = "movementSensorName"];</code>
+       * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
        */
-      public Builder setMovementSensorName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder setMovementSensorNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.setMovementSensorName(value);
+        instance.setMovementSensorNameDeprecated(value);
         return this;
         }
       /**
        * <pre>
-       * Name of the movement sensor which will be used to check robot location
+       * Deprecated, use movement_sensor_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName movement_sensor_name = 5 [json_name = "movementSensorName"];</code>
+       * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
        */
-      public Builder setMovementSensorName(
+      @java.lang.Deprecated public Builder setMovementSensorNameDeprecated(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
         copyOnWrite();
-        instance.setMovementSensorName(builderForValue.build());
+        instance.setMovementSensorNameDeprecated(builderForValue.build());
         return this;
       }
       /**
        * <pre>
-       * Name of the movement sensor which will be used to check robot location
+       * Deprecated, use movement_sensor_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName movement_sensor_name = 5 [json_name = "movementSensorName"];</code>
+       * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
        */
-      public Builder mergeMovementSensorName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder mergeMovementSensorNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.mergeMovementSensorName(value);
+        instance.mergeMovementSensorNameDeprecated(value);
         return this;
       }
       /**
        * <pre>
-       * Name of the movement sensor which will be used to check robot location
+       * Deprecated, use movement_sensor_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName movement_sensor_name = 5 [json_name = "movementSensorName"];</code>
+       * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
        */
-      public Builder clearMovementSensorName() {  copyOnWrite();
-        instance.clearMovementSensorName();
+      @java.lang.Deprecated public Builder clearMovementSensorNameDeprecated() {  copyOnWrite();
+        instance.clearMovementSensorNameDeprecated();
         return this;
       }
 
@@ -6593,6 +7492,144 @@ public final class Motion {
 
       /**
        * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 9 [json_name = "componentName"];</code>
+       * @return The componentName.
+       */
+      @java.lang.Override
+      public java.lang.String getComponentName() {
+        return instance.getComponentName();
+      }
+      /**
+       * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 9 [json_name = "componentName"];</code>
+       * @return The bytes for componentName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        return instance.getComponentNameBytes();
+      }
+      /**
+       * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 9 [json_name = "componentName"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setComponentName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 9 [json_name = "componentName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentName() {
+        copyOnWrite();
+        instance.clearComponentName();
+        return this;
+      }
+      /**
+       * <pre>
+       * Component on the robot to move to the specified destination
+       * </pre>
+       *
+       * <code>string component_name = 9 [json_name = "componentName"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setComponentNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Name of the movement sensor which will be used to check robot location
+       * </pre>
+       *
+       * <code>string movement_sensor_name = 10 [json_name = "movementSensorName"];</code>
+       * @return The movementSensorName.
+       */
+      @java.lang.Override
+      public java.lang.String getMovementSensorName() {
+        return instance.getMovementSensorName();
+      }
+      /**
+       * <pre>
+       * Name of the movement sensor which will be used to check robot location
+       * </pre>
+       *
+       * <code>string movement_sensor_name = 10 [json_name = "movementSensorName"];</code>
+       * @return The bytes for movementSensorName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMovementSensorNameBytes() {
+        return instance.getMovementSensorNameBytes();
+      }
+      /**
+       * <pre>
+       * Name of the movement sensor which will be used to check robot location
+       * </pre>
+       *
+       * <code>string movement_sensor_name = 10 [json_name = "movementSensorName"];</code>
+       * @param value The movementSensorName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMovementSensorName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMovementSensorName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the movement sensor which will be used to check robot location
+       * </pre>
+       *
+       * <code>string movement_sensor_name = 10 [json_name = "movementSensorName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMovementSensorName() {
+        copyOnWrite();
+        instance.clearMovementSensorName();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the movement sensor which will be used to check robot location
+       * </pre>
+       *
+       * <code>string movement_sensor_name = 10 [json_name = "movementSensorName"];</code>
+       * @param value The bytes for movementSensorName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMovementSensorNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMovementSensorNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
        * Additional arguments to the method
        * </pre>
        *
@@ -6682,19 +7719,21 @@ public final class Motion {
               "name_",
               "destination_",
               "heading_",
-              "componentName_",
-              "movementSensorName_",
+              "componentNameDeprecated_",
+              "movementSensorNameDeprecated_",
               "obstacles_",
               com.viam.common.v1.Common.GeoGeometry.class,
               "motionConfiguration_",
               "boundingRegions_",
               com.viam.common.v1.Common.GeoGeometry.class,
+              "componentName_",
+              "movementSensorName_",
               "extra_",
             };
             java.lang.String info =
-                "\u0000\t\u0000\u0001\u0001c\t\u0000\u0002\u0000\u0001\u0208\u0002\u1009\u0000\u0003" +
-                "\u1000\u0001\u0004\u1009\u0002\u0005\u1009\u0003\u0006\u001b\u0007\u1009\u0004\b" +
-                "\u001bc\u1009\u0005";
+                "\u0000\u000b\u0000\u0001\u0001c\u000b\u0000\u0002\u0000\u0001\u0208\u0002\u1009\u0000" +
+                "\u0003\u1000\u0001\u0004\u1009\u0002\u0005\u1009\u0003\u0006\u001b\u0007\u1009\u0004" +
+                "\b\u001b\t\u0208\n\u0208c\u1009\u0005";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -7133,22 +8172,26 @@ public final class Motion {
 
     /**
      * <pre>
-     * the component whose pose is being requested
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
-     * @return Whether the componentName field is set.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.GetPoseRequest.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=178
+     * @return Whether the componentNameDeprecated field is set.
      */
-    boolean hasComponentName();
+    @java.lang.Deprecated boolean hasComponentNameDeprecated();
     /**
      * <pre>
-     * the component whose pose is being requested
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
-     * @return The componentName.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.GetPoseRequest.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=178
+     * @return The componentNameDeprecated.
      */
-    com.viam.common.v1.Common.ResourceName getComponentName();
+    @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
 
     /**
      * <pre>
@@ -7205,6 +8248,26 @@ public final class Motion {
 
     /**
      * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    java.lang.String getComponentName();
+    /**
+     * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
+
+    /**
+     * <pre>
      * Additional arguments to the method
      * </pre>
      *
@@ -7234,6 +8297,7 @@ public final class Motion {
       name_ = "";
       destinationFrame_ = "";
       supplementalTransforms_ = emptyProtobufList();
+      componentName_ = "";
     }
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
@@ -7283,69 +8347,69 @@ public final class Motion {
 
     }
 
-    public static final int COMPONENT_NAME_FIELD_NUMBER = 2;
-    private com.viam.common.v1.Common.ResourceName componentName_;
+    public static final int COMPONENT_NAME_DEPRECATED_FIELD_NUMBER = 2;
+    private com.viam.common.v1.Common.ResourceName componentNameDeprecated_;
     /**
      * <pre>
-     * the component whose pose is being requested
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasComponentName() {
+    @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * the component whose pose is being requested
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.ResourceName getComponentName() {
-      return componentName_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentName_;
+    @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+      return componentNameDeprecated_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentNameDeprecated_;
     }
     /**
      * <pre>
-     * the component whose pose is being requested
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void setComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  componentName_ = value;
+  componentNameDeprecated_ = value;
       bitField0_ |= 0x00000001;
       }
     /**
      * <pre>
-     * the component whose pose is being requested
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  if (componentName_ != null &&
-          componentName_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
-        componentName_ =
-          com.viam.common.v1.Common.ResourceName.newBuilder(componentName_).mergeFrom(value).buildPartial();
+  if (componentNameDeprecated_ != null &&
+          componentNameDeprecated_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        componentNameDeprecated_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(componentNameDeprecated_).mergeFrom(value).buildPartial();
       } else {
-        componentName_ = value;
+        componentNameDeprecated_ = value;
       }
       bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
-     * the component whose pose is being requested
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void clearComponentName() {  componentName_ = null;
+    private void clearComponentNameDeprecated() {  componentNameDeprecated_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
     }
 
@@ -7575,6 +8639,73 @@ public final class Motion {
       supplementalTransforms_.remove(index);
     }
 
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 5;
+    private java.lang.String componentName_;
+    /**
+     * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      return componentName_;
+    }
+    /**
+     * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+    }
+    /**
+     * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @param value The componentName to set.
+     */
+    private void setComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentName_ = value;
+    }
+    /**
+     * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     */
+    private void clearComponentName() {
+
+      componentName_ = getDefaultInstance().getComponentName();
+    }
+    /**
+     * <pre>
+     * the component whose pose is being requested
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @param value The bytes for componentName to set.
+     */
+    private void setComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentName_ = value.toStringUtf8();
+
+    }
+
     public static final int EXTRA_FIELD_NUMBER = 99;
     private com.google.protobuf.Struct extra_;
     /**
@@ -7789,72 +8920,72 @@ public final class Motion {
 
       /**
        * <pre>
-       * the component whose pose is being requested
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasComponentName() {
-        return instance.hasComponentName();
+      @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
+        return instance.hasComponentNameDeprecated();
       }
       /**
        * <pre>
-       * the component whose pose is being requested
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.ResourceName getComponentName() {
-        return instance.getComponentName();
+      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+        return instance.getComponentNameDeprecated();
       }
       /**
        * <pre>
-       * the component whose pose is being requested
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.setComponentName(value);
+        instance.setComponentNameDeprecated(value);
         return this;
         }
       /**
        * <pre>
-       * the component whose pose is being requested
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
         copyOnWrite();
-        instance.setComponentName(builderForValue.build());
+        instance.setComponentNameDeprecated(builderForValue.build());
         return this;
       }
       /**
        * <pre>
-       * the component whose pose is being requested
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.mergeComponentName(value);
+        instance.mergeComponentNameDeprecated(value);
         return this;
       }
       /**
        * <pre>
-       * the component whose pose is being requested
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder clearComponentName() {  copyOnWrite();
-        instance.clearComponentName();
+      @java.lang.Deprecated public Builder clearComponentNameDeprecated() {  copyOnWrite();
+        instance.clearComponentNameDeprecated();
         return this;
       }
 
@@ -8101,6 +9232,75 @@ public final class Motion {
 
       /**
        * <pre>
+       * the component whose pose is being requested
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return The componentName.
+       */
+      @java.lang.Override
+      public java.lang.String getComponentName() {
+        return instance.getComponentName();
+      }
+      /**
+       * <pre>
+       * the component whose pose is being requested
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return The bytes for componentName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        return instance.getComponentNameBytes();
+      }
+      /**
+       * <pre>
+       * the component whose pose is being requested
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setComponentName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * the component whose pose is being requested
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentName() {
+        copyOnWrite();
+        instance.clearComponentName();
+        return this;
+      }
+      /**
+       * <pre>
+       * the component whose pose is being requested
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setComponentNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
        * Additional arguments to the method
        * </pre>
        *
@@ -8188,15 +9388,16 @@ public final class Motion {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
               "name_",
-              "componentName_",
+              "componentNameDeprecated_",
               "destinationFrame_",
               "supplementalTransforms_",
               com.viam.common.v1.Common.Transform.class,
+              "componentName_",
               "extra_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001c\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u1009\u0000" +
-                "\u0003\u0208\u0004\u001bc\u1009\u0001";
+                "\u0000\u0006\u0000\u0001\u0001c\u0006\u0000\u0001\u0000\u0001\u0208\u0002\u1009\u0000" +
+                "\u0003\u0208\u0004\u001b\u0005\u0208c\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -8568,22 +9769,46 @@ public final class Motion {
 
     /**
      * <pre>
-     * The component of the currently executing plan to stop
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
-     * @return Whether the componentName field is set.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.StopPlanRequest.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=202
+     * @return Whether the componentNameDeprecated field is set.
      */
-    boolean hasComponentName();
+    @java.lang.Deprecated boolean hasComponentNameDeprecated();
+    /**
+     * <pre>
+     * Deprecated, use component_name field.
+     * </pre>
+     *
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.StopPlanRequest.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=202
+     * @return The componentNameDeprecated.
+     */
+    @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
+
     /**
      * <pre>
      * The component of the currently executing plan to stop
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>string component_name = 3 [json_name = "componentName"];</code>
      * @return The componentName.
      */
-    com.viam.common.v1.Common.ResourceName getComponentName();
+    java.lang.String getComponentName();
+    /**
+     * <pre>
+     * The component of the currently executing plan to stop
+     * </pre>
+     *
+     * <code>string component_name = 3 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
 
     /**
      * <pre>
@@ -8614,6 +9839,7 @@ public final class Motion {
       StopPlanRequestOrBuilder {
     private StopPlanRequest() {
       name_ = "";
+      componentName_ = "";
     }
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
@@ -8683,70 +9909,137 @@ public final class Motion {
 
     }
 
-    public static final int COMPONENT_NAME_FIELD_NUMBER = 2;
-    private com.viam.common.v1.Common.ResourceName componentName_;
+    public static final int COMPONENT_NAME_DEPRECATED_FIELD_NUMBER = 2;
+    private com.viam.common.v1.Common.ResourceName componentNameDeprecated_;
     /**
      * <pre>
-     * The component of the currently executing plan to stop
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasComponentName() {
+    @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * The component of the currently executing plan to stop
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.ResourceName getComponentName() {
-      return componentName_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentName_;
+    @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+      return componentNameDeprecated_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentNameDeprecated_;
     }
     /**
      * <pre>
-     * The component of the currently executing plan to stop
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void setComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  componentName_ = value;
+  componentNameDeprecated_ = value;
       bitField0_ |= 0x00000001;
       }
     /**
      * <pre>
-     * The component of the currently executing plan to stop
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  if (componentName_ != null &&
-          componentName_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
-        componentName_ =
-          com.viam.common.v1.Common.ResourceName.newBuilder(componentName_).mergeFrom(value).buildPartial();
+  if (componentNameDeprecated_ != null &&
+          componentNameDeprecated_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        componentNameDeprecated_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(componentNameDeprecated_).mergeFrom(value).buildPartial();
       } else {
-        componentName_ = value;
+        componentNameDeprecated_ = value;
       }
       bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Deprecated, use component_name field.
+     * </pre>
+     *
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     */
+    private void clearComponentNameDeprecated() {  componentNameDeprecated_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 3;
+    private java.lang.String componentName_;
+    /**
+     * <pre>
+     * The component of the currently executing plan to stop
+     * </pre>
+     *
+     * <code>string component_name = 3 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      return componentName_;
     }
     /**
      * <pre>
      * The component of the currently executing plan to stop
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>string component_name = 3 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
      */
-    private void clearComponentName() {  componentName_ = null;
-      bitField0_ = (bitField0_ & ~0x00000001);
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+    }
+    /**
+     * <pre>
+     * The component of the currently executing plan to stop
+     * </pre>
+     *
+     * <code>string component_name = 3 [json_name = "componentName"];</code>
+     * @param value The componentName to set.
+     */
+    private void setComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentName_ = value;
+    }
+    /**
+     * <pre>
+     * The component of the currently executing plan to stop
+     * </pre>
+     *
+     * <code>string component_name = 3 [json_name = "componentName"];</code>
+     */
+    private void clearComponentName() {
+
+      componentName_ = getDefaultInstance().getComponentName();
+    }
+    /**
+     * <pre>
+     * The component of the currently executing plan to stop
+     * </pre>
+     *
+     * <code>string component_name = 3 [json_name = "componentName"];</code>
+     * @param value The bytes for componentName to set.
+     */
+    private void setComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentName_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -8983,24 +10276,85 @@ public final class Motion {
 
       /**
        * <pre>
-       * The component of the currently executing plan to stop
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasComponentName() {
-        return instance.hasComponentName();
+      @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
+        return instance.hasComponentNameDeprecated();
       }
+      /**
+       * <pre>
+       * Deprecated, use component_name field.
+       * </pre>
+       *
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+       */
+      @java.lang.Override
+      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+        return instance.getComponentNameDeprecated();
+      }
+      /**
+       * <pre>
+       * Deprecated, use component_name field.
+       * </pre>
+       *
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
+        copyOnWrite();
+        instance.setComponentNameDeprecated(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Deprecated, use component_name field.
+       * </pre>
+       *
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(
+          com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
+        copyOnWrite();
+        instance.setComponentNameDeprecated(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Deprecated, use component_name field.
+       * </pre>
+       *
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
+        copyOnWrite();
+        instance.mergeComponentNameDeprecated(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Deprecated, use component_name field.
+       * </pre>
+       *
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+       */
+      @java.lang.Deprecated public Builder clearComponentNameDeprecated() {  copyOnWrite();
+        instance.clearComponentNameDeprecated();
+        return this;
+      }
+
       /**
        * <pre>
        * The component of the currently executing plan to stop
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>string component_name = 3 [json_name = "componentName"];</code>
+       * @return The componentName.
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.ResourceName getComponentName() {
+      public java.lang.String getComponentName() {
         return instance.getComponentName();
       }
       /**
@@ -9008,47 +10362,55 @@ public final class Motion {
        * The component of the currently executing plan to stop
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>string component_name = 3 [json_name = "componentName"];</code>
+       * @return The bytes for componentName.
        */
-      public Builder setComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        return instance.getComponentNameBytes();
+      }
+      /**
+       * <pre>
+       * The component of the currently executing plan to stop
+       * </pre>
+       *
+       * <code>string component_name = 3 [json_name = "componentName"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
         copyOnWrite();
         instance.setComponentName(value);
         return this;
-        }
-      /**
-       * <pre>
-       * The component of the currently executing plan to stop
-       * </pre>
-       *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
-       */
-      public Builder setComponentName(
-          com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
-        copyOnWrite();
-        instance.setComponentName(builderForValue.build());
-        return this;
       }
       /**
        * <pre>
        * The component of the currently executing plan to stop
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>string component_name = 3 [json_name = "componentName"];</code>
+       * @return This builder for chaining.
        */
-      public Builder mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+      public Builder clearComponentName() {
         copyOnWrite();
-        instance.mergeComponentName(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * The component of the currently executing plan to stop
-       * </pre>
-       *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
-       */
-      public Builder clearComponentName() {  copyOnWrite();
         instance.clearComponentName();
+        return this;
+      }
+      /**
+       * <pre>
+       * The component of the currently executing plan to stop
+       * </pre>
+       *
+       * <code>string component_name = 3 [json_name = "componentName"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setComponentNameBytes(value);
         return this;
       }
 
@@ -9141,12 +10503,13 @@ public final class Motion {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
               "name_",
+              "componentNameDeprecated_",
               "componentName_",
               "extra_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000" +
-                "c\u1009\u0001";
+                "\u0000\u0004\u0000\u0001\u0001c\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000" +
+                "\u0003\u0208c\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -10542,22 +11905,26 @@ public final class Motion {
 
     /**
      * <pre>
-     * The name of the component which was requested to be moved.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
-     * @return Whether the componentName field is set.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.GetPlanRequest.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=236
+     * @return Whether the componentNameDeprecated field is set.
      */
-    boolean hasComponentName();
+    @java.lang.Deprecated boolean hasComponentNameDeprecated();
     /**
      * <pre>
-     * The name of the component which was requested to be moved.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
-     * @return The componentName.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.GetPlanRequest.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=236
+     * @return The componentNameDeprecated.
      */
-    com.viam.common.v1.Common.ResourceName getComponentName();
+    @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
 
     /**
      * <pre>
@@ -10601,6 +11968,26 @@ public final class Motion {
 
     /**
      * <pre>
+     * The name of the component which was requested to be moved.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    java.lang.String getComponentName();
+    /**
+     * <pre>
+     * The name of the component which was requested to be moved.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
+
+    /**
+     * <pre>
      * Additional arguments to the method
      * </pre>
      *
@@ -10629,6 +12016,7 @@ public final class Motion {
     private GetPlanRequest() {
       name_ = "";
       executionId_ = "";
+      componentName_ = "";
     }
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
@@ -10698,69 +12086,69 @@ public final class Motion {
 
     }
 
-    public static final int COMPONENT_NAME_FIELD_NUMBER = 2;
-    private com.viam.common.v1.Common.ResourceName componentName_;
+    public static final int COMPONENT_NAME_DEPRECATED_FIELD_NUMBER = 2;
+    private com.viam.common.v1.Common.ResourceName componentNameDeprecated_;
     /**
      * <pre>
-     * The name of the component which was requested to be moved.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasComponentName() {
+    @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * The name of the component which was requested to be moved.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.ResourceName getComponentName() {
-      return componentName_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentName_;
+    @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+      return componentNameDeprecated_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentNameDeprecated_;
     }
     /**
      * <pre>
-     * The name of the component which was requested to be moved.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void setComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  componentName_ = value;
+  componentNameDeprecated_ = value;
       bitField0_ |= 0x00000001;
       }
     /**
      * <pre>
-     * The name of the component which was requested to be moved.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  if (componentName_ != null &&
-          componentName_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
-        componentName_ =
-          com.viam.common.v1.Common.ResourceName.newBuilder(componentName_).mergeFrom(value).buildPartial();
+  if (componentNameDeprecated_ != null &&
+          componentNameDeprecated_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        componentNameDeprecated_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(componentNameDeprecated_).mergeFrom(value).buildPartial();
       } else {
-        componentName_ = value;
+        componentNameDeprecated_ = value;
       }
       bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
-     * The name of the component which was requested to be moved.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void clearComponentName() {  componentName_ = null;
+    private void clearComponentNameDeprecated() {  componentNameDeprecated_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
     }
 
@@ -10882,6 +12270,73 @@ public final class Motion {
       checkByteStringIsUtf8(value);
       executionId_ = value.toStringUtf8();
       bitField0_ |= 0x00000002;
+    }
+
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 5;
+    private java.lang.String componentName_;
+    /**
+     * <pre>
+     * The name of the component which was requested to be moved.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      return componentName_;
+    }
+    /**
+     * <pre>
+     * The name of the component which was requested to be moved.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+    }
+    /**
+     * <pre>
+     * The name of the component which was requested to be moved.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @param value The componentName to set.
+     */
+    private void setComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentName_ = value;
+    }
+    /**
+     * <pre>
+     * The name of the component which was requested to be moved.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     */
+    private void clearComponentName() {
+
+      componentName_ = getDefaultInstance().getComponentName();
+    }
+    /**
+     * <pre>
+     * The name of the component which was requested to be moved.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @param value The bytes for componentName to set.
+     */
+    private void setComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentName_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -11118,72 +12573,72 @@ public final class Motion {
 
       /**
        * <pre>
-       * The name of the component which was requested to be moved.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasComponentName() {
-        return instance.hasComponentName();
+      @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
+        return instance.hasComponentNameDeprecated();
       }
       /**
        * <pre>
-       * The name of the component which was requested to be moved.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.ResourceName getComponentName() {
-        return instance.getComponentName();
+      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+        return instance.getComponentNameDeprecated();
       }
       /**
        * <pre>
-       * The name of the component which was requested to be moved.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.setComponentName(value);
+        instance.setComponentNameDeprecated(value);
         return this;
         }
       /**
        * <pre>
-       * The name of the component which was requested to be moved.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
         copyOnWrite();
-        instance.setComponentName(builderForValue.build());
+        instance.setComponentNameDeprecated(builderForValue.build());
         return this;
       }
       /**
        * <pre>
-       * The name of the component which was requested to be moved.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.mergeComponentName(value);
+        instance.mergeComponentNameDeprecated(value);
         return this;
       }
       /**
        * <pre>
-       * The name of the component which was requested to be moved.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder clearComponentName() {  copyOnWrite();
-        instance.clearComponentName();
+      @java.lang.Deprecated public Builder clearComponentNameDeprecated() {  copyOnWrite();
+        instance.clearComponentNameDeprecated();
         return this;
       }
 
@@ -11313,6 +12768,75 @@ public final class Motion {
 
       /**
        * <pre>
+       * The name of the component which was requested to be moved.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return The componentName.
+       */
+      @java.lang.Override
+      public java.lang.String getComponentName() {
+        return instance.getComponentName();
+      }
+      /**
+       * <pre>
+       * The name of the component which was requested to be moved.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return The bytes for componentName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        return instance.getComponentNameBytes();
+      }
+      /**
+       * <pre>
+       * The name of the component which was requested to be moved.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setComponentName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the component which was requested to be moved.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentName() {
+        copyOnWrite();
+        instance.clearComponentName();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the component which was requested to be moved.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setComponentNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
        * Additional arguments to the method
        * </pre>
        *
@@ -11400,14 +12924,15 @@ public final class Motion {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
               "name_",
-              "componentName_",
+              "componentNameDeprecated_",
               "lastPlanOnly_",
               "executionId_",
+              "componentName_",
               "extra_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001c\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000" +
-                "\u0003\u0007\u0004\u1208\u0001c\u1009\u0002";
+                "\u0000\u0006\u0000\u0001\u0001c\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000" +
+                "\u0003\u0007\u0004\u1208\u0001\u0005\u0208c\u1009\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -16346,28 +17871,26 @@ public final class Motion {
 
     /**
      * <pre>
-     * The component to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * component_name.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
-     * @return Whether the componentName field is set.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.PlanStatusWithID.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=328
+     * @return Whether the componentNameDeprecated field is set.
      */
-    boolean hasComponentName();
+    @java.lang.Deprecated boolean hasComponentNameDeprecated();
     /**
      * <pre>
-     * The component to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * component_name.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
-     * @return The componentName.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.PlanStatusWithID.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=328
+     * @return The componentNameDeprecated.
      */
-    com.viam.common.v1.Common.ResourceName getComponentName();
+    @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
 
     /**
      * <pre>
@@ -16403,6 +17926,32 @@ public final class Motion {
      * @return The status.
      */
     com.viam.service.motion.v1.Motion.PlanStatus getStatus();
+
+    /**
+     * <pre>
+     * The component to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * component_name.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    java.lang.String getComponentName();
+    /**
+     * <pre>
+     * The component to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * component_name.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
   }
   /**
    * <pre>
@@ -16421,6 +17970,7 @@ public final class Motion {
     private PlanStatusWithID() {
       planId_ = "";
       executionId_ = "";
+      componentName_ = "";
     }
     private int bitField0_;
     public static final int PLAN_ID_FIELD_NUMBER = 1;
@@ -16490,84 +18040,69 @@ public final class Motion {
 
     }
 
-    public static final int COMPONENT_NAME_FIELD_NUMBER = 2;
-    private com.viam.common.v1.Common.ResourceName componentName_;
+    public static final int COMPONENT_NAME_DEPRECATED_FIELD_NUMBER = 2;
+    private com.viam.common.v1.Common.ResourceName componentNameDeprecated_;
     /**
      * <pre>
-     * The component to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * component_name.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasComponentName() {
+    @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * The component to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * component_name.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.ResourceName getComponentName() {
-      return componentName_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentName_;
+    @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+      return componentNameDeprecated_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentNameDeprecated_;
     }
     /**
      * <pre>
-     * The component to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * component_name.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void setComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  componentName_ = value;
+  componentNameDeprecated_ = value;
       bitField0_ |= 0x00000001;
       }
     /**
      * <pre>
-     * The component to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * component_name.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  if (componentName_ != null &&
-          componentName_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
-        componentName_ =
-          com.viam.common.v1.Common.ResourceName.newBuilder(componentName_).mergeFrom(value).buildPartial();
+  if (componentNameDeprecated_ != null &&
+          componentNameDeprecated_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        componentNameDeprecated_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(componentNameDeprecated_).mergeFrom(value).buildPartial();
       } else {
-        componentName_ = value;
+        componentNameDeprecated_ = value;
       }
       bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
-     * The component to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * component_name.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void clearComponentName() {  componentName_ = null;
+    private void clearComponentNameDeprecated() {  componentNameDeprecated_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
     }
 
@@ -16692,6 +18227,88 @@ public final class Motion {
      */
     private void clearStatus() {  status_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 5;
+    private java.lang.String componentName_;
+    /**
+     * <pre>
+     * The component to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * component_name.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      return componentName_;
+    }
+    /**
+     * <pre>
+     * The component to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * component_name.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+    }
+    /**
+     * <pre>
+     * The component to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * component_name.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @param value The componentName to set.
+     */
+    private void setComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentName_ = value;
+    }
+    /**
+     * <pre>
+     * The component to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * component_name.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     */
+    private void clearComponentName() {
+
+      componentName_ = getDefaultInstance().getComponentName();
+    }
+    /**
+     * <pre>
+     * The component to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * component_name.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @param value The bytes for componentName to set.
+     */
+    private void setComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentName_ = value.toStringUtf8();
+
     }
 
     public static com.viam.service.motion.v1.Motion.PlanStatusWithID parseFrom(
@@ -16868,90 +18485,72 @@ public final class Motion {
 
       /**
        * <pre>
-       * The component to be moved.
-       * Used for tracking &amp; stopping.
-       * NOTE: A plan may move more components than just the
-       * component_name.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasComponentName() {
-        return instance.hasComponentName();
+      @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
+        return instance.hasComponentNameDeprecated();
       }
       /**
        * <pre>
-       * The component to be moved.
-       * Used for tracking &amp; stopping.
-       * NOTE: A plan may move more components than just the
-       * component_name.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.ResourceName getComponentName() {
-        return instance.getComponentName();
+      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+        return instance.getComponentNameDeprecated();
       }
       /**
        * <pre>
-       * The component to be moved.
-       * Used for tracking &amp; stopping.
-       * NOTE: A plan may move more components than just the
-       * component_name.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.setComponentName(value);
+        instance.setComponentNameDeprecated(value);
         return this;
         }
       /**
        * <pre>
-       * The component to be moved.
-       * Used for tracking &amp; stopping.
-       * NOTE: A plan may move more components than just the
-       * component_name.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
         copyOnWrite();
-        instance.setComponentName(builderForValue.build());
+        instance.setComponentNameDeprecated(builderForValue.build());
         return this;
       }
       /**
        * <pre>
-       * The component to be moved.
-       * Used for tracking &amp; stopping.
-       * NOTE: A plan may move more components than just the
-       * component_name.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.mergeComponentName(value);
+        instance.mergeComponentNameDeprecated(value);
         return this;
       }
       /**
        * <pre>
-       * The component to be moved.
-       * Used for tracking &amp; stopping.
-       * NOTE: A plan may move more components than just the
-       * component_name.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder clearComponentName() {  copyOnWrite();
-        instance.clearComponentName();
+      @java.lang.Deprecated public Builder clearComponentNameDeprecated() {  copyOnWrite();
+        instance.clearComponentNameDeprecated();
         return this;
       }
 
@@ -17081,6 +18680,90 @@ public final class Motion {
         return this;
       }
 
+      /**
+       * <pre>
+       * The component to be moved.
+       * Used for tracking &amp; stopping.
+       * NOTE: A plan may move more components than just the
+       * component_name.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return The componentName.
+       */
+      @java.lang.Override
+      public java.lang.String getComponentName() {
+        return instance.getComponentName();
+      }
+      /**
+       * <pre>
+       * The component to be moved.
+       * Used for tracking &amp; stopping.
+       * NOTE: A plan may move more components than just the
+       * component_name.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return The bytes for componentName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        return instance.getComponentNameBytes();
+      }
+      /**
+       * <pre>
+       * The component to be moved.
+       * Used for tracking &amp; stopping.
+       * NOTE: A plan may move more components than just the
+       * component_name.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setComponentName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The component to be moved.
+       * Used for tracking &amp; stopping.
+       * NOTE: A plan may move more components than just the
+       * component_name.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentName() {
+        copyOnWrite();
+        instance.clearComponentName();
+        return this;
+      }
+      /**
+       * <pre>
+       * The component to be moved.
+       * Used for tracking &amp; stopping.
+       * NOTE: A plan may move more components than just the
+       * component_name.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setComponentNameBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.service.motion.v1.PlanStatusWithID)
     }
     @java.lang.Override
@@ -17099,13 +18782,14 @@ public final class Motion {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
               "planId_",
-              "componentName_",
+              "componentNameDeprecated_",
               "executionId_",
               "status_",
+              "componentName_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u0208\u0004\u1009\u0001";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u0208\u0004\u1009\u0001\u0005\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -17924,28 +19608,26 @@ public final class Motion {
 
     /**
      * <pre>
-     * The component requested to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * root component.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
-     * @return Whether the componentName field is set.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.Plan.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=379
+     * @return Whether the componentNameDeprecated field is set.
      */
-    boolean hasComponentName();
+    @java.lang.Deprecated boolean hasComponentNameDeprecated();
     /**
      * <pre>
-     * The component requested to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * root component.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
-     * @return The componentName.
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
+     * @deprecated viam.service.motion.v1.Plan.component_name_deprecated is deprecated.
+     *     See service/motion/v1/motion.proto;l=379
+     * @return The componentNameDeprecated.
      */
-    com.viam.common.v1.Common.ResourceName getComponentName();
+    @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
 
     /**
      * <pre>
@@ -17996,6 +19678,32 @@ public final class Motion {
      * <code>repeated .viam.service.motion.v1.PlanStep steps = 4 [json_name = "steps"];</code>
      */
     int getStepsCount();
+
+    /**
+     * <pre>
+     * The component requested to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * root component.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    java.lang.String getComponentName();
+    /**
+     * <pre>
+     * The component requested to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * root component.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
   }
   /**
    * <pre>
@@ -18013,6 +19721,7 @@ public final class Motion {
       id_ = "";
       executionId_ = "";
       steps_ = emptyProtobufList();
+      componentName_ = "";
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
@@ -18082,84 +19791,69 @@ public final class Motion {
 
     }
 
-    public static final int COMPONENT_NAME_FIELD_NUMBER = 2;
-    private com.viam.common.v1.Common.ResourceName componentName_;
+    public static final int COMPONENT_NAME_DEPRECATED_FIELD_NUMBER = 2;
+    private com.viam.common.v1.Common.ResourceName componentNameDeprecated_;
     /**
      * <pre>
-     * The component requested to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * root component.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasComponentName() {
+    @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * The component requested to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * root component.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.ResourceName getComponentName() {
-      return componentName_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentName_;
+    @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+      return componentNameDeprecated_ == null ? com.viam.common.v1.Common.ResourceName.getDefaultInstance() : componentNameDeprecated_;
     }
     /**
      * <pre>
-     * The component requested to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * root component.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void setComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  componentName_ = value;
+  componentNameDeprecated_ = value;
       bitField0_ |= 0x00000001;
       }
     /**
      * <pre>
-     * The component requested to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * root component.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+    private void mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
       value.getClass();
-  if (componentName_ != null &&
-          componentName_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
-        componentName_ =
-          com.viam.common.v1.Common.ResourceName.newBuilder(componentName_).mergeFrom(value).buildPartial();
+  if (componentNameDeprecated_ != null &&
+          componentNameDeprecated_ != com.viam.common.v1.Common.ResourceName.getDefaultInstance()) {
+        componentNameDeprecated_ =
+          com.viam.common.v1.Common.ResourceName.newBuilder(componentNameDeprecated_).mergeFrom(value).buildPartial();
       } else {
-        componentName_ = value;
+        componentNameDeprecated_ = value;
       }
       bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
-     * The component requested to be moved.
-     * Used for tracking &amp; stopping.
-     * NOTE: A plan may move more components than just the
-     * root component.
+     * Deprecated, use component_name field.
      * </pre>
      *
-     * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+     * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      */
-    private void clearComponentName() {  componentName_ = null;
+    private void clearComponentNameDeprecated() {  componentNameDeprecated_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
     }
 
@@ -18378,6 +20072,88 @@ public final class Motion {
       steps_.remove(index);
     }
 
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 5;
+    private java.lang.String componentName_;
+    /**
+     * <pre>
+     * The component requested to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * root component.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      return componentName_;
+    }
+    /**
+     * <pre>
+     * The component requested to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * root component.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+    }
+    /**
+     * <pre>
+     * The component requested to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * root component.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @param value The componentName to set.
+     */
+    private void setComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentName_ = value;
+    }
+    /**
+     * <pre>
+     * The component requested to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * root component.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     */
+    private void clearComponentName() {
+
+      componentName_ = getDefaultInstance().getComponentName();
+    }
+    /**
+     * <pre>
+     * The component requested to be moved.
+     * Used for tracking &amp; stopping.
+     * NOTE: A plan may move more components than just the
+     * root component.
+     * </pre>
+     *
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @param value The bytes for componentName to set.
+     */
+    private void setComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentName_ = value.toStringUtf8();
+
+    }
+
     public static com.viam.service.motion.v1.Motion.Plan parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -18550,90 +20326,72 @@ public final class Motion {
 
       /**
        * <pre>
-       * The component requested to be moved.
-       * Used for tracking &amp; stopping.
-       * NOTE: A plan may move more components than just the
-       * root component.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasComponentName() {
-        return instance.hasComponentName();
+      @java.lang.Deprecated public boolean hasComponentNameDeprecated() {
+        return instance.hasComponentNameDeprecated();
       }
       /**
        * <pre>
-       * The component requested to be moved.
-       * Used for tracking &amp; stopping.
-       * NOTE: A plan may move more components than just the
-       * root component.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.ResourceName getComponentName() {
-        return instance.getComponentName();
+      @java.lang.Deprecated public com.viam.common.v1.Common.ResourceName getComponentNameDeprecated() {
+        return instance.getComponentNameDeprecated();
       }
       /**
        * <pre>
-       * The component requested to be moved.
-       * Used for tracking &amp; stopping.
-       * NOTE: A plan may move more components than just the
-       * root component.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.setComponentName(value);
+        instance.setComponentNameDeprecated(value);
         return this;
         }
       /**
        * <pre>
-       * The component requested to be moved.
-       * Used for tracking &amp; stopping.
-       * NOTE: A plan may move more components than just the
-       * root component.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder setComponentName(
+      @java.lang.Deprecated public Builder setComponentNameDeprecated(
           com.viam.common.v1.Common.ResourceName.Builder builderForValue) {
         copyOnWrite();
-        instance.setComponentName(builderForValue.build());
+        instance.setComponentNameDeprecated(builderForValue.build());
         return this;
       }
       /**
        * <pre>
-       * The component requested to be moved.
-       * Used for tracking &amp; stopping.
-       * NOTE: A plan may move more components than just the
-       * root component.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder mergeComponentName(com.viam.common.v1.Common.ResourceName value) {
+      @java.lang.Deprecated public Builder mergeComponentNameDeprecated(com.viam.common.v1.Common.ResourceName value) {
         copyOnWrite();
-        instance.mergeComponentName(value);
+        instance.mergeComponentNameDeprecated(value);
         return this;
       }
       /**
        * <pre>
-       * The component requested to be moved.
-       * Used for tracking &amp; stopping.
-       * NOTE: A plan may move more components than just the
-       * root component.
+       * Deprecated, use component_name field.
        * </pre>
        *
-       * <code>.viam.common.v1.ResourceName component_name = 2 [json_name = "componentName"];</code>
+       * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
        */
-      public Builder clearComponentName() {  copyOnWrite();
-        instance.clearComponentName();
+      @java.lang.Deprecated public Builder clearComponentNameDeprecated() {  copyOnWrite();
+        instance.clearComponentNameDeprecated();
         return this;
       }
 
@@ -18866,6 +20624,90 @@ public final class Motion {
         return this;
       }
 
+      /**
+       * <pre>
+       * The component requested to be moved.
+       * Used for tracking &amp; stopping.
+       * NOTE: A plan may move more components than just the
+       * root component.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return The componentName.
+       */
+      @java.lang.Override
+      public java.lang.String getComponentName() {
+        return instance.getComponentName();
+      }
+      /**
+       * <pre>
+       * The component requested to be moved.
+       * Used for tracking &amp; stopping.
+       * NOTE: A plan may move more components than just the
+       * root component.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return The bytes for componentName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        return instance.getComponentNameBytes();
+      }
+      /**
+       * <pre>
+       * The component requested to be moved.
+       * Used for tracking &amp; stopping.
+       * NOTE: A plan may move more components than just the
+       * root component.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setComponentName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The component requested to be moved.
+       * Used for tracking &amp; stopping.
+       * NOTE: A plan may move more components than just the
+       * root component.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentName() {
+        copyOnWrite();
+        instance.clearComponentName();
+        return this;
+      }
+      /**
+       * <pre>
+       * The component requested to be moved.
+       * Used for tracking &amp; stopping.
+       * NOTE: A plan may move more components than just the
+       * root component.
+       * </pre>
+       *
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setComponentNameBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.service.motion.v1.Plan)
     }
     @java.lang.Override
@@ -18884,14 +20726,15 @@ public final class Motion {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
               "id_",
-              "componentName_",
+              "componentNameDeprecated_",
               "executionId_",
               "steps_",
               com.viam.service.motion.v1.Motion.PlanStep.class,
+              "componentName_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u0208\u0004\u001b";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u0208\u0004\u001b\u0005\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
