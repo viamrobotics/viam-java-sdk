@@ -23,6 +23,10 @@ public final class Billing {
      * <code>PAYMENT_METHOD_TYPE_CARD = 1;</code>
      */
     PAYMENT_METHOD_TYPE_CARD(1),
+    /**
+     * <code>PAYMENT_METHOD_TYPE_USBANKACCOUNT = 2;</code>
+     */
+    PAYMENT_METHOD_TYPE_USBANKACCOUNT(2),
     UNRECOGNIZED(-1),
     ;
 
@@ -34,6 +38,10 @@ public final class Billing {
      * <code>PAYMENT_METHOD_TYPE_CARD = 1;</code>
      */
     public static final int PAYMENT_METHOD_TYPE_CARD_VALUE = 1;
+    /**
+     * <code>PAYMENT_METHOD_TYPE_USBANKACCOUNT = 2;</code>
+     */
+    public static final int PAYMENT_METHOD_TYPE_USBANKACCOUNT_VALUE = 2;
 
 
     @java.lang.Override
@@ -59,6 +67,7 @@ public final class Billing {
       switch (value) {
         case 0: return PAYMENT_METHOD_TYPE_UNSPECIFIED;
         case 1: return PAYMENT_METHOD_TYPE_CARD;
+        case 2: return PAYMENT_METHOD_TYPE_USBANKACCOUNT;
         default: return null;
       }
     }
@@ -1681,6 +1690,1146 @@ public final class Billing {
     private static volatile com.google.protobuf.Parser<PaymentMethodCard> PARSER;
 
     public static com.google.protobuf.Parser<PaymentMethodCard> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface VerificationInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.VerificationInfo)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>int64 arrival_date = 1 [json_name = "arrivalDate"];</code>
+     * @return The arrivalDate.
+     */
+    long getArrivalDate();
+
+    /**
+     * <code>string hosted_verification_page_url = 2 [json_name = "hostedVerificationPageUrl"];</code>
+     * @return The hostedVerificationPageUrl.
+     */
+    java.lang.String getHostedVerificationPageUrl();
+    /**
+     * <code>string hosted_verification_page_url = 2 [json_name = "hostedVerificationPageUrl"];</code>
+     * @return The bytes for hostedVerificationPageUrl.
+     */
+    com.google.protobuf.ByteString
+        getHostedVerificationPageUrlBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.VerificationInfo}
+   */
+  public  static final class VerificationInfo extends
+      com.google.protobuf.GeneratedMessageLite<
+          VerificationInfo, VerificationInfo.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.VerificationInfo)
+      VerificationInfoOrBuilder {
+    private VerificationInfo() {
+      hostedVerificationPageUrl_ = "";
+    }
+    public static final int ARRIVAL_DATE_FIELD_NUMBER = 1;
+    private long arrivalDate_;
+    /**
+     * <code>int64 arrival_date = 1 [json_name = "arrivalDate"];</code>
+     * @return The arrivalDate.
+     */
+    @java.lang.Override
+    public long getArrivalDate() {
+      return arrivalDate_;
+    }
+    /**
+     * <code>int64 arrival_date = 1 [json_name = "arrivalDate"];</code>
+     * @param value The arrivalDate to set.
+     */
+    private void setArrivalDate(long value) {
+      
+      arrivalDate_ = value;
+    }
+    /**
+     * <code>int64 arrival_date = 1 [json_name = "arrivalDate"];</code>
+     */
+    private void clearArrivalDate() {
+
+      arrivalDate_ = 0L;
+    }
+
+    public static final int HOSTED_VERIFICATION_PAGE_URL_FIELD_NUMBER = 2;
+    private java.lang.String hostedVerificationPageUrl_;
+    /**
+     * <code>string hosted_verification_page_url = 2 [json_name = "hostedVerificationPageUrl"];</code>
+     * @return The hostedVerificationPageUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getHostedVerificationPageUrl() {
+      return hostedVerificationPageUrl_;
+    }
+    /**
+     * <code>string hosted_verification_page_url = 2 [json_name = "hostedVerificationPageUrl"];</code>
+     * @return The bytes for hostedVerificationPageUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostedVerificationPageUrlBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(hostedVerificationPageUrl_);
+    }
+    /**
+     * <code>string hosted_verification_page_url = 2 [json_name = "hostedVerificationPageUrl"];</code>
+     * @param value The hostedVerificationPageUrl to set.
+     */
+    private void setHostedVerificationPageUrl(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      hostedVerificationPageUrl_ = value;
+    }
+    /**
+     * <code>string hosted_verification_page_url = 2 [json_name = "hostedVerificationPageUrl"];</code>
+     */
+    private void clearHostedVerificationPageUrl() {
+
+      hostedVerificationPageUrl_ = getDefaultInstance().getHostedVerificationPageUrl();
+    }
+    /**
+     * <code>string hosted_verification_page_url = 2 [json_name = "hostedVerificationPageUrl"];</code>
+     * @param value The bytes for hostedVerificationPageUrl to set.
+     */
+    private void setHostedVerificationPageUrlBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      hostedVerificationPageUrl_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.Billing.VerificationInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.VerificationInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.VerificationInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.VerificationInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.VerificationInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.VerificationInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.VerificationInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.VerificationInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.VerificationInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.VerificationInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.VerificationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.VerificationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.VerificationInfo prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.VerificationInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.VerificationInfo, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.VerificationInfo)
+        viam.app.v1.Billing.VerificationInfoOrBuilder {
+      // Construct using viam.app.v1.Billing.VerificationInfo.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>int64 arrival_date = 1 [json_name = "arrivalDate"];</code>
+       * @return The arrivalDate.
+       */
+      @java.lang.Override
+      public long getArrivalDate() {
+        return instance.getArrivalDate();
+      }
+      /**
+       * <code>int64 arrival_date = 1 [json_name = "arrivalDate"];</code>
+       * @param value The arrivalDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArrivalDate(long value) {
+        copyOnWrite();
+        instance.setArrivalDate(value);
+        return this;
+      }
+      /**
+       * <code>int64 arrival_date = 1 [json_name = "arrivalDate"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearArrivalDate() {
+        copyOnWrite();
+        instance.clearArrivalDate();
+        return this;
+      }
+
+      /**
+       * <code>string hosted_verification_page_url = 2 [json_name = "hostedVerificationPageUrl"];</code>
+       * @return The hostedVerificationPageUrl.
+       */
+      @java.lang.Override
+      public java.lang.String getHostedVerificationPageUrl() {
+        return instance.getHostedVerificationPageUrl();
+      }
+      /**
+       * <code>string hosted_verification_page_url = 2 [json_name = "hostedVerificationPageUrl"];</code>
+       * @return The bytes for hostedVerificationPageUrl.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getHostedVerificationPageUrlBytes() {
+        return instance.getHostedVerificationPageUrlBytes();
+      }
+      /**
+       * <code>string hosted_verification_page_url = 2 [json_name = "hostedVerificationPageUrl"];</code>
+       * @param value The hostedVerificationPageUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostedVerificationPageUrl(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setHostedVerificationPageUrl(value);
+        return this;
+      }
+      /**
+       * <code>string hosted_verification_page_url = 2 [json_name = "hostedVerificationPageUrl"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHostedVerificationPageUrl() {
+        copyOnWrite();
+        instance.clearHostedVerificationPageUrl();
+        return this;
+      }
+      /**
+       * <code>string hosted_verification_page_url = 2 [json_name = "hostedVerificationPageUrl"];</code>
+       * @param value The bytes for hostedVerificationPageUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostedVerificationPageUrlBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setHostedVerificationPageUrlBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.VerificationInfo)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.VerificationInfo();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "arrivalDate_",
+              "hostedVerificationPageUrl_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0002\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.VerificationInfo> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.VerificationInfo.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.VerificationInfo>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.VerificationInfo)
+    private static final viam.app.v1.Billing.VerificationInfo DEFAULT_INSTANCE;
+    static {
+      VerificationInfo defaultInstance = new VerificationInfo();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        VerificationInfo.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.VerificationInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<VerificationInfo> PARSER;
+
+    public static com.google.protobuf.Parser<VerificationInfo> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PaymentMethodUSBankAccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.PaymentMethodUSBankAccount)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string bank_name = 1 [json_name = "bankName"];</code>
+     * @return The bankName.
+     */
+    java.lang.String getBankName();
+    /**
+     * <code>string bank_name = 1 [json_name = "bankName"];</code>
+     * @return The bytes for bankName.
+     */
+    com.google.protobuf.ByteString
+        getBankNameBytes();
+
+    /**
+     * <code>string last_four_digits_account_number = 2 [json_name = "lastFourDigitsAccountNumber"];</code>
+     * @return The lastFourDigitsAccountNumber.
+     */
+    java.lang.String getLastFourDigitsAccountNumber();
+    /**
+     * <code>string last_four_digits_account_number = 2 [json_name = "lastFourDigitsAccountNumber"];</code>
+     * @return The bytes for lastFourDigitsAccountNumber.
+     */
+    com.google.protobuf.ByteString
+        getLastFourDigitsAccountNumberBytes();
+
+    /**
+     * <code>string routing_number = 3 [json_name = "routingNumber"];</code>
+     * @return The routingNumber.
+     */
+    java.lang.String getRoutingNumber();
+    /**
+     * <code>string routing_number = 3 [json_name = "routingNumber"];</code>
+     * @return The bytes for routingNumber.
+     */
+    com.google.protobuf.ByteString
+        getRoutingNumberBytes();
+
+    /**
+     * <code>string account_type = 4 [json_name = "accountType"];</code>
+     * @return The accountType.
+     */
+    java.lang.String getAccountType();
+    /**
+     * <code>string account_type = 4 [json_name = "accountType"];</code>
+     * @return The bytes for accountType.
+     */
+    com.google.protobuf.ByteString
+        getAccountTypeBytes();
+
+    /**
+     * <pre>
+     * this is only set if the account is not verified
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.VerificationInfo verification_info = 5 [json_name = "verificationInfo"];</code>
+     * @return Whether the verificationInfo field is set.
+     */
+    boolean hasVerificationInfo();
+    /**
+     * <pre>
+     * this is only set if the account is not verified
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.VerificationInfo verification_info = 5 [json_name = "verificationInfo"];</code>
+     * @return The verificationInfo.
+     */
+    viam.app.v1.Billing.VerificationInfo getVerificationInfo();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.PaymentMethodUSBankAccount}
+   */
+  public  static final class PaymentMethodUSBankAccount extends
+      com.google.protobuf.GeneratedMessageLite<
+          PaymentMethodUSBankAccount, PaymentMethodUSBankAccount.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.PaymentMethodUSBankAccount)
+      PaymentMethodUSBankAccountOrBuilder {
+    private PaymentMethodUSBankAccount() {
+      bankName_ = "";
+      lastFourDigitsAccountNumber_ = "";
+      routingNumber_ = "";
+      accountType_ = "";
+    }
+    private int bitField0_;
+    public static final int BANK_NAME_FIELD_NUMBER = 1;
+    private java.lang.String bankName_;
+    /**
+     * <code>string bank_name = 1 [json_name = "bankName"];</code>
+     * @return The bankName.
+     */
+    @java.lang.Override
+    public java.lang.String getBankName() {
+      return bankName_;
+    }
+    /**
+     * <code>string bank_name = 1 [json_name = "bankName"];</code>
+     * @return The bytes for bankName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBankNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(bankName_);
+    }
+    /**
+     * <code>string bank_name = 1 [json_name = "bankName"];</code>
+     * @param value The bankName to set.
+     */
+    private void setBankName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      bankName_ = value;
+    }
+    /**
+     * <code>string bank_name = 1 [json_name = "bankName"];</code>
+     */
+    private void clearBankName() {
+
+      bankName_ = getDefaultInstance().getBankName();
+    }
+    /**
+     * <code>string bank_name = 1 [json_name = "bankName"];</code>
+     * @param value The bytes for bankName to set.
+     */
+    private void setBankNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      bankName_ = value.toStringUtf8();
+
+    }
+
+    public static final int LAST_FOUR_DIGITS_ACCOUNT_NUMBER_FIELD_NUMBER = 2;
+    private java.lang.String lastFourDigitsAccountNumber_;
+    /**
+     * <code>string last_four_digits_account_number = 2 [json_name = "lastFourDigitsAccountNumber"];</code>
+     * @return The lastFourDigitsAccountNumber.
+     */
+    @java.lang.Override
+    public java.lang.String getLastFourDigitsAccountNumber() {
+      return lastFourDigitsAccountNumber_;
+    }
+    /**
+     * <code>string last_four_digits_account_number = 2 [json_name = "lastFourDigitsAccountNumber"];</code>
+     * @return The bytes for lastFourDigitsAccountNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLastFourDigitsAccountNumberBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(lastFourDigitsAccountNumber_);
+    }
+    /**
+     * <code>string last_four_digits_account_number = 2 [json_name = "lastFourDigitsAccountNumber"];</code>
+     * @param value The lastFourDigitsAccountNumber to set.
+     */
+    private void setLastFourDigitsAccountNumber(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      lastFourDigitsAccountNumber_ = value;
+    }
+    /**
+     * <code>string last_four_digits_account_number = 2 [json_name = "lastFourDigitsAccountNumber"];</code>
+     */
+    private void clearLastFourDigitsAccountNumber() {
+
+      lastFourDigitsAccountNumber_ = getDefaultInstance().getLastFourDigitsAccountNumber();
+    }
+    /**
+     * <code>string last_four_digits_account_number = 2 [json_name = "lastFourDigitsAccountNumber"];</code>
+     * @param value The bytes for lastFourDigitsAccountNumber to set.
+     */
+    private void setLastFourDigitsAccountNumberBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      lastFourDigitsAccountNumber_ = value.toStringUtf8();
+
+    }
+
+    public static final int ROUTING_NUMBER_FIELD_NUMBER = 3;
+    private java.lang.String routingNumber_;
+    /**
+     * <code>string routing_number = 3 [json_name = "routingNumber"];</code>
+     * @return The routingNumber.
+     */
+    @java.lang.Override
+    public java.lang.String getRoutingNumber() {
+      return routingNumber_;
+    }
+    /**
+     * <code>string routing_number = 3 [json_name = "routingNumber"];</code>
+     * @return The bytes for routingNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRoutingNumberBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(routingNumber_);
+    }
+    /**
+     * <code>string routing_number = 3 [json_name = "routingNumber"];</code>
+     * @param value The routingNumber to set.
+     */
+    private void setRoutingNumber(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      routingNumber_ = value;
+    }
+    /**
+     * <code>string routing_number = 3 [json_name = "routingNumber"];</code>
+     */
+    private void clearRoutingNumber() {
+
+      routingNumber_ = getDefaultInstance().getRoutingNumber();
+    }
+    /**
+     * <code>string routing_number = 3 [json_name = "routingNumber"];</code>
+     * @param value The bytes for routingNumber to set.
+     */
+    private void setRoutingNumberBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      routingNumber_ = value.toStringUtf8();
+
+    }
+
+    public static final int ACCOUNT_TYPE_FIELD_NUMBER = 4;
+    private java.lang.String accountType_;
+    /**
+     * <code>string account_type = 4 [json_name = "accountType"];</code>
+     * @return The accountType.
+     */
+    @java.lang.Override
+    public java.lang.String getAccountType() {
+      return accountType_;
+    }
+    /**
+     * <code>string account_type = 4 [json_name = "accountType"];</code>
+     * @return The bytes for accountType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountTypeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(accountType_);
+    }
+    /**
+     * <code>string account_type = 4 [json_name = "accountType"];</code>
+     * @param value The accountType to set.
+     */
+    private void setAccountType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      accountType_ = value;
+    }
+    /**
+     * <code>string account_type = 4 [json_name = "accountType"];</code>
+     */
+    private void clearAccountType() {
+
+      accountType_ = getDefaultInstance().getAccountType();
+    }
+    /**
+     * <code>string account_type = 4 [json_name = "accountType"];</code>
+     * @param value The bytes for accountType to set.
+     */
+    private void setAccountTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      accountType_ = value.toStringUtf8();
+
+    }
+
+    public static final int VERIFICATION_INFO_FIELD_NUMBER = 5;
+    private viam.app.v1.Billing.VerificationInfo verificationInfo_;
+    /**
+     * <pre>
+     * this is only set if the account is not verified
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.VerificationInfo verification_info = 5 [json_name = "verificationInfo"];</code>
+     */
+    @java.lang.Override
+    public boolean hasVerificationInfo() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * this is only set if the account is not verified
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.VerificationInfo verification_info = 5 [json_name = "verificationInfo"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Billing.VerificationInfo getVerificationInfo() {
+      return verificationInfo_ == null ? viam.app.v1.Billing.VerificationInfo.getDefaultInstance() : verificationInfo_;
+    }
+    /**
+     * <pre>
+     * this is only set if the account is not verified
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.VerificationInfo verification_info = 5 [json_name = "verificationInfo"];</code>
+     */
+    private void setVerificationInfo(viam.app.v1.Billing.VerificationInfo value) {
+      value.getClass();
+  verificationInfo_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * this is only set if the account is not verified
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.VerificationInfo verification_info = 5 [json_name = "verificationInfo"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeVerificationInfo(viam.app.v1.Billing.VerificationInfo value) {
+      value.getClass();
+  if (verificationInfo_ != null &&
+          verificationInfo_ != viam.app.v1.Billing.VerificationInfo.getDefaultInstance()) {
+        verificationInfo_ =
+          viam.app.v1.Billing.VerificationInfo.newBuilder(verificationInfo_).mergeFrom(value).buildPartial();
+      } else {
+        verificationInfo_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * this is only set if the account is not verified
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.VerificationInfo verification_info = 5 [json_name = "verificationInfo"];</code>
+     */
+    private void clearVerificationInfo() {  verificationInfo_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.v1.Billing.PaymentMethodUSBankAccount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.PaymentMethodUSBankAccount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.PaymentMethodUSBankAccount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.PaymentMethodUSBankAccount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.PaymentMethodUSBankAccount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.PaymentMethodUSBankAccount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.PaymentMethodUSBankAccount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.PaymentMethodUSBankAccount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.PaymentMethodUSBankAccount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.PaymentMethodUSBankAccount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.PaymentMethodUSBankAccount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.PaymentMethodUSBankAccount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.PaymentMethodUSBankAccount prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.PaymentMethodUSBankAccount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.PaymentMethodUSBankAccount, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.PaymentMethodUSBankAccount)
+        viam.app.v1.Billing.PaymentMethodUSBankAccountOrBuilder {
+      // Construct using viam.app.v1.Billing.PaymentMethodUSBankAccount.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string bank_name = 1 [json_name = "bankName"];</code>
+       * @return The bankName.
+       */
+      @java.lang.Override
+      public java.lang.String getBankName() {
+        return instance.getBankName();
+      }
+      /**
+       * <code>string bank_name = 1 [json_name = "bankName"];</code>
+       * @return The bytes for bankName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBankNameBytes() {
+        return instance.getBankNameBytes();
+      }
+      /**
+       * <code>string bank_name = 1 [json_name = "bankName"];</code>
+       * @param value The bankName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBankName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBankName(value);
+        return this;
+      }
+      /**
+       * <code>string bank_name = 1 [json_name = "bankName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBankName() {
+        copyOnWrite();
+        instance.clearBankName();
+        return this;
+      }
+      /**
+       * <code>string bank_name = 1 [json_name = "bankName"];</code>
+       * @param value The bytes for bankName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBankNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBankNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string last_four_digits_account_number = 2 [json_name = "lastFourDigitsAccountNumber"];</code>
+       * @return The lastFourDigitsAccountNumber.
+       */
+      @java.lang.Override
+      public java.lang.String getLastFourDigitsAccountNumber() {
+        return instance.getLastFourDigitsAccountNumber();
+      }
+      /**
+       * <code>string last_four_digits_account_number = 2 [json_name = "lastFourDigitsAccountNumber"];</code>
+       * @return The bytes for lastFourDigitsAccountNumber.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLastFourDigitsAccountNumberBytes() {
+        return instance.getLastFourDigitsAccountNumberBytes();
+      }
+      /**
+       * <code>string last_four_digits_account_number = 2 [json_name = "lastFourDigitsAccountNumber"];</code>
+       * @param value The lastFourDigitsAccountNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastFourDigitsAccountNumber(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setLastFourDigitsAccountNumber(value);
+        return this;
+      }
+      /**
+       * <code>string last_four_digits_account_number = 2 [json_name = "lastFourDigitsAccountNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastFourDigitsAccountNumber() {
+        copyOnWrite();
+        instance.clearLastFourDigitsAccountNumber();
+        return this;
+      }
+      /**
+       * <code>string last_four_digits_account_number = 2 [json_name = "lastFourDigitsAccountNumber"];</code>
+       * @param value The bytes for lastFourDigitsAccountNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastFourDigitsAccountNumberBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setLastFourDigitsAccountNumberBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string routing_number = 3 [json_name = "routingNumber"];</code>
+       * @return The routingNumber.
+       */
+      @java.lang.Override
+      public java.lang.String getRoutingNumber() {
+        return instance.getRoutingNumber();
+      }
+      /**
+       * <code>string routing_number = 3 [json_name = "routingNumber"];</code>
+       * @return The bytes for routingNumber.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRoutingNumberBytes() {
+        return instance.getRoutingNumberBytes();
+      }
+      /**
+       * <code>string routing_number = 3 [json_name = "routingNumber"];</code>
+       * @param value The routingNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoutingNumber(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRoutingNumber(value);
+        return this;
+      }
+      /**
+       * <code>string routing_number = 3 [json_name = "routingNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoutingNumber() {
+        copyOnWrite();
+        instance.clearRoutingNumber();
+        return this;
+      }
+      /**
+       * <code>string routing_number = 3 [json_name = "routingNumber"];</code>
+       * @param value The bytes for routingNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoutingNumberBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRoutingNumberBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string account_type = 4 [json_name = "accountType"];</code>
+       * @return The accountType.
+       */
+      @java.lang.Override
+      public java.lang.String getAccountType() {
+        return instance.getAccountType();
+      }
+      /**
+       * <code>string account_type = 4 [json_name = "accountType"];</code>
+       * @return The bytes for accountType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAccountTypeBytes() {
+        return instance.getAccountTypeBytes();
+      }
+      /**
+       * <code>string account_type = 4 [json_name = "accountType"];</code>
+       * @param value The accountType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountType(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setAccountType(value);
+        return this;
+      }
+      /**
+       * <code>string account_type = 4 [json_name = "accountType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccountType() {
+        copyOnWrite();
+        instance.clearAccountType();
+        return this;
+      }
+      /**
+       * <code>string account_type = 4 [json_name = "accountType"];</code>
+       * @param value The bytes for accountType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountTypeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setAccountTypeBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * this is only set if the account is not verified
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.VerificationInfo verification_info = 5 [json_name = "verificationInfo"];</code>
+       */
+      @java.lang.Override
+      public boolean hasVerificationInfo() {
+        return instance.hasVerificationInfo();
+      }
+      /**
+       * <pre>
+       * this is only set if the account is not verified
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.VerificationInfo verification_info = 5 [json_name = "verificationInfo"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Billing.VerificationInfo getVerificationInfo() {
+        return instance.getVerificationInfo();
+      }
+      /**
+       * <pre>
+       * this is only set if the account is not verified
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.VerificationInfo verification_info = 5 [json_name = "verificationInfo"];</code>
+       */
+      public Builder setVerificationInfo(viam.app.v1.Billing.VerificationInfo value) {
+        copyOnWrite();
+        instance.setVerificationInfo(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * this is only set if the account is not verified
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.VerificationInfo verification_info = 5 [json_name = "verificationInfo"];</code>
+       */
+      public Builder setVerificationInfo(
+          viam.app.v1.Billing.VerificationInfo.Builder builderForValue) {
+        copyOnWrite();
+        instance.setVerificationInfo(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * this is only set if the account is not verified
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.VerificationInfo verification_info = 5 [json_name = "verificationInfo"];</code>
+       */
+      public Builder mergeVerificationInfo(viam.app.v1.Billing.VerificationInfo value) {
+        copyOnWrite();
+        instance.mergeVerificationInfo(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * this is only set if the account is not verified
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.VerificationInfo verification_info = 5 [json_name = "verificationInfo"];</code>
+       */
+      public Builder clearVerificationInfo() {  copyOnWrite();
+        instance.clearVerificationInfo();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.PaymentMethodUSBankAccount)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.PaymentMethodUSBankAccount();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "bankName_",
+              "lastFourDigitsAccountNumber_",
+              "routingNumber_",
+              "accountType_",
+              "verificationInfo_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.PaymentMethodUSBankAccount> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.PaymentMethodUSBankAccount.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.PaymentMethodUSBankAccount>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.PaymentMethodUSBankAccount)
+    private static final viam.app.v1.Billing.PaymentMethodUSBankAccount DEFAULT_INSTANCE;
+    static {
+      PaymentMethodUSBankAccount defaultInstance = new PaymentMethodUSBankAccount();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PaymentMethodUSBankAccount.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.PaymentMethodUSBankAccount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PaymentMethodUSBankAccount> PARSER;
+
+    public static com.google.protobuf.Parser<PaymentMethodUSBankAccount> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -3461,7 +4610,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=109
+     *     See app/v1/billing.proto;l=123
      * @return The cloudStorageUsageCost.
      */
     @java.lang.Deprecated double getCloudStorageUsageCost();
@@ -3469,7 +4618,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=110
+     *     See app/v1/billing.proto;l=124
      * @return The dataUploadUsageCost.
      */
     @java.lang.Deprecated double getDataUploadUsageCost();
@@ -3477,7 +4626,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=111
+     *     See app/v1/billing.proto;l=125
      * @return The dataEgresUsageCost.
      */
     @java.lang.Deprecated double getDataEgresUsageCost();
@@ -3485,7 +4634,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=112
+     *     See app/v1/billing.proto;l=126
      * @return The remoteControlUsageCost.
      */
     @java.lang.Deprecated double getRemoteControlUsageCost();
@@ -3493,7 +4642,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=113
+     *     See app/v1/billing.proto;l=127
      * @return The standardComputeUsageCost.
      */
     @java.lang.Deprecated double getStandardComputeUsageCost();
@@ -3501,7 +4650,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=114
+     *     See app/v1/billing.proto;l=128
      * @return The discountAmount.
      */
     @java.lang.Deprecated double getDiscountAmount();
@@ -3509,7 +4658,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=115
+     *     See app/v1/billing.proto;l=129
      * @return The totalUsageWithDiscount.
      */
     @java.lang.Deprecated double getTotalUsageWithDiscount();
@@ -3517,7 +4666,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=116
+     *     See app/v1/billing.proto;l=130
      * @return The totalUsageWithoutDiscount.
      */
     @java.lang.Deprecated double getTotalUsageWithoutDiscount();
@@ -3525,7 +4674,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=117
+     *     See app/v1/billing.proto;l=131
      * @return The perMachineUsageCost.
      */
     @java.lang.Deprecated double getPerMachineUsageCost();
@@ -3533,7 +4682,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=118
+     *     See app/v1/billing.proto;l=132
      * @return The binaryDataCloudStorageUsageCost.
      */
     @java.lang.Deprecated double getBinaryDataCloudStorageUsageCost();
@@ -3541,7 +4690,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=119
+     *     See app/v1/billing.proto;l=133
      * @return The otherCloudStorageUsageCost.
      */
     @java.lang.Deprecated double getOtherCloudStorageUsageCost();
@@ -3779,7 +4928,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=109
+     *     See app/v1/billing.proto;l=123
      * @return The cloudStorageUsageCost.
      */
     @java.lang.Override
@@ -3793,7 +4942,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=109
+     *     See app/v1/billing.proto;l=123
      * @param value The cloudStorageUsageCost to set.
      */
     private void setCloudStorageUsageCost(double value) {
@@ -3807,7 +4956,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=109
+     *     See app/v1/billing.proto;l=123
      */
     private void clearCloudStorageUsageCost() {
 
@@ -3819,7 +4968,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=110
+     *     See app/v1/billing.proto;l=124
      * @return The dataUploadUsageCost.
      */
     @java.lang.Override
@@ -3829,7 +4978,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=110
+     *     See app/v1/billing.proto;l=124
      * @param value The dataUploadUsageCost to set.
      */
     private void setDataUploadUsageCost(double value) {
@@ -3839,7 +4988,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=110
+     *     See app/v1/billing.proto;l=124
      */
     private void clearDataUploadUsageCost() {
 
@@ -3851,7 +5000,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=111
+     *     See app/v1/billing.proto;l=125
      * @return The dataEgresUsageCost.
      */
     @java.lang.Override
@@ -3861,7 +5010,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=111
+     *     See app/v1/billing.proto;l=125
      * @param value The dataEgresUsageCost to set.
      */
     private void setDataEgresUsageCost(double value) {
@@ -3871,7 +5020,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=111
+     *     See app/v1/billing.proto;l=125
      */
     private void clearDataEgresUsageCost() {
 
@@ -3883,7 +5032,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=112
+     *     See app/v1/billing.proto;l=126
      * @return The remoteControlUsageCost.
      */
     @java.lang.Override
@@ -3893,7 +5042,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=112
+     *     See app/v1/billing.proto;l=126
      * @param value The remoteControlUsageCost to set.
      */
     private void setRemoteControlUsageCost(double value) {
@@ -3903,7 +5052,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=112
+     *     See app/v1/billing.proto;l=126
      */
     private void clearRemoteControlUsageCost() {
 
@@ -3915,7 +5064,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=113
+     *     See app/v1/billing.proto;l=127
      * @return The standardComputeUsageCost.
      */
     @java.lang.Override
@@ -3925,7 +5074,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=113
+     *     See app/v1/billing.proto;l=127
      * @param value The standardComputeUsageCost to set.
      */
     private void setStandardComputeUsageCost(double value) {
@@ -3935,7 +5084,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=113
+     *     See app/v1/billing.proto;l=127
      */
     private void clearStandardComputeUsageCost() {
 
@@ -3947,7 +5096,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=114
+     *     See app/v1/billing.proto;l=128
      * @return The discountAmount.
      */
     @java.lang.Override
@@ -3957,7 +5106,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=114
+     *     See app/v1/billing.proto;l=128
      * @param value The discountAmount to set.
      */
     private void setDiscountAmount(double value) {
@@ -3967,7 +5116,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=114
+     *     See app/v1/billing.proto;l=128
      */
     private void clearDiscountAmount() {
 
@@ -3979,7 +5128,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=115
+     *     See app/v1/billing.proto;l=129
      * @return The totalUsageWithDiscount.
      */
     @java.lang.Override
@@ -3989,7 +5138,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=115
+     *     See app/v1/billing.proto;l=129
      * @param value The totalUsageWithDiscount to set.
      */
     private void setTotalUsageWithDiscount(double value) {
@@ -3999,7 +5148,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=115
+     *     See app/v1/billing.proto;l=129
      */
     private void clearTotalUsageWithDiscount() {
 
@@ -4011,7 +5160,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=116
+     *     See app/v1/billing.proto;l=130
      * @return The totalUsageWithoutDiscount.
      */
     @java.lang.Override
@@ -4021,7 +5170,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=116
+     *     See app/v1/billing.proto;l=130
      * @param value The totalUsageWithoutDiscount to set.
      */
     private void setTotalUsageWithoutDiscount(double value) {
@@ -4031,7 +5180,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=116
+     *     See app/v1/billing.proto;l=130
      */
     private void clearTotalUsageWithoutDiscount() {
 
@@ -4043,7 +5192,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=117
+     *     See app/v1/billing.proto;l=131
      * @return The perMachineUsageCost.
      */
     @java.lang.Override
@@ -4053,7 +5202,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=117
+     *     See app/v1/billing.proto;l=131
      * @param value The perMachineUsageCost to set.
      */
     private void setPerMachineUsageCost(double value) {
@@ -4063,7 +5212,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=117
+     *     See app/v1/billing.proto;l=131
      */
     private void clearPerMachineUsageCost() {
 
@@ -4075,7 +5224,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=118
+     *     See app/v1/billing.proto;l=132
      * @return The binaryDataCloudStorageUsageCost.
      */
     @java.lang.Override
@@ -4085,7 +5234,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=118
+     *     See app/v1/billing.proto;l=132
      * @param value The binaryDataCloudStorageUsageCost to set.
      */
     private void setBinaryDataCloudStorageUsageCost(double value) {
@@ -4095,7 +5244,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=118
+     *     See app/v1/billing.proto;l=132
      */
     private void clearBinaryDataCloudStorageUsageCost() {
 
@@ -4107,7 +5256,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=119
+     *     See app/v1/billing.proto;l=133
      * @return The otherCloudStorageUsageCost.
      */
     @java.lang.Override
@@ -4117,7 +5266,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=119
+     *     See app/v1/billing.proto;l=133
      * @param value The otherCloudStorageUsageCost to set.
      */
     private void setOtherCloudStorageUsageCost(double value) {
@@ -4127,7 +5276,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=119
+     *     See app/v1/billing.proto;l=133
      */
     private void clearOtherCloudStorageUsageCost() {
 
@@ -4462,7 +5611,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=109
+       *     See app/v1/billing.proto;l=123
        * @return The cloudStorageUsageCost.
        */
       @java.lang.Override
@@ -4476,7 +5625,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=109
+       *     See app/v1/billing.proto;l=123
        * @param value The cloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4492,7 +5641,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=109
+       *     See app/v1/billing.proto;l=123
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearCloudStorageUsageCost() {
@@ -4504,7 +5653,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=110
+       *     See app/v1/billing.proto;l=124
        * @return The dataUploadUsageCost.
        */
       @java.lang.Override
@@ -4514,7 +5663,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=110
+       *     See app/v1/billing.proto;l=124
        * @param value The dataUploadUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4526,7 +5675,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=110
+       *     See app/v1/billing.proto;l=124
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDataUploadUsageCost() {
@@ -4538,7 +5687,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=111
+       *     See app/v1/billing.proto;l=125
        * @return The dataEgresUsageCost.
        */
       @java.lang.Override
@@ -4548,7 +5697,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=111
+       *     See app/v1/billing.proto;l=125
        * @param value The dataEgresUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4560,7 +5709,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=111
+       *     See app/v1/billing.proto;l=125
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDataEgresUsageCost() {
@@ -4572,7 +5721,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=112
+       *     See app/v1/billing.proto;l=126
        * @return The remoteControlUsageCost.
        */
       @java.lang.Override
@@ -4582,7 +5731,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=112
+       *     See app/v1/billing.proto;l=126
        * @param value The remoteControlUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4594,7 +5743,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=112
+       *     See app/v1/billing.proto;l=126
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearRemoteControlUsageCost() {
@@ -4606,7 +5755,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=113
+       *     See app/v1/billing.proto;l=127
        * @return The standardComputeUsageCost.
        */
       @java.lang.Override
@@ -4616,7 +5765,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=113
+       *     See app/v1/billing.proto;l=127
        * @param value The standardComputeUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4628,7 +5777,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=113
+       *     See app/v1/billing.proto;l=127
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearStandardComputeUsageCost() {
@@ -4640,7 +5789,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=114
+       *     See app/v1/billing.proto;l=128
        * @return The discountAmount.
        */
       @java.lang.Override
@@ -4650,7 +5799,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=114
+       *     See app/v1/billing.proto;l=128
        * @param value The discountAmount to set.
        * @return This builder for chaining.
        */
@@ -4662,7 +5811,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=114
+       *     See app/v1/billing.proto;l=128
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDiscountAmount() {
@@ -4674,7 +5823,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=115
+       *     See app/v1/billing.proto;l=129
        * @return The totalUsageWithDiscount.
        */
       @java.lang.Override
@@ -4684,7 +5833,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=115
+       *     See app/v1/billing.proto;l=129
        * @param value The totalUsageWithDiscount to set.
        * @return This builder for chaining.
        */
@@ -4696,7 +5845,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=115
+       *     See app/v1/billing.proto;l=129
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalUsageWithDiscount() {
@@ -4708,7 +5857,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=116
+       *     See app/v1/billing.proto;l=130
        * @return The totalUsageWithoutDiscount.
        */
       @java.lang.Override
@@ -4718,7 +5867,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=116
+       *     See app/v1/billing.proto;l=130
        * @param value The totalUsageWithoutDiscount to set.
        * @return This builder for chaining.
        */
@@ -4730,7 +5879,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=116
+       *     See app/v1/billing.proto;l=130
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalUsageWithoutDiscount() {
@@ -4742,7 +5891,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=117
+       *     See app/v1/billing.proto;l=131
        * @return The perMachineUsageCost.
        */
       @java.lang.Override
@@ -4752,7 +5901,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=117
+       *     See app/v1/billing.proto;l=131
        * @param value The perMachineUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4764,7 +5913,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=117
+       *     See app/v1/billing.proto;l=131
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearPerMachineUsageCost() {
@@ -4776,7 +5925,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=118
+       *     See app/v1/billing.proto;l=132
        * @return The binaryDataCloudStorageUsageCost.
        */
       @java.lang.Override
@@ -4786,7 +5935,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=118
+       *     See app/v1/billing.proto;l=132
        * @param value The binaryDataCloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4798,7 +5947,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=118
+       *     See app/v1/billing.proto;l=132
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearBinaryDataCloudStorageUsageCost() {
@@ -4810,7 +5959,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=119
+       *     See app/v1/billing.proto;l=133
        * @return The otherCloudStorageUsageCost.
        */
       @java.lang.Override
@@ -4820,7 +5969,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=119
+       *     See app/v1/billing.proto;l=133
        * @param value The otherCloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -4832,7 +5981,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=119
+       *     See app/v1/billing.proto;l=133
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearOtherCloudStorageUsageCost() {
@@ -5301,6 +6450,25 @@ public final class Billing {
      */
     com.google.protobuf.ByteString
         getBillingTierBytes();
+
+    /**
+     * <pre>
+     * defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code>
+     * @return Whether the methodUsBankAccount field is set.
+     */
+    boolean hasMethodUsBankAccount();
+    /**
+     * <pre>
+     * defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code>
+     * @return The methodUsBankAccount.
+     */
+    viam.app.v1.Billing.PaymentMethodUSBankAccount getMethodUsBankAccount();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetOrgBillingInformationResponse}
@@ -5547,6 +6715,72 @@ public final class Billing {
       checkByteStringIsUtf8(value);
       billingTier_ = value.toStringUtf8();
       bitField0_ |= 0x00000002;
+    }
+
+    public static final int METHOD_US_BANK_ACCOUNT_FIELD_NUMBER = 5;
+    private viam.app.v1.Billing.PaymentMethodUSBankAccount methodUsBankAccount_;
+    /**
+     * <pre>
+     * defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code>
+     */
+    @java.lang.Override
+    public boolean hasMethodUsBankAccount() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Billing.PaymentMethodUSBankAccount getMethodUsBankAccount() {
+      return methodUsBankAccount_ == null ? viam.app.v1.Billing.PaymentMethodUSBankAccount.getDefaultInstance() : methodUsBankAccount_;
+    }
+    /**
+     * <pre>
+     * defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code>
+     */
+    private void setMethodUsBankAccount(viam.app.v1.Billing.PaymentMethodUSBankAccount value) {
+      value.getClass();
+  methodUsBankAccount_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <pre>
+     * defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMethodUsBankAccount(viam.app.v1.Billing.PaymentMethodUSBankAccount value) {
+      value.getClass();
+  if (methodUsBankAccount_ != null &&
+          methodUsBankAccount_ != viam.app.v1.Billing.PaymentMethodUSBankAccount.getDefaultInstance()) {
+        methodUsBankAccount_ =
+          viam.app.v1.Billing.PaymentMethodUSBankAccount.newBuilder(methodUsBankAccount_).mergeFrom(value).buildPartial();
+      } else {
+        methodUsBankAccount_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code>
+     */
+    private void clearMethodUsBankAccount() {  methodUsBankAccount_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse parseFrom(
@@ -5893,6 +7127,77 @@ public final class Billing {
         return this;
       }
 
+      /**
+       * <pre>
+       * defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code>
+       */
+      @java.lang.Override
+      public boolean hasMethodUsBankAccount() {
+        return instance.hasMethodUsBankAccount();
+      }
+      /**
+       * <pre>
+       * defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Billing.PaymentMethodUSBankAccount getMethodUsBankAccount() {
+        return instance.getMethodUsBankAccount();
+      }
+      /**
+       * <pre>
+       * defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code>
+       */
+      public Builder setMethodUsBankAccount(viam.app.v1.Billing.PaymentMethodUSBankAccount value) {
+        copyOnWrite();
+        instance.setMethodUsBankAccount(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code>
+       */
+      public Builder setMethodUsBankAccount(
+          viam.app.v1.Billing.PaymentMethodUSBankAccount.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMethodUsBankAccount(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code>
+       */
+      public Builder mergeMethodUsBankAccount(viam.app.v1.Billing.PaymentMethodUSBankAccount value) {
+        copyOnWrite();
+        instance.mergeMethodUsBankAccount(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code>
+       */
+      public Builder clearMethodUsBankAccount() {  copyOnWrite();
+        instance.clearMethodUsBankAccount();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetOrgBillingInformationResponse)
     }
     @java.lang.Override
@@ -5914,10 +7219,11 @@ public final class Billing {
               "billingEmail_",
               "method_",
               "billingTier_",
+              "methodUsBankAccount_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\f\u0002\u0208" +
-                "\u0003\u1009\u0000\u0004\u1208\u0001";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\f\u0002\u0208" +
+                "\u0003\u1009\u0000\u0004\u1208\u0001\u0005\u1009\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
