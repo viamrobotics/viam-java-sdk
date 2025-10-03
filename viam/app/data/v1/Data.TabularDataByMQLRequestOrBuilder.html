@@ -138,6 +138,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getQueryPrefixName()" class="member-name-link">getQueryPrefixName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ query_prefix_name is an optional field that can be used to specify a saved query to run</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getQueryPrefixNameBytes()" class="member-name-link">getQueryPrefixNameBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ query_prefix_name is an optional field that can be used to specify a saved query to run</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUseRecentData()" class="member-name-link">getUseRecentData</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -151,8 +163,14 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  data_source is an optional field that can be used to specify the data source for the query.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasUseRecentData()" class="member-name-link">hasUseRecentData</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasQueryPrefixName()" class="member-name-link">hasQueryPrefixName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ query_prefix_name is an optional field that can be used to specify a saved query to run</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasUseRecentData()" class="member-name-link">hasUseRecentData</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.</div>
 </div>
@@ -307,6 +325,51 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The dataSource.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasQueryPrefixName()">
+<h3>hasQueryPrefixName</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasQueryPrefixName</span>()</div>
+<div class="block"><pre>
+ query_prefix_name is an optional field that can be used to specify a saved query to run
+ </pre>
+
+ <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the queryPrefixName field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getQueryPrefixName()">
+<h3>getQueryPrefixName</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getQueryPrefixName</span>()</div>
+<div class="block"><pre>
+ query_prefix_name is an optional field that can be used to specify a saved query to run
+ </pre>
+
+ <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The queryPrefixName.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getQueryPrefixNameBytes()">
+<h3>getQueryPrefixNameBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getQueryPrefixNameBytes</span>()</div>
+<div class="block"><pre>
+ query_prefix_name is an optional field that can be used to specify a saved query to run
+ </pre>
+
+ <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for queryPrefixName.</dd>
 </dl>
 </section>
 </li>

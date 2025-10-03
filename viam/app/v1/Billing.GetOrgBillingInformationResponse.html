@@ -137,8 +137,11 @@ implements <a href="Billing.GetOrgBillingInformationResponseOrBuilder.html" titl
 <div class="col-second even-row-color"><code><a href="#METHOD_FIELD_NUMBER" class="member-name-link">METHOD_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#TYPE_FIELD_NUMBER" class="member-name-link">TYPE_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#METHOD_US_BANK_ACCOUNT_FIELD_NUMBER" class="member-name-link">METHOD_US_BANK_ACCOUNT_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#TYPE_FIELD_NUMBER" class="member-name-link">TYPE_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -195,27 +198,39 @@ implements <a href="Billing.GetOrgBillingInformationResponseOrBuilder.html" titl
 <div class="block">
  defined if type is PAYMENT_METHOD_TYPE_CARD</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.PaymentMethodType.html" title="enum class in viam.app.v1">Billing.PaymentMethodType</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.PaymentMethodUSBankAccount.html" title="class in viam.app.v1">Billing.PaymentMethodUSBankAccount</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodUsBankAccount()" class="member-name-link">getMethodUsBankAccount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.v1.PaymentMethodType type = 1 [json_name = "type"];</code></div>
+<div class="block">
+ defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypeValue()" class="member-name-link">getTypeValue</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.PaymentMethodType.html" title="enum class in viam.app.v1">Billing.PaymentMethodType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.v1.PaymentMethodType type = 1 [json_name = "type"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasBillingTier()" class="member-name-link">hasBillingTier</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypeValue()" class="member-name-link">getTypeValue</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.PaymentMethodType type = 1 [json_name = "type"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasBillingTier()" class="member-name-link">hasBillingTier</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Only return billing_tier for billing dashboard admin users</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMethod()" class="member-name-link">hasMethod</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMethod()" class="member-name-link">hasMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  defined if type is PAYMENT_METHOD_TYPE_CARD</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMethodUsBankAccount()" class="member-name-link">hasMethodUsBankAccount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Billing.GetOrgBillingInformationResponse.Builder.html" title="class in viam.app.v1">Billing.GetOrgBillingInformationResponse.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -345,6 +360,20 @@ implements <a href="Billing.GetOrgBillingInformationResponseOrBuilder.html" titl
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#viam.app.v1.Billing.GetOrgBillingInformationResponse.BILLING_TIER_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="METHOD_US_BANK_ACCOUNT_FIELD_NUMBER">
+<h3>METHOD_US_BANK_ACCOUNT_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">METHOD_US_BANK_ACCOUNT_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.Billing.GetOrgBillingInformationResponse.METHOD_US_BANK_ACCOUNT_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -492,6 +521,40 @@ implements <a href="Billing.GetOrgBillingInformationResponseOrBuilder.html" titl
 <dd><code><a href="Billing.GetOrgBillingInformationResponseOrBuilder.html#getBillingTierBytes()">getBillingTierBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetOrgBillingInformationResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetOrgBillingInformationResponseOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for billingTier.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasMethodUsBankAccount()">
+<h3>hasMethodUsBankAccount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMethodUsBankAccount</span>()</div>
+<div class="block"><pre>
+ defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+ </pre>
+
+ <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Billing.GetOrgBillingInformationResponseOrBuilder.html#hasMethodUsBankAccount()">hasMethodUsBankAccount</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetOrgBillingInformationResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetOrgBillingInformationResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the methodUsBankAccount field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMethodUsBankAccount()">
+<h3>getMethodUsBankAccount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Billing.PaymentMethodUSBankAccount.html" title="class in viam.app.v1">Billing.PaymentMethodUSBankAccount</a></span>&nbsp;<span class="element-name">getMethodUsBankAccount</span>()</div>
+<div class="block"><pre>
+ defined if type is PAYMENT_METHOD_TYPE_USBANKACCOUNT
+ </pre>
+
+ <code>optional .viam.app.v1.PaymentMethodUSBankAccount method_us_bank_account = 5 [json_name = "methodUsBankAccount"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Billing.GetOrgBillingInformationResponseOrBuilder.html#getMethodUsBankAccount()">getMethodUsBankAccount</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.GetOrgBillingInformationResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetOrgBillingInformationResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The methodUsBankAccount.</dd>
 </dl>
 </section>
 </li>

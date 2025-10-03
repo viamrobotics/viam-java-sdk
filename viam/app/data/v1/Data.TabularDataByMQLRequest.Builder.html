@@ -152,59 +152,83 @@ implements <a href="Data.TabularDataByMQLRequestOrBuilder.html" title="interface
 <div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearUseRecentData()" class="member-name-link">clearUseRecentData</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearQueryPrefixName()" class="member-name-link">clearQueryPrefixName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ query_prefix_name is an optional field that can be used to specify a saved query to run</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearUseRecentData()" class="member-name-link">clearUseRecentData</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataSource.html" title="class in viam.app.data.v1">Data.TabularDataSource</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDataSource()" class="member-name-link">getDataSource</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataSource.html" title="class in viam.app.data.v1">Data.TabularDataSource</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDataSource()" class="member-name-link">getDataSource</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  data_source is an optional field that can be used to specify the data source for the query.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinary(int)" class="member-name-link">getMqlBinary</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- mql_binary accepts a MongoDB aggregation pipeline as a list of BSON documents, where each
- document is one stage in the pipeline.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinaryCount()" class="member-name-link">getMqlBinaryCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinary(int)" class="member-name-link">getMqlBinary</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  mql_binary accepts a MongoDB aggregation pipeline as a list of BSON documents, where each
  document is one stage in the pipeline.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.google.protobuf.ByteString&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinaryList()" class="member-name-link">getMqlBinaryList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinaryCount()" class="member-name-link">getMqlBinaryCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  mql_binary accepts a MongoDB aggregation pipeline as a list of BSON documents, where each
  document is one stage in the pipeline.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;com.google.protobuf.ByteString&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMqlBinaryList()" class="member-name-link">getMqlBinaryList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+<div class="block">
+ mql_binary accepts a MongoDB aggregation pipeline as a list of BSON documents, where each
+ document is one stage in the pipeline.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUseRecentData()" class="member-name-link">getUseRecentData</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQueryPrefixName()" class="member-name-link">getQueryPrefixName</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ query_prefix_name is an optional field that can be used to specify a saved query to run</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQueryPrefixNameBytes()" class="member-name-link">getQueryPrefixNameBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.</div>
+ query_prefix_name is an optional field that can be used to specify a saved query to run</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDataSource()" class="member-name-link">hasDataSource</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUseRecentData()" class="member-name-link">getUseRecentData</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
+ Deprecated, please use TABULAR_DATA_SOURCE_TYPE_HOT_STORAGE instead.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDataSource()" class="member-name-link">hasDataSource</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
  data_source is an optional field that can be used to specify the data source for the query.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasQueryPrefixName()" class="member-name-link">hasQueryPrefixName</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ query_prefix_name is an optional field that can be used to specify a saved query to run</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasUseRecentData()" class="member-name-link">hasUseRecentData</a>()</code></div>
@@ -247,6 +271,18 @@ implements <a href="Data.TabularDataByMQLRequestOrBuilder.html" title="interface
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrganizationIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setOrganizationIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setQueryPrefixName(java.lang.String)" class="member-name-link">setQueryPrefixName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ query_prefix_name is an optional field that can be used to specify a saved query to run</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setQueryPrefixNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setQueryPrefixNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ query_prefix_name is an optional field that can be used to specify a saved query to run</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUseRecentData(boolean)" class="member-name-link">setUseRecentData</a><wbr>(boolean&nbsp;value)</code></div>
@@ -625,6 +661,106 @@ implements <a href="Data.TabularDataByMQLRequestOrBuilder.html" title="interface
  </pre>
 
  <code>optional .viam.app.data.v1.TabularDataSource data_source = 6 [json_name = "dataSource"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasQueryPrefixName()">
+<h3>hasQueryPrefixName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasQueryPrefixName</span>()</div>
+<div class="block"><pre>
+ query_prefix_name is an optional field that can be used to specify a saved query to run
+ </pre>
+
+ <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.TabularDataByMQLRequestOrBuilder.html#hasQueryPrefixName()">hasQueryPrefixName</a></code>&nbsp;in interface&nbsp;<code><a href="Data.TabularDataByMQLRequestOrBuilder.html" title="interface in viam.app.data.v1">Data.TabularDataByMQLRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the queryPrefixName field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getQueryPrefixName()">
+<h3>getQueryPrefixName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getQueryPrefixName</span>()</div>
+<div class="block"><pre>
+ query_prefix_name is an optional field that can be used to specify a saved query to run
+ </pre>
+
+ <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.TabularDataByMQLRequestOrBuilder.html#getQueryPrefixName()">getQueryPrefixName</a></code>&nbsp;in interface&nbsp;<code><a href="Data.TabularDataByMQLRequestOrBuilder.html" title="interface in viam.app.data.v1">Data.TabularDataByMQLRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The queryPrefixName.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getQueryPrefixNameBytes()">
+<h3>getQueryPrefixNameBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getQueryPrefixNameBytes</span>()</div>
+<div class="block"><pre>
+ query_prefix_name is an optional field that can be used to specify a saved query to run
+ </pre>
+
+ <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.TabularDataByMQLRequestOrBuilder.html#getQueryPrefixNameBytes()">getQueryPrefixNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Data.TabularDataByMQLRequestOrBuilder.html" title="interface in viam.app.data.v1">Data.TabularDataByMQLRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for queryPrefixName.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setQueryPrefixName(java.lang.String)">
+<h3>setQueryPrefixName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></span>&nbsp;<span class="element-name">setQueryPrefixName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ query_prefix_name is an optional field that can be used to specify a saved query to run
+ </pre>
+
+ <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The queryPrefixName to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearQueryPrefixName()">
+<h3>clearQueryPrefixName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></span>&nbsp;<span class="element-name">clearQueryPrefixName</span>()</div>
+<div class="block"><pre>
+ query_prefix_name is an optional field that can be used to specify a saved query to run
+ </pre>
+
+ <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setQueryPrefixNameBytes(com.google.protobuf.ByteString)">
+<h3>setQueryPrefixNameBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></span>&nbsp;<span class="element-name">setQueryPrefixNameBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="block"><pre>
+ query_prefix_name is an optional field that can be used to specify a saved query to run
+ </pre>
+
+ <code>optional string query_prefix_name = 7 [json_name = "queryPrefixName"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The bytes for queryPrefixName to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
 </section>
 </li>
 </ul>

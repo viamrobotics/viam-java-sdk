@@ -113,7 +113,7 @@ implements <a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in c
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -122,62 +122,112 @@ implements <a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in c
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearCamera()" class="member-name-link">clearCamera</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code></div>
+<div class="block"><code>string camera = 4 [json_name = "camera"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearVisionService()" class="member-name-link">clearVisionService</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#clearCameraDeprecated()" class="member-name-link">clearCameraDeprecated</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearVisionService()" class="member-name-link">clearVisionService</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string vision_service = 3 [json_name = "visionService"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#clearVisionServiceDeprecated()" class="member-name-link">clearVisionServiceDeprecated</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCamera()" class="member-name-link">getCamera</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code></div>
+<div class="block"><code>string camera = 4 [json_name = "camera"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCameraBytes()" class="member-name-link">getCameraBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string camera = 4 [json_name = "camera"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getCameraDeprecated()" class="member-name-link">getCameraDeprecated</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisionService()" class="member-name-link">getVisionService</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code></div>
+<div class="block"><code>string vision_service = 3 [json_name = "visionService"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCamera()" class="member-name-link">hasCamera</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVisionServiceBytes()" class="member-name-link">getVisionServiceBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code></div>
+<div class="block"><code>string vision_service = 3 [json_name = "visionService"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasVisionService()" class="member-name-link">hasVisionService</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getVisionServiceDeprecated()" class="member-name-link">getVisionServiceDeprecated</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#hasCameraDeprecated()" class="member-name-link">hasCameraDeprecated</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#hasVisionServiceDeprecated()" class="member-name-link">hasVisionServiceDeprecated</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#mergeCameraDeprecated(com.viam.common.v1.Common.ResourceName)" class="member-name-link">mergeCameraDeprecated</a><wbr>(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#mergeVisionServiceDeprecated(com.viam.common.v1.Common.ResourceName)" class="member-name-link">mergeVisionServiceDeprecated</a><wbr>(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeCamera(com.viam.common.v1.Common.ResourceName)" class="member-name-link">mergeCamera</a><wbr>(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCamera(java.lang.String)" class="member-name-link">setCamera</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code></div>
+<div class="block"><code>string camera = 4 [json_name = "camera"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeVisionService(com.viam.common.v1.Common.ResourceName)" class="member-name-link">mergeVisionService</a><wbr>(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCameraBytes(com.google.protobuf.ByteString)" class="member-name-link">setCameraBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code></div>
+<div class="block"><code>string camera = 4 [json_name = "camera"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#setCameraDeprecated(com.viam.common.v1.Common.ResourceName)" class="member-name-link">setCameraDeprecated</a><wbr>(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#setCameraDeprecated(com.viam.common.v1.Common.ResourceName.Builder)" class="member-name-link">setCameraDeprecated</a><wbr>(<a href="../../../common/v1/Common.ResourceName.Builder.html" title="class in com.viam.common.v1">Common.ResourceName.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCamera(com.viam.common.v1.Common.ResourceName)" class="member-name-link">setCamera</a><wbr>(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVisionService(java.lang.String)" class="member-name-link">setVisionService</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code></div>
+<div class="block"><code>string vision_service = 3 [json_name = "visionService"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCamera(com.viam.common.v1.Common.ResourceName.Builder)" class="member-name-link">setCamera</a><wbr>(<a href="../../../common/v1/Common.ResourceName.Builder.html" title="class in com.viam.common.v1">Common.ResourceName.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVisionServiceBytes(com.google.protobuf.ByteString)" class="member-name-link">setVisionServiceBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code></div>
+<div class="block"><code>string vision_service = 3 [json_name = "visionService"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVisionService(com.viam.common.v1.Common.ResourceName)" class="member-name-link">setVisionService</a><wbr>(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#setVisionServiceDeprecated(com.viam.common.v1.Common.ResourceName)" class="member-name-link">setVisionServiceDeprecated</a><wbr>(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVisionService(com.viam.common.v1.Common.ResourceName.Builder)" class="member-name-link">setVisionService</a><wbr>(<a href="../../../common/v1/Common.ResourceName.Builder.html" title="class in com.viam.common.v1">Common.ResourceName.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#setVisionServiceDeprecated(com.viam.common.v1.Common.ResourceName.Builder)" class="member-name-link">setVisionServiceDeprecated</a><wbr>(<a href="../../../common/v1/Common.ResourceName.Builder.html" title="class in com.viam.common.v1">Common.ResourceName.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
 </div>
 </div>
@@ -206,23 +256,142 @@ implements <a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in c
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="hasVisionService()">
-<h3>hasVisionService</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasVisionService</span>()</div>
-<div class="block"><code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code></div>
+<section class="detail" id="hasVisionServiceDeprecated()">
+<h3>hasVisionServiceDeprecated</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasVisionServiceDeprecated</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="Motion.ObstacleDetectorOrBuilder.html#hasVisionService()">hasVisionService</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ObstacleDetectorOrBuilder</a></code></dd>
+<dd><code><a href="Motion.ObstacleDetectorOrBuilder.html#hasVisionServiceDeprecated()">hasVisionServiceDeprecated</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ObstacleDetectorOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>Whether the visionService field is set.</dd>
+<dd>Whether the visionServiceDeprecated field is set.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVisionServiceDeprecated()">
+<h3>getVisionServiceDeprecated</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a></span>&nbsp;<span class="element-name">getVisionServiceDeprecated</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Motion.ObstacleDetectorOrBuilder.html#getVisionServiceDeprecated()">getVisionServiceDeprecated</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ObstacleDetectorOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The visionServiceDeprecated.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setVisionServiceDeprecated(com.viam.common.v1.Common.ResourceName)">
+<h3>setVisionServiceDeprecated</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">setVisionServiceDeprecated</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setVisionServiceDeprecated(com.viam.common.v1.Common.ResourceName.Builder)">
+<h3>setVisionServiceDeprecated</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">setVisionServiceDeprecated</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.ResourceName.Builder.html" title="class in com.viam.common.v1">Common.ResourceName.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeVisionServiceDeprecated(com.viam.common.v1.Common.ResourceName)">
+<h3>mergeVisionServiceDeprecated</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">mergeVisionServiceDeprecated</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearVisionServiceDeprecated()">
+<h3>clearVisionServiceDeprecated</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">clearVisionServiceDeprecated</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasCameraDeprecated()">
+<h3>hasCameraDeprecated</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasCameraDeprecated</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Motion.ObstacleDetectorOrBuilder.html#hasCameraDeprecated()">hasCameraDeprecated</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ObstacleDetectorOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the cameraDeprecated field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCameraDeprecated()">
+<h3>getCameraDeprecated</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a></span>&nbsp;<span class="element-name">getCameraDeprecated</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Motion.ObstacleDetectorOrBuilder.html#getCameraDeprecated()">getCameraDeprecated</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ObstacleDetectorOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The cameraDeprecated.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCameraDeprecated(com.viam.common.v1.Common.ResourceName)">
+<h3>setCameraDeprecated</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">setCameraDeprecated</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setCameraDeprecated(com.viam.common.v1.Common.ResourceName.Builder)">
+<h3>setCameraDeprecated</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">setCameraDeprecated</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.ResourceName.Builder.html" title="class in com.viam.common.v1">Common.ResourceName.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeCameraDeprecated(com.viam.common.v1.Common.ResourceName)">
+<h3>mergeCameraDeprecated</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">mergeCameraDeprecated</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearCameraDeprecated()">
+<h3>clearCameraDeprecated</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">clearCameraDeprecated</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVisionService()">
 <h3>getVisionService</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a></span>&nbsp;<span class="element-name">getVisionService</span>()</div>
-<div class="block"><code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getVisionService</span>()</div>
+<div class="block"><code>string vision_service = 3 [json_name = "visionService"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Motion.ObstacleDetectorOrBuilder.html#getVisionService()">getVisionService</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ObstacleDetectorOrBuilder</a></code></dd>
@@ -232,51 +401,60 @@ implements <a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in c
 </section>
 </li>
 <li>
-<section class="detail" id="setVisionService(com.viam.common.v1.Common.ResourceName)">
-<h3>setVisionService</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">setVisionService</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</span></div>
-<div class="block"><code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code></div>
+<section class="detail" id="getVisionServiceBytes()">
+<h3>getVisionServiceBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getVisionServiceBytes</span>()</div>
+<div class="block"><code>string vision_service = 3 [json_name = "visionService"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Motion.ObstacleDetectorOrBuilder.html#getVisionServiceBytes()">getVisionServiceBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ObstacleDetectorOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for visionService.</dd>
+</dl>
 </section>
 </li>
 <li>
-<section class="detail" id="setVisionService(com.viam.common.v1.Common.ResourceName.Builder)">
+<section class="detail" id="setVisionService(java.lang.String)">
 <h3>setVisionService</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">setVisionService</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.ResourceName.Builder.html" title="class in com.viam.common.v1">Common.ResourceName.Builder</a>&nbsp;builderForValue)</span></div>
-<div class="block"><code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="mergeVisionService(com.viam.common.v1.Common.ResourceName)">
-<h3>mergeVisionService</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">mergeVisionService</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</span></div>
-<div class="block"><code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">setVisionService</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><code>string vision_service = 3 [json_name = "visionService"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The visionService to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="clearVisionService()">
 <h3>clearVisionService</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">clearVisionService</span>()</div>
-<div class="block"><code>.viam.common.v1.ResourceName vision_service = 1 [json_name = "visionService"];</code></div>
+<div class="block"><code>string vision_service = 3 [json_name = "visionService"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
 </section>
 </li>
 <li>
-<section class="detail" id="hasCamera()">
-<h3>hasCamera</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasCamera</span>()</div>
-<div class="block"><code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code></div>
+<section class="detail" id="setVisionServiceBytes(com.google.protobuf.ByteString)">
+<h3>setVisionServiceBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">setVisionServiceBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="block"><code>string vision_service = 3 [json_name = "visionService"];</code></div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="Motion.ObstacleDetectorOrBuilder.html#hasCamera()">hasCamera</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ObstacleDetectorOrBuilder</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>value</code> - The bytes for visionService to set.</dd>
 <dt>Returns:</dt>
-<dd>Whether the camera field is set.</dd>
+<dd>This builder for chaining.</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getCamera()">
 <h3>getCamera</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a></span>&nbsp;<span class="element-name">getCamera</span>()</div>
-<div class="block"><code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCamera</span>()</div>
+<div class="block"><code>string camera = 4 [json_name = "camera"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Motion.ObstacleDetectorOrBuilder.html#getCamera()">getCamera</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ObstacleDetectorOrBuilder</a></code></dd>
@@ -286,31 +464,53 @@ implements <a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in c
 </section>
 </li>
 <li>
-<section class="detail" id="setCamera(com.viam.common.v1.Common.ResourceName)">
-<h3>setCamera</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">setCamera</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</span></div>
-<div class="block"><code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code></div>
+<section class="detail" id="getCameraBytes()">
+<h3>getCameraBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getCameraBytes</span>()</div>
+<div class="block"><code>string camera = 4 [json_name = "camera"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Motion.ObstacleDetectorOrBuilder.html#getCameraBytes()">getCameraBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.ObstacleDetectorOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ObstacleDetectorOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for camera.</dd>
+</dl>
 </section>
 </li>
 <li>
-<section class="detail" id="setCamera(com.viam.common.v1.Common.ResourceName.Builder)">
+<section class="detail" id="setCamera(java.lang.String)">
 <h3>setCamera</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">setCamera</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.ResourceName.Builder.html" title="class in com.viam.common.v1">Common.ResourceName.Builder</a>&nbsp;builderForValue)</span></div>
-<div class="block"><code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="mergeCamera(com.viam.common.v1.Common.ResourceName)">
-<h3>mergeCamera</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">mergeCamera</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</span></div>
-<div class="block"><code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">setCamera</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><code>string camera = 4 [json_name = "camera"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The camera to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="clearCamera()">
 <h3>clearCamera</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">clearCamera</span>()</div>
-<div class="block"><code>.viam.common.v1.ResourceName camera = 2 [json_name = "camera"];</code></div>
+<div class="block"><code>string camera = 4 [json_name = "camera"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCameraBytes(com.google.protobuf.ByteString)">
+<h3>setCameraBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.ObstacleDetector.Builder.html" title="class in com.viam.service.motion.v1">Motion.ObstacleDetector.Builder</a></span>&nbsp;<span class="element-name">setCameraBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="block"><code>string camera = 4 [json_name = "camera"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The bytes for camera to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
 </section>
 </li>
 </ul>
