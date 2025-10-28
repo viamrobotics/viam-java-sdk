@@ -262,6 +262,71 @@ public  final class ListOperationsRequest extends
 
   }
 
+  public static final int RETURN_PARTIAL_SUCCESS_FIELD_NUMBER = 5;
+  private boolean returnPartialSuccess_;
+  /**
+   * <pre>
+   * When set to `true`, operations that are reachable are returned as normal,
+   * and those that are unreachable are returned in the
+   * [ListOperationsResponse.unreachable] field.
+   *
+   * This can only be `true` when reading across collections e.g. when `parent`
+   * is set to `"projects/example/locations/-"`.
+   *
+   * This field is not by default supported and will result in an
+   * `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+   * service or product specific documentation.
+   * </pre>
+   *
+   * <code>bool return_partial_success = 5 [json_name = "returnPartialSuccess"];</code>
+   * @return The returnPartialSuccess.
+   */
+  @java.lang.Override
+  public boolean getReturnPartialSuccess() {
+    return returnPartialSuccess_;
+  }
+  /**
+   * <pre>
+   * When set to `true`, operations that are reachable are returned as normal,
+   * and those that are unreachable are returned in the
+   * [ListOperationsResponse.unreachable] field.
+   *
+   * This can only be `true` when reading across collections e.g. when `parent`
+   * is set to `"projects/example/locations/-"`.
+   *
+   * This field is not by default supported and will result in an
+   * `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+   * service or product specific documentation.
+   * </pre>
+   *
+   * <code>bool return_partial_success = 5 [json_name = "returnPartialSuccess"];</code>
+   * @param value The returnPartialSuccess to set.
+   */
+  private void setReturnPartialSuccess(boolean value) {
+    
+    returnPartialSuccess_ = value;
+  }
+  /**
+   * <pre>
+   * When set to `true`, operations that are reachable are returned as normal,
+   * and those that are unreachable are returned in the
+   * [ListOperationsResponse.unreachable] field.
+   *
+   * This can only be `true` when reading across collections e.g. when `parent`
+   * is set to `"projects/example/locations/-"`.
+   *
+   * This field is not by default supported and will result in an
+   * `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+   * service or product specific documentation.
+   * </pre>
+   *
+   * <code>bool return_partial_success = 5 [json_name = "returnPartialSuccess"];</code>
+   */
+  private void clearReturnPartialSuccess() {
+
+    returnPartialSuccess_ = false;
+  }
+
   public static com.google.longrunning.ListOperationsRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -611,6 +676,73 @@ public  final class ListOperationsRequest extends
       return this;
     }
 
+    /**
+     * <pre>
+     * When set to `true`, operations that are reachable are returned as normal,
+     * and those that are unreachable are returned in the
+     * [ListOperationsResponse.unreachable] field.
+     *
+     * This can only be `true` when reading across collections e.g. when `parent`
+     * is set to `"projects/example/locations/-"`.
+     *
+     * This field is not by default supported and will result in an
+     * `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+     * service or product specific documentation.
+     * </pre>
+     *
+     * <code>bool return_partial_success = 5 [json_name = "returnPartialSuccess"];</code>
+     * @return The returnPartialSuccess.
+     */
+    @java.lang.Override
+    public boolean getReturnPartialSuccess() {
+      return instance.getReturnPartialSuccess();
+    }
+    /**
+     * <pre>
+     * When set to `true`, operations that are reachable are returned as normal,
+     * and those that are unreachable are returned in the
+     * [ListOperationsResponse.unreachable] field.
+     *
+     * This can only be `true` when reading across collections e.g. when `parent`
+     * is set to `"projects/example/locations/-"`.
+     *
+     * This field is not by default supported and will result in an
+     * `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+     * service or product specific documentation.
+     * </pre>
+     *
+     * <code>bool return_partial_success = 5 [json_name = "returnPartialSuccess"];</code>
+     * @param value The returnPartialSuccess to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReturnPartialSuccess(boolean value) {
+      copyOnWrite();
+      instance.setReturnPartialSuccess(value);
+      return this;
+    }
+    /**
+     * <pre>
+     * When set to `true`, operations that are reachable are returned as normal,
+     * and those that are unreachable are returned in the
+     * [ListOperationsResponse.unreachable] field.
+     *
+     * This can only be `true` when reading across collections e.g. when `parent`
+     * is set to `"projects/example/locations/-"`.
+     *
+     * This field is not by default supported and will result in an
+     * `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+     * service or product specific documentation.
+     * </pre>
+     *
+     * <code>bool return_partial_success = 5 [json_name = "returnPartialSuccess"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReturnPartialSuccess() {
+      copyOnWrite();
+      instance.clearReturnPartialSuccess();
+      return this;
+    }
+
     // @@protoc_insertion_point(builder_scope:google.longrunning.ListOperationsRequest)
   }
   @java.lang.Override
@@ -631,10 +763,11 @@ public  final class ListOperationsRequest extends
             "pageSize_",
             "pageToken_",
             "name_",
+            "returnPartialSuccess_",
           };
           java.lang.String info =
-              "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0004" +
-              "\u0003\u0208\u0004\u0208";
+              "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0004" +
+              "\u0003\u0208\u0004\u0208\u0005\u0007";
           return newMessageInfo(DEFAULT_INSTANCE, info, objects);
       }
       // fall through

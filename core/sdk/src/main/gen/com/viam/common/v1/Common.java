@@ -160,43 +160,6 @@ public final class Common {
      */
     com.google.protobuf.ByteString
         getNameBytes();
-
-    /**
-     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-     * @return A list containing the remotePath.
-     */
-    java.util.List<java.lang.String>
-        getRemotePathList();
-    /**
-     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-     * @return The count of remotePath.
-     */
-    int getRemotePathCount();
-    /**
-     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-     * @param index The index of the element to return.
-     * @return The remotePath at the given index.
-     */
-    java.lang.String getRemotePath(int index);
-    /**
-     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-     * @param index The index of the element to return.
-     * @return The remotePath at the given index.
-     */
-    com.google.protobuf.ByteString
-        getRemotePathBytes(int index);
-
-    /**
-     * <code>string local_name = 6 [json_name = "localName"];</code>
-     * @return The localName.
-     */
-    java.lang.String getLocalName();
-    /**
-     * <code>string local_name = 6 [json_name = "localName"];</code>
-     * @return The bytes for localName.
-     */
-    com.google.protobuf.ByteString
-        getLocalNameBytes();
   }
   /**
    * Protobuf type {@code viam.common.v1.ResourceName}
@@ -211,8 +174,6 @@ public final class Common {
       type_ = "";
       subtype_ = "";
       name_ = "";
-      remotePath_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
-      localName_ = "";
     }
     public static final int NAMESPACE_FIELD_NUMBER = 1;
     private java.lang.String namespace_;
@@ -399,146 +360,6 @@ public final class Common {
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       name_ = value.toStringUtf8();
-
-    }
-
-    public static final int REMOTE_PATH_FIELD_NUMBER = 5;
-    private com.google.protobuf.Internal.ProtobufList<java.lang.String> remotePath_;
-    /**
-     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-     * @return A list containing the remotePath.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.String> getRemotePathList() {
-      return remotePath_;
-    }
-    /**
-     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-     * @return The count of remotePath.
-     */
-    @java.lang.Override
-    public int getRemotePathCount() {
-      return remotePath_.size();
-    }
-    /**
-     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-     * @param index The index of the element to return.
-     * @return The remotePath at the given index.
-     */
-    @java.lang.Override
-    public java.lang.String getRemotePath(int index) {
-      return remotePath_.get(index);
-    }
-    /**
-     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the remotePath at the given index.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getRemotePathBytes(int index) {
-      return com.google.protobuf.ByteString.copyFromUtf8(
-          remotePath_.get(index));
-    }
-    private void ensureRemotePathIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
-          remotePath_;  if (!tmp.isModifiable()) {
-        remotePath_ =
-            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
-       }
-    }
-    /**
-     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-     * @param index The index to set the value at.
-     * @param value The remotePath to set.
-     */
-    private void setRemotePath(
-        int index, java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  ensureRemotePathIsMutable();
-      remotePath_.set(index, value);
-    }
-    /**
-     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-     * @param value The remotePath to add.
-     */
-    private void addRemotePath(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  ensureRemotePathIsMutable();
-      remotePath_.add(value);
-    }
-    /**
-     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-     * @param values The remotePath to add.
-     */
-    private void addAllRemotePath(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureRemotePathIsMutable();
-      com.google.protobuf.AbstractMessageLite.addAll(
-          values, remotePath_);
-    }
-    /**
-     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-     */
-    private void clearRemotePath() {
-      remotePath_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
-    }
-    /**
-     * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-     * @param value The bytes of the remotePath to add.
-     */
-    private void addRemotePathBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      ensureRemotePathIsMutable();
-      remotePath_.add(value.toStringUtf8());
-    }
-
-    public static final int LOCAL_NAME_FIELD_NUMBER = 6;
-    private java.lang.String localName_;
-    /**
-     * <code>string local_name = 6 [json_name = "localName"];</code>
-     * @return The localName.
-     */
-    @java.lang.Override
-    public java.lang.String getLocalName() {
-      return localName_;
-    }
-    /**
-     * <code>string local_name = 6 [json_name = "localName"];</code>
-     * @return The bytes for localName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getLocalNameBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(localName_);
-    }
-    /**
-     * <code>string local_name = 6 [json_name = "localName"];</code>
-     * @param value The localName to set.
-     */
-    private void setLocalName(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      localName_ = value;
-    }
-    /**
-     * <code>string local_name = 6 [json_name = "localName"];</code>
-     */
-    private void clearLocalName() {
-
-      localName_ = getDefaultInstance().getLocalName();
-    }
-    /**
-     * <code>string local_name = 6 [json_name = "localName"];</code>
-     * @param value The bytes for localName to set.
-     */
-    private void setLocalNameBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      localName_ = value.toStringUtf8();
 
     }
 
@@ -835,147 +656,6 @@ public final class Common {
         return this;
       }
 
-      /**
-       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-       * @return A list containing the remotePath.
-       */
-      @java.lang.Override
-      public java.util.List<java.lang.String>
-          getRemotePathList() {
-        return java.util.Collections.unmodifiableList(
-            instance.getRemotePathList());
-      }
-      /**
-       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-       * @return The count of remotePath.
-       */
-      @java.lang.Override
-      public int getRemotePathCount() {
-        return instance.getRemotePathCount();
-      }
-      /**
-       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-       * @param index The index of the element to return.
-       * @return The remotePath at the given index.
-       */
-      @java.lang.Override
-      public java.lang.String getRemotePath(int index) {
-        return instance.getRemotePath(index);
-      }
-      /**
-       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the remotePath at the given index.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getRemotePathBytes(int index) {
-        return instance.getRemotePathBytes(index);
-      }
-      /**
-       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-       * @param index The index to set the value at.
-       * @param value The remotePath to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRemotePath(
-          int index, java.lang.String value) {
-        copyOnWrite();
-        instance.setRemotePath(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-       * @param value The remotePath to add.
-       * @return This builder for chaining.
-       */
-      public Builder addRemotePath(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.addRemotePath(value);
-        return this;
-      }
-      /**
-       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-       * @param values The remotePath to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllRemotePath(
-          java.lang.Iterable<java.lang.String> values) {
-        copyOnWrite();
-        instance.addAllRemotePath(values);
-        return this;
-      }
-      /**
-       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRemotePath() {
-        copyOnWrite();
-        instance.clearRemotePath();
-        return this;
-      }
-      /**
-       * <code>repeated string remote_path = 5 [json_name = "remotePath"];</code>
-       * @param value The bytes of the remotePath to add.
-       * @return This builder for chaining.
-       */
-      public Builder addRemotePathBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.addRemotePathBytes(value);
-        return this;
-      }
-
-      /**
-       * <code>string local_name = 6 [json_name = "localName"];</code>
-       * @return The localName.
-       */
-      @java.lang.Override
-      public java.lang.String getLocalName() {
-        return instance.getLocalName();
-      }
-      /**
-       * <code>string local_name = 6 [json_name = "localName"];</code>
-       * @return The bytes for localName.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getLocalNameBytes() {
-        return instance.getLocalNameBytes();
-      }
-      /**
-       * <code>string local_name = 6 [json_name = "localName"];</code>
-       * @param value The localName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLocalName(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setLocalName(value);
-        return this;
-      }
-      /**
-       * <code>string local_name = 6 [json_name = "localName"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLocalName() {
-        copyOnWrite();
-        instance.clearLocalName();
-        return this;
-      }
-      /**
-       * <code>string local_name = 6 [json_name = "localName"];</code>
-       * @param value The bytes for localName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLocalNameBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setLocalNameBytes(value);
-        return this;
-      }
-
       // @@protoc_insertion_point(builder_scope:viam.common.v1.ResourceName)
     }
     @java.lang.Override
@@ -996,12 +676,10 @@ public final class Common {
               "type_",
               "subtype_",
               "name_",
-              "remotePath_",
-              "localName_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208\u0005\u021a\u0006\u0208";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -15038,6 +14716,1608 @@ com.google.protobuf.Value defaultValue) {
     private static volatile com.google.protobuf.Parser<LogEntry> PARSER;
 
     public static com.google.protobuf.Parser<LogEntry> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface AudioInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.AudioInfo)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Audio codec used for the stream or device (e.g., "pcm16", "pcm32float", "mp3")
+     * </pre>
+     *
+     * <code>string codec = 1 [json_name = "codec"];</code>
+     * @return The codec.
+     */
+    java.lang.String getCodec();
+    /**
+     * <pre>
+     * Audio codec used for the stream or device (e.g., "pcm16", "pcm32float", "mp3")
+     * </pre>
+     *
+     * <code>string codec = 1 [json_name = "codec"];</code>
+     * @return The bytes for codec.
+     */
+    com.google.protobuf.ByteString
+        getCodecBytes();
+
+    /**
+     * <pre>
+     * Sample rate of the audio in Hz
+     * </pre>
+     *
+     * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+     * @return The sampleRateHz.
+     */
+    int getSampleRateHz();
+
+    /**
+     * <pre>
+     * Number of audio channels in the recording or playback
+     * </pre>
+     *
+     * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+     * @return The numChannels.
+     */
+    int getNumChannels();
+  }
+  /**
+   * <pre>
+   * Information about an audio stream or device.
+   * </pre>
+   *
+   * Protobuf type {@code viam.common.v1.AudioInfo}
+   */
+  public  static final class AudioInfo extends
+      com.google.protobuf.GeneratedMessageLite<
+          AudioInfo, AudioInfo.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.AudioInfo)
+      AudioInfoOrBuilder {
+    private AudioInfo() {
+      codec_ = "";
+    }
+    public static final int CODEC_FIELD_NUMBER = 1;
+    private java.lang.String codec_;
+    /**
+     * <pre>
+     * Audio codec used for the stream or device (e.g., "pcm16", "pcm32float", "mp3")
+     * </pre>
+     *
+     * <code>string codec = 1 [json_name = "codec"];</code>
+     * @return The codec.
+     */
+    @java.lang.Override
+    public java.lang.String getCodec() {
+      return codec_;
+    }
+    /**
+     * <pre>
+     * Audio codec used for the stream or device (e.g., "pcm16", "pcm32float", "mp3")
+     * </pre>
+     *
+     * <code>string codec = 1 [json_name = "codec"];</code>
+     * @return The bytes for codec.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCodecBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(codec_);
+    }
+    /**
+     * <pre>
+     * Audio codec used for the stream or device (e.g., "pcm16", "pcm32float", "mp3")
+     * </pre>
+     *
+     * <code>string codec = 1 [json_name = "codec"];</code>
+     * @param value The codec to set.
+     */
+    private void setCodec(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      codec_ = value;
+    }
+    /**
+     * <pre>
+     * Audio codec used for the stream or device (e.g., "pcm16", "pcm32float", "mp3")
+     * </pre>
+     *
+     * <code>string codec = 1 [json_name = "codec"];</code>
+     */
+    private void clearCodec() {
+
+      codec_ = getDefaultInstance().getCodec();
+    }
+    /**
+     * <pre>
+     * Audio codec used for the stream or device (e.g., "pcm16", "pcm32float", "mp3")
+     * </pre>
+     *
+     * <code>string codec = 1 [json_name = "codec"];</code>
+     * @param value The bytes for codec to set.
+     */
+    private void setCodecBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      codec_ = value.toStringUtf8();
+
+    }
+
+    public static final int SAMPLE_RATE_HZ_FIELD_NUMBER = 2;
+    private int sampleRateHz_;
+    /**
+     * <pre>
+     * Sample rate of the audio in Hz
+     * </pre>
+     *
+     * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+     * @return The sampleRateHz.
+     */
+    @java.lang.Override
+    public int getSampleRateHz() {
+      return sampleRateHz_;
+    }
+    /**
+     * <pre>
+     * Sample rate of the audio in Hz
+     * </pre>
+     *
+     * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+     * @param value The sampleRateHz to set.
+     */
+    private void setSampleRateHz(int value) {
+      
+      sampleRateHz_ = value;
+    }
+    /**
+     * <pre>
+     * Sample rate of the audio in Hz
+     * </pre>
+     *
+     * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+     */
+    private void clearSampleRateHz() {
+
+      sampleRateHz_ = 0;
+    }
+
+    public static final int NUM_CHANNELS_FIELD_NUMBER = 3;
+    private int numChannels_;
+    /**
+     * <pre>
+     * Number of audio channels in the recording or playback
+     * </pre>
+     *
+     * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+     * @return The numChannels.
+     */
+    @java.lang.Override
+    public int getNumChannels() {
+      return numChannels_;
+    }
+    /**
+     * <pre>
+     * Number of audio channels in the recording or playback
+     * </pre>
+     *
+     * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+     * @param value The numChannels to set.
+     */
+    private void setNumChannels(int value) {
+      
+      numChannels_ = value;
+    }
+    /**
+     * <pre>
+     * Number of audio channels in the recording or playback
+     * </pre>
+     *
+     * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+     */
+    private void clearNumChannels() {
+
+      numChannels_ = 0;
+    }
+
+    public static com.viam.common.v1.Common.AudioInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.AudioInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.AudioInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.AudioInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.AudioInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.AudioInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.AudioInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.AudioInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.AudioInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.AudioInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.AudioInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.AudioInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.AudioInfo prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * Information about an audio stream or device.
+     * </pre>
+     *
+     * Protobuf type {@code viam.common.v1.AudioInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.AudioInfo, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.AudioInfo)
+        com.viam.common.v1.Common.AudioInfoOrBuilder {
+      // Construct using com.viam.common.v1.Common.AudioInfo.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * Audio codec used for the stream or device (e.g., "pcm16", "pcm32float", "mp3")
+       * </pre>
+       *
+       * <code>string codec = 1 [json_name = "codec"];</code>
+       * @return The codec.
+       */
+      @java.lang.Override
+      public java.lang.String getCodec() {
+        return instance.getCodec();
+      }
+      /**
+       * <pre>
+       * Audio codec used for the stream or device (e.g., "pcm16", "pcm32float", "mp3")
+       * </pre>
+       *
+       * <code>string codec = 1 [json_name = "codec"];</code>
+       * @return The bytes for codec.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCodecBytes() {
+        return instance.getCodecBytes();
+      }
+      /**
+       * <pre>
+       * Audio codec used for the stream or device (e.g., "pcm16", "pcm32float", "mp3")
+       * </pre>
+       *
+       * <code>string codec = 1 [json_name = "codec"];</code>
+       * @param value The codec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodec(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCodec(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Audio codec used for the stream or device (e.g., "pcm16", "pcm32float", "mp3")
+       * </pre>
+       *
+       * <code>string codec = 1 [json_name = "codec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCodec() {
+        copyOnWrite();
+        instance.clearCodec();
+        return this;
+      }
+      /**
+       * <pre>
+       * Audio codec used for the stream or device (e.g., "pcm16", "pcm32float", "mp3")
+       * </pre>
+       *
+       * <code>string codec = 1 [json_name = "codec"];</code>
+       * @param value The bytes for codec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCodecBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCodecBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Sample rate of the audio in Hz
+       * </pre>
+       *
+       * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+       * @return The sampleRateHz.
+       */
+      @java.lang.Override
+      public int getSampleRateHz() {
+        return instance.getSampleRateHz();
+      }
+      /**
+       * <pre>
+       * Sample rate of the audio in Hz
+       * </pre>
+       *
+       * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+       * @param value The sampleRateHz to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSampleRateHz(int value) {
+        copyOnWrite();
+        instance.setSampleRateHz(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Sample rate of the audio in Hz
+       * </pre>
+       *
+       * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSampleRateHz() {
+        copyOnWrite();
+        instance.clearSampleRateHz();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Number of audio channels in the recording or playback
+       * </pre>
+       *
+       * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+       * @return The numChannels.
+       */
+      @java.lang.Override
+      public int getNumChannels() {
+        return instance.getNumChannels();
+      }
+      /**
+       * <pre>
+       * Number of audio channels in the recording or playback
+       * </pre>
+       *
+       * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+       * @param value The numChannels to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumChannels(int value) {
+        copyOnWrite();
+        instance.setNumChannels(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of audio channels in the recording or playback
+       * </pre>
+       *
+       * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumChannels() {
+        copyOnWrite();
+        instance.clearNumChannels();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.AudioInfo)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.AudioInfo();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "codec_",
+              "sampleRateHz_",
+              "numChannels_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0004" +
+                "\u0003\u0004";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.AudioInfo> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.AudioInfo.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.AudioInfo>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.AudioInfo)
+    private static final com.viam.common.v1.Common.AudioInfo DEFAULT_INSTANCE;
+    static {
+      AudioInfo defaultInstance = new AudioInfo();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AudioInfo.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.AudioInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<AudioInfo> PARSER;
+
+    public static com.google.protobuf.Parser<AudioInfo> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetPropertiesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.GetPropertiesRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * <pre>
+   * Shared properties for AudioIn and AudioOut components.
+   * </pre>
+   *
+   * Protobuf type {@code viam.common.v1.GetPropertiesRequest}
+   */
+  public  static final class GetPropertiesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPropertiesRequest, GetPropertiesRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.GetPropertiesRequest)
+      GetPropertiesRequestOrBuilder {
+    private GetPropertiesRequest() {
+      name_ = "";
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.common.v1.Common.GetPropertiesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.GetPropertiesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.GetPropertiesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.GetPropertiesRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * Shared properties for AudioIn and AudioOut components.
+     * </pre>
+     *
+     * Protobuf type {@code viam.common.v1.GetPropertiesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.GetPropertiesRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.GetPropertiesRequest)
+        com.viam.common.v1.Common.GetPropertiesRequestOrBuilder {
+      // Construct using com.viam.common.v1.Common.GetPropertiesRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.GetPropertiesRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.GetPropertiesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.GetPropertiesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.GetPropertiesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.GetPropertiesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.GetPropertiesRequest)
+    private static final com.viam.common.v1.Common.GetPropertiesRequest DEFAULT_INSTANCE;
+    static {
+      GetPropertiesRequest defaultInstance = new GetPropertiesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPropertiesRequest.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.GetPropertiesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetPropertiesRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetPropertiesRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetPropertiesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.GetPropertiesResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+     * </pre>
+     *
+     * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+     * @return A list containing the supportedCodecs.
+     */
+    java.util.List<java.lang.String>
+        getSupportedCodecsList();
+    /**
+     * <pre>
+     * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+     * </pre>
+     *
+     * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+     * @return The count of supportedCodecs.
+     */
+    int getSupportedCodecsCount();
+    /**
+     * <pre>
+     * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+     * </pre>
+     *
+     * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+     * @param index The index of the element to return.
+     * @return The supportedCodecs at the given index.
+     */
+    java.lang.String getSupportedCodecs(int index);
+    /**
+     * <pre>
+     * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+     * </pre>
+     *
+     * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+     * @param index The index of the element to return.
+     * @return The supportedCodecs at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSupportedCodecsBytes(int index);
+
+    /**
+     * <pre>
+     * current sample rate in Hz
+     * </pre>
+     *
+     * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+     * @return The sampleRateHz.
+     */
+    int getSampleRateHz();
+
+    /**
+     * <pre>
+     * Maximum number of audio channels supported (e.g., 1 for mono, 2 for stereo)
+     * </pre>
+     *
+     * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+     * @return The numChannels.
+     */
+    int getNumChannels();
+  }
+  /**
+   * Protobuf type {@code viam.common.v1.GetPropertiesResponse}
+   */
+  public  static final class GetPropertiesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPropertiesResponse, GetPropertiesResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.GetPropertiesResponse)
+      GetPropertiesResponseOrBuilder {
+    private GetPropertiesResponse() {
+      supportedCodecs_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    public static final int SUPPORTED_CODECS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> supportedCodecs_;
+    /**
+     * <pre>
+     * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+     * </pre>
+     *
+     * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+     * @return A list containing the supportedCodecs.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getSupportedCodecsList() {
+      return supportedCodecs_;
+    }
+    /**
+     * <pre>
+     * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+     * </pre>
+     *
+     * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+     * @return The count of supportedCodecs.
+     */
+    @java.lang.Override
+    public int getSupportedCodecsCount() {
+      return supportedCodecs_.size();
+    }
+    /**
+     * <pre>
+     * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+     * </pre>
+     *
+     * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+     * @param index The index of the element to return.
+     * @return The supportedCodecs at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getSupportedCodecs(int index) {
+      return supportedCodecs_.get(index);
+    }
+    /**
+     * <pre>
+     * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+     * </pre>
+     *
+     * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the supportedCodecs at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSupportedCodecsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          supportedCodecs_.get(index));
+    }
+    private void ensureSupportedCodecsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          supportedCodecs_;  if (!tmp.isModifiable()) {
+        supportedCodecs_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+     * </pre>
+     *
+     * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+     * @param index The index to set the value at.
+     * @param value The supportedCodecs to set.
+     */
+    private void setSupportedCodecs(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureSupportedCodecsIsMutable();
+      supportedCodecs_.set(index, value);
+    }
+    /**
+     * <pre>
+     * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+     * </pre>
+     *
+     * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+     * @param value The supportedCodecs to add.
+     */
+    private void addSupportedCodecs(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureSupportedCodecsIsMutable();
+      supportedCodecs_.add(value);
+    }
+    /**
+     * <pre>
+     * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+     * </pre>
+     *
+     * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+     * @param values The supportedCodecs to add.
+     */
+    private void addAllSupportedCodecs(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureSupportedCodecsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, supportedCodecs_);
+    }
+    /**
+     * <pre>
+     * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+     * </pre>
+     *
+     * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+     */
+    private void clearSupportedCodecs() {
+      supportedCodecs_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+     * </pre>
+     *
+     * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+     * @param value The bytes of the supportedCodecs to add.
+     */
+    private void addSupportedCodecsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureSupportedCodecsIsMutable();
+      supportedCodecs_.add(value.toStringUtf8());
+    }
+
+    public static final int SAMPLE_RATE_HZ_FIELD_NUMBER = 2;
+    private int sampleRateHz_;
+    /**
+     * <pre>
+     * current sample rate in Hz
+     * </pre>
+     *
+     * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+     * @return The sampleRateHz.
+     */
+    @java.lang.Override
+    public int getSampleRateHz() {
+      return sampleRateHz_;
+    }
+    /**
+     * <pre>
+     * current sample rate in Hz
+     * </pre>
+     *
+     * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+     * @param value The sampleRateHz to set.
+     */
+    private void setSampleRateHz(int value) {
+      
+      sampleRateHz_ = value;
+    }
+    /**
+     * <pre>
+     * current sample rate in Hz
+     * </pre>
+     *
+     * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+     */
+    private void clearSampleRateHz() {
+
+      sampleRateHz_ = 0;
+    }
+
+    public static final int NUM_CHANNELS_FIELD_NUMBER = 3;
+    private int numChannels_;
+    /**
+     * <pre>
+     * Maximum number of audio channels supported (e.g., 1 for mono, 2 for stereo)
+     * </pre>
+     *
+     * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+     * @return The numChannels.
+     */
+    @java.lang.Override
+    public int getNumChannels() {
+      return numChannels_;
+    }
+    /**
+     * <pre>
+     * Maximum number of audio channels supported (e.g., 1 for mono, 2 for stereo)
+     * </pre>
+     *
+     * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+     * @param value The numChannels to set.
+     */
+    private void setNumChannels(int value) {
+      
+      numChannels_ = value;
+    }
+    /**
+     * <pre>
+     * Maximum number of audio channels supported (e.g., 1 for mono, 2 for stereo)
+     * </pre>
+     *
+     * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+     */
+    private void clearNumChannels() {
+
+      numChannels_ = 0;
+    }
+
+    public static com.viam.common.v1.Common.GetPropertiesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.GetPropertiesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.GetPropertiesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.GetPropertiesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.GetPropertiesResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.common.v1.GetPropertiesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.GetPropertiesResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.GetPropertiesResponse)
+        com.viam.common.v1.Common.GetPropertiesResponseOrBuilder {
+      // Construct using com.viam.common.v1.Common.GetPropertiesResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+       * </pre>
+       *
+       * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+       * @return A list containing the supportedCodecs.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getSupportedCodecsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getSupportedCodecsList());
+      }
+      /**
+       * <pre>
+       * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+       * </pre>
+       *
+       * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+       * @return The count of supportedCodecs.
+       */
+      @java.lang.Override
+      public int getSupportedCodecsCount() {
+        return instance.getSupportedCodecsCount();
+      }
+      /**
+       * <pre>
+       * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+       * </pre>
+       *
+       * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+       * @param index The index of the element to return.
+       * @return The supportedCodecs at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getSupportedCodecs(int index) {
+        return instance.getSupportedCodecs(index);
+      }
+      /**
+       * <pre>
+       * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+       * </pre>
+       *
+       * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the supportedCodecs at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSupportedCodecsBytes(int index) {
+        return instance.getSupportedCodecsBytes(index);
+      }
+      /**
+       * <pre>
+       * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+       * </pre>
+       *
+       * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+       * @param index The index to set the value at.
+       * @param value The supportedCodecs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupportedCodecs(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setSupportedCodecs(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+       * </pre>
+       *
+       * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+       * @param value The supportedCodecs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSupportedCodecs(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addSupportedCodecs(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+       * </pre>
+       *
+       * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+       * @param values The supportedCodecs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSupportedCodecs(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllSupportedCodecs(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+       * </pre>
+       *
+       * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSupportedCodecs() {
+        copyOnWrite();
+        instance.clearSupportedCodecs();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of audio codecs supported by the system (e.g., "mp3", "pcm16", "pcm32float")
+       * </pre>
+       *
+       * <code>repeated string supported_codecs = 1 [json_name = "supportedCodecs"];</code>
+       * @param value The bytes of the supportedCodecs to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSupportedCodecsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addSupportedCodecsBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * current sample rate in Hz
+       * </pre>
+       *
+       * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+       * @return The sampleRateHz.
+       */
+      @java.lang.Override
+      public int getSampleRateHz() {
+        return instance.getSampleRateHz();
+      }
+      /**
+       * <pre>
+       * current sample rate in Hz
+       * </pre>
+       *
+       * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+       * @param value The sampleRateHz to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSampleRateHz(int value) {
+        copyOnWrite();
+        instance.setSampleRateHz(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * current sample rate in Hz
+       * </pre>
+       *
+       * <code>int32 sample_rate_hz = 2 [json_name = "sampleRateHz"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSampleRateHz() {
+        copyOnWrite();
+        instance.clearSampleRateHz();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Maximum number of audio channels supported (e.g., 1 for mono, 2 for stereo)
+       * </pre>
+       *
+       * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+       * @return The numChannels.
+       */
+      @java.lang.Override
+      public int getNumChannels() {
+        return instance.getNumChannels();
+      }
+      /**
+       * <pre>
+       * Maximum number of audio channels supported (e.g., 1 for mono, 2 for stereo)
+       * </pre>
+       *
+       * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+       * @param value The numChannels to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumChannels(int value) {
+        copyOnWrite();
+        instance.setNumChannels(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum number of audio channels supported (e.g., 1 for mono, 2 for stereo)
+       * </pre>
+       *
+       * <code>int32 num_channels = 3 [json_name = "numChannels"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumChannels() {
+        copyOnWrite();
+        instance.clearNumChannels();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.GetPropertiesResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.GetPropertiesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "supportedCodecs_",
+              "sampleRateHz_",
+              "numChannels_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u021a\u0002\u0004" +
+                "\u0003\u0004";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.GetPropertiesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.GetPropertiesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.GetPropertiesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.GetPropertiesResponse)
+    private static final com.viam.common.v1.Common.GetPropertiesResponse DEFAULT_INSTANCE;
+    static {
+      GetPropertiesResponse defaultInstance = new GetPropertiesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPropertiesResponse.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.GetPropertiesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetPropertiesResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetPropertiesResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

@@ -54,4 +54,57 @@ public interface ListOperationsResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getNextPageTokenBytes();
+
+  /**
+   * <pre>
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * </pre>
+   *
+   * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+   * @return A list containing the unreachable.
+   */
+  java.util.List<java.lang.String>
+      getUnreachableList();
+  /**
+   * <pre>
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * </pre>
+   *
+   * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+   * @return The count of unreachable.
+   */
+  int getUnreachableCount();
+  /**
+   * <pre>
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * </pre>
+   *
+   * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+   * @param index The index of the element to return.
+   * @return The unreachable at the given index.
+   */
+  java.lang.String getUnreachable(int index);
+  /**
+   * <pre>
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * </pre>
+   *
+   * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+   * @param index The index of the element to return.
+   * @return The unreachable at the given index.
+   */
+  com.google.protobuf.ByteString
+      getUnreachableBytes(int index);
 }
