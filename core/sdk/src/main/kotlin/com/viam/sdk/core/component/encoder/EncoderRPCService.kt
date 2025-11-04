@@ -1,9 +1,8 @@
 package com.viam.sdk.core.component.encoder
 
-import com.viam.common.v1.Common.*
+import com.viam.common.v1.Common
 import com.viam.component.encoder.v1.Encoder.*
 import com.viam.component.encoder.v1.EncoderServiceGrpc
-import com.viam.sdk.core.component.encoder.Encoder
 import com.viam.sdk.core.resource.ResourceManager
 import com.viam.sdk.core.resource.ResourceRPCService
 import io.grpc.stub.StreamObserver
@@ -48,20 +47,20 @@ internal class EncoderRPCService(private val manager: ResourceManager) : Encoder
     }
 
     override fun doCommand(
-        request: DoCommandRequest, responseObserver: StreamObserver<DoCommandResponse>
+        request: Common.DoCommandRequest, responseObserver: StreamObserver<Common.DoCommandResponse>
     ) {
         val encoder = getResource(Encoder.named(request.name))
         val result = encoder.doCommand(request.command.fieldsMap)
-        responseObserver.onNext(DoCommandResponse.newBuilder().setResult(result).build())
+        responseObserver.onNext(Common.DoCommandResponse.newBuilder().setResult(result).build())
         responseObserver.onCompleted()
     }
 
     override fun getGeometries(
-        request: GetGeometriesRequest, responseObserver: StreamObserver<GetGeometriesResponse>
+        request: Common.GetGeometriesRequest, responseObserver: StreamObserver<Common.GetGeometriesResponse>
     ) {
         val encoder = getResource(Encoder.named(request.name))
         val result = encoder.getGeometries(Optional.of(request.extra))
-        responseObserver.onNext(GetGeometriesResponse.newBuilder().addAllGeometries(result).build())
+        responseObserver.onNext(Common.GetGeometriesResponse.newBuilder().addAllGeometries(result).build())
         responseObserver.onCompleted()
     }
 

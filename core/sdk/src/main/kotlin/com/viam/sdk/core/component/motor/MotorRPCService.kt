@@ -1,6 +1,6 @@
 package com.viam.sdk.core.component.motor
 
-import com.viam.common.v1.Common.*
+import com.viam.common.v1.Common
 import com.viam.component.motor.v1.Motor.*
 import com.viam.component.motor.v1.MotorServiceGrpc
 import com.viam.sdk.core.resource.ResourceManager
@@ -100,20 +100,20 @@ internal class MotorRPCService(private val manager: ResourceManager) : MotorServ
     }
 
     override fun doCommand(
-        request: DoCommandRequest, responseObserver: StreamObserver<DoCommandResponse>
+        request: Common.DoCommandRequest, responseObserver: StreamObserver<Common.DoCommandResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
         val result = motor.doCommand(request.command.fieldsMap)
-        responseObserver.onNext(DoCommandResponse.newBuilder().setResult(result).build())
+        responseObserver.onNext(Common.DoCommandResponse.newBuilder().setResult(result).build())
         responseObserver.onCompleted()
     }
 
     override fun getGeometries(
-        request: GetGeometriesRequest, responseObserver: StreamObserver<GetGeometriesResponse>
+        request: Common.GetGeometriesRequest, responseObserver: StreamObserver<Common.GetGeometriesResponse>
     ) {
         val motor = getResource(Motor.named(request.name))
         val result = motor.getGeometries(Optional.of(request.extra))
-        responseObserver.onNext(GetGeometriesResponse.newBuilder().addAllGeometries(result).build())
+        responseObserver.onNext(Common.GetGeometriesResponse.newBuilder().addAllGeometries(result).build())
         responseObserver.onCompleted()
     }
 

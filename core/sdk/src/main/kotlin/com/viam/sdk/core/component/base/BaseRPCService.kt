@@ -1,6 +1,6 @@
 package com.viam.sdk.core.component.base
 
-import com.viam.common.v1.Common.*
+import com.viam.common.v1.Common
 import com.viam.component.base.v1.BaseServiceGrpc
 import com.viam.component.base.v1.Base.*
 import com.viam.sdk.core.resource.ResourceManager
@@ -70,20 +70,20 @@ internal class BaseRPCService(private val manager: ResourceManager) : BaseServic
     }
 
     override fun doCommand(
-        request: DoCommandRequest, responseObserver: StreamObserver<DoCommandResponse>
+        request: Common.DoCommandRequest, responseObserver: StreamObserver<Common.DoCommandResponse>
     ) {
         val base = getResource(Base.named(request.name))
         val result = base.doCommand(request.command.fieldsMap)
-        responseObserver.onNext(DoCommandResponse.newBuilder().setResult(result).build())
+        responseObserver.onNext(Common.DoCommandResponse.newBuilder().setResult(result).build())
         responseObserver.onCompleted()
     }
 
     override fun getGeometries(
-        request: GetGeometriesRequest, responseObserver: StreamObserver<GetGeometriesResponse>
+        request: Common.GetGeometriesRequest, responseObserver: StreamObserver<Common.GetGeometriesResponse>
     ) {
         val base = getResource(Base.named(request.name))
         val result = base.getGeometries(Optional.of(request.extra))
-        responseObserver.onNext(GetGeometriesResponse.newBuilder().addAllGeometries(result).build())
+        responseObserver.onNext(Common.GetGeometriesResponse.newBuilder().addAllGeometries(result).build())
         responseObserver.onCompleted()
     }
     
