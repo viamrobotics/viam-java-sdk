@@ -21,6 +21,7 @@ public  final class ListOperationsResponse extends
   private ListOperationsResponse() {
     operations_ = emptyProtobufList();
     nextPageToken_ = "";
+    unreachable_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
   }
   public static final int OPERATIONS_FIELD_NUMBER = 1;
   private com.google.protobuf.Internal.ProtobufList<com.google.longrunning.Operation> operations_;
@@ -225,6 +226,162 @@ public  final class ListOperationsResponse extends
     checkByteStringIsUtf8(value);
     nextPageToken_ = value.toStringUtf8();
 
+  }
+
+  public static final int UNREACHABLE_FIELD_NUMBER = 3;
+  private com.google.protobuf.Internal.ProtobufList<java.lang.String> unreachable_;
+  /**
+   * <pre>
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * </pre>
+   *
+   * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+   * @return A list containing the unreachable.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.String> getUnreachableList() {
+    return unreachable_;
+  }
+  /**
+   * <pre>
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * </pre>
+   *
+   * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+   * @return The count of unreachable.
+   */
+  @java.lang.Override
+  public int getUnreachableCount() {
+    return unreachable_.size();
+  }
+  /**
+   * <pre>
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * </pre>
+   *
+   * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+   * @param index The index of the element to return.
+   * @return The unreachable at the given index.
+   */
+  @java.lang.Override
+  public java.lang.String getUnreachable(int index) {
+    return unreachable_.get(index);
+  }
+  /**
+   * <pre>
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * </pre>
+   *
+   * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the unreachable at the given index.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUnreachableBytes(int index) {
+    return com.google.protobuf.ByteString.copyFromUtf8(
+        unreachable_.get(index));
+  }
+  private void ensureUnreachableIsMutable() {
+    com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+        unreachable_;  if (!tmp.isModifiable()) {
+      unreachable_ =
+          com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+     }
+  }
+  /**
+   * <pre>
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * </pre>
+   *
+   * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+   * @param index The index to set the value at.
+   * @param value The unreachable to set.
+   */
+  private void setUnreachable(
+      int index, java.lang.String value) {
+    java.lang.Class<?> valueClass = value.getClass();
+  ensureUnreachableIsMutable();
+    unreachable_.set(index, value);
+  }
+  /**
+   * <pre>
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * </pre>
+   *
+   * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+   * @param value The unreachable to add.
+   */
+  private void addUnreachable(
+      java.lang.String value) {
+    java.lang.Class<?> valueClass = value.getClass();
+  ensureUnreachableIsMutable();
+    unreachable_.add(value);
+  }
+  /**
+   * <pre>
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * </pre>
+   *
+   * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+   * @param values The unreachable to add.
+   */
+  private void addAllUnreachable(
+      java.lang.Iterable<java.lang.String> values) {
+    ensureUnreachableIsMutable();
+    com.google.protobuf.AbstractMessageLite.addAll(
+        values, unreachable_);
+  }
+  /**
+   * <pre>
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * </pre>
+   *
+   * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+   */
+  private void clearUnreachable() {
+    unreachable_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+  }
+  /**
+   * <pre>
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across
+   * collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * </pre>
+   *
+   * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+   * @param value The bytes of the unreachable to add.
+   */
+  private void addUnreachableBytes(
+      com.google.protobuf.ByteString value) {
+    checkByteStringIsUtf8(value);
+    ensureUnreachableIsMutable();
+    unreachable_.add(value.toStringUtf8());
   }
 
   public static com.google.longrunning.ListOperationsResponse parseFrom(
@@ -548,6 +705,161 @@ public  final class ListOperationsResponse extends
       return this;
     }
 
+    /**
+     * <pre>
+     * Unordered list. Unreachable resources. Populated when the request sets
+     * `ListOperationsRequest.return_partial_success` and reads across
+     * collections e.g. when attempting to list all resources across all supported
+     * locations.
+     * </pre>
+     *
+     * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+     * @return A list containing the unreachable.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String>
+        getUnreachableList() {
+      return java.util.Collections.unmodifiableList(
+          instance.getUnreachableList());
+    }
+    /**
+     * <pre>
+     * Unordered list. Unreachable resources. Populated when the request sets
+     * `ListOperationsRequest.return_partial_success` and reads across
+     * collections e.g. when attempting to list all resources across all supported
+     * locations.
+     * </pre>
+     *
+     * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+     * @return The count of unreachable.
+     */
+    @java.lang.Override
+    public int getUnreachableCount() {
+      return instance.getUnreachableCount();
+    }
+    /**
+     * <pre>
+     * Unordered list. Unreachable resources. Populated when the request sets
+     * `ListOperationsRequest.return_partial_success` and reads across
+     * collections e.g. when attempting to list all resources across all supported
+     * locations.
+     * </pre>
+     *
+     * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+     * @param index The index of the element to return.
+     * @return The unreachable at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getUnreachable(int index) {
+      return instance.getUnreachable(index);
+    }
+    /**
+     * <pre>
+     * Unordered list. Unreachable resources. Populated when the request sets
+     * `ListOperationsRequest.return_partial_success` and reads across
+     * collections e.g. when attempting to list all resources across all supported
+     * locations.
+     * </pre>
+     *
+     * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the unreachable at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUnreachableBytes(int index) {
+      return instance.getUnreachableBytes(index);
+    }
+    /**
+     * <pre>
+     * Unordered list. Unreachable resources. Populated when the request sets
+     * `ListOperationsRequest.return_partial_success` and reads across
+     * collections e.g. when attempting to list all resources across all supported
+     * locations.
+     * </pre>
+     *
+     * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+     * @param index The index to set the value at.
+     * @param value The unreachable to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUnreachable(
+        int index, java.lang.String value) {
+      copyOnWrite();
+      instance.setUnreachable(index, value);
+      return this;
+    }
+    /**
+     * <pre>
+     * Unordered list. Unreachable resources. Populated when the request sets
+     * `ListOperationsRequest.return_partial_success` and reads across
+     * collections e.g. when attempting to list all resources across all supported
+     * locations.
+     * </pre>
+     *
+     * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+     * @param value The unreachable to add.
+     * @return This builder for chaining.
+     */
+    public Builder addUnreachable(
+        java.lang.String value) {
+      copyOnWrite();
+      instance.addUnreachable(value);
+      return this;
+    }
+    /**
+     * <pre>
+     * Unordered list. Unreachable resources. Populated when the request sets
+     * `ListOperationsRequest.return_partial_success` and reads across
+     * collections e.g. when attempting to list all resources across all supported
+     * locations.
+     * </pre>
+     *
+     * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+     * @param values The unreachable to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllUnreachable(
+        java.lang.Iterable<java.lang.String> values) {
+      copyOnWrite();
+      instance.addAllUnreachable(values);
+      return this;
+    }
+    /**
+     * <pre>
+     * Unordered list. Unreachable resources. Populated when the request sets
+     * `ListOperationsRequest.return_partial_success` and reads across
+     * collections e.g. when attempting to list all resources across all supported
+     * locations.
+     * </pre>
+     *
+     * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUnreachable() {
+      copyOnWrite();
+      instance.clearUnreachable();
+      return this;
+    }
+    /**
+     * <pre>
+     * Unordered list. Unreachable resources. Populated when the request sets
+     * `ListOperationsRequest.return_partial_success` and reads across
+     * collections e.g. when attempting to list all resources across all supported
+     * locations.
+     * </pre>
+     *
+     * <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code>
+     * @param value The bytes of the unreachable to add.
+     * @return This builder for chaining.
+     */
+    public Builder addUnreachableBytes(
+        com.google.protobuf.ByteString value) {
+      copyOnWrite();
+      instance.addUnreachableBytes(value);
+      return this;
+    }
+
     // @@protoc_insertion_point(builder_scope:google.longrunning.ListOperationsResponse)
   }
   @java.lang.Override
@@ -567,10 +879,11 @@ public  final class ListOperationsResponse extends
             "operations_",
             com.google.longrunning.Operation.class,
             "nextPageToken_",
+            "unreachable_",
           };
           java.lang.String info =
-              "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u0208" +
-              "";
+              "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0002\u0000\u0001\u001b\u0002\u0208" +
+              "\u0003\u021a";
           return newMessageInfo(DEFAULT_INSTANCE, info, objects);
       }
       // fall through

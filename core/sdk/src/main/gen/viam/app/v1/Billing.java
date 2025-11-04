@@ -10622,6 +10622,12 @@ public final class Billing {
      */
     com.google.protobuf.ByteString
         getOrgIdForBrandingBytes();
+
+    /**
+     * <code>bool disable_email = 5 [json_name = "disableEmail"];</code>
+     * @return The disableEmail.
+     */
+    boolean getDisableEmail();
   }
   /**
    * Protobuf type {@code viam.app.v1.CreateInvoiceAndChargeImmediatelyRequest}
@@ -10818,6 +10824,32 @@ public final class Billing {
       checkByteStringIsUtf8(value);
       orgIdForBranding_ = value.toStringUtf8();
       bitField0_ |= 0x00000002;
+    }
+
+    public static final int DISABLE_EMAIL_FIELD_NUMBER = 5;
+    private boolean disableEmail_;
+    /**
+     * <code>bool disable_email = 5 [json_name = "disableEmail"];</code>
+     * @return The disableEmail.
+     */
+    @java.lang.Override
+    public boolean getDisableEmail() {
+      return disableEmail_;
+    }
+    /**
+     * <code>bool disable_email = 5 [json_name = "disableEmail"];</code>
+     * @param value The disableEmail to set.
+     */
+    private void setDisableEmail(boolean value) {
+      
+      disableEmail_ = value;
+    }
+    /**
+     * <code>bool disable_email = 5 [json_name = "disableEmail"];</code>
+     */
+    private void clearDisableEmail() {
+
+      disableEmail_ = false;
     }
 
     public static viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest parseFrom(
@@ -11108,6 +11140,34 @@ public final class Billing {
         return this;
       }
 
+      /**
+       * <code>bool disable_email = 5 [json_name = "disableEmail"];</code>
+       * @return The disableEmail.
+       */
+      @java.lang.Override
+      public boolean getDisableEmail() {
+        return instance.getDisableEmail();
+      }
+      /**
+       * <code>bool disable_email = 5 [json_name = "disableEmail"];</code>
+       * @param value The disableEmail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisableEmail(boolean value) {
+        copyOnWrite();
+        instance.setDisableEmail(value);
+        return this;
+      }
+      /**
+       * <code>bool disable_email = 5 [json_name = "disableEmail"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisableEmail() {
+        copyOnWrite();
+        instance.clearDisableEmail();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.CreateInvoiceAndChargeImmediatelyRequest)
     }
     @java.lang.Override
@@ -11129,10 +11189,11 @@ public final class Billing {
               "amount_",
               "description_",
               "orgIdForBranding_",
+              "disableEmail_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0000" +
-                "\u0003\u1208\u0000\u0004\u1208\u0001";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0000" +
+                "\u0003\u1208\u0000\u0004\u1208\u0001\u0005\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
