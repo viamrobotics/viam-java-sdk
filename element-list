@@ -9,7 +9,9 @@ com.google.rpc.context
 com.google.type
 com.viam.common.v1
 com.viam.component.arm.v1
+com.viam.component.audioin.v1
 com.viam.component.audioinput.v1
+com.viam.component.audioout.v1
 com.viam.component.base.v1
 com.viam.component.board.v1
 com.viam.component.button.v1

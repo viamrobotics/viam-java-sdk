@@ -136,6 +136,9 @@ implements <a href="ListOperationsResponseOrBuilder.html" title="interface in co
 <div class="col-first odd-row-color"><code>static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#OPERATIONS_FIELD_NUMBER" class="member-name-link">OPERATIONS_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#UNREACHABLE_FIELD_NUMBER" class="member-name-link">UNREACHABLE_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -205,6 +208,30 @@ implements <a href="ListOperationsResponseOrBuilder.html" title="interface in co
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  A list of operations that matches the specified filter in the request.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUnreachable(int)" class="member-name-link">getUnreachable</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Unordered list.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUnreachableBytes(int)" class="member-name-link">getUnreachableBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Unordered list.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUnreachableCount()" class="member-name-link">getUnreachableCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Unordered list.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUnreachableList()" class="member-name-link">getUnreachableList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Unordered list.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ListOperationsResponse.Builder.html" title="class in com.google.longrunning">ListOperationsResponse.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -306,6 +333,20 @@ implements <a href="ListOperationsResponseOrBuilder.html" title="interface in co
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#com.google.longrunning.ListOperationsResponse.NEXT_PAGE_TOKEN_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="UNREACHABLE_FIELD_NUMBER">
+<h3>UNREACHABLE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">UNREACHABLE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#com.google.longrunning.ListOperationsResponse.UNREACHABLE_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -417,6 +458,90 @@ implements <a href="ListOperationsResponseOrBuilder.html" title="interface in co
 <dd><code><a href="ListOperationsResponseOrBuilder.html#getNextPageTokenBytes()">getNextPageTokenBytes</a></code>&nbsp;in interface&nbsp;<code><a href="ListOperationsResponseOrBuilder.html" title="interface in com.google.longrunning">ListOperationsResponseOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for nextPageToken.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUnreachableList()">
+<h3>getUnreachableList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getUnreachableList</span>()</div>
+<div class="block"><pre>
+ Unordered list. Unreachable resources. Populated when the request sets
+ `ListOperationsRequest.return_partial_success` and reads across
+ collections e.g. when attempting to list all resources across all supported
+ locations.
+ </pre>
+
+ <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ListOperationsResponseOrBuilder.html#getUnreachableList()">getUnreachableList</a></code>&nbsp;in interface&nbsp;<code><a href="ListOperationsResponseOrBuilder.html" title="interface in com.google.longrunning">ListOperationsResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>A list containing the unreachable.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUnreachableCount()">
+<h3>getUnreachableCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getUnreachableCount</span>()</div>
+<div class="block"><pre>
+ Unordered list. Unreachable resources. Populated when the request sets
+ `ListOperationsRequest.return_partial_success` and reads across
+ collections e.g. when attempting to list all resources across all supported
+ locations.
+ </pre>
+
+ <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ListOperationsResponseOrBuilder.html#getUnreachableCount()">getUnreachableCount</a></code>&nbsp;in interface&nbsp;<code><a href="ListOperationsResponseOrBuilder.html" title="interface in com.google.longrunning">ListOperationsResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The count of unreachable.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUnreachable(int)">
+<h3>getUnreachable</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getUnreachable</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ Unordered list. Unreachable resources. Populated when the request sets
+ `ListOperationsRequest.return_partial_success` and reads across
+ collections e.g. when attempting to list all resources across all supported
+ locations.
+ </pre>
+
+ <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ListOperationsResponseOrBuilder.html#getUnreachable(int)">getUnreachable</a></code>&nbsp;in interface&nbsp;<code><a href="ListOperationsResponseOrBuilder.html" title="interface in com.google.longrunning">ListOperationsResponseOrBuilder</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index of the element to return.</dd>
+<dt>Returns:</dt>
+<dd>The unreachable at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUnreachableBytes(int)">
+<h3>getUnreachableBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getUnreachableBytes</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ Unordered list. Unreachable resources. Populated when the request sets
+ `ListOperationsRequest.return_partial_success` and reads across
+ collections e.g. when attempting to list all resources across all supported
+ locations.
+ </pre>
+
+ <code>repeated string unreachable = 3 [json_name = "unreachable", (.google.api.field_behavior) = UNORDERED_LIST];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ListOperationsResponseOrBuilder.html#getUnreachableBytes(int)">getUnreachableBytes</a></code>&nbsp;in interface&nbsp;<code><a href="ListOperationsResponseOrBuilder.html" title="interface in com.google.longrunning">ListOperationsResponseOrBuilder</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index of the value to return.</dd>
+<dt>Returns:</dt>
+<dd>The bytes of the unreachable at the given index.</dd>
 </dl>
 </section>
 </li>
