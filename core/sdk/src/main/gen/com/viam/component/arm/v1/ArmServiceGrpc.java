@@ -318,6 +318,36 @@ public final class ArmServiceGrpc {
     return getGetGeometriesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.Get3DModelsRequest,
+      com.viam.common.v1.Common.Get3DModelsResponse> getGet3DModelsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Get3DModels",
+      requestType = com.viam.common.v1.Common.Get3DModelsRequest.class,
+      responseType = com.viam.common.v1.Common.Get3DModelsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.Get3DModelsRequest,
+      com.viam.common.v1.Common.Get3DModelsResponse> getGet3DModelsMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.Get3DModelsRequest, com.viam.common.v1.Common.Get3DModelsResponse> getGet3DModelsMethod;
+    if ((getGet3DModelsMethod = ArmServiceGrpc.getGet3DModelsMethod) == null) {
+      synchronized (ArmServiceGrpc.class) {
+        if ((getGet3DModelsMethod = ArmServiceGrpc.getGet3DModelsMethod) == null) {
+          ArmServiceGrpc.getGet3DModelsMethod = getGet3DModelsMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.Get3DModelsRequest, com.viam.common.v1.Common.Get3DModelsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get3DModels"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.Get3DModelsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.Get3DModelsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGet3DModelsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -472,6 +502,16 @@ public final class ArmServiceGrpc {
         io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGeometriesMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Get3DModels returns the 3D models of the component
+     * </pre>
+     */
+    default void get3DModels(com.viam.common.v1.Common.Get3DModelsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.Get3DModelsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGet3DModelsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -620,6 +660,17 @@ public final class ArmServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Get3DModels returns the 3D models of the component
+     * </pre>
+     */
+    public void get3DModels(com.viam.common.v1.Common.Get3DModelsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.Get3DModelsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGet3DModelsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -743,6 +794,16 @@ public final class ArmServiceGrpc {
     public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get3DModels returns the 3D models of the component
+     * </pre>
+     */
+    public com.viam.common.v1.Common.Get3DModelsResponse get3DModels(com.viam.common.v1.Common.Get3DModelsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGet3DModelsMethod(), getCallOptions(), request);
     }
   }
 
@@ -878,6 +939,17 @@ public final class ArmServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Get3DModels returns the 3D models of the component
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.Get3DModelsResponse> get3DModels(
+        com.viam.common.v1.Common.Get3DModelsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGet3DModelsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_END_POSITION = 0;
@@ -890,6 +962,7 @@ public final class ArmServiceGrpc {
   private static final int METHODID_DO_COMMAND = 7;
   private static final int METHODID_GET_KINEMATICS = 8;
   private static final int METHODID_GET_GEOMETRIES = 9;
+  private static final int METHODID_GET3DMODELS = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -947,6 +1020,10 @@ public final class ArmServiceGrpc {
         case METHODID_GET_GEOMETRIES:
           serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse>) responseObserver);
+          break;
+        case METHODID_GET3DMODELS:
+          serviceImpl.get3DModels((com.viam.common.v1.Common.Get3DModelsRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.Get3DModelsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1036,6 +1113,13 @@ public final class ArmServiceGrpc {
               com.viam.common.v1.Common.GetGeometriesRequest,
               com.viam.common.v1.Common.GetGeometriesResponse>(
                 service, METHODID_GET_GEOMETRIES)))
+        .addMethod(
+          getGet3DModelsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.Get3DModelsRequest,
+              com.viam.common.v1.Common.Get3DModelsResponse>(
+                service, METHODID_GET3DMODELS)))
         .build();
   }
 
@@ -1058,6 +1142,7 @@ public final class ArmServiceGrpc {
               .addMethod(getDoCommandMethod())
               .addMethod(getGetKinematicsMethod())
               .addMethod(getGetGeometriesMethod())
+              .addMethod(getGet3DModelsMethod())
               .build();
         }
       }

@@ -798,6 +798,156 @@ public final class DataServiceGrpc {
     return getDeleteIndexMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateSavedQueryRequest,
+      viam.app.data.v1.Data.CreateSavedQueryResponse> getCreateSavedQueryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateSavedQuery",
+      requestType = viam.app.data.v1.Data.CreateSavedQueryRequest.class,
+      responseType = viam.app.data.v1.Data.CreateSavedQueryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateSavedQueryRequest,
+      viam.app.data.v1.Data.CreateSavedQueryResponse> getCreateSavedQueryMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateSavedQueryRequest, viam.app.data.v1.Data.CreateSavedQueryResponse> getCreateSavedQueryMethod;
+    if ((getCreateSavedQueryMethod = DataServiceGrpc.getCreateSavedQueryMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getCreateSavedQueryMethod = DataServiceGrpc.getCreateSavedQueryMethod) == null) {
+          DataServiceGrpc.getCreateSavedQueryMethod = getCreateSavedQueryMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.CreateSavedQueryRequest, viam.app.data.v1.Data.CreateSavedQueryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSavedQuery"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.CreateSavedQueryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.CreateSavedQueryResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getCreateSavedQueryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.UpdateSavedQueryRequest,
+      viam.app.data.v1.Data.UpdateSavedQueryResponse> getUpdateSavedQueryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateSavedQuery",
+      requestType = viam.app.data.v1.Data.UpdateSavedQueryRequest.class,
+      responseType = viam.app.data.v1.Data.UpdateSavedQueryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.UpdateSavedQueryRequest,
+      viam.app.data.v1.Data.UpdateSavedQueryResponse> getUpdateSavedQueryMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.UpdateSavedQueryRequest, viam.app.data.v1.Data.UpdateSavedQueryResponse> getUpdateSavedQueryMethod;
+    if ((getUpdateSavedQueryMethod = DataServiceGrpc.getUpdateSavedQueryMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getUpdateSavedQueryMethod = DataServiceGrpc.getUpdateSavedQueryMethod) == null) {
+          DataServiceGrpc.getUpdateSavedQueryMethod = getUpdateSavedQueryMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.UpdateSavedQueryRequest, viam.app.data.v1.Data.UpdateSavedQueryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSavedQuery"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.UpdateSavedQueryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.UpdateSavedQueryResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUpdateSavedQueryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetSavedQueryRequest,
+      viam.app.data.v1.Data.GetSavedQueryResponse> getGetSavedQueryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSavedQuery",
+      requestType = viam.app.data.v1.Data.GetSavedQueryRequest.class,
+      responseType = viam.app.data.v1.Data.GetSavedQueryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetSavedQueryRequest,
+      viam.app.data.v1.Data.GetSavedQueryResponse> getGetSavedQueryMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetSavedQueryRequest, viam.app.data.v1.Data.GetSavedQueryResponse> getGetSavedQueryMethod;
+    if ((getGetSavedQueryMethod = DataServiceGrpc.getGetSavedQueryMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getGetSavedQueryMethod = DataServiceGrpc.getGetSavedQueryMethod) == null) {
+          DataServiceGrpc.getGetSavedQueryMethod = getGetSavedQueryMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.GetSavedQueryRequest, viam.app.data.v1.Data.GetSavedQueryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSavedQuery"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.GetSavedQueryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.GetSavedQueryResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetSavedQueryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteSavedQueryRequest,
+      viam.app.data.v1.Data.DeleteSavedQueryResponse> getDeleteSavedQueryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteSavedQuery",
+      requestType = viam.app.data.v1.Data.DeleteSavedQueryRequest.class,
+      responseType = viam.app.data.v1.Data.DeleteSavedQueryResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteSavedQueryRequest,
+      viam.app.data.v1.Data.DeleteSavedQueryResponse> getDeleteSavedQueryMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteSavedQueryRequest, viam.app.data.v1.Data.DeleteSavedQueryResponse> getDeleteSavedQueryMethod;
+    if ((getDeleteSavedQueryMethod = DataServiceGrpc.getDeleteSavedQueryMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getDeleteSavedQueryMethod = DataServiceGrpc.getDeleteSavedQueryMethod) == null) {
+          DataServiceGrpc.getDeleteSavedQueryMethod = getDeleteSavedQueryMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.DeleteSavedQueryRequest, viam.app.data.v1.Data.DeleteSavedQueryResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSavedQuery"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.DeleteSavedQueryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.DeleteSavedQueryResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getDeleteSavedQueryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.ListSavedQueriesRequest,
+      viam.app.data.v1.Data.ListSavedQueriesResponse> getListSavedQueriesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSavedQueries",
+      requestType = viam.app.data.v1.Data.ListSavedQueriesRequest.class,
+      responseType = viam.app.data.v1.Data.ListSavedQueriesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.ListSavedQueriesRequest,
+      viam.app.data.v1.Data.ListSavedQueriesResponse> getListSavedQueriesMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.ListSavedQueriesRequest, viam.app.data.v1.Data.ListSavedQueriesResponse> getListSavedQueriesMethod;
+    if ((getListSavedQueriesMethod = DataServiceGrpc.getListSavedQueriesMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getListSavedQueriesMethod = DataServiceGrpc.getListSavedQueriesMethod) == null) {
+          DataServiceGrpc.getListSavedQueriesMethod = getListSavedQueriesMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.ListSavedQueriesRequest, viam.app.data.v1.Data.ListSavedQueriesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSavedQueries"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.ListSavedQueriesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.ListSavedQueriesResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getListSavedQueriesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1114,6 +1264,56 @@ public final class DataServiceGrpc {
     default void deleteIndex(viam.app.data.v1.Data.DeleteIndexRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteIndexResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteIndexMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateSavedQuery saves a mql query.
+     * </pre>
+     */
+    default void createSavedQuery(viam.app.data.v1.Data.CreateSavedQueryRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateSavedQueryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSavedQueryMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateSavedQuery updates the saved query with the given id.
+     * </pre>
+     */
+    default void updateSavedQuery(viam.app.data.v1.Data.UpdateSavedQueryRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.UpdateSavedQueryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSavedQueryMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetSavedQuery retrieves a saved query by id.
+     * </pre>
+     */
+    default void getSavedQuery(viam.app.data.v1.Data.GetSavedQueryRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetSavedQueryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSavedQueryMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteSavedQuery deletes a saved query based on the given id.
+     * </pre>
+     */
+    default void deleteSavedQuery(viam.app.data.v1.Data.DeleteSavedQueryRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteSavedQueryResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSavedQueryMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListSavedQueries lists saved queries for a given organization.
+     * </pre>
+     */
+    default void listSavedQueries(viam.app.data.v1.Data.ListSavedQueriesRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListSavedQueriesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSavedQueriesMethod(), responseObserver);
     }
   }
 
@@ -1442,6 +1642,61 @@ public final class DataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteIndexMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateSavedQuery saves a mql query.
+     * </pre>
+     */
+    public void createSavedQuery(viam.app.data.v1.Data.CreateSavedQueryRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateSavedQueryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateSavedQueryMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateSavedQuery updates the saved query with the given id.
+     * </pre>
+     */
+    public void updateSavedQuery(viam.app.data.v1.Data.UpdateSavedQueryRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.UpdateSavedQueryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateSavedQueryMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetSavedQuery retrieves a saved query by id.
+     * </pre>
+     */
+    public void getSavedQuery(viam.app.data.v1.Data.GetSavedQueryRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetSavedQueryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetSavedQueryMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteSavedQuery deletes a saved query based on the given id.
+     * </pre>
+     */
+    public void deleteSavedQuery(viam.app.data.v1.Data.DeleteSavedQueryRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteSavedQueryResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteSavedQueryMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListSavedQueries lists saved queries for a given organization.
+     * </pre>
+     */
+    public void listSavedQueries(viam.app.data.v1.Data.ListSavedQueriesRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListSavedQueriesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListSavedQueriesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1729,6 +1984,56 @@ public final class DataServiceGrpc {
     public viam.app.data.v1.Data.DeleteIndexResponse deleteIndex(viam.app.data.v1.Data.DeleteIndexRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteIndexMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateSavedQuery saves a mql query.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.CreateSavedQueryResponse createSavedQuery(viam.app.data.v1.Data.CreateSavedQueryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateSavedQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateSavedQuery updates the saved query with the given id.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.UpdateSavedQueryResponse updateSavedQuery(viam.app.data.v1.Data.UpdateSavedQueryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateSavedQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetSavedQuery retrieves a saved query by id.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.GetSavedQueryResponse getSavedQuery(viam.app.data.v1.Data.GetSavedQueryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetSavedQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteSavedQuery deletes a saved query based on the given id.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.DeleteSavedQueryResponse deleteSavedQuery(viam.app.data.v1.Data.DeleteSavedQueryRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteSavedQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListSavedQueries lists saved queries for a given organization.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.ListSavedQueriesResponse listSavedQueries(viam.app.data.v1.Data.ListSavedQueriesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListSavedQueriesMethod(), getCallOptions(), request);
     }
   }
 
@@ -2032,6 +2337,61 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteIndexMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * CreateSavedQuery saves a mql query.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.CreateSavedQueryResponse> createSavedQuery(
+        viam.app.data.v1.Data.CreateSavedQueryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateSavedQueryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateSavedQuery updates the saved query with the given id.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.UpdateSavedQueryResponse> updateSavedQuery(
+        viam.app.data.v1.Data.UpdateSavedQueryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateSavedQueryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetSavedQuery retrieves a saved query by id.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.GetSavedQueryResponse> getSavedQuery(
+        viam.app.data.v1.Data.GetSavedQueryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetSavedQueryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteSavedQuery deletes a saved query based on the given id.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.DeleteSavedQueryResponse> deleteSavedQuery(
+        viam.app.data.v1.Data.DeleteSavedQueryRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteSavedQueryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListSavedQueries lists saved queries for a given organization.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.ListSavedQueriesResponse> listSavedQueries(
+        viam.app.data.v1.Data.ListSavedQueriesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListSavedQueriesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TABULAR_DATA_BY_FILTER = 0;
@@ -2060,6 +2420,11 @@ public final class DataServiceGrpc {
   private static final int METHODID_CREATE_INDEX = 23;
   private static final int METHODID_LIST_INDEXES = 24;
   private static final int METHODID_DELETE_INDEX = 25;
+  private static final int METHODID_CREATE_SAVED_QUERY = 26;
+  private static final int METHODID_UPDATE_SAVED_QUERY = 27;
+  private static final int METHODID_GET_SAVED_QUERY = 28;
+  private static final int METHODID_DELETE_SAVED_QUERY = 29;
+  private static final int METHODID_LIST_SAVED_QUERIES = 30;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2181,6 +2546,26 @@ public final class DataServiceGrpc {
         case METHODID_DELETE_INDEX:
           serviceImpl.deleteIndex((viam.app.data.v1.Data.DeleteIndexRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteIndexResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_SAVED_QUERY:
+          serviceImpl.createSavedQuery((viam.app.data.v1.Data.CreateSavedQueryRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateSavedQueryResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_SAVED_QUERY:
+          serviceImpl.updateSavedQuery((viam.app.data.v1.Data.UpdateSavedQueryRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.UpdateSavedQueryResponse>) responseObserver);
+          break;
+        case METHODID_GET_SAVED_QUERY:
+          serviceImpl.getSavedQuery((viam.app.data.v1.Data.GetSavedQueryRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetSavedQueryResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_SAVED_QUERY:
+          serviceImpl.deleteSavedQuery((viam.app.data.v1.Data.DeleteSavedQueryRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteSavedQueryResponse>) responseObserver);
+          break;
+        case METHODID_LIST_SAVED_QUERIES:
+          serviceImpl.listSavedQueries((viam.app.data.v1.Data.ListSavedQueriesRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListSavedQueriesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2382,6 +2767,41 @@ public final class DataServiceGrpc {
               viam.app.data.v1.Data.DeleteIndexRequest,
               viam.app.data.v1.Data.DeleteIndexResponse>(
                 service, METHODID_DELETE_INDEX)))
+        .addMethod(
+          getCreateSavedQueryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.CreateSavedQueryRequest,
+              viam.app.data.v1.Data.CreateSavedQueryResponse>(
+                service, METHODID_CREATE_SAVED_QUERY)))
+        .addMethod(
+          getUpdateSavedQueryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.UpdateSavedQueryRequest,
+              viam.app.data.v1.Data.UpdateSavedQueryResponse>(
+                service, METHODID_UPDATE_SAVED_QUERY)))
+        .addMethod(
+          getGetSavedQueryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.GetSavedQueryRequest,
+              viam.app.data.v1.Data.GetSavedQueryResponse>(
+                service, METHODID_GET_SAVED_QUERY)))
+        .addMethod(
+          getDeleteSavedQueryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.DeleteSavedQueryRequest,
+              viam.app.data.v1.Data.DeleteSavedQueryResponse>(
+                service, METHODID_DELETE_SAVED_QUERY)))
+        .addMethod(
+          getListSavedQueriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.ListSavedQueriesRequest,
+              viam.app.data.v1.Data.ListSavedQueriesResponse>(
+                service, METHODID_LIST_SAVED_QUERIES)))
         .build();
   }
 
@@ -2420,6 +2840,11 @@ public final class DataServiceGrpc {
               .addMethod(getCreateIndexMethod())
               .addMethod(getListIndexesMethod())
               .addMethod(getDeleteIndexMethod())
+              .addMethod(getCreateSavedQueryMethod())
+              .addMethod(getUpdateSavedQueryMethod())
+              .addMethod(getGetSavedQueryMethod())
+              .addMethod(getDeleteSavedQueryMethod())
+              .addMethod(getListSavedQueriesMethod())
               .build();
         }
       }

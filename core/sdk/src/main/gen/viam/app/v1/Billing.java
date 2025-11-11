@@ -11251,6 +11251,18 @@ public final class Billing {
   public interface CreateInvoiceAndChargeImmediatelyResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.CreateInvoiceAndChargeImmediatelyResponse)
       com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @return The invoiceId.
+     */
+    java.lang.String getInvoiceId();
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @return The bytes for invoiceId.
+     */
+    com.google.protobuf.ByteString
+        getInvoiceIdBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.CreateInvoiceAndChargeImmediatelyResponse}
@@ -11261,7 +11273,55 @@ public final class Billing {
       // @@protoc_insertion_point(message_implements:viam.app.v1.CreateInvoiceAndChargeImmediatelyResponse)
       CreateInvoiceAndChargeImmediatelyResponseOrBuilder {
     private CreateInvoiceAndChargeImmediatelyResponse() {
+      invoiceId_ = "";
     }
+    public static final int INVOICE_ID_FIELD_NUMBER = 1;
+    private java.lang.String invoiceId_;
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @return The invoiceId.
+     */
+    @java.lang.Override
+    public java.lang.String getInvoiceId() {
+      return invoiceId_;
+    }
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @return The bytes for invoiceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInvoiceIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(invoiceId_);
+    }
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @param value The invoiceId to set.
+     */
+    private void setInvoiceId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      invoiceId_ = value;
+    }
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     */
+    private void clearInvoiceId() {
+
+      invoiceId_ = getDefaultInstance().getInvoiceId();
+    }
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @param value The bytes for invoiceId to set.
+     */
+    private void setInvoiceIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      invoiceId_ = value.toStringUtf8();
+
+    }
+
     public static viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -11359,6 +11419,55 @@ public final class Billing {
       }
 
 
+      /**
+       * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+       * @return The invoiceId.
+       */
+      @java.lang.Override
+      public java.lang.String getInvoiceId() {
+        return instance.getInvoiceId();
+      }
+      /**
+       * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+       * @return The bytes for invoiceId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getInvoiceIdBytes() {
+        return instance.getInvoiceIdBytes();
+      }
+      /**
+       * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+       * @param value The invoiceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvoiceId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setInvoiceId(value);
+        return this;
+      }
+      /**
+       * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInvoiceId() {
+        copyOnWrite();
+        instance.clearInvoiceId();
+        return this;
+      }
+      /**
+       * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+       * @param value The bytes for invoiceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvoiceIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setInvoiceIdBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.CreateInvoiceAndChargeImmediatelyResponse)
     }
     @java.lang.Override
@@ -11374,8 +11483,11 @@ public final class Billing {
           return new Builder();
         }
         case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = null;java.lang.String info =
-                "\u0000\u0000";
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "invoiceId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
