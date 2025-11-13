@@ -125,67 +125,74 @@ loadScripts(document, 'script');</script>
  DoCommand sends/receives arbitrary commands</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEndPosition(com.viam.component.arm.v1.Arm.GetEndPositionRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getEndPosition</a><wbr>(<a href="Arm.GetEndPositionRequest.html" title="class in com.viam.component.arm.v1">Arm.GetEndPositionRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Arm.GetEndPositionResponse.html" title="class in com.viam.component.arm.v1">Arm.GetEndPositionResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get3DModels(com.viam.common.v1.Common.Get3DModelsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">get3DModels</a><wbr>(<a href="../../../common/v1/Common.Get3DModelsRequest.html" title="class in com.viam.common.v1">Common.Get3DModelsRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.Get3DModelsResponse.html" title="class in com.viam.common.v1">Common.Get3DModelsResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Get3DModels returns the 3D models of the component</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEndPosition(com.viam.component.arm.v1.Arm.GetEndPositionRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getEndPosition</a><wbr>(<a href="Arm.GetEndPositionRequest.html" title="class in com.viam.component.arm.v1">Arm.GetEndPositionRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Arm.GetEndPositionResponse.html" title="class in com.viam.component.arm.v1">Arm.GetEndPositionResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  GetEndPosition gets the current position the end of the robot's arm expressed as X,Y,Z,ox,oy,oz,theta</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGeometries(com.viam.common.v1.Common.GetGeometriesRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getGeometries</a><wbr>(<a href="../../../common/v1/Common.GetGeometriesRequest.html" title="class in com.viam.common.v1">Common.GetGeometriesRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGeometries(com.viam.common.v1.Common.GetGeometriesRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getGeometries</a><wbr>(<a href="../../../common/v1/Common.GetGeometriesRequest.html" title="class in com.viam.common.v1">Common.GetGeometriesRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.GetGeometriesResponse.html" title="class in com.viam.common.v1">Common.GetGeometriesResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  GetGeometries returns the geometries of the component in their current configuration</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJointPositions(com.viam.component.arm.v1.Arm.GetJointPositionsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getJointPositions</a><wbr>(<a href="Arm.GetJointPositionsRequest.html" title="class in com.viam.component.arm.v1">Arm.GetJointPositionsRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getJointPositions(com.viam.component.arm.v1.Arm.GetJointPositionsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getJointPositions</a><wbr>(<a href="Arm.GetJointPositionsRequest.html" title="class in com.viam.component.arm.v1">Arm.GetJointPositionsRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Arm.GetJointPositionsResponse.html" title="class in com.viam.component.arm.v1">Arm.GetJointPositionsResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  GetJointPositions lists the joint positions (in degrees) of every joint on a robot</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getKinematics(com.viam.common.v1.Common.GetKinematicsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getKinematics</a><wbr>(<a href="../../../common/v1/Common.GetKinematicsRequest.html" title="class in com.viam.common.v1">Common.GetKinematicsRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getKinematics(com.viam.common.v1.Common.GetKinematicsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getKinematics</a><wbr>(<a href="../../../common/v1/Common.GetKinematicsRequest.html" title="class in com.viam.common.v1">Common.GetKinematicsRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.GetKinematicsResponse.html" title="class in com.viam.common.v1">Common.GetKinematicsResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  GetKinematics returns the kinematics file for the component</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isMoving(com.viam.component.arm.v1.Arm.IsMovingRequest,io.grpc.stub.StreamObserver)" class="member-name-link">isMoving</a><wbr>(<a href="Arm.IsMovingRequest.html" title="class in com.viam.component.arm.v1">Arm.IsMovingRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isMoving(com.viam.component.arm.v1.Arm.IsMovingRequest,io.grpc.stub.StreamObserver)" class="member-name-link">isMoving</a><wbr>(<a href="Arm.IsMovingRequest.html" title="class in com.viam.component.arm.v1">Arm.IsMovingRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Arm.IsMovingResponse.html" title="class in com.viam.component.arm.v1">Arm.IsMovingResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  IsMoving reports if a component is in motion</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveThroughJointPositions(com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveThroughJointPositions</a><wbr>(<a href="Arm.MoveThroughJointPositionsRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveThroughJointPositionsRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveThroughJointPositions(com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveThroughJointPositions</a><wbr>(<a href="Arm.MoveThroughJointPositionsRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveThroughJointPositionsRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Arm.MoveThroughJointPositionsResponse.html" title="class in com.viam.component.arm.v1">Arm.MoveThroughJointPositionsResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  MoveThroughJointPositions moves every joint on a robot's arm to the specified JointPositions in the order they are specified,
  obeying the specified velocity and acceleration limits.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveToJointPositions(com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveToJointPositions</a><wbr>(<a href="Arm.MoveToJointPositionsRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveToJointPositionsRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveToJointPositions(com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveToJointPositions</a><wbr>(<a href="Arm.MoveToJointPositionsRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveToJointPositionsRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Arm.MoveToJointPositionsResponse.html" title="class in com.viam.component.arm.v1">Arm.MoveToJointPositionsResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  MoveToJointPositions moves every joint on a robot's arm to specified angles which are expressed in degrees
  This will block until done or a new operation cancels this one</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveToPosition(com.viam.component.arm.v1.Arm.MoveToPositionRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveToPosition</a><wbr>(<a href="Arm.MoveToPositionRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveToPositionRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveToPosition(com.viam.component.arm.v1.Arm.MoveToPositionRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveToPosition</a><wbr>(<a href="Arm.MoveToPositionRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveToPositionRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Arm.MoveToPositionResponse.html" title="class in com.viam.component.arm.v1">Arm.MoveToPositionResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  MoveToPosition moves the mount point of the robot's end effector to the requested position.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.arm.v1.Arm.StopRequest,io.grpc.stub.StreamObserver)" class="member-name-link">stop</a><wbr>(<a href="Arm.StopRequest.html" title="class in com.viam.component.arm.v1">Arm.StopRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.arm.v1.Arm.StopRequest,io.grpc.stub.StreamObserver)" class="member-name-link">stop</a><wbr>(<a href="Arm.StopRequest.html" title="class in com.viam.component.arm.v1">Arm.StopRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Arm.StopResponse.html" title="class in com.viam.component.arm.v1">Arm.StopResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Stop stops a robot's arm</div>
 </div>
@@ -324,6 +331,16 @@ loadScripts(document, 'script');</script>
  io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.GetGeometriesResponse.html" title="class in com.viam.common.v1">Common.GetGeometriesResponse</a>&gt;&nbsp;responseObserver)</span></div>
 <div class="block"><pre>
  GetGeometries returns the geometries of the component in their current configuration
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="get3DModels(com.viam.common.v1.Common.Get3DModelsRequest,io.grpc.stub.StreamObserver)">
+<h3>get3DModels</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">get3DModels</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.Get3DModelsRequest.html" title="class in com.viam.common.v1">Common.Get3DModelsRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.Get3DModelsResponse.html" title="class in com.viam.common.v1">Common.Get3DModelsResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ Get3DModels returns the 3D models of the component
  </pre></div>
 </section>
 </li>

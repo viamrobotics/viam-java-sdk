@@ -62,6 +62,7 @@ com.viam.service.navigation.v1
 com.viam.service.sensors.v1
 com.viam.service.shell.v1
 com.viam.service.slam.v1
+com.viam.service.video.v1
 com.viam.service.vision.v1
 com.viam.service.worldstatestore.v1
 proto.rpc.examples.echo.v1
