@@ -19635,14 +19635,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=405
+     *     See app/data/v1/data.proto;l=420
      * @return The id.
      */
     @java.lang.Deprecated java.lang.String getId();
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=405
+     *     See app/data/v1/data.proto;l=420
      * @return The bytes for id.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -19791,7 +19791,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=405
+     *     See app/data/v1/data.proto;l=420
      * @return The id.
      */
     @java.lang.Override
@@ -19801,7 +19801,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=405
+     *     See app/data/v1/data.proto;l=420
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -19812,7 +19812,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=405
+     *     See app/data/v1/data.proto;l=420
      * @param value The id to set.
      */
     private void setId(
@@ -19824,7 +19824,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=405
+     *     See app/data/v1/data.proto;l=420
      */
     private void clearId() {
 
@@ -19833,7 +19833,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=405
+     *     See app/data/v1/data.proto;l=420
      * @param value The bytes for id to set.
      */
     private void setIdBytes(
@@ -20412,7 +20412,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=405
+       *     See app/data/v1/data.proto;l=420
        * @return The id.
        */
       @java.lang.Override
@@ -20422,7 +20422,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=405
+       *     See app/data/v1/data.proto;l=420
        * @return The bytes for id.
        */
       @java.lang.Override
@@ -20433,7 +20433,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=405
+       *     See app/data/v1/data.proto;l=420
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -20446,7 +20446,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=405
+       *     See app/data/v1/data.proto;l=420
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearId() {
@@ -20457,7 +20457,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=405
+       *     See app/data/v1/data.proto;l=420
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -27406,14 +27406,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=529
+     *     See app/data/v1/data.proto;l=544
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=529
+     *     See app/data/v1/data.proto;l=544
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -28478,14 +28478,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=548
+     *     See app/data/v1/data.proto;l=563
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=548
+     *     See app/data/v1/data.proto;l=563
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -29184,14 +29184,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=560
+     *     See app/data/v1/data.proto;l=575
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=560
+     *     See app/data/v1/data.proto;l=575
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -37804,6 +37804,4353 @@ com.google.protobuf.Any defaultValue) {
     private static volatile com.google.protobuf.Parser<Index> PARSER;
 
     public static com.google.protobuf.Parser<Index> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CreateSavedQueryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.CreateSavedQueryRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return A list containing the mqlBinary.
+     */
+    java.util.List<com.google.protobuf.ByteString> getMqlBinaryList();
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return The count of mqlBinary.
+     */
+    int getMqlBinaryCount();
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param index The index of the element to return.
+     * @return The mqlBinary at the given index.
+     */
+    com.google.protobuf.ByteString getMqlBinary(int index);
+  }
+  /**
+   * <pre>
+   * CreateSavedQueryRequest saves a mql query.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.CreateSavedQueryRequest}
+   */
+  public  static final class CreateSavedQueryRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreateSavedQueryRequest, CreateSavedQueryRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.CreateSavedQueryRequest)
+      CreateSavedQueryRequestOrBuilder {
+    private CreateSavedQueryRequest() {
+      organizationId_ = "";
+      name_ = "";
+      mqlBinary_ = emptyProtobufList();
+    }
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private java.lang.String name_;
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int MQL_BINARY_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> mqlBinary_;
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return A list containing the mqlBinary.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getMqlBinaryList() {
+      return mqlBinary_;
+    }
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return The count of mqlBinary.
+     */
+    @java.lang.Override
+    public int getMqlBinaryCount() {
+      return mqlBinary_.size();
+    }
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param index The index of the element to return.
+     * @return The mqlBinary at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMqlBinary(int index) {
+      return mqlBinary_.get(index);
+    }
+    private void ensureMqlBinaryIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> tmp = mqlBinary_;
+      if (!tmp.isModifiable()) {
+        mqlBinary_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param index The index to set the value at.
+     * @param value The mqlBinary to set.
+     */
+    private void setMqlBinary(
+        int index, com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureMqlBinaryIsMutable();
+      mqlBinary_.set(index, value);
+    }
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param value The mqlBinary to add.
+     */
+    private void addMqlBinary(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureMqlBinaryIsMutable();
+      mqlBinary_.add(value);
+    }
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param values The mqlBinary to add.
+     */
+    private void addAllMqlBinary(
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+      ensureMqlBinaryIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, mqlBinary_);
+    }
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     */
+    private void clearMqlBinary() {
+      mqlBinary_ = emptyProtobufList();
+    }
+
+    public static viam.app.data.v1.Data.CreateSavedQueryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.CreateSavedQueryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.CreateSavedQueryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.CreateSavedQueryRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * CreateSavedQueryRequest saves a mql query.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.CreateSavedQueryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.CreateSavedQueryRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.CreateSavedQueryRequest)
+        viam.app.data.v1.Data.CreateSavedQueryRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.CreateSavedQueryRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @return A list containing the mqlBinary.
+       */
+      @java.lang.Override
+      public java.util.List<com.google.protobuf.ByteString>
+          getMqlBinaryList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getMqlBinaryList());
+      }
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @return The count of mqlBinary.
+       */
+      @java.lang.Override
+      public int getMqlBinaryCount() {
+        return instance.getMqlBinaryCount();
+      }
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param index The index of the element to return.
+       * @return The mqlBinary at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMqlBinary(int index) {
+        return instance.getMqlBinary(index);
+      }
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param value The mqlBinary to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMqlBinary(
+          int index, com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMqlBinary(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param value The mqlBinary to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMqlBinary(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addMqlBinary(value);
+        return this;
+      }
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param values The mqlBinary to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMqlBinary(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        copyOnWrite();
+        instance.addAllMqlBinary(values);
+        return this;
+      }
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMqlBinary() {
+        copyOnWrite();
+        instance.clearMqlBinary();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.CreateSavedQueryRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.CreateSavedQueryRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "organizationId_",
+              "name_",
+              "mqlBinary_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u001c";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.CreateSavedQueryRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.CreateSavedQueryRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.CreateSavedQueryRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.CreateSavedQueryRequest)
+    private static final viam.app.data.v1.Data.CreateSavedQueryRequest DEFAULT_INSTANCE;
+    static {
+      CreateSavedQueryRequest defaultInstance = new CreateSavedQueryRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CreateSavedQueryRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.CreateSavedQueryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CreateSavedQueryRequest> PARSER;
+
+    public static com.google.protobuf.Parser<CreateSavedQueryRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CreateSavedQueryResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.CreateSavedQueryResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.CreateSavedQueryResponse}
+   */
+  public  static final class CreateSavedQueryResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreateSavedQueryResponse, CreateSavedQueryResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.CreateSavedQueryResponse)
+      CreateSavedQueryResponseOrBuilder {
+    private CreateSavedQueryResponse() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.data.v1.Data.CreateSavedQueryResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.CreateSavedQueryResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.CreateSavedQueryResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateSavedQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.CreateSavedQueryResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.CreateSavedQueryResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.CreateSavedQueryResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.CreateSavedQueryResponse)
+        viam.app.data.v1.Data.CreateSavedQueryResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.CreateSavedQueryResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.CreateSavedQueryResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.CreateSavedQueryResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.CreateSavedQueryResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.CreateSavedQueryResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.CreateSavedQueryResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.CreateSavedQueryResponse)
+    private static final viam.app.data.v1.Data.CreateSavedQueryResponse DEFAULT_INSTANCE;
+    static {
+      CreateSavedQueryResponse defaultInstance = new CreateSavedQueryResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CreateSavedQueryResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.CreateSavedQueryResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CreateSavedQueryResponse> PARSER;
+
+    public static com.google.protobuf.Parser<CreateSavedQueryResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface QueryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.Query)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+     * @return A list containing the mqlBinary.
+     */
+    java.util.List<com.google.protobuf.ByteString> getMqlBinaryList();
+    /**
+     * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+     * @return The count of mqlBinary.
+     */
+    int getMqlBinaryCount();
+    /**
+     * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+     * @param index The index of the element to return.
+     * @return The mqlBinary at the given index.
+     */
+    com.google.protobuf.ByteString getMqlBinary(int index);
+
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
+     * @return Whether the createdOn field is set.
+     */
+    boolean hasCreatedOn();
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
+     * @return The createdOn.
+     */
+    com.google.protobuf.Timestamp getCreatedOn();
+
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];</code>
+     * @return Whether the updatedAt field is set.
+     */
+    boolean hasUpdatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];</code>
+     * @return The updatedAt.
+     */
+    com.google.protobuf.Timestamp getUpdatedAt();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.Query}
+   */
+  public  static final class Query extends
+      com.google.protobuf.GeneratedMessageLite<
+          Query, Query.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.Query)
+      QueryOrBuilder {
+    private Query() {
+      id_ = "";
+      organizationId_ = "";
+      name_ = "";
+      mqlBinary_ = emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 2;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    private java.lang.String name_;
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 3 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int MQL_BINARY_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> mqlBinary_;
+    /**
+     * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+     * @return A list containing the mqlBinary.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getMqlBinaryList() {
+      return mqlBinary_;
+    }
+    /**
+     * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+     * @return The count of mqlBinary.
+     */
+    @java.lang.Override
+    public int getMqlBinaryCount() {
+      return mqlBinary_.size();
+    }
+    /**
+     * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+     * @param index The index of the element to return.
+     * @return The mqlBinary at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMqlBinary(int index) {
+      return mqlBinary_.get(index);
+    }
+    private void ensureMqlBinaryIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> tmp = mqlBinary_;
+      if (!tmp.isModifiable()) {
+        mqlBinary_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+     * @param index The index to set the value at.
+     * @param value The mqlBinary to set.
+     */
+    private void setMqlBinary(
+        int index, com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureMqlBinaryIsMutable();
+      mqlBinary_.set(index, value);
+    }
+    /**
+     * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+     * @param value The mqlBinary to add.
+     */
+    private void addMqlBinary(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureMqlBinaryIsMutable();
+      mqlBinary_.add(value);
+    }
+    /**
+     * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+     * @param values The mqlBinary to add.
+     */
+    private void addAllMqlBinary(
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+      ensureMqlBinaryIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, mqlBinary_);
+    }
+    /**
+     * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+     */
+    private void clearMqlBinary() {
+      mqlBinary_ = emptyProtobufList();
+    }
+
+    public static final int CREATED_ON_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp createdOn_;
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
+     */
+    @java.lang.Override
+    public boolean hasCreatedOn() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedOn() {
+      return createdOn_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
+     */
+    private void setCreatedOn(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  createdOn_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCreatedOn(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (createdOn_ != null &&
+          createdOn_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        createdOn_ =
+          com.google.protobuf.Timestamp.newBuilder(createdOn_).mergeFrom(value).buildPartial();
+      } else {
+        createdOn_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
+     */
+    private void clearCreatedOn() {  createdOn_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int UPDATED_AT_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp updatedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];</code>
+     */
+    @java.lang.Override
+    public boolean hasUpdatedAt() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getUpdatedAt() {
+      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];</code>
+     */
+    private void setUpdatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  updatedAt_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (updatedAt_ != null &&
+          updatedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        updatedAt_ =
+          com.google.protobuf.Timestamp.newBuilder(updatedAt_).mergeFrom(value).buildPartial();
+      } else {
+        updatedAt_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];</code>
+     */
+    private void clearUpdatedAt() {  updatedAt_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static viam.app.data.v1.Data.Query parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.Query parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Query parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.Query parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Query parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.Query parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Query parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.Query parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.Query parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.Query parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Query parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.Query parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.Query prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.Query}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.Query, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.Query)
+        viam.app.data.v1.Data.QueryOrBuilder {
+      // Construct using viam.app.data.v1.Data.Query.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <code>string name = 3 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+       * @return A list containing the mqlBinary.
+       */
+      @java.lang.Override
+      public java.util.List<com.google.protobuf.ByteString>
+          getMqlBinaryList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getMqlBinaryList());
+      }
+      /**
+       * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+       * @return The count of mqlBinary.
+       */
+      @java.lang.Override
+      public int getMqlBinaryCount() {
+        return instance.getMqlBinaryCount();
+      }
+      /**
+       * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+       * @param index The index of the element to return.
+       * @return The mqlBinary at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMqlBinary(int index) {
+        return instance.getMqlBinary(index);
+      }
+      /**
+       * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+       * @param value The mqlBinary to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMqlBinary(
+          int index, com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMqlBinary(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+       * @param value The mqlBinary to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMqlBinary(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addMqlBinary(value);
+        return this;
+      }
+      /**
+       * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+       * @param values The mqlBinary to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMqlBinary(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        copyOnWrite();
+        instance.addAllMqlBinary(values);
+        return this;
+      }
+      /**
+       * <code>repeated bytes mql_binary = 4 [json_name = "mqlBinary"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMqlBinary() {
+        copyOnWrite();
+        instance.clearMqlBinary();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
+       */
+      @java.lang.Override
+      public boolean hasCreatedOn() {
+        return instance.hasCreatedOn();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getCreatedOn() {
+        return instance.getCreatedOn();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
+       */
+      public Builder setCreatedOn(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setCreatedOn(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
+       */
+      public Builder setCreatedOn(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCreatedOn(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
+       */
+      public Builder mergeCreatedOn(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeCreatedOn(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 5 [json_name = "createdOn"];</code>
+       */
+      public Builder clearCreatedOn() {  copyOnWrite();
+        instance.clearCreatedOn();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];</code>
+       */
+      @java.lang.Override
+      public boolean hasUpdatedAt() {
+        return instance.hasUpdatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getUpdatedAt() {
+        return instance.getUpdatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];</code>
+       */
+      public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setUpdatedAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];</code>
+       */
+      public Builder setUpdatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setUpdatedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];</code>
+       */
+      public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeUpdatedAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 6 [json_name = "updatedAt"];</code>
+       */
+      public Builder clearUpdatedAt() {  copyOnWrite();
+        instance.clearUpdatedAt();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.Query)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.Query();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "id_",
+              "organizationId_",
+              "name_",
+              "mqlBinary_",
+              "createdOn_",
+              "updatedAt_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u001c\u0005\u1009\u0000\u0006\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.Query> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.Query.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.Query>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.Query)
+    private static final viam.app.data.v1.Data.Query DEFAULT_INSTANCE;
+    static {
+      Query defaultInstance = new Query();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Query.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.Query getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<Query> PARSER;
+
+    public static com.google.protobuf.Parser<Query> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeleteSavedQueryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.DeleteSavedQueryRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * <pre>
+   * DeleteSavedQuery deletes a saved query based on the given id.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.DeleteSavedQueryRequest}
+   */
+  public  static final class DeleteSavedQueryRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteSavedQueryRequest, DeleteSavedQueryRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.DeleteSavedQueryRequest)
+      DeleteSavedQueryRequestOrBuilder {
+    private DeleteSavedQueryRequest() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.data.v1.Data.DeleteSavedQueryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.DeleteSavedQueryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.DeleteSavedQueryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.DeleteSavedQueryRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * DeleteSavedQuery deletes a saved query based on the given id.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.DeleteSavedQueryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.DeleteSavedQueryRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.DeleteSavedQueryRequest)
+        viam.app.data.v1.Data.DeleteSavedQueryRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.DeleteSavedQueryRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.DeleteSavedQueryRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.DeleteSavedQueryRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.DeleteSavedQueryRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.DeleteSavedQueryRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.DeleteSavedQueryRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.DeleteSavedQueryRequest)
+    private static final viam.app.data.v1.Data.DeleteSavedQueryRequest DEFAULT_INSTANCE;
+    static {
+      DeleteSavedQueryRequest defaultInstance = new DeleteSavedQueryRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteSavedQueryRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.DeleteSavedQueryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeleteSavedQueryRequest> PARSER;
+
+    public static com.google.protobuf.Parser<DeleteSavedQueryRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeleteSavedQueryResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.DeleteSavedQueryResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.DeleteSavedQueryResponse}
+   */
+  public  static final class DeleteSavedQueryResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteSavedQueryResponse, DeleteSavedQueryResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.DeleteSavedQueryResponse)
+      DeleteSavedQueryResponseOrBuilder {
+    private DeleteSavedQueryResponse() {
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.DeleteSavedQueryResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.DeleteSavedQueryResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteSavedQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.DeleteSavedQueryResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.DeleteSavedQueryResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.DeleteSavedQueryResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.DeleteSavedQueryResponse)
+        viam.app.data.v1.Data.DeleteSavedQueryResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.DeleteSavedQueryResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.DeleteSavedQueryResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.DeleteSavedQueryResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.DeleteSavedQueryResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.DeleteSavedQueryResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.DeleteSavedQueryResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.DeleteSavedQueryResponse)
+    private static final viam.app.data.v1.Data.DeleteSavedQueryResponse DEFAULT_INSTANCE;
+    static {
+      DeleteSavedQueryResponse defaultInstance = new DeleteSavedQueryResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteSavedQueryResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.DeleteSavedQueryResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeleteSavedQueryResponse> PARSER;
+
+    public static com.google.protobuf.Parser<DeleteSavedQueryResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetSavedQueryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.GetSavedQueryRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * <pre>
+   * GetSavedQuery retrieves a saved query by id.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.GetSavedQueryRequest}
+   */
+  public  static final class GetSavedQueryRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetSavedQueryRequest, GetSavedQueryRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.GetSavedQueryRequest)
+      GetSavedQueryRequestOrBuilder {
+    private GetSavedQueryRequest() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.data.v1.Data.GetSavedQueryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.GetSavedQueryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.GetSavedQueryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.GetSavedQueryRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * GetSavedQuery retrieves a saved query by id.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.GetSavedQueryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.GetSavedQueryRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.GetSavedQueryRequest)
+        viam.app.data.v1.Data.GetSavedQueryRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.GetSavedQueryRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.GetSavedQueryRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.GetSavedQueryRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.GetSavedQueryRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.GetSavedQueryRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.GetSavedQueryRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.GetSavedQueryRequest)
+    private static final viam.app.data.v1.Data.GetSavedQueryRequest DEFAULT_INSTANCE;
+    static {
+      GetSavedQueryRequest defaultInstance = new GetSavedQueryRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetSavedQueryRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.GetSavedQueryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetSavedQueryRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetSavedQueryRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetSavedQueryResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.GetSavedQueryResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.app.data.v1.Query saved_query = 1 [json_name = "savedQuery"];</code>
+     * @return Whether the savedQuery field is set.
+     */
+    boolean hasSavedQuery();
+    /**
+     * <code>.viam.app.data.v1.Query saved_query = 1 [json_name = "savedQuery"];</code>
+     * @return The savedQuery.
+     */
+    viam.app.data.v1.Data.Query getSavedQuery();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.GetSavedQueryResponse}
+   */
+  public  static final class GetSavedQueryResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetSavedQueryResponse, GetSavedQueryResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.GetSavedQueryResponse)
+      GetSavedQueryResponseOrBuilder {
+    private GetSavedQueryResponse() {
+    }
+    private int bitField0_;
+    public static final int SAVED_QUERY_FIELD_NUMBER = 1;
+    private viam.app.data.v1.Data.Query savedQuery_;
+    /**
+     * <code>.viam.app.data.v1.Query saved_query = 1 [json_name = "savedQuery"];</code>
+     */
+    @java.lang.Override
+    public boolean hasSavedQuery() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.app.data.v1.Query saved_query = 1 [json_name = "savedQuery"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.Query getSavedQuery() {
+      return savedQuery_ == null ? viam.app.data.v1.Data.Query.getDefaultInstance() : savedQuery_;
+    }
+    /**
+     * <code>.viam.app.data.v1.Query saved_query = 1 [json_name = "savedQuery"];</code>
+     */
+    private void setSavedQuery(viam.app.data.v1.Data.Query value) {
+      value.getClass();
+  savedQuery_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.data.v1.Query saved_query = 1 [json_name = "savedQuery"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeSavedQuery(viam.app.data.v1.Data.Query value) {
+      value.getClass();
+  if (savedQuery_ != null &&
+          savedQuery_ != viam.app.data.v1.Data.Query.getDefaultInstance()) {
+        savedQuery_ =
+          viam.app.data.v1.Data.Query.newBuilder(savedQuery_).mergeFrom(value).buildPartial();
+      } else {
+        savedQuery_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.data.v1.Query saved_query = 1 [json_name = "savedQuery"];</code>
+     */
+    private void clearSavedQuery() {  savedQuery_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.data.v1.Data.GetSavedQueryResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.GetSavedQueryResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.GetSavedQueryResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetSavedQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.GetSavedQueryResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.GetSavedQueryResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.GetSavedQueryResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.GetSavedQueryResponse)
+        viam.app.data.v1.Data.GetSavedQueryResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.GetSavedQueryResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.viam.app.data.v1.Query saved_query = 1 [json_name = "savedQuery"];</code>
+       */
+      @java.lang.Override
+      public boolean hasSavedQuery() {
+        return instance.hasSavedQuery();
+      }
+      /**
+       * <code>.viam.app.data.v1.Query saved_query = 1 [json_name = "savedQuery"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.Query getSavedQuery() {
+        return instance.getSavedQuery();
+      }
+      /**
+       * <code>.viam.app.data.v1.Query saved_query = 1 [json_name = "savedQuery"];</code>
+       */
+      public Builder setSavedQuery(viam.app.data.v1.Data.Query value) {
+        copyOnWrite();
+        instance.setSavedQuery(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.data.v1.Query saved_query = 1 [json_name = "savedQuery"];</code>
+       */
+      public Builder setSavedQuery(
+          viam.app.data.v1.Data.Query.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSavedQuery(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.Query saved_query = 1 [json_name = "savedQuery"];</code>
+       */
+      public Builder mergeSavedQuery(viam.app.data.v1.Data.Query value) {
+        copyOnWrite();
+        instance.mergeSavedQuery(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.Query saved_query = 1 [json_name = "savedQuery"];</code>
+       */
+      public Builder clearSavedQuery() {  copyOnWrite();
+        instance.clearSavedQuery();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.GetSavedQueryResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.GetSavedQueryResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "savedQuery_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.GetSavedQueryResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.GetSavedQueryResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.GetSavedQueryResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.GetSavedQueryResponse)
+    private static final viam.app.data.v1.Data.GetSavedQueryResponse DEFAULT_INSTANCE;
+    static {
+      GetSavedQueryResponse defaultInstance = new GetSavedQueryResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetSavedQueryResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.GetSavedQueryResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetSavedQueryResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetSavedQueryResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateSavedQueryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.UpdateSavedQueryRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return A list containing the mqlBinary.
+     */
+    java.util.List<com.google.protobuf.ByteString> getMqlBinaryList();
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return The count of mqlBinary.
+     */
+    int getMqlBinaryCount();
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param index The index of the element to return.
+     * @return The mqlBinary at the given index.
+     */
+    com.google.protobuf.ByteString getMqlBinary(int index);
+  }
+  /**
+   * <pre>
+   * UpdateSavedQuery updates the saved query with the given id.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.UpdateSavedQueryRequest}
+   */
+  public  static final class UpdateSavedQueryRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateSavedQueryRequest, UpdateSavedQueryRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.UpdateSavedQueryRequest)
+      UpdateSavedQueryRequestOrBuilder {
+    private UpdateSavedQueryRequest() {
+      id_ = "";
+      name_ = "";
+      mqlBinary_ = emptyProtobufList();
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private java.lang.String name_;
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int MQL_BINARY_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> mqlBinary_;
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return A list containing the mqlBinary.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getMqlBinaryList() {
+      return mqlBinary_;
+    }
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @return The count of mqlBinary.
+     */
+    @java.lang.Override
+    public int getMqlBinaryCount() {
+      return mqlBinary_.size();
+    }
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param index The index of the element to return.
+     * @return The mqlBinary at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getMqlBinary(int index) {
+      return mqlBinary_.get(index);
+    }
+    private void ensureMqlBinaryIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> tmp = mqlBinary_;
+      if (!tmp.isModifiable()) {
+        mqlBinary_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param index The index to set the value at.
+     * @param value The mqlBinary to set.
+     */
+    private void setMqlBinary(
+        int index, com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureMqlBinaryIsMutable();
+      mqlBinary_.set(index, value);
+    }
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param value The mqlBinary to add.
+     */
+    private void addMqlBinary(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureMqlBinaryIsMutable();
+      mqlBinary_.add(value);
+    }
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     * @param values The mqlBinary to add.
+     */
+    private void addAllMqlBinary(
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+      ensureMqlBinaryIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, mqlBinary_);
+    }
+    /**
+     * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+     */
+    private void clearMqlBinary() {
+      mqlBinary_ = emptyProtobufList();
+    }
+
+    public static viam.app.data.v1.Data.UpdateSavedQueryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.UpdateSavedQueryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.UpdateSavedQueryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.UpdateSavedQueryRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * UpdateSavedQuery updates the saved query with the given id.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.UpdateSavedQueryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.UpdateSavedQueryRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.UpdateSavedQueryRequest)
+        viam.app.data.v1.Data.UpdateSavedQueryRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.UpdateSavedQueryRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @return A list containing the mqlBinary.
+       */
+      @java.lang.Override
+      public java.util.List<com.google.protobuf.ByteString>
+          getMqlBinaryList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getMqlBinaryList());
+      }
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @return The count of mqlBinary.
+       */
+      @java.lang.Override
+      public int getMqlBinaryCount() {
+        return instance.getMqlBinaryCount();
+      }
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param index The index of the element to return.
+       * @return The mqlBinary at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getMqlBinary(int index) {
+        return instance.getMqlBinary(index);
+      }
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param value The mqlBinary to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMqlBinary(
+          int index, com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMqlBinary(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param value The mqlBinary to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMqlBinary(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addMqlBinary(value);
+        return this;
+      }
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @param values The mqlBinary to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMqlBinary(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        copyOnWrite();
+        instance.addAllMqlBinary(values);
+        return this;
+      }
+      /**
+       * <code>repeated bytes mql_binary = 3 [json_name = "mqlBinary"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMqlBinary() {
+        copyOnWrite();
+        instance.clearMqlBinary();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.UpdateSavedQueryRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.UpdateSavedQueryRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+              "name_",
+              "mqlBinary_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u001c";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.UpdateSavedQueryRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.UpdateSavedQueryRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.UpdateSavedQueryRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.UpdateSavedQueryRequest)
+    private static final viam.app.data.v1.Data.UpdateSavedQueryRequest DEFAULT_INSTANCE;
+    static {
+      UpdateSavedQueryRequest defaultInstance = new UpdateSavedQueryRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateSavedQueryRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.UpdateSavedQueryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateSavedQueryRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateSavedQueryRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateSavedQueryResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.UpdateSavedQueryResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.UpdateSavedQueryResponse}
+   */
+  public  static final class UpdateSavedQueryResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateSavedQueryResponse, UpdateSavedQueryResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.UpdateSavedQueryResponse)
+      UpdateSavedQueryResponseOrBuilder {
+    private UpdateSavedQueryResponse() {
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.UpdateSavedQueryResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.UpdateSavedQueryResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.UpdateSavedQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.UpdateSavedQueryResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.UpdateSavedQueryResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.UpdateSavedQueryResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.UpdateSavedQueryResponse)
+        viam.app.data.v1.Data.UpdateSavedQueryResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.UpdateSavedQueryResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.UpdateSavedQueryResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.UpdateSavedQueryResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.UpdateSavedQueryResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.UpdateSavedQueryResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.UpdateSavedQueryResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.UpdateSavedQueryResponse)
+    private static final viam.app.data.v1.Data.UpdateSavedQueryResponse DEFAULT_INSTANCE;
+    static {
+      UpdateSavedQueryResponse defaultInstance = new UpdateSavedQueryResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateSavedQueryResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.UpdateSavedQueryResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateSavedQueryResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateSavedQueryResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListSavedQueriesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.ListSavedQueriesRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>int64 limit = 2 [json_name = "limit"];</code>
+     * @return The limit.
+     */
+    long getLimit();
+  }
+  /**
+   * <pre>
+   * ListSavedQueries lists saved queries for a given organization.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.ListSavedQueriesRequest}
+   */
+  public  static final class ListSavedQueriesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListSavedQueriesRequest, ListSavedQueriesRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.ListSavedQueriesRequest)
+      ListSavedQueriesRequestOrBuilder {
+    private ListSavedQueriesRequest() {
+      organizationId_ = "";
+    }
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    private void setOrganizationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int LIMIT_FIELD_NUMBER = 2;
+    private long limit_;
+    /**
+     * <code>int64 limit = 2 [json_name = "limit"];</code>
+     * @return The limit.
+     */
+    @java.lang.Override
+    public long getLimit() {
+      return limit_;
+    }
+    /**
+     * <code>int64 limit = 2 [json_name = "limit"];</code>
+     * @param value The limit to set.
+     */
+    private void setLimit(long value) {
+      
+      limit_ = value;
+    }
+    /**
+     * <code>int64 limit = 2 [json_name = "limit"];</code>
+     */
+    private void clearLimit() {
+
+      limit_ = 0L;
+    }
+
+    public static viam.app.data.v1.Data.ListSavedQueriesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.ListSavedQueriesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.ListSavedQueriesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.ListSavedQueriesRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * ListSavedQueries lists saved queries for a given organization.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.ListSavedQueriesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.ListSavedQueriesRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.ListSavedQueriesRequest)
+        viam.app.data.v1.Data.ListSavedQueriesRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.ListSavedQueriesRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>int64 limit = 2 [json_name = "limit"];</code>
+       * @return The limit.
+       */
+      @java.lang.Override
+      public long getLimit() {
+        return instance.getLimit();
+      }
+      /**
+       * <code>int64 limit = 2 [json_name = "limit"];</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLimit(long value) {
+        copyOnWrite();
+        instance.setLimit(value);
+        return this;
+      }
+      /**
+       * <code>int64 limit = 2 [json_name = "limit"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLimit() {
+        copyOnWrite();
+        instance.clearLimit();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.ListSavedQueriesRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.ListSavedQueriesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "organizationId_",
+              "limit_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0002" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.ListSavedQueriesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.ListSavedQueriesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.ListSavedQueriesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.ListSavedQueriesRequest)
+    private static final viam.app.data.v1.Data.ListSavedQueriesRequest DEFAULT_INSTANCE;
+    static {
+      ListSavedQueriesRequest defaultInstance = new ListSavedQueriesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListSavedQueriesRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.ListSavedQueriesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListSavedQueriesRequest> PARSER;
+
+    public static com.google.protobuf.Parser<ListSavedQueriesRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListSavedQueriesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.ListSavedQueriesResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    java.util.List<viam.app.data.v1.Data.Query> 
+        getQueriesList();
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    viam.app.data.v1.Data.Query getQueries(int index);
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    int getQueriesCount();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.ListSavedQueriesResponse}
+   */
+  public  static final class ListSavedQueriesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListSavedQueriesResponse, ListSavedQueriesResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.ListSavedQueriesResponse)
+      ListSavedQueriesResponseOrBuilder {
+    private ListSavedQueriesResponse() {
+      queries_ = emptyProtobufList();
+    }
+    public static final int QUERIES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.Query> queries_;
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.data.v1.Data.Query> getQueriesList() {
+      return queries_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    public java.util.List<? extends viam.app.data.v1.Data.QueryOrBuilder> 
+        getQueriesOrBuilderList() {
+      return queries_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    @java.lang.Override
+    public int getQueriesCount() {
+      return queries_.size();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.Query getQueries(int index) {
+      return queries_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    public viam.app.data.v1.Data.QueryOrBuilder getQueriesOrBuilder(
+        int index) {
+      return queries_.get(index);
+    }
+    private void ensureQueriesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.Query> tmp = queries_;
+      if (!tmp.isModifiable()) {
+        queries_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    private void setQueries(
+        int index, viam.app.data.v1.Data.Query value) {
+      value.getClass();
+  ensureQueriesIsMutable();
+      queries_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    private void addQueries(viam.app.data.v1.Data.Query value) {
+      value.getClass();
+  ensureQueriesIsMutable();
+      queries_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    private void addQueries(
+        int index, viam.app.data.v1.Data.Query value) {
+      value.getClass();
+  ensureQueriesIsMutable();
+      queries_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    private void addAllQueries(
+        java.lang.Iterable<? extends viam.app.data.v1.Data.Query> values) {
+      ensureQueriesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, queries_);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    private void clearQueries() {
+      queries_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+     */
+    private void removeQueries(int index) {
+      ensureQueriesIsMutable();
+      queries_.remove(index);
+    }
+
+    public static viam.app.data.v1.Data.ListSavedQueriesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.ListSavedQueriesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.ListSavedQueriesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ListSavedQueriesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.ListSavedQueriesResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.ListSavedQueriesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.ListSavedQueriesResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.ListSavedQueriesResponse)
+        viam.app.data.v1.Data.ListSavedQueriesResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.ListSavedQueriesResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.data.v1.Data.Query> getQueriesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getQueriesList());
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+       */
+      @java.lang.Override
+      public int getQueriesCount() {
+        return instance.getQueriesCount();
+      }/**
+       * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.Query getQueries(int index) {
+        return instance.getQueries(index);
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+       */
+      public Builder setQueries(
+          int index, viam.app.data.v1.Data.Query value) {
+        copyOnWrite();
+        instance.setQueries(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+       */
+      public Builder setQueries(
+          int index, viam.app.data.v1.Data.Query.Builder builderForValue) {
+        copyOnWrite();
+        instance.setQueries(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+       */
+      public Builder addQueries(viam.app.data.v1.Data.Query value) {
+        copyOnWrite();
+        instance.addQueries(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+       */
+      public Builder addQueries(
+          int index, viam.app.data.v1.Data.Query value) {
+        copyOnWrite();
+        instance.addQueries(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+       */
+      public Builder addQueries(
+          viam.app.data.v1.Data.Query.Builder builderForValue) {
+        copyOnWrite();
+        instance.addQueries(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+       */
+      public Builder addQueries(
+          int index, viam.app.data.v1.Data.Query.Builder builderForValue) {
+        copyOnWrite();
+        instance.addQueries(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+       */
+      public Builder addAllQueries(
+          java.lang.Iterable<? extends viam.app.data.v1.Data.Query> values) {
+        copyOnWrite();
+        instance.addAllQueries(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+       */
+      public Builder clearQueries() {
+        copyOnWrite();
+        instance.clearQueries();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Query queries = 1 [json_name = "queries"];</code>
+       */
+      public Builder removeQueries(int index) {
+        copyOnWrite();
+        instance.removeQueries(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.ListSavedQueriesResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.ListSavedQueriesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "queries_",
+              viam.app.data.v1.Data.Query.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.ListSavedQueriesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.ListSavedQueriesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.ListSavedQueriesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.ListSavedQueriesResponse)
+    private static final viam.app.data.v1.Data.ListSavedQueriesResponse DEFAULT_INSTANCE;
+    static {
+      ListSavedQueriesResponse defaultInstance = new ListSavedQueriesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListSavedQueriesResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.ListSavedQueriesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListSavedQueriesResponse> PARSER;
+
+    public static com.google.protobuf.Parser<ListSavedQueriesResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
