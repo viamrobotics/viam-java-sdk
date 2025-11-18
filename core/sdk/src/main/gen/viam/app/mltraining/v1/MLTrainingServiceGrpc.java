@@ -225,6 +225,36 @@ public final class MLTrainingServiceGrpc {
     return getGetTrainingJobLogsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest,
+      viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse> getListSupportedContainersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSupportedContainers",
+      requestType = viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest.class,
+      responseType = viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest,
+      viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse> getListSupportedContainersMethod() {
+    io.grpc.MethodDescriptor<viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest, viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse> getListSupportedContainersMethod;
+    if ((getListSupportedContainersMethod = MLTrainingServiceGrpc.getListSupportedContainersMethod) == null) {
+      synchronized (MLTrainingServiceGrpc.class) {
+        if ((getListSupportedContainersMethod = MLTrainingServiceGrpc.getListSupportedContainersMethod) == null) {
+          MLTrainingServiceGrpc.getListSupportedContainersMethod = getListSupportedContainersMethod =
+              io.grpc.MethodDescriptor.<viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest, viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSupportedContainers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getListSupportedContainersMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -342,6 +372,16 @@ public final class MLTrainingServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTrainingJobLogsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListSupportedContainers gets all the containers one can use for a custom training job.
+     * </pre>
+     */
+    default void listSupportedContainers(viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest request,
+        io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSupportedContainersMethod(), responseObserver);
+    }
   }
 
   /**
@@ -447,6 +487,17 @@ public final class MLTrainingServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTrainingJobLogsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * ListSupportedContainers gets all the containers one can use for a custom training job.
+     * </pre>
+     */
+    public void listSupportedContainers(viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest request,
+        io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListSupportedContainersMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -533,6 +584,16 @@ public final class MLTrainingServiceGrpc {
     public viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse getTrainingJobLogs(viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTrainingJobLogsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListSupportedContainers gets all the containers one can use for a custom training job.
+     * </pre>
+     */
+    public viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse listSupportedContainers(viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListSupportedContainersMethod(), getCallOptions(), request);
     }
   }
 
@@ -628,6 +689,17 @@ public final class MLTrainingServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTrainingJobLogsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ListSupportedContainers gets all the containers one can use for a custom training job.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse> listSupportedContainers(
+        viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListSupportedContainersMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SUBMIT_TRAINING_JOB = 0;
@@ -637,6 +709,7 @@ public final class MLTrainingServiceGrpc {
   private static final int METHODID_CANCEL_TRAINING_JOB = 4;
   private static final int METHODID_DELETE_COMPLETED_TRAINING_JOB = 5;
   private static final int METHODID_GET_TRAINING_JOB_LOGS = 6;
+  private static final int METHODID_LIST_SUPPORTED_CONTAINERS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -682,6 +755,10 @@ public final class MLTrainingServiceGrpc {
         case METHODID_GET_TRAINING_JOB_LOGS:
           serviceImpl.getTrainingJobLogs((viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_SUPPORTED_CONTAINERS:
+          serviceImpl.listSupportedContainers((viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -750,6 +827,13 @@ public final class MLTrainingServiceGrpc {
               viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest,
               viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse>(
                 service, METHODID_GET_TRAINING_JOB_LOGS)))
+        .addMethod(
+          getListSupportedContainersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest,
+              viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse>(
+                service, METHODID_LIST_SUPPORTED_CONTAINERS)))
         .build();
   }
 
@@ -769,6 +853,7 @@ public final class MLTrainingServiceGrpc {
               .addMethod(getCancelTrainingJobMethod())
               .addMethod(getDeleteCompletedTrainingJobMethod())
               .addMethod(getGetTrainingJobLogsMethod())
+              .addMethod(getListSupportedContainersMethod())
               .build();
         }
       }
