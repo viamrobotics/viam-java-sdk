@@ -1809,6 +1809,18 @@ java.lang.String defaultValue);
 
     java.lang.String getArgumentsOrThrow(
         java.lang.String key);
+
+    /**
+     * <code>string container_version = 8 [json_name = "containerVersion"];</code>
+     * @return The containerVersion.
+     */
+    java.lang.String getContainerVersion();
+    /**
+     * <code>string container_version = 8 [json_name = "containerVersion"];</code>
+     * @return The bytes for containerVersion.
+     */
+    com.google.protobuf.ByteString
+        getContainerVersionBytes();
   }
   /**
    * Protobuf type {@code viam.app.mltraining.v1.SubmitCustomTrainingJobRequest}
@@ -1825,6 +1837,7 @@ java.lang.String defaultValue);
       organizationId_ = "";
       modelName_ = "";
       modelVersion_ = "";
+      containerVersion_ = "";
     }
     public static final int DATASET_ID_FIELD_NUMBER = 1;
     private java.lang.String datasetId_;
@@ -2201,6 +2214,53 @@ java.lang.String defaultValue) {
     private java.util.Map<java.lang.String, java.lang.String>
     getMutableArgumentsMap() {
       return internalGetMutableArguments();
+    }
+
+    public static final int CONTAINER_VERSION_FIELD_NUMBER = 8;
+    private java.lang.String containerVersion_;
+    /**
+     * <code>string container_version = 8 [json_name = "containerVersion"];</code>
+     * @return The containerVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getContainerVersion() {
+      return containerVersion_;
+    }
+    /**
+     * <code>string container_version = 8 [json_name = "containerVersion"];</code>
+     * @return The bytes for containerVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContainerVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(containerVersion_);
+    }
+    /**
+     * <code>string container_version = 8 [json_name = "containerVersion"];</code>
+     * @param value The containerVersion to set.
+     */
+    private void setContainerVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      containerVersion_ = value;
+    }
+    /**
+     * <code>string container_version = 8 [json_name = "containerVersion"];</code>
+     */
+    private void clearContainerVersion() {
+
+      containerVersion_ = getDefaultInstance().getContainerVersion();
+    }
+    /**
+     * <code>string container_version = 8 [json_name = "containerVersion"];</code>
+     * @param value The bytes for containerVersion to set.
+     */
+    private void setContainerVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      containerVersion_ = value.toStringUtf8();
+
     }
 
     public static viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest parseFrom(
@@ -2694,6 +2754,55 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <code>string container_version = 8 [json_name = "containerVersion"];</code>
+       * @return The containerVersion.
+       */
+      @java.lang.Override
+      public java.lang.String getContainerVersion() {
+        return instance.getContainerVersion();
+      }
+      /**
+       * <code>string container_version = 8 [json_name = "containerVersion"];</code>
+       * @return The bytes for containerVersion.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getContainerVersionBytes() {
+        return instance.getContainerVersionBytes();
+      }
+      /**
+       * <code>string container_version = 8 [json_name = "containerVersion"];</code>
+       * @param value The containerVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContainerVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setContainerVersion(value);
+        return this;
+      }
+      /**
+       * <code>string container_version = 8 [json_name = "containerVersion"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContainerVersion() {
+        copyOnWrite();
+        instance.clearContainerVersion();
+        return this;
+      }
+      /**
+       * <code>string container_version = 8 [json_name = "containerVersion"];</code>
+       * @param value The bytes for containerVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContainerVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setContainerVersionBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.SubmitCustomTrainingJobRequest)
     }
     @java.lang.Override
@@ -2718,10 +2827,11 @@ java.lang.String defaultValue) {
               "registryItemVersion_",
               "arguments_",
               ArgumentsDefaultEntryHolder.defaultEntry,
+              "containerVersion_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0001\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208\u0005\u0208\u0006\u0208\u00072";
+                "\u0000\b\u0000\u0000\u0001\b\b\u0001\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
+                "\u0004\u0208\u0005\u0208\u0006\u0208\u00072\b\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -4701,6 +4811,18 @@ java.lang.String defaultValue);
 
     java.lang.String getArgumentsOrThrow(
         java.lang.String key);
+
+    /**
+     * <code>string container_version = 22 [json_name = "containerVersion", (.tagger.v1.tags) = "bson:&#92;"container_version&#92;" json:&#92;"container_version&#92;""];</code>
+     * @return The containerVersion.
+     */
+    java.lang.String getContainerVersion();
+    /**
+     * <code>string container_version = 22 [json_name = "containerVersion", (.tagger.v1.tags) = "bson:&#92;"container_version&#92;" json:&#92;"container_version&#92;""];</code>
+     * @return The bytes for containerVersion.
+     */
+    com.google.protobuf.ByteString
+        getContainerVersionBytes();
   }
   /**
    * Protobuf type {@code viam.app.mltraining.v1.TrainingJobMetadata}
@@ -4720,6 +4842,7 @@ java.lang.String defaultValue);
       registryItemVersion_ = "";
       syncedModelId_ = "";
       tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      containerVersion_ = "";
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 7;
@@ -5666,6 +5789,53 @@ java.lang.String defaultValue) {
     private java.util.Map<java.lang.String, java.lang.String>
     getMutableArgumentsMap() {
       return internalGetMutableArguments();
+    }
+
+    public static final int CONTAINER_VERSION_FIELD_NUMBER = 22;
+    private java.lang.String containerVersion_;
+    /**
+     * <code>string container_version = 22 [json_name = "containerVersion", (.tagger.v1.tags) = "bson:&#92;"container_version&#92;" json:&#92;"container_version&#92;""];</code>
+     * @return The containerVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getContainerVersion() {
+      return containerVersion_;
+    }
+    /**
+     * <code>string container_version = 22 [json_name = "containerVersion", (.tagger.v1.tags) = "bson:&#92;"container_version&#92;" json:&#92;"container_version&#92;""];</code>
+     * @return The bytes for containerVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContainerVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(containerVersion_);
+    }
+    /**
+     * <code>string container_version = 22 [json_name = "containerVersion", (.tagger.v1.tags) = "bson:&#92;"container_version&#92;" json:&#92;"container_version&#92;""];</code>
+     * @param value The containerVersion to set.
+     */
+    private void setContainerVersion(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      containerVersion_ = value;
+    }
+    /**
+     * <code>string container_version = 22 [json_name = "containerVersion", (.tagger.v1.tags) = "bson:&#92;"container_version&#92;" json:&#92;"container_version&#92;""];</code>
+     */
+    private void clearContainerVersion() {
+
+      containerVersion_ = getDefaultInstance().getContainerVersion();
+    }
+    /**
+     * <code>string container_version = 22 [json_name = "containerVersion", (.tagger.v1.tags) = "bson:&#92;"container_version&#92;" json:&#92;"container_version&#92;""];</code>
+     * @param value The bytes for containerVersion to set.
+     */
+    private void setContainerVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      containerVersion_ = value.toStringUtf8();
+
     }
 
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseFrom(
@@ -6750,6 +6920,55 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <code>string container_version = 22 [json_name = "containerVersion", (.tagger.v1.tags) = "bson:&#92;"container_version&#92;" json:&#92;"container_version&#92;""];</code>
+       * @return The containerVersion.
+       */
+      @java.lang.Override
+      public java.lang.String getContainerVersion() {
+        return instance.getContainerVersion();
+      }
+      /**
+       * <code>string container_version = 22 [json_name = "containerVersion", (.tagger.v1.tags) = "bson:&#92;"container_version&#92;" json:&#92;"container_version&#92;""];</code>
+       * @return The bytes for containerVersion.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getContainerVersionBytes() {
+        return instance.getContainerVersionBytes();
+      }
+      /**
+       * <code>string container_version = 22 [json_name = "containerVersion", (.tagger.v1.tags) = "bson:&#92;"container_version&#92;" json:&#92;"container_version&#92;""];</code>
+       * @param value The containerVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContainerVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setContainerVersion(value);
+        return this;
+      }
+      /**
+       * <code>string container_version = 22 [json_name = "containerVersion", (.tagger.v1.tags) = "bson:&#92;"container_version&#92;" json:&#92;"container_version&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContainerVersion() {
+        copyOnWrite();
+        instance.clearContainerVersion();
+        return this;
+      }
+      /**
+       * <code>string container_version = 22 [json_name = "containerVersion", (.tagger.v1.tags) = "bson:&#92;"container_version&#92;" json:&#92;"container_version&#92;""];</code>
+       * @param value The bytes for containerVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContainerVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setContainerVersionBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.TrainingJobMetadata)
     }
     @java.lang.Override
@@ -6787,12 +7006,13 @@ java.lang.String defaultValue) {
               "registryItemVersion_",
               "arguments_",
               ArgumentsDefaultEntryHolder.defaultEntry,
+              "containerVersion_",
             };
             java.lang.String info =
-                "\u0000\u0013\u0000\u0001\u0002\u0015\u0013\u0001\u0001\u0000\u0002\f\u0003\u1009" +
+                "\u0000\u0014\u0000\u0001\u0002\u0016\u0014\u0001\u0001\u0000\u0002\f\u0003\u1009" +
                 "\u0001\u0004\u1009\u0002\u0005\u0208\u0007\u0208\b\u1009\u0000\t\u1009\u0003\n\u1009" +
                 "\u0004\u000b\u0208\f\u0208\r\u0208\u000e\u0208\u000f\f\u0010\u021a\u0011\f\u0012" +
-                "\u0007\u0013\u0208\u0014\u0208\u00152";
+                "\u0007\u0013\u0208\u0014\u0208\u00152\u0016\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -9243,6 +9463,1541 @@ java.lang.String defaultValue) {
     private static volatile com.google.protobuf.Parser<GetTrainingJobLogsResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetTrainingJobLogsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListSupportedContainersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.ListSupportedContainersRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.ListSupportedContainersRequest}
+   */
+  public  static final class ListSupportedContainersRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListSupportedContainersRequest, ListSupportedContainersRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.ListSupportedContainersRequest)
+      ListSupportedContainersRequestOrBuilder {
+    private ListSupportedContainersRequest() {
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.ListSupportedContainersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.ListSupportedContainersRequest)
+        viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequestOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.ListSupportedContainersRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.ListSupportedContainersRequest)
+    private static final viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest DEFAULT_INSTANCE;
+    static {
+      ListSupportedContainersRequest defaultInstance = new ListSupportedContainersRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListSupportedContainersRequest.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListSupportedContainersRequest> PARSER;
+
+    public static com.google.protobuf.Parser<ListSupportedContainersRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListSupportedContainersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.ListSupportedContainersResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * ex value:
+     * container_map: {
+     * "tf:2.15": Container {
+     * key: "tf:2.15"
+     * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * description: "Tensorflow 2.15"
+     * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * }
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+     */
+    int getContainerMapCount();
+    /**
+     * <pre>
+     * ex value:
+     * container_map: {
+     * "tf:2.15": Container {
+     * key: "tf:2.15"
+     * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * description: "Tensorflow 2.15"
+     * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * }
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+     */
+    boolean containsContainerMap(
+        java.lang.String key);
+    /**
+     * Use {@link #getContainerMapMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, viam.app.mltraining.v1.MlTraining.Container>
+    getContainerMap();
+    /**
+     * <pre>
+     * ex value:
+     * container_map: {
+     * "tf:2.15": Container {
+     * key: "tf:2.15"
+     * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * description: "Tensorflow 2.15"
+     * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * }
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+     */
+    java.util.Map<java.lang.String, viam.app.mltraining.v1.MlTraining.Container>
+    getContainerMapMap();
+    /**
+     * <pre>
+     * ex value:
+     * container_map: {
+     * "tf:2.15": Container {
+     * key: "tf:2.15"
+     * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * description: "Tensorflow 2.15"
+     * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * }
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+     */
+
+    /* nullable */
+viam.app.mltraining.v1.MlTraining.Container getContainerMapOrDefault(
+        java.lang.String key,
+        /* nullable */
+viam.app.mltraining.v1.MlTraining.Container defaultValue);
+    /**
+     * <pre>
+     * ex value:
+     * container_map: {
+     * "tf:2.15": Container {
+     * key: "tf:2.15"
+     * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * description: "Tensorflow 2.15"
+     * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * }
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+     */
+
+    viam.app.mltraining.v1.MlTraining.Container getContainerMapOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.ListSupportedContainersResponse}
+   */
+  public  static final class ListSupportedContainersResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListSupportedContainersResponse, ListSupportedContainersResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.ListSupportedContainersResponse)
+      ListSupportedContainersResponseOrBuilder {
+    private ListSupportedContainersResponse() {
+    }
+    public static final int CONTAINER_MAP_FIELD_NUMBER = 1;
+    private static final class ContainerMapDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, viam.app.mltraining.v1.MlTraining.Container> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, viam.app.mltraining.v1.MlTraining.Container>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  viam.app.mltraining.v1.MlTraining.Container.getDefaultInstance());
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, viam.app.mltraining.v1.MlTraining.Container> containerMap_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, viam.app.mltraining.v1.MlTraining.Container>
+    internalGetContainerMap() {
+      return containerMap_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, viam.app.mltraining.v1.MlTraining.Container>
+    internalGetMutableContainerMap() {
+      if (!containerMap_.isMutable()) {
+        containerMap_ = containerMap_.mutableCopy();
+      }
+      return containerMap_;
+    }
+    @java.lang.Override
+
+    public int getContainerMapCount() {
+      return internalGetContainerMap().size();
+    }
+    /**
+     * <pre>
+     * ex value:
+     * container_map: {
+     * "tf:2.15": Container {
+     * key: "tf:2.15"
+     * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * description: "Tensorflow 2.15"
+     * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * }
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsContainerMap(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetContainerMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getContainerMapMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, viam.app.mltraining.v1.MlTraining.Container> getContainerMap() {
+      return getContainerMapMap();
+    }
+    /**
+     * <pre>
+     * ex value:
+     * container_map: {
+     * "tf:2.15": Container {
+     * key: "tf:2.15"
+     * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * description: "Tensorflow 2.15"
+     * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * }
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, viam.app.mltraining.v1.MlTraining.Container> getContainerMapMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetContainerMap());
+    }
+    /**
+     * <pre>
+     * ex value:
+     * container_map: {
+     * "tf:2.15": Container {
+     * key: "tf:2.15"
+     * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * description: "Tensorflow 2.15"
+     * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * }
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+viam.app.mltraining.v1.MlTraining.Container getContainerMapOrDefault(
+        java.lang.String key,
+        /* nullable */
+viam.app.mltraining.v1.MlTraining.Container defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, viam.app.mltraining.v1.MlTraining.Container> map =
+          internalGetContainerMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * ex value:
+     * container_map: {
+     * "tf:2.15": Container {
+     * key: "tf:2.15"
+     * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * description: "Tensorflow 2.15"
+     * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * }
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+     */
+    @java.lang.Override
+
+    public viam.app.mltraining.v1.MlTraining.Container getContainerMapOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, viam.app.mltraining.v1.MlTraining.Container> map =
+          internalGetContainerMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    /**
+     * <pre>
+     * ex value:
+     * container_map: {
+     * "tf:2.15": Container {
+     * key: "tf:2.15"
+     * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * description: "Tensorflow 2.15"
+     * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * }
+     * }
+     * </pre>
+     *
+     * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+     */
+    private java.util.Map<java.lang.String, viam.app.mltraining.v1.MlTraining.Container>
+    getMutableContainerMapMap() {
+      return internalGetMutableContainerMap();
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.ListSupportedContainersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.ListSupportedContainersResponse)
+        viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponseOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      @java.lang.Override
+
+      public int getContainerMapCount() {
+        return instance.getContainerMapMap().size();
+      }
+      /**
+       * <pre>
+       * ex value:
+       * container_map: {
+       * "tf:2.15": Container {
+       * key: "tf:2.15"
+       * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * description: "Tensorflow 2.15"
+       * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * }
+       * }
+       * </pre>
+       *
+       * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsContainerMap(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getContainerMapMap().containsKey(key);
+      }
+
+      public Builder clearContainerMap() {
+        copyOnWrite();
+        instance.getMutableContainerMapMap().clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * ex value:
+       * container_map: {
+       * "tf:2.15": Container {
+       * key: "tf:2.15"
+       * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * description: "Tensorflow 2.15"
+       * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * }
+       * }
+       * </pre>
+       *
+       * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+       */
+
+      public Builder removeContainerMap(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableContainerMapMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getContainerMapMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, viam.app.mltraining.v1.MlTraining.Container> getContainerMap() {
+        return getContainerMapMap();
+      }
+      /**
+       * <pre>
+       * ex value:
+       * container_map: {
+       * "tf:2.15": Container {
+       * key: "tf:2.15"
+       * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * description: "Tensorflow 2.15"
+       * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * }
+       * }
+       * </pre>
+       *
+       * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, viam.app.mltraining.v1.MlTraining.Container> getContainerMapMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getContainerMapMap());
+      }
+      /**
+       * <pre>
+       * ex value:
+       * container_map: {
+       * "tf:2.15": Container {
+       * key: "tf:2.15"
+       * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * description: "Tensorflow 2.15"
+       * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * }
+       * }
+       * </pre>
+       *
+       * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+       */
+      @java.lang.Override
+
+      public /* nullable */
+viam.app.mltraining.v1.MlTraining.Container getContainerMapOrDefault(
+          java.lang.String key,
+          /* nullable */
+viam.app.mltraining.v1.MlTraining.Container defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, viam.app.mltraining.v1.MlTraining.Container> map =
+            instance.getContainerMapMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * ex value:
+       * container_map: {
+       * "tf:2.15": Container {
+       * key: "tf:2.15"
+       * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * description: "Tensorflow 2.15"
+       * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * }
+       * }
+       * </pre>
+       *
+       * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+       */
+      @java.lang.Override
+
+      public viam.app.mltraining.v1.MlTraining.Container getContainerMapOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, viam.app.mltraining.v1.MlTraining.Container> map =
+            instance.getContainerMapMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <pre>
+       * ex value:
+       * container_map: {
+       * "tf:2.15": Container {
+       * key: "tf:2.15"
+       * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * description: "Tensorflow 2.15"
+       * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * }
+       * }
+       * </pre>
+       *
+       * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+       */
+      public Builder putContainerMap(
+          java.lang.String key,
+          viam.app.mltraining.v1.MlTraining.Container value) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableContainerMapMap().put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * ex value:
+       * container_map: {
+       * "tf:2.15": Container {
+       * key: "tf:2.15"
+       * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * description: "Tensorflow 2.15"
+       * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * }
+       * }
+       * </pre>
+       *
+       * <code>map&lt;string, .viam.app.mltraining.v1.Container&gt; container_map = 1 [json_name = "containerMap"];</code>
+       */
+      public Builder putAllContainerMap(
+          java.util.Map<java.lang.String, viam.app.mltraining.v1.MlTraining.Container> values) {
+        copyOnWrite();
+        instance.getMutableContainerMapMap().putAll(values);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.ListSupportedContainersResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "containerMap_",
+              ContainerMapDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.ListSupportedContainersResponse)
+    private static final viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse DEFAULT_INSTANCE;
+    static {
+      ListSupportedContainersResponse defaultInstance = new ListSupportedContainersResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListSupportedContainersResponse.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListSupportedContainersResponse> PARSER;
+
+    public static com.google.protobuf.Parser<ListSupportedContainersResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ContainerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.Container)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <code>string uri = 2 [json_name = "uri"];</code>
+     * @return The uri.
+     */
+    java.lang.String getUri();
+    /**
+     * <code>string uri = 2 [json_name = "uri"];</code>
+     * @return The bytes for uri.
+     */
+    com.google.protobuf.ByteString
+        getUriBytes();
+
+    /**
+     * <code>string framework = 3 [json_name = "framework"];</code>
+     * @return The framework.
+     */
+    java.lang.String getFramework();
+    /**
+     * <code>string framework = 3 [json_name = "framework"];</code>
+     * @return The bytes for framework.
+     */
+    com.google.protobuf.ByteString
+        getFrameworkBytes();
+
+    /**
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
+     * @return Whether the eol field is set.
+     */
+    boolean hasEol();
+    /**
+     * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
+     * @return The eol.
+     */
+    com.google.protobuf.Timestamp getEol();
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.Container}
+   */
+  public  static final class Container extends
+      com.google.protobuf.GeneratedMessageLite<
+          Container, Container.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.Container)
+      ContainerOrBuilder {
+    private Container() {
+      key_ = "";
+      uri_ = "";
+      framework_ = "";
+      description_ = "";
+    }
+    private int bitField0_;
+    public static final int KEY_FIELD_NUMBER = 1;
+    private java.lang.String key_;
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      return key_;
+    }
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(key_);
+    }
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @param value The key to set.
+     */
+    private void setKey(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      key_ = value;
+    }
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     */
+    private void clearKey() {
+
+      key_ = getDefaultInstance().getKey();
+    }
+    /**
+     * <code>string key = 1 [json_name = "key"];</code>
+     * @param value The bytes for key to set.
+     */
+    private void setKeyBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      key_ = value.toStringUtf8();
+
+    }
+
+    public static final int URI_FIELD_NUMBER = 2;
+    private java.lang.String uri_;
+    /**
+     * <code>string uri = 2 [json_name = "uri"];</code>
+     * @return The uri.
+     */
+    @java.lang.Override
+    public java.lang.String getUri() {
+      return uri_;
+    }
+    /**
+     * <code>string uri = 2 [json_name = "uri"];</code>
+     * @return The bytes for uri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUriBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(uri_);
+    }
+    /**
+     * <code>string uri = 2 [json_name = "uri"];</code>
+     * @param value The uri to set.
+     */
+    private void setUri(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      uri_ = value;
+    }
+    /**
+     * <code>string uri = 2 [json_name = "uri"];</code>
+     */
+    private void clearUri() {
+
+      uri_ = getDefaultInstance().getUri();
+    }
+    /**
+     * <code>string uri = 2 [json_name = "uri"];</code>
+     * @param value The bytes for uri to set.
+     */
+    private void setUriBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      uri_ = value.toStringUtf8();
+
+    }
+
+    public static final int FRAMEWORK_FIELD_NUMBER = 3;
+    private java.lang.String framework_;
+    /**
+     * <code>string framework = 3 [json_name = "framework"];</code>
+     * @return The framework.
+     */
+    @java.lang.Override
+    public java.lang.String getFramework() {
+      return framework_;
+    }
+    /**
+     * <code>string framework = 3 [json_name = "framework"];</code>
+     * @return The bytes for framework.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFrameworkBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(framework_);
+    }
+    /**
+     * <code>string framework = 3 [json_name = "framework"];</code>
+     * @param value The framework to set.
+     */
+    private void setFramework(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      framework_ = value;
+    }
+    /**
+     * <code>string framework = 3 [json_name = "framework"];</code>
+     */
+    private void clearFramework() {
+
+      framework_ = getDefaultInstance().getFramework();
+    }
+    /**
+     * <code>string framework = 3 [json_name = "framework"];</code>
+     * @param value The bytes for framework to set.
+     */
+    private void setFrameworkBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      framework_ = value.toStringUtf8();
+
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 4;
+    private java.lang.String description_;
+    /**
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      return description_;
+    }
+    /**
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(description_);
+    }
+    /**
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @param value The description to set.
+     */
+    private void setDescription(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      description_ = value;
+    }
+    /**
+     * <code>string description = 4 [json_name = "description"];</code>
+     */
+    private void clearDescription() {
+
+      description_ = getDefaultInstance().getDescription();
+    }
+    /**
+     * <code>string description = 4 [json_name = "description"];</code>
+     * @param value The bytes for description to set.
+     */
+    private void setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      description_ = value.toStringUtf8();
+
+    }
+
+    public static final int EOL_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp eol_;
+    /**
+     * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
+     */
+    @java.lang.Override
+    public boolean hasEol() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEol() {
+      return eol_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : eol_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
+     */
+    private void setEol(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  eol_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeEol(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (eol_ != null &&
+          eol_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        eol_ =
+          com.google.protobuf.Timestamp.newBuilder(eol_).mergeFrom(value).buildPartial();
+      } else {
+        eol_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
+     */
+    private void clearEol() {  eol_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.Container parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.Container parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.Container parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.Container parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.Container parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.Container parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.Container parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.Container parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.Container parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.Container parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.Container parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.Container parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.Container prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.Container}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.Container, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.Container)
+        viam.app.mltraining.v1.MlTraining.ContainerOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.Container.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return The key.
+       */
+      @java.lang.Override
+      public java.lang.String getKey() {
+        return instance.getKey();
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return The bytes for key.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        return instance.getKeyBytes();
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setKey(value);
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        copyOnWrite();
+        instance.clearKey();
+        return this;
+      }
+      /**
+       * <code>string key = 1 [json_name = "key"];</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setKeyBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string uri = 2 [json_name = "uri"];</code>
+       * @return The uri.
+       */
+      @java.lang.Override
+      public java.lang.String getUri() {
+        return instance.getUri();
+      }
+      /**
+       * <code>string uri = 2 [json_name = "uri"];</code>
+       * @return The bytes for uri.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUriBytes() {
+        return instance.getUriBytes();
+      }
+      /**
+       * <code>string uri = 2 [json_name = "uri"];</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUri(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setUri(value);
+        return this;
+      }
+      /**
+       * <code>string uri = 2 [json_name = "uri"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUri() {
+        copyOnWrite();
+        instance.clearUri();
+        return this;
+      }
+      /**
+       * <code>string uri = 2 [json_name = "uri"];</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUriBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUriBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string framework = 3 [json_name = "framework"];</code>
+       * @return The framework.
+       */
+      @java.lang.Override
+      public java.lang.String getFramework() {
+        return instance.getFramework();
+      }
+      /**
+       * <code>string framework = 3 [json_name = "framework"];</code>
+       * @return The bytes for framework.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFrameworkBytes() {
+        return instance.getFrameworkBytes();
+      }
+      /**
+       * <code>string framework = 3 [json_name = "framework"];</code>
+       * @param value The framework to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFramework(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFramework(value);
+        return this;
+      }
+      /**
+       * <code>string framework = 3 [json_name = "framework"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFramework() {
+        copyOnWrite();
+        instance.clearFramework();
+        return this;
+      }
+      /**
+       * <code>string framework = 3 [json_name = "framework"];</code>
+       * @param value The bytes for framework to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFrameworkBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFrameworkBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @return The description.
+       */
+      @java.lang.Override
+      public java.lang.String getDescription() {
+        return instance.getDescription();
+      }
+      /**
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        return instance.getDescriptionBytes();
+      }
+      /**
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDescription(value);
+        return this;
+      }
+      /**
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        copyOnWrite();
+        instance.clearDescription();
+        return this;
+      }
+      /**
+       * <code>string description = 4 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDescriptionBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
+       */
+      @java.lang.Override
+      public boolean hasEol() {
+        return instance.hasEol();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getEol() {
+        return instance.getEol();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
+       */
+      public Builder setEol(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setEol(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
+       */
+      public Builder setEol(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setEol(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
+       */
+      public Builder mergeEol(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeEol(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
+       */
+      public Builder clearEol() {  copyOnWrite();
+        instance.clearEol();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.Container)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.Container();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "key_",
+              "uri_",
+              "framework_",
+              "description_",
+              "eol_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.Container> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.Container.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.Container>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.Container)
+    private static final viam.app.mltraining.v1.MlTraining.Container DEFAULT_INSTANCE;
+    static {
+      Container defaultInstance = new Container();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Container.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.Container getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<Container> PARSER;
+
+    public static com.google.protobuf.Parser<Container> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

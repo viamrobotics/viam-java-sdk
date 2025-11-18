@@ -18897,6 +18897,20 @@ public final class Robot {
      * @return The state.
      */
     com.viam.robot.v1.Robot.GetMachineStatusResponse.State getState();
+
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    java.util.List<com.viam.robot.v1.Robot.JobStatus> 
+        getJobStatusesList();
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    com.viam.robot.v1.Robot.JobStatus getJobStatuses(int index);
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    int getJobStatusesCount();
   }
   /**
    * Protobuf type {@code viam.robot.v1.GetMachineStatusResponse}
@@ -18908,6 +18922,7 @@ public final class Robot {
       GetMachineStatusResponseOrBuilder {
     private GetMachineStatusResponse() {
       resources_ = emptyProtobufList();
+      jobStatuses_ = emptyProtobufList();
     }
     /**
      * Protobuf enum {@code viam.robot.v1.GetMachineStatusResponse.State}
@@ -19208,6 +19223,100 @@ public final class Robot {
       state_ = 0;
     }
 
+    public static final int JOB_STATUSES_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.robot.v1.Robot.JobStatus> jobStatuses_;
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.robot.v1.Robot.JobStatus> getJobStatusesList() {
+      return jobStatuses_;
+    }
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    public java.util.List<? extends com.viam.robot.v1.Robot.JobStatusOrBuilder> 
+        getJobStatusesOrBuilderList() {
+      return jobStatuses_;
+    }
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    @java.lang.Override
+    public int getJobStatusesCount() {
+      return jobStatuses_.size();
+    }
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.JobStatus getJobStatuses(int index) {
+      return jobStatuses_.get(index);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    public com.viam.robot.v1.Robot.JobStatusOrBuilder getJobStatusesOrBuilder(
+        int index) {
+      return jobStatuses_.get(index);
+    }
+    private void ensureJobStatusesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.robot.v1.Robot.JobStatus> tmp = jobStatuses_;
+      if (!tmp.isModifiable()) {
+        jobStatuses_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    private void setJobStatuses(
+        int index, com.viam.robot.v1.Robot.JobStatus value) {
+      value.getClass();
+  ensureJobStatusesIsMutable();
+      jobStatuses_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    private void addJobStatuses(com.viam.robot.v1.Robot.JobStatus value) {
+      value.getClass();
+  ensureJobStatusesIsMutable();
+      jobStatuses_.add(value);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    private void addJobStatuses(
+        int index, com.viam.robot.v1.Robot.JobStatus value) {
+      value.getClass();
+  ensureJobStatusesIsMutable();
+      jobStatuses_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    private void addAllJobStatuses(
+        java.lang.Iterable<? extends com.viam.robot.v1.Robot.JobStatus> values) {
+      ensureJobStatusesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, jobStatuses_);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    private void clearJobStatuses() {
+      jobStatuses_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+     */
+    private void removeJobStatuses(int index) {
+      ensureJobStatusesIsMutable();
+      jobStatuses_.remove(index);
+    }
+
     public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -19500,6 +19609,108 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.robot.v1.Robot.JobStatus> getJobStatusesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getJobStatusesList());
+      }
+      /**
+       * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+       */
+      @java.lang.Override
+      public int getJobStatusesCount() {
+        return instance.getJobStatusesCount();
+      }/**
+       * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+       */
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.JobStatus getJobStatuses(int index) {
+        return instance.getJobStatuses(index);
+      }
+      /**
+       * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+       */
+      public Builder setJobStatuses(
+          int index, com.viam.robot.v1.Robot.JobStatus value) {
+        copyOnWrite();
+        instance.setJobStatuses(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+       */
+      public Builder setJobStatuses(
+          int index, com.viam.robot.v1.Robot.JobStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.setJobStatuses(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+       */
+      public Builder addJobStatuses(com.viam.robot.v1.Robot.JobStatus value) {
+        copyOnWrite();
+        instance.addJobStatuses(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+       */
+      public Builder addJobStatuses(
+          int index, com.viam.robot.v1.Robot.JobStatus value) {
+        copyOnWrite();
+        instance.addJobStatuses(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+       */
+      public Builder addJobStatuses(
+          com.viam.robot.v1.Robot.JobStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.addJobStatuses(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+       */
+      public Builder addJobStatuses(
+          int index, com.viam.robot.v1.Robot.JobStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.addJobStatuses(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+       */
+      public Builder addAllJobStatuses(
+          java.lang.Iterable<? extends com.viam.robot.v1.Robot.JobStatus> values) {
+        copyOnWrite();
+        instance.addAllJobStatuses(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+       */
+      public Builder clearJobStatuses() {
+        copyOnWrite();
+        instance.clearJobStatuses();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
+       */
+      public Builder removeJobStatuses(int index) {
+        copyOnWrite();
+        instance.removeJobStatuses(index);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.robot.v1.GetMachineStatusResponse)
     }
     @java.lang.Override
@@ -19521,10 +19732,12 @@ public final class Robot {
               com.viam.robot.v1.Robot.ResourceStatus.class,
               "config_",
               "state_",
+              "jobStatuses_",
+              com.viam.robot.v1.Robot.JobStatus.class,
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u001b\u0002\u1009" +
-                "\u0000\u0003\f";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0002\u0000\u0001\u001b\u0002\u1009" +
+                "\u0000\u0003\f\u0004\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -19575,6 +19788,727 @@ public final class Robot {
     private static volatile com.google.protobuf.Parser<GetMachineStatusResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetMachineStatusResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface JobStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.JobStatus)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string job_name = 1 [json_name = "jobName"];</code>
+     * @return The jobName.
+     */
+    java.lang.String getJobName();
+    /**
+     * <code>string job_name = 1 [json_name = "jobName"];</code>
+     * @return The bytes for jobName.
+     */
+    com.google.protobuf.ByteString
+        getJobNameBytes();
+
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    java.util.List<com.google.protobuf.Timestamp> 
+        getRecentSuccessfulRunsList();
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    com.google.protobuf.Timestamp getRecentSuccessfulRuns(int index);
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    int getRecentSuccessfulRunsCount();
+
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    java.util.List<com.google.protobuf.Timestamp> 
+        getRecentFailedRunsList();
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    com.google.protobuf.Timestamp getRecentFailedRuns(int index);
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    int getRecentFailedRunsCount();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.JobStatus}
+   */
+  public  static final class JobStatus extends
+      com.google.protobuf.GeneratedMessageLite<
+          JobStatus, JobStatus.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.JobStatus)
+      JobStatusOrBuilder {
+    private JobStatus() {
+      jobName_ = "";
+      recentSuccessfulRuns_ = emptyProtobufList();
+      recentFailedRuns_ = emptyProtobufList();
+    }
+    public static final int JOB_NAME_FIELD_NUMBER = 1;
+    private java.lang.String jobName_;
+    /**
+     * <code>string job_name = 1 [json_name = "jobName"];</code>
+     * @return The jobName.
+     */
+    @java.lang.Override
+    public java.lang.String getJobName() {
+      return jobName_;
+    }
+    /**
+     * <code>string job_name = 1 [json_name = "jobName"];</code>
+     * @return The bytes for jobName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJobNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(jobName_);
+    }
+    /**
+     * <code>string job_name = 1 [json_name = "jobName"];</code>
+     * @param value The jobName to set.
+     */
+    private void setJobName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      jobName_ = value;
+    }
+    /**
+     * <code>string job_name = 1 [json_name = "jobName"];</code>
+     */
+    private void clearJobName() {
+
+      jobName_ = getDefaultInstance().getJobName();
+    }
+    /**
+     * <code>string job_name = 1 [json_name = "jobName"];</code>
+     * @param value The bytes for jobName to set.
+     */
+    private void setJobNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      jobName_ = value.toStringUtf8();
+
+    }
+
+    public static final int RECENT_SUCCESSFUL_RUNS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.Timestamp> recentSuccessfulRuns_;
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.Timestamp> getRecentSuccessfulRunsList() {
+      return recentSuccessfulRuns_;
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    public java.util.List<? extends com.google.protobuf.TimestampOrBuilder> 
+        getRecentSuccessfulRunsOrBuilderList() {
+      return recentSuccessfulRuns_;
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    @java.lang.Override
+    public int getRecentSuccessfulRunsCount() {
+      return recentSuccessfulRuns_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getRecentSuccessfulRuns(int index) {
+      return recentSuccessfulRuns_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getRecentSuccessfulRunsOrBuilder(
+        int index) {
+      return recentSuccessfulRuns_.get(index);
+    }
+    private void ensureRecentSuccessfulRunsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.Timestamp> tmp = recentSuccessfulRuns_;
+      if (!tmp.isModifiable()) {
+        recentSuccessfulRuns_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    private void setRecentSuccessfulRuns(
+        int index, com.google.protobuf.Timestamp value) {
+      value.getClass();
+  ensureRecentSuccessfulRunsIsMutable();
+      recentSuccessfulRuns_.set(index, value);
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    private void addRecentSuccessfulRuns(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  ensureRecentSuccessfulRunsIsMutable();
+      recentSuccessfulRuns_.add(value);
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    private void addRecentSuccessfulRuns(
+        int index, com.google.protobuf.Timestamp value) {
+      value.getClass();
+  ensureRecentSuccessfulRunsIsMutable();
+      recentSuccessfulRuns_.add(index, value);
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    private void addAllRecentSuccessfulRuns(
+        java.lang.Iterable<? extends com.google.protobuf.Timestamp> values) {
+      ensureRecentSuccessfulRunsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, recentSuccessfulRuns_);
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    private void clearRecentSuccessfulRuns() {
+      recentSuccessfulRuns_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+     */
+    private void removeRecentSuccessfulRuns(int index) {
+      ensureRecentSuccessfulRunsIsMutable();
+      recentSuccessfulRuns_.remove(index);
+    }
+
+    public static final int RECENT_FAILED_RUNS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.Timestamp> recentFailedRuns_;
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.Timestamp> getRecentFailedRunsList() {
+      return recentFailedRuns_;
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    public java.util.List<? extends com.google.protobuf.TimestampOrBuilder> 
+        getRecentFailedRunsOrBuilderList() {
+      return recentFailedRuns_;
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    @java.lang.Override
+    public int getRecentFailedRunsCount() {
+      return recentFailedRuns_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getRecentFailedRuns(int index) {
+      return recentFailedRuns_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getRecentFailedRunsOrBuilder(
+        int index) {
+      return recentFailedRuns_.get(index);
+    }
+    private void ensureRecentFailedRunsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.google.protobuf.Timestamp> tmp = recentFailedRuns_;
+      if (!tmp.isModifiable()) {
+        recentFailedRuns_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    private void setRecentFailedRuns(
+        int index, com.google.protobuf.Timestamp value) {
+      value.getClass();
+  ensureRecentFailedRunsIsMutable();
+      recentFailedRuns_.set(index, value);
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    private void addRecentFailedRuns(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  ensureRecentFailedRunsIsMutable();
+      recentFailedRuns_.add(value);
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    private void addRecentFailedRuns(
+        int index, com.google.protobuf.Timestamp value) {
+      value.getClass();
+  ensureRecentFailedRunsIsMutable();
+      recentFailedRuns_.add(index, value);
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    private void addAllRecentFailedRuns(
+        java.lang.Iterable<? extends com.google.protobuf.Timestamp> values) {
+      ensureRecentFailedRunsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, recentFailedRuns_);
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    private void clearRecentFailedRuns() {
+      recentFailedRuns_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+     */
+    private void removeRecentFailedRuns(int index) {
+      ensureRecentFailedRunsIsMutable();
+      recentFailedRuns_.remove(index);
+    }
+
+    public static com.viam.robot.v1.Robot.JobStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.JobStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.JobStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.JobStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.JobStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.JobStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.JobStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.JobStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.JobStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.JobStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.JobStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.JobStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.JobStatus prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.JobStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.JobStatus, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.JobStatus)
+        com.viam.robot.v1.Robot.JobStatusOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.JobStatus.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string job_name = 1 [json_name = "jobName"];</code>
+       * @return The jobName.
+       */
+      @java.lang.Override
+      public java.lang.String getJobName() {
+        return instance.getJobName();
+      }
+      /**
+       * <code>string job_name = 1 [json_name = "jobName"];</code>
+       * @return The bytes for jobName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getJobNameBytes() {
+        return instance.getJobNameBytes();
+      }
+      /**
+       * <code>string job_name = 1 [json_name = "jobName"];</code>
+       * @param value The jobName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setJobName(value);
+        return this;
+      }
+      /**
+       * <code>string job_name = 1 [json_name = "jobName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJobName() {
+        copyOnWrite();
+        instance.clearJobName();
+        return this;
+      }
+      /**
+       * <code>string job_name = 1 [json_name = "jobName"];</code>
+       * @param value The bytes for jobName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setJobNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.google.protobuf.Timestamp> getRecentSuccessfulRunsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getRecentSuccessfulRunsList());
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+       */
+      @java.lang.Override
+      public int getRecentSuccessfulRunsCount() {
+        return instance.getRecentSuccessfulRunsCount();
+      }/**
+       * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getRecentSuccessfulRuns(int index) {
+        return instance.getRecentSuccessfulRuns(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+       */
+      public Builder setRecentSuccessfulRuns(
+          int index, com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setRecentSuccessfulRuns(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+       */
+      public Builder setRecentSuccessfulRuns(
+          int index, com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setRecentSuccessfulRuns(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+       */
+      public Builder addRecentSuccessfulRuns(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.addRecentSuccessfulRuns(value);
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+       */
+      public Builder addRecentSuccessfulRuns(
+          int index, com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.addRecentSuccessfulRuns(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+       */
+      public Builder addRecentSuccessfulRuns(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.addRecentSuccessfulRuns(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+       */
+      public Builder addRecentSuccessfulRuns(
+          int index, com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.addRecentSuccessfulRuns(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+       */
+      public Builder addAllRecentSuccessfulRuns(
+          java.lang.Iterable<? extends com.google.protobuf.Timestamp> values) {
+        copyOnWrite();
+        instance.addAllRecentSuccessfulRuns(values);
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+       */
+      public Builder clearRecentSuccessfulRuns() {
+        copyOnWrite();
+        instance.clearRecentSuccessfulRuns();
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_successful_runs = 2 [json_name = "recentSuccessfulRuns"];</code>
+       */
+      public Builder removeRecentSuccessfulRuns(int index) {
+        copyOnWrite();
+        instance.removeRecentSuccessfulRuns(index);
+        return this;
+      }
+
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.google.protobuf.Timestamp> getRecentFailedRunsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getRecentFailedRunsList());
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+       */
+      @java.lang.Override
+      public int getRecentFailedRunsCount() {
+        return instance.getRecentFailedRunsCount();
+      }/**
+       * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getRecentFailedRuns(int index) {
+        return instance.getRecentFailedRuns(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+       */
+      public Builder setRecentFailedRuns(
+          int index, com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setRecentFailedRuns(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+       */
+      public Builder setRecentFailedRuns(
+          int index, com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setRecentFailedRuns(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+       */
+      public Builder addRecentFailedRuns(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.addRecentFailedRuns(value);
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+       */
+      public Builder addRecentFailedRuns(
+          int index, com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.addRecentFailedRuns(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+       */
+      public Builder addRecentFailedRuns(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.addRecentFailedRuns(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+       */
+      public Builder addRecentFailedRuns(
+          int index, com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.addRecentFailedRuns(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+       */
+      public Builder addAllRecentFailedRuns(
+          java.lang.Iterable<? extends com.google.protobuf.Timestamp> values) {
+        copyOnWrite();
+        instance.addAllRecentFailedRuns(values);
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+       */
+      public Builder clearRecentFailedRuns() {
+        copyOnWrite();
+        instance.clearRecentFailedRuns();
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.Timestamp recent_failed_runs = 3 [json_name = "recentFailedRuns"];</code>
+       */
+      public Builder removeRecentFailedRuns(int index) {
+        copyOnWrite();
+        instance.removeRecentFailedRuns(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.JobStatus)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.JobStatus();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "jobName_",
+              "recentSuccessfulRuns_",
+              com.google.protobuf.Timestamp.class,
+              "recentFailedRuns_",
+              com.google.protobuf.Timestamp.class,
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0002\u0000\u0001\u0208\u0002\u001b" +
+                "\u0003\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.JobStatus> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.JobStatus.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.JobStatus>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.JobStatus)
+    private static final com.viam.robot.v1.Robot.JobStatus DEFAULT_INSTANCE;
+    static {
+      JobStatus defaultInstance = new JobStatus();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        JobStatus.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.JobStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<JobStatus> PARSER;
+
+    public static com.google.protobuf.Parser<JobStatus> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

@@ -2134,7 +2134,7 @@ public final class Common {
   }
   /**
    * <pre>
-   * PoseInFrame contains a pose and the and the reference frame in which it was observed
+   * PoseInFrame contains a pose and the reference frame in which it was observed
    * </pre>
    *
    * Protobuf type {@code viam.common.v1.PoseInFrame}
@@ -2326,7 +2326,7 @@ public final class Common {
 
     /**
      * <pre>
-     * PoseInFrame contains a pose and the and the reference frame in which it was observed
+     * PoseInFrame contains a pose and the reference frame in which it was observed
      * </pre>
      *
      * Protobuf type {@code viam.common.v1.PoseInFrame}
