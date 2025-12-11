@@ -19635,14 +19635,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=420
+     *     See app/data/v1/data.proto;l=423
      * @return The id.
      */
     @java.lang.Deprecated java.lang.String getId();
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=420
+     *     See app/data/v1/data.proto;l=423
      * @return The bytes for id.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -19791,7 +19791,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=420
+     *     See app/data/v1/data.proto;l=423
      * @return The id.
      */
     @java.lang.Override
@@ -19801,7 +19801,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=420
+     *     See app/data/v1/data.proto;l=423
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -19812,7 +19812,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=420
+     *     See app/data/v1/data.proto;l=423
      * @param value The id to set.
      */
     private void setId(
@@ -19824,7 +19824,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=420
+     *     See app/data/v1/data.proto;l=423
      */
     private void clearId() {
 
@@ -19833,7 +19833,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=420
+     *     See app/data/v1/data.proto;l=423
      * @param value The bytes for id to set.
      */
     private void setIdBytes(
@@ -20412,7 +20412,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=420
+       *     See app/data/v1/data.proto;l=423
        * @return The id.
        */
       @java.lang.Override
@@ -20422,7 +20422,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=420
+       *     See app/data/v1/data.proto;l=423
        * @return The bytes for id.
        */
       @java.lang.Override
@@ -20433,7 +20433,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=420
+       *     See app/data/v1/data.proto;l=423
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -20446,7 +20446,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=420
+       *     See app/data/v1/data.proto;l=423
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearId() {
@@ -20457,7 +20457,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=420
+       *     See app/data/v1/data.proto;l=423
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -27406,14 +27406,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=544
+     *     See app/data/v1/data.proto;l=547
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=544
+     *     See app/data/v1/data.proto;l=547
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -28478,14 +28478,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=563
+     *     See app/data/v1/data.proto;l=566
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=563
+     *     See app/data/v1/data.proto;l=566
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -29184,14 +29184,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=575
+     *     See app/data/v1/data.proto;l=578
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=575
+     *     See app/data/v1/data.proto;l=578
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -42151,6 +42151,985 @@ com.google.protobuf.Any defaultValue) {
     private static volatile com.google.protobuf.Parser<ListSavedQueriesResponse> PARSER;
 
     public static com.google.protobuf.Parser<ListSavedQueriesResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CreateBinaryDataSignedURLRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.CreateBinaryDataSignedURLRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The binary data ID of the file to create a signed URL for.
+     * </pre>
+     *
+     * <code>string binary_data_id = 1 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    java.lang.String getBinaryDataId();
+    /**
+     * <pre>
+     * The binary data ID of the file to create a signed URL for.
+     * </pre>
+     *
+     * <code>string binary_data_id = 1 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    com.google.protobuf.ByteString
+        getBinaryDataIdBytes();
+
+    /**
+     * <pre>
+     * Expiration time in minutes. Defaults to 15 minutes if not specified.
+     * Maximum allowed is 10080 minutes (7 days).
+     * </pre>
+     *
+     * <code>optional uint32 expiration_minutes = 2 [json_name = "expirationMinutes"];</code>
+     * @return Whether the expirationMinutes field is set.
+     */
+    boolean hasExpirationMinutes();
+    /**
+     * <pre>
+     * Expiration time in minutes. Defaults to 15 minutes if not specified.
+     * Maximum allowed is 10080 minutes (7 days).
+     * </pre>
+     *
+     * <code>optional uint32 expiration_minutes = 2 [json_name = "expirationMinutes"];</code>
+     * @return The expirationMinutes.
+     */
+    int getExpirationMinutes();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.CreateBinaryDataSignedURLRequest}
+   */
+  public  static final class CreateBinaryDataSignedURLRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreateBinaryDataSignedURLRequest, CreateBinaryDataSignedURLRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.CreateBinaryDataSignedURLRequest)
+      CreateBinaryDataSignedURLRequestOrBuilder {
+    private CreateBinaryDataSignedURLRequest() {
+      binaryDataId_ = "";
+    }
+    private int bitField0_;
+    public static final int BINARY_DATA_ID_FIELD_NUMBER = 1;
+    private java.lang.String binaryDataId_;
+    /**
+     * <pre>
+     * The binary data ID of the file to create a signed URL for.
+     * </pre>
+     *
+     * <code>string binary_data_id = 1 [json_name = "binaryDataId"];</code>
+     * @return The binaryDataId.
+     */
+    @java.lang.Override
+    public java.lang.String getBinaryDataId() {
+      return binaryDataId_;
+    }
+    /**
+     * <pre>
+     * The binary data ID of the file to create a signed URL for.
+     * </pre>
+     *
+     * <code>string binary_data_id = 1 [json_name = "binaryDataId"];</code>
+     * @return The bytes for binaryDataId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBinaryDataIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(binaryDataId_);
+    }
+    /**
+     * <pre>
+     * The binary data ID of the file to create a signed URL for.
+     * </pre>
+     *
+     * <code>string binary_data_id = 1 [json_name = "binaryDataId"];</code>
+     * @param value The binaryDataId to set.
+     */
+    private void setBinaryDataId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      binaryDataId_ = value;
+    }
+    /**
+     * <pre>
+     * The binary data ID of the file to create a signed URL for.
+     * </pre>
+     *
+     * <code>string binary_data_id = 1 [json_name = "binaryDataId"];</code>
+     */
+    private void clearBinaryDataId() {
+
+      binaryDataId_ = getDefaultInstance().getBinaryDataId();
+    }
+    /**
+     * <pre>
+     * The binary data ID of the file to create a signed URL for.
+     * </pre>
+     *
+     * <code>string binary_data_id = 1 [json_name = "binaryDataId"];</code>
+     * @param value The bytes for binaryDataId to set.
+     */
+    private void setBinaryDataIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      binaryDataId_ = value.toStringUtf8();
+
+    }
+
+    public static final int EXPIRATION_MINUTES_FIELD_NUMBER = 2;
+    private int expirationMinutes_;
+    /**
+     * <pre>
+     * Expiration time in minutes. Defaults to 15 minutes if not specified.
+     * Maximum allowed is 10080 minutes (7 days).
+     * </pre>
+     *
+     * <code>optional uint32 expiration_minutes = 2 [json_name = "expirationMinutes"];</code>
+     * @return Whether the expirationMinutes field is set.
+     */
+    @java.lang.Override
+    public boolean hasExpirationMinutes() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Expiration time in minutes. Defaults to 15 minutes if not specified.
+     * Maximum allowed is 10080 minutes (7 days).
+     * </pre>
+     *
+     * <code>optional uint32 expiration_minutes = 2 [json_name = "expirationMinutes"];</code>
+     * @return The expirationMinutes.
+     */
+    @java.lang.Override
+    public int getExpirationMinutes() {
+      return expirationMinutes_;
+    }
+    /**
+     * <pre>
+     * Expiration time in minutes. Defaults to 15 minutes if not specified.
+     * Maximum allowed is 10080 minutes (7 days).
+     * </pre>
+     *
+     * <code>optional uint32 expiration_minutes = 2 [json_name = "expirationMinutes"];</code>
+     * @param value The expirationMinutes to set.
+     */
+    private void setExpirationMinutes(int value) {
+      bitField0_ |= 0x00000001;
+      expirationMinutes_ = value;
+    }
+    /**
+     * <pre>
+     * Expiration time in minutes. Defaults to 15 minutes if not specified.
+     * Maximum allowed is 10080 minutes (7 days).
+     * </pre>
+     *
+     * <code>optional uint32 expiration_minutes = 2 [json_name = "expirationMinutes"];</code>
+     */
+    private void clearExpirationMinutes() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      expirationMinutes_ = 0;
+    }
+
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.CreateBinaryDataSignedURLRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.CreateBinaryDataSignedURLRequest)
+        viam.app.data.v1.Data.CreateBinaryDataSignedURLRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * The binary data ID of the file to create a signed URL for.
+       * </pre>
+       *
+       * <code>string binary_data_id = 1 [json_name = "binaryDataId"];</code>
+       * @return The binaryDataId.
+       */
+      @java.lang.Override
+      public java.lang.String getBinaryDataId() {
+        return instance.getBinaryDataId();
+      }
+      /**
+       * <pre>
+       * The binary data ID of the file to create a signed URL for.
+       * </pre>
+       *
+       * <code>string binary_data_id = 1 [json_name = "binaryDataId"];</code>
+       * @return The bytes for binaryDataId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBinaryDataIdBytes() {
+        return instance.getBinaryDataIdBytes();
+      }
+      /**
+       * <pre>
+       * The binary data ID of the file to create a signed URL for.
+       * </pre>
+       *
+       * <code>string binary_data_id = 1 [json_name = "binaryDataId"];</code>
+       * @param value The binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBinaryDataId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The binary data ID of the file to create a signed URL for.
+       * </pre>
+       *
+       * <code>string binary_data_id = 1 [json_name = "binaryDataId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBinaryDataId() {
+        copyOnWrite();
+        instance.clearBinaryDataId();
+        return this;
+      }
+      /**
+       * <pre>
+       * The binary data ID of the file to create a signed URL for.
+       * </pre>
+       *
+       * <code>string binary_data_id = 1 [json_name = "binaryDataId"];</code>
+       * @param value The bytes for binaryDataId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBinaryDataIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBinaryDataIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Expiration time in minutes. Defaults to 15 minutes if not specified.
+       * Maximum allowed is 10080 minutes (7 days).
+       * </pre>
+       *
+       * <code>optional uint32 expiration_minutes = 2 [json_name = "expirationMinutes"];</code>
+       * @return Whether the expirationMinutes field is set.
+       */
+      @java.lang.Override
+      public boolean hasExpirationMinutes() {
+        return instance.hasExpirationMinutes();
+      }
+      /**
+       * <pre>
+       * Expiration time in minutes. Defaults to 15 minutes if not specified.
+       * Maximum allowed is 10080 minutes (7 days).
+       * </pre>
+       *
+       * <code>optional uint32 expiration_minutes = 2 [json_name = "expirationMinutes"];</code>
+       * @return The expirationMinutes.
+       */
+      @java.lang.Override
+      public int getExpirationMinutes() {
+        return instance.getExpirationMinutes();
+      }
+      /**
+       * <pre>
+       * Expiration time in minutes. Defaults to 15 minutes if not specified.
+       * Maximum allowed is 10080 minutes (7 days).
+       * </pre>
+       *
+       * <code>optional uint32 expiration_minutes = 2 [json_name = "expirationMinutes"];</code>
+       * @param value The expirationMinutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpirationMinutes(int value) {
+        copyOnWrite();
+        instance.setExpirationMinutes(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration time in minutes. Defaults to 15 minutes if not specified.
+       * Maximum allowed is 10080 minutes (7 days).
+       * </pre>
+       *
+       * <code>optional uint32 expiration_minutes = 2 [json_name = "expirationMinutes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExpirationMinutes() {
+        copyOnWrite();
+        instance.clearExpirationMinutes();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.CreateBinaryDataSignedURLRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "binaryDataId_",
+              "expirationMinutes_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u100b" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.CreateBinaryDataSignedURLRequest)
+    private static final viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest DEFAULT_INSTANCE;
+    static {
+      CreateBinaryDataSignedURLRequest defaultInstance = new CreateBinaryDataSignedURLRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CreateBinaryDataSignedURLRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CreateBinaryDataSignedURLRequest> PARSER;
+
+    public static com.google.protobuf.Parser<CreateBinaryDataSignedURLRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CreateBinaryDataSignedURLResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.CreateBinaryDataSignedURLResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The signed URL for the binary data file.
+     * </pre>
+     *
+     * <code>string signed_url = 1 [json_name = "signedUrl"];</code>
+     * @return The signedUrl.
+     */
+    java.lang.String getSignedUrl();
+    /**
+     * <pre>
+     * The signed URL for the binary data file.
+     * </pre>
+     *
+     * <code>string signed_url = 1 [json_name = "signedUrl"];</code>
+     * @return The bytes for signedUrl.
+     */
+    com.google.protobuf.ByteString
+        getSignedUrlBytes();
+
+    /**
+     * <pre>
+     * Expiration time of the signed URL token.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 2 [json_name = "expiresAt"];</code>
+     * @return Whether the expiresAt field is set.
+     */
+    boolean hasExpiresAt();
+    /**
+     * <pre>
+     * Expiration time of the signed URL token.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 2 [json_name = "expiresAt"];</code>
+     * @return The expiresAt.
+     */
+    com.google.protobuf.Timestamp getExpiresAt();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.CreateBinaryDataSignedURLResponse}
+   */
+  public  static final class CreateBinaryDataSignedURLResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreateBinaryDataSignedURLResponse, CreateBinaryDataSignedURLResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.CreateBinaryDataSignedURLResponse)
+      CreateBinaryDataSignedURLResponseOrBuilder {
+    private CreateBinaryDataSignedURLResponse() {
+      signedUrl_ = "";
+    }
+    private int bitField0_;
+    public static final int SIGNED_URL_FIELD_NUMBER = 1;
+    private java.lang.String signedUrl_;
+    /**
+     * <pre>
+     * The signed URL for the binary data file.
+     * </pre>
+     *
+     * <code>string signed_url = 1 [json_name = "signedUrl"];</code>
+     * @return The signedUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getSignedUrl() {
+      return signedUrl_;
+    }
+    /**
+     * <pre>
+     * The signed URL for the binary data file.
+     * </pre>
+     *
+     * <code>string signed_url = 1 [json_name = "signedUrl"];</code>
+     * @return The bytes for signedUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSignedUrlBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(signedUrl_);
+    }
+    /**
+     * <pre>
+     * The signed URL for the binary data file.
+     * </pre>
+     *
+     * <code>string signed_url = 1 [json_name = "signedUrl"];</code>
+     * @param value The signedUrl to set.
+     */
+    private void setSignedUrl(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      signedUrl_ = value;
+    }
+    /**
+     * <pre>
+     * The signed URL for the binary data file.
+     * </pre>
+     *
+     * <code>string signed_url = 1 [json_name = "signedUrl"];</code>
+     */
+    private void clearSignedUrl() {
+
+      signedUrl_ = getDefaultInstance().getSignedUrl();
+    }
+    /**
+     * <pre>
+     * The signed URL for the binary data file.
+     * </pre>
+     *
+     * <code>string signed_url = 1 [json_name = "signedUrl"];</code>
+     * @param value The bytes for signedUrl to set.
+     */
+    private void setSignedUrlBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      signedUrl_ = value.toStringUtf8();
+
+    }
+
+    public static final int EXPIRES_AT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp expiresAt_;
+    /**
+     * <pre>
+     * Expiration time of the signed URL token.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 2 [json_name = "expiresAt"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExpiresAt() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Expiration time of the signed URL token.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 2 [json_name = "expiresAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getExpiresAt() {
+      return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+    }
+    /**
+     * <pre>
+     * Expiration time of the signed URL token.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 2 [json_name = "expiresAt"];</code>
+     */
+    private void setExpiresAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  expiresAt_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Expiration time of the signed URL token.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 2 [json_name = "expiresAt"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExpiresAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (expiresAt_ != null &&
+          expiresAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        expiresAt_ =
+          com.google.protobuf.Timestamp.newBuilder(expiresAt_).mergeFrom(value).buildPartial();
+      } else {
+        expiresAt_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Expiration time of the signed URL token.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 2 [json_name = "expiresAt"];</code>
+     */
+    private void clearExpiresAt() {  expiresAt_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.CreateBinaryDataSignedURLResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.CreateBinaryDataSignedURLResponse)
+        viam.app.data.v1.Data.CreateBinaryDataSignedURLResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * The signed URL for the binary data file.
+       * </pre>
+       *
+       * <code>string signed_url = 1 [json_name = "signedUrl"];</code>
+       * @return The signedUrl.
+       */
+      @java.lang.Override
+      public java.lang.String getSignedUrl() {
+        return instance.getSignedUrl();
+      }
+      /**
+       * <pre>
+       * The signed URL for the binary data file.
+       * </pre>
+       *
+       * <code>string signed_url = 1 [json_name = "signedUrl"];</code>
+       * @return The bytes for signedUrl.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSignedUrlBytes() {
+        return instance.getSignedUrlBytes();
+      }
+      /**
+       * <pre>
+       * The signed URL for the binary data file.
+       * </pre>
+       *
+       * <code>string signed_url = 1 [json_name = "signedUrl"];</code>
+       * @param value The signedUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignedUrl(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setSignedUrl(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The signed URL for the binary data file.
+       * </pre>
+       *
+       * <code>string signed_url = 1 [json_name = "signedUrl"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignedUrl() {
+        copyOnWrite();
+        instance.clearSignedUrl();
+        return this;
+      }
+      /**
+       * <pre>
+       * The signed URL for the binary data file.
+       * </pre>
+       *
+       * <code>string signed_url = 1 [json_name = "signedUrl"];</code>
+       * @param value The bytes for signedUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignedUrlBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setSignedUrlBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Expiration time of the signed URL token.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 2 [json_name = "expiresAt"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExpiresAt() {
+        return instance.hasExpiresAt();
+      }
+      /**
+       * <pre>
+       * Expiration time of the signed URL token.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 2 [json_name = "expiresAt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getExpiresAt() {
+        return instance.getExpiresAt();
+      }
+      /**
+       * <pre>
+       * Expiration time of the signed URL token.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 2 [json_name = "expiresAt"];</code>
+       */
+      public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setExpiresAt(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Expiration time of the signed URL token.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 2 [json_name = "expiresAt"];</code>
+       */
+      public Builder setExpiresAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExpiresAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration time of the signed URL token.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 2 [json_name = "expiresAt"];</code>
+       */
+      public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeExpiresAt(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration time of the signed URL token.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 2 [json_name = "expiresAt"];</code>
+       */
+      public Builder clearExpiresAt() {  copyOnWrite();
+        instance.clearExpiresAt();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.CreateBinaryDataSignedURLResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "signedUrl_",
+              "expiresAt_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.CreateBinaryDataSignedURLResponse)
+    private static final viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse DEFAULT_INSTANCE;
+    static {
+      CreateBinaryDataSignedURLResponse defaultInstance = new CreateBinaryDataSignedURLResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CreateBinaryDataSignedURLResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CreateBinaryDataSignedURLResponse> PARSER;
+
+    public static com.google.protobuf.Parser<CreateBinaryDataSignedURLResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

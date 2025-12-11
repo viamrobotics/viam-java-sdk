@@ -2777,6 +2777,25 @@ public final class Camera {
      */
     com.google.protobuf.ByteString
         getMimeTypeBytes();
+
+    /**
+     * <pre>
+     * annotations can be used to store additional information about the image
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code>
+     * @return Whether the annotations field is set.
+     */
+    boolean hasAnnotations();
+    /**
+     * <pre>
+     * annotations can be used to store additional information about the image
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code>
+     * @return The annotations.
+     */
+    viam.app.data.v1.Data.Annotations getAnnotations();
   }
   /**
    * Protobuf type {@code viam.component.camera.v1.Image}
@@ -2791,6 +2810,7 @@ public final class Camera {
       image_ = com.google.protobuf.ByteString.EMPTY;
       mimeType_ = "";
     }
+    private int bitField0_;
     public static final int SOURCE_NAME_FIELD_NUMBER = 1;
     private java.lang.String sourceName_;
     /**
@@ -3024,6 +3044,72 @@ public final class Camera {
       checkByteStringIsUtf8(value);
       mimeType_ = value.toStringUtf8();
 
+    }
+
+    public static final int ANNOTATIONS_FIELD_NUMBER = 5;
+    private viam.app.data.v1.Data.Annotations annotations_;
+    /**
+     * <pre>
+     * annotations can be used to store additional information about the image
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAnnotations() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * annotations can be used to store additional information about the image
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.Annotations getAnnotations() {
+      return annotations_ == null ? viam.app.data.v1.Data.Annotations.getDefaultInstance() : annotations_;
+    }
+    /**
+     * <pre>
+     * annotations can be used to store additional information about the image
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code>
+     */
+    private void setAnnotations(viam.app.data.v1.Data.Annotations value) {
+      value.getClass();
+  annotations_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * annotations can be used to store additional information about the image
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAnnotations(viam.app.data.v1.Data.Annotations value) {
+      value.getClass();
+  if (annotations_ != null &&
+          annotations_ != viam.app.data.v1.Data.Annotations.getDefaultInstance()) {
+        annotations_ =
+          viam.app.data.v1.Data.Annotations.newBuilder(annotations_).mergeFrom(value).buildPartial();
+      } else {
+        annotations_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * annotations can be used to store additional information about the image
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code>
+     */
+    private void clearAnnotations() {  annotations_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.camera.v1.Camera.Image parseFrom(
@@ -3367,6 +3453,77 @@ public final class Camera {
         return this;
       }
 
+      /**
+       * <pre>
+       * annotations can be used to store additional information about the image
+       * </pre>
+       *
+       * <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAnnotations() {
+        return instance.hasAnnotations();
+      }
+      /**
+       * <pre>
+       * annotations can be used to store additional information about the image
+       * </pre>
+       *
+       * <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.Annotations getAnnotations() {
+        return instance.getAnnotations();
+      }
+      /**
+       * <pre>
+       * annotations can be used to store additional information about the image
+       * </pre>
+       *
+       * <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code>
+       */
+      public Builder setAnnotations(viam.app.data.v1.Data.Annotations value) {
+        copyOnWrite();
+        instance.setAnnotations(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * annotations can be used to store additional information about the image
+       * </pre>
+       *
+       * <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code>
+       */
+      public Builder setAnnotations(
+          viam.app.data.v1.Data.Annotations.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAnnotations(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * annotations can be used to store additional information about the image
+       * </pre>
+       *
+       * <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code>
+       */
+      public Builder mergeAnnotations(viam.app.data.v1.Data.Annotations value) {
+        copyOnWrite();
+        instance.mergeAnnotations(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * annotations can be used to store additional information about the image
+       * </pre>
+       *
+       * <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code>
+       */
+      public Builder clearAnnotations() {  copyOnWrite();
+        instance.clearAnnotations();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.Image)
     }
     @java.lang.Override
@@ -3383,14 +3540,16 @@ public final class Camera {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "sourceName_",
               "format_",
               "image_",
               "mimeType_",
+              "annotations_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\f" +
-                "\u0003\n\u0004\u0208";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\f" +
+                "\u0003\n\u0004\u0208\u0005\u1009\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
