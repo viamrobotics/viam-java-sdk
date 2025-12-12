@@ -158,9 +158,19 @@ implements <a href="AppOuterClass.PartSummaryOrBuilder.html" title="interface in
 <div class="block"><code>bool is_main_part = 11 [json_name = "isMainPart"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLastOnline()" class="member-name-link">clearLastOnline</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLastAccess()" class="member-name-link">clearLastAccess</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 14 [json_name = "lastAccess"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLastOnline()" class="member-name-link">clearLastOnline</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .google.protobuf.Timestamp last_online = 3 [json_name = "lastOnline"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearOnlineState()" class="member-name-link">clearOnlineState</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.OnlineState online_state = 12 [json_name = "onlineState"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearOs()" class="member-name-link">clearOs</a>()</code></div>
@@ -188,49 +198,69 @@ implements <a href="AppOuterClass.PartSummaryOrBuilder.html" title="interface in
 <div class="block"><code>optional string public_ip_address = 8 [json_name = "publicIpAddress"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearViamAgentVersion()" class="member-name-link">clearViamAgentVersion</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSecondsSinceOnline()" class="member-name-link">clearSecondsSinceOnline</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional .viam.app.v1.ViamAgentVersion viam_agent_version = 5 [json_name = "viamAgentVersion"];</code></div>
+<div class="block"><code>int64 seconds_since_online = 13 [json_name = "secondsSinceOnline"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearViamServerVersion()" class="member-name-link">clearViamServerVersion</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearViamAgentVersion()" class="member-name-link">clearViamAgentVersion</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .viam.app.v1.ViamAgentVersion viam_agent_version = 5 [json_name = "viamAgentVersion"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearViamServerVersion()" class="member-name-link">clearViamServerVersion</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.ViamServerVersion viam_server_version = 4 [json_name = "viamServerVersion"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDnsName()" class="member-name-link">getDnsName</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional string dns_name = 10 [json_name = "dnsName"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDnsNameBytes()" class="member-name-link">getDnsNameBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDnsName()" class="member-name-link">getDnsName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string dns_name = 10 [json_name = "dnsName"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.FragmentSummary.html" title="class in viam.app.v1">AppOuterClass.FragmentSummary</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragments(int)" class="member-name-link">getFragments</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDnsNameBytes()" class="member-name-link">getDnsNameBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentSummary fragments = 9 [json_name = "fragments"];</code></div>
+<div class="block"><code>optional string dns_name = 10 [json_name = "dnsName"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentsCount()" class="member-name-link">getFragmentsCount</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.FragmentSummary.html" title="class in viam.app.v1">AppOuterClass.FragmentSummary</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragments(int)" class="member-name-link">getFragments</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.FragmentSummary fragments = 9 [json_name = "fragments"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AppOuterClass.FragmentSummary.html" title="class in viam.app.v1">AppOuterClass.FragmentSummary</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentsList()" class="member-name-link">getFragmentsList</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentsCount()" class="member-name-link">getFragmentsCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.FragmentSummary fragments = 9 [json_name = "fragments"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIsMainPart()" class="member-name-link">getIsMainPart</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AppOuterClass.FragmentSummary.html" title="class in viam.app.v1">AppOuterClass.FragmentSummary</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFragmentsList()" class="member-name-link">getFragmentsList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.FragmentSummary fragments = 9 [json_name = "fragments"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIsMainPart()" class="member-name-link">getIsMainPart</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>bool is_main_part = 11 [json_name = "isMainPart"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastAccess()" class="member-name-link">getLastAccess</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 14 [json_name = "lastAccess"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastOnline()" class="member-name-link">getLastOnline</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .google.protobuf.Timestamp last_online = 3 [json_name = "lastOnline"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.OnlineState.html" title="enum class in viam.app.v1">AppOuterClass.OnlineState</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOnlineState()" class="member-name-link">getOnlineState</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.OnlineState online_state = 12 [json_name = "onlineState"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOnlineStateValue()" class="member-name-link">getOnlineStateValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.OnlineState online_state = 12 [json_name = "onlineState"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOs()" class="member-name-link">getOs</a>()</code></div>
@@ -282,20 +312,30 @@ implements <a href="AppOuterClass.PartSummaryOrBuilder.html" title="interface in
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string public_ip_address = 8 [json_name = "publicIpAddress"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.ViamAgentVersion.html" title="class in viam.app.v1">AppOuterClass.ViamAgentVersion</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getViamAgentVersion()" class="member-name-link">getViamAgentVersion</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSecondsSinceOnline()" class="member-name-link">getSecondsSinceOnline</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>int64 seconds_since_online = 13 [json_name = "secondsSinceOnline"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.ViamAgentVersion.html" title="class in viam.app.v1">AppOuterClass.ViamAgentVersion</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getViamAgentVersion()" class="member-name-link">getViamAgentVersion</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.ViamAgentVersion viam_agent_version = 5 [json_name = "viamAgentVersion"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.ViamServerVersion.html" title="class in viam.app.v1">AppOuterClass.ViamServerVersion</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getViamServerVersion()" class="member-name-link">getViamServerVersion</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.ViamServerVersion.html" title="class in viam.app.v1">AppOuterClass.ViamServerVersion</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getViamServerVersion()" class="member-name-link">getViamServerVersion</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.ViamServerVersion viam_server_version = 4 [json_name = "viamServerVersion"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDnsName()" class="member-name-link">hasDnsName</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDnsName()" class="member-name-link">hasDnsName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string dns_name = 10 [json_name = "dnsName"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLastAccess()" class="member-name-link">hasLastAccess</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 14 [json_name = "lastAccess"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLastOnline()" class="member-name-link">hasLastOnline</a>()</code></div>
@@ -328,111 +368,141 @@ implements <a href="AppOuterClass.PartSummaryOrBuilder.html" title="interface in
 <div class="block"><code>optional .viam.app.v1.ViamServerVersion viam_server_version = 4 [json_name = "viamServerVersion"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeLastOnline(com.google.protobuf.Timestamp)" class="member-name-link">mergeLastOnline</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeLastAccess(com.google.protobuf.Timestamp)" class="member-name-link">mergeLastAccess</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional .google.protobuf.Timestamp last_online = 3 [json_name = "lastOnline"];</code></div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 14 [json_name = "lastAccess"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeViamAgentVersion(viam.app.v1.AppOuterClass.ViamAgentVersion)" class="member-name-link">mergeViamAgentVersion</a><wbr>(<a href="AppOuterClass.ViamAgentVersion.html" title="class in viam.app.v1">AppOuterClass.ViamAgentVersion</a>&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeLastOnline(com.google.protobuf.Timestamp)" class="member-name-link">mergeLastOnline</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .google.protobuf.Timestamp last_online = 3 [json_name = "lastOnline"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeViamAgentVersion(viam.app.v1.AppOuterClass.ViamAgentVersion)" class="member-name-link">mergeViamAgentVersion</a><wbr>(<a href="AppOuterClass.ViamAgentVersion.html" title="class in viam.app.v1">AppOuterClass.ViamAgentVersion</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.ViamAgentVersion viam_agent_version = 5 [json_name = "viamAgentVersion"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeViamServerVersion(viam.app.v1.AppOuterClass.ViamServerVersion)" class="member-name-link">mergeViamServerVersion</a><wbr>(<a href="AppOuterClass.ViamServerVersion.html" title="class in viam.app.v1">AppOuterClass.ViamServerVersion</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeViamServerVersion(viam.app.v1.AppOuterClass.ViamServerVersion)" class="member-name-link">mergeViamServerVersion</a><wbr>(<a href="AppOuterClass.ViamServerVersion.html" title="class in viam.app.v1">AppOuterClass.ViamServerVersion</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.ViamServerVersion viam_server_version = 4 [json_name = "viamServerVersion"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeFragments(int)" class="member-name-link">removeFragments</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeFragments(int)" class="member-name-link">removeFragments</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.FragmentSummary fragments = 9 [json_name = "fragments"];</code></div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDnsName(java.lang.String)" class="member-name-link">setDnsName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string dns_name = 10 [json_name = "dnsName"];</code></div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDnsName(java.lang.String)" class="member-name-link">setDnsName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDnsNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setDnsNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string dns_name = 10 [json_name = "dnsName"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDnsNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setDnsNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional string dns_name = 10 [json_name = "dnsName"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFragments(int,viam.app.v1.AppOuterClass.FragmentSummary)" class="member-name-link">setFragments</a><wbr>(int&nbsp;index,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFragments(int,viam.app.v1.AppOuterClass.FragmentSummary)" class="member-name-link">setFragments</a><wbr>(int&nbsp;index,
  <a href="AppOuterClass.FragmentSummary.html" title="class in viam.app.v1">AppOuterClass.FragmentSummary</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.FragmentSummary fragments = 9 [json_name = "fragments"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFragments(int,viam.app.v1.AppOuterClass.FragmentSummary.Builder)" class="member-name-link">setFragments</a><wbr>(int&nbsp;index,
- <a href="AppOuterClass.FragmentSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.FragmentSummary.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.FragmentSummary fragments = 9 [json_name = "fragments"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIsMainPart(boolean)" class="member-name-link">setIsMainPart</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFragments(int,viam.app.v1.AppOuterClass.FragmentSummary.Builder)" class="member-name-link">setFragments</a><wbr>(int&nbsp;index,
+ <a href="AppOuterClass.FragmentSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.FragmentSummary.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.FragmentSummary fragments = 9 [json_name = "fragments"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIsMainPart(boolean)" class="member-name-link">setIsMainPart</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>bool is_main_part = 11 [json_name = "isMainPart"];</code></div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastAccess(com.google.protobuf.Timestamp)" class="member-name-link">setLastAccess</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 14 [json_name = "lastAccess"];</code></div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastOnline(com.google.protobuf.Timestamp)" class="member-name-link">setLastOnline</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastAccess(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setLastAccess</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional .google.protobuf.Timestamp last_online = 3 [json_name = "lastOnline"];</code></div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 14 [json_name = "lastAccess"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastOnline(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setLastOnline</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastOnline(com.google.protobuf.Timestamp)" class="member-name-link">setLastOnline</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .google.protobuf.Timestamp last_online = 3 [json_name = "lastOnline"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOs(java.lang.String)" class="member-name-link">setOs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastOnline(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setLastOnline</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .google.protobuf.Timestamp last_online = 3 [json_name = "lastOnline"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOnlineState(viam.app.v1.AppOuterClass.OnlineState)" class="member-name-link">setOnlineState</a><wbr>(<a href="AppOuterClass.OnlineState.html" title="enum class in viam.app.v1">AppOuterClass.OnlineState</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.OnlineState online_state = 12 [json_name = "onlineState"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOnlineStateValue(int)" class="member-name-link">setOnlineStateValue</a><wbr>(int&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.OnlineState online_state = 12 [json_name = "onlineState"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOs(java.lang.String)" class="member-name-link">setOs</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string os = 6 [json_name = "os"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOsBytes(com.google.protobuf.ByteString)" class="member-name-link">setOsBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string os = 6 [json_name = "os"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOsBytes(com.google.protobuf.ByteString)" class="member-name-link">setOsBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional string os = 6 [json_name = "os"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPartId(java.lang.String)" class="member-name-link">setPartId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPartIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setPartIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPartId(java.lang.String)" class="member-name-link">setPartId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPartName(java.lang.String)" class="member-name-link">setPartName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPartIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setPartIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string part_name = 2 [json_name = "partName"];</code></div>
+<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPartNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setPartNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPartName(java.lang.String)" class="member-name-link">setPartName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string part_name = 2 [json_name = "partName"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPlatform(java.lang.String)" class="member-name-link">setPlatform</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPartNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setPartNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional string platform = 7 [json_name = "platform"];</code></div>
+<div class="block"><code>string part_name = 2 [json_name = "partName"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPlatformBytes(com.google.protobuf.ByteString)" class="member-name-link">setPlatformBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPlatform(java.lang.String)" class="member-name-link">setPlatform</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string platform = 7 [json_name = "platform"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPublicIpAddress(java.lang.String)" class="member-name-link">setPublicIpAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPlatformBytes(com.google.protobuf.ByteString)" class="member-name-link">setPlatformBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string platform = 7 [json_name = "platform"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPublicIpAddress(java.lang.String)" class="member-name-link">setPublicIpAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string public_ip_address = 8 [json_name = "publicIpAddress"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPublicIpAddressBytes(com.google.protobuf.ByteString)" class="member-name-link">setPublicIpAddressBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string public_ip_address = 8 [json_name = "publicIpAddress"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPublicIpAddressBytes(com.google.protobuf.ByteString)" class="member-name-link">setPublicIpAddressBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSecondsSinceOnline(long)" class="member-name-link">setSecondsSinceOnline</a><wbr>(long&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional string public_ip_address = 8 [json_name = "publicIpAddress"];</code></div>
+<div class="block"><code>int64 seconds_since_online = 13 [json_name = "secondsSinceOnline"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setViamAgentVersion(viam.app.v1.AppOuterClass.ViamAgentVersion)" class="member-name-link">setViamAgentVersion</a><wbr>(<a href="AppOuterClass.ViamAgentVersion.html" title="class in viam.app.v1">AppOuterClass.ViamAgentVersion</a>&nbsp;value)</code></div>
@@ -641,6 +711,160 @@ implements <a href="AppOuterClass.PartSummaryOrBuilder.html" title="interface in
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getOnlineStateValue()">
+<h3>getOnlineStateValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getOnlineStateValue</span>()</div>
+<div class="block"><code>.viam.app.v1.OnlineState online_state = 12 [json_name = "onlineState"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.PartSummaryOrBuilder.html#getOnlineStateValue()">getOnlineStateValue</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.PartSummaryOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.PartSummaryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire for onlineState.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setOnlineStateValue(int)">
+<h3>setOnlineStateValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></span>&nbsp;<span class="element-name">setOnlineStateValue</span><wbr><span class="parameters">(int&nbsp;value)</span></div>
+<div class="block"><code>.viam.app.v1.OnlineState online_state = 12 [json_name = "onlineState"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The onlineState to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getOnlineState()">
+<h3>getOnlineState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.OnlineState.html" title="enum class in viam.app.v1">AppOuterClass.OnlineState</a></span>&nbsp;<span class="element-name">getOnlineState</span>()</div>
+<div class="block"><code>.viam.app.v1.OnlineState online_state = 12 [json_name = "onlineState"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.PartSummaryOrBuilder.html#getOnlineState()">getOnlineState</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.PartSummaryOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.PartSummaryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The onlineState.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setOnlineState(viam.app.v1.AppOuterClass.OnlineState)">
+<h3>setOnlineState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></span>&nbsp;<span class="element-name">setOnlineState</span><wbr><span class="parameters">(<a href="AppOuterClass.OnlineState.html" title="enum class in viam.app.v1">AppOuterClass.OnlineState</a>&nbsp;value)</span></div>
+<div class="block"><code>.viam.app.v1.OnlineState online_state = 12 [json_name = "onlineState"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The enum numeric value on the wire for onlineState to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearOnlineState()">
+<h3>clearOnlineState</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></span>&nbsp;<span class="element-name">clearOnlineState</span>()</div>
+<div class="block"><code>.viam.app.v1.OnlineState online_state = 12 [json_name = "onlineState"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSecondsSinceOnline()">
+<h3>getSecondsSinceOnline</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">getSecondsSinceOnline</span>()</div>
+<div class="block"><code>int64 seconds_since_online = 13 [json_name = "secondsSinceOnline"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.PartSummaryOrBuilder.html#getSecondsSinceOnline()">getSecondsSinceOnline</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.PartSummaryOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.PartSummaryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The secondsSinceOnline.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setSecondsSinceOnline(long)">
+<h3>setSecondsSinceOnline</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></span>&nbsp;<span class="element-name">setSecondsSinceOnline</span><wbr><span class="parameters">(long&nbsp;value)</span></div>
+<div class="block"><code>int64 seconds_since_online = 13 [json_name = "secondsSinceOnline"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The secondsSinceOnline to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearSecondsSinceOnline()">
+<h3>clearSecondsSinceOnline</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></span>&nbsp;<span class="element-name">clearSecondsSinceOnline</span>()</div>
+<div class="block"><code>int64 seconds_since_online = 13 [json_name = "secondsSinceOnline"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasLastAccess()">
+<h3>hasLastAccess</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLastAccess</span>()</div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 14 [json_name = "lastAccess"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.PartSummaryOrBuilder.html#hasLastAccess()">hasLastAccess</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.PartSummaryOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.PartSummaryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the lastAccess field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLastAccess()">
+<h3>getLastAccess</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Timestamp</span>&nbsp;<span class="element-name">getLastAccess</span>()</div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 14 [json_name = "lastAccess"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.PartSummaryOrBuilder.html#getLastAccess()">getLastAccess</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.PartSummaryOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.PartSummaryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The lastAccess.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLastAccess(com.google.protobuf.Timestamp)">
+<h3>setLastAccess</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></span>&nbsp;<span class="element-name">setLastAccess</span><wbr><span class="parameters">(com.google.protobuf.Timestamp&nbsp;value)</span></div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 14 [json_name = "lastAccess"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setLastAccess(com.google.protobuf.Timestamp.Builder)">
+<h3>setLastAccess</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></span>&nbsp;<span class="element-name">setLastAccess</span><wbr><span class="parameters">(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</span></div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 14 [json_name = "lastAccess"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeLastAccess(com.google.protobuf.Timestamp)">
+<h3>mergeLastAccess</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></span>&nbsp;<span class="element-name">mergeLastAccess</span><wbr><span class="parameters">(com.google.protobuf.Timestamp&nbsp;value)</span></div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 14 [json_name = "lastAccess"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearLastAccess()">
+<h3>clearLastAccess</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.PartSummary.Builder.html" title="class in viam.app.v1">AppOuterClass.PartSummary.Builder</a></span>&nbsp;<span class="element-name">clearLastAccess</span>()</div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_access = 14 [json_name = "lastAccess"];</code></div>
 </section>
 </li>
 <li>

@@ -154,6 +154,9 @@ implements <a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#START_FIELD_NUMBER" class="member-name-link">START_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#USER_FACING_ONLY_FIELD_NUMBER" class="member-name-link">USER_FACING_ONLY_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -269,34 +272,44 @@ implements <a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="
 <div class="block"><code>optional .google.protobuf.Timestamp start = 6 [json_name = "start"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasEnd()" class="member-name-link">hasEnd</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserFacingOnly()" class="member-name-link">getUserFacingOnly</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional bool user_facing_only = 10 [json_name = "userFacingOnly"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasEnd()" class="member-name-link">hasEnd</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .google.protobuf.Timestamp end = 7 [json_name = "end"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFilter()" class="member-name-link">hasFilter</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFilter()" class="member-name-link">hasFilter</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string filter = 3 [json_name = "filter"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLimit()" class="member-name-link">hasLimit</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLimit()" class="member-name-link">hasLimit</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional int64 limit = 8 [json_name = "limit"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPageToken()" class="member-name-link">hasPageToken</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPageToken()" class="member-name-link">hasPageToken</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string page_token = 4 [json_name = "pageToken"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSource()" class="member-name-link">hasSource</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSource()" class="member-name-link">hasSource</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string source = 9 [json_name = "source"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasStart()" class="member-name-link">hasStart</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasStart()" class="member-name-link">hasStart</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .google.protobuf.Timestamp start = 6 [json_name = "start"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasUserFacingOnly()" class="member-name-link">hasUserFacingOnly</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional bool user_facing_only = 10 [json_name = "userFacingOnly"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="AppOuterClass.GetRobotPartLogsRequest.Builder.html" title="class in viam.app.v1">AppOuterClass.GetRobotPartLogsRequest.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -501,6 +514,20 @@ implements <a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="USER_FACING_ONLY_FIELD_NUMBER">
+<h3>USER_FACING_ONLY_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">USER_FACING_ONLY_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.AppOuterClass.GetRobotPartLogsRequest.USER_FACING_ONLY_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -542,7 +569,7 @@ implements <a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getErrorsOnly</span>()</div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     See app/v1/app.proto;l=836</div>
+     See app/v1/app.proto;l=847</div>
 </div>
 <div class="block"><pre>
  TODO(https://viam.atlassian.net/browse/APP-3877): Remove this field
@@ -821,6 +848,32 @@ implements <a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="
 <dd><code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html#getSourceBytes()">getSourceBytes</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetRobotPartLogsRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for source.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasUserFacingOnly()">
+<h3>hasUserFacingOnly</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasUserFacingOnly</span>()</div>
+<div class="block"><code>optional bool user_facing_only = 10 [json_name = "userFacingOnly"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html#hasUserFacingOnly()">hasUserFacingOnly</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetRobotPartLogsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the userFacingOnly field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUserFacingOnly()">
+<h3>getUserFacingOnly</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getUserFacingOnly</span>()</div>
+<div class="block"><code>optional bool user_facing_only = 10 [json_name = "userFacingOnly"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html#getUserFacingOnly()">getUserFacingOnly</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetRobotPartLogsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The userFacingOnly.</dd>
 </dl>
 </section>
 </li>

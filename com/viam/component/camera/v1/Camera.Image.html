@@ -128,17 +128,20 @@ implements <a href="Camera.ImageOrBuilder.html" title="interface in com.viam.com
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#FORMAT_FIELD_NUMBER" class="member-name-link">FORMAT_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ANNOTATIONS_FIELD_NUMBER" class="member-name-link">ANNOTATIONS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#IMAGE_FIELD_NUMBER" class="member-name-link">IMAGE_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#FORMAT_FIELD_NUMBER" class="member-name-link">FORMAT_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#MIME_TYPE_FIELD_NUMBER" class="member-name-link">MIME_TYPE_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#IMAGE_FIELD_NUMBER" class="member-name-link">IMAGE_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#SOURCE_NAME_FIELD_NUMBER" class="member-name-link">SOURCE_NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MIME_TYPE_FIELD_NUMBER" class="member-name-link">MIME_TYPE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#SOURCE_NAME_FIELD_NUMBER" class="member-name-link">SOURCE_NAME_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -164,50 +167,62 @@ implements <a href="Camera.ImageOrBuilder.html" title="interface in com.viam.com
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg0,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;arg1)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Camera.Image.html" title="class in com.viam.component.camera.v1">Camera.Image</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Camera.Format.html" title="enum class in com.viam.component.camera.v1">Camera.Format</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFormat()" class="member-name-link">getFormat</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../../viam/app/data/v1/Data.Annotations.html" title="class in viam.app.data.v1">Data.Annotations</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAnnotations()" class="member-name-link">getAnnotations</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- format of the response image bytes</div>
+ annotations can be used to store additional information about the image</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFormatValue()" class="member-name-link">getFormatValue</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Camera.Image.html" title="class in com.viam.component.camera.v1">Camera.Image</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Camera.Format.html" title="enum class in com.viam.component.camera.v1">Camera.Format</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFormat()" class="member-name-link">getFormat</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  format of the response image bytes</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getImage()" class="member-name-link">getImage</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFormatValue()" class="member-name-link">getFormatValue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ format of the response image bytes</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getImage()" class="member-name-link">getImage</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  image in bytes</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeType()" class="member-name-link">getMimeType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- The mime type of the image</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeTypeBytes()" class="member-name-link">getMimeTypeBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeType()" class="member-name-link">getMimeType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  The mime type of the image</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSourceName()" class="member-name-link">getSourceName</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeTypeBytes()" class="member-name-link">getMimeTypeBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The mime type of the image</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSourceName()" class="member-name-link">getSourceName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ the name of the sensor where the image came from</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSourceNameBytes()" class="member-name-link">getSourceNameBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  the name of the sensor where the image came from</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSourceNameBytes()" class="member-name-link">getSourceNameBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAnnotations()" class="member-name-link">hasAnnotations</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- the name of the sensor where the image came from</div>
+ annotations can be used to store additional information about the image</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Camera.Image.Builder.html" title="class in com.viam.component.camera.v1">Camera.Image.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -342,6 +357,20 @@ implements <a href="Camera.ImageOrBuilder.html" title="interface in com.viam.com
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="ANNOTATIONS_FIELD_NUMBER">
+<h3>ANNOTATIONS_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ANNOTATIONS_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../../constant-values.html#com.viam.component.camera.v1.Camera.Image.ANNOTATIONS_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -466,6 +495,40 @@ implements <a href="Camera.ImageOrBuilder.html" title="interface in com.viam.com
 <dd><code><a href="Camera.ImageOrBuilder.html#getMimeTypeBytes()">getMimeTypeBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Camera.ImageOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.ImageOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for mimeType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasAnnotations()">
+<h3>hasAnnotations</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasAnnotations</span>()</div>
+<div class="block"><pre>
+ annotations can be used to store additional information about the image
+ </pre>
+
+ <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Camera.ImageOrBuilder.html#hasAnnotations()">hasAnnotations</a></code>&nbsp;in interface&nbsp;<code><a href="Camera.ImageOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.ImageOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the annotations field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAnnotations()">
+<h3>getAnnotations</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../../viam/app/data/v1/Data.Annotations.html" title="class in viam.app.data.v1">Data.Annotations</a></span>&nbsp;<span class="element-name">getAnnotations</span>()</div>
+<div class="block"><pre>
+ annotations can be used to store additional information about the image
+ </pre>
+
+ <code>.viam.app.data.v1.Annotations annotations = 5 [json_name = "annotations"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Camera.ImageOrBuilder.html#getAnnotations()">getAnnotations</a></code>&nbsp;in interface&nbsp;<code><a href="Camera.ImageOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.ImageOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The annotations.</dd>
 </dl>
 </section>
 </li>

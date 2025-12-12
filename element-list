@@ -3,6 +3,7 @@ com.google.api.expr.v1alpha1
 com.google.api.expr.v1beta1
 com.google.bytestream
 com.google.geo.type
+com.google.iam.v1
 com.google.longrunning
 com.google.rpc
 com.google.rpc.context
@@ -65,6 +66,9 @@ com.viam.service.slam.v1
 com.viam.service.video.v1
 com.viam.service.vision.v1
 com.viam.service.worldstatestore.v1
+io.opentelemetry.proto.common.v1
+io.opentelemetry.proto.resource.v1
+io.opentelemetry.proto.trace.v1
 proto.rpc.examples.echo.v1
 proto.rpc.examples.echoresource.v1
 proto.rpc.v1
