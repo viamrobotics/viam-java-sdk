@@ -1,6 +1,8 @@
 package com.viam.sdk.core.component.gantry
 
+import com.google.protobuf.ByteString
 import com.google.protobuf.Struct
+import com.viam.common.v1.Common.KinematicsFileFormat
 import com.viam.common.v1.Common.ResourceName
 import com.viam.sdk.core.component.Component
 import com.viam.sdk.core.resource.Resource
@@ -109,4 +111,24 @@ abstract class Gantry(name: String) : Component(SUBTYPE, Gantry.named(name)) {
      * @returns if the gantry is moving
      */
     abstract fun isMoving(): Boolean
+
+    /**
+     * Get the kinematics information associated with the gantry.
+     * @return  A pair containing two values; the first [0] value represents the format of the
+     *          file, either in URDF format (``KinematicsFileFormat.KINEMATICS_FILE_FORMAT_URDF``) or
+     *          Viam's kinematic parameter format (spatial vector algebra) (``KinematicsFileFormat.KINEMATICS_FILE_FORMAT_SVA``),
+     *          and the second [1] value represents the byte contents of the file.
+     */
+    abstract fun getKinematics(extra: Struct): Pair<KinematicsFileFormat, ByteString>
+
+    /**
+     * Get the kinematics information associated with the gantry.
+     * @return  A pair containing two values; the first [0] value represents the format of the
+     *          file, either in URDF format (``KinematicsFileFormat.KINEMATICS_FILE_FORMAT_URDF``) or
+     *          Viam's kinematic parameter format (spatial vector algebra) (``KinematicsFileFormat.KINEMATICS_FILE_FORMAT_SVA``),
+     *          and the second [1] value represents the byte contents of the file.
+     */
+    fun getKinematics(): Pair<KinematicsFileFormat, ByteString> {
+        return getKinematics(Struct.getDefaultInstance())
+    }
 }

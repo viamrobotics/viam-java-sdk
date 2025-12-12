@@ -1,9 +1,11 @@
 package com.viam.sdk.core.component.gantry
 
+import com.google.protobuf.ByteString
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
 import com.viam.common.v1.Common
 import com.viam.common.v1.Common.Geometry
+import com.viam.common.v1.Common.KinematicsFileFormat
 import com.viam.component.gantry.v1.GantryServiceGrpc
 import com.viam.component.gantry.v1.GantryServiceGrpc.GantryServiceBlockingStub
 import com.viam.component.gantry.v1.Gantry.*
@@ -120,5 +122,16 @@ class GantryRPCServiceTest {
         val request = Common.GetGeometriesRequest.newBuilder().setName(gantry.name.name).build()
         client.getGeometries(request)
         verify(gantry).getGeometries(Optional.of(Struct.getDefaultInstance()))
+    }
+
+    @Test
+    fun getKinematics() {
+        val kinematics = (KinematicsFileFormat.KINEMATICS_FILE_FORMAT_SVA to ByteString.copyFromUtf8("abc"))
+        `when`(gantry.getKinematics(any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(kinematics)
+        val request = Common.GetKinematicsRequest.newBuilder().setName(gantry.name.name).build()
+        val response = this.client.getKinematics(request)
+        verify(gantry).getKinematics(Struct.getDefaultInstance())
+        assertEquals(kinematics, (response.format to response.kinematicsData))
+
     }
 }
