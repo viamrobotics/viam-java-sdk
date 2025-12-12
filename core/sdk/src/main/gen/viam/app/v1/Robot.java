@@ -3720,6 +3720,25 @@ public final class Robot {
      * @return The command.
      */
     com.google.protobuf.Struct getCommand();
+
+    /**
+     * <pre>
+     * configuration for this job's logger.
+     * </pre>
+     *
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 6 [json_name = "logConfiguration"];</code>
+     * @return Whether the logConfiguration field is set.
+     */
+    boolean hasLogConfiguration();
+    /**
+     * <pre>
+     * configuration for this job's logger.
+     * </pre>
+     *
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 6 [json_name = "logConfiguration"];</code>
+     * @return The logConfiguration.
+     */
+    viam.app.v1.Robot.LogConfiguration getLogConfiguration();
   }
   /**
    * Protobuf type {@code viam.app.v1.JobConfig}
@@ -4078,6 +4097,72 @@ public final class Robot {
      */
     private void clearCommand() {  command_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int LOG_CONFIGURATION_FIELD_NUMBER = 6;
+    private viam.app.v1.Robot.LogConfiguration logConfiguration_;
+    /**
+     * <pre>
+     * configuration for this job's logger.
+     * </pre>
+     *
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 6 [json_name = "logConfiguration"];</code>
+     */
+    @java.lang.Override
+    public boolean hasLogConfiguration() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * configuration for this job's logger.
+     * </pre>
+     *
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 6 [json_name = "logConfiguration"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.LogConfiguration getLogConfiguration() {
+      return logConfiguration_ == null ? viam.app.v1.Robot.LogConfiguration.getDefaultInstance() : logConfiguration_;
+    }
+    /**
+     * <pre>
+     * configuration for this job's logger.
+     * </pre>
+     *
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 6 [json_name = "logConfiguration"];</code>
+     */
+    private void setLogConfiguration(viam.app.v1.Robot.LogConfiguration value) {
+      value.getClass();
+  logConfiguration_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * configuration for this job's logger.
+     * </pre>
+     *
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 6 [json_name = "logConfiguration"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLogConfiguration(viam.app.v1.Robot.LogConfiguration value) {
+      value.getClass();
+  if (logConfiguration_ != null &&
+          logConfiguration_ != viam.app.v1.Robot.LogConfiguration.getDefaultInstance()) {
+        logConfiguration_ =
+          viam.app.v1.Robot.LogConfiguration.newBuilder(logConfiguration_).mergeFrom(value).buildPartial();
+      } else {
+        logConfiguration_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * configuration for this job's logger.
+     * </pre>
+     *
+     * <code>.viam.app.v1.LogConfiguration log_configuration = 6 [json_name = "logConfiguration"];</code>
+     */
+    private void clearLogConfiguration() {  logConfiguration_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.v1.Robot.JobConfig parseFrom(
@@ -4535,6 +4620,77 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <pre>
+       * configuration for this job's logger.
+       * </pre>
+       *
+       * <code>.viam.app.v1.LogConfiguration log_configuration = 6 [json_name = "logConfiguration"];</code>
+       */
+      @java.lang.Override
+      public boolean hasLogConfiguration() {
+        return instance.hasLogConfiguration();
+      }
+      /**
+       * <pre>
+       * configuration for this job's logger.
+       * </pre>
+       *
+       * <code>.viam.app.v1.LogConfiguration log_configuration = 6 [json_name = "logConfiguration"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.LogConfiguration getLogConfiguration() {
+        return instance.getLogConfiguration();
+      }
+      /**
+       * <pre>
+       * configuration for this job's logger.
+       * </pre>
+       *
+       * <code>.viam.app.v1.LogConfiguration log_configuration = 6 [json_name = "logConfiguration"];</code>
+       */
+      public Builder setLogConfiguration(viam.app.v1.Robot.LogConfiguration value) {
+        copyOnWrite();
+        instance.setLogConfiguration(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * configuration for this job's logger.
+       * </pre>
+       *
+       * <code>.viam.app.v1.LogConfiguration log_configuration = 6 [json_name = "logConfiguration"];</code>
+       */
+      public Builder setLogConfiguration(
+          viam.app.v1.Robot.LogConfiguration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLogConfiguration(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * configuration for this job's logger.
+       * </pre>
+       *
+       * <code>.viam.app.v1.LogConfiguration log_configuration = 6 [json_name = "logConfiguration"];</code>
+       */
+      public Builder mergeLogConfiguration(viam.app.v1.Robot.LogConfiguration value) {
+        copyOnWrite();
+        instance.mergeLogConfiguration(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * configuration for this job's logger.
+       * </pre>
+       *
+       * <code>.viam.app.v1.LogConfiguration log_configuration = 6 [json_name = "logConfiguration"];</code>
+       */
+      public Builder clearLogConfiguration() {  copyOnWrite();
+        instance.clearLogConfiguration();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.JobConfig)
     }
     @java.lang.Override
@@ -4557,10 +4713,11 @@ public final class Robot {
               "resource_",
               "method_",
               "command_",
+              "logConfiguration_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000";
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000\u0006\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -5455,7 +5612,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=94
+     *     See app/v1/robot.proto;l=96
      * @return The locationSecret.
      */
     @java.lang.Deprecated java.lang.String getLocationSecret();
@@ -5466,7 +5623,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=94
+     *     See app/v1/robot.proto;l=96
      * @return The bytes for locationSecret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -5865,7 +6022,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=94
+     *     See app/v1/robot.proto;l=96
      * @return The locationSecret.
      */
     @java.lang.Override
@@ -5879,7 +6036,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=94
+     *     See app/v1/robot.proto;l=96
      * @return The bytes for locationSecret.
      */
     @java.lang.Override
@@ -5894,7 +6051,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=94
+     *     See app/v1/robot.proto;l=96
      * @param value The locationSecret to set.
      */
     private void setLocationSecret(
@@ -5910,7 +6067,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=94
+     *     See app/v1/robot.proto;l=96
      */
     private void clearLocationSecret() {
 
@@ -5923,7 +6080,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=94
+     *     See app/v1/robot.proto;l=96
      * @param value The bytes for locationSecret to set.
      */
     private void setLocationSecretBytes(
@@ -6676,7 +6833,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=94
+       *     See app/v1/robot.proto;l=96
        * @return The locationSecret.
        */
       @java.lang.Override
@@ -6690,7 +6847,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=94
+       *     See app/v1/robot.proto;l=96
        * @return The bytes for locationSecret.
        */
       @java.lang.Override
@@ -6705,7 +6862,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=94
+       *     See app/v1/robot.proto;l=96
        * @param value The locationSecret to set.
        * @return This builder for chaining.
        */
@@ -6722,7 +6879,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=94
+       *     See app/v1/robot.proto;l=96
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLocationSecret() {
@@ -6737,7 +6894,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=94
+       *     See app/v1/robot.proto;l=96
        * @param value The bytes for locationSecret to set.
        * @return This builder for chaining.
        */

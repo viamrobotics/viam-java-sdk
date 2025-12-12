@@ -948,6 +948,36 @@ public final class DataServiceGrpc {
     return getListSavedQueriesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest,
+      viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse> getCreateBinaryDataSignedURLMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateBinaryDataSignedURL",
+      requestType = viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest.class,
+      responseType = viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest,
+      viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse> getCreateBinaryDataSignedURLMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest, viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse> getCreateBinaryDataSignedURLMethod;
+    if ((getCreateBinaryDataSignedURLMethod = DataServiceGrpc.getCreateBinaryDataSignedURLMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getCreateBinaryDataSignedURLMethod = DataServiceGrpc.getCreateBinaryDataSignedURLMethod) == null) {
+          DataServiceGrpc.getCreateBinaryDataSignedURLMethod = getCreateBinaryDataSignedURLMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest, viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateBinaryDataSignedURL"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getCreateBinaryDataSignedURLMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1314,6 +1344,16 @@ public final class DataServiceGrpc {
     default void listSavedQueries(viam.app.data.v1.Data.ListSavedQueriesRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListSavedQueriesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSavedQueriesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateBinaryDataSignedURL creates a temporary public URL for a binary data file.
+     * </pre>
+     */
+    default void createBinaryDataSignedURL(viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateBinaryDataSignedURLMethod(), responseObserver);
     }
   }
 
@@ -1697,6 +1737,17 @@ public final class DataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSavedQueriesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateBinaryDataSignedURL creates a temporary public URL for a binary data file.
+     * </pre>
+     */
+    public void createBinaryDataSignedURL(viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateBinaryDataSignedURLMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -2034,6 +2085,16 @@ public final class DataServiceGrpc {
     public viam.app.data.v1.Data.ListSavedQueriesResponse listSavedQueries(viam.app.data.v1.Data.ListSavedQueriesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSavedQueriesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateBinaryDataSignedURL creates a temporary public URL for a binary data file.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse createBinaryDataSignedURL(viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateBinaryDataSignedURLMethod(), getCallOptions(), request);
     }
   }
 
@@ -2392,6 +2453,17 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSavedQueriesMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * CreateBinaryDataSignedURL creates a temporary public URL for a binary data file.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse> createBinaryDataSignedURL(
+        viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateBinaryDataSignedURLMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TABULAR_DATA_BY_FILTER = 0;
@@ -2425,6 +2497,7 @@ public final class DataServiceGrpc {
   private static final int METHODID_GET_SAVED_QUERY = 28;
   private static final int METHODID_DELETE_SAVED_QUERY = 29;
   private static final int METHODID_LIST_SAVED_QUERIES = 30;
+  private static final int METHODID_CREATE_BINARY_DATA_SIGNED_URL = 31;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2566,6 +2639,10 @@ public final class DataServiceGrpc {
         case METHODID_LIST_SAVED_QUERIES:
           serviceImpl.listSavedQueries((viam.app.data.v1.Data.ListSavedQueriesRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListSavedQueriesResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_BINARY_DATA_SIGNED_URL:
+          serviceImpl.createBinaryDataSignedURL((viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2802,6 +2879,13 @@ public final class DataServiceGrpc {
               viam.app.data.v1.Data.ListSavedQueriesRequest,
               viam.app.data.v1.Data.ListSavedQueriesResponse>(
                 service, METHODID_LIST_SAVED_QUERIES)))
+        .addMethod(
+          getCreateBinaryDataSignedURLMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest,
+              viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse>(
+                service, METHODID_CREATE_BINARY_DATA_SIGNED_URL)))
         .build();
   }
 
@@ -2845,6 +2929,7 @@ public final class DataServiceGrpc {
               .addMethod(getGetSavedQueryMethod())
               .addMethod(getDeleteSavedQueryMethod())
               .addMethod(getListSavedQueriesMethod())
+              .addMethod(getCreateBinaryDataSignedURLMethod())
               .build();
         }
       }

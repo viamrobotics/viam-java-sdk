@@ -108,6 +108,585 @@ public final class Robot {
     // @@protoc_insertion_point(enum_scope:viam.robot.v1.PeerConnectionType)
   }
 
+  public interface SendTracesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.SendTracesRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    java.util.List<io.opentelemetry.proto.trace.v1.ResourceSpans> 
+        getResourceSpansList();
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    io.opentelemetry.proto.trace.v1.ResourceSpans getResourceSpans(int index);
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    int getResourceSpansCount();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.SendTracesRequest}
+   */
+  public  static final class SendTracesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          SendTracesRequest, SendTracesRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.SendTracesRequest)
+      SendTracesRequestOrBuilder {
+    private SendTracesRequest() {
+      resourceSpans_ = emptyProtobufList();
+    }
+    public static final int RESOURCE_SPANS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<io.opentelemetry.proto.trace.v1.ResourceSpans> resourceSpans_;
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<io.opentelemetry.proto.trace.v1.ResourceSpans> getResourceSpansList() {
+      return resourceSpans_;
+    }
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    public java.util.List<? extends io.opentelemetry.proto.trace.v1.ResourceSpansOrBuilder> 
+        getResourceSpansOrBuilderList() {
+      return resourceSpans_;
+    }
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    @java.lang.Override
+    public int getResourceSpansCount() {
+      return resourceSpans_.size();
+    }
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    @java.lang.Override
+    public io.opentelemetry.proto.trace.v1.ResourceSpans getResourceSpans(int index) {
+      return resourceSpans_.get(index);
+    }
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    public io.opentelemetry.proto.trace.v1.ResourceSpansOrBuilder getResourceSpansOrBuilder(
+        int index) {
+      return resourceSpans_.get(index);
+    }
+    private void ensureResourceSpansIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<io.opentelemetry.proto.trace.v1.ResourceSpans> tmp = resourceSpans_;
+      if (!tmp.isModifiable()) {
+        resourceSpans_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    private void setResourceSpans(
+        int index, io.opentelemetry.proto.trace.v1.ResourceSpans value) {
+      value.getClass();
+  ensureResourceSpansIsMutable();
+      resourceSpans_.set(index, value);
+    }
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    private void addResourceSpans(io.opentelemetry.proto.trace.v1.ResourceSpans value) {
+      value.getClass();
+  ensureResourceSpansIsMutable();
+      resourceSpans_.add(value);
+    }
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    private void addResourceSpans(
+        int index, io.opentelemetry.proto.trace.v1.ResourceSpans value) {
+      value.getClass();
+  ensureResourceSpansIsMutable();
+      resourceSpans_.add(index, value);
+    }
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    private void addAllResourceSpans(
+        java.lang.Iterable<? extends io.opentelemetry.proto.trace.v1.ResourceSpans> values) {
+      ensureResourceSpansIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, resourceSpans_);
+    }
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    private void clearResourceSpans() {
+      resourceSpans_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+     */
+    private void removeResourceSpans(int index) {
+      ensureResourceSpansIsMutable();
+      resourceSpans_.remove(index);
+    }
+
+    public static com.viam.robot.v1.Robot.SendTracesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.SendTracesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.SendTracesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.SendTracesRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.SendTracesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.SendTracesRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.SendTracesRequest)
+        com.viam.robot.v1.Robot.SendTracesRequestOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.SendTracesRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<io.opentelemetry.proto.trace.v1.ResourceSpans> getResourceSpansList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getResourceSpansList());
+      }
+      /**
+       * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+       */
+      @java.lang.Override
+      public int getResourceSpansCount() {
+        return instance.getResourceSpansCount();
+      }/**
+       * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+       */
+      @java.lang.Override
+      public io.opentelemetry.proto.trace.v1.ResourceSpans getResourceSpans(int index) {
+        return instance.getResourceSpans(index);
+      }
+      /**
+       * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+       */
+      public Builder setResourceSpans(
+          int index, io.opentelemetry.proto.trace.v1.ResourceSpans value) {
+        copyOnWrite();
+        instance.setResourceSpans(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+       */
+      public Builder setResourceSpans(
+          int index, io.opentelemetry.proto.trace.v1.ResourceSpans.Builder builderForValue) {
+        copyOnWrite();
+        instance.setResourceSpans(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+       */
+      public Builder addResourceSpans(io.opentelemetry.proto.trace.v1.ResourceSpans value) {
+        copyOnWrite();
+        instance.addResourceSpans(value);
+        return this;
+      }
+      /**
+       * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+       */
+      public Builder addResourceSpans(
+          int index, io.opentelemetry.proto.trace.v1.ResourceSpans value) {
+        copyOnWrite();
+        instance.addResourceSpans(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+       */
+      public Builder addResourceSpans(
+          io.opentelemetry.proto.trace.v1.ResourceSpans.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResourceSpans(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+       */
+      public Builder addResourceSpans(
+          int index, io.opentelemetry.proto.trace.v1.ResourceSpans.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResourceSpans(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+       */
+      public Builder addAllResourceSpans(
+          java.lang.Iterable<? extends io.opentelemetry.proto.trace.v1.ResourceSpans> values) {
+        copyOnWrite();
+        instance.addAllResourceSpans(values);
+        return this;
+      }
+      /**
+       * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+       */
+      public Builder clearResourceSpans() {
+        copyOnWrite();
+        instance.clearResourceSpans();
+        return this;
+      }
+      /**
+       * <code>repeated .opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1 [json_name = "resourceSpans"];</code>
+       */
+      public Builder removeResourceSpans(int index) {
+        copyOnWrite();
+        instance.removeResourceSpans(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.SendTracesRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.SendTracesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "resourceSpans_",
+              io.opentelemetry.proto.trace.v1.ResourceSpans.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.SendTracesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.SendTracesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.SendTracesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.SendTracesRequest)
+    private static final com.viam.robot.v1.Robot.SendTracesRequest DEFAULT_INSTANCE;
+    static {
+      SendTracesRequest defaultInstance = new SendTracesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SendTracesRequest.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.SendTracesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SendTracesRequest> PARSER;
+
+    public static com.google.protobuf.Parser<SendTracesRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface SendTracesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.SendTracesResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.SendTracesResponse}
+   */
+  public  static final class SendTracesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          SendTracesResponse, SendTracesResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.SendTracesResponse)
+      SendTracesResponseOrBuilder {
+    private SendTracesResponse() {
+    }
+    public static com.viam.robot.v1.Robot.SendTracesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.SendTracesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.SendTracesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.SendTracesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.SendTracesResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.SendTracesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.SendTracesResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.SendTracesResponse)
+        com.viam.robot.v1.Robot.SendTracesResponseOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.SendTracesResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.SendTracesResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.SendTracesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.SendTracesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.SendTracesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.SendTracesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.SendTracesResponse)
+    private static final com.viam.robot.v1.Robot.SendTracesResponse DEFAULT_INSTANCE;
+    static {
+      SendTracesResponse defaultInstance = new SendTracesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SendTracesResponse.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.SendTracesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SendTracesResponse> PARSER;
+
+    public static com.google.protobuf.Parser<SendTracesResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface TunnelRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.robot.v1.TunnelRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -16754,7 +17333,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=344
+     *     See robot/v1/robot.proto;l=355
      * @return The robotPartId.
      */
     @java.lang.Deprecated java.lang.String getRobotPartId();
@@ -16765,7 +17344,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=344
+     *     See robot/v1/robot.proto;l=355
      * @return The bytes for robotPartId.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -16843,7 +17422,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=344
+     *     See robot/v1/robot.proto;l=355
      * @return The robotPartId.
      */
     @java.lang.Override
@@ -16857,7 +17436,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=344
+     *     See robot/v1/robot.proto;l=355
      * @return The bytes for robotPartId.
      */
     @java.lang.Override
@@ -16872,7 +17451,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=344
+     *     See robot/v1/robot.proto;l=355
      * @param value The robotPartId to set.
      */
     private void setRobotPartId(
@@ -16888,7 +17467,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=344
+     *     See robot/v1/robot.proto;l=355
      */
     private void clearRobotPartId() {
 
@@ -16901,7 +17480,7 @@ public final class Robot {
      *
      * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
      * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=344
+     *     See robot/v1/robot.proto;l=355
      * @param value The bytes for robotPartId to set.
      */
     private void setRobotPartIdBytes(
@@ -17203,7 +17782,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=344
+       *     See robot/v1/robot.proto;l=355
        * @return The robotPartId.
        */
       @java.lang.Override
@@ -17217,7 +17796,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=344
+       *     See robot/v1/robot.proto;l=355
        * @return The bytes for robotPartId.
        */
       @java.lang.Override
@@ -17232,7 +17811,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=344
+       *     See robot/v1/robot.proto;l=355
        * @param value The robotPartId to set.
        * @return This builder for chaining.
        */
@@ -17249,7 +17828,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=344
+       *     See robot/v1/robot.proto;l=355
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearRobotPartId() {
@@ -17264,7 +17843,7 @@ public final class Robot {
        *
        * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
        * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=344
+       *     See robot/v1/robot.proto;l=355
        * @param value The bytes for robotPartId to set.
        * @return This builder for chaining.
        */

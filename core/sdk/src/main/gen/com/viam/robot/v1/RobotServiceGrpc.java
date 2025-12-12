@@ -738,6 +738,36 @@ public final class RobotServiceGrpc {
     return getTransformPCDMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.SendTracesRequest,
+      com.viam.robot.v1.Robot.SendTracesResponse> getSendTracesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SendTraces",
+      requestType = com.viam.robot.v1.Robot.SendTracesRequest.class,
+      responseType = com.viam.robot.v1.Robot.SendTracesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.SendTracesRequest,
+      com.viam.robot.v1.Robot.SendTracesResponse> getSendTracesMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.SendTracesRequest, com.viam.robot.v1.Robot.SendTracesResponse> getSendTracesMethod;
+    if ((getSendTracesMethod = RobotServiceGrpc.getSendTracesMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getSendTracesMethod = RobotServiceGrpc.getSendTracesMethod) == null) {
+          RobotServiceGrpc.getSendTracesMethod = getSendTracesMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.SendTracesRequest, com.viam.robot.v1.Robot.SendTracesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendTraces"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.SendTracesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.SendTracesResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getSendTracesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1017,6 +1047,13 @@ public final class RobotServiceGrpc {
     default void transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPCDResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransformPCDMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void sendTraces(com.viam.robot.v1.Robot.SendTracesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.SendTracesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendTracesMethod(), responseObserver);
     }
   }
 
@@ -1306,6 +1343,14 @@ public final class RobotServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getTransformPCDMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void sendTraces(com.viam.robot.v1.Robot.SendTracesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.SendTracesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSendTracesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1546,6 +1591,13 @@ public final class RobotServiceGrpc {
     public com.viam.robot.v1.Robot.TransformPCDResponse transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTransformPCDMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.robot.v1.Robot.SendTracesResponse sendTraces(com.viam.robot.v1.Robot.SendTracesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSendTracesMethod(), getCallOptions(), request);
     }
   }
 
@@ -1798,6 +1850,14 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getTransformPCDMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.SendTracesResponse> sendTraces(
+        com.viam.robot.v1.Robot.SendTracesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSendTracesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_OPERATIONS = 0;
@@ -1823,7 +1883,8 @@ public final class RobotServiceGrpc {
   private static final int METHODID_GET_POSE = 20;
   private static final int METHODID_TRANSFORM_POSE = 21;
   private static final int METHODID_TRANSFORM_PCD = 22;
-  private static final int METHODID_TUNNEL = 23;
+  private static final int METHODID_SEND_TRACES = 23;
+  private static final int METHODID_TUNNEL = 24;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1933,6 +1994,10 @@ public final class RobotServiceGrpc {
         case METHODID_TRANSFORM_PCD:
           serviceImpl.transformPCD((com.viam.robot.v1.Robot.TransformPCDRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPCDResponse>) responseObserver);
+          break;
+        case METHODID_SEND_TRACES:
+          serviceImpl.sendTraces((com.viam.robot.v1.Robot.SendTracesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.SendTracesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2123,6 +2188,13 @@ public final class RobotServiceGrpc {
               com.viam.robot.v1.Robot.TransformPCDRequest,
               com.viam.robot.v1.Robot.TransformPCDResponse>(
                 service, METHODID_TRANSFORM_PCD)))
+        .addMethod(
+          getSendTracesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.SendTracesRequest,
+              com.viam.robot.v1.Robot.SendTracesResponse>(
+                service, METHODID_SEND_TRACES)))
         .build();
   }
 
@@ -2159,6 +2231,7 @@ public final class RobotServiceGrpc {
               .addMethod(getGetPoseMethod())
               .addMethod(getTransformPoseMethod())
               .addMethod(getTransformPCDMethod())
+              .addMethod(getSendTracesMethod())
               .build();
         }
       }

@@ -228,6 +228,36 @@ public final class GantryServiceGrpc {
     return getDoCommandMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetKinematicsRequest,
+      com.viam.common.v1.Common.GetKinematicsResponse> getGetKinematicsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetKinematics",
+      requestType = com.viam.common.v1.Common.GetKinematicsRequest.class,
+      responseType = com.viam.common.v1.Common.GetKinematicsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetKinematicsRequest,
+      com.viam.common.v1.Common.GetKinematicsResponse> getGetKinematicsMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetKinematicsRequest, com.viam.common.v1.Common.GetKinematicsResponse> getGetKinematicsMethod;
+    if ((getGetKinematicsMethod = GantryServiceGrpc.getGetKinematicsMethod) == null) {
+      synchronized (GantryServiceGrpc.class) {
+        if ((getGetKinematicsMethod = GantryServiceGrpc.getGetKinematicsMethod) == null) {
+          GantryServiceGrpc.getGetKinematicsMethod = getGetKinematicsMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetKinematicsRequest, com.viam.common.v1.Common.GetKinematicsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetKinematics"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetKinematicsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetKinematicsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetKinematicsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
       com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
 
@@ -380,6 +410,13 @@ public final class GantryServiceGrpc {
     }
 
     /**
+     */
+    default void getKinematics(com.viam.common.v1.Common.GetKinematicsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetKinematicsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetKinematicsMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * GetGeometries returns the geometries of the component in their current configuration
      * </pre>
@@ -501,6 +538,14 @@ public final class GantryServiceGrpc {
     }
 
     /**
+     */
+    public void getKinematics(com.viam.common.v1.Common.GetKinematicsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetKinematicsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetKinematicsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      * <pre>
      * GetGeometries returns the geometries of the component in their current configuration
      * </pre>
@@ -599,6 +644,13 @@ public final class GantryServiceGrpc {
     public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.common.v1.Common.GetKinematicsResponse getKinematics(com.viam.common.v1.Common.GetKinematicsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetKinematicsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -709,6 +761,14 @@ public final class GantryServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetKinematicsResponse> getKinematics(
+        com.viam.common.v1.Common.GetKinematicsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetKinematicsMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * GetGeometries returns the geometries of the component in their current configuration
      * </pre>
@@ -727,7 +787,8 @@ public final class GantryServiceGrpc {
   private static final int METHODID_STOP = 4;
   private static final int METHODID_IS_MOVING = 5;
   private static final int METHODID_DO_COMMAND = 6;
-  private static final int METHODID_GET_GEOMETRIES = 7;
+  private static final int METHODID_GET_KINEMATICS = 7;
+  private static final int METHODID_GET_GEOMETRIES = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -773,6 +834,10 @@ public final class GantryServiceGrpc {
         case METHODID_DO_COMMAND:
           serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_KINEMATICS:
+          serviceImpl.getKinematics((com.viam.common.v1.Common.GetKinematicsRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetKinematicsResponse>) responseObserver);
           break;
         case METHODID_GET_GEOMETRIES:
           serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
@@ -846,6 +911,13 @@ public final class GantryServiceGrpc {
               com.viam.common.v1.Common.DoCommandResponse>(
                 service, METHODID_DO_COMMAND)))
         .addMethod(
+          getGetKinematicsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetKinematicsRequest,
+              com.viam.common.v1.Common.GetKinematicsResponse>(
+                service, METHODID_GET_KINEMATICS)))
+        .addMethod(
           getGetGeometriesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -871,6 +943,7 @@ public final class GantryServiceGrpc {
               .addMethod(getStopMethod())
               .addMethod(getIsMovingMethod())
               .addMethod(getDoCommandMethod())
+              .addMethod(getGetKinematicsMethod())
               .addMethod(getGetGeometriesMethod())
               .build();
         }
