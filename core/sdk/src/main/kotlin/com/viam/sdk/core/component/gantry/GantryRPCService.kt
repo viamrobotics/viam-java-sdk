@@ -1,5 +1,6 @@
 package com.viam.sdk.core.component.gantry
 
+import com.google.protobuf.ByteString
 import com.viam.common.v1.Common.*
 import com.viam.component.gantry.v1.Gantry.*
 import com.viam.component.gantry.v1.GantryServiceGrpc
@@ -73,7 +74,10 @@ internal class GantryRPCService(private val manager: ResourceManager) : GantrySe
         val gantry = getResource(Gantry.named(request.name))
         val kinematics = gantry.getKinematics(request.extra)
         responseObserver.onNext(
-            GetKinematicsResponse.newBuilder().setFormat(kinematics.first).setKinematicsData(kinematics.second).build()
+            GetKinematicsResponse.newBuilder()
+                .setFormat(kinematics.first)
+                .setKinematicsData(ByteString.copyFrom(kinematics.second))
+                .build()
         )
         responseObserver.onCompleted()
     }

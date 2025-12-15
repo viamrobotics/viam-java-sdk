@@ -1,6 +1,5 @@
 package com.viam.sdk.core.component.gantry
 
-import com.google.protobuf.ByteString
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
 import com.viam.common.v1.Common.Geometry
@@ -13,6 +12,7 @@ import io.grpc.testing.GrpcCleanupRule
 import org.junit.Rule
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.*
@@ -110,10 +110,11 @@ class GantryRPCClientTest {
 
     @Test
     fun getKinematics() {
-        val kinematics = (KinematicsFileFormat.KINEMATICS_FILE_FORMAT_SVA to ByteString.copyFromUtf8("abc"))
+        val kinematics = (KinematicsFileFormat.KINEMATICS_FILE_FORMAT_SVA to "abc".toByteArray())
         `when`(gantry.getKinematics(any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(kinematics)
         val response = client.getKinematics()
         verify(gantry).getKinematics(Struct.getDefaultInstance())
-        assertEquals(kinematics, response)
+        assertEquals(kinematics.first, response.first)
+        assertTrue(kinematics.second.contentEquals(response.second))
     }
 }

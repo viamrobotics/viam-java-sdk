@@ -1,6 +1,5 @@
 package com.viam.sdk.core.component.arm
 
-import com.google.protobuf.ByteString
 import com.google.protobuf.Struct
 import com.viam.common.v1.Common
 import com.viam.common.v1.Common.KinematicsFileFormat
@@ -8,6 +7,7 @@ import com.viam.component.arm.v1.Arm.JointPositions
 import com.viam.sdk.core.component.arm.Arm
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.Answers
@@ -57,11 +57,12 @@ class ArmTest {
 
     @Test
     fun getKinematics() {
-        val kinematics = (KinematicsFileFormat.KINEMATICS_FILE_FORMAT_SVA to ByteString.copyFromUtf8("abc"))
+        val kinematics = (KinematicsFileFormat.KINEMATICS_FILE_FORMAT_SVA to "abc".toByteArray())
         `when`(arm.getKinematics(any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(kinematics)
         val result = arm.getKinematics()
         verify(arm).getKinematics()
-        assertEquals(kinematics, result)
+        assertEquals(kinematics.first, result.first)
+        assertTrue(kinematics.second.contentEquals(result.second))
     }
 
     @Test
