@@ -370,6 +370,17 @@ public final class Robot {
      * <code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code>
      */
     int getJobsCount();
+
+    /**
+     * <code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code>
+     * @return Whether the tracing field is set.
+     */
+    boolean hasTracing();
+    /**
+     * <code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code>
+     * @return The tracing.
+     */
+    viam.app.v1.Robot.TracingConfig getTracing();
   }
   /**
    * Protobuf type {@code viam.app.v1.RobotConfig}
@@ -1650,6 +1661,52 @@ public final class Robot {
     private void removeJobs(int index) {
       ensureJobsIsMutable();
       jobs_.remove(index);
+    }
+
+    public static final int TRACING_FIELD_NUMBER = 19;
+    private viam.app.v1.Robot.TracingConfig tracing_;
+    /**
+     * <code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code>
+     */
+    @java.lang.Override
+    public boolean hasTracing() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.TracingConfig getTracing() {
+      return tracing_ == null ? viam.app.v1.Robot.TracingConfig.getDefaultInstance() : tracing_;
+    }
+    /**
+     * <code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code>
+     */
+    private void setTracing(viam.app.v1.Robot.TracingConfig value) {
+      value.getClass();
+  tracing_ = value;
+      bitField0_ |= 0x00000040;
+      }
+    /**
+     * <code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTracing(viam.app.v1.Robot.TracingConfig value) {
+      value.getClass();
+  if (tracing_ != null &&
+          tracing_ != viam.app.v1.Robot.TracingConfig.getDefaultInstance()) {
+        tracing_ =
+          viam.app.v1.Robot.TracingConfig.newBuilder(tracing_).mergeFrom(value).buildPartial();
+      } else {
+        tracing_ = value;
+      }
+      bitField0_ |= 0x00000040;
+    }
+    /**
+     * <code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code>
+     */
+    private void clearTracing() {  tracing_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
     }
 
     public static viam.app.v1.Robot.RobotConfig parseFrom(
@@ -3095,6 +3152,53 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code>
+       */
+      @java.lang.Override
+      public boolean hasTracing() {
+        return instance.hasTracing();
+      }
+      /**
+       * <code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.TracingConfig getTracing() {
+        return instance.getTracing();
+      }
+      /**
+       * <code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code>
+       */
+      public Builder setTracing(viam.app.v1.Robot.TracingConfig value) {
+        copyOnWrite();
+        instance.setTracing(value);
+        return this;
+        }
+      /**
+       * <code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code>
+       */
+      public Builder setTracing(
+          viam.app.v1.Robot.TracingConfig.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTracing(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code>
+       */
+      public Builder mergeTracing(viam.app.v1.Robot.TracingConfig value) {
+        copyOnWrite();
+        instance.mergeTracing(value);
+        return this;
+      }
+      /**
+       * <code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code>
+       */
+      public Builder clearTracing() {  copyOnWrite();
+        instance.clearTracing();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RobotConfig)
     }
     @java.lang.Override
@@ -3139,12 +3243,13 @@ public final class Robot {
               "disableLogDeduplication_",
               "jobs_",
               viam.app.v1.Robot.JobConfig.class,
+              "tracing_",
             };
             java.lang.String info =
-                "\u0000\u0012\u0000\u0001\u0001\u0012\u0012\u0000\t\u0000\u0001\u1009\u0000\u0002" +
+                "\u0000\u0013\u0000\u0001\u0001\u0013\u0013\u0000\t\u0000\u0001\u1009\u0000\u0002" +
                 "\u001b\u0003\u001b\u0004\u001b\u0005\u001b\u0006\u1009\u0001\u0007\u1009\u0002\b" +
                 "\u1007\u0003\t\u001b\n\u1007\u0004\u000b\u001b\f\u001b\r\u0007\u000e\u001b\u000f" +
-                "\u0208\u0010\u1009\u0005\u0011\u0007\u0012\u001b";
+                "\u0208\u0010\u1009\u0005\u0011\u0007\u0012\u001b\u0013\u1009\u0006";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -4772,6 +4877,626 @@ public final class Robot {
     }
   }
 
+  public interface TracingConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.TracingConfig)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Globally enable or disable tracing support.
+     * </pre>
+     *
+     * <code>bool enabled = 1 [json_name = "enabled"];</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
+
+    /**
+     * <pre>
+     * Save trace spans to a file on disk.
+     * </pre>
+     *
+     * <code>bool disk = 2 [json_name = "disk"];</code>
+     * @return The disk.
+     */
+    boolean getDisk();
+
+    /**
+     * <pre>
+     * Print trace spans to the console.
+     * </pre>
+     *
+     * <code>bool console = 3 [json_name = "console"];</code>
+     * @return The console.
+     */
+    boolean getConsole();
+
+    /**
+     * <pre>
+     * Send trace spans to an OTLP gRPC endpoint.
+     * </pre>
+     *
+     * <code>string otlp_endpoint = 4 [json_name = "otlpEndpoint"];</code>
+     * @return The otlpEndpoint.
+     */
+    java.lang.String getOtlpEndpoint();
+    /**
+     * <pre>
+     * Send trace spans to an OTLP gRPC endpoint.
+     * </pre>
+     *
+     * <code>string otlp_endpoint = 4 [json_name = "otlpEndpoint"];</code>
+     * @return The bytes for otlpEndpoint.
+     */
+    com.google.protobuf.ByteString
+        getOtlpEndpointBytes();
+  }
+  /**
+   * <pre>
+   * TracingConfig configures whether viam-server will record traces and if so
+   * where it will export them.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.v1.TracingConfig}
+   */
+  public  static final class TracingConfig extends
+      com.google.protobuf.GeneratedMessageLite<
+          TracingConfig, TracingConfig.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.TracingConfig)
+      TracingConfigOrBuilder {
+    private TracingConfig() {
+      otlpEndpoint_ = "";
+    }
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Globally enable or disable tracing support.
+     * </pre>
+     *
+     * <code>bool enabled = 1 [json_name = "enabled"];</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+    /**
+     * <pre>
+     * Globally enable or disable tracing support.
+     * </pre>
+     *
+     * <code>bool enabled = 1 [json_name = "enabled"];</code>
+     * @param value The enabled to set.
+     */
+    private void setEnabled(boolean value) {
+      
+      enabled_ = value;
+    }
+    /**
+     * <pre>
+     * Globally enable or disable tracing support.
+     * </pre>
+     *
+     * <code>bool enabled = 1 [json_name = "enabled"];</code>
+     */
+    private void clearEnabled() {
+
+      enabled_ = false;
+    }
+
+    public static final int DISK_FIELD_NUMBER = 2;
+    private boolean disk_;
+    /**
+     * <pre>
+     * Save trace spans to a file on disk.
+     * </pre>
+     *
+     * <code>bool disk = 2 [json_name = "disk"];</code>
+     * @return The disk.
+     */
+    @java.lang.Override
+    public boolean getDisk() {
+      return disk_;
+    }
+    /**
+     * <pre>
+     * Save trace spans to a file on disk.
+     * </pre>
+     *
+     * <code>bool disk = 2 [json_name = "disk"];</code>
+     * @param value The disk to set.
+     */
+    private void setDisk(boolean value) {
+      
+      disk_ = value;
+    }
+    /**
+     * <pre>
+     * Save trace spans to a file on disk.
+     * </pre>
+     *
+     * <code>bool disk = 2 [json_name = "disk"];</code>
+     */
+    private void clearDisk() {
+
+      disk_ = false;
+    }
+
+    public static final int CONSOLE_FIELD_NUMBER = 3;
+    private boolean console_;
+    /**
+     * <pre>
+     * Print trace spans to the console.
+     * </pre>
+     *
+     * <code>bool console = 3 [json_name = "console"];</code>
+     * @return The console.
+     */
+    @java.lang.Override
+    public boolean getConsole() {
+      return console_;
+    }
+    /**
+     * <pre>
+     * Print trace spans to the console.
+     * </pre>
+     *
+     * <code>bool console = 3 [json_name = "console"];</code>
+     * @param value The console to set.
+     */
+    private void setConsole(boolean value) {
+      
+      console_ = value;
+    }
+    /**
+     * <pre>
+     * Print trace spans to the console.
+     * </pre>
+     *
+     * <code>bool console = 3 [json_name = "console"];</code>
+     */
+    private void clearConsole() {
+
+      console_ = false;
+    }
+
+    public static final int OTLP_ENDPOINT_FIELD_NUMBER = 4;
+    private java.lang.String otlpEndpoint_;
+    /**
+     * <pre>
+     * Send trace spans to an OTLP gRPC endpoint.
+     * </pre>
+     *
+     * <code>string otlp_endpoint = 4 [json_name = "otlpEndpoint"];</code>
+     * @return The otlpEndpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getOtlpEndpoint() {
+      return otlpEndpoint_;
+    }
+    /**
+     * <pre>
+     * Send trace spans to an OTLP gRPC endpoint.
+     * </pre>
+     *
+     * <code>string otlp_endpoint = 4 [json_name = "otlpEndpoint"];</code>
+     * @return The bytes for otlpEndpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOtlpEndpointBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(otlpEndpoint_);
+    }
+    /**
+     * <pre>
+     * Send trace spans to an OTLP gRPC endpoint.
+     * </pre>
+     *
+     * <code>string otlp_endpoint = 4 [json_name = "otlpEndpoint"];</code>
+     * @param value The otlpEndpoint to set.
+     */
+    private void setOtlpEndpoint(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      otlpEndpoint_ = value;
+    }
+    /**
+     * <pre>
+     * Send trace spans to an OTLP gRPC endpoint.
+     * </pre>
+     *
+     * <code>string otlp_endpoint = 4 [json_name = "otlpEndpoint"];</code>
+     */
+    private void clearOtlpEndpoint() {
+
+      otlpEndpoint_ = getDefaultInstance().getOtlpEndpoint();
+    }
+    /**
+     * <pre>
+     * Send trace spans to an OTLP gRPC endpoint.
+     * </pre>
+     *
+     * <code>string otlp_endpoint = 4 [json_name = "otlpEndpoint"];</code>
+     * @param value The bytes for otlpEndpoint to set.
+     */
+    private void setOtlpEndpointBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      otlpEndpoint_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.Robot.TracingConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.TracingConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.TracingConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.TracingConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.TracingConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.TracingConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.TracingConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.TracingConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Robot.TracingConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Robot.TracingConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.TracingConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.TracingConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Robot.TracingConfig prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * TracingConfig configures whether viam-server will record traces and if so
+     * where it will export them.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.v1.TracingConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Robot.TracingConfig, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.TracingConfig)
+        viam.app.v1.Robot.TracingConfigOrBuilder {
+      // Construct using viam.app.v1.Robot.TracingConfig.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * Globally enable or disable tracing support.
+       * </pre>
+       *
+       * <code>bool enabled = 1 [json_name = "enabled"];</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return instance.getEnabled();
+      }
+      /**
+       * <pre>
+       * Globally enable or disable tracing support.
+       * </pre>
+       *
+       * <code>bool enabled = 1 [json_name = "enabled"];</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+        copyOnWrite();
+        instance.setEnabled(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Globally enable or disable tracing support.
+       * </pre>
+       *
+       * <code>bool enabled = 1 [json_name = "enabled"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        copyOnWrite();
+        instance.clearEnabled();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Save trace spans to a file on disk.
+       * </pre>
+       *
+       * <code>bool disk = 2 [json_name = "disk"];</code>
+       * @return The disk.
+       */
+      @java.lang.Override
+      public boolean getDisk() {
+        return instance.getDisk();
+      }
+      /**
+       * <pre>
+       * Save trace spans to a file on disk.
+       * </pre>
+       *
+       * <code>bool disk = 2 [json_name = "disk"];</code>
+       * @param value The disk to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisk(boolean value) {
+        copyOnWrite();
+        instance.setDisk(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Save trace spans to a file on disk.
+       * </pre>
+       *
+       * <code>bool disk = 2 [json_name = "disk"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisk() {
+        copyOnWrite();
+        instance.clearDisk();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Print trace spans to the console.
+       * </pre>
+       *
+       * <code>bool console = 3 [json_name = "console"];</code>
+       * @return The console.
+       */
+      @java.lang.Override
+      public boolean getConsole() {
+        return instance.getConsole();
+      }
+      /**
+       * <pre>
+       * Print trace spans to the console.
+       * </pre>
+       *
+       * <code>bool console = 3 [json_name = "console"];</code>
+       * @param value The console to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConsole(boolean value) {
+        copyOnWrite();
+        instance.setConsole(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Print trace spans to the console.
+       * </pre>
+       *
+       * <code>bool console = 3 [json_name = "console"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConsole() {
+        copyOnWrite();
+        instance.clearConsole();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Send trace spans to an OTLP gRPC endpoint.
+       * </pre>
+       *
+       * <code>string otlp_endpoint = 4 [json_name = "otlpEndpoint"];</code>
+       * @return The otlpEndpoint.
+       */
+      @java.lang.Override
+      public java.lang.String getOtlpEndpoint() {
+        return instance.getOtlpEndpoint();
+      }
+      /**
+       * <pre>
+       * Send trace spans to an OTLP gRPC endpoint.
+       * </pre>
+       *
+       * <code>string otlp_endpoint = 4 [json_name = "otlpEndpoint"];</code>
+       * @return The bytes for otlpEndpoint.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOtlpEndpointBytes() {
+        return instance.getOtlpEndpointBytes();
+      }
+      /**
+       * <pre>
+       * Send trace spans to an OTLP gRPC endpoint.
+       * </pre>
+       *
+       * <code>string otlp_endpoint = 4 [json_name = "otlpEndpoint"];</code>
+       * @param value The otlpEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOtlpEndpoint(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOtlpEndpoint(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Send trace spans to an OTLP gRPC endpoint.
+       * </pre>
+       *
+       * <code>string otlp_endpoint = 4 [json_name = "otlpEndpoint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOtlpEndpoint() {
+        copyOnWrite();
+        instance.clearOtlpEndpoint();
+        return this;
+      }
+      /**
+       * <pre>
+       * Send trace spans to an OTLP gRPC endpoint.
+       * </pre>
+       *
+       * <code>string otlp_endpoint = 4 [json_name = "otlpEndpoint"];</code>
+       * @param value The bytes for otlpEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOtlpEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOtlpEndpointBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.TracingConfig)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Robot.TracingConfig();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "enabled_",
+              "disk_",
+              "console_",
+              "otlpEndpoint_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0007\u0002\u0007" +
+                "\u0003\u0007\u0004\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Robot.TracingConfig> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Robot.TracingConfig.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Robot.TracingConfig>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.TracingConfig)
+    private static final viam.app.v1.Robot.TracingConfig DEFAULT_INSTANCE;
+    static {
+      TracingConfig defaultInstance = new TracingConfig();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        TracingConfig.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Robot.TracingConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<TracingConfig> PARSER;
+
+    public static com.google.protobuf.Parser<TracingConfig> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface LocationSecretOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.LocationSecret)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -5612,7 +6337,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=96
+     *     See app/v1/robot.proto;l=110
      * @return The locationSecret.
      */
     @java.lang.Deprecated java.lang.String getLocationSecret();
@@ -5623,7 +6348,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=96
+     *     See app/v1/robot.proto;l=110
      * @return The bytes for locationSecret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -6022,7 +6747,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=96
+     *     See app/v1/robot.proto;l=110
      * @return The locationSecret.
      */
     @java.lang.Override
@@ -6036,7 +6761,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=96
+     *     See app/v1/robot.proto;l=110
      * @return The bytes for locationSecret.
      */
     @java.lang.Override
@@ -6051,7 +6776,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=96
+     *     See app/v1/robot.proto;l=110
      * @param value The locationSecret to set.
      */
     private void setLocationSecret(
@@ -6067,7 +6792,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=96
+     *     See app/v1/robot.proto;l=110
      */
     private void clearLocationSecret() {
 
@@ -6080,7 +6805,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=96
+     *     See app/v1/robot.proto;l=110
      * @param value The bytes for locationSecret to set.
      */
     private void setLocationSecretBytes(
@@ -6833,7 +7558,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=96
+       *     See app/v1/robot.proto;l=110
        * @return The locationSecret.
        */
       @java.lang.Override
@@ -6847,7 +7572,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=96
+       *     See app/v1/robot.proto;l=110
        * @return The bytes for locationSecret.
        */
       @java.lang.Override
@@ -6862,7 +7587,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=96
+       *     See app/v1/robot.proto;l=110
        * @param value The locationSecret to set.
        * @return This builder for chaining.
        */
@@ -6879,7 +7604,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=96
+       *     See app/v1/robot.proto;l=110
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLocationSecret() {
@@ -6894,7 +7619,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=96
+       *     See app/v1/robot.proto;l=110
        * @param value The bytes for locationSecret to set.
        * @return This builder for chaining.
        */
