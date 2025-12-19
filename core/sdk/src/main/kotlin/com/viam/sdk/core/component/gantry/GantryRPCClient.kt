@@ -4,6 +4,7 @@ import com.google.protobuf.Struct
 import com.google.protobuf.Value
 import com.viam.common.v1.Common
 import com.viam.common.v1.Common.GetGeometriesRequest
+import com.viam.common.v1.Common.GetKinematicsRequest
 import com.viam.component.gantry.v1.Gantry.*
 import com.viam.component.gantry.v1.GantryServiceGrpc
 import com.viam.component.gantry.v1.GantryServiceGrpc.GantryServiceBlockingStub
@@ -55,6 +56,12 @@ class GantryRPCClient(name: String, channel: Channel) : Gantry(name) {
         val request = IsMovingRequest.newBuilder().setName(this.name.name).build()
         val response = this.client.isMoving(request)
         return response.isMoving
+    }
+
+    override fun getKinematics(extra: Struct): Pair<Common.KinematicsFileFormat, ByteArray> {
+        val request = GetKinematicsRequest.newBuilder().setName(this.name.name).setExtra(extra).build()
+        val response = this.client.getKinematics(request)
+        return (response.format to response.kinematicsData.toByteArray())
     }
 
     override fun doCommand(command: Map<String, Value>?): Struct {

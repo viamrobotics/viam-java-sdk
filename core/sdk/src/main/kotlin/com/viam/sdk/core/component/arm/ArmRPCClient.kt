@@ -1,6 +1,5 @@
 package com.viam.sdk.core.component.arm
 
-import com.google.protobuf.ByteString
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
 import com.viam.common.v1.Common
@@ -61,10 +60,10 @@ class ArmRPCClient(name: String, channel: Channel) : Arm(name) {
         return response.isMoving
     }
 
-    override fun getKinematics(extra: Struct): Pair<Common.KinematicsFileFormat, ByteString> {
+    override fun getKinematics(extra: Struct): Pair<Common.KinematicsFileFormat, ByteArray> {
         val request = GetKinematicsRequest.newBuilder().setName(this.name.name).setExtra(extra).build()
         val response = this.client.getKinematics(request)
-        return (response.format to response.kinematicsData)
+        return (response.format to response.kinematicsData.toByteArray())
     }
 
     override fun doCommand(command: Map<String, Value>?): Struct {

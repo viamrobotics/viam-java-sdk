@@ -1,9 +1,9 @@
 package com.viam.sdk.core.component.gantry
 
+import com.google.protobuf.ByteString
 import com.viam.common.v1.Common.*
 import com.viam.component.gantry.v1.Gantry.*
 import com.viam.component.gantry.v1.GantryServiceGrpc
-import com.viam.sdk.core.component.motor.Motor
 import com.viam.sdk.core.resource.ResourceManager
 import com.viam.sdk.core.resource.ResourceRPCService
 import io.grpc.stub.StreamObserver
@@ -67,11 +67,26 @@ internal class GantryRPCService(private val manager: ResourceManager) : GantrySe
         responseObserver.onCompleted()
     }
 
+    override fun getKinematics(
+        request: GetKinematicsRequest,
+        responseObserver: StreamObserver<GetKinematicsResponse>
+    ) {
+        val gantry = getResource(Gantry.named(request.name))
+        val kinematics = gantry.getKinematics(request.extra)
+        responseObserver.onNext(
+            GetKinematicsResponse.newBuilder()
+                .setFormat(kinematics.first)
+                .setKinematicsData(ByteString.copyFrom(kinematics.second))
+                .build()
+        )
+        responseObserver.onCompleted()
+    }
+
     override fun getGeometries(
         request: GetGeometriesRequest, responseObserver: StreamObserver<GetGeometriesResponse>
     ) {
-        val motor = getResource(Gantry.named(request.name))
-        val result = motor.getGeometries(Optional.of(request.extra))
+        val gantry = getResource(Gantry.named(request.name))
+        val result = gantry.getGeometries(Optional.of(request.extra))
         responseObserver.onNext(GetGeometriesResponse.newBuilder().addAllGeometries(result).build())
         responseObserver.onCompleted()
     }
