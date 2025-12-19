@@ -1,8 +1,10 @@
 package com.viam.sdk.core.component.gantry
 
 import com.google.protobuf.Struct
+import com.viam.common.v1.Common.KinematicsFileFormat
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.Answers
@@ -64,5 +66,15 @@ class GantryTest {
         verify(gantry).isMoving()
         assertFalse(isMoving)
 
+    }
+
+    @Test
+    fun getKinematics() {
+        val kinematics = (KinematicsFileFormat.KINEMATICS_FILE_FORMAT_SVA to "abc".toByteArray())
+        `when`(gantry.getKinematics(any(Struct::class.java) ?: Struct.getDefaultInstance())).thenReturn(kinematics)
+        val result = gantry.getKinematics()
+        verify(gantry).getKinematics()
+        assertEquals(kinematics.first, result.first)
+        assertTrue(kinematics.second.contentEquals(result.second))
     }
 }

@@ -1,6 +1,5 @@
 package com.viam.sdk.core.component.arm
 
-import com.google.protobuf.ByteString
 import com.google.protobuf.Struct
 import com.viam.common.v1.Common.*
 import com.viam.component.arm.v1.Arm.JointPositions
@@ -141,7 +140,7 @@ abstract class Arm(name: String) : Component(SUBTYPE, named(name)) {
      *          Viam's kinematic parameter format (spatial vector algebra) (``KinematicsFileFormat.KINEMATICS_FILE_FORMAT_SVA``),
      *          and the second [1] value represents the byte contents of the file.
      */
-    abstract fun getKinematics(extra: Struct): Pair<KinematicsFileFormat, ByteString>
+    abstract fun getKinematics(extra: Struct): Pair<KinematicsFileFormat, ByteArray>
 
     /**
      * Get the kinematics information associated with the arm.
@@ -150,7 +149,7 @@ abstract class Arm(name: String) : Component(SUBTYPE, named(name)) {
      *          Viam's kinematic parameter format (spatial vector algebra) (``KinematicsFileFormat.KINEMATICS_FILE_FORMAT_SVA``),
      *          and the second [1] value represents the byte contents of the file.
      */
-    fun getKinematics(): Pair<KinematicsFileFormat, ByteString> {
+    fun getKinematics(): Pair<KinematicsFileFormat, ByteArray> {
         return getKinematics(Struct.getDefaultInstance())
     }
 

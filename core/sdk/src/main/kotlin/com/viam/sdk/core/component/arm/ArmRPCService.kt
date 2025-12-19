@@ -1,5 +1,6 @@
 package com.viam.sdk.core.component.arm
 
+import com.google.protobuf.ByteString
 import com.viam.common.v1.Common.*
 import com.viam.component.arm.v1.Arm.*
 import com.viam.component.arm.v1.ArmServiceGrpc
@@ -57,7 +58,10 @@ internal class ArmRPCService(private val manager: ResourceManager) : ArmServiceG
         val arm = getResource(Arm.named(request.name))
         val kinematics = arm.getKinematics(request.extra)
         responseObserver.onNext(
-            GetKinematicsResponse.newBuilder().setFormat(kinematics.first).setKinematicsData(kinematics.second).build()
+            GetKinematicsResponse.newBuilder()
+                .setFormat(kinematics.first)
+                .setKinematicsData(ByteString.copyFrom(kinematics.second))
+                .build()
         )
         responseObserver.onCompleted()
     }
