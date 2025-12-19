@@ -181,6 +181,9 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
 <div class="col-first odd-row-color"><code>static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#SERVICES_FIELD_NUMBER" class="member-name-link">SERVICES_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#TRACING_FIELD_NUMBER" class="member-name-link">TRACING_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -490,36 +493,46 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.ServiceConfig services = 5 [json_name = "services"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAuth()" class="member-name-link">hasAuth</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.TracingConfig.html" title="class in viam.app.v1">Robot.TracingConfig</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTracing()" class="member-name-link">getTracing</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional .viam.app.v1.AuthConfig auth = 7 [json_name = "auth"];</code></div>
+<div class="block"><code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCloud()" class="member-name-link">hasCloud</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasAuth()" class="member-name-link">hasAuth</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.v1.CloudConfig cloud = 1 [json_name = "cloud"];</code></div>
+<div class="block"><code>optional .viam.app.v1.AuthConfig auth = 7 [json_name = "auth"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDebug()" class="member-name-link">hasDebug</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCloud()" class="member-name-link">hasCloud</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.CloudConfig cloud = 1 [json_name = "cloud"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDebug()" class="member-name-link">hasDebug</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Turns on debug mode for robot, adding an echo server and more logging and tracing.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDisablePartialStart()" class="member-name-link">hasDisablePartialStart</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDisablePartialStart()" class="member-name-link">hasDisablePartialStart</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional bool disable_partial_start = 10 [json_name = "disablePartialStart"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMaintenance()" class="member-name-link">hasMaintenance</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMaintenance()" class="member-name-link">hasMaintenance</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.MaintenanceConfig maintenance = 16 [json_name = "maintenance"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasNetwork()" class="member-name-link">hasNetwork</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasNetwork()" class="member-name-link">hasNetwork</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.NetworkConfig network = 6 [json_name = "network"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasTracing()" class="member-name-link">hasTracing</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -845,6 +858,20 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
 <dd>
 <ul class="see-list">
 <li><a href="../../../constant-values.html#viam.app.v1.Robot.RobotConfig.JOBS_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="TRACING_FIELD_NUMBER">
+<h3>TRACING_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">TRACING_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.app.v1.Robot.RobotConfig.TRACING_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -1512,6 +1539,32 @@ implements <a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.ap
 <h3>getJobsOrBuilder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.JobConfigOrBuilder.html" title="interface in viam.app.v1">Robot.JobConfigOrBuilder</a></span>&nbsp;<span class="element-name">getJobsOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><code>repeated .viam.app.v1.JobConfig jobs = 18 [json_name = "jobs"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasTracing()">
+<h3>hasTracing</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasTracing</span>()</div>
+<div class="block"><code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.RobotConfigOrBuilder.html#hasTracing()">hasTracing</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RobotConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the tracing field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTracing()">
+<h3>getTracing</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.TracingConfig.html" title="class in viam.app.v1">Robot.TracingConfig</a></span>&nbsp;<span class="element-name">getTracing</span>()</div>
+<div class="block"><code>optional .viam.app.v1.TracingConfig tracing = 19 [json_name = "tracing"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.RobotConfigOrBuilder.html#getTracing()">getTracing</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.RobotConfigOrBuilder.html" title="interface in viam.app.v1">Robot.RobotConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The tracing.</dd>
+</dl>
 </section>
 </li>
 <li>
