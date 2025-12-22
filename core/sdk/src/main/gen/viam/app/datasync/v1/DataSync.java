@@ -31,6 +31,10 @@ public final class DataSync {
      * <code>MIME_TYPE_APPLICATION_PCD = 3;</code>
      */
     MIME_TYPE_APPLICATION_PCD(3),
+    /**
+     * <code>MIME_TYPE_VIDEO_MP4 = 4;</code>
+     */
+    MIME_TYPE_VIDEO_MP4(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -50,6 +54,10 @@ public final class DataSync {
      * <code>MIME_TYPE_APPLICATION_PCD = 3;</code>
      */
     public static final int MIME_TYPE_APPLICATION_PCD_VALUE = 3;
+    /**
+     * <code>MIME_TYPE_VIDEO_MP4 = 4;</code>
+     */
+    public static final int MIME_TYPE_VIDEO_MP4_VALUE = 4;
 
 
     @java.lang.Override
@@ -77,6 +85,7 @@ public final class DataSync {
         case 1: return MIME_TYPE_IMAGE_JPEG;
         case 2: return MIME_TYPE_IMAGE_PNG;
         case 3: return MIME_TYPE_APPLICATION_PCD;
+        case 4: return MIME_TYPE_VIDEO_MP4;
         default: return null;
       }
     }
