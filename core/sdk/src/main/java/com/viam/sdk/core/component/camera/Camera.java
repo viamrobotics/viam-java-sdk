@@ -62,6 +62,7 @@ public abstract class Camera extends Component {
     return getImages(Optional.empty(), Optional.empty());
   }
 
+  @Deprecated
   static Format mimeToFormat(final String mimeType) {
     switch (mimeType) {
       case "image/jpeg":
@@ -77,6 +78,7 @@ public abstract class Camera extends Component {
     }
   }
 
+  @Deprecated
   static String formatToMime(final Format format) {
     switch (format) {
       case FORMAT_JPEG:
