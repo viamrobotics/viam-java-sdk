@@ -52,6 +52,10 @@ public class CameraRPCService extends
   }
 
   @Override
+  @Deprecated
+  /*
+   * @deprecated please utilize getImages instead
+   */
   public void getImage(GetImageRequest request,
       StreamObserver<GetImageResponse> responseObserver) {
     final Camera camera = getResource(
@@ -70,7 +74,9 @@ public class CameraRPCService extends
       StreamObserver<GetImagesResponse> responseObserver) {
     final Camera camera = getResource(
         Camera.named(request.getName()));
-    final Entry<List<Image>, ResponseMetadata> result = camera.getImages();
+    final Entry<List<Image>, ResponseMetadata> result = camera.getImages(
+        Optional.of(request.getFilterSourceNamesList()),
+        Optional.of(request.getExtra()));
     responseObserver.onNext(
         GetImagesResponse.newBuilder().addAllImages(result.getKey())
             .setResponseMetadata(result.getValue()).build());
