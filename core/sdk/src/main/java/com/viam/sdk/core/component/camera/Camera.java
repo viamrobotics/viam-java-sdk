@@ -47,11 +47,22 @@ public abstract class Camera extends Component {
     return robot.getResource(Camera.class, named(name));
   }
 
+  /**
+   * @deprecated please utilize getImages instead
+   */
+  @Deprecated
   public abstract Image getImage(final Format format,
       final Optional<Struct> extra);
 
-  public abstract Entry<List<Image>, Common.ResponseMetadata> getImages();
+  public abstract Entry<List<Image>, Common.ResponseMetadata> getImages(
+      final Optional<List<String>> filterSourceNames,
+      final Optional<Struct> extra);
 
+  public Entry<List<Image>, Common.ResponseMetadata> getImages() {
+    return getImages(Optional.empty(), Optional.empty());
+  }
+
+  @Deprecated
   static Format mimeToFormat(final String mimeType) {
     switch (mimeType) {
       case "image/jpeg":
@@ -67,6 +78,7 @@ public abstract class Camera extends Component {
     }
   }
 
+  @Deprecated
   static String formatToMime(final Format format) {
     switch (format) {
       case FORMAT_JPEG:

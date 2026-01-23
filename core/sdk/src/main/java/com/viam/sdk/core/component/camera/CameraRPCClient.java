@@ -49,6 +49,10 @@ public class CameraRPCClient extends com.viam.sdk.core.component.camera.Camera {
     }
 
     @Override
+    @Deprecated
+    /*
+     * @deprecated please utilize getImages instead
+     */
     public Image getImage(final Format format,
                           Optional<Struct> extra) {
         final GetImageRequest.Builder builder = GetImageRequest.newBuilder().
@@ -64,9 +68,12 @@ public class CameraRPCClient extends com.viam.sdk.core.component.camera.Camera {
     }
 
     @Override
-    public Entry<List<Image>, ResponseMetadata> getImages() {
+    public Entry<List<Image>, ResponseMetadata> getImages(final Optional<List<String>> filterSourceNames,
+                                                          final Optional<Struct> extra) {
         final GetImagesRequest.Builder builder = GetImagesRequest.newBuilder().
                 setName(getName().getName());
+        filterSourceNames.ifPresent(builder::addAllFilterSourceNames);
+        extra.ifPresent(builder::setExtra);
         final GetImagesResponse resp = client.getImages(builder.build());
         return new SimpleEntry<>(resp.getImagesList(), resp.getResponseMetadata());
     }
