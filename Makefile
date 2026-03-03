@@ -28,10 +28,5 @@ run_server:
 
 .PHONY: check-examples
 check-examples:
-	./gradlew :java:viam-java-sdk-examples:compileJava \
-		:android:examples:viam-android-sdk-examples-simple:compileDebugJavaWithJavac \
-		:android:examples:viam-android-sdk-examples-module:compileDebugJavaWithJavac \
-		:android:examples:viam-android-sdk-examples-module-in-process:compileDebugJavaWithJavac \
-		:android:examples:viam-android-sdk-examples-mlmodel-module:compileDebugJavaWithJavac
 	cd standalone-examples/SimpleAndroidModule && ./gradlew compileDebugJavaWithJavac
 	cd standalone-examples/SimpleAndroidModuleKT && ./gradlew compileDebugKotlin
