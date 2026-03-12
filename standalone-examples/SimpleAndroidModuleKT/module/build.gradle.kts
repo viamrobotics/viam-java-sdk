@@ -1,5 +1,5 @@
 plugins {
-    id("com.viam.sdk.android.module") version ("0.0.1")
+    id("com.viam.sdk.android.module") version ("0.0.10")
     id("org.jetbrains.kotlin.android")
 }
 
@@ -37,5 +37,5 @@ android {
 }
 
 dependencies {
-    implementation("com.viam:viam-android-sdk:0.0.1")
+    implementation("com.viam:viam-android-sdk:0.0.10")
 }

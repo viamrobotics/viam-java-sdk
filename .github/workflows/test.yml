@@ -31,3 +31,6 @@ jobs:
 
       - name: Test
         run: ./gradlew test
+
+      - name: Check examples compile
+        run: make check-examples
