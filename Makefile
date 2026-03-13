@@ -25,3 +25,8 @@ run_client_grpc_auth:
 .PHONY: run_server
 run_server:
 	./gradlew runExample1Server --args="8080"
+
+.PHONY: check-examples
+check-examples:
+	cd standalone-examples/SimpleAndroidModule && ./gradlew compileDebugJavaWithJavac
+	cd standalone-examples/SimpleAndroidModuleKT && ./gradlew compileDebugKotlin
