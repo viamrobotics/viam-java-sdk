@@ -5819,6 +5819,27 @@ public final class Camera {
      * @return The frameRate.
      */
     float getFrameRate();
+
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     * @return Whether the extrinsicParameters field is set.
+     */
+    boolean hasExtrinsicParameters();
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     * @return The extrinsicParameters.
+     */
+    com.viam.component.camera.v1.Camera.ExtrinsicParameters getExtrinsicParameters();
   }
   /**
    * Protobuf type {@code viam.component.camera.v1.GetPropertiesResponse}
@@ -6199,6 +6220,77 @@ public final class Camera {
     private void clearFrameRate() {
       bitField0_ = (bitField0_ & ~0x00000004);
       frameRate_ = 0F;
+    }
+
+    public static final int EXTRINSIC_PARAMETERS_FIELD_NUMBER = 6;
+    private com.viam.component.camera.v1.Camera.ExtrinsicParameters extrinsicParameters_;
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtrinsicParameters() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     */
+    @java.lang.Override
+    public com.viam.component.camera.v1.Camera.ExtrinsicParameters getExtrinsicParameters() {
+      return extrinsicParameters_ == null ? com.viam.component.camera.v1.Camera.ExtrinsicParameters.getDefaultInstance() : extrinsicParameters_;
+    }
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     */
+    private void setExtrinsicParameters(com.viam.component.camera.v1.Camera.ExtrinsicParameters value) {
+      value.getClass();
+  extrinsicParameters_ = value;
+      bitField0_ |= 0x00000008;
+      }
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtrinsicParameters(com.viam.component.camera.v1.Camera.ExtrinsicParameters value) {
+      value.getClass();
+  if (extrinsicParameters_ != null &&
+          extrinsicParameters_ != com.viam.component.camera.v1.Camera.ExtrinsicParameters.getDefaultInstance()) {
+        extrinsicParameters_ =
+          com.viam.component.camera.v1.Camera.ExtrinsicParameters.newBuilder(extrinsicParameters_).mergeFrom(value).buildPartial();
+      } else {
+        extrinsicParameters_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     */
+    private void clearExtrinsicParameters() {  extrinsicParameters_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(
@@ -6684,6 +6776,83 @@ public final class Camera {
         return this;
       }
 
+      /**
+       * <pre>
+       * Parameters for the camera's position relative to a reference frame
+       * If camera does not provide extrinsic parameters, leave the field empty
+       * </pre>
+       *
+       * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtrinsicParameters() {
+        return instance.hasExtrinsicParameters();
+      }
+      /**
+       * <pre>
+       * Parameters for the camera's position relative to a reference frame
+       * If camera does not provide extrinsic parameters, leave the field empty
+       * </pre>
+       *
+       * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+       */
+      @java.lang.Override
+      public com.viam.component.camera.v1.Camera.ExtrinsicParameters getExtrinsicParameters() {
+        return instance.getExtrinsicParameters();
+      }
+      /**
+       * <pre>
+       * Parameters for the camera's position relative to a reference frame
+       * If camera does not provide extrinsic parameters, leave the field empty
+       * </pre>
+       *
+       * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+       */
+      public Builder setExtrinsicParameters(com.viam.component.camera.v1.Camera.ExtrinsicParameters value) {
+        copyOnWrite();
+        instance.setExtrinsicParameters(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Parameters for the camera's position relative to a reference frame
+       * If camera does not provide extrinsic parameters, leave the field empty
+       * </pre>
+       *
+       * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+       */
+      public Builder setExtrinsicParameters(
+          com.viam.component.camera.v1.Camera.ExtrinsicParameters.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtrinsicParameters(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for the camera's position relative to a reference frame
+       * If camera does not provide extrinsic parameters, leave the field empty
+       * </pre>
+       *
+       * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+       */
+      public Builder mergeExtrinsicParameters(com.viam.component.camera.v1.Camera.ExtrinsicParameters value) {
+        copyOnWrite();
+        instance.mergeExtrinsicParameters(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for the camera's position relative to a reference frame
+       * If camera does not provide extrinsic parameters, leave the field empty
+       * </pre>
+       *
+       * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+       */
+      public Builder clearExtrinsicParameters() {  copyOnWrite();
+        instance.clearExtrinsicParameters();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetPropertiesResponse)
     }
     @java.lang.Override
@@ -6706,10 +6875,11 @@ public final class Camera {
               "distortionParameters_",
               "mimeTypes_",
               "frameRate_",
+              "extrinsicParameters_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0007\u0002\u1009" +
-                "\u0000\u0003\u1009\u0001\u0004\u021a\u0005\u1001\u0002";
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0007\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001\u0004\u021a\u0005\u1001\u0002\u0006\u1009\u0003";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -9905,6 +10075,517 @@ public final class Camera {
     private static volatile com.google.protobuf.Parser<DistortionParameters> PARSER;
 
     public static com.google.protobuf.Parser<DistortionParameters> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ExtrinsicParametersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.ExtrinsicParameters)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     * @return Whether the translation field is set.
+     */
+    boolean hasTranslation();
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     * @return The translation.
+     */
+    com.viam.common.v1.Common.Vector3 getTranslation();
+
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     * @return Whether the orientation field is set.
+     */
+    boolean hasOrientation();
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     * @return The orientation.
+     */
+    com.viam.common.v1.Common.Orientation getOrientation();
+  }
+  /**
+   * <pre>
+   * ExtrinsicParameters define the position of the camera
+   * relative to a reference frame (the world or another sensor).
+   * </pre>
+   *
+   * Protobuf type {@code viam.component.camera.v1.ExtrinsicParameters}
+   */
+  public  static final class ExtrinsicParameters extends
+      com.google.protobuf.GeneratedMessageLite<
+          ExtrinsicParameters, ExtrinsicParameters.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.camera.v1.ExtrinsicParameters)
+      ExtrinsicParametersOrBuilder {
+    private ExtrinsicParameters() {
+    }
+    private int bitField0_;
+    public static final int TRANSLATION_FIELD_NUMBER = 1;
+    private com.viam.common.v1.Common.Vector3 translation_;
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    @java.lang.Override
+    public boolean hasTranslation() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Vector3 getTranslation() {
+      return translation_ == null ? com.viam.common.v1.Common.Vector3.getDefaultInstance() : translation_;
+    }
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    private void setTranslation(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();
+  translation_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTranslation(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();
+  if (translation_ != null &&
+          translation_ != com.viam.common.v1.Common.Vector3.getDefaultInstance()) {
+        translation_ =
+          com.viam.common.v1.Common.Vector3.newBuilder(translation_).mergeFrom(value).buildPartial();
+      } else {
+        translation_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    private void clearTranslation() {  translation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int ORIENTATION_FIELD_NUMBER = 2;
+    private com.viam.common.v1.Common.Orientation orientation_;
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     */
+    @java.lang.Override
+    public boolean hasOrientation() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Orientation getOrientation() {
+      return orientation_ == null ? com.viam.common.v1.Common.Orientation.getDefaultInstance() : orientation_;
+    }
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     */
+    private void setOrientation(com.viam.common.v1.Common.Orientation value) {
+      value.getClass();
+  orientation_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeOrientation(com.viam.common.v1.Common.Orientation value) {
+      value.getClass();
+  if (orientation_ != null &&
+          orientation_ != com.viam.common.v1.Common.Orientation.getDefaultInstance()) {
+        orientation_ =
+          com.viam.common.v1.Common.Orientation.newBuilder(orientation_).mergeFrom(value).buildPartial();
+      } else {
+        orientation_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     */
+    private void clearOrientation() {  orientation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.camera.v1.Camera.ExtrinsicParameters prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * ExtrinsicParameters define the position of the camera
+     * relative to a reference frame (the world or another sensor).
+     * </pre>
+     *
+     * Protobuf type {@code viam.component.camera.v1.ExtrinsicParameters}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.ExtrinsicParameters, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.ExtrinsicParameters)
+        com.viam.component.camera.v1.Camera.ExtrinsicParametersOrBuilder {
+      // Construct using com.viam.component.camera.v1.Camera.ExtrinsicParameters.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * The translation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      @java.lang.Override
+      public boolean hasTranslation() {
+        return instance.hasTranslation();
+      }
+      /**
+       * <pre>
+       * The translation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Vector3 getTranslation() {
+        return instance.getTranslation();
+      }
+      /**
+       * <pre>
+       * The translation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      public Builder setTranslation(com.viam.common.v1.Common.Vector3 value) {
+        copyOnWrite();
+        instance.setTranslation(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * The translation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      public Builder setTranslation(
+          com.viam.common.v1.Common.Vector3.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTranslation(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The translation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      public Builder mergeTranslation(com.viam.common.v1.Common.Vector3 value) {
+        copyOnWrite();
+        instance.mergeTranslation(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The translation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      public Builder clearTranslation() {  copyOnWrite();
+        instance.clearTranslation();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The orientation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+       */
+      @java.lang.Override
+      public boolean hasOrientation() {
+        return instance.hasOrientation();
+      }
+      /**
+       * <pre>
+       * The orientation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Orientation getOrientation() {
+        return instance.getOrientation();
+      }
+      /**
+       * <pre>
+       * The orientation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+       */
+      public Builder setOrientation(com.viam.common.v1.Common.Orientation value) {
+        copyOnWrite();
+        instance.setOrientation(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * The orientation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+       */
+      public Builder setOrientation(
+          com.viam.common.v1.Common.Orientation.Builder builderForValue) {
+        copyOnWrite();
+        instance.setOrientation(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The orientation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+       */
+      public Builder mergeOrientation(com.viam.common.v1.Common.Orientation value) {
+        copyOnWrite();
+        instance.mergeOrientation(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The orientation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+       */
+      public Builder clearOrientation() {  copyOnWrite();
+        instance.clearOrientation();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.ExtrinsicParameters)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.ExtrinsicParameters();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "translation_",
+              "orientation_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.ExtrinsicParameters> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.ExtrinsicParameters.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.ExtrinsicParameters>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.camera.v1.ExtrinsicParameters)
+    private static final com.viam.component.camera.v1.Camera.ExtrinsicParameters DEFAULT_INSTANCE;
+    static {
+      ExtrinsicParameters defaultInstance = new ExtrinsicParameters();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ExtrinsicParameters.class, defaultInstance);
+    }
+
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ExtrinsicParameters> PARSER;
+
+    public static com.google.protobuf.Parser<ExtrinsicParameters> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

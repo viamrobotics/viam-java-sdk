@@ -321,7 +321,7 @@ public final class CameraServiceGrpc {
 
     /**
      * <pre>
-     * GetProperties returns the camera intrinsic parameters and camera distortion parameters from a camera of the underlying robot, if available.
+     * GetProperties returns the camera intrinsic parameters, camera distortion parameters, and extrinsic parameters from a camera of the underlying robot, if available.
      * </pre>
      */
     default void getProperties(com.viam.component.camera.v1.Camera.GetPropertiesRequest request,
@@ -429,7 +429,7 @@ public final class CameraServiceGrpc {
 
     /**
      * <pre>
-     * GetProperties returns the camera intrinsic parameters and camera distortion parameters from a camera of the underlying robot, if available.
+     * GetProperties returns the camera intrinsic parameters, camera distortion parameters, and extrinsic parameters from a camera of the underlying robot, if available.
      * </pre>
      */
     public void getProperties(com.viam.component.camera.v1.Camera.GetPropertiesRequest request,
@@ -522,7 +522,7 @@ public final class CameraServiceGrpc {
 
     /**
      * <pre>
-     * GetProperties returns the camera intrinsic parameters and camera distortion parameters from a camera of the underlying robot, if available.
+     * GetProperties returns the camera intrinsic parameters, camera distortion parameters, and extrinsic parameters from a camera of the underlying robot, if available.
      * </pre>
      */
     public com.viam.component.camera.v1.Camera.GetPropertiesResponse getProperties(com.viam.component.camera.v1.Camera.GetPropertiesRequest request) {
@@ -616,7 +616,7 @@ public final class CameraServiceGrpc {
 
     /**
      * <pre>
-     * GetProperties returns the camera intrinsic parameters and camera distortion parameters from a camera of the underlying robot, if available.
+     * GetProperties returns the camera intrinsic parameters, camera distortion parameters, and extrinsic parameters from a camera of the underlying robot, if available.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.viam.component.camera.v1.Camera.GetPropertiesResponse> getProperties(

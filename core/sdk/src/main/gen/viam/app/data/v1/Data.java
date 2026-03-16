@@ -19764,6 +19764,12 @@ com.google.protobuf.Any defaultValue) {
      */
     com.google.protobuf.ByteString
         getBinaryDataIdBytes();
+
+    /**
+     * <code>uint64 file_size_bytes = 11 [json_name = "fileSizeBytes"];</code>
+     * @return The fileSizeBytes.
+     */
+    long getFileSizeBytes();
   }
   /**
    * <pre>
@@ -20306,6 +20312,32 @@ com.google.protobuf.Any defaultValue) {
       checkByteStringIsUtf8(value);
       binaryDataId_ = value.toStringUtf8();
 
+    }
+
+    public static final int FILE_SIZE_BYTES_FIELD_NUMBER = 11;
+    private long fileSizeBytes_;
+    /**
+     * <code>uint64 file_size_bytes = 11 [json_name = "fileSizeBytes"];</code>
+     * @return The fileSizeBytes.
+     */
+    @java.lang.Override
+    public long getFileSizeBytes() {
+      return fileSizeBytes_;
+    }
+    /**
+     * <code>uint64 file_size_bytes = 11 [json_name = "fileSizeBytes"];</code>
+     * @param value The fileSizeBytes to set.
+     */
+    private void setFileSizeBytes(long value) {
+      
+      fileSizeBytes_ = value;
+    }
+    /**
+     * <code>uint64 file_size_bytes = 11 [json_name = "fileSizeBytes"];</code>
+     */
+    private void clearFileSizeBytes() {
+
+      fileSizeBytes_ = 0L;
     }
 
     public static viam.app.data.v1.Data.BinaryMetadata parseFrom(
@@ -20944,6 +20976,34 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>uint64 file_size_bytes = 11 [json_name = "fileSizeBytes"];</code>
+       * @return The fileSizeBytes.
+       */
+      @java.lang.Override
+      public long getFileSizeBytes() {
+        return instance.getFileSizeBytes();
+      }
+      /**
+       * <code>uint64 file_size_bytes = 11 [json_name = "fileSizeBytes"];</code>
+       * @param value The fileSizeBytes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileSizeBytes(long value) {
+        copyOnWrite();
+        instance.setFileSizeBytes(value);
+        return this;
+      }
+      /**
+       * <code>uint64 file_size_bytes = 11 [json_name = "fileSizeBytes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFileSizeBytes() {
+        copyOnWrite();
+        instance.clearFileSizeBytes();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.BinaryMetadata)
     }
     @java.lang.Override
@@ -20971,11 +21031,12 @@ com.google.protobuf.Any defaultValue) {
               "annotations_",
               "datasetIds_",
               "binaryDataId_",
+              "fileSizeBytes_",
             };
             java.lang.String info =
-                "\u0000\n\u0000\u0001\u0001\n\n\u0000\u0001\u0000\u0001\u0208\u0002\u1009\u0000\u0003" +
-                "\u1009\u0001\u0004\u1009\u0002\u0005\u0208\u0006\u0208\u0007\u0208\b\u1009\u0003" +
-                "\t\u021a\n\u0208";
+                "\u0000\u000b\u0000\u0001\u0001\u000b\u000b\u0000\u0001\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001\u0004\u1009\u0002\u0005\u0208\u0006\u0208\u0007\u0208\b" +
+                "\u1009\u0003\t\u021a\n\u0208\u000b\u0003";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -21030,6 +21091,1068 @@ com.google.protobuf.Any defaultValue) {
     }
   }
 
+  public interface DeleteTabularFilterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.DeleteTabularFilter)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+     * @return A list containing the locationIds.
+     */
+    java.util.List<java.lang.String>
+        getLocationIdsList();
+    /**
+     * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+     * @return The count of locationIds.
+     */
+    int getLocationIdsCount();
+    /**
+     * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+     * @param index The index of the element to return.
+     * @return The locationIds at the given index.
+     */
+    java.lang.String getLocationIds(int index);
+    /**
+     * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+     * @param index The index of the element to return.
+     * @return The locationIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getLocationIdsBytes(int index);
+
+    /**
+     * <code>string robot_id = 2 [json_name = "robotId"];</code>
+     * @return The robotId.
+     */
+    java.lang.String getRobotId();
+    /**
+     * <code>string robot_id = 2 [json_name = "robotId"];</code>
+     * @return The bytes for robotId.
+     */
+    com.google.protobuf.ByteString
+        getRobotIdBytes();
+
+    /**
+     * <code>string part_id = 3 [json_name = "partId"];</code>
+     * @return The partId.
+     */
+    java.lang.String getPartId();
+    /**
+     * <code>string part_id = 3 [json_name = "partId"];</code>
+     * @return The bytes for partId.
+     */
+    com.google.protobuf.ByteString
+        getPartIdBytes();
+
+    /**
+     * <code>string component_type = 4 [json_name = "componentType"];</code>
+     * @return The componentType.
+     */
+    java.lang.String getComponentType();
+    /**
+     * <code>string component_type = 4 [json_name = "componentType"];</code>
+     * @return The bytes for componentType.
+     */
+    com.google.protobuf.ByteString
+        getComponentTypeBytes();
+
+    /**
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    java.lang.String getComponentName();
+    /**
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    com.google.protobuf.ByteString
+        getComponentNameBytes();
+
+    /**
+     * <code>string method = 6 [json_name = "method"];</code>
+     * @return The method.
+     */
+    java.lang.String getMethod();
+    /**
+     * <code>string method = 6 [json_name = "method"];</code>
+     * @return The bytes for method.
+     */
+    com.google.protobuf.ByteString
+        getMethodBytes();
+
+    /**
+     * <code>.viam.app.data.v1.TagsFilter tags_filter = 7 [json_name = "tagsFilter"];</code>
+     * @return Whether the tagsFilter field is set.
+     */
+    boolean hasTagsFilter();
+    /**
+     * <code>.viam.app.data.v1.TagsFilter tags_filter = 7 [json_name = "tagsFilter"];</code>
+     * @return The tagsFilter.
+     */
+    viam.app.data.v1.Data.TagsFilter getTagsFilter();
+  }
+  /**
+   * <pre>
+   * TabularFilter filters tabular data. All fields are optional; omitted fields are treated as unconstrained.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.DeleteTabularFilter}
+   */
+  public  static final class DeleteTabularFilter extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteTabularFilter, DeleteTabularFilter.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.DeleteTabularFilter)
+      DeleteTabularFilterOrBuilder {
+    private DeleteTabularFilter() {
+      locationIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      robotId_ = "";
+      partId_ = "";
+      componentType_ = "";
+      componentName_ = "";
+      method_ = "";
+    }
+    private int bitField0_;
+    public static final int LOCATION_IDS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> locationIds_;
+    /**
+     * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+     * @return A list containing the locationIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getLocationIdsList() {
+      return locationIds_;
+    }
+    /**
+     * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+     * @return The count of locationIds.
+     */
+    @java.lang.Override
+    public int getLocationIdsCount() {
+      return locationIds_.size();
+    }
+    /**
+     * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+     * @param index The index of the element to return.
+     * @return The locationIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getLocationIds(int index) {
+      return locationIds_.get(index);
+    }
+    /**
+     * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the locationIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocationIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          locationIds_.get(index));
+    }
+    private void ensureLocationIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          locationIds_;  if (!tmp.isModifiable()) {
+        locationIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The locationIds to set.
+     */
+    private void setLocationIds(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureLocationIdsIsMutable();
+      locationIds_.set(index, value);
+    }
+    /**
+     * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+     * @param value The locationIds to add.
+     */
+    private void addLocationIds(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureLocationIdsIsMutable();
+      locationIds_.add(value);
+    }
+    /**
+     * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+     * @param values The locationIds to add.
+     */
+    private void addAllLocationIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureLocationIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, locationIds_);
+    }
+    /**
+     * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+     */
+    private void clearLocationIds() {
+      locationIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+     * @param value The bytes of the locationIds to add.
+     */
+    private void addLocationIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureLocationIdsIsMutable();
+      locationIds_.add(value.toStringUtf8());
+    }
+
+    public static final int ROBOT_ID_FIELD_NUMBER = 2;
+    private java.lang.String robotId_;
+    /**
+     * <code>string robot_id = 2 [json_name = "robotId"];</code>
+     * @return The robotId.
+     */
+    @java.lang.Override
+    public java.lang.String getRobotId() {
+      return robotId_;
+    }
+    /**
+     * <code>string robot_id = 2 [json_name = "robotId"];</code>
+     * @return The bytes for robotId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRobotIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(robotId_);
+    }
+    /**
+     * <code>string robot_id = 2 [json_name = "robotId"];</code>
+     * @param value The robotId to set.
+     */
+    private void setRobotId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      robotId_ = value;
+    }
+    /**
+     * <code>string robot_id = 2 [json_name = "robotId"];</code>
+     */
+    private void clearRobotId() {
+
+      robotId_ = getDefaultInstance().getRobotId();
+    }
+    /**
+     * <code>string robot_id = 2 [json_name = "robotId"];</code>
+     * @param value The bytes for robotId to set.
+     */
+    private void setRobotIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      robotId_ = value.toStringUtf8();
+
+    }
+
+    public static final int PART_ID_FIELD_NUMBER = 3;
+    private java.lang.String partId_;
+    /**
+     * <code>string part_id = 3 [json_name = "partId"];</code>
+     * @return The partId.
+     */
+    @java.lang.Override
+    public java.lang.String getPartId() {
+      return partId_;
+    }
+    /**
+     * <code>string part_id = 3 [json_name = "partId"];</code>
+     * @return The bytes for partId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPartIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(partId_);
+    }
+    /**
+     * <code>string part_id = 3 [json_name = "partId"];</code>
+     * @param value The partId to set.
+     */
+    private void setPartId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      partId_ = value;
+    }
+    /**
+     * <code>string part_id = 3 [json_name = "partId"];</code>
+     */
+    private void clearPartId() {
+
+      partId_ = getDefaultInstance().getPartId();
+    }
+    /**
+     * <code>string part_id = 3 [json_name = "partId"];</code>
+     * @param value The bytes for partId to set.
+     */
+    private void setPartIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      partId_ = value.toStringUtf8();
+
+    }
+
+    public static final int COMPONENT_TYPE_FIELD_NUMBER = 4;
+    private java.lang.String componentType_;
+    /**
+     * <code>string component_type = 4 [json_name = "componentType"];</code>
+     * @return The componentType.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentType() {
+      return componentType_;
+    }
+    /**
+     * <code>string component_type = 4 [json_name = "componentType"];</code>
+     * @return The bytes for componentType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentTypeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(componentType_);
+    }
+    /**
+     * <code>string component_type = 4 [json_name = "componentType"];</code>
+     * @param value The componentType to set.
+     */
+    private void setComponentType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentType_ = value;
+    }
+    /**
+     * <code>string component_type = 4 [json_name = "componentType"];</code>
+     */
+    private void clearComponentType() {
+
+      componentType_ = getDefaultInstance().getComponentType();
+    }
+    /**
+     * <code>string component_type = 4 [json_name = "componentType"];</code>
+     * @param value The bytes for componentType to set.
+     */
+    private void setComponentTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentType_ = value.toStringUtf8();
+
+    }
+
+    public static final int COMPONENT_NAME_FIELD_NUMBER = 5;
+    private java.lang.String componentName_;
+    /**
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The componentName.
+     */
+    @java.lang.Override
+    public java.lang.String getComponentName() {
+      return componentName_;
+    }
+    /**
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @return The bytes for componentName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getComponentNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+    }
+    /**
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @param value The componentName to set.
+     */
+    private void setComponentName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentName_ = value;
+    }
+    /**
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     */
+    private void clearComponentName() {
+
+      componentName_ = getDefaultInstance().getComponentName();
+    }
+    /**
+     * <code>string component_name = 5 [json_name = "componentName"];</code>
+     * @param value The bytes for componentName to set.
+     */
+    private void setComponentNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentName_ = value.toStringUtf8();
+
+    }
+
+    public static final int METHOD_FIELD_NUMBER = 6;
+    private java.lang.String method_;
+    /**
+     * <code>string method = 6 [json_name = "method"];</code>
+     * @return The method.
+     */
+    @java.lang.Override
+    public java.lang.String getMethod() {
+      return method_;
+    }
+    /**
+     * <code>string method = 6 [json_name = "method"];</code>
+     * @return The bytes for method.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMethodBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(method_);
+    }
+    /**
+     * <code>string method = 6 [json_name = "method"];</code>
+     * @param value The method to set.
+     */
+    private void setMethod(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      method_ = value;
+    }
+    /**
+     * <code>string method = 6 [json_name = "method"];</code>
+     */
+    private void clearMethod() {
+
+      method_ = getDefaultInstance().getMethod();
+    }
+    /**
+     * <code>string method = 6 [json_name = "method"];</code>
+     * @param value The bytes for method to set.
+     */
+    private void setMethodBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      method_ = value.toStringUtf8();
+
+    }
+
+    public static final int TAGS_FILTER_FIELD_NUMBER = 7;
+    private viam.app.data.v1.Data.TagsFilter tagsFilter_;
+    /**
+     * <code>.viam.app.data.v1.TagsFilter tags_filter = 7 [json_name = "tagsFilter"];</code>
+     */
+    @java.lang.Override
+    public boolean hasTagsFilter() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.app.data.v1.TagsFilter tags_filter = 7 [json_name = "tagsFilter"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.TagsFilter getTagsFilter() {
+      return tagsFilter_ == null ? viam.app.data.v1.Data.TagsFilter.getDefaultInstance() : tagsFilter_;
+    }
+    /**
+     * <code>.viam.app.data.v1.TagsFilter tags_filter = 7 [json_name = "tagsFilter"];</code>
+     */
+    private void setTagsFilter(viam.app.data.v1.Data.TagsFilter value) {
+      value.getClass();
+  tagsFilter_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.data.v1.TagsFilter tags_filter = 7 [json_name = "tagsFilter"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTagsFilter(viam.app.data.v1.Data.TagsFilter value) {
+      value.getClass();
+  if (tagsFilter_ != null &&
+          tagsFilter_ != viam.app.data.v1.Data.TagsFilter.getDefaultInstance()) {
+        tagsFilter_ =
+          viam.app.data.v1.Data.TagsFilter.newBuilder(tagsFilter_).mergeFrom(value).buildPartial();
+      } else {
+        tagsFilter_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.data.v1.TagsFilter tags_filter = 7 [json_name = "tagsFilter"];</code>
+     */
+    private void clearTagsFilter() {  tagsFilter_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.data.v1.Data.DeleteTabularFilter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteTabularFilter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteTabularFilter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteTabularFilter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteTabularFilter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteTabularFilter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteTabularFilter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteTabularFilter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.DeleteTabularFilter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.DeleteTabularFilter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteTabularFilter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteTabularFilter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.DeleteTabularFilter prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * TabularFilter filters tabular data. All fields are optional; omitted fields are treated as unconstrained.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.DeleteTabularFilter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.DeleteTabularFilter, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.DeleteTabularFilter)
+        viam.app.data.v1.Data.DeleteTabularFilterOrBuilder {
+      // Construct using viam.app.data.v1.Data.DeleteTabularFilter.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+       * @return A list containing the locationIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getLocationIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getLocationIdsList());
+      }
+      /**
+       * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+       * @return The count of locationIds.
+       */
+      @java.lang.Override
+      public int getLocationIdsCount() {
+        return instance.getLocationIdsCount();
+      }
+      /**
+       * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+       * @param index The index of the element to return.
+       * @return The locationIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getLocationIds(int index) {
+        return instance.getLocationIds(index);
+      }
+      /**
+       * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the locationIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLocationIdsBytes(int index) {
+        return instance.getLocationIdsBytes(index);
+      }
+      /**
+       * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The locationIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setLocationIds(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+       * @param value The locationIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLocationIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addLocationIds(value);
+        return this;
+      }
+      /**
+       * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+       * @param values The locationIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllLocationIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllLocationIds(values);
+        return this;
+      }
+      /**
+       * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocationIds() {
+        copyOnWrite();
+        instance.clearLocationIds();
+        return this;
+      }
+      /**
+       * <code>repeated string location_ids = 1 [json_name = "locationIds"];</code>
+       * @param value The bytes of the locationIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addLocationIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addLocationIdsBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string robot_id = 2 [json_name = "robotId"];</code>
+       * @return The robotId.
+       */
+      @java.lang.Override
+      public java.lang.String getRobotId() {
+        return instance.getRobotId();
+      }
+      /**
+       * <code>string robot_id = 2 [json_name = "robotId"];</code>
+       * @return The bytes for robotId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRobotIdBytes() {
+        return instance.getRobotIdBytes();
+      }
+      /**
+       * <code>string robot_id = 2 [json_name = "robotId"];</code>
+       * @param value The robotId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRobotId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRobotId(value);
+        return this;
+      }
+      /**
+       * <code>string robot_id = 2 [json_name = "robotId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRobotId() {
+        copyOnWrite();
+        instance.clearRobotId();
+        return this;
+      }
+      /**
+       * <code>string robot_id = 2 [json_name = "robotId"];</code>
+       * @param value The bytes for robotId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRobotIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRobotIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string part_id = 3 [json_name = "partId"];</code>
+       * @return The partId.
+       */
+      @java.lang.Override
+      public java.lang.String getPartId() {
+        return instance.getPartId();
+      }
+      /**
+       * <code>string part_id = 3 [json_name = "partId"];</code>
+       * @return The bytes for partId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPartIdBytes() {
+        return instance.getPartIdBytes();
+      }
+      /**
+       * <code>string part_id = 3 [json_name = "partId"];</code>
+       * @param value The partId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPartId(value);
+        return this;
+      }
+      /**
+       * <code>string part_id = 3 [json_name = "partId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartId() {
+        copyOnWrite();
+        instance.clearPartId();
+        return this;
+      }
+      /**
+       * <code>string part_id = 3 [json_name = "partId"];</code>
+       * @param value The bytes for partId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPartIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string component_type = 4 [json_name = "componentType"];</code>
+       * @return The componentType.
+       */
+      @java.lang.Override
+      public java.lang.String getComponentType() {
+        return instance.getComponentType();
+      }
+      /**
+       * <code>string component_type = 4 [json_name = "componentType"];</code>
+       * @return The bytes for componentType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentTypeBytes() {
+        return instance.getComponentTypeBytes();
+      }
+      /**
+       * <code>string component_type = 4 [json_name = "componentType"];</code>
+       * @param value The componentType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentType(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setComponentType(value);
+        return this;
+      }
+      /**
+       * <code>string component_type = 4 [json_name = "componentType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentType() {
+        copyOnWrite();
+        instance.clearComponentType();
+        return this;
+      }
+      /**
+       * <code>string component_type = 4 [json_name = "componentType"];</code>
+       * @param value The bytes for componentType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentTypeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setComponentTypeBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return The componentName.
+       */
+      @java.lang.Override
+      public java.lang.String getComponentName() {
+        return instance.getComponentName();
+      }
+      /**
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return The bytes for componentName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        return instance.getComponentNameBytes();
+      }
+      /**
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @param value The componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setComponentName(value);
+        return this;
+      }
+      /**
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentName() {
+        copyOnWrite();
+        instance.clearComponentName();
+        return this;
+      }
+      /**
+       * <code>string component_name = 5 [json_name = "componentName"];</code>
+       * @param value The bytes for componentName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setComponentNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string method = 6 [json_name = "method"];</code>
+       * @return The method.
+       */
+      @java.lang.Override
+      public java.lang.String getMethod() {
+        return instance.getMethod();
+      }
+      /**
+       * <code>string method = 6 [json_name = "method"];</code>
+       * @return The bytes for method.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMethodBytes() {
+        return instance.getMethodBytes();
+      }
+      /**
+       * <code>string method = 6 [json_name = "method"];</code>
+       * @param value The method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethod(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMethod(value);
+        return this;
+      }
+      /**
+       * <code>string method = 6 [json_name = "method"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethod() {
+        copyOnWrite();
+        instance.clearMethod();
+        return this;
+      }
+      /**
+       * <code>string method = 6 [json_name = "method"];</code>
+       * @param value The bytes for method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMethodBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.data.v1.TagsFilter tags_filter = 7 [json_name = "tagsFilter"];</code>
+       */
+      @java.lang.Override
+      public boolean hasTagsFilter() {
+        return instance.hasTagsFilter();
+      }
+      /**
+       * <code>.viam.app.data.v1.TagsFilter tags_filter = 7 [json_name = "tagsFilter"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.TagsFilter getTagsFilter() {
+        return instance.getTagsFilter();
+      }
+      /**
+       * <code>.viam.app.data.v1.TagsFilter tags_filter = 7 [json_name = "tagsFilter"];</code>
+       */
+      public Builder setTagsFilter(viam.app.data.v1.Data.TagsFilter value) {
+        copyOnWrite();
+        instance.setTagsFilter(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.data.v1.TagsFilter tags_filter = 7 [json_name = "tagsFilter"];</code>
+       */
+      public Builder setTagsFilter(
+          viam.app.data.v1.Data.TagsFilter.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTagsFilter(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.TagsFilter tags_filter = 7 [json_name = "tagsFilter"];</code>
+       */
+      public Builder mergeTagsFilter(viam.app.data.v1.Data.TagsFilter value) {
+        copyOnWrite();
+        instance.mergeTagsFilter(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.TagsFilter tags_filter = 7 [json_name = "tagsFilter"];</code>
+       */
+      public Builder clearTagsFilter() {  copyOnWrite();
+        instance.clearTagsFilter();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.DeleteTabularFilter)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.DeleteTabularFilter();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "locationIds_",
+              "robotId_",
+              "partId_",
+              "componentType_",
+              "componentName_",
+              "method_",
+              "tagsFilter_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0001\u0000\u0001\u021a\u0002\u0208" +
+                "\u0003\u0208\u0004\u0208\u0005\u0208\u0006\u0208\u0007\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.DeleteTabularFilter> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.DeleteTabularFilter.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.DeleteTabularFilter>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.DeleteTabularFilter)
+    private static final viam.app.data.v1.Data.DeleteTabularFilter DEFAULT_INSTANCE;
+    static {
+      DeleteTabularFilter defaultInstance = new DeleteTabularFilter();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteTabularFilter.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.DeleteTabularFilter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeleteTabularFilter> PARSER;
+
+    public static com.google.protobuf.Parser<DeleteTabularFilter> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface DeleteTabularDataRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.data.v1.DeleteTabularDataRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -21051,6 +22174,17 @@ com.google.protobuf.Any defaultValue) {
      * @return The deleteOlderThanDays.
      */
     int getDeleteOlderThanDays();
+
+    /**
+     * <code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code>
+     * @return Whether the filter field is set.
+     */
+    boolean hasFilter();
+    /**
+     * <code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code>
+     * @return The filter.
+     */
+    viam.app.data.v1.Data.DeleteTabularFilter getFilter();
   }
   /**
    * <pre>
@@ -21060,6 +22194,7 @@ com.google.protobuf.Any defaultValue) {
    * If the request is at 10PM EST on March 11 (March 12 2AM UTC), this deletes all data captured
    * through March 11 11:59:59PM UTC.
    * If delete_older_than_days is 0, all existing data is deleted.
+   * If no filter is provided, data will be deleted based on organization_id.
    * </pre>
    *
    * Protobuf type {@code viam.app.data.v1.DeleteTabularDataRequest}
@@ -21072,6 +22207,7 @@ com.google.protobuf.Any defaultValue) {
     private DeleteTabularDataRequest() {
       organizationId_ = "";
     }
+    private int bitField0_;
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
     private java.lang.String organizationId_;
     /**
@@ -21143,6 +22279,52 @@ com.google.protobuf.Any defaultValue) {
     private void clearDeleteOlderThanDays() {
 
       deleteOlderThanDays_ = 0;
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 3;
+    private viam.app.data.v1.Data.DeleteTabularFilter filter_;
+    /**
+     * <code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code>
+     */
+    @java.lang.Override
+    public boolean hasFilter() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.DeleteTabularFilter getFilter() {
+      return filter_ == null ? viam.app.data.v1.Data.DeleteTabularFilter.getDefaultInstance() : filter_;
+    }
+    /**
+     * <code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code>
+     */
+    private void setFilter(viam.app.data.v1.Data.DeleteTabularFilter value) {
+      value.getClass();
+  filter_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeFilter(viam.app.data.v1.Data.DeleteTabularFilter value) {
+      value.getClass();
+  if (filter_ != null &&
+          filter_ != viam.app.data.v1.Data.DeleteTabularFilter.getDefaultInstance()) {
+        filter_ =
+          viam.app.data.v1.Data.DeleteTabularFilter.newBuilder(filter_).mergeFrom(value).buildPartial();
+      } else {
+        filter_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code>
+     */
+    private void clearFilter() {  filter_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.app.data.v1.Data.DeleteTabularDataRequest parseFrom(
@@ -21236,6 +22418,7 @@ com.google.protobuf.Any defaultValue) {
      * If the request is at 10PM EST on March 11 (March 12 2AM UTC), this deletes all data captured
      * through March 11 11:59:59PM UTC.
      * If delete_older_than_days is 0, all existing data is deleted.
+     * If no filter is provided, data will be deleted based on organization_id.
      * </pre>
      *
      * Protobuf type {@code viam.app.data.v1.DeleteTabularDataRequest}
@@ -21328,6 +22511,53 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code>
+       */
+      @java.lang.Override
+      public boolean hasFilter() {
+        return instance.hasFilter();
+      }
+      /**
+       * <code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.DeleteTabularFilter getFilter() {
+        return instance.getFilter();
+      }
+      /**
+       * <code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code>
+       */
+      public Builder setFilter(viam.app.data.v1.Data.DeleteTabularFilter value) {
+        copyOnWrite();
+        instance.setFilter(value);
+        return this;
+        }
+      /**
+       * <code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code>
+       */
+      public Builder setFilter(
+          viam.app.data.v1.Data.DeleteTabularFilter.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFilter(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code>
+       */
+      public Builder mergeFilter(viam.app.data.v1.Data.DeleteTabularFilter value) {
+        copyOnWrite();
+        instance.mergeFilter(value);
+        return this;
+      }
+      /**
+       * <code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code>
+       */
+      public Builder clearFilter() {  copyOnWrite();
+        instance.clearFilter();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.DeleteTabularDataRequest)
     }
     @java.lang.Override
@@ -21344,12 +22574,14 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "organizationId_",
               "deleteOlderThanDays_",
+              "filter_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u000b" +
-                "";
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u000b" +
+                "\u0003\u1009\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -27406,14 +28638,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=547
+     *     See app/data/v1/data.proto;l=561
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=547
+     *     See app/data/v1/data.proto;l=561
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -27465,6 +28697,17 @@ com.google.protobuf.Any defaultValue) {
      * @return The yMaxNormalized.
      */
     double getYMaxNormalized();
+
+    /**
+     * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+     * @return Whether the confidence field is set.
+     */
+    boolean hasConfidence();
+    /**
+     * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+     * @return The confidence.
+     */
+    double getConfidence();
   }
   /**
    * <pre>
@@ -27726,6 +28969,40 @@ com.google.protobuf.Any defaultValue) {
     private void clearYMaxNormalized() {
 
       yMaxNormalized_ = 0D;
+    }
+
+    public static final int CONFIDENCE_FIELD_NUMBER = 9;
+    private double confidence_;
+    /**
+     * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+     * @return Whether the confidence field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfidence() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+     * @return The confidence.
+     */
+    @java.lang.Override
+    public double getConfidence() {
+      return confidence_;
+    }
+    /**
+     * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+     * @param value The confidence to set.
+     */
+    private void setConfidence(double value) {
+      bitField0_ |= 0x00000002;
+      confidence_ = value;
+    }
+    /**
+     * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+     */
+    private void clearConfidence() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      confidence_ = 0D;
     }
 
     public static viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest parseFrom(
@@ -28087,6 +29364,42 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+       * @return Whether the confidence field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfidence() {
+        return instance.hasConfidence();
+      }
+      /**
+       * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+       * @return The confidence.
+       */
+      @java.lang.Override
+      public double getConfidence() {
+        return instance.getConfidence();
+      }
+      /**
+       * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+       * @param value The confidence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfidence(double value) {
+        copyOnWrite();
+        instance.setConfidence(value);
+        return this;
+      }
+      /**
+       * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfidence() {
+        copyOnWrite();
+        instance.clearConfidence();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.AddBoundingBoxToImageByIDRequest)
     }
     @java.lang.Override
@@ -28111,10 +29424,11 @@ com.google.protobuf.Any defaultValue) {
               "yMaxNormalized_",
               "binaryId_",
               "binaryDataId_",
+              "confidence_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0001\u0002\b\u0007\u0000\u0000\u0000\u0002\u0208\u0003\u0000" +
-                "\u0004\u0000\u0005\u0000\u0006\u0000\u0007\u1009\u0000\b\u0208";
+                "\u0000\b\u0000\u0001\u0002\t\b\u0000\u0000\u0000\u0002\u0208\u0003\u0000\u0004\u0000" +
+                "\u0005\u0000\u0006\u0000\u0007\u1009\u0000\b\u0208\t\u1000\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -28478,14 +29792,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=566
+     *     See app/data/v1/data.proto;l=581
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=566
+     *     See app/data/v1/data.proto;l=581
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -29184,14 +30498,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=578
+     *     See app/data/v1/data.proto;l=593
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=578
+     *     See app/data/v1/data.proto;l=593
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -29280,6 +30594,17 @@ com.google.protobuf.Any defaultValue) {
      * @return The yMaxNormalized.
      */
     double getYMaxNormalized();
+
+    /**
+     * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+     * @return Whether the confidence field is set.
+     */
+    boolean hasConfidence();
+    /**
+     * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+     * @return The confidence.
+     */
+    double getConfidence();
   }
   /**
    * <pre>
@@ -29628,6 +30953,40 @@ com.google.protobuf.Any defaultValue) {
     private void clearYMaxNormalized() {
       bitField0_ = (bitField0_ & ~0x00000020);
       yMaxNormalized_ = 0D;
+    }
+
+    public static final int CONFIDENCE_FIELD_NUMBER = 9;
+    private double confidence_;
+    /**
+     * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+     * @return Whether the confidence field is set.
+     */
+    @java.lang.Override
+    public boolean hasConfidence() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+     * @return The confidence.
+     */
+    @java.lang.Override
+    public double getConfidence() {
+      return confidence_;
+    }
+    /**
+     * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+     * @param value The confidence to set.
+     */
+    private void setConfidence(double value) {
+      bitField0_ |= 0x00000040;
+      confidence_ = value;
+    }
+    /**
+     * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+     */
+    private void clearConfidence() {
+      bitField0_ = (bitField0_ & ~0x00000040);
+      confidence_ = 0D;
     }
 
     public static viam.app.data.v1.Data.UpdateBoundingBoxRequest parseFrom(
@@ -30077,6 +31436,42 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+       * @return Whether the confidence field is set.
+       */
+      @java.lang.Override
+      public boolean hasConfidence() {
+        return instance.hasConfidence();
+      }
+      /**
+       * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+       * @return The confidence.
+       */
+      @java.lang.Override
+      public double getConfidence() {
+        return instance.getConfidence();
+      }
+      /**
+       * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+       * @param value The confidence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfidence(double value) {
+        copyOnWrite();
+        instance.setConfidence(value);
+        return this;
+      }
+      /**
+       * <code>optional double confidence = 9 [json_name = "confidence"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfidence() {
+        copyOnWrite();
+        instance.clearConfidence();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.UpdateBoundingBoxRequest)
     }
     @java.lang.Override
@@ -30102,11 +31497,12 @@ com.google.protobuf.Any defaultValue) {
               "xMaxNormalized_",
               "yMaxNormalized_",
               "binaryDataId_",
+              "confidence_",
             };
             java.lang.String info =
-                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0000\u0000\u0001\u1009\u0000\u0002\u0208\u0003" +
+                "\u0000\t\u0000\u0001\u0001\t\t\u0000\u0000\u0000\u0001\u1009\u0000\u0002\u0208\u0003" +
                 "\u1208\u0001\u0004\u1000\u0002\u0005\u1000\u0003\u0006\u1000\u0004\u0007\u1000\u0005" +
-                "\b\u0208";
+                "\b\u0208\t\u1000\u0006";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
