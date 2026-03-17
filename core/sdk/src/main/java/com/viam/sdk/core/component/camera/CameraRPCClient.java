@@ -49,25 +49,6 @@ public class CameraRPCClient extends com.viam.sdk.core.component.camera.Camera {
     }
 
     @Override
-    @Deprecated
-    /*
-     * @deprecated please utilize getImages instead
-     */
-    public Image getImage(final Format format,
-                          Optional<Struct> extra) {
-        final GetImageRequest.Builder builder = GetImageRequest.newBuilder().
-                setName(getName().getName()).
-                setMimeType(Camera.formatToMime(format));
-        extra.ifPresent(builder::setExtra);
-        final GetImageResponse resp = client.getImage(builder.build());
-        final Image.Builder imgBuilder = Image.newBuilder().
-                setSourceName(getName().getName()).
-                setImage(resp.getImage());
-
-        return imgBuilder.setFormat(Camera.mimeToFormat(resp.getMimeType())).build();
-    }
-
-    @Override
     public Entry<List<Image>, ResponseMetadata> getImages(final Optional<List<String>> filterSourceNames,
                                                           final Optional<Struct> extra) {
         final GetImagesRequest.Builder builder = GetImagesRequest.newBuilder().

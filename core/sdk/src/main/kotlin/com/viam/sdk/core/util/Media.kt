@@ -1,7 +1,6 @@
 @file:JvmName("MediaUtils")
 package com.viam.sdk.core.util
 
-import com.viam.component.camera.v1.Camera.Format
 import com.viam.component.camera.v1.Camera.Image
 import java.nio.ByteBuffer
 
@@ -18,7 +17,6 @@ data class ImageDimensions(val width: Int, val height: Int) {
  * Get the dimensions of an image from its data and mime-type.
  *
  * Only specific mime-types are supported: PNG, JPEG, and a custom vnd.viam.rgba.
- * The corresponding [Format] are [Format.FORMAT_PNG], [Format.FORMAT_JPEG], and [Format.FORMAT_RAW_RGBA].
  *
  * @param image    the byte data of the image
  * @param mimeType the mime-type of the image
@@ -37,25 +35,25 @@ fun getDimensions(image: Iterable<Byte>, mimeType: String): ImageDimensions {
 }
 
 /**
- * The dimensions of the image, if [Image.getFormat] returns a supported [Format].
+ * The dimensions of the image based on its mime type.
  * See [getDimensions] for more details.
  */
 val Image.dimensions: ImageDimensions?
     get() = try {
-        getDimensions(this.image, this.format.name)
+        getDimensions(this.image, this.mimeType)
     } catch (e: Exception) {
         null
     }
 
 /**
- * The width of the image, if [Image.getFormat] returns a supported [Format].
+ * The width of the image based on its mime type.
  * See [getDimensions] for more details.
  */
 val Image.width: Int?
     get() = this.dimensions?.width
 
 /**
- * The height of the image, if [Image.getFormat] returns a supported [Format].
+ * The height of the image based on its mime type.
  * See [getDimensions] for more details.
  */
 val Image.height: Int?

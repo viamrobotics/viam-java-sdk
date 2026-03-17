@@ -5,8 +5,6 @@ import com.viam.common.v1.Common;
 import com.viam.common.v1.Common.Geometry;
 import com.viam.common.v1.Common.GetGeometriesResponse;
 import com.viam.common.v1.Common.ResponseMetadata;
-import com.viam.component.camera.v1.Camera.GetImageRequest;
-import com.viam.component.camera.v1.Camera.GetImageResponse;
 import com.viam.component.camera.v1.Camera.GetImagesRequest;
 import com.viam.component.camera.v1.Camera.GetImagesResponse;
 import com.viam.component.camera.v1.Camera.Image;
@@ -48,24 +46,6 @@ public class CameraRPCService extends
         Camera.named(request.getName()));
     final List<Geometry> result = camera.getGeometries(Optional.of(request.getExtra()));
     responseObserver.onNext(GetGeometriesResponse.newBuilder().addAllGeometries(result).build());
-    responseObserver.onCompleted();
-  }
-
-  @Override
-  @Deprecated
-  /*
-   * @deprecated please utilize getImages instead
-   */
-  public void getImage(GetImageRequest request,
-      StreamObserver<GetImageResponse> responseObserver) {
-    final Camera camera = getResource(
-        Camera.named(request.getName()));
-    final Image result = camera.getImage(Camera.mimeToFormat(request.getMimeType()),
-        Optional.of(request.getExtra()));
-
-    responseObserver.onNext(
-        GetImageResponse.newBuilder().setImage(result.getImage())
-            .setMimeType(Camera.formatToMime(result.getFormat())).build());
     responseObserver.onCompleted();
   }
 

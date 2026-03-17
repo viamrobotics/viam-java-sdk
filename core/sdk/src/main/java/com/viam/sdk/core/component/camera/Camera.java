@@ -2,7 +2,6 @@ package com.viam.sdk.core.component.camera;
 
 import com.google.protobuf.Struct;
 import com.viam.common.v1.Common;
-import com.viam.component.camera.v1.Camera.Format;
 import com.viam.component.camera.v1.Camera.Image;
 import com.viam.sdk.core.component.Component;
 import com.viam.sdk.core.resource.Resource;
@@ -47,13 +46,6 @@ public abstract class Camera extends Component {
     return robot.getResource(Camera.class, named(name));
   }
 
-  /**
-   * @deprecated please utilize getImages instead
-   */
-  @Deprecated
-  public abstract Image getImage(final Format format,
-      final Optional<Struct> extra);
-
   public abstract Entry<List<Image>, Common.ResponseMetadata> getImages(
       final Optional<List<String>> filterSourceNames,
       final Optional<Struct> extra);
@@ -62,35 +54,4 @@ public abstract class Camera extends Component {
     return getImages(Optional.empty(), Optional.empty());
   }
 
-  @Deprecated
-  static Format mimeToFormat(final String mimeType) {
-    switch (mimeType) {
-      case "image/jpeg":
-        return Format.FORMAT_JPEG;
-      case "image/png":
-        return Format.FORMAT_PNG;
-      case "image/vnd.viam.rgba":
-        return Format.FORMAT_RAW_RGBA;
-      case "image/vnd.viam.dep":
-        return Format.FORMAT_RAW_DEPTH;
-      default:
-        return Format.FORMAT_UNSPECIFIED;
-    }
-  }
-
-  @Deprecated
-  static String formatToMime(final Format format) {
-    switch (format) {
-      case FORMAT_JPEG:
-        return "image/jpeg";
-      case FORMAT_PNG:
-        return "image/png";
-      case FORMAT_RAW_RGBA:
-        return "image/vnd.viam.rgba";
-      case FORMAT_RAW_DEPTH:
-        return "image/vnd.viam.dep";
-      default:
-        return "unknown";
-    }
-  }
 }
