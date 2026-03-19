@@ -94,3 +94,7 @@ nb-configuration.xml
 ## Build Outputs
 ##############################
 core/sdk/src/main/kotlin/com/viam/sdk/core/util/VersionInfo.kt
+
+# Claude Code
+.claude/worktrees
+.claude/settings.local.json
