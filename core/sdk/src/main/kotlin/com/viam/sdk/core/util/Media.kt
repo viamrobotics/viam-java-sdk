@@ -28,7 +28,7 @@ fun getDimensions(image: Iterable<Byte>, mimeType: String): ImageDimensions {
     if (mimeType.contains("png", ignoreCase = true)) {
         return getDimensionsFromPNG(image)
     }
-    if (mimeType.contains("viam.rgba", ignoreCase = true) || mimeType.contains("FORMAT_RAW_RGBA", ignoreCase = true)) {
+    if (mimeType.contains("viam.rgba", ignoreCase = true)) {
         return getDimensionsFromViamRGBA(image)
     }
     throw IllegalArgumentException("Unsupported mime type: $mimeType")
