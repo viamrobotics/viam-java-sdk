@@ -35,7 +35,7 @@ android {
 
 dependencies {
     api project(':core:services:viam-core-sdk-mlmodel-service')
-    implementation "ai.djl.android:core:0.36.0"
+    implementation "ai.djl.android:core:0.33.0"
     runtimeOnly "ai.djl.pytorch:pytorch-engine:0.36.0"
     runtimeOnly "ai.djl.android:pytorch-native:0.36.0"
     runtimeOnly "ai.djl.android:onnxruntime:0.36.0"

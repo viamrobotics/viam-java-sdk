@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: app/agent/v1/agent.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AgentDeviceServiceGrpc {
 
@@ -57,6 +54,21 @@ public final class AgentDeviceServiceGrpc {
         }
       };
     return AgentDeviceServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AgentDeviceServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AgentDeviceServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AgentDeviceServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AgentDeviceServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AgentDeviceServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AgentDeviceServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -145,6 +157,33 @@ public final class AgentDeviceServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AgentDeviceService.
+   */
+  public static final class AgentDeviceServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AgentDeviceServiceBlockingV2Stub> {
+    private AgentDeviceServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AgentDeviceServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AgentDeviceServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * DeviceAgentConfig is for retrieving config by the on-device agent.
+     * </pre>
+     */
+    public viam.app.agent.v1.Agent.DeviceAgentConfigResponse deviceAgentConfig(viam.app.agent.v1.Agent.DeviceAgentConfigRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeviceAgentConfigMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AgentDeviceService.
    */
   public static final class AgentDeviceServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<AgentDeviceServiceBlockingStub> {

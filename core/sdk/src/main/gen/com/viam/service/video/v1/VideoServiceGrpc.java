@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * VideoService services video streaming and retrieval
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: service/video/v1/video.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class VideoServiceGrpc {
 
@@ -90,6 +87,21 @@ public final class VideoServiceGrpc {
         }
       };
     return VideoServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static VideoServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<VideoServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VideoServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public VideoServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VideoServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return VideoServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -208,6 +220,48 @@ public final class VideoServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service VideoService.
+   * <pre>
+   * VideoService services video streaming and retrieval
+   * </pre>
+   */
+  public static final class VideoServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<VideoServiceBlockingV2Stub> {
+    private VideoServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected VideoServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new VideoServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * GetVideo retrieves a video for a given time range
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, com.viam.service.video.v1.Video.GetVideoResponse>
+        getVideo(com.viam.service.video.v1.Video.GetVideoRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getGetVideoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service VideoService.
    * <pre>
    * VideoService services video streaming and retrieval
    * </pre>

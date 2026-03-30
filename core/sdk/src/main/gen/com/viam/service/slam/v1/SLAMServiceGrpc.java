@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * A SlamService declares the gRPC contract for a slam service
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: service/slam/v1/slam.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SLAMServiceGrpc {
 
@@ -180,6 +177,21 @@ public final class SLAMServiceGrpc {
         }
       };
     return SLAMServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static SLAMServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<SLAMServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SLAMServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public SLAMServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SLAMServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return SLAMServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -373,6 +385,86 @@ public final class SLAMServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service SLAMService.
+   * <pre>
+   * A SlamService declares the gRPC contract for a slam service
+   * </pre>
+   */
+  public static final class SLAMServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<SLAMServiceBlockingV2Stub> {
+    private SLAMServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected SLAMServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new SLAMServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * GetPosition returns the current estimated position of the robot with
+     * respect to a returned component reference.
+     * </pre>
+     */
+    public com.viam.service.slam.v1.Slam.GetPositionResponse getPosition(com.viam.service.slam.v1.Slam.GetPositionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetPointCloudMap returns the latest pointcloud map available where XY is the ground
+     * plane and positive Z is up, following the Right Hand Rule.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, com.viam.service.slam.v1.Slam.GetPointCloudMapResponse>
+        getPointCloudMap(com.viam.service.slam.v1.Slam.GetPointCloudMapRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getGetPointCloudMapMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetInternalState returns the internal map as defined by the specified slam
+     * algorithm required to continue mapping/localizing.
+     * This endpoint is not intended for end users.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, com.viam.service.slam.v1.Slam.GetInternalStateResponse>
+        getInternalState(com.viam.service.slam.v1.Slam.GetInternalStateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getGetInternalStateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns properties of the current slam service including mapping_mode
+     * and cloud_slam, where mapping_mode is the type of mapping/localizing being performed
+     * and cloud_slam is a boolean representing if this SLAM service is being run in the cloud.
+     * </pre>
+     */
+    public com.viam.service.slam.v1.Slam.GetPropertiesResponse getProperties(com.viam.service.slam.v1.Slam.GetPropertiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands.
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service SLAMService.
    * <pre>
    * A SlamService declares the gRPC contract for a slam service
    * </pre>

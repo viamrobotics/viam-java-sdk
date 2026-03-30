@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * A MotionService declares the gRPC contract for a motion service
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: service/motion/v1/motion.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MotionServiceGrpc {
 
@@ -273,6 +270,21 @@ public final class MotionServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static MotionServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<MotionServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MotionServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public MotionServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MotionServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return MotionServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static MotionServiceBlockingStub newBlockingStub(
@@ -532,6 +544,115 @@ public final class MotionServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service MotionService.
+   * <pre>
+   * A MotionService declares the gRPC contract for a motion service
+   * </pre>
+   */
+  public static final class MotionServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<MotionServiceBlockingV2Stub> {
+    private MotionServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected MotionServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new MotionServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.viam.service.motion.v1.Motion.MoveResponse move(com.viam.service.motion.v1.Motion.MoveRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getMoveMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Generate a plan and move a component to a specific pose
+     * with respect to the SLAM map's origin.
+     * May replan to avoid obstacles
+     * </pre>
+     */
+    public com.viam.service.motion.v1.Motion.MoveOnMapResponse moveOnMap(com.viam.service.motion.v1.Motion.MoveOnMapRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getMoveOnMapMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Generate and begin executing an execution to move a component
+     * to a specific GPS coordinate.
+     * May replan to avoid obstacles &amp; account for location drift.
+     * Creates a new plan upon replanning.
+     * </pre>
+     */
+    public com.viam.service.motion.v1.Motion.MoveOnGlobeResponse moveOnGlobe(com.viam.service.motion.v1.Motion.MoveOnGlobeRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getMoveOnGlobeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    @java.lang.Deprecated
+    public com.viam.service.motion.v1.Motion.GetPoseResponse getPose(com.viam.service.motion.v1.Motion.GetPoseRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPoseMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Stops a Plan
+     * </pre>
+     */
+    public com.viam.service.motion.v1.Motion.StopPlanResponse stopPlan(com.viam.service.motion.v1.Motion.StopPlanRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getStopPlanMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the status of plans created by requests to move components
+     * that are executing OR are part of an execution which changed it state
+     * within the a 24HR TTL OR until the robot reinitializes.
+     * This currently only returns plans for MoveOnGlobe and MoveOnMap.
+     * </pre>
+     */
+    public com.viam.service.motion.v1.Motion.ListPlanStatusesResponse listPlanStatuses(com.viam.service.motion.v1.Motion.ListPlanStatusesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListPlanStatusesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the plan(s) &amp; state history of the most recent execution to move a
+     * component. Returns a result if the last execution is still executing OR
+     * changed state within the last 24 hours AND the robot has not reinitialized.
+     * Plans are never mutated.
+     * Replans always create new plans.
+     * Replans share the execution_id of the previously executing plan.
+     * This currently only returns plans for MoveOnGlobe and MoveOnMap.
+     * </pre>
+     */
+    public com.viam.service.motion.v1.Motion.GetPlanResponse getPlan(com.viam.service.motion.v1.Motion.GetPlanRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPlanMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service MotionService.
    * <pre>
    * A MotionService declares the gRPC contract for a motion service
    * </pre>

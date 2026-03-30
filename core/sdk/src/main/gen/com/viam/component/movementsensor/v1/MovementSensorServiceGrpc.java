@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/movementsensor/v1/movementsensor.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MovementSensorServiceGrpc {
 
@@ -360,6 +357,21 @@ public final class MovementSensorServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static MovementSensorServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<MovementSensorServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MovementSensorServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public MovementSensorServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MovementSensorServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return MovementSensorServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static MovementSensorServiceBlockingStub newBlockingStub(
@@ -601,6 +613,106 @@ public final class MovementSensorServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service MovementSensorService.
+   */
+  public static final class MovementSensorServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<MovementSensorServiceBlockingV2Stub> {
+    private MovementSensorServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected MovementSensorServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new MovementSensorServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse getLinearVelocity(com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetLinearVelocityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse getAngularVelocity(com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetAngularVelocityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse getCompassHeading(com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetCompassHeadingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse getOrientation(com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetOrientationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse getPosition(com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse getProperties(com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse getAccuracy(com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetAccuracyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse getLinearAcceleration(com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetLinearAccelerationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetReadings returns the readings of a sensor of the underlying robot.
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetReadingsResponse getReadings(com.viam.common.v1.Common.GetReadingsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetReadingsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service MovementSensorService.
    */
   public static final class MovementSensorServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<MovementSensorServiceBlockingStub> {

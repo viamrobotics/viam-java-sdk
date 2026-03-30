@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: app/mltraining/v1/ml_training.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MLTrainingServiceGrpc {
 
@@ -270,6 +267,21 @@ public final class MLTrainingServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static MLTrainingServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<MLTrainingServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MLTrainingServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public MLTrainingServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MLTrainingServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return MLTrainingServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static MLTrainingServiceBlockingStub newBlockingStub(
@@ -502,6 +514,103 @@ public final class MLTrainingServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service MLTrainingService.
+   */
+  public static final class MLTrainingServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<MLTrainingServiceBlockingV2Stub> {
+    private MLTrainingServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected MLTrainingServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new MLTrainingServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * SubmitTrainingJob submits a training job request.
+     * </pre>
+     */
+    public viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse submitTrainingJob(viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSubmitTrainingJobMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SubmitCustomTrainingJob submits a custom training job request.
+     * </pre>
+     */
+    public viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobResponse submitCustomTrainingJob(viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSubmitCustomTrainingJobMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetTrainingJob retrieves a training job by its ID.
+     * </pre>
+     */
+    public viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse getTrainingJob(viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetTrainingJobMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListTrainingJobs lists training jobs for a given organization ID and training status.
+     * </pre>
+     */
+    public viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse listTrainingJobs(viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListTrainingJobsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CancelTrainingJob cancels a training job that has not yet completed.
+     * </pre>
+     */
+    public viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse cancelTrainingJob(viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCancelTrainingJobMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteCompletedTrainingJob removes a completed training job from the database, whether the job succeeded or failed.
+     * </pre>
+     */
+    public viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse deleteCompletedTrainingJob(viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteCompletedTrainingJobMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetTrainingJobLogs gets the logs for a given custom training job.
+     * </pre>
+     */
+    public viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsResponse getTrainingJobLogs(viam.app.mltraining.v1.MlTraining.GetTrainingJobLogsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetTrainingJobLogsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListSupportedContainers gets all the containers one can use for a custom training job.
+     * </pre>
+     */
+    public viam.app.mltraining.v1.MlTraining.ListSupportedContainersResponse listSupportedContainers(viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListSupportedContainersMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service MLTrainingService.
    */
   public static final class MLTrainingServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<MLTrainingServiceBlockingStub> {

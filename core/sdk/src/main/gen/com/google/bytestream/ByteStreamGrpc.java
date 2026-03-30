@@ -21,9 +21,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * The errors returned by the service are in the Google canonical error space.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: google/bytestream/bytestream.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ByteStreamGrpc {
 
@@ -134,6 +131,21 @@ public final class ByteStreamGrpc {
         }
       };
     return ByteStreamStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ByteStreamBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ByteStreamBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ByteStreamBlockingV2Stub>() {
+        @java.lang.Override
+        public ByteStreamBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ByteStreamBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ByteStreamBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -377,6 +389,105 @@ public final class ByteStreamGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ByteStream.
+   * <pre>
+   * #### Introduction
+   * The Byte Stream API enables a client to read and write a stream of bytes to
+   * and from a resource. Resources have names, and these names are supplied in
+   * the API calls below to identify the resource that is being read from or
+   * written to.
+   * All implementations of the Byte Stream API export the interface defined here:
+   * * `Read()`: Reads the contents of a resource.
+   * * `Write()`: Writes the contents of a resource. The client can call `Write()`
+   *   multiple times with the same resource and can check the status of the write
+   *   by calling `QueryWriteStatus()`.
+   * #### Service parameters and metadata
+   * The ByteStream API provides no direct way to access/modify any metadata
+   * associated with the resource.
+   * #### Errors
+   * The errors returned by the service are in the Google canonical error space.
+   * </pre>
+   */
+  public static final class ByteStreamBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ByteStreamBlockingV2Stub> {
+    private ByteStreamBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ByteStreamBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ByteStreamBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * `Read()` is used to retrieve the contents of a resource as a sequence
+     * of bytes. The bytes are returned in a sequence of responses, and the
+     * responses are delivered as the results of a server-side streaming RPC.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, com.google.bytestream.ByteStreamProto.ReadResponse>
+        read(com.google.bytestream.ByteStreamProto.ReadRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getReadMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * `Write()` is used to send the contents of a resource as a sequence of
+     * bytes. The bytes are sent in a sequence of request protos of a client-side
+     * streaming RPC.
+     * A `Write()` action is resumable. If there is an error or the connection is
+     * broken during the `Write()`, the client should check the status of the
+     * `Write()` by calling `QueryWriteStatus()` and continue writing from the
+     * returned `committed_size`. This may be less than the amount of data the
+     * client previously sent.
+     * Calling `Write()` on a resource name that was previously written and
+     * finalized could cause an error, depending on whether the underlying service
+     * allows over-writing of previously written resources.
+     * When the client closes the request channel, the service will respond with
+     * a `WriteResponse`. The service will not view the resource as `complete`
+     * until the client has sent a `WriteRequest` with `finish_write` set to
+     * `true`. Sending any requests on a stream after sending a request with
+     * `finish_write` set to `true` will cause an error. The client **should**
+     * check the `WriteResponse` it receives to determine how much data the
+     * service was able to commit and whether the service views the resource as
+     * `complete` or not.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<com.google.bytestream.ByteStreamProto.WriteRequest, com.google.bytestream.ByteStreamProto.WriteResponse>
+        write() {
+      return io.grpc.stub.ClientCalls.blockingClientStreamingCall(
+          getChannel(), getWriteMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * `QueryWriteStatus()` is used to find the `committed_size` for a resource
+     * that is being written, which can then be used as the `write_offset` for
+     * the next `Write()` call.
+     * If the resource does not exist (i.e., the resource has been deleted, or the
+     * first `Write()` has not yet reached the service), this method returns the
+     * error `NOT_FOUND`.
+     * The client **may** call `QueryWriteStatus()` at any time to determine how
+     * much data has been processed for this resource. This is useful if the
+     * client is buffering data and needs to know which data can be safely
+     * evicted. For any sequence of `QueryWriteStatus()` calls for a given
+     * resource name, the sequence of returned `committed_size` values will be
+     * non-decreasing.
+     * </pre>
+     */
+    public com.google.bytestream.ByteStreamProto.QueryWriteStatusResponse queryWriteStatus(com.google.bytestream.ByteStreamProto.QueryWriteStatusRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getQueryWriteStatusMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ByteStream.
    * <pre>
    * #### Introduction
    * The Byte Stream API enables a client to read and write a stream of bytes to

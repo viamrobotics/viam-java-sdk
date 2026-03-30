@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * An AudioInputService services all audio inputs associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/audioinput/v1/audioinput.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AudioInputServiceGrpc {
 
@@ -180,6 +177,21 @@ public final class AudioInputServiceGrpc {
         }
       };
     return AudioInputServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AudioInputServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AudioInputServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AudioInputServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AudioInputServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AudioInputServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AudioInputServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -365,6 +377,80 @@ public final class AudioInputServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AudioInputService.
+   * <pre>
+   * An AudioInputService services all audio inputs associated with a robot
+   * </pre>
+   */
+  public static final class AudioInputServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AudioInputServiceBlockingV2Stub> {
+    private AudioInputServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AudioInputServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AudioInputServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Chunks returns audio chunks forever from an audio input of the underlying robot.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, com.viam.component.audioinput.v1.Audioinput.ChunksResponse>
+        chunks(com.viam.component.audioinput.v1.Audioinput.ChunksRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getChunksMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Properties returns properties of an audio input of the underlying robot.
+     * </pre>
+     */
+    public com.viam.component.audioinput.v1.Audioinput.PropertiesResponse properties(com.viam.component.audioinput.v1.Audioinput.PropertiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getPropertiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Record records audio from an audio input of the underlying robot
+     * to an HTTP response. A specific MIME type cannot be requested and may not necessarily
+     * be the same one returned each time.
+     * </pre>
+     */
+    public com.google.api.HttpBody record(com.viam.component.audioinput.v1.Audioinput.RecordRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRecordMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AudioInputService.
    * <pre>
    * An AudioInputService services all audio inputs associated with a robot
    * </pre>

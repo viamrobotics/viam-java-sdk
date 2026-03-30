@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * An GripperService services all grippers associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/gripper/v1/gripper.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class GripperServiceGrpc {
 
@@ -273,6 +270,21 @@ public final class GripperServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static GripperServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<GripperServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GripperServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public GripperServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GripperServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return GripperServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static GripperServiceBlockingStub newBlockingStub(
@@ -514,6 +526,106 @@ public final class GripperServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service GripperService.
+   * <pre>
+   * An GripperService services all grippers associated with a robot
+   * </pre>
+   */
+  public static final class GripperServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<GripperServiceBlockingV2Stub> {
+    private GripperServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected GripperServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new GripperServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Open opens a gripper of the underlying robot.
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.OpenResponse open(com.viam.component.gripper.v1.Gripper.OpenRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getOpenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Grab requests a gripper of the underlying robot to grab.
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.GrabResponse grab(com.viam.component.gripper.v1.Gripper.GrabRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGrabMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Stop stops a robot's gripper
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.StopResponse stop(com.viam.component.gripper.v1.Gripper.StopRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getStopMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * IsMoving reports if a component is in motion
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.IsMovingResponse isMoving(com.viam.component.gripper.v1.Gripper.IsMovingRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getIsMovingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * IsHoldingSomething returns whether the gripper is currently holding onto an object
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse isHoldingSomething(com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getIsHoldingSomethingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetKinematics returns the kinematics file for the component
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetKinematicsResponse getKinematics(com.viam.common.v1.Common.GetKinematicsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetKinematicsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service GripperService.
    * <pre>
    * An GripperService services all grippers associated with a robot
    * </pre>

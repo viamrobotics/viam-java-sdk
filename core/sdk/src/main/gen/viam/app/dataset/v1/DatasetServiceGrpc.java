@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * DatasetService is used to manage datasets.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: app/dataset/v1/dataset.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DatasetServiceGrpc {
 
@@ -213,6 +210,21 @@ public final class DatasetServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static DatasetServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<DatasetServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DatasetServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public DatasetServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DatasetServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return DatasetServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static DatasetServiceBlockingStub newBlockingStub(
@@ -412,6 +424,86 @@ public final class DatasetServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service DatasetService.
+   * <pre>
+   * DatasetService is used to manage datasets.
+   * </pre>
+   */
+  public static final class DatasetServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<DatasetServiceBlockingV2Stub> {
+    private DatasetServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected DatasetServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new DatasetServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * CreateDataset makes a new dataset.
+     * </pre>
+     */
+    public viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse createDataset(viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateDatasetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteDatasets deletes an existing dataset.
+     * </pre>
+     */
+    public viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse deleteDataset(viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteDatasetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RenameDataset modifies the name of an existing dataset.
+     * </pre>
+     */
+    public viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse renameDataset(viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRenameDatasetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListDatasetsByOrganizationID lists all of the datasets for an organization.
+     * </pre>
+     */
+    public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse listDatasetsByOrganizationID(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListDatasetsByOrganizationIDMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListDatasetsByIDs lists all of the datasets specified by the given dataset IDs.
+     * </pre>
+     */
+    public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse listDatasetsByIDs(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListDatasetsByIDsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * MergeDatasets merges multiple datasets into a new dataset.
+     * </pre>
+     */
+    public viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse mergeDatasets(viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getMergeDatasetsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service DatasetService.
    * <pre>
    * DatasetService is used to manage datasets.
    * </pre>

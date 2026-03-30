@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * A MotorService maintains all motors associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/motor/v1/motor.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MotorServiceGrpc {
 
@@ -393,6 +390,21 @@ public final class MotorServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static MotorServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<MotorServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MotorServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public MotorServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MotorServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return MotorServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static MotorServiceBlockingStub newBlockingStub(
@@ -738,6 +750,156 @@ public final class MotorServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service MotorService.
+   * <pre>
+   * A MotorService maintains all motors associated with a robot
+   * </pre>
+   */
+  public static final class MotorServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<MotorServiceBlockingV2Stub> {
+    private MotorServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected MotorServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new MotorServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * SetPower sets the percentage of the motor's total power that should be employed
+     * expressed a value between -1 and 1 where negative values indicate a backwards
+     * direction and positive values a forward direction
+     * </pre>
+     */
+    public com.viam.component.motor.v1.Motor.SetPowerResponse setPower(com.viam.component.motor.v1.Motor.SetPowerRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetPowerMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GoFor instructs the motor to turn at a specified speed, which is expressed in RPM,
+     * for a specified number of rotations relative to its starting position
+     * This method will return an error if position reporting is not supported
+     * If revolutions != 0, this will block until the number of revolutions has been completed or another operation comes in.
+     * Deprecated: If revolutions is 0, this will run the motor at rpm indefinitely.
+     * </pre>
+     */
+    public com.viam.component.motor.v1.Motor.GoForResponse goFor(com.viam.component.motor.v1.Motor.GoForRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGoForMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GoTo requests the robot's motor to move to a specific position that
+     * is relative to its home position at a specified speed which is expressed in RPM
+     * This method will return an error if position reporting is not supported
+     * </pre>
+     */
+    public com.viam.component.motor.v1.Motor.GoToResponse goTo(com.viam.component.motor.v1.Motor.GoToRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGoToMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetRPM instructs the motor to move at the specified RPM indefinitely.
+     * </pre>
+     */
+    public com.viam.component.motor.v1.Motor.SetRPMResponse setRPM(com.viam.component.motor.v1.Motor.SetRPMRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetRPMMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ResetZeroPosition sets the current position of the motor as the new zero position
+     * This method will return an error if position reporting is not supported
+     * </pre>
+     */
+    public com.viam.component.motor.v1.Motor.ResetZeroPositionResponse resetZeroPosition(com.viam.component.motor.v1.Motor.ResetZeroPositionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getResetZeroPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Position reports the position of the robot's motor relative to its zero position
+     * This method will return an error if position reporting is not supported
+     * </pre>
+     */
+    public com.viam.component.motor.v1.Motor.GetPositionResponse getPosition(com.viam.component.motor.v1.Motor.GetPositionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns a message of booleans indicating which optional features the robot's motor supports
+     * </pre>
+     */
+    public com.viam.component.motor.v1.Motor.GetPropertiesResponse getProperties(com.viam.component.motor.v1.Motor.GetPropertiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Stop turns the robot's motor off
+     * </pre>
+     */
+    public com.viam.component.motor.v1.Motor.StopResponse stop(com.viam.component.motor.v1.Motor.StopRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getStopMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * IsPowered returns true if the robot's motor is on
+     * </pre>
+     */
+    public com.viam.component.motor.v1.Motor.IsPoweredResponse isPowered(com.viam.component.motor.v1.Motor.IsPoweredRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getIsPoweredMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * IsMoving reports if a component is in motion
+     * </pre>
+     */
+    public com.viam.component.motor.v1.Motor.IsMovingResponse isMoving(com.viam.component.motor.v1.Motor.IsMovingRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getIsMovingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service MotorService.
    * <pre>
    * A MotorService maintains all motors associated with a robot
    * </pre>

@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * ProvisioningService is used by viam-agent to retrieve the smart machine info.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: provisioning/v1/provisioning.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ProvisioningServiceGrpc {
 
@@ -180,6 +177,21 @@ public final class ProvisioningServiceGrpc {
         }
       };
     return ProvisioningServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ProvisioningServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ProvisioningServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProvisioningServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ProvisioningServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProvisioningServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ProvisioningServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -363,6 +375,77 @@ public final class ProvisioningServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ProvisioningService.
+   * <pre>
+   * ProvisioningService is used by viam-agent to retrieve the smart machine info.
+   * </pre>
+   */
+  public static final class ProvisioningServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ProvisioningServiceBlockingV2Stub> {
+    private ProvisioningServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ProvisioningServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ProvisioningServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * GetSmartMachineStatus is for retrieving the status of the smart machine including networking.
+     * </pre>
+     */
+    public viam.provisioning.v1.Provisioning.GetSmartMachineStatusResponse getSmartMachineStatus(viam.provisioning.v1.Provisioning.GetSmartMachineStatusRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetSmartMachineStatusMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetNetworkCredentials is to set the wifi credentials.
+     * </pre>
+     */
+    public viam.provisioning.v1.Provisioning.SetNetworkCredentialsResponse setNetworkCredentials(viam.provisioning.v1.Provisioning.SetNetworkCredentialsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetNetworkCredentialsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetSmartMachineCredentials is to set the smart machine credentials.
+     * </pre>
+     */
+    public viam.provisioning.v1.Provisioning.SetSmartMachineCredentialsResponse setSmartMachineCredentials(viam.provisioning.v1.Provisioning.SetSmartMachineCredentialsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetSmartMachineCredentialsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetNetworkList is to retrieve the list of networks that are visible to the smart machine.
+     * </pre>
+     */
+    public viam.provisioning.v1.Provisioning.GetNetworkListResponse getNetworkList(viam.provisioning.v1.Provisioning.GetNetworkListRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetNetworkListMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ExitProvisioning is called when "done" with all other calls.
+     * It causes the device to exit provisioning mode to try any newly added wifi networks and resume normal operation.
+     * </pre>
+     */
+    public viam.provisioning.v1.Provisioning.ExitProvisioningResponse exitProvisioning(viam.provisioning.v1.Provisioning.ExitProvisioningRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getExitProvisioningMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ProvisioningService.
    * <pre>
    * ProvisioningService is used by viam-agent to retrieve the smart machine info.
    * </pre>

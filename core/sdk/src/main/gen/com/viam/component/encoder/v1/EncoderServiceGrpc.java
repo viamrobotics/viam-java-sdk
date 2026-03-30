@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/encoder/v1/encoder.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class EncoderServiceGrpc {
 
@@ -180,6 +177,21 @@ public final class EncoderServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static EncoderServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<EncoderServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<EncoderServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public EncoderServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new EncoderServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return EncoderServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static EncoderServiceBlockingStub newBlockingStub(
@@ -341,6 +353,69 @@ public final class EncoderServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service EncoderService.
+   */
+  public static final class EncoderServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<EncoderServiceBlockingV2Stub> {
+    private EncoderServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected EncoderServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new EncoderServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns position of the encoder which can either be ticks since last
+     * zeroing for an incremental encoder or degrees for an absolute encoder.
+     * </pre>
+     */
+    public com.viam.component.encoder.v1.Encoder.GetPositionResponse getPosition(com.viam.component.encoder.v1.Encoder.GetPositionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.component.encoder.v1.Encoder.ResetPositionResponse resetPosition(com.viam.component.encoder.v1.Encoder.ResetPositionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getResetPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of all the methods that are
+     * supported by a given robot.
+     * </pre>
+     */
+    public com.viam.component.encoder.v1.Encoder.GetPropertiesResponse getProperties(com.viam.component.encoder.v1.Encoder.GetPropertiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service EncoderService.
    */
   public static final class EncoderServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<EncoderServiceBlockingStub> {

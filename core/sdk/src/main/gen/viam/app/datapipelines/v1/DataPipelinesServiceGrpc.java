@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * DataPipelinesService is used to manage data pipelines.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: app/datapipelines/v1/data_pipelines.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DataPipelinesServiceGrpc {
 
@@ -273,6 +270,21 @@ public final class DataPipelinesServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static DataPipelinesServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<DataPipelinesServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DataPipelinesServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public DataPipelinesServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DataPipelinesServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return DataPipelinesServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static DataPipelinesServiceBlockingStub newBlockingStub(
@@ -514,6 +526,106 @@ public final class DataPipelinesServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service DataPipelinesService.
+   * <pre>
+   * DataPipelinesService is used to manage data pipelines.
+   * </pre>
+   */
+  public static final class DataPipelinesServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<DataPipelinesServiceBlockingV2Stub> {
+    private DataPipelinesServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected DataPipelinesServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new DataPipelinesServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * GetDataPipeline retrieves a specific data pipeline by its id.
+     * </pre>
+     */
+    public viam.app.datapipelines.v1.DataPipelines.GetDataPipelineResponse getDataPipeline(viam.app.datapipelines.v1.DataPipelines.GetDataPipelineRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetDataPipelineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListDataPipelines returns a list of data pipelines based on organization id.
+     * </pre>
+     */
+    public viam.app.datapipelines.v1.DataPipelines.ListDataPipelinesResponse listDataPipelines(viam.app.datapipelines.v1.DataPipelines.ListDataPipelinesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListDataPipelinesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateDataPipeline creates a new data pipeline with the provided configuration.
+     * </pre>
+     */
+    public viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineResponse createDataPipeline(viam.app.datapipelines.v1.DataPipelines.CreateDataPipelineRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateDataPipelineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RenameDataPipeline changes a data pipeline's name.
+     * </pre>
+     */
+    public viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineResponse renameDataPipeline(viam.app.datapipelines.v1.DataPipelines.RenameDataPipelineRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRenameDataPipelineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteDataPipeline deletes a data pipeline from the database.
+     * </pre>
+     */
+    public viam.app.datapipelines.v1.DataPipelines.DeleteDataPipelineResponse deleteDataPipeline(viam.app.datapipelines.v1.DataPipelines.DeleteDataPipelineRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteDataPipelineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * EnableDataPipeline enables a data pipeline.
+     * </pre>
+     */
+    public viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineResponse enableDataPipeline(viam.app.datapipelines.v1.DataPipelines.EnableDataPipelineRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getEnableDataPipelineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DisableDataPipeline disables a data pipeline.
+     * </pre>
+     */
+    public viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineResponse disableDataPipeline(viam.app.datapipelines.v1.DataPipelines.DisableDataPipelineRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDisableDataPipelineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListDataPipelineRuns lists the runs of a data pipeline.
+     * </pre>
+     */
+    public viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsResponse listDataPipelineRuns(viam.app.datapipelines.v1.DataPipelines.ListDataPipelineRunsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListDataPipelineRunsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service DataPipelinesService.
    * <pre>
    * DataPipelinesService is used to manage data pipelines.
    * </pre>

@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: app/v1/end_user.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class EndUserServiceGrpc {
 
@@ -177,6 +174,21 @@ public final class EndUserServiceGrpc {
         }
       };
     return EndUserServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static EndUserServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<EndUserServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<EndUserServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public EndUserServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new EndUserServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return EndUserServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -357,6 +369,77 @@ public final class EndUserServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service EndUserService.
+   */
+  public static final class EndUserServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<EndUserServiceBlockingV2Stub> {
+    private EndUserServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected EndUserServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new EndUserServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Returns whether the specified user has accepted end user license agreements.
+     * If false, the user should not be able to use the application.
+     * </pre>
+     */
+    public viam.app.v1.EndUser.IsLegalAcceptedResponse isLegalAccepted(viam.app.v1.EndUser.IsLegalAcceptedRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getIsLegalAcceptedMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Marks that the specified user has accepted end user license agreements.
+     * </pre>
+     */
+    public viam.app.v1.EndUser.AcceptLegalResponse acceptLegal(viam.app.v1.EndUser.AcceptLegalRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAcceptLegalMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Allows users to register third party auth applications using Viam linked to the indicated organization
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public viam.app.v1.EndUser.RegisterAuthApplicationResponse registerAuthApplication(viam.app.v1.EndUser.RegisterAuthApplicationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRegisterAuthApplicationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Allows users to update their third party auth applications
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public viam.app.v1.EndUser.UpdateAuthApplicationResponse updateAuthApplication(viam.app.v1.EndUser.UpdateAuthApplicationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateAuthApplicationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Allows users to get the config for their third party auth applications
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public viam.app.v1.EndUser.GetAuthApplicationResponse getAuthApplication(viam.app.v1.EndUser.GetAuthApplicationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetAuthApplicationMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service EndUserService.
    */
   public static final class EndUserServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<EndUserServiceBlockingStub> {

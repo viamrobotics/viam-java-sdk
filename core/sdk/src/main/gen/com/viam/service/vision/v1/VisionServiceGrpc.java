@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * VisionService declares the gRPC contract for a vision service
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: service/vision/v1/vision.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class VisionServiceGrpc {
 
@@ -273,6 +270,21 @@ public final class VisionServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static VisionServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<VisionServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VisionServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public VisionServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VisionServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return VisionServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static VisionServiceBlockingStub newBlockingStub(
@@ -512,6 +524,105 @@ public final class VisionServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service VisionService.
+   * <pre>
+   * VisionService declares the gRPC contract for a vision service
+   * </pre>
+   */
+  public static final class VisionServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<VisionServiceBlockingV2Stub> {
+    private VisionServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected VisionServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new VisionServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * GetDetectionsFromCamera will return a list of detections in the next image given a camera and a detector
+     * </pre>
+     */
+    public com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse getDetectionsFromCamera(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetDetectionsFromCameraMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetDetections will return a list of detections in the next image given the image bytes and a detector
+     * </pre>
+     */
+    public com.viam.service.vision.v1.Vision.GetDetectionsResponse getDetections(com.viam.service.vision.v1.Vision.GetDetectionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetDetectionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetClassificationsFromCamera will return a list of classifications in the next image given a camera and a classifier
+     * </pre>
+     */
+    public com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse getClassificationsFromCamera(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetClassificationsFromCameraMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetClassifications will return a list of classifications in the next image given the image bytes and a classifier
+     * </pre>
+     */
+    public com.viam.service.vision.v1.Vision.GetClassificationsResponse getClassifications(com.viam.service.vision.v1.Vision.GetClassificationsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetClassificationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetObjectPointClouds returns all the found objects in a pointcloud from a camera of the underlying robot,
+     * as well as the 3-vector center of each of the found objects.
+     * A specific MIME type can be requested but may not necessarily be the same one returned.
+     * </pre>
+     */
+    public com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse getObjectPointClouds(com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetObjectPointCloudsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties will return the properties as booleans given the name of the vision service
+     * </pre>
+     */
+    public com.viam.service.vision.v1.Vision.GetPropertiesResponse getProperties(com.viam.service.vision.v1.Vision.GetPropertiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.service.vision.v1.Vision.CaptureAllFromCameraResponse captureAllFromCamera(com.viam.service.vision.v1.Vision.CaptureAllFromCameraRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCaptureAllFromCameraMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service VisionService.
    * <pre>
    * VisionService declares the gRPC contract for a vision service
    * </pre>

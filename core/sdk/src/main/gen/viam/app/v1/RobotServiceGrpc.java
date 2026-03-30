@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * RobotService is used by robots to retrieve configs, report logs, etc...
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: app/v1/robot.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class RobotServiceGrpc {
 
@@ -150,6 +147,21 @@ public final class RobotServiceGrpc {
         }
       };
     return RobotServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static RobotServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<RobotServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RobotServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public RobotServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RobotServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return RobotServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -310,6 +322,66 @@ public final class RobotServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service RobotService.
+   * <pre>
+   * RobotService is used by robots to retrieve configs, report logs, etc...
+   * </pre>
+   */
+  public static final class RobotServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<RobotServiceBlockingV2Stub> {
+    private RobotServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected RobotServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new RobotServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Config requests the current robot config
+     * </pre>
+     */
+    public viam.app.v1.Robot.ConfigResponse config(viam.app.v1.Robot.ConfigRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Certificate requests the current robot certificate
+     * </pre>
+     */
+    public viam.app.v1.Robot.CertificateResponse certificate(viam.app.v1.Robot.CertificateRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCertificateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Log insert log entries associated with the robot. Allows up to 1000 entries to be added in one request.
+     * </pre>
+     */
+    public viam.app.v1.Robot.LogResponse log(viam.app.v1.Robot.LogRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getLogMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * NeedsRestart returns if the robot should restart and the interval it should check to restart.
+     * </pre>
+     */
+    public viam.app.v1.Robot.NeedsRestartResponse needsRestart(viam.app.v1.Robot.NeedsRestartRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getNeedsRestartMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service RobotService.
    * <pre>
    * RobotService is used by robots to retrieve configs, report logs, etc...
    * </pre>

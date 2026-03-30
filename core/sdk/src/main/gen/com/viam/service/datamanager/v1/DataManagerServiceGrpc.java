@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * A DataManagerService service manages data between the robot and the cloud.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: service/datamanager/v1/data_manager.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DataManagerServiceGrpc {
 
@@ -120,6 +117,21 @@ public final class DataManagerServiceGrpc {
         }
       };
     return DataManagerServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static DataManagerServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<DataManagerServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DataManagerServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public DataManagerServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DataManagerServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return DataManagerServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -259,6 +271,56 @@ public final class DataManagerServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service DataManagerService.
+   * <pre>
+   * A DataManagerService service manages data between the robot and the cloud.
+   * </pre>
+   */
+  public static final class DataManagerServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<DataManagerServiceBlockingV2Stub> {
+    private DataManagerServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected DataManagerServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new DataManagerServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Sync performs a sync of the non-synced files for the specified service name,
+     * </pre>
+     */
+    public com.viam.service.datamanager.v1.DataManager.SyncResponse sync(com.viam.service.datamanager.v1.DataManager.SyncRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSyncMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UploadBinaryDataToDatasets uploads binary data to specified datasets.
+     * </pre>
+     */
+    public com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsResponse uploadBinaryDataToDatasets(com.viam.service.datamanager.v1.DataManager.UploadBinaryDataToDatasetsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUploadBinaryDataToDatasetsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service DataManagerService.
    * <pre>
    * A DataManagerService service manages data between the robot and the cloud.
    * </pre>

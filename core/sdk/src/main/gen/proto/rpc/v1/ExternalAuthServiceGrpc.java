@@ -12,9 +12,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * entity's gRPC server has to offer.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: proto/rpc/v1/auth.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ExternalAuthServiceGrpc {
 
@@ -65,6 +62,21 @@ public final class ExternalAuthServiceGrpc {
         }
       };
     return ExternalAuthServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ExternalAuthServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ExternalAuthServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ExternalAuthServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ExternalAuthServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ExternalAuthServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ExternalAuthServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -189,6 +201,47 @@ public final class ExternalAuthServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ExternalAuthService.
+   * <pre>
+   * An ExternalAuthService is intended to be used as a means to perform application level
+   * authentication but for an external entity that it is responsible for handling auth for.
+   * An example of its use would be for a entity that only trusts an external source to
+   * perform authentication for it.
+   * Its sole AuthenticateTo method should be used prior to any other services that the external
+   * entity's gRPC server has to offer.
+   * </pre>
+   */
+  public static final class ExternalAuthServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ExternalAuthServiceBlockingV2Stub> {
+    private ExternalAuthServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ExternalAuthServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ExternalAuthServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * AuthenticateTo attempts to allow the caller to authenticate to another entity.
+     * The resulting response contains an access token with the subject
+     * as the calling entity, the audience as the other entity, and the issuer
+     * as the provider of this service. This token should be used for all
+     * future RPC requests to the other entity on the services it provides.
+     * This assumes that the caller is already authenticated to the
+     * server implementing this service.
+     * </pre>
+     */
+    public proto.rpc.v1.Auth.AuthenticateToResponse authenticateTo(proto.rpc.v1.Auth.AuthenticateToRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAuthenticateToMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ExternalAuthService.
    * <pre>
    * An ExternalAuthService is intended to be used as a means to perform application level
    * authentication but for an external entity that it is responsible for handling auth for.

@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * ModuleService deals with modular resource registration
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: module/v1/module.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ModuleServiceGrpc {
 
@@ -180,6 +177,21 @@ public final class ModuleServiceGrpc {
         }
       };
     return ModuleServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ModuleServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ModuleServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ModuleServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ModuleServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ModuleServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ModuleServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -363,6 +375,77 @@ public final class ModuleServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ModuleService.
+   * <pre>
+   * ModuleService deals with modular resource registration
+   * </pre>
+   */
+  public static final class ModuleServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ModuleServiceBlockingV2Stub> {
+    private ModuleServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ModuleServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ModuleServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * AddResource tells a module about a new resource to handle
+     * </pre>
+     */
+    public viam.module.v1.Module.AddResourceResponse addResource(viam.module.v1.Module.AddResourceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAddResourceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ReconfigureResource tells a module to reconfigure an existing resource
+     * </pre>
+     */
+    public viam.module.v1.Module.ReconfigureResourceResponse reconfigureResource(viam.module.v1.Module.ReconfigureResourceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getReconfigureResourceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveResource tells a module to close/stop a component/service and remove it
+     * </pre>
+     */
+    public viam.module.v1.Module.RemoveResourceResponse removeResource(viam.module.v1.Module.RemoveResourceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRemoveResourceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Ready determines if the server is started and ready to recieve resource configurations.
+     * </pre>
+     */
+    public viam.module.v1.Module.ReadyResponse ready(viam.module.v1.Module.ReadyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getReadyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ValidateConfig determines whether the given config is valid and registers/returns
+     * both required and optional implicit dependencies.
+     * </pre>
+     */
+    public viam.module.v1.Module.ValidateConfigResponse validateConfig(viam.module.v1.Module.ValidateConfigRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getValidateConfigMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ModuleService.
    * <pre>
    * ModuleService deals with modular resource registration
    * </pre>
