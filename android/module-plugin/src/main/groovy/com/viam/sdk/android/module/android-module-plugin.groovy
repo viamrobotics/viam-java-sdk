@@ -1,7 +1,7 @@
 //file:noinspection ConfigurationAvoidance
 package com.viam.sdk.android.module
 
-import org.gradle.api.DefaultTask
+import com.android.build.api.variant.AndroidComponentsExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.provider.Property
@@ -54,7 +54,8 @@ class AndroidModulePlugin implements Plugin<Project> {
             }
             def executeInProcess = extension.executeInProcess.getOrElse(false)
 
-            project.android.applicationVariants.all { variant ->
+            def androidComponents = project.extensions.getByType(AndroidComponentsExtension)
+            androidComponents.onVariants(androidComponents.selector().all()) { variant ->
                 def outputFile = variant.outputs.first().outputFile
                 def assembleTask = project.tasks.named("assemble${variant.name.capitalize()}")
                 def outputDir = "${project.layout.buildDirectory.get()}/outputs/module/${variant.name}"

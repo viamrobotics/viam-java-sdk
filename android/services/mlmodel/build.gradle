@@ -5,7 +5,7 @@ ext.pomDisplayName = "Viam Android SDK - MLModel Service"
 
 buildscript {
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.2'
+        classpath 'com.android.tools.build:gradle:9.1.0'
     }
 }
 
@@ -18,8 +18,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     publishing {
@@ -35,9 +35,9 @@ android {
 
 dependencies {
     api project(':core:services:viam-core-sdk-mlmodel-service')
-    implementation "ai.djl.android:core:0.26.0"
-    runtimeOnly "ai.djl.pytorch:pytorch-engine:0.26.0"
-    runtimeOnly "ai.djl.android:pytorch-native:0.26.0"
-    runtimeOnly "ai.djl.android:onnxruntime:0.26.0"
-    runtimeOnly 'uk.uuid.slf4j:slf4j-android:2.0.7-0'
+    implementation "ai.djl.android:core:0.36.0"
+    runtimeOnly "ai.djl.pytorch:pytorch-engine:0.36.0"
+    runtimeOnly "ai.djl.android:pytorch-native:0.36.0"
+    runtimeOnly "ai.djl.android:onnxruntime:0.36.0"
+    runtimeOnly 'uk.uuid.slf4j:slf4j-android:2.0.17-0'
 }

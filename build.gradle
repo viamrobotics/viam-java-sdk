@@ -1,5 +1,5 @@
 plugins {
-    id "io.freefair.aggregate-javadoc" version "8.6"
+    id "io.freefair.aggregate-javadoc" version "9.2.0"
 }
 
 group 'com.viam'
@@ -81,8 +81,8 @@ subprojects {
 
         if (project.plugins.hasPlugin("java")) {
             compileTestJava {
-                sourceCompatibility = JavaVersion.VERSION_11
-                targetCompatibility = JavaVersion.VERSION_11
+                sourceCompatibility = JavaVersion.VERSION_17
+                targetCompatibility = JavaVersion.VERSION_17
             }
 
             javadoc {

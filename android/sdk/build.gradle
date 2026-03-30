@@ -1,6 +1,6 @@
 buildscript {
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.2'
+        classpath 'com.android.tools.build:gradle:9.1.0'
     }
 }
 
@@ -21,8 +21,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     publishing {
@@ -53,9 +53,9 @@ dependencies {
     api project(':core:viam-core-sdk')
     api 'org.jitsi:webrtc:118.0.0'
 
-    implementation 'io.grpc:grpc-okhttp:1.61.1'
-    implementation 'io.grpc:grpc-android:1.61.1'
-    implementation 'commons-io:commons-io:2.15.1'
+    implementation 'io.grpc:grpc-okhttp:1.80.0'
+    implementation 'io.grpc:grpc-android:1.80.0'
+    implementation 'commons-io:commons-io:2.21.0'
 }
 
 downloadLicenses {

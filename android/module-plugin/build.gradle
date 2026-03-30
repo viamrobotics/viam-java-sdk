@@ -1,6 +1,6 @@
 plugins {
     id 'groovy-gradle-plugin'
-    id "com.gradle.plugin-publish" version "1.2.1"
+    id "com.gradle.plugin-publish" version "2.1.1"
     id 'signing'
 }
 
@@ -25,6 +25,6 @@ gradlePlugin {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
