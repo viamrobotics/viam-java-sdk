@@ -7,6 +7,7 @@ import org.gradle.api.DefaultTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.provider.Property
+import org.gradle.api.tasks.CacheableTask
 import org.gradle.api.tasks.Exec
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Internal
@@ -21,6 +22,7 @@ interface AndroidModulePluginExtension {
     Property<Boolean> getExecuteInProcess()
 }
 
+@CacheableTask
 abstract class CopyModuleTask extends DefaultTask {
     @Input
     @Option(option = 'into', description = 'the directory to copy into')
