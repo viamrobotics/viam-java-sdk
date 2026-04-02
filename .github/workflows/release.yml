@@ -72,6 +72,7 @@ jobs:
         with:
           tag_name: v${{ needs.prepare.outputs.version }}
           draft: true
+          target_commitish: ${{ github.sha }}
           prerelease: ${{ contains(needs.prepare.outputs.version, 'SNAPSHOT') }}
           files: artifact/**
           fail_on_unmatched_files: true
