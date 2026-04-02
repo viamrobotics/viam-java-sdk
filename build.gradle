@@ -40,7 +40,7 @@ subprojects {
 
     ext {
         min_api = 29
-        target_api = 34
+        target_api = 36
         api_version = "unreleased"
         File file = rootProject.file("api_version.lock")
         file.withReader { reader -> api_version = reader.readLine() }
@@ -87,7 +87,7 @@ subprojects {
 
             javadoc {
                 title = "$project.name $version"
-                options.addStringOption("source", "11")
+                options.addStringOption("source", "17")
                 options.author true
                 options.author = true
                 options.version = true
