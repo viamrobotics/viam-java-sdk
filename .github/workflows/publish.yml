@@ -45,5 +45,8 @@ jobs:
 
       - name: Transfer from Staging to Central
         run: |
-          BEARER=$(printf "ORG_GRADLE_PROJECT_portalUsername:ORG_GRADLE_PROJECT_portalPassword" | base64)
+          BEARER=$(printf "ORG_GRADLE_PROJECT_ossrhUsername:ORG_GRADLE_PROJECT_ossrhPassword" | base64)
           curl --request POST --include --header "Authorization: Bearer $BEARER" https://ossrh-staging-api.central.sonatype.com/manual/upload/defaultRepository/com.viam
+        env:
+          ORG_GRADLE_PROJECT_ossrhUsername: ${{ secrets.OSSRH_USERNAME }}
+          ORG_GRADLE_PROJECT_ossrhPassword: ${{ secrets.OSSRH_PASSWORD }}
