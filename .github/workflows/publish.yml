@@ -32,8 +32,8 @@ jobs:
         env:
           ORG_GRADLE_PROJECT_signingKey: ${{ secrets.MAVEN_SIGNING_KEY }}
           ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.MAVEN_SIGNING_PASSWORD }}
-          ORG_GRADLE_PROJECT_portalUsername: ${{ secrets.OSSRH_USERNAME }}
-          ORG_GRADLE_PROJECT_portalPassword: ${{ secrets.OSSRH_PASSWORD }}
+          ORG_GRADLE_PROJECT_ossrhUsername: ${{ secrets.OSSRH_USERNAME }}
+          ORG_GRADLE_PROJECT_ossrhPassword: ${{ secrets.OSSRH_PASSWORD }}
 
       - name: Publish plugin
         run: ./gradlew publishPlugins
