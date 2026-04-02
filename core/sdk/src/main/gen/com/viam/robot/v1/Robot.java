@@ -17327,30 +17327,6 @@ public final class Robot {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <pre>
-     * Deprecated: use machine_part_id field.
-     * </pre>
-     *
-     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
-     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=355
-     * @return The robotPartId.
-     */
-    @java.lang.Deprecated java.lang.String getRobotPartId();
-    /**
-     * <pre>
-     * Deprecated: use machine_part_id field.
-     * </pre>
-     *
-     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
-     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=355
-     * @return The bytes for robotPartId.
-     */
-    @java.lang.Deprecated com.google.protobuf.ByteString
-        getRobotPartIdBytes();
-
-    /**
      * <code>string primary_org_id = 2 [json_name = "primaryOrgId"];</code>
      * @return The primaryOrgId.
      */
@@ -17407,89 +17383,11 @@ public final class Robot {
       // @@protoc_insertion_point(message_implements:viam.robot.v1.GetCloudMetadataResponse)
       GetCloudMetadataResponseOrBuilder {
     private GetCloudMetadataResponse() {
-      robotPartId_ = "";
       primaryOrgId_ = "";
       locationId_ = "";
       machineId_ = "";
       machinePartId_ = "";
     }
-    public static final int ROBOT_PART_ID_FIELD_NUMBER = 1;
-    private java.lang.String robotPartId_;
-    /**
-     * <pre>
-     * Deprecated: use machine_part_id field.
-     * </pre>
-     *
-     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
-     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=355
-     * @return The robotPartId.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated public java.lang.String getRobotPartId() {
-      return robotPartId_;
-    }
-    /**
-     * <pre>
-     * Deprecated: use machine_part_id field.
-     * </pre>
-     *
-     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
-     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=355
-     * @return The bytes for robotPartId.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated public com.google.protobuf.ByteString
-        getRobotPartIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(robotPartId_);
-    }
-    /**
-     * <pre>
-     * Deprecated: use machine_part_id field.
-     * </pre>
-     *
-     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
-     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=355
-     * @param value The robotPartId to set.
-     */
-    private void setRobotPartId(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      robotPartId_ = value;
-    }
-    /**
-     * <pre>
-     * Deprecated: use machine_part_id field.
-     * </pre>
-     *
-     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
-     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=355
-     */
-    private void clearRobotPartId() {
-
-      robotPartId_ = getDefaultInstance().getRobotPartId();
-    }
-    /**
-     * <pre>
-     * Deprecated: use machine_part_id field.
-     * </pre>
-     *
-     * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
-     * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-     *     See robot/v1/robot.proto;l=355
-     * @param value The bytes for robotPartId to set.
-     */
-    private void setRobotPartIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      robotPartId_ = value.toStringUtf8();
-
-    }
-
     public static final int PRIMARY_ORG_ID_FIELD_NUMBER = 2;
     private java.lang.String primaryOrgId_;
     /**
@@ -17776,85 +17674,6 @@ public final class Robot {
 
 
       /**
-       * <pre>
-       * Deprecated: use machine_part_id field.
-       * </pre>
-       *
-       * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
-       * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=355
-       * @return The robotPartId.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated public java.lang.String getRobotPartId() {
-        return instance.getRobotPartId();
-      }
-      /**
-       * <pre>
-       * Deprecated: use machine_part_id field.
-       * </pre>
-       *
-       * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
-       * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=355
-       * @return The bytes for robotPartId.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated public com.google.protobuf.ByteString
-          getRobotPartIdBytes() {
-        return instance.getRobotPartIdBytes();
-      }
-      /**
-       * <pre>
-       * Deprecated: use machine_part_id field.
-       * </pre>
-       *
-       * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
-       * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=355
-       * @param value The robotPartId to set.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder setRobotPartId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setRobotPartId(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Deprecated: use machine_part_id field.
-       * </pre>
-       *
-       * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
-       * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=355
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder clearRobotPartId() {
-        copyOnWrite();
-        instance.clearRobotPartId();
-        return this;
-      }
-      /**
-       * <pre>
-       * Deprecated: use machine_part_id field.
-       * </pre>
-       *
-       * <code>string robot_part_id = 1 [json_name = "robotPartId", deprecated = true];</code>
-       * @deprecated viam.robot.v1.GetCloudMetadataResponse.robot_part_id is deprecated.
-       *     See robot/v1/robot.proto;l=355
-       * @param value The bytes for robotPartId to set.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder setRobotPartIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setRobotPartIdBytes(value);
-        return this;
-      }
-
-      /**
        * <code>string primary_org_id = 2 [json_name = "primaryOrgId"];</code>
        * @return The primaryOrgId.
        */
@@ -18066,15 +17885,14 @@ public final class Robot {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
-              "robotPartId_",
               "primaryOrgId_",
               "locationId_",
               "machineId_",
               "machinePartId_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208\u0005\u0208";
+                "\u0000\u0004\u0000\u0000\u0002\u0005\u0004\u0000\u0000\u0000\u0002\u0208\u0003\u0208" +
+                "\u0004\u0208\u0005\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

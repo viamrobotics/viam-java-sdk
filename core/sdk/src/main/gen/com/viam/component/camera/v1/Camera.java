@@ -10,1216 +10,6 @@ public final class Camera {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-  /**
-   * Protobuf enum {@code viam.component.camera.v1.Format}
-   */
-  public enum Format
-      implements com.google.protobuf.Internal.EnumLite {
-    /**
-     * <code>FORMAT_UNSPECIFIED = 0;</code>
-     */
-    FORMAT_UNSPECIFIED(0),
-    /**
-     * <code>FORMAT_RAW_RGBA = 1;</code>
-     */
-    FORMAT_RAW_RGBA(1),
-    /**
-     * <code>FORMAT_RAW_DEPTH = 2;</code>
-     */
-    FORMAT_RAW_DEPTH(2),
-    /**
-     * <code>FORMAT_JPEG = 3;</code>
-     */
-    FORMAT_JPEG(3),
-    /**
-     * <code>FORMAT_PNG = 4;</code>
-     */
-    FORMAT_PNG(4),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>FORMAT_UNSPECIFIED = 0;</code>
-     */
-    public static final int FORMAT_UNSPECIFIED_VALUE = 0;
-    /**
-     * <code>FORMAT_RAW_RGBA = 1;</code>
-     */
-    public static final int FORMAT_RAW_RGBA_VALUE = 1;
-    /**
-     * <code>FORMAT_RAW_DEPTH = 2;</code>
-     */
-    public static final int FORMAT_RAW_DEPTH_VALUE = 2;
-    /**
-     * <code>FORMAT_JPEG = 3;</code>
-     */
-    public static final int FORMAT_JPEG_VALUE = 3;
-    /**
-     * <code>FORMAT_PNG = 4;</code>
-     */
-    public static final int FORMAT_PNG_VALUE = 4;
-
-
-    @java.lang.Override
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The number of the enum to look for.
-     * @return The enum associated with the given number.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static Format valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static Format forNumber(int value) {
-      switch (value) {
-        case 0: return FORMAT_UNSPECIFIED;
-        case 1: return FORMAT_RAW_RGBA;
-        case 2: return FORMAT_RAW_DEPTH;
-        case 3: return FORMAT_JPEG;
-        case 4: return FORMAT_PNG;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<Format>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        Format> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<Format>() {
-            @java.lang.Override
-            public Format findValueByNumber(int number) {
-              return Format.forNumber(number);
-            }
-          };
-
-    public static com.google.protobuf.Internal.EnumVerifier 
-        internalGetVerifier() {
-      return FormatVerifier.INSTANCE;
-    }
-
-    private static final class FormatVerifier implements 
-         com.google.protobuf.Internal.EnumVerifier { 
-            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new FormatVerifier();
-            @java.lang.Override
-            public boolean isInRange(int number) {
-              return Format.forNumber(number) != null;
-            }
-          };
-
-    private final int value;
-
-    private Format(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:viam.component.camera.v1.Format)
-  }
-
-  public interface GetImageRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.GetImageRequest)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     * @return The mimeType.
-     */
-    java.lang.String getMimeType();
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     * @return The bytes for mimeType.
-     */
-    com.google.protobuf.ByteString
-        getMimeTypeBytes();
-
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
-     */
-    boolean hasExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
-     */
-    com.google.protobuf.Struct getExtra();
-  }
-  /**
-   * Protobuf type {@code viam.component.camera.v1.GetImageRequest}
-   */
-  public  static final class GetImageRequest extends
-      com.google.protobuf.GeneratedMessageLite<
-          GetImageRequest, GetImageRequest.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.component.camera.v1.GetImageRequest)
-      GetImageRequestOrBuilder {
-    private GetImageRequest() {
-      name_ = "";
-      mimeType_ = "";
-    }
-    private int bitField0_;
-    public static final int NAME_FIELD_NUMBER = 1;
-    private java.lang.String name_;
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
-     */
-    @java.lang.Override
-    public java.lang.String getName() {
-      return name_;
-    }
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(name_);
-    }
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @param value The name to set.
-     */
-    private void setName(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      name_ = value;
-    }
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     */
-    private void clearName() {
-
-      name_ = getDefaultInstance().getName();
-    }
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @param value The bytes for name to set.
-     */
-    private void setNameBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      name_ = value.toStringUtf8();
-
-    }
-
-    public static final int MIME_TYPE_FIELD_NUMBER = 2;
-    private java.lang.String mimeType_;
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     * @return The mimeType.
-     */
-    @java.lang.Override
-    public java.lang.String getMimeType() {
-      return mimeType_;
-    }
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     * @return The bytes for mimeType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getMimeTypeBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
-    }
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     * @param value The mimeType to set.
-     */
-    private void setMimeType(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      mimeType_ = value;
-    }
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     */
-    private void clearMimeType() {
-
-      mimeType_ = getDefaultInstance().getMimeType();
-    }
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     * @param value The bytes for mimeType to set.
-     */
-    private void setMimeTypeBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      mimeType_ = value.toStringUtf8();
-
-    }
-
-    public static final int EXTRA_FIELD_NUMBER = 99;
-    private com.google.protobuf.Struct extra_;
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    @java.lang.Override
-    public boolean hasExtra() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Struct getExtra() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-    }
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    private void setExtra(com.google.protobuf.Struct value) {
-      value.getClass();
-  extra_ = value;
-      bitField0_ |= 0x00000001;
-      }
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeExtra(com.google.protobuf.Struct value) {
-      value.getClass();
-  if (extra_ != null &&
-          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-        extra_ =
-          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
-      } else {
-        extra_ = value;
-      }
-      bitField0_ |= 0x00000001;
-    }
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    private void clearExtra() {  extra_ = null;
-      bitField0_ = (bitField0_ & ~0x00000001);
-    }
-
-    public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static com.viam.component.camera.v1.Camera.GetImageRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-
-    public static com.viam.component.camera.v1.Camera.GetImageRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.viam.component.camera.v1.Camera.GetImageRequest prototype) {
-      return DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code viam.component.camera.v1.GetImageRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.viam.component.camera.v1.Camera.GetImageRequest, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.GetImageRequest)
-        com.viam.component.camera.v1.Camera.GetImageRequestOrBuilder {
-      // Construct using com.viam.component.camera.v1.Camera.GetImageRequest.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <pre>
-       * Name of a camera
-       * </pre>
-       *
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return The name.
-       */
-      @java.lang.Override
-      public java.lang.String getName() {
-        return instance.getName();
-      }
-      /**
-       * <pre>
-       * Name of a camera
-       * </pre>
-       *
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return The bytes for name.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        return instance.getNameBytes();
-      }
-      /**
-       * <pre>
-       * Name of a camera
-       * </pre>
-       *
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setName(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Name of a camera
-       * </pre>
-       *
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        copyOnWrite();
-        instance.clearName();
-        return this;
-      }
-      /**
-       * <pre>
-       * Name of a camera
-       * </pre>
-       *
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setNameBytes(value);
-        return this;
-      }
-
-      /**
-       * <pre>
-       * Requested MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-       * @return The mimeType.
-       */
-      @java.lang.Override
-      public java.lang.String getMimeType() {
-        return instance.getMimeType();
-      }
-      /**
-       * <pre>
-       * Requested MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-       * @return The bytes for mimeType.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getMimeTypeBytes() {
-        return instance.getMimeTypeBytes();
-      }
-      /**
-       * <pre>
-       * Requested MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-       * @param value The mimeType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMimeType(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setMimeType(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Requested MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMimeType() {
-        copyOnWrite();
-        instance.clearMimeType();
-        return this;
-      }
-      /**
-       * <pre>
-       * Requested MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-       * @param value The bytes for mimeType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMimeTypeBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setMimeTypeBytes(value);
-        return this;
-      }
-
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      @java.lang.Override
-      public boolean hasExtra() {
-        return instance.hasExtra();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Struct getExtra() {
-        return instance.getExtra();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder setExtra(com.google.protobuf.Struct value) {
-        copyOnWrite();
-        instance.setExtra(value);
-        return this;
-        }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder setExtra(
-          com.google.protobuf.Struct.Builder builderForValue) {
-        copyOnWrite();
-        instance.setExtra(builderForValue.build());
-        return this;
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder mergeExtra(com.google.protobuf.Struct value) {
-        copyOnWrite();
-        instance.mergeExtra(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder clearExtra() {  copyOnWrite();
-        instance.clearExtra();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetImageRequest)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.viam.component.camera.v1.Camera.GetImageRequest();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "bitField0_",
-              "name_",
-              "mimeType_",
-              "extra_",
-            };
-            java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208c" +
-                "\u1009\u0000";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.GetImageRequest> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.viam.component.camera.v1.Camera.GetImageRequest.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.GetImageRequest>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:viam.component.camera.v1.GetImageRequest)
-    private static final com.viam.component.camera.v1.Camera.GetImageRequest DEFAULT_INSTANCE;
-    static {
-      GetImageRequest defaultInstance = new GetImageRequest();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        GetImageRequest.class, defaultInstance);
-    }
-
-    public static com.viam.component.camera.v1.Camera.GetImageRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<GetImageRequest> PARSER;
-
-    public static com.google.protobuf.Parser<GetImageRequest> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface GetImageResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.GetImageResponse)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <pre>
-     * Actual MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
-     * @return The mimeType.
-     */
-    java.lang.String getMimeType();
-    /**
-     * <pre>
-     * Actual MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
-     * @return The bytes for mimeType.
-     */
-    com.google.protobuf.ByteString
-        getMimeTypeBytes();
-
-    /**
-     * <pre>
-     * Frame in bytes
-     * </pre>
-     *
-     * <code>bytes image = 2 [json_name = "image"];</code>
-     * @return The image.
-     */
-    com.google.protobuf.ByteString getImage();
-  }
-  /**
-   * Protobuf type {@code viam.component.camera.v1.GetImageResponse}
-   */
-  public  static final class GetImageResponse extends
-      com.google.protobuf.GeneratedMessageLite<
-          GetImageResponse, GetImageResponse.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.component.camera.v1.GetImageResponse)
-      GetImageResponseOrBuilder {
-    private GetImageResponse() {
-      mimeType_ = "";
-      image_ = com.google.protobuf.ByteString.EMPTY;
-    }
-    public static final int MIME_TYPE_FIELD_NUMBER = 1;
-    private java.lang.String mimeType_;
-    /**
-     * <pre>
-     * Actual MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
-     * @return The mimeType.
-     */
-    @java.lang.Override
-    public java.lang.String getMimeType() {
-      return mimeType_;
-    }
-    /**
-     * <pre>
-     * Actual MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
-     * @return The bytes for mimeType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getMimeTypeBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
-    }
-    /**
-     * <pre>
-     * Actual MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
-     * @param value The mimeType to set.
-     */
-    private void setMimeType(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      mimeType_ = value;
-    }
-    /**
-     * <pre>
-     * Actual MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
-     */
-    private void clearMimeType() {
-
-      mimeType_ = getDefaultInstance().getMimeType();
-    }
-    /**
-     * <pre>
-     * Actual MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
-     * @param value The bytes for mimeType to set.
-     */
-    private void setMimeTypeBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      mimeType_ = value.toStringUtf8();
-
-    }
-
-    public static final int IMAGE_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString image_;
-    /**
-     * <pre>
-     * Frame in bytes
-     * </pre>
-     *
-     * <code>bytes image = 2 [json_name = "image"];</code>
-     * @return The image.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getImage() {
-      return image_;
-    }
-    /**
-     * <pre>
-     * Frame in bytes
-     * </pre>
-     *
-     * <code>bytes image = 2 [json_name = "image"];</code>
-     * @param value The image to set.
-     */
-    private void setImage(com.google.protobuf.ByteString value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      image_ = value;
-    }
-    /**
-     * <pre>
-     * Frame in bytes
-     * </pre>
-     *
-     * <code>bytes image = 2 [json_name = "image"];</code>
-     */
-    private void clearImage() {
-
-      image_ = getDefaultInstance().getImage();
-    }
-
-    public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static com.viam.component.camera.v1.Camera.GetImageResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-
-    public static com.viam.component.camera.v1.Camera.GetImageResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.viam.component.camera.v1.Camera.GetImageResponse prototype) {
-      return DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code viam.component.camera.v1.GetImageResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.viam.component.camera.v1.Camera.GetImageResponse, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.GetImageResponse)
-        com.viam.component.camera.v1.Camera.GetImageResponseOrBuilder {
-      // Construct using com.viam.component.camera.v1.Camera.GetImageResponse.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <pre>
-       * Actual MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 1 [json_name = "mimeType"];</code>
-       * @return The mimeType.
-       */
-      @java.lang.Override
-      public java.lang.String getMimeType() {
-        return instance.getMimeType();
-      }
-      /**
-       * <pre>
-       * Actual MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 1 [json_name = "mimeType"];</code>
-       * @return The bytes for mimeType.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getMimeTypeBytes() {
-        return instance.getMimeTypeBytes();
-      }
-      /**
-       * <pre>
-       * Actual MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 1 [json_name = "mimeType"];</code>
-       * @param value The mimeType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMimeType(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setMimeType(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Actual MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 1 [json_name = "mimeType"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMimeType() {
-        copyOnWrite();
-        instance.clearMimeType();
-        return this;
-      }
-      /**
-       * <pre>
-       * Actual MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 1 [json_name = "mimeType"];</code>
-       * @param value The bytes for mimeType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMimeTypeBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setMimeTypeBytes(value);
-        return this;
-      }
-
-      /**
-       * <pre>
-       * Frame in bytes
-       * </pre>
-       *
-       * <code>bytes image = 2 [json_name = "image"];</code>
-       * @return The image.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString getImage() {
-        return instance.getImage();
-      }
-      /**
-       * <pre>
-       * Frame in bytes
-       * </pre>
-       *
-       * <code>bytes image = 2 [json_name = "image"];</code>
-       * @param value The image to set.
-       * @return This builder for chaining.
-       */
-      public Builder setImage(com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setImage(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Frame in bytes
-       * </pre>
-       *
-       * <code>bytes image = 2 [json_name = "image"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearImage() {
-        copyOnWrite();
-        instance.clearImage();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetImageResponse)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.viam.component.camera.v1.Camera.GetImageResponse();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "mimeType_",
-              "image_",
-            };
-            java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\n" +
-                "";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.GetImageResponse> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.viam.component.camera.v1.Camera.GetImageResponse.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.GetImageResponse>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:viam.component.camera.v1.GetImageResponse)
-    private static final com.viam.component.camera.v1.Camera.GetImageResponse DEFAULT_INSTANCE;
-    static {
-      GetImageResponse defaultInstance = new GetImageResponse();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        GetImageResponse.class, defaultInstance);
-    }
-
-    public static com.viam.component.camera.v1.Camera.GetImageResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<GetImageResponse> PARSER;
-
-    public static com.google.protobuf.Parser<GetImageResponse> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
   public interface GetImagesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.GetImagesRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -2731,25 +1521,6 @@ public final class Camera {
 
     /**
      * <pre>
-     * format of the response image bytes
-     * </pre>
-     *
-     * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-     * @return The enum numeric value on the wire for format.
-     */
-    int getFormatValue();
-    /**
-     * <pre>
-     * format of the response image bytes
-     * </pre>
-     *
-     * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-     * @return The format.
-     */
-    com.viam.component.camera.v1.Camera.Format getFormat();
-
-    /**
-     * <pre>
      * image in bytes
      * </pre>
      *
@@ -2876,68 +1647,6 @@ public final class Camera {
       checkByteStringIsUtf8(value);
       sourceName_ = value.toStringUtf8();
 
-    }
-
-    public static final int FORMAT_FIELD_NUMBER = 2;
-    private int format_;
-    /**
-     * <pre>
-     * format of the response image bytes
-     * </pre>
-     *
-     * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-     * @return The enum numeric value on the wire for format.
-     */
-    @java.lang.Override
-    public int getFormatValue() {
-      return format_;
-    }
-    /**
-     * <pre>
-     * format of the response image bytes
-     * </pre>
-     *
-     * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-     * @return The format.
-     */
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.Format getFormat() {
-      com.viam.component.camera.v1.Camera.Format result = com.viam.component.camera.v1.Camera.Format.forNumber(format_);
-      return result == null ? com.viam.component.camera.v1.Camera.Format.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * format of the response image bytes
-     * </pre>
-     *
-     * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-     * @param value The enum numeric value on the wire for format to set.
-     */
-    private void setFormatValue(int value) {
-        format_ = value;
-    }
-    /**
-     * <pre>
-     * format of the response image bytes
-     * </pre>
-     *
-     * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-     * @param value The format to set.
-     */
-    private void setFormat(com.viam.component.camera.v1.Camera.Format value) {
-      format_ = value.getNumber();
-
-    }
-    /**
-     * <pre>
-     * format of the response image bytes
-     * </pre>
-     *
-     * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-     */
-    private void clearFormat() {
-
-      format_ = 0;
     }
 
     public static final int IMAGE_FIELD_NUMBER = 3;
@@ -3280,72 +1989,6 @@ public final class Camera {
 
       /**
        * <pre>
-       * format of the response image bytes
-       * </pre>
-       *
-       * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-       * @return The enum numeric value on the wire for format.
-       */
-      @java.lang.Override
-      public int getFormatValue() {
-        return instance.getFormatValue();
-      }
-      /**
-       * <pre>
-       * format of the response image bytes
-       * </pre>
-       *
-       * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-       * @param value The format to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFormatValue(int value) {
-        copyOnWrite();
-        instance.setFormatValue(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * format of the response image bytes
-       * </pre>
-       *
-       * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-       * @return The format.
-       */
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.Format getFormat() {
-        return instance.getFormat();
-      }
-      /**
-       * <pre>
-       * format of the response image bytes
-       * </pre>
-       *
-       * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-       * @param value The enum numeric value on the wire for format to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFormat(com.viam.component.camera.v1.Camera.Format value) {
-        copyOnWrite();
-        instance.setFormat(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * format of the response image bytes
-       * </pre>
-       *
-       * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFormat() {
-        copyOnWrite();
-        instance.clearFormat();
-        return this;
-      }
-
-      /**
-       * <pre>
        * image in bytes
        * </pre>
        *
@@ -3542,14 +2185,13 @@ public final class Camera {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
               "sourceName_",
-              "format_",
               "image_",
               "mimeType_",
               "annotations_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\f" +
-                "\u0003\n\u0004\u0208\u0005\u1009\u0000";
+                "\u0000\u0004\u0000\u0001\u0001\u0005\u0004\u0000\u0000\u0000\u0001\u0208\u0003\n" +
+                "\u0004\u0208\u0005\u1009\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -3600,666 +2242,6 @@ public final class Camera {
     private static volatile com.google.protobuf.Parser<Image> PARSER;
 
     public static com.google.protobuf.Parser<Image> parser() {
-      return DEFAULT_INSTANCE.getParserForType();
-    }
-  }
-
-  public interface RenderFrameRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.RenderFrameRequest)
-      com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     * @return The mimeType.
-     */
-    java.lang.String getMimeType();
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     * @return The bytes for mimeType.
-     */
-    com.google.protobuf.ByteString
-        getMimeTypeBytes();
-
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
-     */
-    boolean hasExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
-     */
-    com.google.protobuf.Struct getExtra();
-  }
-  /**
-   * Protobuf type {@code viam.component.camera.v1.RenderFrameRequest}
-   */
-  public  static final class RenderFrameRequest extends
-      com.google.protobuf.GeneratedMessageLite<
-          RenderFrameRequest, RenderFrameRequest.Builder> implements
-      // @@protoc_insertion_point(message_implements:viam.component.camera.v1.RenderFrameRequest)
-      RenderFrameRequestOrBuilder {
-    private RenderFrameRequest() {
-      name_ = "";
-      mimeType_ = "";
-    }
-    private int bitField0_;
-    public static final int NAME_FIELD_NUMBER = 1;
-    private java.lang.String name_;
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
-     */
-    @java.lang.Override
-    public java.lang.String getName() {
-      return name_;
-    }
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(name_);
-    }
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @param value The name to set.
-     */
-    private void setName(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      name_ = value;
-    }
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     */
-    private void clearName() {
-
-      name_ = getDefaultInstance().getName();
-    }
-    /**
-     * <pre>
-     * Name of a camera
-     * </pre>
-     *
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @param value The bytes for name to set.
-     */
-    private void setNameBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      name_ = value.toStringUtf8();
-
-    }
-
-    public static final int MIME_TYPE_FIELD_NUMBER = 2;
-    private java.lang.String mimeType_;
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     * @return The mimeType.
-     */
-    @java.lang.Override
-    public java.lang.String getMimeType() {
-      return mimeType_;
-    }
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     * @return The bytes for mimeType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getMimeTypeBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
-    }
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     * @param value The mimeType to set.
-     */
-    private void setMimeType(
-        java.lang.String value) {
-      java.lang.Class<?> valueClass = value.getClass();
-  
-      mimeType_ = value;
-    }
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     */
-    private void clearMimeType() {
-
-      mimeType_ = getDefaultInstance().getMimeType();
-    }
-    /**
-     * <pre>
-     * Requested MIME type of response
-     * </pre>
-     *
-     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-     * @param value The bytes for mimeType to set.
-     */
-    private void setMimeTypeBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      mimeType_ = value.toStringUtf8();
-
-    }
-
-    public static final int EXTRA_FIELD_NUMBER = 99;
-    private com.google.protobuf.Struct extra_;
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    @java.lang.Override
-    public boolean hasExtra() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Struct getExtra() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-    }
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    private void setExtra(com.google.protobuf.Struct value) {
-      value.getClass();
-  extra_ = value;
-      bitField0_ |= 0x00000001;
-      }
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeExtra(com.google.protobuf.Struct value) {
-      value.getClass();
-  if (extra_ != null &&
-          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-        extra_ =
-          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
-      } else {
-        extra_ = value;
-      }
-      bitField0_ |= 0x00000001;
-    }
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    private void clearExtra() {  extra_ = null;
-      bitField0_ = (bitField0_ & ~0x00000001);
-    }
-
-    public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data);
-    }
-    public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, data, extensionRegistry);
-    }
-    public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
-    }
-
-    public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-    public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input);
-    }
-    public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageLite.parseFrom(
-          DEFAULT_INSTANCE, input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() {
-      return (Builder) DEFAULT_INSTANCE.createBuilder();
-    }
-    public static Builder newBuilder(com.viam.component.camera.v1.Camera.RenderFrameRequest prototype) {
-      return DEFAULT_INSTANCE.createBuilder(prototype);
-    }
-
-    /**
-     * Protobuf type {@code viam.component.camera.v1.RenderFrameRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageLite.Builder<
-          com.viam.component.camera.v1.Camera.RenderFrameRequest, Builder> implements
-        // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.RenderFrameRequest)
-        com.viam.component.camera.v1.Camera.RenderFrameRequestOrBuilder {
-      // Construct using com.viam.component.camera.v1.Camera.RenderFrameRequest.newBuilder()
-      private Builder() {
-        super(DEFAULT_INSTANCE);
-      }
-
-
-      /**
-       * <pre>
-       * Name of a camera
-       * </pre>
-       *
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return The name.
-       */
-      @java.lang.Override
-      public java.lang.String getName() {
-        return instance.getName();
-      }
-      /**
-       * <pre>
-       * Name of a camera
-       * </pre>
-       *
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return The bytes for name.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        return instance.getNameBytes();
-      }
-      /**
-       * <pre>
-       * Name of a camera
-       * </pre>
-       *
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setName(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Name of a camera
-       * </pre>
-       *
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        copyOnWrite();
-        instance.clearName();
-        return this;
-      }
-      /**
-       * <pre>
-       * Name of a camera
-       * </pre>
-       *
-       * <code>string name = 1 [json_name = "name"];</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setNameBytes(value);
-        return this;
-      }
-
-      /**
-       * <pre>
-       * Requested MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-       * @return The mimeType.
-       */
-      @java.lang.Override
-      public java.lang.String getMimeType() {
-        return instance.getMimeType();
-      }
-      /**
-       * <pre>
-       * Requested MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-       * @return The bytes for mimeType.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getMimeTypeBytes() {
-        return instance.getMimeTypeBytes();
-      }
-      /**
-       * <pre>
-       * Requested MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-       * @param value The mimeType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMimeType(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setMimeType(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Requested MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMimeType() {
-        copyOnWrite();
-        instance.clearMimeType();
-        return this;
-      }
-      /**
-       * <pre>
-       * Requested MIME type of response
-       * </pre>
-       *
-       * <code>string mime_type = 2 [json_name = "mimeType"];</code>
-       * @param value The bytes for mimeType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMimeTypeBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setMimeTypeBytes(value);
-        return this;
-      }
-
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      @java.lang.Override
-      public boolean hasExtra() {
-        return instance.hasExtra();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      @java.lang.Override
-      public com.google.protobuf.Struct getExtra() {
-        return instance.getExtra();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder setExtra(com.google.protobuf.Struct value) {
-        copyOnWrite();
-        instance.setExtra(value);
-        return this;
-        }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder setExtra(
-          com.google.protobuf.Struct.Builder builderForValue) {
-        copyOnWrite();
-        instance.setExtra(builderForValue.build());
-        return this;
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder mergeExtra(com.google.protobuf.Struct value) {
-        copyOnWrite();
-        instance.mergeExtra(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public Builder clearExtra() {  copyOnWrite();
-        instance.clearExtra();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.RenderFrameRequest)
-    }
-    @java.lang.Override
-    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
-    protected final java.lang.Object dynamicMethod(
-        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
-        java.lang.Object arg0, java.lang.Object arg1) {
-      switch (method) {
-        case NEW_MUTABLE_INSTANCE: {
-          return new com.viam.component.camera.v1.Camera.RenderFrameRequest();
-        }
-        case NEW_BUILDER: {
-          return new Builder();
-        }
-        case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "bitField0_",
-              "name_",
-              "mimeType_",
-              "extra_",
-            };
-            java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208c" +
-                "\u1009\u0000";
-            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
-        }
-        // fall through
-        case GET_DEFAULT_INSTANCE: {
-          return DEFAULT_INSTANCE;
-        }
-        case GET_PARSER: {
-          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.RenderFrameRequest> parser = PARSER;
-          if (parser == null) {
-            synchronized (com.viam.component.camera.v1.Camera.RenderFrameRequest.class) {
-              parser = PARSER;
-              if (parser == null) {
-                parser =
-                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.RenderFrameRequest>(
-                        DEFAULT_INSTANCE);
-                PARSER = parser;
-              }
-            }
-          }
-          return parser;
-      }
-      case GET_MEMOIZED_IS_INITIALIZED: {
-        return (byte) 1;
-      }
-      case SET_MEMOIZED_IS_INITIALIZED: {
-        return null;
-      }
-      }
-      throw new UnsupportedOperationException();
-    }
-
-
-    // @@protoc_insertion_point(class_scope:viam.component.camera.v1.RenderFrameRequest)
-    private static final com.viam.component.camera.v1.Camera.RenderFrameRequest DEFAULT_INSTANCE;
-    static {
-      RenderFrameRequest defaultInstance = new RenderFrameRequest();
-      // New instances are implicitly immutable so no need to make
-      // immutable.
-      DEFAULT_INSTANCE = defaultInstance;
-      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
-        RenderFrameRequest.class, defaultInstance);
-    }
-
-    public static com.viam.component.camera.v1.Camera.RenderFrameRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static volatile com.google.protobuf.Parser<RenderFrameRequest> PARSER;
-
-    public static com.google.protobuf.Parser<RenderFrameRequest> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -5819,6 +3801,27 @@ public final class Camera {
      * @return The frameRate.
      */
     float getFrameRate();
+
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     * @return Whether the extrinsicParameters field is set.
+     */
+    boolean hasExtrinsicParameters();
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     * @return The extrinsicParameters.
+     */
+    com.viam.component.camera.v1.Camera.ExtrinsicParameters getExtrinsicParameters();
   }
   /**
    * Protobuf type {@code viam.component.camera.v1.GetPropertiesResponse}
@@ -6199,6 +4202,77 @@ public final class Camera {
     private void clearFrameRate() {
       bitField0_ = (bitField0_ & ~0x00000004);
       frameRate_ = 0F;
+    }
+
+    public static final int EXTRINSIC_PARAMETERS_FIELD_NUMBER = 6;
+    private com.viam.component.camera.v1.Camera.ExtrinsicParameters extrinsicParameters_;
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtrinsicParameters() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     */
+    @java.lang.Override
+    public com.viam.component.camera.v1.Camera.ExtrinsicParameters getExtrinsicParameters() {
+      return extrinsicParameters_ == null ? com.viam.component.camera.v1.Camera.ExtrinsicParameters.getDefaultInstance() : extrinsicParameters_;
+    }
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     */
+    private void setExtrinsicParameters(com.viam.component.camera.v1.Camera.ExtrinsicParameters value) {
+      value.getClass();
+  extrinsicParameters_ = value;
+      bitField0_ |= 0x00000008;
+      }
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtrinsicParameters(com.viam.component.camera.v1.Camera.ExtrinsicParameters value) {
+      value.getClass();
+  if (extrinsicParameters_ != null &&
+          extrinsicParameters_ != com.viam.component.camera.v1.Camera.ExtrinsicParameters.getDefaultInstance()) {
+        extrinsicParameters_ =
+          com.viam.component.camera.v1.Camera.ExtrinsicParameters.newBuilder(extrinsicParameters_).mergeFrom(value).buildPartial();
+      } else {
+        extrinsicParameters_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * Parameters for the camera's position relative to a reference frame
+     * If camera does not provide extrinsic parameters, leave the field empty
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+     */
+    private void clearExtrinsicParameters() {  extrinsicParameters_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(
@@ -6684,6 +4758,83 @@ public final class Camera {
         return this;
       }
 
+      /**
+       * <pre>
+       * Parameters for the camera's position relative to a reference frame
+       * If camera does not provide extrinsic parameters, leave the field empty
+       * </pre>
+       *
+       * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtrinsicParameters() {
+        return instance.hasExtrinsicParameters();
+      }
+      /**
+       * <pre>
+       * Parameters for the camera's position relative to a reference frame
+       * If camera does not provide extrinsic parameters, leave the field empty
+       * </pre>
+       *
+       * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+       */
+      @java.lang.Override
+      public com.viam.component.camera.v1.Camera.ExtrinsicParameters getExtrinsicParameters() {
+        return instance.getExtrinsicParameters();
+      }
+      /**
+       * <pre>
+       * Parameters for the camera's position relative to a reference frame
+       * If camera does not provide extrinsic parameters, leave the field empty
+       * </pre>
+       *
+       * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+       */
+      public Builder setExtrinsicParameters(com.viam.component.camera.v1.Camera.ExtrinsicParameters value) {
+        copyOnWrite();
+        instance.setExtrinsicParameters(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Parameters for the camera's position relative to a reference frame
+       * If camera does not provide extrinsic parameters, leave the field empty
+       * </pre>
+       *
+       * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+       */
+      public Builder setExtrinsicParameters(
+          com.viam.component.camera.v1.Camera.ExtrinsicParameters.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtrinsicParameters(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for the camera's position relative to a reference frame
+       * If camera does not provide extrinsic parameters, leave the field empty
+       * </pre>
+       *
+       * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+       */
+      public Builder mergeExtrinsicParameters(com.viam.component.camera.v1.Camera.ExtrinsicParameters value) {
+        copyOnWrite();
+        instance.mergeExtrinsicParameters(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for the camera's position relative to a reference frame
+       * If camera does not provide extrinsic parameters, leave the field empty
+       * </pre>
+       *
+       * <code>.viam.component.camera.v1.ExtrinsicParameters extrinsic_parameters = 6 [json_name = "extrinsicParameters"];</code>
+       */
+      public Builder clearExtrinsicParameters() {  copyOnWrite();
+        instance.clearExtrinsicParameters();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetPropertiesResponse)
     }
     @java.lang.Override
@@ -6706,10 +4857,11 @@ public final class Camera {
               "distortionParameters_",
               "mimeTypes_",
               "frameRate_",
+              "extrinsicParameters_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0007\u0002\u1009" +
-                "\u0000\u0003\u1009\u0001\u0004\u021a\u0005\u1001\u0002";
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0007\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001\u0004\u021a\u0005\u1001\u0002\u0006\u1009\u0003";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through
@@ -9905,6 +8057,517 @@ public final class Camera {
     private static volatile com.google.protobuf.Parser<DistortionParameters> PARSER;
 
     public static com.google.protobuf.Parser<DistortionParameters> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ExtrinsicParametersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.ExtrinsicParameters)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     * @return Whether the translation field is set.
+     */
+    boolean hasTranslation();
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     * @return The translation.
+     */
+    com.viam.common.v1.Common.Vector3 getTranslation();
+
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     * @return Whether the orientation field is set.
+     */
+    boolean hasOrientation();
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     * @return The orientation.
+     */
+    com.viam.common.v1.Common.Orientation getOrientation();
+  }
+  /**
+   * <pre>
+   * ExtrinsicParameters define the position of the camera
+   * relative to a reference frame (the world or another sensor).
+   * </pre>
+   *
+   * Protobuf type {@code viam.component.camera.v1.ExtrinsicParameters}
+   */
+  public  static final class ExtrinsicParameters extends
+      com.google.protobuf.GeneratedMessageLite<
+          ExtrinsicParameters, ExtrinsicParameters.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.camera.v1.ExtrinsicParameters)
+      ExtrinsicParametersOrBuilder {
+    private ExtrinsicParameters() {
+    }
+    private int bitField0_;
+    public static final int TRANSLATION_FIELD_NUMBER = 1;
+    private com.viam.common.v1.Common.Vector3 translation_;
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    @java.lang.Override
+    public boolean hasTranslation() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Vector3 getTranslation() {
+      return translation_ == null ? com.viam.common.v1.Common.Vector3.getDefaultInstance() : translation_;
+    }
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    private void setTranslation(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();
+  translation_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTranslation(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();
+  if (translation_ != null &&
+          translation_ != com.viam.common.v1.Common.Vector3.getDefaultInstance()) {
+        translation_ =
+          com.viam.common.v1.Common.Vector3.newBuilder(translation_).mergeFrom(value).buildPartial();
+      } else {
+        translation_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * The translation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    private void clearTranslation() {  translation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int ORIENTATION_FIELD_NUMBER = 2;
+    private com.viam.common.v1.Common.Orientation orientation_;
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     */
+    @java.lang.Override
+    public boolean hasOrientation() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Orientation getOrientation() {
+      return orientation_ == null ? com.viam.common.v1.Common.Orientation.getDefaultInstance() : orientation_;
+    }
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     */
+    private void setOrientation(com.viam.common.v1.Common.Orientation value) {
+      value.getClass();
+  orientation_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeOrientation(com.viam.common.v1.Common.Orientation value) {
+      value.getClass();
+  if (orientation_ != null &&
+          orientation_ != com.viam.common.v1.Common.Orientation.getDefaultInstance()) {
+        orientation_ =
+          com.viam.common.v1.Common.Orientation.newBuilder(orientation_).mergeFrom(value).buildPartial();
+      } else {
+        orientation_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * The orientation from the reference frame to the camera.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+     */
+    private void clearOrientation() {  orientation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.camera.v1.Camera.ExtrinsicParameters prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * ExtrinsicParameters define the position of the camera
+     * relative to a reference frame (the world or another sensor).
+     * </pre>
+     *
+     * Protobuf type {@code viam.component.camera.v1.ExtrinsicParameters}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.ExtrinsicParameters, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.ExtrinsicParameters)
+        com.viam.component.camera.v1.Camera.ExtrinsicParametersOrBuilder {
+      // Construct using com.viam.component.camera.v1.Camera.ExtrinsicParameters.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * The translation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      @java.lang.Override
+      public boolean hasTranslation() {
+        return instance.hasTranslation();
+      }
+      /**
+       * <pre>
+       * The translation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Vector3 getTranslation() {
+        return instance.getTranslation();
+      }
+      /**
+       * <pre>
+       * The translation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      public Builder setTranslation(com.viam.common.v1.Common.Vector3 value) {
+        copyOnWrite();
+        instance.setTranslation(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * The translation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      public Builder setTranslation(
+          com.viam.common.v1.Common.Vector3.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTranslation(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The translation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      public Builder mergeTranslation(com.viam.common.v1.Common.Vector3 value) {
+        copyOnWrite();
+        instance.mergeTranslation(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The translation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      public Builder clearTranslation() {  copyOnWrite();
+        instance.clearTranslation();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The orientation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+       */
+      @java.lang.Override
+      public boolean hasOrientation() {
+        return instance.hasOrientation();
+      }
+      /**
+       * <pre>
+       * The orientation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Orientation getOrientation() {
+        return instance.getOrientation();
+      }
+      /**
+       * <pre>
+       * The orientation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+       */
+      public Builder setOrientation(com.viam.common.v1.Common.Orientation value) {
+        copyOnWrite();
+        instance.setOrientation(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * The orientation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+       */
+      public Builder setOrientation(
+          com.viam.common.v1.Common.Orientation.Builder builderForValue) {
+        copyOnWrite();
+        instance.setOrientation(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The orientation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+       */
+      public Builder mergeOrientation(com.viam.common.v1.Common.Orientation value) {
+        copyOnWrite();
+        instance.mergeOrientation(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The orientation from the reference frame to the camera.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation = 2 [json_name = "orientation"];</code>
+       */
+      public Builder clearOrientation() {  copyOnWrite();
+        instance.clearOrientation();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.ExtrinsicParameters)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.ExtrinsicParameters();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "translation_",
+              "orientation_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.ExtrinsicParameters> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.ExtrinsicParameters.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.ExtrinsicParameters>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.camera.v1.ExtrinsicParameters)
+    private static final com.viam.component.camera.v1.Camera.ExtrinsicParameters DEFAULT_INSTANCE;
+    static {
+      ExtrinsicParameters defaultInstance = new ExtrinsicParameters();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ExtrinsicParameters.class, defaultInstance);
+    }
+
+    public static com.viam.component.camera.v1.Camera.ExtrinsicParameters getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ExtrinsicParameters> PARSER;
+
+    public static com.google.protobuf.Parser<ExtrinsicParameters> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

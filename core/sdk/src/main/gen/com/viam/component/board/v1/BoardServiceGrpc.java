@@ -228,6 +228,36 @@ public final class BoardServiceGrpc {
     return getDoCommandMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest,
+      com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetStatus",
+      requestType = com.viam.common.v1.Common.GetStatusRequest.class,
+      responseType = com.viam.common.v1.Common.GetStatusResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest,
+      com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest, com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod;
+    if ((getGetStatusMethod = BoardServiceGrpc.getGetStatusMethod) == null) {
+      synchronized (BoardServiceGrpc.class) {
+        if ((getGetStatusMethod = BoardServiceGrpc.getGetStatusMethod) == null) {
+          BoardServiceGrpc.getGetStatusMethod = getGetStatusMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetStatusRequest, com.viam.common.v1.Common.GetStatusResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStatus"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetStatusRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetStatusResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetStatusMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.ReadAnalogReaderRequest,
       com.viam.component.board.v1.Board.ReadAnalogReaderResponse> getReadAnalogReaderMethod;
 
@@ -528,6 +558,16 @@ public final class BoardServiceGrpc {
 
     /**
      * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    default void getStatus(com.viam.common.v1.Common.GetStatusRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStatusMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * ReadAnalogReader reads off the current value of an analog reader of a board of the underlying robot.
      * </pre>
      */
@@ -696,6 +736,17 @@ public final class BoardServiceGrpc {
 
     /**
      * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public void getStatus(com.viam.common.v1.Common.GetStatusRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetStatusMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * ReadAnalogReader reads off the current value of an analog reader of a board of the underlying robot.
      * </pre>
      */
@@ -845,6 +896,16 @@ public final class BoardServiceGrpc {
     public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetStatusResponse getStatus(com.viam.common.v1.Common.GetStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetStatusMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1004,6 +1065,17 @@ public final class BoardServiceGrpc {
 
     /**
      * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetStatusResponse> getStatus(
+        com.viam.common.v1.Common.GetStatusRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetStatusMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * ReadAnalogReader reads off the current value of an analog reader of a board of the underlying robot.
      * </pre>
      */
@@ -1065,12 +1137,13 @@ public final class BoardServiceGrpc {
   private static final int METHODID_PWMFREQUENCY = 4;
   private static final int METHODID_SET_PWMFREQUENCY = 5;
   private static final int METHODID_DO_COMMAND = 6;
-  private static final int METHODID_READ_ANALOG_READER = 7;
-  private static final int METHODID_WRITE_ANALOG = 8;
-  private static final int METHODID_GET_DIGITAL_INTERRUPT_VALUE = 9;
-  private static final int METHODID_STREAM_TICKS = 10;
-  private static final int METHODID_SET_POWER_MODE = 11;
-  private static final int METHODID_GET_GEOMETRIES = 12;
+  private static final int METHODID_GET_STATUS = 7;
+  private static final int METHODID_READ_ANALOG_READER = 8;
+  private static final int METHODID_WRITE_ANALOG = 9;
+  private static final int METHODID_GET_DIGITAL_INTERRUPT_VALUE = 10;
+  private static final int METHODID_STREAM_TICKS = 11;
+  private static final int METHODID_SET_POWER_MODE = 12;
+  private static final int METHODID_GET_GEOMETRIES = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1116,6 +1189,10 @@ public final class BoardServiceGrpc {
         case METHODID_DO_COMMAND:
           serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_STATUS:
+          serviceImpl.getStatus((com.viam.common.v1.Common.GetStatusRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse>) responseObserver);
           break;
         case METHODID_READ_ANALOG_READER:
           serviceImpl.readAnalogReader((com.viam.component.board.v1.Board.ReadAnalogReaderRequest) request,
@@ -1209,6 +1286,13 @@ public final class BoardServiceGrpc {
               com.viam.common.v1.Common.DoCommandResponse>(
                 service, METHODID_DO_COMMAND)))
         .addMethod(
+          getGetStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetStatusRequest,
+              com.viam.common.v1.Common.GetStatusResponse>(
+                service, METHODID_GET_STATUS)))
+        .addMethod(
           getReadAnalogReaderMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1269,6 +1353,7 @@ public final class BoardServiceGrpc {
               .addMethod(getPWMFrequencyMethod())
               .addMethod(getSetPWMFrequencyMethod())
               .addMethod(getDoCommandMethod())
+              .addMethod(getGetStatusMethod())
               .addMethod(getReadAnalogReaderMethod())
               .addMethod(getWriteAnalogMethod())
               .addMethod(getGetDigitalInterruptValueMethod())

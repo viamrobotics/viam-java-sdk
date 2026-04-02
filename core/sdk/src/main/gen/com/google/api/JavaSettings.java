@@ -34,6 +34,7 @@ public  final class JavaSettings extends
    * Example of a YAML configuration::
    *
    * publishing:
+   * library_settings:
    * java_settings:
    * library_package: com.google.cloud.pubsub.v1
    * </pre>
@@ -56,6 +57,7 @@ public  final class JavaSettings extends
    * Example of a YAML configuration::
    *
    * publishing:
+   * library_settings:
    * java_settings:
    * library_package: com.google.cloud.pubsub.v1
    * </pre>
@@ -79,6 +81,7 @@ public  final class JavaSettings extends
    * Example of a YAML configuration::
    *
    * publishing:
+   * library_settings:
    * java_settings:
    * library_package: com.google.cloud.pubsub.v1
    * </pre>
@@ -103,6 +106,7 @@ public  final class JavaSettings extends
    * Example of a YAML configuration::
    *
    * publishing:
+   * library_settings:
    * java_settings:
    * library_package: com.google.cloud.pubsub.v1
    * </pre>
@@ -124,6 +128,7 @@ public  final class JavaSettings extends
    * Example of a YAML configuration::
    *
    * publishing:
+   * library_settings:
    * java_settings:
    * library_package: com.google.cloud.pubsub.v1
    * </pre>
@@ -496,6 +501,7 @@ java.lang.String defaultValue) {
      * Example of a YAML configuration::
      *
      * publishing:
+     * library_settings:
      * java_settings:
      * library_package: com.google.cloud.pubsub.v1
      * </pre>
@@ -518,6 +524,7 @@ java.lang.String defaultValue) {
      * Example of a YAML configuration::
      *
      * publishing:
+     * library_settings:
      * java_settings:
      * library_package: com.google.cloud.pubsub.v1
      * </pre>
@@ -541,6 +548,7 @@ java.lang.String defaultValue) {
      * Example of a YAML configuration::
      *
      * publishing:
+     * library_settings:
      * java_settings:
      * library_package: com.google.cloud.pubsub.v1
      * </pre>
@@ -566,6 +574,7 @@ java.lang.String defaultValue) {
      * Example of a YAML configuration::
      *
      * publishing:
+     * library_settings:
      * java_settings:
      * library_package: com.google.cloud.pubsub.v1
      * </pre>
@@ -589,6 +598,7 @@ java.lang.String defaultValue) {
      * Example of a YAML configuration::
      *
      * publishing:
+     * library_settings:
      * java_settings:
      * library_package: com.google.cloud.pubsub.v1
      * </pre>

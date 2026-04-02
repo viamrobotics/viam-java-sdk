@@ -18,6 +18,7 @@ public  final class PhpSettings extends
     // @@protoc_insertion_point(message_implements:google.api.PhpSettings)
     PhpSettingsOrBuilder {
   private PhpSettings() {
+    libraryPackage_ = "";
   }
   private int bitField0_;
   public static final int COMMON_FIELD_NUMBER = 1;
@@ -84,6 +85,128 @@ public  final class PhpSettings extends
    */
   private void clearCommon() {  common_ = null;
     bitField0_ = (bitField0_ & ~0x00000001);
+  }
+
+  public static final int LIBRARY_PACKAGE_FIELD_NUMBER = 2;
+  private java.lang.String libraryPackage_;
+  /**
+   * <pre>
+   * The package name to use in Php. Clobbers the php_namespace option
+   * set in the protobuf. This should be used **only** by APIs
+   * who have already set the language_settings.php.package_name" field
+   * in gapic.yaml. API teams should use the protobuf php_namespace option
+   * where possible.
+   *
+   * Example of a YAML configuration::
+   *
+   * publishing:
+   * library_settings:
+   * php_settings:
+   * library_package: Google&#92;Cloud&#92;PubSub&#92;V1
+   * </pre>
+   *
+   * <code>string library_package = 2 [json_name = "libraryPackage"];</code>
+   * @return The libraryPackage.
+   */
+  @java.lang.Override
+  public java.lang.String getLibraryPackage() {
+    return libraryPackage_;
+  }
+  /**
+   * <pre>
+   * The package name to use in Php. Clobbers the php_namespace option
+   * set in the protobuf. This should be used **only** by APIs
+   * who have already set the language_settings.php.package_name" field
+   * in gapic.yaml. API teams should use the protobuf php_namespace option
+   * where possible.
+   *
+   * Example of a YAML configuration::
+   *
+   * publishing:
+   * library_settings:
+   * php_settings:
+   * library_package: Google&#92;Cloud&#92;PubSub&#92;V1
+   * </pre>
+   *
+   * <code>string library_package = 2 [json_name = "libraryPackage"];</code>
+   * @return The bytes for libraryPackage.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getLibraryPackageBytes() {
+    return com.google.protobuf.ByteString.copyFromUtf8(libraryPackage_);
+  }
+  /**
+   * <pre>
+   * The package name to use in Php. Clobbers the php_namespace option
+   * set in the protobuf. This should be used **only** by APIs
+   * who have already set the language_settings.php.package_name" field
+   * in gapic.yaml. API teams should use the protobuf php_namespace option
+   * where possible.
+   *
+   * Example of a YAML configuration::
+   *
+   * publishing:
+   * library_settings:
+   * php_settings:
+   * library_package: Google&#92;Cloud&#92;PubSub&#92;V1
+   * </pre>
+   *
+   * <code>string library_package = 2 [json_name = "libraryPackage"];</code>
+   * @param value The libraryPackage to set.
+   */
+  private void setLibraryPackage(
+      java.lang.String value) {
+    java.lang.Class<?> valueClass = value.getClass();
+  
+    libraryPackage_ = value;
+  }
+  /**
+   * <pre>
+   * The package name to use in Php. Clobbers the php_namespace option
+   * set in the protobuf. This should be used **only** by APIs
+   * who have already set the language_settings.php.package_name" field
+   * in gapic.yaml. API teams should use the protobuf php_namespace option
+   * where possible.
+   *
+   * Example of a YAML configuration::
+   *
+   * publishing:
+   * library_settings:
+   * php_settings:
+   * library_package: Google&#92;Cloud&#92;PubSub&#92;V1
+   * </pre>
+   *
+   * <code>string library_package = 2 [json_name = "libraryPackage"];</code>
+   */
+  private void clearLibraryPackage() {
+
+    libraryPackage_ = getDefaultInstance().getLibraryPackage();
+  }
+  /**
+   * <pre>
+   * The package name to use in Php. Clobbers the php_namespace option
+   * set in the protobuf. This should be used **only** by APIs
+   * who have already set the language_settings.php.package_name" field
+   * in gapic.yaml. API teams should use the protobuf php_namespace option
+   * where possible.
+   *
+   * Example of a YAML configuration::
+   *
+   * publishing:
+   * library_settings:
+   * php_settings:
+   * library_package: Google&#92;Cloud&#92;PubSub&#92;V1
+   * </pre>
+   *
+   * <code>string library_package = 2 [json_name = "libraryPackage"];</code>
+   * @param value The bytes for libraryPackage to set.
+   */
+  private void setLibraryPackageBytes(
+      com.google.protobuf.ByteString value) {
+    checkByteStringIsUtf8(value);
+    libraryPackage_ = value.toStringUtf8();
+
   }
 
   public static com.google.api.PhpSettings parseFrom(
@@ -258,6 +381,130 @@ public  final class PhpSettings extends
       return this;
     }
 
+    /**
+     * <pre>
+     * The package name to use in Php. Clobbers the php_namespace option
+     * set in the protobuf. This should be used **only** by APIs
+     * who have already set the language_settings.php.package_name" field
+     * in gapic.yaml. API teams should use the protobuf php_namespace option
+     * where possible.
+     *
+     * Example of a YAML configuration::
+     *
+     * publishing:
+     * library_settings:
+     * php_settings:
+     * library_package: Google&#92;Cloud&#92;PubSub&#92;V1
+     * </pre>
+     *
+     * <code>string library_package = 2 [json_name = "libraryPackage"];</code>
+     * @return The libraryPackage.
+     */
+    @java.lang.Override
+    public java.lang.String getLibraryPackage() {
+      return instance.getLibraryPackage();
+    }
+    /**
+     * <pre>
+     * The package name to use in Php. Clobbers the php_namespace option
+     * set in the protobuf. This should be used **only** by APIs
+     * who have already set the language_settings.php.package_name" field
+     * in gapic.yaml. API teams should use the protobuf php_namespace option
+     * where possible.
+     *
+     * Example of a YAML configuration::
+     *
+     * publishing:
+     * library_settings:
+     * php_settings:
+     * library_package: Google&#92;Cloud&#92;PubSub&#92;V1
+     * </pre>
+     *
+     * <code>string library_package = 2 [json_name = "libraryPackage"];</code>
+     * @return The bytes for libraryPackage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLibraryPackageBytes() {
+      return instance.getLibraryPackageBytes();
+    }
+    /**
+     * <pre>
+     * The package name to use in Php. Clobbers the php_namespace option
+     * set in the protobuf. This should be used **only** by APIs
+     * who have already set the language_settings.php.package_name" field
+     * in gapic.yaml. API teams should use the protobuf php_namespace option
+     * where possible.
+     *
+     * Example of a YAML configuration::
+     *
+     * publishing:
+     * library_settings:
+     * php_settings:
+     * library_package: Google&#92;Cloud&#92;PubSub&#92;V1
+     * </pre>
+     *
+     * <code>string library_package = 2 [json_name = "libraryPackage"];</code>
+     * @param value The libraryPackage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLibraryPackage(
+        java.lang.String value) {
+      copyOnWrite();
+      instance.setLibraryPackage(value);
+      return this;
+    }
+    /**
+     * <pre>
+     * The package name to use in Php. Clobbers the php_namespace option
+     * set in the protobuf. This should be used **only** by APIs
+     * who have already set the language_settings.php.package_name" field
+     * in gapic.yaml. API teams should use the protobuf php_namespace option
+     * where possible.
+     *
+     * Example of a YAML configuration::
+     *
+     * publishing:
+     * library_settings:
+     * php_settings:
+     * library_package: Google&#92;Cloud&#92;PubSub&#92;V1
+     * </pre>
+     *
+     * <code>string library_package = 2 [json_name = "libraryPackage"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLibraryPackage() {
+      copyOnWrite();
+      instance.clearLibraryPackage();
+      return this;
+    }
+    /**
+     * <pre>
+     * The package name to use in Php. Clobbers the php_namespace option
+     * set in the protobuf. This should be used **only** by APIs
+     * who have already set the language_settings.php.package_name" field
+     * in gapic.yaml. API teams should use the protobuf php_namespace option
+     * where possible.
+     *
+     * Example of a YAML configuration::
+     *
+     * publishing:
+     * library_settings:
+     * php_settings:
+     * library_package: Google&#92;Cloud&#92;PubSub&#92;V1
+     * </pre>
+     *
+     * <code>string library_package = 2 [json_name = "libraryPackage"];</code>
+     * @param value The bytes for libraryPackage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLibraryPackageBytes(
+        com.google.protobuf.ByteString value) {
+      copyOnWrite();
+      instance.setLibraryPackageBytes(value);
+      return this;
+    }
+
     // @@protoc_insertion_point(builder_scope:google.api.PhpSettings)
   }
   @java.lang.Override
@@ -276,9 +523,11 @@ public  final class PhpSettings extends
           java.lang.Object[] objects = new java.lang.Object[] {
             "bitField0_",
             "common_",
+            "libraryPackage_",
           };
           java.lang.String info =
-              "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+              "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+              "\u0208";
           return newMessageInfo(DEFAULT_INSTANCE, info, objects);
       }
       // fall through

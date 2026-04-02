@@ -225,6 +225,96 @@ public final class BillingServiceGrpc {
     return getUpdateOrganizationBillingTierMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.Billing.GetLocationBillingOrganizationRequest,
+      viam.app.v1.Billing.GetLocationBillingOrganizationResponse> getGetLocationBillingOrganizationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetLocationBillingOrganization",
+      requestType = viam.app.v1.Billing.GetLocationBillingOrganizationRequest.class,
+      responseType = viam.app.v1.Billing.GetLocationBillingOrganizationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.Billing.GetLocationBillingOrganizationRequest,
+      viam.app.v1.Billing.GetLocationBillingOrganizationResponse> getGetLocationBillingOrganizationMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.Billing.GetLocationBillingOrganizationRequest, viam.app.v1.Billing.GetLocationBillingOrganizationResponse> getGetLocationBillingOrganizationMethod;
+    if ((getGetLocationBillingOrganizationMethod = BillingServiceGrpc.getGetLocationBillingOrganizationMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getGetLocationBillingOrganizationMethod = BillingServiceGrpc.getGetLocationBillingOrganizationMethod) == null) {
+          BillingServiceGrpc.getGetLocationBillingOrganizationMethod = getGetLocationBillingOrganizationMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.Billing.GetLocationBillingOrganizationRequest, viam.app.v1.Billing.GetLocationBillingOrganizationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLocationBillingOrganization"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.GetLocationBillingOrganizationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.GetLocationBillingOrganizationResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetLocationBillingOrganizationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest,
+      viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse> getUpdateLocationBillingOrganizationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateLocationBillingOrganization",
+      requestType = viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest.class,
+      responseType = viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest,
+      viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse> getUpdateLocationBillingOrganizationMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest, viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse> getUpdateLocationBillingOrganizationMethod;
+    if ((getUpdateLocationBillingOrganizationMethod = BillingServiceGrpc.getUpdateLocationBillingOrganizationMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getUpdateLocationBillingOrganizationMethod = BillingServiceGrpc.getUpdateLocationBillingOrganizationMethod) == null) {
+          BillingServiceGrpc.getUpdateLocationBillingOrganizationMethod = getUpdateLocationBillingOrganizationMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest, viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateLocationBillingOrganization"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUpdateLocationBillingOrganizationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.Billing.ChargeOrganizationRequest,
+      viam.app.v1.Billing.ChargeOrganizationResponse> getChargeOrganizationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ChargeOrganization",
+      requestType = viam.app.v1.Billing.ChargeOrganizationRequest.class,
+      responseType = viam.app.v1.Billing.ChargeOrganizationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.Billing.ChargeOrganizationRequest,
+      viam.app.v1.Billing.ChargeOrganizationResponse> getChargeOrganizationMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.Billing.ChargeOrganizationRequest, viam.app.v1.Billing.ChargeOrganizationResponse> getChargeOrganizationMethod;
+    if ((getChargeOrganizationMethod = BillingServiceGrpc.getChargeOrganizationMethod) == null) {
+      synchronized (BillingServiceGrpc.class) {
+        if ((getChargeOrganizationMethod = BillingServiceGrpc.getChargeOrganizationMethod) == null) {
+          BillingServiceGrpc.getChargeOrganizationMethod = getChargeOrganizationMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.Billing.ChargeOrganizationRequest, viam.app.v1.Billing.ChargeOrganizationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ChargeOrganization"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.ChargeOrganizationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.Billing.ChargeOrganizationResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getChargeOrganizationMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest,
       viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse> getCreateInvoiceAndChargeImmediatelyMethod;
 
@@ -375,7 +465,37 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Directly create a flat fee invoice for an organization and charge on the spot
+     * Get the billing organization for a location
+     * </pre>
+     */
+    default void getLocationBillingOrganization(viam.app.v1.Billing.GetLocationBillingOrganizationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.GetLocationBillingOrganizationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLocationBillingOrganizationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update the billing organization for a location
+     * </pre>
+     */
+    default void updateLocationBillingOrganization(viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateLocationBillingOrganizationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Charge an organization on the spot
+     * </pre>
+     */
+    default void chargeOrganization(viam.app.v1.Billing.ChargeOrganizationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.ChargeOrganizationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getChargeOrganizationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deprecated: Use ChargeOrganization instead
      * </pre>
      */
     default void createInvoiceAndChargeImmediately(viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest request,
@@ -490,7 +610,40 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Directly create a flat fee invoice for an organization and charge on the spot
+     * Get the billing organization for a location
+     * </pre>
+     */
+    public void getLocationBillingOrganization(viam.app.v1.Billing.GetLocationBillingOrganizationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.GetLocationBillingOrganizationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetLocationBillingOrganizationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update the billing organization for a location
+     * </pre>
+     */
+    public void updateLocationBillingOrganization(viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateLocationBillingOrganizationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Charge an organization on the spot
+     * </pre>
+     */
+    public void chargeOrganization(viam.app.v1.Billing.ChargeOrganizationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.Billing.ChargeOrganizationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getChargeOrganizationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deprecated: Use ChargeOrganization instead
      * </pre>
      */
     public void createInvoiceAndChargeImmediately(viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest request,
@@ -589,7 +742,37 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Directly create a flat fee invoice for an organization and charge on the spot
+     * Get the billing organization for a location
+     * </pre>
+     */
+    public viam.app.v1.Billing.GetLocationBillingOrganizationResponse getLocationBillingOrganization(viam.app.v1.Billing.GetLocationBillingOrganizationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetLocationBillingOrganizationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update the billing organization for a location
+     * </pre>
+     */
+    public viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse updateLocationBillingOrganization(viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateLocationBillingOrganizationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Charge an organization on the spot
+     * </pre>
+     */
+    public viam.app.v1.Billing.ChargeOrganizationResponse chargeOrganization(viam.app.v1.Billing.ChargeOrganizationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getChargeOrganizationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deprecated: Use ChargeOrganization instead
      * </pre>
      */
     public viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse createInvoiceAndChargeImmediately(viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest request) {
@@ -682,7 +865,40 @@ public final class BillingServiceGrpc {
 
     /**
      * <pre>
-     * Directly create a flat fee invoice for an organization and charge on the spot
+     * Get the billing organization for a location
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.Billing.GetLocationBillingOrganizationResponse> getLocationBillingOrganization(
+        viam.app.v1.Billing.GetLocationBillingOrganizationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetLocationBillingOrganizationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Update the billing organization for a location
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse> updateLocationBillingOrganization(
+        viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateLocationBillingOrganizationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Charge an organization on the spot
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.Billing.ChargeOrganizationResponse> chargeOrganization(
+        viam.app.v1.Billing.ChargeOrganizationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getChargeOrganizationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deprecated: Use ChargeOrganization instead
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse> createInvoiceAndChargeImmediately(
@@ -699,7 +915,10 @@ public final class BillingServiceGrpc {
   private static final int METHODID_SEND_PAYMENT_REQUIRED_EMAIL = 4;
   private static final int METHODID_GET_AVAILABLE_BILLING_TIERS = 5;
   private static final int METHODID_UPDATE_ORGANIZATION_BILLING_TIER = 6;
-  private static final int METHODID_CREATE_INVOICE_AND_CHARGE_IMMEDIATELY = 7;
+  private static final int METHODID_GET_LOCATION_BILLING_ORGANIZATION = 7;
+  private static final int METHODID_UPDATE_LOCATION_BILLING_ORGANIZATION = 8;
+  private static final int METHODID_CHARGE_ORGANIZATION = 9;
+  private static final int METHODID_CREATE_INVOICE_AND_CHARGE_IMMEDIATELY = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -745,6 +964,18 @@ public final class BillingServiceGrpc {
         case METHODID_UPDATE_ORGANIZATION_BILLING_TIER:
           serviceImpl.updateOrganizationBillingTier((viam.app.v1.Billing.UpdateOrganizationBillingTierRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.Billing.UpdateOrganizationBillingTierResponse>) responseObserver);
+          break;
+        case METHODID_GET_LOCATION_BILLING_ORGANIZATION:
+          serviceImpl.getLocationBillingOrganization((viam.app.v1.Billing.GetLocationBillingOrganizationRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.Billing.GetLocationBillingOrganizationResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_LOCATION_BILLING_ORGANIZATION:
+          serviceImpl.updateLocationBillingOrganization((viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse>) responseObserver);
+          break;
+        case METHODID_CHARGE_ORGANIZATION:
+          serviceImpl.chargeOrganization((viam.app.v1.Billing.ChargeOrganizationRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.Billing.ChargeOrganizationResponse>) responseObserver);
           break;
         case METHODID_CREATE_INVOICE_AND_CHARGE_IMMEDIATELY:
           serviceImpl.createInvoiceAndChargeImmediately((viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest) request,
@@ -818,6 +1049,27 @@ public final class BillingServiceGrpc {
               viam.app.v1.Billing.UpdateOrganizationBillingTierResponse>(
                 service, METHODID_UPDATE_ORGANIZATION_BILLING_TIER)))
         .addMethod(
+          getGetLocationBillingOrganizationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.Billing.GetLocationBillingOrganizationRequest,
+              viam.app.v1.Billing.GetLocationBillingOrganizationResponse>(
+                service, METHODID_GET_LOCATION_BILLING_ORGANIZATION)))
+        .addMethod(
+          getUpdateLocationBillingOrganizationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest,
+              viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse>(
+                service, METHODID_UPDATE_LOCATION_BILLING_ORGANIZATION)))
+        .addMethod(
+          getChargeOrganizationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.Billing.ChargeOrganizationRequest,
+              viam.app.v1.Billing.ChargeOrganizationResponse>(
+                service, METHODID_CHARGE_ORGANIZATION)))
+        .addMethod(
           getCreateInvoiceAndChargeImmediatelyMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -843,6 +1095,9 @@ public final class BillingServiceGrpc {
               .addMethod(getSendPaymentRequiredEmailMethod())
               .addMethod(getGetAvailableBillingTiersMethod())
               .addMethod(getUpdateOrganizationBillingTierMethod())
+              .addMethod(getGetLocationBillingOrganizationMethod())
+              .addMethod(getUpdateLocationBillingOrganizationMethod())
+              .addMethod(getChargeOrganizationMethod())
               .addMethod(getCreateInvoiceAndChargeImmediatelyMethod())
               .build();
         }

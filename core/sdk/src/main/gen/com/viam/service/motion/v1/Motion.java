@@ -184,7 +184,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=75
+     *     See service/motion/v1/motion.proto;l=80
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -195,7 +195,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=75
+     *     See service/motion/v1/motion.proto;l=80
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -1742,7 +1742,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnMapRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=97
+     *     See service/motion/v1/motion.proto;l=102
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -1753,7 +1753,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnMapRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=97
+     *     See service/motion/v1/motion.proto;l=102
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -1765,7 +1765,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnMapRequest.slam_service_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=99
+     *     See service/motion/v1/motion.proto;l=104
      * @return Whether the slamServiceNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasSlamServiceNameDeprecated();
@@ -1776,7 +1776,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnMapRequest.slam_service_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=99
+     *     See service/motion/v1/motion.proto;l=104
      * @return The slamServiceNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getSlamServiceNameDeprecated();
@@ -3837,14 +3837,14 @@ public final class Motion {
     /**
      * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.ObstacleDetector.vision_service_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=121
+     *     See service/motion/v1/motion.proto;l=126
      * @return Whether the visionServiceDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasVisionServiceDeprecated();
     /**
      * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.ObstacleDetector.vision_service_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=121
+     *     See service/motion/v1/motion.proto;l=126
      * @return The visionServiceDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getVisionServiceDeprecated();
@@ -3852,14 +3852,14 @@ public final class Motion {
     /**
      * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.ObstacleDetector.camera_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=122
+     *     See service/motion/v1/motion.proto;l=127
      * @return Whether the cameraDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasCameraDeprecated();
     /**
      * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.ObstacleDetector.camera_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=122
+     *     See service/motion/v1/motion.proto;l=127
      * @return The cameraDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getCameraDeprecated();
@@ -5646,7 +5646,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnGlobeRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=150
+     *     See service/motion/v1/motion.proto;l=155
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -5657,7 +5657,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnGlobeRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=150
+     *     See service/motion/v1/motion.proto;l=155
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -5669,7 +5669,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnGlobeRequest.movement_sensor_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=152
+     *     See service/motion/v1/motion.proto;l=157
      * @return Whether the movementSensorNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasMovementSensorNameDeprecated();
@@ -5680,7 +5680,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnGlobeRequest.movement_sensor_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=152
+     *     See service/motion/v1/motion.proto;l=157
      * @return The movementSensorNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getMovementSensorNameDeprecated();
@@ -8177,7 +8177,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.GetPoseRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=178
+     *     See service/motion/v1/motion.proto;l=183
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -8188,7 +8188,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.GetPoseRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=178
+     *     See service/motion/v1/motion.proto;l=183
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -9774,7 +9774,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.StopPlanRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=202
+     *     See service/motion/v1/motion.proto;l=207
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -9785,7 +9785,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.StopPlanRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=202
+     *     See service/motion/v1/motion.proto;l=207
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -11910,7 +11910,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.GetPlanRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=236
+     *     See service/motion/v1/motion.proto;l=241
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -11921,7 +11921,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.GetPlanRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=236
+     *     See service/motion/v1/motion.proto;l=241
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -17876,7 +17876,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.PlanStatusWithID.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=328
+     *     See service/motion/v1/motion.proto;l=333
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -17887,7 +17887,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.PlanStatusWithID.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=328
+     *     See service/motion/v1/motion.proto;l=333
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -19613,7 +19613,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.Plan.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=379
+     *     See service/motion/v1/motion.proto;l=384
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -19624,7 +19624,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.Plan.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=379
+     *     See service/motion/v1/motion.proto;l=384
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();

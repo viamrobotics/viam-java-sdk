@@ -1295,6 +1295,122 @@ public  final class MethodSettings extends
     autoPopulatedFields_.add(value.toStringUtf8());
   }
 
+  public static final int BATCHING_FIELD_NUMBER = 4;
+  private com.google.api.BatchingConfigProto batching_;
+  /**
+   * <pre>
+   * Batching configuration for an API method in client libraries.
+   *
+   * Example of a YAML configuration:
+   *
+   * publishing:
+   * method_settings:
+   * - selector: google.example.v1.ExampleService.BatchCreateExample
+   * batching:
+   * element_count_threshold: 1000
+   * request_byte_threshold: 100000000
+   * delay_threshold_millis: 10
+   * </pre>
+   *
+   * <code>.google.api.BatchingConfigProto batching = 4 [json_name = "batching"];</code>
+   */
+  @java.lang.Override
+  public boolean hasBatching() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * Batching configuration for an API method in client libraries.
+   *
+   * Example of a YAML configuration:
+   *
+   * publishing:
+   * method_settings:
+   * - selector: google.example.v1.ExampleService.BatchCreateExample
+   * batching:
+   * element_count_threshold: 1000
+   * request_byte_threshold: 100000000
+   * delay_threshold_millis: 10
+   * </pre>
+   *
+   * <code>.google.api.BatchingConfigProto batching = 4 [json_name = "batching"];</code>
+   */
+  @java.lang.Override
+  public com.google.api.BatchingConfigProto getBatching() {
+    return batching_ == null ? com.google.api.BatchingConfigProto.getDefaultInstance() : batching_;
+  }
+  /**
+   * <pre>
+   * Batching configuration for an API method in client libraries.
+   *
+   * Example of a YAML configuration:
+   *
+   * publishing:
+   * method_settings:
+   * - selector: google.example.v1.ExampleService.BatchCreateExample
+   * batching:
+   * element_count_threshold: 1000
+   * request_byte_threshold: 100000000
+   * delay_threshold_millis: 10
+   * </pre>
+   *
+   * <code>.google.api.BatchingConfigProto batching = 4 [json_name = "batching"];</code>
+   */
+  private void setBatching(com.google.api.BatchingConfigProto value) {
+    value.getClass();
+  batching_ = value;
+    bitField0_ |= 0x00000002;
+    }
+  /**
+   * <pre>
+   * Batching configuration for an API method in client libraries.
+   *
+   * Example of a YAML configuration:
+   *
+   * publishing:
+   * method_settings:
+   * - selector: google.example.v1.ExampleService.BatchCreateExample
+   * batching:
+   * element_count_threshold: 1000
+   * request_byte_threshold: 100000000
+   * delay_threshold_millis: 10
+   * </pre>
+   *
+   * <code>.google.api.BatchingConfigProto batching = 4 [json_name = "batching"];</code>
+   */
+  @java.lang.SuppressWarnings({"ReferenceEquality"})
+  private void mergeBatching(com.google.api.BatchingConfigProto value) {
+    value.getClass();
+  if (batching_ != null &&
+        batching_ != com.google.api.BatchingConfigProto.getDefaultInstance()) {
+      batching_ =
+        com.google.api.BatchingConfigProto.newBuilder(batching_).mergeFrom(value).buildPartial();
+    } else {
+      batching_ = value;
+    }
+    bitField0_ |= 0x00000002;
+  }
+  /**
+   * <pre>
+   * Batching configuration for an API method in client libraries.
+   *
+   * Example of a YAML configuration:
+   *
+   * publishing:
+   * method_settings:
+   * - selector: google.example.v1.ExampleService.BatchCreateExample
+   * batching:
+   * element_count_threshold: 1000
+   * request_byte_threshold: 100000000
+   * delay_threshold_millis: 10
+   * </pre>
+   *
+   * <code>.google.api.BatchingConfigProto batching = 4 [json_name = "batching"];</code>
+   */
+  private void clearBatching() {  batching_ = null;
+    bitField0_ = (bitField0_ & ~0x00000002);
+  }
+
   public static com.google.api.MethodSettings parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1872,6 +1988,137 @@ public  final class MethodSettings extends
       return this;
     }
 
+    /**
+     * <pre>
+     * Batching configuration for an API method in client libraries.
+     *
+     * Example of a YAML configuration:
+     *
+     * publishing:
+     * method_settings:
+     * - selector: google.example.v1.ExampleService.BatchCreateExample
+     * batching:
+     * element_count_threshold: 1000
+     * request_byte_threshold: 100000000
+     * delay_threshold_millis: 10
+     * </pre>
+     *
+     * <code>.google.api.BatchingConfigProto batching = 4 [json_name = "batching"];</code>
+     */
+    @java.lang.Override
+    public boolean hasBatching() {
+      return instance.hasBatching();
+    }
+    /**
+     * <pre>
+     * Batching configuration for an API method in client libraries.
+     *
+     * Example of a YAML configuration:
+     *
+     * publishing:
+     * method_settings:
+     * - selector: google.example.v1.ExampleService.BatchCreateExample
+     * batching:
+     * element_count_threshold: 1000
+     * request_byte_threshold: 100000000
+     * delay_threshold_millis: 10
+     * </pre>
+     *
+     * <code>.google.api.BatchingConfigProto batching = 4 [json_name = "batching"];</code>
+     */
+    @java.lang.Override
+    public com.google.api.BatchingConfigProto getBatching() {
+      return instance.getBatching();
+    }
+    /**
+     * <pre>
+     * Batching configuration for an API method in client libraries.
+     *
+     * Example of a YAML configuration:
+     *
+     * publishing:
+     * method_settings:
+     * - selector: google.example.v1.ExampleService.BatchCreateExample
+     * batching:
+     * element_count_threshold: 1000
+     * request_byte_threshold: 100000000
+     * delay_threshold_millis: 10
+     * </pre>
+     *
+     * <code>.google.api.BatchingConfigProto batching = 4 [json_name = "batching"];</code>
+     */
+    public Builder setBatching(com.google.api.BatchingConfigProto value) {
+      copyOnWrite();
+      instance.setBatching(value);
+      return this;
+      }
+    /**
+     * <pre>
+     * Batching configuration for an API method in client libraries.
+     *
+     * Example of a YAML configuration:
+     *
+     * publishing:
+     * method_settings:
+     * - selector: google.example.v1.ExampleService.BatchCreateExample
+     * batching:
+     * element_count_threshold: 1000
+     * request_byte_threshold: 100000000
+     * delay_threshold_millis: 10
+     * </pre>
+     *
+     * <code>.google.api.BatchingConfigProto batching = 4 [json_name = "batching"];</code>
+     */
+    public Builder setBatching(
+        com.google.api.BatchingConfigProto.Builder builderForValue) {
+      copyOnWrite();
+      instance.setBatching(builderForValue.build());
+      return this;
+    }
+    /**
+     * <pre>
+     * Batching configuration for an API method in client libraries.
+     *
+     * Example of a YAML configuration:
+     *
+     * publishing:
+     * method_settings:
+     * - selector: google.example.v1.ExampleService.BatchCreateExample
+     * batching:
+     * element_count_threshold: 1000
+     * request_byte_threshold: 100000000
+     * delay_threshold_millis: 10
+     * </pre>
+     *
+     * <code>.google.api.BatchingConfigProto batching = 4 [json_name = "batching"];</code>
+     */
+    public Builder mergeBatching(com.google.api.BatchingConfigProto value) {
+      copyOnWrite();
+      instance.mergeBatching(value);
+      return this;
+    }
+    /**
+     * <pre>
+     * Batching configuration for an API method in client libraries.
+     *
+     * Example of a YAML configuration:
+     *
+     * publishing:
+     * method_settings:
+     * - selector: google.example.v1.ExampleService.BatchCreateExample
+     * batching:
+     * element_count_threshold: 1000
+     * request_byte_threshold: 100000000
+     * delay_threshold_millis: 10
+     * </pre>
+     *
+     * <code>.google.api.BatchingConfigProto batching = 4 [json_name = "batching"];</code>
+     */
+    public Builder clearBatching() {  copyOnWrite();
+      instance.clearBatching();
+      return this;
+    }
+
     // @@protoc_insertion_point(builder_scope:google.api.MethodSettings)
   }
   @java.lang.Override
@@ -1892,10 +2139,11 @@ public  final class MethodSettings extends
             "selector_",
             "longRunning_",
             "autoPopulatedFields_",
+            "batching_",
           };
           java.lang.String info =
-              "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u0208\u0002\u1009" +
-              "\u0000\u0003\u021a";
+              "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0208\u0002\u1009" +
+              "\u0000\u0003\u021a\u0004\u1009\u0001";
           return newMessageInfo(DEFAULT_INSTANCE, info, objects);
       }
       // fall through

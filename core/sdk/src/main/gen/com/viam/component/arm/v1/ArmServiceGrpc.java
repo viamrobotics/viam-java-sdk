@@ -258,6 +258,36 @@ public final class ArmServiceGrpc {
     return getDoCommandMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest,
+      com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetStatus",
+      requestType = com.viam.common.v1.Common.GetStatusRequest.class,
+      responseType = com.viam.common.v1.Common.GetStatusResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest,
+      com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest, com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod;
+    if ((getGetStatusMethod = ArmServiceGrpc.getGetStatusMethod) == null) {
+      synchronized (ArmServiceGrpc.class) {
+        if ((getGetStatusMethod = ArmServiceGrpc.getGetStatusMethod) == null) {
+          ArmServiceGrpc.getGetStatusMethod = getGetStatusMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetStatusRequest, com.viam.common.v1.Common.GetStatusResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStatus"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetStatusRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetStatusResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetStatusMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetKinematicsRequest,
       com.viam.common.v1.Common.GetKinematicsResponse> getGetKinematicsMethod;
 
@@ -485,6 +515,16 @@ public final class ArmServiceGrpc {
 
     /**
      * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    default void getStatus(com.viam.common.v1.Common.GetStatusRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStatusMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetKinematics returns the kinematics file for the component
      * </pre>
      */
@@ -641,6 +681,17 @@ public final class ArmServiceGrpc {
 
     /**
      * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public void getStatus(com.viam.common.v1.Common.GetStatusRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetStatusMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetKinematics returns the kinematics file for the component
      * </pre>
      */
@@ -774,6 +825,16 @@ public final class ArmServiceGrpc {
     public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetStatusResponse getStatus(com.viam.common.v1.Common.GetStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetStatusMethod(), getCallOptions(), request);
     }
 
     /**
@@ -920,6 +981,17 @@ public final class ArmServiceGrpc {
 
     /**
      * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetStatusResponse> getStatus(
+        com.viam.common.v1.Common.GetStatusRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetStatusMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetKinematics returns the kinematics file for the component
      * </pre>
      */
@@ -960,9 +1032,10 @@ public final class ArmServiceGrpc {
   private static final int METHODID_STOP = 5;
   private static final int METHODID_IS_MOVING = 6;
   private static final int METHODID_DO_COMMAND = 7;
-  private static final int METHODID_GET_KINEMATICS = 8;
-  private static final int METHODID_GET_GEOMETRIES = 9;
-  private static final int METHODID_GET3DMODELS = 10;
+  private static final int METHODID_GET_STATUS = 8;
+  private static final int METHODID_GET_KINEMATICS = 9;
+  private static final int METHODID_GET_GEOMETRIES = 10;
+  private static final int METHODID_GET3DMODELS = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1012,6 +1085,10 @@ public final class ArmServiceGrpc {
         case METHODID_DO_COMMAND:
           serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_STATUS:
+          serviceImpl.getStatus((com.viam.common.v1.Common.GetStatusRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse>) responseObserver);
           break;
         case METHODID_GET_KINEMATICS:
           serviceImpl.getKinematics((com.viam.common.v1.Common.GetKinematicsRequest) request,
@@ -1100,6 +1177,13 @@ public final class ArmServiceGrpc {
               com.viam.common.v1.Common.DoCommandResponse>(
                 service, METHODID_DO_COMMAND)))
         .addMethod(
+          getGetStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetStatusRequest,
+              com.viam.common.v1.Common.GetStatusResponse>(
+                service, METHODID_GET_STATUS)))
+        .addMethod(
           getGetKinematicsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1140,6 +1224,7 @@ public final class ArmServiceGrpc {
               .addMethod(getStopMethod())
               .addMethod(getIsMovingMethod())
               .addMethod(getDoCommandMethod())
+              .addMethod(getGetStatusMethod())
               .addMethod(getGetKinematicsMethod())
               .addMethod(getGetGeometriesMethod())
               .addMethod(getGet3DModelsMethod())

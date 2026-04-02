@@ -18,36 +18,6 @@ public final class CameraServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "viam.component.camera.v1.CameraService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.viam.component.camera.v1.Camera.GetImageRequest,
-      com.viam.component.camera.v1.Camera.GetImageResponse> getGetImageMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetImage",
-      requestType = com.viam.component.camera.v1.Camera.GetImageRequest.class,
-      responseType = com.viam.component.camera.v1.Camera.GetImageResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.component.camera.v1.Camera.GetImageRequest,
-      com.viam.component.camera.v1.Camera.GetImageResponse> getGetImageMethod() {
-    io.grpc.MethodDescriptor<com.viam.component.camera.v1.Camera.GetImageRequest, com.viam.component.camera.v1.Camera.GetImageResponse> getGetImageMethod;
-    if ((getGetImageMethod = CameraServiceGrpc.getGetImageMethod) == null) {
-      synchronized (CameraServiceGrpc.class) {
-        if ((getGetImageMethod = CameraServiceGrpc.getGetImageMethod) == null) {
-          CameraServiceGrpc.getGetImageMethod = getGetImageMethod =
-              io.grpc.MethodDescriptor.<com.viam.component.camera.v1.Camera.GetImageRequest, com.viam.component.camera.v1.Camera.GetImageResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetImage"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.component.camera.v1.Camera.GetImageRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.component.camera.v1.Camera.GetImageResponse.getDefaultInstance()))
-              .build();
-        }
-      }
-    }
-    return getGetImageMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.viam.component.camera.v1.Camera.GetImagesRequest,
       com.viam.component.camera.v1.Camera.GetImagesResponse> getGetImagesMethod;
 
@@ -76,36 +46,6 @@ public final class CameraServiceGrpc {
       }
     }
     return getGetImagesMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.viam.component.camera.v1.Camera.RenderFrameRequest,
-      com.google.api.HttpBody> getRenderFrameMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "RenderFrame",
-      requestType = com.viam.component.camera.v1.Camera.RenderFrameRequest.class,
-      responseType = com.google.api.HttpBody.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.component.camera.v1.Camera.RenderFrameRequest,
-      com.google.api.HttpBody> getRenderFrameMethod() {
-    io.grpc.MethodDescriptor<com.viam.component.camera.v1.Camera.RenderFrameRequest, com.google.api.HttpBody> getRenderFrameMethod;
-    if ((getRenderFrameMethod = CameraServiceGrpc.getRenderFrameMethod) == null) {
-      synchronized (CameraServiceGrpc.class) {
-        if ((getRenderFrameMethod = CameraServiceGrpc.getRenderFrameMethod) == null) {
-          CameraServiceGrpc.getRenderFrameMethod = getRenderFrameMethod =
-              io.grpc.MethodDescriptor.<com.viam.component.camera.v1.Camera.RenderFrameRequest, com.google.api.HttpBody>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RenderFrame"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.viam.component.camera.v1.Camera.RenderFrameRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
-                  com.google.api.HttpBody.getDefaultInstance()))
-              .build();
-        }
-      }
-    }
-    return getRenderFrameMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.viam.component.camera.v1.Camera.GetPointCloudRequest,
@@ -198,6 +138,36 @@ public final class CameraServiceGrpc {
     return getDoCommandMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest,
+      com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetStatus",
+      requestType = com.viam.common.v1.Common.GetStatusRequest.class,
+      responseType = com.viam.common.v1.Common.GetStatusResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest,
+      com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest, com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod;
+    if ((getGetStatusMethod = CameraServiceGrpc.getGetStatusMethod) == null) {
+      synchronized (CameraServiceGrpc.class) {
+        if ((getGetStatusMethod = CameraServiceGrpc.getGetStatusMethod) == null) {
+          CameraServiceGrpc.getGetStatusMethod = getGetStatusMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetStatusRequest, com.viam.common.v1.Common.GetStatusResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStatus"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetStatusRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetStatusResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetStatusMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
       com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
 
@@ -280,32 +250,10 @@ public final class CameraServiceGrpc {
   public interface AsyncService {
 
     /**
-     * <pre>
-     * GetImage returns a frame from a camera of the underlying robot. A specific MIME type
-     * can be requested but may not necessarily be the same one returned.
-     * </pre>
-     */
-    default void getImage(com.viam.component.camera.v1.Camera.GetImageRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.camera.v1.Camera.GetImageResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetImageMethod(), responseObserver);
-    }
-
-    /**
      */
     default void getImages(com.viam.component.camera.v1.Camera.GetImagesRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.camera.v1.Camera.GetImagesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetImagesMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * RenderFrame renders a frame from a camera of the underlying robot to an HTTP response. A specific MIME type
-     * can be requested but may not necessarily be the same one returned.
-     * </pre>
-     */
-    default void renderFrame(com.viam.component.camera.v1.Camera.RenderFrameRequest request,
-        io.grpc.stub.StreamObserver<com.google.api.HttpBody> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRenderFrameMethod(), responseObserver);
     }
 
     /**
@@ -321,7 +269,7 @@ public final class CameraServiceGrpc {
 
     /**
      * <pre>
-     * GetProperties returns the camera intrinsic parameters and camera distortion parameters from a camera of the underlying robot, if available.
+     * GetProperties returns the camera intrinsic parameters, camera distortion parameters, and extrinsic parameters from a camera of the underlying robot, if available.
      * </pre>
      */
     default void getProperties(com.viam.component.camera.v1.Camera.GetPropertiesRequest request,
@@ -337,6 +285,16 @@ public final class CameraServiceGrpc {
     default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
         io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    default void getStatus(com.viam.common.v1.Common.GetStatusRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStatusMethod(), responseObserver);
     }
 
     /**
@@ -384,35 +342,11 @@ public final class CameraServiceGrpc {
     }
 
     /**
-     * <pre>
-     * GetImage returns a frame from a camera of the underlying robot. A specific MIME type
-     * can be requested but may not necessarily be the same one returned.
-     * </pre>
-     */
-    public void getImage(com.viam.component.camera.v1.Camera.GetImageRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.camera.v1.Camera.GetImageResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetImageMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
      */
     public void getImages(com.viam.component.camera.v1.Camera.GetImagesRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.camera.v1.Camera.GetImagesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetImagesMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * RenderFrame renders a frame from a camera of the underlying robot to an HTTP response. A specific MIME type
-     * can be requested but may not necessarily be the same one returned.
-     * </pre>
-     */
-    public void renderFrame(com.viam.component.camera.v1.Camera.RenderFrameRequest request,
-        io.grpc.stub.StreamObserver<com.google.api.HttpBody> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getRenderFrameMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -429,7 +363,7 @@ public final class CameraServiceGrpc {
 
     /**
      * <pre>
-     * GetProperties returns the camera intrinsic parameters and camera distortion parameters from a camera of the underlying robot, if available.
+     * GetProperties returns the camera intrinsic parameters, camera distortion parameters, and extrinsic parameters from a camera of the underlying robot, if available.
      * </pre>
      */
     public void getProperties(com.viam.component.camera.v1.Camera.GetPropertiesRequest request,
@@ -447,6 +381,17 @@ public final class CameraServiceGrpc {
         io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public void getStatus(com.viam.common.v1.Common.GetStatusRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetStatusMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -481,32 +426,10 @@ public final class CameraServiceGrpc {
     }
 
     /**
-     * <pre>
-     * GetImage returns a frame from a camera of the underlying robot. A specific MIME type
-     * can be requested but may not necessarily be the same one returned.
-     * </pre>
-     */
-    public com.viam.component.camera.v1.Camera.GetImageResponse getImage(com.viam.component.camera.v1.Camera.GetImageRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetImageMethod(), getCallOptions(), request);
-    }
-
-    /**
      */
     public com.viam.component.camera.v1.Camera.GetImagesResponse getImages(com.viam.component.camera.v1.Camera.GetImagesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetImagesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * RenderFrame renders a frame from a camera of the underlying robot to an HTTP response. A specific MIME type
-     * can be requested but may not necessarily be the same one returned.
-     * </pre>
-     */
-    public com.google.api.HttpBody renderFrame(com.viam.component.camera.v1.Camera.RenderFrameRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getRenderFrameMethod(), getCallOptions(), request);
     }
 
     /**
@@ -522,7 +445,7 @@ public final class CameraServiceGrpc {
 
     /**
      * <pre>
-     * GetProperties returns the camera intrinsic parameters and camera distortion parameters from a camera of the underlying robot, if available.
+     * GetProperties returns the camera intrinsic parameters, camera distortion parameters, and extrinsic parameters from a camera of the underlying robot, if available.
      * </pre>
      */
     public com.viam.component.camera.v1.Camera.GetPropertiesResponse getProperties(com.viam.component.camera.v1.Camera.GetPropertiesRequest request) {
@@ -538,6 +461,16 @@ public final class CameraServiceGrpc {
     public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetStatusResponse getStatus(com.viam.common.v1.Common.GetStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetStatusMethod(), getCallOptions(), request);
     }
 
     /**
@@ -571,35 +504,11 @@ public final class CameraServiceGrpc {
     }
 
     /**
-     * <pre>
-     * GetImage returns a frame from a camera of the underlying robot. A specific MIME type
-     * can be requested but may not necessarily be the same one returned.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.camera.v1.Camera.GetImageResponse> getImage(
-        com.viam.component.camera.v1.Camera.GetImageRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetImageMethod(), getCallOptions()), request);
-    }
-
-    /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.viam.component.camera.v1.Camera.GetImagesResponse> getImages(
         com.viam.component.camera.v1.Camera.GetImagesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetImagesMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * RenderFrame renders a frame from a camera of the underlying robot to an HTTP response. A specific MIME type
-     * can be requested but may not necessarily be the same one returned.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.api.HttpBody> renderFrame(
-        com.viam.component.camera.v1.Camera.RenderFrameRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getRenderFrameMethod(), getCallOptions()), request);
     }
 
     /**
@@ -616,7 +525,7 @@ public final class CameraServiceGrpc {
 
     /**
      * <pre>
-     * GetProperties returns the camera intrinsic parameters and camera distortion parameters from a camera of the underlying robot, if available.
+     * GetProperties returns the camera intrinsic parameters, camera distortion parameters, and extrinsic parameters from a camera of the underlying robot, if available.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.viam.component.camera.v1.Camera.GetPropertiesResponse> getProperties(
@@ -638,6 +547,17 @@ public final class CameraServiceGrpc {
 
     /**
      * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetStatusResponse> getStatus(
+        com.viam.common.v1.Common.GetStatusRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetStatusMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetGeometries returns the geometries of the component in their current configuration
      * </pre>
      */
@@ -648,13 +568,12 @@ public final class CameraServiceGrpc {
     }
   }
 
-  private static final int METHODID_GET_IMAGE = 0;
-  private static final int METHODID_GET_IMAGES = 1;
-  private static final int METHODID_RENDER_FRAME = 2;
-  private static final int METHODID_GET_POINT_CLOUD = 3;
-  private static final int METHODID_GET_PROPERTIES = 4;
-  private static final int METHODID_DO_COMMAND = 5;
-  private static final int METHODID_GET_GEOMETRIES = 6;
+  private static final int METHODID_GET_IMAGES = 0;
+  private static final int METHODID_GET_POINT_CLOUD = 1;
+  private static final int METHODID_GET_PROPERTIES = 2;
+  private static final int METHODID_DO_COMMAND = 3;
+  private static final int METHODID_GET_STATUS = 4;
+  private static final int METHODID_GET_GEOMETRIES = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -673,17 +592,9 @@ public final class CameraServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_GET_IMAGE:
-          serviceImpl.getImage((com.viam.component.camera.v1.Camera.GetImageRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.component.camera.v1.Camera.GetImageResponse>) responseObserver);
-          break;
         case METHODID_GET_IMAGES:
           serviceImpl.getImages((com.viam.component.camera.v1.Camera.GetImagesRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.camera.v1.Camera.GetImagesResponse>) responseObserver);
-          break;
-        case METHODID_RENDER_FRAME:
-          serviceImpl.renderFrame((com.viam.component.camera.v1.Camera.RenderFrameRequest) request,
-              (io.grpc.stub.StreamObserver<com.google.api.HttpBody>) responseObserver);
           break;
         case METHODID_GET_POINT_CLOUD:
           serviceImpl.getPointCloud((com.viam.component.camera.v1.Camera.GetPointCloudRequest) request,
@@ -696,6 +607,10 @@ public final class CameraServiceGrpc {
         case METHODID_DO_COMMAND:
           serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_STATUS:
+          serviceImpl.getStatus((com.viam.common.v1.Common.GetStatusRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse>) responseObserver);
           break;
         case METHODID_GET_GEOMETRIES:
           serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
@@ -720,26 +635,12 @@ public final class CameraServiceGrpc {
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
         .addMethod(
-          getGetImageMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.viam.component.camera.v1.Camera.GetImageRequest,
-              com.viam.component.camera.v1.Camera.GetImageResponse>(
-                service, METHODID_GET_IMAGE)))
-        .addMethod(
           getGetImagesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.viam.component.camera.v1.Camera.GetImagesRequest,
               com.viam.component.camera.v1.Camera.GetImagesResponse>(
                 service, METHODID_GET_IMAGES)))
-        .addMethod(
-          getRenderFrameMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.viam.component.camera.v1.Camera.RenderFrameRequest,
-              com.google.api.HttpBody>(
-                service, METHODID_RENDER_FRAME)))
         .addMethod(
           getGetPointCloudMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -762,6 +663,13 @@ public final class CameraServiceGrpc {
               com.viam.common.v1.Common.DoCommandResponse>(
                 service, METHODID_DO_COMMAND)))
         .addMethod(
+          getGetStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetStatusRequest,
+              com.viam.common.v1.Common.GetStatusResponse>(
+                service, METHODID_GET_STATUS)))
+        .addMethod(
           getGetGeometriesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -780,12 +688,11 @@ public final class CameraServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .addMethod(getGetImageMethod())
               .addMethod(getGetImagesMethod())
-              .addMethod(getRenderFrameMethod())
               .addMethod(getGetPointCloudMethod())
               .addMethod(getGetPropertiesMethod())
               .addMethod(getDoCommandMethod())
+              .addMethod(getGetStatusMethod())
               .addMethod(getGetGeometriesMethod())
               .build();
         }

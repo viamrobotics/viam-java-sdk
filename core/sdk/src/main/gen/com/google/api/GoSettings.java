@@ -122,6 +122,8 @@ public  final class GoSettings extends
    * service names and values are the name to be used for the service client
    * and call options.
    *
+   * Example:
+   *
    * publishing:
    * go_settings:
    * renamed_services:
@@ -151,6 +153,8 @@ public  final class GoSettings extends
    * service names and values are the name to be used for the service client
    * and call options.
    *
+   * Example:
+   *
    * publishing:
    * go_settings:
    * renamed_services:
@@ -170,6 +174,8 @@ public  final class GoSettings extends
    * Map of service names to renamed services. Keys are the package relative
    * service names and values are the name to be used for the service client
    * and call options.
+   *
+   * Example:
    *
    * publishing:
    * go_settings:
@@ -197,6 +203,8 @@ java.lang.String defaultValue) {
    * service names and values are the name to be used for the service client
    * and call options.
    *
+   * Example:
+   *
    * publishing:
    * go_settings:
    * renamed_services:
@@ -222,6 +230,8 @@ java.lang.String defaultValue) {
    * Map of service names to renamed services. Keys are the package relative
    * service names and values are the name to be used for the service client
    * and call options.
+   *
+   * Example:
    *
    * publishing:
    * go_settings:
@@ -419,6 +429,8 @@ java.lang.String defaultValue) {
      * service names and values are the name to be used for the service client
      * and call options.
      *
+     * Example:
+     *
      * publishing:
      * go_settings:
      * renamed_services:
@@ -445,6 +457,8 @@ java.lang.String defaultValue) {
      * Map of service names to renamed services. Keys are the package relative
      * service names and values are the name to be used for the service client
      * and call options.
+     *
+     * Example:
      *
      * publishing:
      * go_settings:
@@ -476,6 +490,8 @@ java.lang.String defaultValue) {
      * service names and values are the name to be used for the service client
      * and call options.
      *
+     * Example:
+     *
      * publishing:
      * go_settings:
      * renamed_services:
@@ -494,6 +510,8 @@ java.lang.String defaultValue) {
      * Map of service names to renamed services. Keys are the package relative
      * service names and values are the name to be used for the service client
      * and call options.
+     *
+     * Example:
      *
      * publishing:
      * go_settings:
@@ -521,6 +539,8 @@ java.lang.String defaultValue) {
      * service names and values are the name to be used for the service client
      * and call options.
      *
+     * Example:
+     *
      * publishing:
      * go_settings:
      * renamed_services:
@@ -547,6 +567,8 @@ java.lang.String defaultValue) {
      * service names and values are the name to be used for the service client
      * and call options.
      *
+     * Example:
+     *
      * publishing:
      * go_settings:
      * renamed_services:
@@ -569,6 +591,8 @@ java.lang.String defaultValue) {
      * Map of service names to renamed services. Keys are the package relative
      * service names and values are the name to be used for the service client
      * and call options.
+     *
+     * Example:
      *
      * publishing:
      * go_settings:

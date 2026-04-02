@@ -108,6 +108,36 @@ public final class AudioOutServiceGrpc {
     return getDoCommandMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest,
+      com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetStatus",
+      requestType = com.viam.common.v1.Common.GetStatusRequest.class,
+      responseType = com.viam.common.v1.Common.GetStatusResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest,
+      com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest, com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod;
+    if ((getGetStatusMethod = AudioOutServiceGrpc.getGetStatusMethod) == null) {
+      synchronized (AudioOutServiceGrpc.class) {
+        if ((getGetStatusMethod = AudioOutServiceGrpc.getGetStatusMethod) == null) {
+          AudioOutServiceGrpc.getGetStatusMethod = getGetStatusMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetStatusRequest, com.viam.common.v1.Common.GetStatusResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStatus"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetStatusRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetStatusResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetStatusMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
       com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
 
@@ -221,6 +251,16 @@ public final class AudioOutServiceGrpc {
 
     /**
      * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    default void getStatus(com.viam.common.v1.Common.GetStatusRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStatusMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetGeometries returns the geometries of the component in their current configuration
      * </pre>
      */
@@ -298,6 +338,17 @@ public final class AudioOutServiceGrpc {
 
     /**
      * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public void getStatus(com.viam.common.v1.Common.GetStatusRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetStatusMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetGeometries returns the geometries of the component in their current configuration
      * </pre>
      */
@@ -355,6 +406,16 @@ public final class AudioOutServiceGrpc {
     public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetStatusResponse getStatus(com.viam.common.v1.Common.GetStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetStatusMethod(), getCallOptions(), request);
     }
 
     /**
@@ -422,6 +483,17 @@ public final class AudioOutServiceGrpc {
 
     /**
      * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetStatusResponse> getStatus(
+        com.viam.common.v1.Common.GetStatusRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetStatusMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetGeometries returns the geometries of the component in their current configuration
      * </pre>
      */
@@ -435,7 +507,8 @@ public final class AudioOutServiceGrpc {
   private static final int METHODID_PLAY = 0;
   private static final int METHODID_GET_PROPERTIES = 1;
   private static final int METHODID_DO_COMMAND = 2;
-  private static final int METHODID_GET_GEOMETRIES = 3;
+  private static final int METHODID_GET_STATUS = 3;
+  private static final int METHODID_GET_GEOMETRIES = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -465,6 +538,10 @@ public final class AudioOutServiceGrpc {
         case METHODID_DO_COMMAND:
           serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_STATUS:
+          serviceImpl.getStatus((com.viam.common.v1.Common.GetStatusRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse>) responseObserver);
           break;
         case METHODID_GET_GEOMETRIES:
           serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
@@ -510,6 +587,13 @@ public final class AudioOutServiceGrpc {
               com.viam.common.v1.Common.DoCommandResponse>(
                 service, METHODID_DO_COMMAND)))
         .addMethod(
+          getGetStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetStatusRequest,
+              com.viam.common.v1.Common.GetStatusResponse>(
+                service, METHODID_GET_STATUS)))
+        .addMethod(
           getGetGeometriesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -531,6 +615,7 @@ public final class AudioOutServiceGrpc {
               .addMethod(getPlayMethod())
               .addMethod(getGetPropertiesMethod())
               .addMethod(getDoCommandMethod())
+              .addMethod(getGetStatusMethod())
               .addMethod(getGetGeometriesMethod())
               .build();
         }

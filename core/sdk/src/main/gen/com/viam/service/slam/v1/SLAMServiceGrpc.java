@@ -168,6 +168,36 @@ public final class SLAMServiceGrpc {
     return getDoCommandMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest,
+      com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetStatus",
+      requestType = com.viam.common.v1.Common.GetStatusRequest.class,
+      responseType = com.viam.common.v1.Common.GetStatusResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest,
+      com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetStatusRequest, com.viam.common.v1.Common.GetStatusResponse> getGetStatusMethod;
+    if ((getGetStatusMethod = SLAMServiceGrpc.getGetStatusMethod) == null) {
+      synchronized (SLAMServiceGrpc.class) {
+        if ((getGetStatusMethod = SLAMServiceGrpc.getGetStatusMethod) == null) {
+          SLAMServiceGrpc.getGetStatusMethod = getGetStatusMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetStatusRequest, com.viam.common.v1.Common.GetStatusResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStatus"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetStatusRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.common.v1.Common.GetStatusResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetStatusMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -274,6 +304,16 @@ public final class SLAMServiceGrpc {
         io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    default void getStatus(com.viam.common.v1.Common.GetStatusRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStatusMethod(), responseObserver);
+    }
   }
 
   /**
@@ -369,6 +409,17 @@ public final class SLAMServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public void getStatus(com.viam.common.v1.Common.GetStatusRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetStatusMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -447,6 +498,16 @@ public final class SLAMServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDoCommandMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetStatusResponse getStatus(com.viam.common.v1.Common.GetStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetStatusMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -503,6 +564,17 @@ public final class SLAMServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GetStatus returns the status of the resource
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetStatusResponse> getStatus(
+        com.viam.common.v1.Common.GetStatusRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetStatusMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_POSITION = 0;
@@ -510,6 +582,7 @@ public final class SLAMServiceGrpc {
   private static final int METHODID_GET_INTERNAL_STATE = 2;
   private static final int METHODID_GET_PROPERTIES = 3;
   private static final int METHODID_DO_COMMAND = 4;
+  private static final int METHODID_GET_STATUS = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -547,6 +620,10 @@ public final class SLAMServiceGrpc {
         case METHODID_DO_COMMAND:
           serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_STATUS:
+          serviceImpl.getStatus((com.viam.common.v1.Common.GetStatusRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetStatusResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -601,6 +678,13 @@ public final class SLAMServiceGrpc {
               com.viam.common.v1.Common.DoCommandRequest,
               com.viam.common.v1.Common.DoCommandResponse>(
                 service, METHODID_DO_COMMAND)))
+        .addMethod(
+          getGetStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetStatusRequest,
+              com.viam.common.v1.Common.GetStatusResponse>(
+                service, METHODID_GET_STATUS)))
         .build();
   }
 
@@ -618,6 +702,7 @@ public final class SLAMServiceGrpc {
               .addMethod(getGetInternalStateMethod())
               .addMethod(getGetPropertiesMethod())
               .addMethod(getDoCommandMethod())
+              .addMethod(getGetStatusMethod())
               .build();
         }
       }

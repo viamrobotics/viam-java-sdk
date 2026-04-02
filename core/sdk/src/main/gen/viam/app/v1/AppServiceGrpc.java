@@ -3288,6 +3288,186 @@ public final class AppServiceGrpc {
     return getGetAppBrandingMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.UploadDevicePushTokenRequest,
+      viam.app.v1.AppOuterClass.UploadDevicePushTokenResponse> getUploadDevicePushTokenMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UploadDevicePushToken",
+      requestType = viam.app.v1.AppOuterClass.UploadDevicePushTokenRequest.class,
+      responseType = viam.app.v1.AppOuterClass.UploadDevicePushTokenResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.UploadDevicePushTokenRequest,
+      viam.app.v1.AppOuterClass.UploadDevicePushTokenResponse> getUploadDevicePushTokenMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.UploadDevicePushTokenRequest, viam.app.v1.AppOuterClass.UploadDevicePushTokenResponse> getUploadDevicePushTokenMethod;
+    if ((getUploadDevicePushTokenMethod = AppServiceGrpc.getUploadDevicePushTokenMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getUploadDevicePushTokenMethod = AppServiceGrpc.getUploadDevicePushTokenMethod) == null) {
+          AppServiceGrpc.getUploadDevicePushTokenMethod = getUploadDevicePushTokenMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.UploadDevicePushTokenRequest, viam.app.v1.AppOuterClass.UploadDevicePushTokenResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadDevicePushToken"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.UploadDevicePushTokenRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.UploadDevicePushTokenResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUploadDevicePushTokenMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.DeleteDevicePushTokenRequest,
+      viam.app.v1.AppOuterClass.DeleteDevicePushTokenResponse> getDeleteDevicePushTokenMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteDevicePushToken",
+      requestType = viam.app.v1.AppOuterClass.DeleteDevicePushTokenRequest.class,
+      responseType = viam.app.v1.AppOuterClass.DeleteDevicePushTokenResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.DeleteDevicePushTokenRequest,
+      viam.app.v1.AppOuterClass.DeleteDevicePushTokenResponse> getDeleteDevicePushTokenMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.DeleteDevicePushTokenRequest, viam.app.v1.AppOuterClass.DeleteDevicePushTokenResponse> getDeleteDevicePushTokenMethod;
+    if ((getDeleteDevicePushTokenMethod = AppServiceGrpc.getDeleteDevicePushTokenMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getDeleteDevicePushTokenMethod = AppServiceGrpc.getDeleteDevicePushTokenMethod) == null) {
+          AppServiceGrpc.getDeleteDevicePushTokenMethod = getDeleteDevicePushTokenMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.DeleteDevicePushTokenRequest, viam.app.v1.AppOuterClass.DeleteDevicePushTokenResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteDevicePushToken"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.DeleteDevicePushTokenRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.DeleteDevicePushTokenResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getDeleteDevicePushTokenMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.GetDevicePushTokensRequest,
+      viam.app.v1.AppOuterClass.GetDevicePushTokensResponse> getGetDevicePushTokensMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDevicePushTokens",
+      requestType = viam.app.v1.AppOuterClass.GetDevicePushTokensRequest.class,
+      responseType = viam.app.v1.AppOuterClass.GetDevicePushTokensResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.GetDevicePushTokensRequest,
+      viam.app.v1.AppOuterClass.GetDevicePushTokensResponse> getGetDevicePushTokensMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.GetDevicePushTokensRequest, viam.app.v1.AppOuterClass.GetDevicePushTokensResponse> getGetDevicePushTokensMethod;
+    if ((getGetDevicePushTokensMethod = AppServiceGrpc.getGetDevicePushTokensMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getGetDevicePushTokensMethod = AppServiceGrpc.getGetDevicePushTokensMethod) == null) {
+          AppServiceGrpc.getGetDevicePushTokensMethod = getGetDevicePushTokensMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.GetDevicePushTokensRequest, viam.app.v1.AppOuterClass.GetDevicePushTokensResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDevicePushTokens"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.GetDevicePushTokensRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.GetDevicePushTokensResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetDevicePushTokensMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.SetFirebaseConfigRequest,
+      viam.app.v1.AppOuterClass.SetFirebaseConfigResponse> getSetFirebaseConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetFirebaseConfig",
+      requestType = viam.app.v1.AppOuterClass.SetFirebaseConfigRequest.class,
+      responseType = viam.app.v1.AppOuterClass.SetFirebaseConfigResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.SetFirebaseConfigRequest,
+      viam.app.v1.AppOuterClass.SetFirebaseConfigResponse> getSetFirebaseConfigMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.SetFirebaseConfigRequest, viam.app.v1.AppOuterClass.SetFirebaseConfigResponse> getSetFirebaseConfigMethod;
+    if ((getSetFirebaseConfigMethod = AppServiceGrpc.getSetFirebaseConfigMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getSetFirebaseConfigMethod = AppServiceGrpc.getSetFirebaseConfigMethod) == null) {
+          AppServiceGrpc.getSetFirebaseConfigMethod = getSetFirebaseConfigMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.SetFirebaseConfigRequest, viam.app.v1.AppOuterClass.SetFirebaseConfigResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetFirebaseConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.SetFirebaseConfigRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.SetFirebaseConfigResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getSetFirebaseConfigMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.GetFirebaseConfigRequest,
+      viam.app.v1.AppOuterClass.GetFirebaseConfigResponse> getGetFirebaseConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetFirebaseConfig",
+      requestType = viam.app.v1.AppOuterClass.GetFirebaseConfigRequest.class,
+      responseType = viam.app.v1.AppOuterClass.GetFirebaseConfigResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.GetFirebaseConfigRequest,
+      viam.app.v1.AppOuterClass.GetFirebaseConfigResponse> getGetFirebaseConfigMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.GetFirebaseConfigRequest, viam.app.v1.AppOuterClass.GetFirebaseConfigResponse> getGetFirebaseConfigMethod;
+    if ((getGetFirebaseConfigMethod = AppServiceGrpc.getGetFirebaseConfigMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getGetFirebaseConfigMethod = AppServiceGrpc.getGetFirebaseConfigMethod) == null) {
+          AppServiceGrpc.getGetFirebaseConfigMethod = getGetFirebaseConfigMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.GetFirebaseConfigRequest, viam.app.v1.AppOuterClass.GetFirebaseConfigResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetFirebaseConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.GetFirebaseConfigRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.GetFirebaseConfigResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetFirebaseConfigMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.DeleteFirebaseConfigRequest,
+      viam.app.v1.AppOuterClass.DeleteFirebaseConfigResponse> getDeleteFirebaseConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteFirebaseConfig",
+      requestType = viam.app.v1.AppOuterClass.DeleteFirebaseConfigRequest.class,
+      responseType = viam.app.v1.AppOuterClass.DeleteFirebaseConfigResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.DeleteFirebaseConfigRequest,
+      viam.app.v1.AppOuterClass.DeleteFirebaseConfigResponse> getDeleteFirebaseConfigMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.DeleteFirebaseConfigRequest, viam.app.v1.AppOuterClass.DeleteFirebaseConfigResponse> getDeleteFirebaseConfigMethod;
+    if ((getDeleteFirebaseConfigMethod = AppServiceGrpc.getDeleteFirebaseConfigMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getDeleteFirebaseConfigMethod = AppServiceGrpc.getDeleteFirebaseConfigMethod) == null) {
+          AppServiceGrpc.getDeleteFirebaseConfigMethod = getDeleteFirebaseConfigMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.DeleteFirebaseConfigRequest, viam.app.v1.AppOuterClass.DeleteFirebaseConfigResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteFirebaseConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.DeleteFirebaseConfigRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.DeleteFirebaseConfigResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getDeleteFirebaseConfigMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -4319,6 +4499,67 @@ public final class AppServiceGrpc {
     default void getAppBranding(viam.app.v1.AppOuterClass.GetAppBrandingRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetAppBrandingResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAppBrandingMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Upload a device push token for the user.
+     * </pre>
+     */
+    default void uploadDevicePushToken(viam.app.v1.AppOuterClass.UploadDevicePushTokenRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.UploadDevicePushTokenResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadDevicePushTokenMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Delete a device push token for the user.
+     * </pre>
+     */
+    default void deleteDevicePushToken(viam.app.v1.AppOuterClass.DeleteDevicePushTokenRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeleteDevicePushTokenResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDevicePushTokenMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets all device push tokens for the user for the given app ID.
+     * </pre>
+     */
+    default void getDevicePushTokens(viam.app.v1.AppOuterClass.GetDevicePushTokensRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetDevicePushTokensResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDevicePushTokensMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Set the Firebase config JSON for a specific app id.
+     * </pre>
+     */
+    default void setFirebaseConfig(viam.app.v1.AppOuterClass.SetFirebaseConfigRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.SetFirebaseConfigResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetFirebaseConfigMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Read the app ID for an organization.
+     * This returns only the app_id configured for the org, not the Firebase config JSON.
+     * </pre>
+     */
+    default void getFirebaseConfig(viam.app.v1.AppOuterClass.GetFirebaseConfigRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetFirebaseConfigResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFirebaseConfigMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a Firebase config JSON for a specific app id.
+     * </pre>
+     */
+    default void deleteFirebaseConfig(viam.app.v1.AppOuterClass.DeleteFirebaseConfigRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeleteFirebaseConfigResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFirebaseConfigMethod(), responseObserver);
     }
   }
 
@@ -5445,6 +5686,73 @@ public final class AppServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAppBrandingMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Upload a device push token for the user.
+     * </pre>
+     */
+    public void uploadDevicePushToken(viam.app.v1.AppOuterClass.UploadDevicePushTokenRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.UploadDevicePushTokenResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUploadDevicePushTokenMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Delete a device push token for the user.
+     * </pre>
+     */
+    public void deleteDevicePushToken(viam.app.v1.AppOuterClass.DeleteDevicePushTokenRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeleteDevicePushTokenResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteDevicePushTokenMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets all device push tokens for the user for the given app ID.
+     * </pre>
+     */
+    public void getDevicePushTokens(viam.app.v1.AppOuterClass.GetDevicePushTokensRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetDevicePushTokensResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDevicePushTokensMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Set the Firebase config JSON for a specific app id.
+     * </pre>
+     */
+    public void setFirebaseConfig(viam.app.v1.AppOuterClass.SetFirebaseConfigRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.SetFirebaseConfigResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetFirebaseConfigMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Read the app ID for an organization.
+     * This returns only the app_id configured for the org, not the Firebase config JSON.
+     * </pre>
+     */
+    public void getFirebaseConfig(viam.app.v1.AppOuterClass.GetFirebaseConfigRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetFirebaseConfigResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetFirebaseConfigMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a Firebase config JSON for a specific app id.
+     * </pre>
+     */
+    public void deleteFirebaseConfig(viam.app.v1.AppOuterClass.DeleteFirebaseConfigRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeleteFirebaseConfigResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteFirebaseConfigMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -6440,6 +6748,67 @@ public final class AppServiceGrpc {
     public viam.app.v1.AppOuterClass.GetAppBrandingResponse getAppBranding(viam.app.v1.AppOuterClass.GetAppBrandingRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAppBrandingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Upload a device push token for the user.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.UploadDevicePushTokenResponse uploadDevicePushToken(viam.app.v1.AppOuterClass.UploadDevicePushTokenRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUploadDevicePushTokenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete a device push token for the user.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.DeleteDevicePushTokenResponse deleteDevicePushToken(viam.app.v1.AppOuterClass.DeleteDevicePushTokenRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteDevicePushTokenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets all device push tokens for the user for the given app ID.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetDevicePushTokensResponse getDevicePushTokens(viam.app.v1.AppOuterClass.GetDevicePushTokensRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDevicePushTokensMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Set the Firebase config JSON for a specific app id.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.SetFirebaseConfigResponse setFirebaseConfig(viam.app.v1.AppOuterClass.SetFirebaseConfigRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetFirebaseConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Read the app ID for an organization.
+     * This returns only the app_id configured for the org, not the Firebase config JSON.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetFirebaseConfigResponse getFirebaseConfig(viam.app.v1.AppOuterClass.GetFirebaseConfigRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetFirebaseConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a Firebase config JSON for a specific app id.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.DeleteFirebaseConfigResponse deleteFirebaseConfig(viam.app.v1.AppOuterClass.DeleteFirebaseConfigRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteFirebaseConfigMethod(), getCallOptions(), request);
     }
   }
 
@@ -7536,6 +7905,73 @@ public final class AppServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAppBrandingMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Upload a device push token for the user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.UploadDevicePushTokenResponse> uploadDevicePushToken(
+        viam.app.v1.AppOuterClass.UploadDevicePushTokenRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUploadDevicePushTokenMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Delete a device push token for the user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.DeleteDevicePushTokenResponse> deleteDevicePushToken(
+        viam.app.v1.AppOuterClass.DeleteDevicePushTokenRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteDevicePushTokenMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets all device push tokens for the user for the given app ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.GetDevicePushTokensResponse> getDevicePushTokens(
+        viam.app.v1.AppOuterClass.GetDevicePushTokensRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDevicePushTokensMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Set the Firebase config JSON for a specific app id.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.SetFirebaseConfigResponse> setFirebaseConfig(
+        viam.app.v1.AppOuterClass.SetFirebaseConfigRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetFirebaseConfigMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Read the app ID for an organization.
+     * This returns only the app_id configured for the org, not the Firebase config JSON.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.GetFirebaseConfigResponse> getFirebaseConfig(
+        viam.app.v1.AppOuterClass.GetFirebaseConfigRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetFirebaseConfigMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a Firebase config JSON for a specific app id.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.DeleteFirebaseConfigResponse> deleteFirebaseConfig(
+        viam.app.v1.AppOuterClass.DeleteFirebaseConfigRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteFirebaseConfigMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_USER_IDBY_EMAIL = 0;
@@ -7646,7 +8082,13 @@ public final class AppServiceGrpc {
   private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 105;
   private static final int METHODID_GET_APP_CONTENT = 106;
   private static final int METHODID_GET_APP_BRANDING = 107;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 108;
+  private static final int METHODID_UPLOAD_DEVICE_PUSH_TOKEN = 108;
+  private static final int METHODID_DELETE_DEVICE_PUSH_TOKEN = 109;
+  private static final int METHODID_GET_DEVICE_PUSH_TOKENS = 110;
+  private static final int METHODID_SET_FIREBASE_CONFIG = 111;
+  private static final int METHODID_GET_FIREBASE_CONFIG = 112;
+  private static final int METHODID_DELETE_FIREBASE_CONFIG = 113;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 114;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -8096,6 +8538,30 @@ public final class AppServiceGrpc {
         case METHODID_GET_APP_BRANDING:
           serviceImpl.getAppBranding((viam.app.v1.AppOuterClass.GetAppBrandingRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetAppBrandingResponse>) responseObserver);
+          break;
+        case METHODID_UPLOAD_DEVICE_PUSH_TOKEN:
+          serviceImpl.uploadDevicePushToken((viam.app.v1.AppOuterClass.UploadDevicePushTokenRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.UploadDevicePushTokenResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_DEVICE_PUSH_TOKEN:
+          serviceImpl.deleteDevicePushToken((viam.app.v1.AppOuterClass.DeleteDevicePushTokenRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeleteDevicePushTokenResponse>) responseObserver);
+          break;
+        case METHODID_GET_DEVICE_PUSH_TOKENS:
+          serviceImpl.getDevicePushTokens((viam.app.v1.AppOuterClass.GetDevicePushTokensRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetDevicePushTokensResponse>) responseObserver);
+          break;
+        case METHODID_SET_FIREBASE_CONFIG:
+          serviceImpl.setFirebaseConfig((viam.app.v1.AppOuterClass.SetFirebaseConfigRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.SetFirebaseConfigResponse>) responseObserver);
+          break;
+        case METHODID_GET_FIREBASE_CONFIG:
+          serviceImpl.getFirebaseConfig((viam.app.v1.AppOuterClass.GetFirebaseConfigRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.GetFirebaseConfigResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_FIREBASE_CONFIG:
+          serviceImpl.deleteFirebaseConfig((viam.app.v1.AppOuterClass.DeleteFirebaseConfigRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeleteFirebaseConfigResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -8881,6 +9347,48 @@ public final class AppServiceGrpc {
               viam.app.v1.AppOuterClass.GetAppBrandingRequest,
               viam.app.v1.AppOuterClass.GetAppBrandingResponse>(
                 service, METHODID_GET_APP_BRANDING)))
+        .addMethod(
+          getUploadDevicePushTokenMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.UploadDevicePushTokenRequest,
+              viam.app.v1.AppOuterClass.UploadDevicePushTokenResponse>(
+                service, METHODID_UPLOAD_DEVICE_PUSH_TOKEN)))
+        .addMethod(
+          getDeleteDevicePushTokenMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.DeleteDevicePushTokenRequest,
+              viam.app.v1.AppOuterClass.DeleteDevicePushTokenResponse>(
+                service, METHODID_DELETE_DEVICE_PUSH_TOKEN)))
+        .addMethod(
+          getGetDevicePushTokensMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.GetDevicePushTokensRequest,
+              viam.app.v1.AppOuterClass.GetDevicePushTokensResponse>(
+                service, METHODID_GET_DEVICE_PUSH_TOKENS)))
+        .addMethod(
+          getSetFirebaseConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.SetFirebaseConfigRequest,
+              viam.app.v1.AppOuterClass.SetFirebaseConfigResponse>(
+                service, METHODID_SET_FIREBASE_CONFIG)))
+        .addMethod(
+          getGetFirebaseConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.GetFirebaseConfigRequest,
+              viam.app.v1.AppOuterClass.GetFirebaseConfigResponse>(
+                service, METHODID_GET_FIREBASE_CONFIG)))
+        .addMethod(
+          getDeleteFirebaseConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.DeleteFirebaseConfigRequest,
+              viam.app.v1.AppOuterClass.DeleteFirebaseConfigResponse>(
+                service, METHODID_DELETE_FIREBASE_CONFIG)))
         .build();
   }
 
@@ -9002,6 +9510,12 @@ public final class AppServiceGrpc {
               .addMethod(getCreateKeyFromExistingKeyAuthorizationsMethod())
               .addMethod(getGetAppContentMethod())
               .addMethod(getGetAppBrandingMethod())
+              .addMethod(getUploadDevicePushTokenMethod())
+              .addMethod(getDeleteDevicePushTokenMethod())
+              .addMethod(getGetDevicePushTokensMethod())
+              .addMethod(getSetFirebaseConfigMethod())
+              .addMethod(getGetFirebaseConfigMethod())
+              .addMethod(getDeleteFirebaseConfigMethod())
               .build();
         }
       }
