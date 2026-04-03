@@ -32,8 +32,8 @@ See examples for more information:
 
 ## Dependencies
 
-* JDK 21+ (source is Java 11 compatible) (be sure to set `JAVA_HOME`)
-* Run `make setup buf`
+* JDK 21+ (source is Java 17 compatible) (be sure to set `JAVA_HOME`)
+* Run `make buf`
 
 
 ## Examples
