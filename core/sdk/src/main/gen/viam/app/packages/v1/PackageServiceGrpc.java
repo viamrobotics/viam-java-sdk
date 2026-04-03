@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: app/packages/v1/packages.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class PackageServiceGrpc {
 
@@ -147,6 +144,21 @@ public final class PackageServiceGrpc {
         }
       };
     return PackageServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static PackageServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<PackageServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PackageServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public PackageServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PackageServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return PackageServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -304,6 +316,68 @@ public final class PackageServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service PackageService.
+   */
+  public static final class PackageServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<PackageServiceBlockingV2Stub> {
+    private PackageServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected PackageServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new PackageServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * CreatePackage uploads a package to the cloud
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<viam.app.packages.v1.Packages.CreatePackageRequest, viam.app.packages.v1.Packages.CreatePackageResponse>
+        createPackage() {
+      return io.grpc.stub.ClientCalls.blockingClientStreamingCall(
+          getChannel(), getCreatePackageMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * DeletePackage removes the given package versions
+     * </pre>
+     */
+    public viam.app.packages.v1.Packages.DeletePackageResponse deletePackage(viam.app.packages.v1.Packages.DeletePackageRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeletePackageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetPackage returns the metadata for a requested package version. It also returns a URL
+     * for downloading the package if one is requested.
+     * </pre>
+     */
+    public viam.app.packages.v1.Packages.GetPackageResponse getPackage(viam.app.packages.v1.Packages.GetPackageRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPackageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListPackages gets the metadata for the requested packages. Includes package name, version, and/or
+     * type to filter beyond the required organization_id. ListPackages also returns URLs for
+     * downloading each package if they are requested.
+     * </pre>
+     */
+    public viam.app.packages.v1.Packages.ListPackagesResponse listPackages(viam.app.packages.v1.Packages.ListPackagesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListPackagesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service PackageService.
    */
   public static final class PackageServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<PackageServiceBlockingStub> {

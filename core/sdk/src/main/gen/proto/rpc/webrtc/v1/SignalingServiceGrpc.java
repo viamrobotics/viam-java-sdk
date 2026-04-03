@@ -8,9 +8,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * client using the Session Description Protocol (SDP).
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: proto/rpc/webrtc/v1/signaling.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SignalingServiceGrpc {
 
@@ -151,6 +148,21 @@ public final class SignalingServiceGrpc {
         }
       };
     return SignalingServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static SignalingServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<SignalingServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SignalingServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public SignalingServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SignalingServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return SignalingServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -342,6 +354,85 @@ public final class SignalingServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service SignalingService.
+   * <pre>
+   * A SignalingService provides the means to have one client "call" another
+   * client using the Session Description Protocol (SDP).
+   * </pre>
+   */
+  public static final class SignalingServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<SignalingServiceBlockingV2Stub> {
+    private SignalingServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected SignalingServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new SignalingServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Call makes an offer to a client that it expects an answer to. The host
+     * of the client in question should be identified in the rpc-host metadata
+     * field.
+     * Note: Based on how this is a server streaming responnse to the caller,
+     * we do not have a good way of knowing if the caller has disappeared.
+     * Depending on answerer timeouts and concurrency limits, this can result in
+     * hangs on the answerer waiting for a connection to establish, which in turn
+     * can result in the caller waiting for an answerer to be listening.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, proto.rpc.webrtc.v1.Signaling.CallResponse>
+        call(proto.rpc.webrtc.v1.Signaling.CallRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getCallMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CallUpdate is used to send additional info in relation to a Call.
+     * The host of the client for the call in question should be identified
+     * in the rpc-host metadata field.
+     * In a world where https://github.com/grpc/grpc-web/issues/24 is fixed,
+     * this should be removed in favor of a bidirectional stream on Call.
+     * </pre>
+     */
+    public proto.rpc.webrtc.v1.Signaling.CallUpdateResponse callUpdate(proto.rpc.webrtc.v1.Signaling.CallUpdateRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCallUpdateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Answer sets up an answering service where the caller answers call offers
+     * and responds with answers.
+     * The host(s) to answer for should be in the rpc-host metadata field.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<proto.rpc.webrtc.v1.Signaling.AnswerResponse, proto.rpc.webrtc.v1.Signaling.AnswerRequest>
+        answer() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getAnswerMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * OptionalWebRTCConfig returns any WebRTC configuration the caller may want to use.
+     * The host to get a config for must be in the rpc-host metadata field.
+     * </pre>
+     */
+    public proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse optionalWebRTCConfig(proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getOptionalWebRTCConfigMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service SignalingService.
    * <pre>
    * A SignalingService provides the means to have one client "call" another
    * client using the Session Description Protocol (SDP).

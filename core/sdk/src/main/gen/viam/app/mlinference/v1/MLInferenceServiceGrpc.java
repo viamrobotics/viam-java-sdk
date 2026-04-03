@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: app/mlinference/v1/ml_inference.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MLInferenceServiceGrpc {
 
@@ -57,6 +54,21 @@ public final class MLInferenceServiceGrpc {
         }
       };
     return MLInferenceServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static MLInferenceServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<MLInferenceServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MLInferenceServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public MLInferenceServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MLInferenceServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return MLInferenceServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -139,6 +151,30 @@ public final class MLInferenceServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service MLInferenceService.
+   */
+  public static final class MLInferenceServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<MLInferenceServiceBlockingV2Stub> {
+    private MLInferenceServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected MLInferenceServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new MLInferenceServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public viam.app.mlinference.v1.MlInference.GetInferenceResponse getInference(viam.app.mlinference.v1.MlInference.GetInferenceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetInferenceMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service MLInferenceService.
    */
   public static final class MLInferenceServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<MLInferenceServiceBlockingStub> {

@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * PowerSensorService services all power sensors associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/powersensor/v1/powersensor.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class PowerSensorServiceGrpc {
 
@@ -180,6 +177,21 @@ public final class PowerSensorServiceGrpc {
         }
       };
     return PowerSensorServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static PowerSensorServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<PowerSensorServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PowerSensorServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public PowerSensorServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PowerSensorServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return PowerSensorServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -361,6 +373,76 @@ public final class PowerSensorServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service PowerSensorService.
+   * <pre>
+   * PowerSensorService services all power sensors associated with a robot
+   * </pre>
+   */
+  public static final class PowerSensorServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<PowerSensorServiceBlockingV2Stub> {
+    private PowerSensorServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected PowerSensorServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new PowerSensorServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * GetVoltage returns the voltage reading of a power sensor in volts
+     * </pre>
+     */
+    public com.viam.component.powersensor.v1.Powersensor.GetVoltageResponse getVoltage(com.viam.component.powersensor.v1.Powersensor.GetVoltageRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetVoltageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetCurrent returns the current reading of a power sensor in amperes
+     * </pre>
+     */
+    public com.viam.component.powersensor.v1.Powersensor.GetCurrentResponse getCurrent(com.viam.component.powersensor.v1.Powersensor.GetCurrentRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetCurrentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetPower returns the power reading of a power sensor in watts
+     * </pre>
+     */
+    public com.viam.component.powersensor.v1.Powersensor.GetPowerResponse getPower(com.viam.component.powersensor.v1.Powersensor.GetPowerRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPowerMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetReadings returns the readings of a sensor of the underlying robot.
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetReadingsResponse getReadings(com.viam.common.v1.Common.GetReadingsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetReadingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service PowerSensorService.
    * <pre>
    * PowerSensorService services all power sensors associated with a robot
    * </pre>

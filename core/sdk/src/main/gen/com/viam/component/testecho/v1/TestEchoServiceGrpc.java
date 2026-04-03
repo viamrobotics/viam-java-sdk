@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/testecho/v1/testecho.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class TestEchoServiceGrpc {
 
@@ -150,6 +147,21 @@ public final class TestEchoServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static TestEchoServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<TestEchoServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TestEchoServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public TestEchoServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TestEchoServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return TestEchoServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static TestEchoServiceBlockingStub newBlockingStub(
@@ -274,6 +286,55 @@ public final class TestEchoServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service TestEchoService.
+   */
+  public static final class TestEchoServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<TestEchoServiceBlockingV2Stub> {
+    private TestEchoServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected TestEchoServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new TestEchoServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.viam.component.testecho.v1.Testecho.EchoResponse echo(com.viam.component.testecho.v1.Testecho.EchoRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getEchoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, com.viam.component.testecho.v1.Testecho.EchoMultipleResponse>
+        echoMultiple(com.viam.component.testecho.v1.Testecho.EchoMultipleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getEchoMultipleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<com.viam.component.testecho.v1.Testecho.EchoBiDiRequest, com.viam.component.testecho.v1.Testecho.EchoBiDiResponse>
+        echoBiDi() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getEchoBiDiMethod(), getCallOptions());
+    }
+
+    /**
+     */
+    public com.viam.component.testecho.v1.Testecho.StopResponse stop(com.viam.component.testecho.v1.Testecho.StopRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getStopMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service TestEchoService.
    */
   public static final class TestEchoServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<TestEchoServiceBlockingStub> {

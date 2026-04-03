@@ -9,9 +9,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * switch has 2 positions, but a knob could have 10 positions.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/switch/v1/switch.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SwitchServiceGrpc {
 
@@ -152,6 +149,21 @@ public final class SwitchServiceGrpc {
         }
       };
     return SwitchServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static SwitchServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<SwitchServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SwitchServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public SwitchServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SwitchServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return SwitchServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -318,6 +330,68 @@ public final class SwitchServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service SwitchService.
+   * <pre>
+   * A SwitchService services switches associated with a machine.
+   * Switches can have multiple discrete positions - e.g. a simple
+   * switch has 2 positions, but a knob could have 10 positions.
+   * </pre>
+   */
+  public static final class SwitchServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<SwitchServiceBlockingV2Stub> {
+    private SwitchServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected SwitchServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new SwitchServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Set the position of the switch
+     * </pre>
+     */
+    public com.viam.component.nswitch.v1.Switch.SetPositionResponse setPosition(com.viam.component.nswitch.v1.Switch.SetPositionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get the position of the switch
+     * </pre>
+     */
+    public com.viam.component.nswitch.v1.Switch.GetPositionResponse getPosition(com.viam.component.nswitch.v1.Switch.GetPositionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get the number of positions that the switch supports
+     * </pre>
+     */
+    public com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsResponse getNumberOfPositions(com.viam.component.nswitch.v1.Switch.GetNumberOfPositionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetNumberOfPositionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service SwitchService.
    * <pre>
    * A SwitchService services switches associated with a machine.
    * Switches can have multiple discrete positions - e.g. a simple

@@ -8,9 +8,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * utilities commonly found in tandem with other secure shells.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: service/shell/v1/shell.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ShellServiceGrpc {
 
@@ -151,6 +148,21 @@ public final class ShellServiceGrpc {
         }
       };
     return ShellServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ShellServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ShellServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ShellServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ShellServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ShellServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ShellServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -340,6 +352,86 @@ public final class ShellServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ShellService.
+   * <pre>
+   * A ShellService service allows access to an interactive shell experience, including
+   * utilities commonly found in tandem with other secure shells.
+   * </pre>
+   */
+  public static final class ShellServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ShellServiceBlockingV2Stub> {
+    private ShellServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ShellServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ShellServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Shell starts a shell with an input and output pipe.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<com.viam.service.shell.v1.Shell.ShellRequest, com.viam.service.shell.v1.Shell.ShellResponse>
+        shell() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getShellMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * CopyFilesToMachines copies a stream of files from a client to the connected-to machine.
+     * Initially, metadata is sent to describe the destination in the filesystem in addition
+     * to what kind of file(s) are being sent.
+     * Once metadata is sent, the file transfer can proceed where one-by-one, file data is sent
+     * until EOF per file.
+     * After each file is sent, the machine must respond with an ACK before the next file can
+     * be sent. This provides back-pressure and ordering.
+     * The order in which individual files are sent does not matter; that is, if traversing a
+     * directory, copying depth-first, breadth-first, or any other algorithm does not matter.
+     * Permissions and metadata on files copied are only preserved if the preserve option is
+     * set in the initial request metadata.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<com.viam.service.shell.v1.Shell.CopyFilesToMachineRequest, com.viam.service.shell.v1.Shell.CopyFilesToMachineResponse>
+        copyFilesToMachine() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getCopyFilesToMachineMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * CopyFilesFromMachine copies a stream of files from a connected-to machine to the calling client.
+     * Essentially, it is the inverse of CopyFilesToMachine with the same ACK mechanism in reverse.
+     * The initial metadata request will request the paths to copy along with if permissions should
+     * be preserved (and consequently sent over the wire).
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<com.viam.service.shell.v1.Shell.CopyFilesFromMachineRequest, com.viam.service.shell.v1.Shell.CopyFilesFromMachineResponse>
+        copyFilesFromMachine() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getCopyFilesFromMachineMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ShellService.
    * <pre>
    * A ShellService service allows access to an interactive shell experience, including
    * utilities commonly found in tandem with other secure shells.

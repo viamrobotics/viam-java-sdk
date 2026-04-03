@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * BoardService services all Boards associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/board/v1/board.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class BoardServiceGrpc {
 
@@ -423,6 +420,21 @@ public final class BoardServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static BoardServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<BoardServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BoardServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public BoardServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BoardServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return BoardServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static BoardServiceBlockingStub newBlockingStub(
@@ -763,6 +775,155 @@ public final class BoardServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service BoardService.
+   * <pre>
+   * BoardService services all Boards associated with a robot
+   * </pre>
+   */
+  public static final class BoardServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<BoardServiceBlockingV2Stub> {
+    private BoardServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected BoardServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new BoardServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.viam.component.board.v1.Board.SetGPIOResponse setGPIO(com.viam.component.board.v1.Board.SetGPIORequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetGPIOMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGPIO gets the high/low state of the given pin of a board of the underlying robot.
+     * </pre>
+     */
+    public com.viam.component.board.v1.Board.GetGPIOResponse getGPIO(com.viam.component.board.v1.Board.GetGPIORequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGPIOMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * PWM gets the duty cycle of the given pin of a board of the underlying robot.
+     * </pre>
+     */
+    public com.viam.component.board.v1.Board.PWMResponse pWM(com.viam.component.board.v1.Board.PWMRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getPWMMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetPWM sets the given pin of a board of the underlying robot to the given duty cycle.
+     * </pre>
+     */
+    public com.viam.component.board.v1.Board.SetPWMResponse setPWM(com.viam.component.board.v1.Board.SetPWMRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetPWMMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * PWMFrequency gets the PWM frequency of the given pin of a board of the underlying robot.
+     * </pre>
+     */
+    public com.viam.component.board.v1.Board.PWMFrequencyResponse pWMFrequency(com.viam.component.board.v1.Board.PWMFrequencyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getPWMFrequencyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetPWMFrequency sets the given pin of a board of the underlying robot to the given PWM frequency. 0 will use the board's default PWM frequency.
+     * </pre>
+     */
+    public com.viam.component.board.v1.Board.SetPWMFrequencyResponse setPWMFrequency(com.viam.component.board.v1.Board.SetPWMFrequencyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetPWMFrequencyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ReadAnalogReader reads off the current value of an analog reader of a board of the underlying robot.
+     * </pre>
+     */
+    public com.viam.component.board.v1.Board.ReadAnalogReaderResponse readAnalogReader(com.viam.component.board.v1.Board.ReadAnalogReaderRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getReadAnalogReaderMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * WriteAnalog writes the value to the analog writer of the board.
+     * </pre>
+     */
+    public com.viam.component.board.v1.Board.WriteAnalogResponse writeAnalog(com.viam.component.board.v1.Board.WriteAnalogRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getWriteAnalogMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetDigitalInterruptValue returns the current value of the interrupt which is based on the type of interrupt.
+     * </pre>
+     */
+    public com.viam.component.board.v1.Board.GetDigitalInterruptValueResponse getDigitalInterruptValue(com.viam.component.board.v1.Board.GetDigitalInterruptValueRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetDigitalInterruptValueMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * StreamTicks starts a stream of ticks for the given digital interrupts.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, com.viam.component.board.v1.Board.StreamTicksResponse>
+        streamTicks(com.viam.component.board.v1.Board.StreamTicksRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getStreamTicksMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * `SetPowerMode` sets the power consumption mode of the board to the requested setting for the given duration.
+     * </pre>
+     */
+    public com.viam.component.board.v1.Board.SetPowerModeResponse setPowerMode(com.viam.component.board.v1.Board.SetPowerModeRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetPowerModeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration.
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service BoardService.
    * <pre>
    * BoardService services all Boards associated with a robot
    * </pre>

@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * An GantryService services all gantries associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/gantry/v1/gantry.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class GantryServiceGrpc {
 
@@ -303,6 +300,21 @@ public final class GantryServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static GantryServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<GantryServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GantryServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public GantryServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GantryServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return GantryServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static GantryServiceBlockingStub newBlockingStub(
@@ -559,6 +571,113 @@ public final class GantryServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service GantryService.
+   * <pre>
+   * An GantryService services all gantries associated with a robot
+   * </pre>
+   */
+  public static final class GantryServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<GantryServiceBlockingV2Stub> {
+    private GantryServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected GantryServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new GantryServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * GetPosition gets the current position of a gantry of the underlying robot.
+     * </pre>
+     */
+    public com.viam.component.gantry.v1.Gantry.GetPositionResponse getPosition(com.viam.component.gantry.v1.Gantry.GetPositionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * MoveToPosition moves a gantry of the underlying robot to the requested position.
+     * </pre>
+     */
+    public com.viam.component.gantry.v1.Gantry.MoveToPositionResponse moveToPosition(com.viam.component.gantry.v1.Gantry.MoveToPositionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getMoveToPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Home runs the homing sequence of a gantry and returns true once it's completed.
+     * </pre>
+     */
+    public com.viam.component.gantry.v1.Gantry.HomeResponse home(com.viam.component.gantry.v1.Gantry.HomeRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getHomeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetLengths gets the lengths of a gantry of the underlying robot.
+     * </pre>
+     */
+    public com.viam.component.gantry.v1.Gantry.GetLengthsResponse getLengths(com.viam.component.gantry.v1.Gantry.GetLengthsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetLengthsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Stop stops a robot's gantry
+     * </pre>
+     */
+    public com.viam.component.gantry.v1.Gantry.StopResponse stop(com.viam.component.gantry.v1.Gantry.StopRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getStopMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * IsMoving reports if a component is in motion
+     * </pre>
+     */
+    public com.viam.component.gantry.v1.Gantry.IsMovingResponse isMoving(com.viam.component.gantry.v1.Gantry.IsMovingRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getIsMovingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.common.v1.Common.GetKinematicsResponse getKinematics(com.viam.common.v1.Common.GetKinematicsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetKinematicsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service GantryService.
    * <pre>
    * An GantryService services all gantries associated with a robot
    * </pre>

@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * A ServoService maintains all servos associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/servo/v1/servo.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ServoServiceGrpc {
 
@@ -210,6 +207,21 @@ public final class ServoServiceGrpc {
         }
       };
     return ServoServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ServoServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ServoServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ServoServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ServoServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ServoServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ServoServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -414,6 +426,87 @@ public final class ServoServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ServoService.
+   * <pre>
+   * A ServoService maintains all servos associated with a robot
+   * </pre>
+   */
+  public static final class ServoServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ServoServiceBlockingV2Stub> {
+    private ServoServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ServoServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ServoServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Move requests the servo of the underlying robot to move.
+     * This will block until done or a new operation cancels this one
+     * </pre>
+     */
+    public com.viam.component.servo.v1.Servo.MoveResponse move(com.viam.component.servo.v1.Servo.MoveRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getMoveMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetPosition returns the current set angle (degrees) of the servo of the underlying robot.
+     * </pre>
+     */
+    public com.viam.component.servo.v1.Servo.GetPositionResponse getPosition(com.viam.component.servo.v1.Servo.GetPositionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Stop stops a robot's servo
+     * </pre>
+     */
+    public com.viam.component.servo.v1.Servo.StopResponse stop(com.viam.component.servo.v1.Servo.StopRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getStopMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * IsMoving reports if a component is in motion
+     * </pre>
+     */
+    public com.viam.component.servo.v1.Servo.IsMovingResponse isMoving(com.viam.component.servo.v1.Servo.IsMovingRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getIsMovingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ServoService.
    * <pre>
    * A ServoService maintains all servos associated with a robot
    * </pre>

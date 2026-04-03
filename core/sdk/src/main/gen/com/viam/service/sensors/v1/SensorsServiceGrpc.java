@@ -8,9 +8,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * This service is deprecated
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: service/sensors/v1/sensors.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SensorsServiceGrpc {
 
@@ -121,6 +118,21 @@ public final class SensorsServiceGrpc {
         }
       };
     return SensorsServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static SensorsServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<SensorsServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SensorsServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public SensorsServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SensorsServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return SensorsServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -269,6 +281,60 @@ public final class SensorsServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service SensorsService.
+   * <pre>
+   * A SensorsService services keeps track of all sensors associated with a robot
+   * This service is deprecated
+   * </pre>
+   */
+  public static final class SensorsServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<SensorsServiceBlockingV2Stub> {
+    private SensorsServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected SensorsServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new SensorsServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * GetSensors returns the list of all sensors.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public com.viam.service.sensors.v1.Sensors.GetSensorsResponse getSensors(com.viam.service.sensors.v1.Sensors.GetSensorsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetSensorsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetReadings returns the list of readings for all sensors specified.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public com.viam.service.sensors.v1.Sensors.GetReadingsResponse getReadings(com.viam.service.sensors.v1.Sensors.GetReadingsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetReadingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service SensorsService.
    * <pre>
    * A SensorsService services keeps track of all sensors associated with a robot
    * This service is deprecated

@@ -9,9 +9,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * TODO(https://github.com/viamrobotics/rdk/issues/509): support removal
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: stream/v1/stream.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class StreamServiceGrpc {
 
@@ -182,6 +179,21 @@ public final class StreamServiceGrpc {
         }
       };
     return StreamServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static StreamServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<StreamServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<StreamServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public StreamServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new StreamServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return StreamServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -373,6 +385,80 @@ public final class StreamServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service StreamService.
+   * <pre>
+   * A StreamService is used to coordinate with a WebRTC the listing,
+   * addition, and removal of registered video streams.
+   * TODO(https://github.com/viamrobotics/rdk/issues/509): support removal
+   * </pre>
+   */
+  public static final class StreamServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<StreamServiceBlockingV2Stub> {
+    private StreamServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected StreamServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new StreamServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * ListStreams returns all streams registered.
+     * </pre>
+     */
+    public proto.stream.v1.Stream.ListStreamsResponse listStreams(proto.stream.v1.Stream.ListStreamsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListStreamsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddStream requests a particular stream be added.
+     * </pre>
+     */
+    public proto.stream.v1.Stream.AddStreamResponse addStream(proto.stream.v1.Stream.AddStreamRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAddStreamMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetStreamOptions returns the options for a particular stream.
+     * </pre>
+     */
+    public proto.stream.v1.Stream.GetStreamOptionsResponse getStreamOptions(proto.stream.v1.Stream.GetStreamOptionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetStreamOptionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetStreamOptions sets the options for a particular stream.
+     * </pre>
+     */
+    public proto.stream.v1.Stream.SetStreamOptionsResponse setStreamOptions(proto.stream.v1.Stream.SetStreamOptionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetStreamOptionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveStream requests a particular stream be removed. If the calling client
+     * is the last to be receiving the stream, it will attempt to be stopped to
+     * conserve resources.
+     * </pre>
+     */
+    public proto.stream.v1.Stream.RemoveStreamResponse removeStream(proto.stream.v1.Stream.RemoveStreamRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRemoveStreamMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service StreamService.
    * <pre>
    * A StreamService is used to coordinate with a WebRTC the listing,
    * addition, and removal of registered video streams.

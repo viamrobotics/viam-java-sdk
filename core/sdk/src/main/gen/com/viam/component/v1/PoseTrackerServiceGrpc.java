@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * A PoseTrackerService maintains all pose trackers associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/posetracker/v1/pose_tracker.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class PoseTrackerServiceGrpc {
 
@@ -120,6 +117,21 @@ public final class PoseTrackerServiceGrpc {
         }
       };
     return PoseTrackerServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static PoseTrackerServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<PoseTrackerServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PoseTrackerServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public PoseTrackerServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PoseTrackerServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return PoseTrackerServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -259,6 +271,56 @@ public final class PoseTrackerServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service PoseTrackerService.
+   * <pre>
+   * A PoseTrackerService maintains all pose trackers associated with a robot
+   * </pre>
+   */
+  public static final class PoseTrackerServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<PoseTrackerServiceBlockingV2Stub> {
+    private PoseTrackerServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected PoseTrackerServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new PoseTrackerServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * GetPoses returns the current pose of each body tracked by the pose tracker
+     * </pre>
+     */
+    public com.viam.component.v1.PoseTracker.GetPosesResponse getPoses(com.viam.component.v1.PoseTracker.GetPosesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPosesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service PoseTrackerService.
    * <pre>
    * A PoseTrackerService maintains all pose trackers associated with a robot
    * </pre>

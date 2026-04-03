@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: app/datasync/v1/data_sync.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DataSyncServiceGrpc {
 
@@ -117,6 +114,21 @@ public final class DataSyncServiceGrpc {
         }
       };
     return DataSyncServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static DataSyncServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<DataSyncServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DataSyncServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public DataSyncServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DataSyncServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return DataSyncServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -251,6 +263,59 @@ public final class DataSyncServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service DataSyncService.
+   */
+  public static final class DataSyncServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<DataSyncServiceBlockingV2Stub> {
+    private DataSyncServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected DataSyncServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new DataSyncServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * DataCaptureUpload uploads the contents and metadata for tabular data.
+     * </pre>
+     */
+    public viam.app.datasync.v1.DataSync.DataCaptureUploadResponse dataCaptureUpload(viam.app.datasync.v1.DataSync.DataCaptureUploadRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDataCaptureUploadMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * FileUpload uploads the contents and metadata for binary (image + file) data,
+     * where the first packet must be the UploadMetadata.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<viam.app.datasync.v1.DataSync.FileUploadRequest, viam.app.datasync.v1.DataSync.FileUploadResponse>
+        fileUpload() {
+      return io.grpc.stub.ClientCalls.blockingClientStreamingCall(
+          getChannel(), getFileUploadMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * StreamingDataCaptureUpload uploads the streaming contents and metadata for streaming binary (image + file) data,
+     * where the first packet must be the UploadMetadata.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest, viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse>
+        streamingDataCaptureUpload() {
+      return io.grpc.stub.ClientCalls.blockingClientStreamingCall(
+          getChannel(), getStreamingDataCaptureUploadMethod(), getCallOptions());
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service DataSyncService.
    */
   public static final class DataSyncServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<DataSyncServiceBlockingStub> {

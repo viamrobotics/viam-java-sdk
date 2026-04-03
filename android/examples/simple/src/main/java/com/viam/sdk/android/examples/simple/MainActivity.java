@@ -1,7 +1,7 @@
 package com.viam.sdk.android.examples.simple;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import com.viam.sdk.android.RobotClientFactory;
 import com.viam.sdk.core.component.movementsensor.MovementSensor;
 import com.viam.sdk.core.robot.RobotClient.Options;

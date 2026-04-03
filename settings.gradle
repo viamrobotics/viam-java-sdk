@@ -3,11 +3,11 @@ pluginManagement {
     // roots. Just don't worry about it, it's not worth figuring out :)
     includeBuild("android/module-plugin")
     plugins {
-        id 'org.jetbrains.kotlin.jvm' version '1.9.23'
+        id 'org.jetbrains.kotlin.jvm' version '2.3.20'
     }
 }
 plugins {
-    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.5.0'
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
 }
 
 rootProject.name = 'Viam-SDK'

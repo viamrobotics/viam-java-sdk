@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * An ArmService services all arms associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/arm/v1/arm.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ArmServiceGrpc {
 
@@ -363,6 +360,21 @@ public final class ArmServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ArmServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ArmServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ArmServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public ArmServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ArmServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ArmServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static ArmServiceBlockingStub newBlockingStub(
@@ -675,6 +687,140 @@ public final class ArmServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service ArmService.
+   * <pre>
+   * An ArmService services all arms associated with a robot
+   * </pre>
+   */
+  public static final class ArmServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ArmServiceBlockingV2Stub> {
+    private ArmServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ArmServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ArmServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * GetEndPosition gets the current position the end of the robot's arm expressed as X,Y,Z,ox,oy,oz,theta
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.GetEndPositionResponse getEndPosition(com.viam.component.arm.v1.Arm.GetEndPositionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetEndPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * MoveToPosition moves the mount point of the robot's end effector to the requested position.
+     * This will block until done or a new operation cancels this one
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.MoveToPositionResponse moveToPosition(com.viam.component.arm.v1.Arm.MoveToPositionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getMoveToPositionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetJointPositions lists the joint positions (in degrees) of every joint on a robot
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.GetJointPositionsResponse getJointPositions(com.viam.component.arm.v1.Arm.GetJointPositionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetJointPositionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * MoveToJointPositions moves every joint on a robot's arm to specified angles which are expressed in degrees
+     * This will block until done or a new operation cancels this one
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse moveToJointPositions(com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getMoveToJointPositionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * MoveThroughJointPositions moves every joint on a robot's arm to the specified JointPositions in the order they are specified,
+     * obeying the specified velocity and acceleration limits.
+     * This will block until done or a new operation cancels this one
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse moveThroughJointPositions(com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getMoveThroughJointPositionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Stop stops a robot's arm
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.StopResponse stop(com.viam.component.arm.v1.Arm.StopRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getStopMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * IsMoving reports if a component is in motion
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.IsMovingResponse isMoving(com.viam.component.arm.v1.Arm.IsMovingRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getIsMovingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetKinematics returns the kinematics file for the component
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetKinematicsResponse getKinematics(com.viam.common.v1.Common.GetKinematicsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetKinematicsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get3DModels returns the 3D models of the component
+     * </pre>
+     */
+    public com.viam.common.v1.Common.Get3DModelsResponse get3DModels(com.viam.common.v1.Common.Get3DModelsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGet3DModelsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service ArmService.
    * <pre>
    * An ArmService services all arms associated with a robot
    * </pre>

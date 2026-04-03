@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: proto/rpc/examples/echo/v1/echo.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class EchoServiceGrpc {
 
@@ -120,6 +117,21 @@ public final class EchoServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static EchoServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<EchoServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<EchoServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public EchoServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new EchoServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return EchoServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static EchoServiceBlockingStub newBlockingStub(
@@ -229,6 +241,48 @@ public final class EchoServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service EchoService.
+   */
+  public static final class EchoServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<EchoServiceBlockingV2Stub> {
+    private EchoServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected EchoServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new EchoServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public proto.rpc.examples.echo.v1.Echo.EchoResponse echo(proto.rpc.examples.echo.v1.Echo.EchoRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getEchoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, proto.rpc.examples.echo.v1.Echo.EchoMultipleResponse>
+        echoMultiple(proto.rpc.examples.echo.v1.Echo.EchoMultipleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getEchoMultipleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<proto.rpc.examples.echo.v1.Echo.EchoBiDiRequest, proto.rpc.examples.echo.v1.Echo.EchoBiDiResponse>
+        echoBiDi() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getEchoBiDiMethod(), getCallOptions());
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service EchoService.
    */
   public static final class EchoServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<EchoServiceBlockingStub> {

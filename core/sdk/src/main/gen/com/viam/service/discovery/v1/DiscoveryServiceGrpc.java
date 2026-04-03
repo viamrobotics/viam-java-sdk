@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: service/discovery/v1/discovery.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DiscoveryServiceGrpc {
 
@@ -87,6 +84,21 @@ public final class DiscoveryServiceGrpc {
         }
       };
     return DiscoveryServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static DiscoveryServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<DiscoveryServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DiscoveryServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public DiscoveryServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DiscoveryServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return DiscoveryServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -196,6 +208,43 @@ public final class DiscoveryServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service DiscoveryService.
+   */
+  public static final class DiscoveryServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<DiscoveryServiceBlockingV2Stub> {
+    private DiscoveryServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected DiscoveryServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new DiscoveryServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * DiscoverResources returns the list of all discovered viam resources connected to the viam-server machine.
+     * </pre>
+     */
+    public com.viam.service.discovery.v1.Discovery.DiscoverResourcesResponse discoverResources(com.viam.service.discovery.v1.Discovery.DiscoverResourcesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDiscoverResourcesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service DiscoveryService.
    */
   public static final class DiscoveryServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<DiscoveryServiceBlockingStub> {

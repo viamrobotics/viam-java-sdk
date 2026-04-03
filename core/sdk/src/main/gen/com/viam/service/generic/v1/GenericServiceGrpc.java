@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * GenericService services all generic services associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: service/generic/v1/generic.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class GenericServiceGrpc {
 
@@ -60,6 +57,21 @@ public final class GenericServiceGrpc {
         }
       };
     return GenericServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static GenericServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<GenericServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GenericServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public GenericServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GenericServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return GenericServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -157,6 +169,36 @@ public final class GenericServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service GenericService.
+   * <pre>
+   * GenericService services all generic services associated with a robot
+   * </pre>
+   */
+  public static final class GenericServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<GenericServiceBlockingV2Stub> {
+    private GenericServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected GenericServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new GenericServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service GenericService.
    * <pre>
    * GenericService services all generic services associated with a robot
    * </pre>

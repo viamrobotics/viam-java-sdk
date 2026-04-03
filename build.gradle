@@ -1,9 +1,12 @@
+import com.github.jk1.license.filter.*
+
 plugins {
-    id "io.freefair.aggregate-javadoc" version "8.6"
+    id "io.freefair.aggregate-javadoc" version "9.2.0"
+    id 'com.github.jk1.dependency-license-report' version '3.1.1'
 }
 
 group 'com.viam'
-version '0.0.12'
+version '0.0.13'
 
 repositories {
     google()
@@ -40,7 +43,7 @@ subprojects {
 
     ext {
         min_api = 29
-        target_api = 34
+        target_api = 36
         api_version = "unreleased"
         File file = rootProject.file("api_version.lock")
         file.withReader { reader -> api_version = reader.readLine() }
@@ -76,22 +79,22 @@ subprojects {
             return
         }
 
-        def releasesRepoUrl = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
-        def snapshotsRepoUrl = 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
+        def releasesRepoUrl = 'https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/'
+        def snapshotsRepoUrl = 'https://ossrh-staging-api.central.sonatype.com/content/repositories/snapshots/'
 
         if (project.plugins.hasPlugin("java")) {
             compileTestJava {
-                sourceCompatibility = JavaVersion.VERSION_11
-                targetCompatibility = JavaVersion.VERSION_11
+                sourceCompatibility = JavaVersion.VERSION_17
+                targetCompatibility = JavaVersion.VERSION_17
             }
 
             javadoc {
                 title = "$project.name $version"
-                options.addStringOption("source", "11")
+                options.addStringOption("source", "17")
                 options.author true
                 options.author = true
                 options.version = true
-                options.links 'https://docs.oracle.com/en/java/javase/11/docs/api/'
+                options.links 'https://docs.oracle.com/en/java/javase/17/docs/api/'
                 options.encoding = 'UTF-8'
                 options.charSet 'UTF-8'
                 options.docEncoding 'UTF-8'
@@ -200,4 +203,10 @@ tasks.register('printVersion') {
     doLast {
         println project.version
     }
+}
+
+licenseReport {
+    allowedLicensesFile = layout.projectDirectory.file('doc/allowed-licenses.json')
+    filters = [new LicenseBundleNormalizer()]
+    unionParentPomLicenses = false
 }

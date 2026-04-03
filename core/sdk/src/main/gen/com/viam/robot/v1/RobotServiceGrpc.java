@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * A RobotService encompasses all functionality of some robot comprised of parts, local and remote.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: robot/v1/robot.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class RobotServiceGrpc {
 
@@ -783,6 +780,21 @@ public final class RobotServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static RobotServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<RobotServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RobotServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public RobotServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RobotServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return RobotServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static RobotServiceBlockingStub newBlockingStub(
@@ -1355,6 +1367,267 @@ public final class RobotServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service RobotService.
+   * <pre>
+   * A RobotService encompasses all functionality of some robot comprised of parts, local and remote.
+   * </pre>
+   */
+  public static final class RobotServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<RobotServiceBlockingV2Stub> {
+    private RobotServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected RobotServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new RobotServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.viam.robot.v1.Robot.GetOperationsResponse getOperations(com.viam.robot.v1.Robot.GetOperationsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetOperationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.robot.v1.Robot.GetSessionsResponse getSessions(com.viam.robot.v1.Robot.GetSessionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetSessionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ResourceNames returns the list of all resources.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.ResourceNamesResponse resourceNames(com.viam.robot.v1.Robot.ResourceNamesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getResourceNamesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ResourceRPCSubtypes returns the list of all resource types.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.ResourceRPCSubtypesResponse resourceRPCSubtypes(com.viam.robot.v1.Robot.ResourceRPCSubtypesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getResourceRPCSubtypesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.robot.v1.Robot.CancelOperationResponse cancelOperation(com.viam.robot.v1.Robot.CancelOperationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCancelOperationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.robot.v1.Robot.BlockForOperationResponse blockForOperation(com.viam.robot.v1.Robot.BlockForOperationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getBlockForOperationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetModelsFromModules returns the list of models supported in modules on the machine.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.GetModelsFromModulesResponse getModelsFromModules(com.viam.robot.v1.Robot.GetModelsFromModulesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetModelsFromModulesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetStatus returns the list of all statuses requested. An empty request signifies all resources.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public com.viam.robot.v1.Robot.GetStatusResponse getStatus(com.viam.robot.v1.Robot.GetStatusRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetStatusMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * StreamStatus periodically sends the status of all statuses requested. An empty request signifies all resources.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, com.viam.robot.v1.Robot.StreamStatusResponse>
+        streamStatus(com.viam.robot.v1.Robot.StreamStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getStreamStatusMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * StopAll will stop all current and outstanding operations for the robot and stops all actuators and movement
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.StopAllResponse stopAll(com.viam.robot.v1.Robot.StopAllRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getStopAllMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * StartSession creates a new session that expects at least one heartbeat within the returned window.
+     * If the window lapses, any resources that have safety heart monitored methods, where this session was
+     * the last caller on the resource, will be stopped.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.StartSessionResponse startSession(com.viam.robot.v1.Robot.StartSessionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getStartSessionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SendSessionHeartbeat sends a heartbeat to the given session. If the session has expired, a
+     * SESSION_EXPIRED error will be returned.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.SendSessionHeartbeatResponse sendSessionHeartbeat(com.viam.robot.v1.Robot.SendSessionHeartbeatRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSendSessionHeartbeatMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Log sends logs to be logged by this robot. Currently used for module logging.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.LogResponse log(com.viam.robot.v1.Robot.LogRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getLogMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetCloudMetadata returns app-related information about the robot.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.GetCloudMetadataResponse getCloudMetadata(com.viam.robot.v1.Robot.GetCloudMetadataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetCloudMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.robot.v1.Robot.RestartModuleResponse restartModule(com.viam.robot.v1.Robot.RestartModuleRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRestartModuleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Shutdown shuts down the robot.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.ShutdownResponse shutdown(com.viam.robot.v1.Robot.ShutdownRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getShutdownMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetMachineStatus returns the current status of the robot.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.GetMachineStatusResponse getMachineStatus(com.viam.robot.v1.Robot.GetMachineStatusRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetMachineStatusMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetVersion returns version information about the robot.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.GetVersionResponse getVersion(com.viam.robot.v1.Robot.GetVersionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetVersionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Tunnel tunnels traffic to the destination port of the robot server.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<com.viam.robot.v1.Robot.TunnelRequest, com.viam.robot.v1.Robot.TunnelResponse>
+        tunnel() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getTunnelMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * ListTunnels lists all available tunnels configured on the robot.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.ListTunnelsResponse listTunnels(com.viam.robot.v1.Robot.ListTunnelsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListTunnelsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * FrameSystemConfig returns the information relevant to building the robot's frame system.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.FrameSystemConfigResponse frameSystemConfig(com.viam.robot.v1.Robot.FrameSystemConfigRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getFrameSystemConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetPose returns the pose of a component in a desired referenceframe.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.GetPoseResponse getPose(com.viam.robot.v1.Robot.GetPoseRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPoseMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TransformPose returns a pose in one referenceframe in a desired referenceframe.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.TransformPoseResponse transformPose(com.viam.robot.v1.Robot.TransformPoseRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getTransformPoseMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TransformPose returns a point cloud in one referenceframe in a desired referenceframe.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.TransformPCDResponse transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getTransformPCDMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.robot.v1.Robot.SendTracesResponse sendTraces(com.viam.robot.v1.Robot.SendTracesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSendTracesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service RobotService.
    * <pre>
    * A RobotService encompasses all functionality of some robot comprised of parts, local and remote.
    * </pre>

@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * Users
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: app/v1/app.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AppServiceGrpc {
 
@@ -3303,6 +3300,21 @@ public final class AppServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AppServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AppServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AppServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AppServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AppServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AppServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static AppServiceBlockingStub newBlockingStub(
@@ -5449,6 +5461,1012 @@ public final class AppServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AppService.
+   * <pre>
+   * Users
+   * </pre>
+   */
+  public static final class AppServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AppServiceBlockingV2Stub> {
+    private AppServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AppServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AppServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Get the id of the user with the email
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetUserIDByEmailResponse getUserIDByEmail(viam.app.v1.AppOuterClass.GetUserIDByEmailRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetUserIDByEmailMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Create a new organization
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.CreateOrganizationResponse createOrganization(viam.app.v1.AppOuterClass.CreateOrganizationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateOrganizationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List organizations
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListOrganizationsResponse listOrganizations(viam.app.v1.AppOuterClass.ListOrganizationsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListOrganizationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get all organizations that have access to a location.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetOrganizationsWithAccessToLocationResponse getOrganizationsWithAccessToLocation(viam.app.v1.AppOuterClass.GetOrganizationsWithAccessToLocationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetOrganizationsWithAccessToLocationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List the organizations a user belongs to
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListOrganizationsByUserResponse listOrganizationsByUser(viam.app.v1.AppOuterClass.ListOrganizationsByUserRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListOrganizationsByUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Search organizations by a couple fields
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.SearchOrganizationsResponse searchOrganizations(viam.app.v1.AppOuterClass.SearchOrganizationsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSearchOrganizationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get an organization
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetOrganizationResponse getOrganization(viam.app.v1.AppOuterClass.GetOrganizationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetOrganizationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Checks for namespace availablity throughout all orgs.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetOrganizationNamespaceAvailabilityResponse getOrganizationNamespaceAvailability(viam.app.v1.AppOuterClass.GetOrganizationNamespaceAvailabilityRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetOrganizationNamespaceAvailabilityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update an organization
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.UpdateOrganizationResponse updateOrganization(viam.app.v1.AppOuterClass.UpdateOrganizationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateOrganizationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update an organization's namespace if it's already been set.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.UpdateOrganizationNamespaceResponse updateOrganizationNamespace(viam.app.v1.AppOuterClass.UpdateOrganizationNamespaceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateOrganizationNamespaceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete an organization
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.DeleteOrganizationResponse deleteOrganization(viam.app.v1.AppOuterClass.DeleteOrganizationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteOrganizationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get user-defined metadata for an organization
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetOrganizationMetadataResponse getOrganizationMetadata(viam.app.v1.AppOuterClass.GetOrganizationMetadataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetOrganizationMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an organization
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.UpdateOrganizationMetadataResponse updateOrganizationMetadata(viam.app.v1.AppOuterClass.UpdateOrganizationMetadataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateOrganizationMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List all members of an organization and all invited members to the organization.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListOrganizationMembersResponse listOrganizationMembers(viam.app.v1.AppOuterClass.ListOrganizationMembersRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListOrganizationMembersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Create an organization invite to an organization
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.CreateOrganizationInviteResponse createOrganizationInvite(viam.app.v1.AppOuterClass.CreateOrganizationInviteRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateOrganizationInviteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update the authorizations attached to an organization invite
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.UpdateOrganizationInviteAuthorizationsResponse updateOrganizationInviteAuthorizations(viam.app.v1.AppOuterClass.UpdateOrganizationInviteAuthorizationsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateOrganizationInviteAuthorizationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete an organization member from an organization
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.DeleteOrganizationMemberResponse deleteOrganizationMember(viam.app.v1.AppOuterClass.DeleteOrganizationMemberRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteOrganizationMemberMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete an organization invite
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.DeleteOrganizationInviteResponse deleteOrganizationInvite(viam.app.v1.AppOuterClass.DeleteOrganizationInviteRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteOrganizationInviteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Resend an organization invite
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ResendOrganizationInviteResponse resendOrganizationInvite(viam.app.v1.AppOuterClass.ResendOrganizationInviteRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getResendOrganizationInviteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.EnableBillingServiceResponse enableBillingService(viam.app.v1.AppOuterClass.EnableBillingServiceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getEnableBillingServiceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.DisableBillingServiceResponse disableBillingService(viam.app.v1.AppOuterClass.DisableBillingServiceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDisableBillingServiceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.UpdateBillingServiceResponse updateBillingService(viam.app.v1.AppOuterClass.UpdateBillingServiceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateBillingServiceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.GetBillingServiceConfigResponse getBillingServiceConfig(viam.app.v1.AppOuterClass.GetBillingServiceConfigRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetBillingServiceConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.OrganizationSetSupportEmailResponse organizationSetSupportEmail(viam.app.v1.AppOuterClass.OrganizationSetSupportEmailRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getOrganizationSetSupportEmailMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.OrganizationGetSupportEmailResponse organizationGetSupportEmail(viam.app.v1.AppOuterClass.OrganizationGetSupportEmailRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getOrganizationGetSupportEmailMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.OrganizationSetLogoResponse organizationSetLogo(viam.app.v1.AppOuterClass.OrganizationSetLogoRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getOrganizationSetLogoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.OrganizationGetLogoResponse organizationGetLogo(viam.app.v1.AppOuterClass.OrganizationGetLogoRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getOrganizationGetLogoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.EnableAuthServiceResponse enableAuthService(viam.app.v1.AppOuterClass.EnableAuthServiceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getEnableAuthServiceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.DisableAuthServiceResponse disableAuthService(viam.app.v1.AppOuterClass.DisableAuthServiceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDisableAuthServiceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.CreateOAuthAppResponse createOAuthApp(viam.app.v1.AppOuterClass.CreateOAuthAppRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateOAuthAppMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.ReadOAuthAppResponse readOAuthApp(viam.app.v1.AppOuterClass.ReadOAuthAppRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getReadOAuthAppMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.UpdateOAuthAppResponse updateOAuthApp(viam.app.v1.AppOuterClass.UpdateOAuthAppRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateOAuthAppMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.DeleteOAuthAppResponse deleteOAuthApp(viam.app.v1.AppOuterClass.DeleteOAuthAppRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteOAuthAppMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.ListOAuthAppsResponse listOAuthApps(viam.app.v1.AppOuterClass.ListOAuthAppsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListOAuthAppsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Create a location
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.CreateLocationResponse createLocation(viam.app.v1.AppOuterClass.CreateLocationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateLocationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a location
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetLocationResponse getLocation(viam.app.v1.AppOuterClass.GetLocationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetLocationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update a location
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.UpdateLocationResponse updateLocation(viam.app.v1.AppOuterClass.UpdateLocationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateLocationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete a location
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.DeleteLocationResponse deleteLocation(viam.app.v1.AppOuterClass.DeleteLocationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteLocationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get user-defined metadata for a location
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetLocationMetadataResponse getLocationMetadata(viam.app.v1.AppOuterClass.GetLocationMetadataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetLocationMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for a location
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.UpdateLocationMetadataResponse updateLocationMetadata(viam.app.v1.AppOuterClass.UpdateLocationMetadataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateLocationMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a list of locations
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListLocationsResponse listLocations(viam.app.v1.AppOuterClass.ListLocationsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListLocationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Share a location with an organization
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ShareLocationResponse shareLocation(viam.app.v1.AppOuterClass.ShareLocationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getShareLocationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Stop sharing a location with an organization
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.UnshareLocationResponse unshareLocation(viam.app.v1.AppOuterClass.UnshareLocationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUnshareLocationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a location's authorization secrets
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.LocationAuthResponse locationAuth(viam.app.v1.AppOuterClass.LocationAuthRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getLocationAuthMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Create a new generated Secret in the Location.
+     *  - Succeeds if there are no more than 2 active secrets after creation.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.CreateLocationSecretResponse createLocationSecret(viam.app.v1.AppOuterClass.CreateLocationSecretRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateLocationSecretMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete a Secret from the Location.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.DeleteLocationSecretResponse deleteLocationSecret(viam.app.v1.AppOuterClass.DeleteLocationSecretRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteLocationSecretMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a specific robot by ID
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetRobotResponse getRobot(viam.app.v1.AppOuterClass.GetRobotRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetRobotMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get user-defined metadata for a robot
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetRobotMetadataResponse getRobotMetadata(viam.app.v1.AppOuterClass.GetRobotMetadataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetRobotMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an robot
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.UpdateRobotMetadataResponse updateRobotMetadata(viam.app.v1.AppOuterClass.UpdateRobotMetadataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateRobotMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get Rover Rental Location Robots
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetRoverRentalRobotsResponse getRoverRentalRobots(viam.app.v1.AppOuterClass.GetRoverRentalRobotsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetRoverRentalRobotsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.GetRobotPartsResponse getRobotParts(viam.app.v1.AppOuterClass.GetRobotPartsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetRobotPartsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a specific robot part by ID
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetRobotPartResponse getRobotPart(viam.app.v1.AppOuterClass.GetRobotPartRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetRobotPartMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a specific robot part by name and location
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationResponse getRobotPartByNameAndLocation(viam.app.v1.AppOuterClass.GetRobotPartByNameAndLocationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetRobotPartByNameAndLocationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.GetRobotPartLogsResponse getRobotPartLogs(viam.app.v1.AppOuterClass.GetRobotPartLogsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetRobotPartLogsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, viam.app.v1.AppOuterClass.TailRobotPartLogsResponse>
+        tailRobotPartLogs(viam.app.v1.AppOuterClass.TailRobotPartLogsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getTailRobotPartLogsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a specific robot part histy by ID
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetRobotPartHistoryResponse getRobotPartHistory(viam.app.v1.AppOuterClass.GetRobotPartHistoryRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetRobotPartHistoryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update a robot
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.UpdateRobotPartResponse updateRobotPart(viam.app.v1.AppOuterClass.UpdateRobotPartRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateRobotPartMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Create a new robot part
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.NewRobotPartResponse newRobotPart(viam.app.v1.AppOuterClass.NewRobotPartRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getNewRobotPartMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete a robot part
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.DeleteRobotPartResponse deleteRobotPart(viam.app.v1.AppOuterClass.DeleteRobotPartRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteRobotPartMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get user-defined metadata for a robot part
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetRobotPartMetadataResponse getRobotPartMetadata(viam.app.v1.AppOuterClass.GetRobotPartMetadataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetRobotPartMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update user-defined metadata for an robot part
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.UpdateRobotPartMetadataResponse updateRobotPartMetadata(viam.app.v1.AppOuterClass.UpdateRobotPartMetadataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateRobotPartMetadataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the Robot API Keys for the robot
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetRobotAPIKeysResponse getRobotAPIKeys(viam.app.v1.AppOuterClass.GetRobotAPIKeysRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetRobotAPIKeysMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Marks the given part as the main part, and all the others as not
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.MarkPartAsMainResponse markPartAsMain(viam.app.v1.AppOuterClass.MarkPartAsMainRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getMarkPartAsMainMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Marks part for restart. Once the robot part checks-in with the app the flag
+     * is reset on the robot part. Calling this multiple times before a robot part
+     * checks-in has no affect.
+     * Note: This API may be removed in the near future.
+     * TODO(APP-388): Remove
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.MarkPartForRestartResponse markPartForRestart(viam.app.v1.AppOuterClass.MarkPartForRestartRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getMarkPartForRestartMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Create a new generated Secret in the Robot Part.
+     *  - Succeeds if there are no more than 2 active secrets after creation.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.CreateRobotPartSecretResponse createRobotPartSecret(viam.app.v1.AppOuterClass.CreateRobotPartSecretRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateRobotPartSecretMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete a Secret from the RobotPart.
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.DeleteRobotPartSecretResponse deleteRobotPartSecret(viam.app.v1.AppOuterClass.DeleteRobotPartSecretRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteRobotPartSecretMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a list of robots at a location
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListRobotsResponse listRobots(viam.app.v1.AppOuterClass.ListRobotsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListRobotsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a list of robots at multiple locations
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListRobotsForLocationsResponse listRobotsForLocations(viam.app.v1.AppOuterClass.ListRobotsForLocationsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListRobotsForLocationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a list of robots at an org
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListRobotsForOrgResponse listRobotsForOrg(viam.app.v1.AppOuterClass.ListRobotsForOrgRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListRobotsForOrgMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * NewRobot creates a new robot
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.NewRobotResponse newRobot(viam.app.v1.AppOuterClass.NewRobotRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getNewRobotMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateRobot updates a robot
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.UpdateRobotResponse updateRobot(viam.app.v1.AppOuterClass.UpdateRobotRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateRobotMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteRobot deletes a robot
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.DeleteRobotResponse deleteRobot(viam.app.v1.AppOuterClass.DeleteRobotRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteRobotMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a list of fragments
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListFragmentsResponse listFragments(viam.app.v1.AppOuterClass.ListFragmentsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListFragmentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a single fragment
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetFragmentResponse getFragment(viam.app.v1.AppOuterClass.GetFragmentRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetFragmentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a fragment
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.CreateFragmentResponse createFragment(viam.app.v1.AppOuterClass.CreateFragmentRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateFragmentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates a fragment
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.UpdateFragmentResponse updateFragment(viam.app.v1.AppOuterClass.UpdateFragmentRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateFragmentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a fragment
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.DeleteFragmentResponse deleteFragment(viam.app.v1.AppOuterClass.DeleteFragmentRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteFragmentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List nested fragments for a fragment
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListNestedFragmentsResponse listNestedFragments(viam.app.v1.AppOuterClass.ListNestedFragmentsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListNestedFragmentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets top level and nested fragments for a machine, as well as any other specified fragment ids
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListMachineFragmentsResponse listMachineFragments(viam.app.v1.AppOuterClass.ListMachineFragmentsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListMachineFragmentsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List all machines and their corresponding machine dashboard information
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListMachineSummariesResponse listMachineSummaries(viam.app.v1.AppOuterClass.ListMachineSummariesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListMachineSummariesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets fragment history
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetFragmentHistoryResponse getFragmentHistory(viam.app.v1.AppOuterClass.GetFragmentHistoryRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetFragmentHistoryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets usage for a fragment across versions
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.GetFragmentUsageResponse getFragmentUsage(viam.app.v1.AppOuterClass.GetFragmentUsageRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetFragmentUsageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Sets a fragment tag to a revision
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.SetFragmentTagResponse setFragmentTag(viam.app.v1.AppOuterClass.SetFragmentTagRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetFragmentTagMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a fragment tag
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.DeleteFragmentTagResponse deleteFragmentTag(viam.app.v1.AppOuterClass.DeleteFragmentTagRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteFragmentTagMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates an IdentityAuthorization
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.AddRoleResponse addRole(viam.app.v1.AppOuterClass.AddRoleRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAddRoleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes an IdentityAuthorization
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.RemoveRoleResponse removeRole(viam.app.v1.AppOuterClass.RemoveRoleRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRemoveRoleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Changes an IdentityAuthorization to a new IdentityAuthorization
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ChangeRoleResponse changeRole(viam.app.v1.AppOuterClass.ChangeRoleRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getChangeRoleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns all authorization roles for a given resource
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListAuthorizationsResponse listAuthorizations(viam.app.v1.AppOuterClass.ListAuthorizationsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListAuthorizationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Validates a permission for the current user
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.CheckPermissionsResponse checkPermissions(viam.app.v1.AppOuterClass.CheckPermissionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCheckPermissionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.GetRegistryItemResponse getRegistryItem(viam.app.v1.AppOuterClass.GetRegistryItemRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetRegistryItemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.CreateRegistryItemResponse createRegistryItem(viam.app.v1.AppOuterClass.CreateRegistryItemRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateRegistryItemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.UpdateRegistryItemResponse updateRegistryItem(viam.app.v1.AppOuterClass.UpdateRegistryItemRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateRegistryItemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.ListRegistryItemsResponse listRegistryItems(viam.app.v1.AppOuterClass.ListRegistryItemsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListRegistryItemsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.DeleteRegistryItemResponse deleteRegistryItem(viam.app.v1.AppOuterClass.DeleteRegistryItemRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteRegistryItemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.RenameRegistryItemResponse renameRegistryItem(viam.app.v1.AppOuterClass.RenameRegistryItemRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRenameRegistryItemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.TransferRegistryItemResponse transferRegistryItem(viam.app.v1.AppOuterClass.TransferRegistryItemRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getTransferRegistryItemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.CreateModuleResponse createModule(viam.app.v1.AppOuterClass.CreateModuleRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateModuleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.UpdateModuleResponse updateModule(viam.app.v1.AppOuterClass.UpdateModuleRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateModuleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<viam.app.v1.AppOuterClass.UploadModuleFileRequest, viam.app.v1.AppOuterClass.UploadModuleFileResponse>
+        uploadModuleFile() {
+      return io.grpc.stub.ClientCalls.blockingClientStreamingCall(
+          getChannel(), getUploadModuleFileMethod(), getCallOptions());
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.GetModuleResponse getModule(viam.app.v1.AppOuterClass.GetModuleRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetModuleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.ListModulesResponse listModules(viam.app.v1.AppOuterClass.ListModulesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListModulesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.CreateKeyResponse createKey(viam.app.v1.AppOuterClass.CreateKeyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateKeyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.DeleteKeyResponse deleteKey(viam.app.v1.AppOuterClass.DeleteKeyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteKeyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.ListKeysResponse listKeys(viam.app.v1.AppOuterClass.ListKeysRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListKeysMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.RenameKeyResponse renameKey(viam.app.v1.AppOuterClass.RenameKeyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRenameKeyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.RotateKeyResponse rotateKey(viam.app.v1.AppOuterClass.RotateKeyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRotateKeyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.CreateKeyFromExistingKeyAuthorizationsResponse createKeyFromExistingKeyAuthorizations(viam.app.v1.AppOuterClass.CreateKeyFromExistingKeyAuthorizationsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateKeyFromExistingKeyAuthorizationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.GetAppContentResponse getAppContent(viam.app.v1.AppOuterClass.GetAppContentRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetAppContentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.GetAppBrandingResponse getAppBranding(viam.app.v1.AppOuterClass.GetAppBrandingRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetAppBrandingMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AppService.
    * <pre>
    * Users
    * </pre>

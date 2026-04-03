@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/base/v1/base.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class BaseServiceGrpc {
 
@@ -300,6 +297,21 @@ public final class BaseServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static BaseServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<BaseServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BaseServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public BaseServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BaseServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return BaseServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static BaseServiceBlockingStub newBlockingStub(
@@ -563,6 +575,118 @@ public final class BaseServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service BaseService.
+   */
+  public static final class BaseServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<BaseServiceBlockingV2Stub> {
+    private BaseServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected BaseServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new BaseServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * MoveStraight moves a robot's base in a straight line by a given distance, expressed in millimeters
+     * and a given speed, expressed in millimeters per second
+     * This method blocks until completed or cancelled
+     * </pre>
+     */
+    public com.viam.component.base.v1.Base.MoveStraightResponse moveStraight(com.viam.component.base.v1.Base.MoveStraightRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getMoveStraightMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Spin spins a robot's base by an given angle, expressed in degrees, and a given
+     * angular speed, expressed in degrees per second
+     * This method blocks until completed or cancelled
+     * </pre>
+     */
+    public com.viam.component.base.v1.Base.SpinResponse spin(com.viam.component.base.v1.Base.SpinRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSpinMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetPower sets the linear and angular power of a base
+     * -1 -&gt; 1 in terms of power for each direction
+     * </pre>
+     */
+    public com.viam.component.base.v1.Base.SetPowerResponse setPower(com.viam.component.base.v1.Base.SetPowerRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetPowerMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetVelocity sets the linear and angular velocity of a base
+     * </pre>
+     */
+    public com.viam.component.base.v1.Base.SetVelocityResponse setVelocity(com.viam.component.base.v1.Base.SetVelocityRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetVelocityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Stop stops a robot's base
+     * </pre>
+     */
+    public com.viam.component.base.v1.Base.StopResponse stop(com.viam.component.base.v1.Base.StopRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getStopMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * IsMoving reports if a component is in motion
+     * </pre>
+     */
+    public com.viam.component.base.v1.Base.IsMovingResponse isMoving(com.viam.component.base.v1.Base.IsMovingRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getIsMovingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the properties of a base in its current configuration
+     * </pre>
+     */
+    public com.viam.component.base.v1.Base.GetPropertiesResponse getProperties(com.viam.component.base.v1.Base.GetPropertiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service BaseService.
    */
   public static final class BaseServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<BaseServiceBlockingStub> {

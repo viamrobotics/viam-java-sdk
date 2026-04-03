@@ -2,6 +2,11 @@ name: Update Protos + Open PR
 
 on:
   workflow_dispatch:
+    inputs:
+      api_version:
+        description: "The API version, including the `v`"
+        type: string
+        required: true
   repository_dispatch:
     types:
       - protos-updated
@@ -10,39 +15,60 @@ jobs:
   update-protos:
     if: github.repository_owner == 'viamrobotics'
     runs-on: ubuntu-latest
+    env:
+      API_VERSION: ${{ inputs.api_version || github.event.client_payload.tag }}
+    permissions:
+      id-token: write
+      contents: write
+      pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           token: ${{ secrets.REPO_READ_TOKEN }}
       - uses: bufbuild/buf-setup-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: arduino/setup-protoc@v1
+      - uses: arduino/setup-protoc@v3
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Create branch
+        run: |
+          git remote prune origin
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b workflow/update-proto
+
       - name: Set API Version
         run: |
-          echo ${{ github.event.client_payload.tag }} > api_version.lock
+          echo ${{ env.API_VERSION }} > api_version.lock
 
       - name: Generate buf
         run: make buf
 
-      - name: Add + Commit + Open PR
-        uses: peter-evans/create-pull-request@v7
-        with:
-          commit-message: '[WORKFLOW] Updating protos from ${{ github.event.client_payload.repo_name }}, commit: ${{ github.event.client_payload.sha }}'
-          branch: 'workflow/update-proto'
-          delete-branch: true
-          base: main
-          title: Automated Protos Update
-          body: This is an auto-generated PR to update proto definitions. Check the commits to see which repos and commits are responsible for the changes
-          assignees: njooma
-          reviewers: njooma
-          token: ${{ secrets.GIT_ACCESS_TOKEN }}
+      - name: Commit generated buf files
+        run: |
+          git add -A
+          git diff --cached --quiet || git commit -m "[WORKFLOW] Generate buf for version ${{ env.API_VERSION }}"
+
+      - name: Push branch and open PR
+        env:
+          GH_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
+        run: |
+          git push --force origin workflow/update-proto
+          gh pr create \
+            --base main \
+            --head workflow/update-proto \
+            --title "Automated Protos Update" \
+            --body "This is an auto-generated PR to update proto definitions. Check the commits to see which repos and commits are responsible for the changes" \
+            --assignee njooma \
+            --reviewer njooma \
+            || gh pr edit workflow/update-proto \
+              --title "Automated Protos Update" \
+              --body "This is an auto-generated PR to update proto definitions. Check the commits to see which repos and commits are responsible for the changes"
 
       - name: Notify slack of failure
-        uses: slackapi/slack-github-action@v1.24.0
+        uses: slackapi/slack-github-action@v3
         if: ${{ failure() }}
         with:
           payload: |

@@ -10,13 +10,13 @@ dependencies {
     implementation project(':core:viam-core-sdk')
 
     // MLModel Service
-    api platform("ai.djl:bom:0.26.0")
+    api platform("ai.djl:bom:0.33.0")
     api "ai.djl:api"
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 downloadLicenses {

@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: service/worldstatestore/v1/world_state_store.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class WorldStateStoreServiceGrpc {
 
@@ -147,6 +144,21 @@ public final class WorldStateStoreServiceGrpc {
         }
       };
     return WorldStateStoreServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static WorldStateStoreServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<WorldStateStoreServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<WorldStateStoreServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public WorldStateStoreServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new WorldStateStoreServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return WorldStateStoreServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -298,6 +310,65 @@ public final class WorldStateStoreServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service WorldStateStoreService.
+   */
+  public static final class WorldStateStoreServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<WorldStateStoreServiceBlockingV2Stub> {
+    private WorldStateStoreServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected WorldStateStoreServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new WorldStateStoreServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * ListUUIDs returns all world state transform UUIDs
+     * </pre>
+     */
+    public com.viam.service.worldstatestore.v1.WorldStateStore.ListUUIDsResponse listUUIDs(com.viam.service.worldstatestore.v1.WorldStateStore.ListUUIDsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListUUIDsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetTransform returns a world state transform by uuid
+     * </pre>
+     */
+    public com.viam.service.worldstatestore.v1.WorldStateStore.GetTransformResponse getTransform(com.viam.service.worldstatestore.v1.WorldStateStore.GetTransformRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetTransformMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * StreamTransformChanges streams changes to world state transforms
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, com.viam.service.worldstatestore.v1.WorldStateStore.StreamTransformChangesResponse>
+        streamTransformChanges(com.viam.service.worldstatestore.v1.WorldStateStore.StreamTransformChangesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getStreamTransformChangesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service WorldStateStoreService.
    */
   public static final class WorldStateStoreServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<WorldStateStoreServiceBlockingStub> {

@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: app/v1/billing.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class BillingServiceGrpc {
 
@@ -270,6 +267,21 @@ public final class BillingServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static BillingServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<BillingServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BillingServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public BillingServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BillingServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return BillingServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static BillingServiceBlockingStub newBlockingStub(
@@ -502,6 +514,105 @@ public final class BillingServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service BillingService.
+   */
+  public static final class BillingServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<BillingServiceBlockingV2Stub> {
+    private BillingServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected BillingServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new BillingServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Detailed breakdown of current month's costs
+     * </pre>
+     */
+    public viam.app.v1.Billing.GetCurrentMonthUsageResponse getCurrentMonthUsage(viam.app.v1.Billing.GetCurrentMonthUsageRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetCurrentMonthUsageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Org-level information (like billing email and payment details)
+     * </pre>
+     */
+    public viam.app.v1.Billing.GetOrgBillingInformationResponse getOrgBillingInformation(viam.app.v1.Billing.GetOrgBillingInformationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetOrgBillingInformationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Total outstanding balance and previous invoices
+     * </pre>
+     */
+    public viam.app.v1.Billing.GetInvoicesSummaryResponse getInvoicesSummary(viam.app.v1.Billing.GetInvoicesSummaryRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetInvoicesSummaryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Download a PDF invoice
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, viam.app.v1.Billing.GetInvoicePdfResponse>
+        getInvoicePdf(viam.app.v1.Billing.GetInvoicePdfRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getGetInvoicePdfMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Send an email with a prompt to the user's org's billing page.
+     * </pre>
+     */
+    public viam.app.v1.Billing.SendPaymentRequiredEmailResponse sendPaymentRequiredEmail(viam.app.v1.Billing.SendPaymentRequiredEmailRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSendPaymentRequiredEmailMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get available billing tiers that can be assigned to organizations
+     * </pre>
+     */
+    public viam.app.v1.Billing.GetAvailableBillingTiersResponse getAvailableBillingTiers(viam.app.v1.Billing.GetAvailableBillingTiersRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetAvailableBillingTiersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update an organization's billing tier
+     * </pre>
+     */
+    public viam.app.v1.Billing.UpdateOrganizationBillingTierResponse updateOrganizationBillingTier(viam.app.v1.Billing.UpdateOrganizationBillingTierRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateOrganizationBillingTierMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Directly create a flat fee invoice for an organization and charge on the spot
+     * </pre>
+     */
+    public viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyResponse createInvoiceAndChargeImmediately(viam.app.v1.Billing.CreateInvoiceAndChargeImmediatelyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateInvoiceAndChargeImmediatelyMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service BillingService.
    */
   public static final class BillingServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<BillingServiceBlockingStub> {

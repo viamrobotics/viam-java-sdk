@@ -8,9 +8,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * runs them through an ML inference engine, and outputs a map of array/tensors.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: service/mlmodel/v1/mlmodel.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MLModelServiceGrpc {
 
@@ -91,6 +88,21 @@ public final class MLModelServiceGrpc {
         }
       };
     return MLModelServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static MLModelServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<MLModelServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MLModelServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public MLModelServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MLModelServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return MLModelServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -212,6 +224,47 @@ public final class MLModelServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service MLModelService.
+   * <pre>
+   * MLModelService declares the gRPC contract for a service that takes in a map of input arrays/tensors,
+   * runs them through an ML inference engine, and outputs a map of array/tensors.
+   * </pre>
+   */
+  public static final class MLModelServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<MLModelServiceBlockingV2Stub> {
+    private MLModelServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected MLModelServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new MLModelServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Infer takes an already ordered input tensor as a map, makes an inference on the model, and returns an output data map.
+     * </pre>
+     */
+    public com.viam.service.mlmodel.v1.Mlmodel.InferResponse infer(com.viam.service.mlmodel.v1.Mlmodel.InferRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getInferMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Metadata returns the metadata associated with the ML model.
+     * </pre>
+     */
+    public com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse metadata(com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getMetadataMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service MLModelService.
    * <pre>
    * MLModelService declares the gRPC contract for a service that takes in a map of input arrays/tensors,
    * runs them through an ML inference engine, and outputs a map of array/tensors.

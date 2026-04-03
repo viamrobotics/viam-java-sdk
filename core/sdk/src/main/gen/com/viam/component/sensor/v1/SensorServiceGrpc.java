@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * SensorService services all generic sensors associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/sensor/v1/sensor.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SensorServiceGrpc {
 
@@ -120,6 +117,21 @@ public final class SensorServiceGrpc {
         }
       };
     return SensorServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static SensorServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<SensorServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SensorServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public SensorServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SensorServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return SensorServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -259,6 +271,56 @@ public final class SensorServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service SensorService.
+   * <pre>
+   * SensorService services all generic sensors associated with a robot
+   * </pre>
+   */
+  public static final class SensorServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<SensorServiceBlockingV2Stub> {
+    private SensorServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected SensorServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new SensorServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * GetReadings returns the readings of a sensor of the underlying robot.
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetReadingsResponse getReadings(com.viam.common.v1.Common.GetReadingsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetReadingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service SensorService.
    * <pre>
    * SensorService services all generic sensors associated with a robot
    * </pre>

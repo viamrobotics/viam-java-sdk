@@ -9,9 +9,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * other services that a gRPC server has to offer.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: proto/rpc/v1/auth.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AuthServiceGrpc {
 
@@ -62,6 +59,21 @@ public final class AuthServiceGrpc {
         }
       };
     return AuthServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AuthServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AuthServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AuthServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AuthServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AuthServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AuthServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -173,6 +185,42 @@ public final class AuthServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AuthService.
+   * <pre>
+   * An AuthService is intended to be used as a means to perform application level
+   * authentication. Its sole Authenticate method should be used prior to any
+   * other services that a gRPC server has to offer.
+   * </pre>
+   */
+  public static final class AuthServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AuthServiceBlockingV2Stub> {
+    private AuthServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AuthServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AuthServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Authenticate attempts to authenticate the caller claiming to be
+     * the given entity. The resulting response contains an access token
+     * with the subject as the entity and the audience/issuer as the
+     * provider of this service. This token should be used for all future
+     * RPC requests.
+     * </pre>
+     */
+    public proto.rpc.v1.Auth.AuthenticateResponse authenticate(proto.rpc.v1.Auth.AuthenticateRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAuthenticateMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AuthService.
    * <pre>
    * An AuthService is intended to be used as a means to perform application level
    * authentication. Its sole Authenticate method should be used prior to any

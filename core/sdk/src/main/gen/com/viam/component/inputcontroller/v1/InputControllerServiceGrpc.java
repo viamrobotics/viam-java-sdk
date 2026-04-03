@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * InputControllerService servicestains all input controller associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/inputcontroller/v1/input_controller.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class InputControllerServiceGrpc {
 
@@ -210,6 +207,21 @@ public final class InputControllerServiceGrpc {
         }
       };
     return InputControllerServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static InputControllerServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<InputControllerServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<InputControllerServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public InputControllerServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new InputControllerServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return InputControllerServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -414,6 +426,89 @@ public final class InputControllerServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service InputControllerService.
+   * <pre>
+   * InputControllerService servicestains all input controller associated with a robot
+   * </pre>
+   */
+  public static final class InputControllerServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<InputControllerServiceBlockingV2Stub> {
+    private InputControllerServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected InputControllerServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new InputControllerServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * GetControls returns a list of GetControls provided by the Controller
+     * </pre>
+     */
+    public com.viam.component.inputcontroller.v1.InputController.GetControlsResponse getControls(com.viam.component.inputcontroller.v1.InputController.GetControlsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetControlsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetEvents returns a list of events representing the last event on each control of a give Input Controller
+     * </pre>
+     */
+    public com.viam.component.inputcontroller.v1.InputController.GetEventsResponse getEvents(com.viam.component.inputcontroller.v1.InputController.GetEventsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetEventsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * StreamEvents starts a stream of InputControllerEvents for the given controls (buttons/axes) on a robot's input controller
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse>
+        streamEvents(com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getStreamEventsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TriggerEvent, where supported, injects an InputControllerEvent into an input controller to (virtually) generate events
+     * like button presses or axis movements
+     * </pre>
+     */
+    public com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse triggerEvent(com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getTriggerEventMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service InputControllerService.
    * <pre>
    * InputControllerService servicestains all input controller associated with a robot
    * </pre>

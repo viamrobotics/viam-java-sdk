@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: app/cloudslam/v1/cloud_slam.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CloudSLAMServiceGrpc {
 
@@ -210,6 +207,21 @@ public final class CloudSLAMServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CloudSLAMServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CloudSLAMServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CloudSLAMServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CloudSLAMServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CloudSLAMServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CloudSLAMServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CloudSLAMServiceBlockingStub newBlockingStub(
@@ -364,6 +376,65 @@ public final class CloudSLAMServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CloudSLAMService.
+   */
+  public static final class CloudSLAMServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CloudSLAMServiceBlockingV2Stub> {
+    private CloudSLAMServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CloudSLAMServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CloudSLAMServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public viam.app.cloudslam.v1.CloudSlam.StartMappingSessionResponse startMappingSession(viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getStartMappingSessionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotResponse getActiveMappingSessionsForRobot(viam.app.cloudslam.v1.CloudSlam.GetActiveMappingSessionsForRobotRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetActiveMappingSessionsForRobotMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudResponse getMappingSessionPointCloud(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionPointCloudRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetMappingSessionPointCloudMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsResponse listMappingSessions(viam.app.cloudslam.v1.CloudSlam.ListMappingSessionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListMappingSessionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.cloudslam.v1.CloudSlam.StopMappingSessionResponse stopMappingSession(viam.app.cloudslam.v1.CloudSlam.StopMappingSessionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getStopMappingSessionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDResponse getMappingSessionMetadataByID(viam.app.cloudslam.v1.CloudSlam.GetMappingSessionMetadataByIDRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetMappingSessionMetadataByIDMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CloudSLAMService.
    */
   public static final class CloudSLAMServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<CloudSLAMServiceBlockingStub> {

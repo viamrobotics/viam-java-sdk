@@ -1,0 +1,11 @@
+{
+  "allowedLicenses": [
+    { "moduleLicense": "MIT License" },
+    { "moduleLicense": "Apache License, Version 2.0" },
+    { "moduleLicense": "The 3-Clause BSD License" },
+    {
+      "moduleLicense": "COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0"
+    },
+    { "moduleLicense": "PUBLIC DOMAIN" }
+  ]
+}

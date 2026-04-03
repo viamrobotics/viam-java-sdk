@@ -1,10 +1,13 @@
 //file:noinspection ConfigurationAvoidance
 package com.viam.sdk.android.module
 
+import com.android.build.api.artifact.SingleArtifact
+import com.android.build.api.variant.AndroidComponentsExtension
 import org.gradle.api.DefaultTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.provider.Property
+import org.gradle.api.tasks.CacheableTask
 import org.gradle.api.tasks.Exec
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Internal
@@ -19,6 +22,7 @@ interface AndroidModulePluginExtension {
     Property<Boolean> getExecuteInProcess()
 }
 
+@CacheableTask
 abstract class CopyModuleTask extends DefaultTask {
     @Input
     @Option(option = 'into', description = 'the directory to copy into')
@@ -52,62 +56,70 @@ class AndroidModulePlugin implements Plugin<Project> {
             if (!extension.mainEntryClass.isPresent()) {
                 throw new Exception("Must set module.mainEntryClass")
             }
-            def executeInProcess = extension.executeInProcess.getOrElse(false)
+        }
 
-            project.android.applicationVariants.all { variant ->
-                def outputFile = variant.outputs.first().outputFile
-                def assembleTask = project.tasks.named("assemble${variant.name.capitalize()}")
-                def outputDir = "${project.layout.buildDirectory.get()}/outputs/module/${variant.name}"
+        def pluginClass = getClass()
+        def androidComponents = project.extensions.getByType(AndroidComponentsExtension)
+        androidComponents.onVariants(androidComponents.selector().all()) { variant ->
+            def apkDirProvider = variant.artifacts.get(SingleArtifact.APK.INSTANCE)
+            def variantName = variant.name
+            def outputDir = "${project.layout.buildDirectory.get()}/outputs/module/${variantName}"
+            def tmpModDir = "${project.layout.buildDirectory.get()}/tmp/module"
 
-                def tmpModDir = "${project.layout.buildDirectory.get()}/tmp/module"
-                project.file(tmpModDir).mkdirs()
-                def modScript = executeInProcess ?
-                        getClass().getResourceAsStream("/mod-in-process.sh").getText() :
-                        getClass().getResourceAsStream("/mod.sh").getText()
+            def copyJarTask = project.tasks.register("copyModuleJar${variantName.capitalize()}") {
+                // Use string-based dependsOn so Gradle resolves the assemble task lazily after all tasks are registered
+                dependsOn "assemble${variantName.capitalize()}"
+                doLast {
+                    def executeInProcess = extension.executeInProcess.getOrElse(false)
+                    def modScript = executeInProcess ?
+                            pluginClass.getResourceAsStream("/mod-in-process.sh").getText() :
+                            pluginClass.getResourceAsStream("/mod.sh").getText()
 
-                assembleTask.configure {
-                    doLast {
-                        project.copy {
-                            from outputFile
-                            into outputDir
-                            rename {
-                                'module.jar'
-                            }
+                    project.file(tmpModDir).mkdirs()
+                    project.file(outputDir).mkdirs()
+
+                    def apkDir = apkDirProvider.get().asFile
+                    def apkFile = apkDir.listFiles().find { it.name.endsWith('.apk') }
+                    project.copy {
+                        from apkFile
+                        into outputDir
+                        rename {
+                            'module.jar'
                         }
+                    }
 
-                        new File(tmpModDir, "mod.sh").text = modScript
-                        project.exec {
-                            commandLine "chmod", "+x", "${tmpModDir}/mod.sh"
-                        }
+                    new File(tmpModDir, "mod.sh").text = modScript
+                    project.exec {
+                        commandLine "chmod", "+x", "${tmpModDir}/mod.sh"
+                    }
 
-                        project.copy {
-                            from project.file("${tmpModDir}/mod.sh")
-                            into outputDir
-                            filter { line ->
-                                line.
-                                        replaceAll('__MAIN_ENTRY_CLASS__', extension.mainEntryClass.get()).
-                                        replaceAll('__FORCE_32__', extension.force32Bit.getOrElse(false).toString())
-                            }
+                    project.copy {
+                        from project.file("${tmpModDir}/mod.sh")
+                        into outputDir
+                        filter { line ->
+                            line.
+                                    replaceAll('__MAIN_ENTRY_CLASS__', extension.mainEntryClass.get()).
+                                    replaceAll('__FORCE_32__', extension.force32Bit.getOrElse(false).toString())
                         }
                     }
                 }
+            }
 
-                def copyMetaTask = project.task("copyMeta${variant.name.capitalize()}") {
-                    dependsOn assembleTask
-                    doLast {
-                        new File(outputDir, "meta.json").text = getClass().getResourceAsStream("/meta.json").getText()
-                    }
+            def copyMetaTask = project.tasks.register("copyMeta${variantName.capitalize()}") {
+                dependsOn copyJarTask
+                doLast {
+                    new File(outputDir, "meta.json").text = pluginClass.getResourceAsStream("/meta.json").getText()
                 }
+            }
 
-                def tarModuleTask = project.task("tarModule${variant.name.capitalize()}", type: Exec) {
-                    dependsOn copyMetaTask
-                    commandLine "tar", "czf", "${outputDir}/module.tar.gz", "-C", outputDir, "meta.json", "mod.sh", "module.jar"
-                }
+            def tarModuleTask = project.tasks.register("tarModule${variantName.capitalize()}", Exec) {
+                dependsOn copyMetaTask
+                commandLine "tar", "czf", "${outputDir}/module.tar.gz", "-C", outputDir, "meta.json", "mod.sh", "module.jar"
+            }
 
-                project.task("pushModuleAdb${variant.name.capitalize()}", type: Exec) {
-                    dependsOn tarModuleTask
-                    commandLine "adb", "push", "${outputDir}/module.tar.gz", "/sdcard/Download/${project.rootProject.projectDir.name}.tar.gz"
-                }
+            project.tasks.register("pushModuleAdb${variantName.capitalize()}", Exec) {
+                dependsOn tarModuleTask
+                commandLine "adb", "push", "${outputDir}/module.tar.gz", "/sdcard/Download/${project.rootProject.projectDir.name}.tar.gz"
             }
         }
     }

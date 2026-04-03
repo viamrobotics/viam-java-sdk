@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * A CameraService services all cameras associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/camera/v1/camera.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CameraServiceGrpc {
 
@@ -243,6 +240,21 @@ public final class CameraServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static CameraServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CameraServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CameraServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public CameraServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CameraServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return CameraServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static CameraServiceBlockingStub newBlockingStub(
@@ -463,6 +475,96 @@ public final class CameraServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service CameraService.
+   * <pre>
+   * A CameraService services all cameras associated with a robot
+   * </pre>
+   */
+  public static final class CameraServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CameraServiceBlockingV2Stub> {
+    private CameraServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected CameraServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new CameraServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * GetImage returns a frame from a camera of the underlying robot. A specific MIME type
+     * can be requested but may not necessarily be the same one returned.
+     * </pre>
+     */
+    public com.viam.component.camera.v1.Camera.GetImageResponse getImage(com.viam.component.camera.v1.Camera.GetImageRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetImageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.component.camera.v1.Camera.GetImagesResponse getImages(com.viam.component.camera.v1.Camera.GetImagesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetImagesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RenderFrame renders a frame from a camera of the underlying robot to an HTTP response. A specific MIME type
+     * can be requested but may not necessarily be the same one returned.
+     * </pre>
+     */
+    public com.google.api.HttpBody renderFrame(com.viam.component.camera.v1.Camera.RenderFrameRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRenderFrameMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetPointCloud returns a point cloud from a camera of the underlying robot. A specific MIME type
+     * can be requested but may not necessarily be the same one returned.
+     * </pre>
+     */
+    public com.viam.component.camera.v1.Camera.GetPointCloudResponse getPointCloud(com.viam.component.camera.v1.Camera.GetPointCloudRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPointCloudMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the camera intrinsic parameters and camera distortion parameters from a camera of the underlying robot, if available.
+     * </pre>
+     */
+    public com.viam.component.camera.v1.Camera.GetPropertiesResponse getProperties(com.viam.component.camera.v1.Camera.GetPropertiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service CameraService.
    * <pre>
    * A CameraService services all cameras associated with a robot
    * </pre>

@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * DataService is used to query robot data.
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: app/data/v1/data.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DataServiceGrpc {
 
@@ -993,6 +990,21 @@ public final class DataServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static DataServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<DataServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DataServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public DataServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DataServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return DataServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static DataServiceBlockingStub newBlockingStub(
@@ -1752,6 +1764,355 @@ public final class DataServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service DataService.
+   * <pre>
+   * DataService is used to query robot data.
+   * </pre>
+   */
+  public static final class DataServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<DataServiceBlockingV2Stub> {
+    private DataServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected DataServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new DataServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * TabularDataByFilter queries tabular data and metadata based on given filters.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public viam.app.data.v1.Data.TabularDataByFilterResponse tabularDataByFilter(viam.app.data.v1.Data.TabularDataByFilterRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getTabularDataByFilterMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TabularDataBySQL queries tabular data with a SQL query.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.TabularDataBySQLResponse tabularDataBySQL(viam.app.data.v1.Data.TabularDataBySQLRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getTabularDataBySQLMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TabularDataByMQL queries tabular data with an MQL (MongoDB Query Language) query.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.TabularDataByMQLResponse tabularDataByMQL(viam.app.data.v1.Data.TabularDataByMQLRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getTabularDataByMQLMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ExportTabularData queries tabular data from the specified data source.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, viam.app.data.v1.Data.ExportTabularDataResponse>
+        exportTabularData(viam.app.data.v1.Data.ExportTabularDataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getExportTabularDataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetLatestTabularData gets the most recent tabular data captured from the specified data source.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.GetLatestTabularDataResponse getLatestTabularData(viam.app.data.v1.Data.GetLatestTabularDataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetLatestTabularDataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * BinaryDataByFilter queries binary data and metadata based on given filters.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.BinaryDataByFilterResponse binaryDataByFilter(viam.app.data.v1.Data.BinaryDataByFilterRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getBinaryDataByFilterMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * BinaryDataByIDs queries binary data and metadata based on given IDs.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.BinaryDataByIDsResponse binaryDataByIDs(viam.app.data.v1.Data.BinaryDataByIDsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getBinaryDataByIDsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteTabularData deletes tabular data older than a number of days, based on the given organization ID.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.DeleteTabularDataResponse deleteTabularData(viam.app.data.v1.Data.DeleteTabularDataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteTabularDataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteBinaryDataByFilter deletes binary data based on given filters.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.DeleteBinaryDataByFilterResponse deleteBinaryDataByFilter(viam.app.data.v1.Data.DeleteBinaryDataByFilterRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteBinaryDataByFilterMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteBinaryDataByIDs deletes binary data based on given IDs.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.DeleteBinaryDataByIDsResponse deleteBinaryDataByIDs(viam.app.data.v1.Data.DeleteBinaryDataByIDsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteBinaryDataByIDsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddTagsToBinaryDataByIDs adds string tags, unless the tags are already present, to binary data based on given IDs.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse addTagsToBinaryDataByIDs(viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAddTagsToBinaryDataByIDsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddTagsToBinaryDataByFilter adds string tags, unless the tags are already present, to binary data based on the given filter.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public viam.app.data.v1.Data.AddTagsToBinaryDataByFilterResponse addTagsToBinaryDataByFilter(viam.app.data.v1.Data.AddTagsToBinaryDataByFilterRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAddTagsToBinaryDataByFilterMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveTagsToBinaryDataByIDs removes string tags from binary data based on given IDs.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse removeTagsFromBinaryDataByIDs(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRemoveTagsFromBinaryDataByIDsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveTagsToBinaryDataByFilter removes string tags from binary data based on the given filter.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterResponse removeTagsFromBinaryDataByFilter(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRemoveTagsFromBinaryDataByFilterMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TagsByFilter gets all unique tags from data based on given filter.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public viam.app.data.v1.Data.TagsByFilterResponse tagsByFilter(viam.app.data.v1.Data.TagsByFilterRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getTagsByFilterMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddBoundingBoxToImageByID adds a bounding box to an image with the given ID.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse addBoundingBoxToImageByID(viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAddBoundingBoxToImageByIDMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveBoundingBoxFromImageByID removes a bounding box from an image with the given ID.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse removeBoundingBoxFromImageByID(viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRemoveBoundingBoxFromImageByIDMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * BoundingBoxLabelsByFilter gets all string labels for bounding boxes from data based on given filter.
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse boundingBoxLabelsByFilter(viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getBoundingBoxLabelsByFilterMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateBoundingBox updates the bounding box associated with a given binary ID and bounding box ID.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.UpdateBoundingBoxResponse updateBoundingBox(viam.app.data.v1.Data.UpdateBoundingBoxRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateBoundingBoxMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetDatabaseConnection gets a connection to access a MongoDB Atlas Data Federation instance. It
+     * returns the hostname of the federated database.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.GetDatabaseConnectionResponse getDatabaseConnection(viam.app.data.v1.Data.GetDatabaseConnectionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetDatabaseConnectionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ConfigureDatabaseUser configures a database user for the Viam organization's MongoDB Atlas Data
+     * Federation instance. It can also be used to reset the password of the existing database user.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.ConfigureDatabaseUserResponse configureDatabaseUser(viam.app.data.v1.Data.ConfigureDatabaseUserRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getConfigureDatabaseUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddBinaryDataToDatasetByIDs adds the binary data with the given binary IDs to the dataset.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse addBinaryDataToDatasetByIDs(viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAddBinaryDataToDatasetByIDsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveBinaryDataFromDatasetByIDs removes the binary data with the given binary IDs from the dataset.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse removeBinaryDataFromDatasetByIDs(viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRemoveBinaryDataFromDatasetByIDsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateIndex starts a custom index build
+     * </pre>
+     */
+    public viam.app.data.v1.Data.CreateIndexResponse createIndex(viam.app.data.v1.Data.CreateIndexRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateIndexMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListIndexes returns all the indexes for a given collection
+     * </pre>
+     */
+    public viam.app.data.v1.Data.ListIndexesResponse listIndexes(viam.app.data.v1.Data.ListIndexesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListIndexesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteIndex drops the specified custom index from a collection
+     * </pre>
+     */
+    public viam.app.data.v1.Data.DeleteIndexResponse deleteIndex(viam.app.data.v1.Data.DeleteIndexRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteIndexMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateSavedQuery saves a mql query.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.CreateSavedQueryResponse createSavedQuery(viam.app.data.v1.Data.CreateSavedQueryRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateSavedQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateSavedQuery updates the saved query with the given id.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.UpdateSavedQueryResponse updateSavedQuery(viam.app.data.v1.Data.UpdateSavedQueryRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateSavedQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetSavedQuery retrieves a saved query by id.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.GetSavedQueryResponse getSavedQuery(viam.app.data.v1.Data.GetSavedQueryRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetSavedQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteSavedQuery deletes a saved query based on the given id.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.DeleteSavedQueryResponse deleteSavedQuery(viam.app.data.v1.Data.DeleteSavedQueryRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteSavedQueryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListSavedQueries lists saved queries for a given organization.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.ListSavedQueriesResponse listSavedQueries(viam.app.data.v1.Data.ListSavedQueriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListSavedQueriesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateBinaryDataSignedURL creates a temporary public URL for a binary data file.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse createBinaryDataSignedURL(viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateBinaryDataSignedURLMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service DataService.
    * <pre>
    * DataService is used to query robot data.
    * </pre>

@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * A NavigationService declares the gRPC contract for a Navigation service
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: service/navigation/v1/navigation.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class NavigationServiceGrpc {
 
@@ -333,6 +330,21 @@ public final class NavigationServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static NavigationServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<NavigationServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NavigationServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public NavigationServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NavigationServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return NavigationServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static NavigationServiceBlockingStub newBlockingStub(
@@ -570,6 +582,103 @@ public final class NavigationServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service NavigationService.
+   * <pre>
+   * A NavigationService declares the gRPC contract for a Navigation service
+   * </pre>
+   */
+  public static final class NavigationServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<NavigationServiceBlockingV2Stub> {
+    private NavigationServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected NavigationServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new NavigationServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.viam.service.navigation.v1.Navigation.GetModeResponse getMode(com.viam.service.navigation.v1.Navigation.GetModeRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetModeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.service.navigation.v1.Navigation.SetModeResponse setMode(com.viam.service.navigation.v1.Navigation.SetModeRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetModeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.service.navigation.v1.Navigation.GetLocationResponse getLocation(com.viam.service.navigation.v1.Navigation.GetLocationRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetLocationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.service.navigation.v1.Navigation.GetWaypointsResponse getWaypoints(com.viam.service.navigation.v1.Navigation.GetWaypointsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetWaypointsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.service.navigation.v1.Navigation.AddWaypointResponse addWaypoint(com.viam.service.navigation.v1.Navigation.AddWaypointRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAddWaypointMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse removeWaypoint(com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRemoveWaypointMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.service.navigation.v1.Navigation.GetObstaclesResponse getObstacles(com.viam.service.navigation.v1.Navigation.GetObstaclesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetObstaclesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.service.navigation.v1.Navigation.GetPathsResponse getPaths(com.viam.service.navigation.v1.Navigation.GetPathsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPathsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns properties of the current navigation service, including the
+     * map_type being operated on.
+     * </pre>
+     */
+    public com.viam.service.navigation.v1.Navigation.GetPropertiesResponse getProperties(com.viam.service.navigation.v1.Navigation.GetPropertiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service NavigationService.
    * <pre>
    * A NavigationService declares the gRPC contract for a Navigation service
    * </pre>

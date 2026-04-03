@@ -7,9 +7,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * An AudioOutService services all audio outputs associated with a robot
  * </pre>
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.68.1)",
-    comments = "Source: component/audioout/v1/audioout.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AudioOutServiceGrpc {
 
@@ -150,6 +147,21 @@ public final class AudioOutServiceGrpc {
         }
       };
     return AudioOutServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AudioOutServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AudioOutServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AudioOutServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public AudioOutServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AudioOutServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AudioOutServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -310,6 +322,66 @@ public final class AudioOutServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service AudioOutService.
+   * <pre>
+   * An AudioOutService services all audio outputs associated with a robot
+   * </pre>
+   */
+  public static final class AudioOutServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AudioOutServiceBlockingV2Stub> {
+    private AudioOutServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AudioOutServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AudioOutServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Play plays audio from the audioout component.
+     * </pre>
+     */
+    public com.viam.component.audioout.v1.Audioout.PlayResponse play(com.viam.component.audioout.v1.Audioout.PlayRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getPlayMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the properties of the audioout.
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetPropertiesResponse getProperties(com.viam.common.v1.Common.GetPropertiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service AudioOutService.
    * <pre>
    * An AudioOutService services all audio outputs associated with a robot
    * </pre>
