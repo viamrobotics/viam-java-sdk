@@ -4,10 +4,6 @@ buildscript {
     }
 }
 
-plugins {
-    id "com.github.hierynomus.license-report" version "0.16.1"
-}
-
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
@@ -51,14 +47,9 @@ android {
 
 dependencies {
     api project(':core:viam-core-sdk')
-    api 'org.jitsi:webrtc:118.0.0'
+    api 'org.jitsi:webrtc:124.0.0'
 
     implementation 'io.grpc:grpc-okhttp:1.80.0'
     implementation 'io.grpc:grpc-android:1.80.0'
     implementation 'commons-io:commons-io:2.21.0'
-}
-
-downloadLicenses {
-    includeProjectDependencies = true
-    dependencyConfiguration = 'runtimeClasspath'
 }

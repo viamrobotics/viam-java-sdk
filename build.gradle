@@ -1,5 +1,8 @@
+import com.github.jk1.license.filter.*
+
 plugins {
     id "io.freefair.aggregate-javadoc" version "9.2.0"
+    id 'com.github.jk1.dependency-license-report' version '3.1.1'
 }
 
 group 'com.viam'
@@ -200,4 +203,10 @@ tasks.register('printVersion') {
     doLast {
         println project.version
     }
+}
+
+licenseReport {
+    allowedLicensesFile = layout.projectDirectory.file('doc/allowed-licenses.json')
+    filters = [new LicenseBundleNormalizer()]
+    unionParentPomLicenses = false
 }
