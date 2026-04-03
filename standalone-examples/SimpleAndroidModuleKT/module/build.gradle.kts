@@ -1,6 +1,5 @@
 plugins {
-    id("com.viam.sdk.android.module") version ("0.0.10")
-    id("org.jetbrains.kotlin.android")
+    id("com.viam.sdk.android.module") version ("0.0.13")
 }
 
 module {
@@ -13,7 +12,7 @@ android {
 
     defaultConfig {
         minSdk = 29
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
     }
@@ -31,11 +30,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
 }
 
 dependencies {
-    implementation("com.viam:viam-android-sdk:0.0.10")
+    implementation("com.viam:viam-android-sdk:0.0.13")
 }
