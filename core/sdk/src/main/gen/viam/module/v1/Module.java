@@ -2784,16 +2784,32 @@ public final class Module {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
-     * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+     * <code>string parent_address = 1 [json_name = "parentAddress", deprecated = true];</code>
+     * @deprecated viam.module.v1.ReadyRequest.parent_address is deprecated.
+     *     See module/v1/module.proto;l=54
      * @return The parentAddress.
      */
-    java.lang.String getParentAddress();
+    @java.lang.Deprecated java.lang.String getParentAddress();
     /**
-     * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+     * <code>string parent_address = 1 [json_name = "parentAddress", deprecated = true];</code>
+     * @deprecated viam.module.v1.ReadyRequest.parent_address is deprecated.
+     *     See module/v1/module.proto;l=54
      * @return The bytes for parentAddress.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getParentAddressBytes();
+
+    /**
+     * <code>string raw_parent_address = 3 [json_name = "rawParentAddress"];</code>
+     * @return The rawParentAddress.
+     */
+    java.lang.String getRawParentAddress();
+    /**
+     * <code>string raw_parent_address = 3 [json_name = "rawParentAddress"];</code>
+     * @return The bytes for rawParentAddress.
+     */
+    com.google.protobuf.ByteString
+        getRawParentAddressBytes();
 
     /**
      * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
@@ -2817,29 +2833,34 @@ public final class Module {
       ReadyRequestOrBuilder {
     private ReadyRequest() {
       parentAddress_ = "";
+      rawParentAddress_ = "";
       webrtcOffer_ = "";
     }
     public static final int PARENT_ADDRESS_FIELD_NUMBER = 1;
     private java.lang.String parentAddress_;
     /**
-     * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+     * <code>string parent_address = 1 [json_name = "parentAddress", deprecated = true];</code>
+     * @deprecated viam.module.v1.ReadyRequest.parent_address is deprecated.
+     *     See module/v1/module.proto;l=54
      * @return The parentAddress.
      */
     @java.lang.Override
-    public java.lang.String getParentAddress() {
+    @java.lang.Deprecated public java.lang.String getParentAddress() {
       return parentAddress_;
     }
     /**
-     * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+     * <code>string parent_address = 1 [json_name = "parentAddress", deprecated = true];</code>
+     * @deprecated viam.module.v1.ReadyRequest.parent_address is deprecated.
+     *     See module/v1/module.proto;l=54
      * @return The bytes for parentAddress.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getParentAddressBytes() {
       return com.google.protobuf.ByteString.copyFromUtf8(parentAddress_);
     }
     /**
-     * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+     * <code>string parent_address = 1 [json_name = "parentAddress", deprecated = true];</code>
      * @param value The parentAddress to set.
      */
     @java.lang.SuppressWarnings("ReturnValueIgnored")
@@ -2850,20 +2871,68 @@ public final class Module {
       parentAddress_ = value;
     }
     /**
-     * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+     * <code>string parent_address = 1 [json_name = "parentAddress", deprecated = true];</code>
      */
     private void clearParentAddress() {
 
       parentAddress_ = getDefaultInstance().getParentAddress();
     }
     /**
-     * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+     * <code>string parent_address = 1 [json_name = "parentAddress", deprecated = true];</code>
      * @param value The bytes for parentAddress to set.
      */
     private void setParentAddressBytes(
         com.google.protobuf.ByteString value) {
       checkByteStringIsUtf8(value);
       parentAddress_ = value.toStringUtf8();
+
+    }
+
+    public static final int RAW_PARENT_ADDRESS_FIELD_NUMBER = 3;
+    private java.lang.String rawParentAddress_;
+    /**
+     * <code>string raw_parent_address = 3 [json_name = "rawParentAddress"];</code>
+     * @return The rawParentAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getRawParentAddress() {
+      return rawParentAddress_;
+    }
+    /**
+     * <code>string raw_parent_address = 3 [json_name = "rawParentAddress"];</code>
+     * @return The bytes for rawParentAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRawParentAddressBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(rawParentAddress_);
+    }
+    /**
+     * <code>string raw_parent_address = 3 [json_name = "rawParentAddress"];</code>
+     * @param value The rawParentAddress to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setRawParentAddress(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      rawParentAddress_ = value;
+    }
+    /**
+     * <code>string raw_parent_address = 3 [json_name = "rawParentAddress"];</code>
+     */
+    private void clearRawParentAddress() {
+
+      rawParentAddress_ = getDefaultInstance().getRawParentAddress();
+    }
+    /**
+     * <code>string raw_parent_address = 3 [json_name = "rawParentAddress"];</code>
+     * @param value The bytes for rawParentAddress to set.
+     */
+    private void setRawParentAddressBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      rawParentAddress_ = value.toStringUtf8();
 
     }
 
@@ -3013,51 +3082,110 @@ public final class Module {
 
 
       /**
-       * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+       * <code>string parent_address = 1 [json_name = "parentAddress", deprecated = true];</code>
+       * @deprecated viam.module.v1.ReadyRequest.parent_address is deprecated.
+       *     See module/v1/module.proto;l=54
        * @return The parentAddress.
        */
       @java.lang.Override
-      public java.lang.String getParentAddress() {
+      @java.lang.Deprecated public java.lang.String getParentAddress() {
         return instance.getParentAddress();
       }
       /**
-       * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+       * <code>string parent_address = 1 [json_name = "parentAddress", deprecated = true];</code>
+       * @deprecated viam.module.v1.ReadyRequest.parent_address is deprecated.
+       *     See module/v1/module.proto;l=54
        * @return The bytes for parentAddress.
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getParentAddressBytes() {
         return instance.getParentAddressBytes();
       }
       /**
-       * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+       * <code>string parent_address = 1 [json_name = "parentAddress", deprecated = true];</code>
+       * @deprecated viam.module.v1.ReadyRequest.parent_address is deprecated.
+       *     See module/v1/module.proto;l=54
        * @param value The parentAddress to set.
        * @return This builder for chaining.
        */
-      public Builder setParentAddress(
+      @java.lang.Deprecated public Builder setParentAddress(
           java.lang.String value) {
         copyOnWrite();
         instance.setParentAddress(value);
         return this;
       }
       /**
-       * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+       * <code>string parent_address = 1 [json_name = "parentAddress", deprecated = true];</code>
+       * @deprecated viam.module.v1.ReadyRequest.parent_address is deprecated.
+       *     See module/v1/module.proto;l=54
        * @return This builder for chaining.
        */
-      public Builder clearParentAddress() {
+      @java.lang.Deprecated public Builder clearParentAddress() {
         copyOnWrite();
         instance.clearParentAddress();
         return this;
       }
       /**
-       * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+       * <code>string parent_address = 1 [json_name = "parentAddress", deprecated = true];</code>
+       * @deprecated viam.module.v1.ReadyRequest.parent_address is deprecated.
+       *     See module/v1/module.proto;l=54
        * @param value The bytes for parentAddress to set.
        * @return This builder for chaining.
        */
-      public Builder setParentAddressBytes(
+      @java.lang.Deprecated public Builder setParentAddressBytes(
           com.google.protobuf.ByteString value) {
         copyOnWrite();
         instance.setParentAddressBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string raw_parent_address = 3 [json_name = "rawParentAddress"];</code>
+       * @return The rawParentAddress.
+       */
+      @java.lang.Override
+      public java.lang.String getRawParentAddress() {
+        return instance.getRawParentAddress();
+      }
+      /**
+       * <code>string raw_parent_address = 3 [json_name = "rawParentAddress"];</code>
+       * @return The bytes for rawParentAddress.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRawParentAddressBytes() {
+        return instance.getRawParentAddressBytes();
+      }
+      /**
+       * <code>string raw_parent_address = 3 [json_name = "rawParentAddress"];</code>
+       * @param value The rawParentAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRawParentAddress(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRawParentAddress(value);
+        return this;
+      }
+      /**
+       * <code>string raw_parent_address = 3 [json_name = "rawParentAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRawParentAddress() {
+        copyOnWrite();
+        instance.clearRawParentAddress();
+        return this;
+      }
+      /**
+       * <code>string raw_parent_address = 3 [json_name = "rawParentAddress"];</code>
+       * @param value The bytes for rawParentAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRawParentAddressBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRawParentAddressBytes(value);
         return this;
       }
 
@@ -3128,10 +3256,11 @@ public final class Module {
             java.lang.Object[] objects = new java.lang.Object[] {
               "parentAddress_",
               "webrtcOffer_",
+              "rawParentAddress_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {

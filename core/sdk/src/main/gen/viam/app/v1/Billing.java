@@ -4660,7 +4660,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=125
+     *     See app/v1/billing.proto;l=131
      * @return The cloudStorageUsageCost.
      */
     @java.lang.Deprecated double getCloudStorageUsageCost();
@@ -4668,7 +4668,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=126
+     *     See app/v1/billing.proto;l=132
      * @return The dataUploadUsageCost.
      */
     @java.lang.Deprecated double getDataUploadUsageCost();
@@ -4676,7 +4676,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=127
+     *     See app/v1/billing.proto;l=133
      * @return The dataEgresUsageCost.
      */
     @java.lang.Deprecated double getDataEgresUsageCost();
@@ -4684,7 +4684,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=128
+     *     See app/v1/billing.proto;l=134
      * @return The remoteControlUsageCost.
      */
     @java.lang.Deprecated double getRemoteControlUsageCost();
@@ -4692,7 +4692,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=129
+     *     See app/v1/billing.proto;l=135
      * @return The standardComputeUsageCost.
      */
     @java.lang.Deprecated double getStandardComputeUsageCost();
@@ -4700,7 +4700,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=130
+     *     See app/v1/billing.proto;l=136
      * @return The discountAmount.
      */
     @java.lang.Deprecated double getDiscountAmount();
@@ -4708,7 +4708,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=131
+     *     See app/v1/billing.proto;l=137
      * @return The totalUsageWithDiscount.
      */
     @java.lang.Deprecated double getTotalUsageWithDiscount();
@@ -4716,7 +4716,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=132
+     *     See app/v1/billing.proto;l=138
      * @return The totalUsageWithoutDiscount.
      */
     @java.lang.Deprecated double getTotalUsageWithoutDiscount();
@@ -4724,7 +4724,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=133
+     *     See app/v1/billing.proto;l=139
      * @return The perMachineUsageCost.
      */
     @java.lang.Deprecated double getPerMachineUsageCost();
@@ -4732,7 +4732,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=134
+     *     See app/v1/billing.proto;l=140
      * @return The binaryDataCloudStorageUsageCost.
      */
     @java.lang.Deprecated double getBinaryDataCloudStorageUsageCost();
@@ -4740,7 +4740,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=135
+     *     See app/v1/billing.proto;l=141
      * @return The otherCloudStorageUsageCost.
      */
     @java.lang.Deprecated double getOtherCloudStorageUsageCost();
@@ -4985,7 +4985,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=125
+     *     See app/v1/billing.proto;l=131
      * @return The cloudStorageUsageCost.
      */
     @java.lang.Override
@@ -5021,7 +5021,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=126
+     *     See app/v1/billing.proto;l=132
      * @return The dataUploadUsageCost.
      */
     @java.lang.Override
@@ -5049,7 +5049,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=127
+     *     See app/v1/billing.proto;l=133
      * @return The dataEgresUsageCost.
      */
     @java.lang.Override
@@ -5077,7 +5077,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=128
+     *     See app/v1/billing.proto;l=134
      * @return The remoteControlUsageCost.
      */
     @java.lang.Override
@@ -5105,7 +5105,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=129
+     *     See app/v1/billing.proto;l=135
      * @return The standardComputeUsageCost.
      */
     @java.lang.Override
@@ -5133,7 +5133,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=130
+     *     See app/v1/billing.proto;l=136
      * @return The discountAmount.
      */
     @java.lang.Override
@@ -5161,7 +5161,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=131
+     *     See app/v1/billing.proto;l=137
      * @return The totalUsageWithDiscount.
      */
     @java.lang.Override
@@ -5189,7 +5189,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=132
+     *     See app/v1/billing.proto;l=138
      * @return The totalUsageWithoutDiscount.
      */
     @java.lang.Override
@@ -5217,7 +5217,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=133
+     *     See app/v1/billing.proto;l=139
      * @return The perMachineUsageCost.
      */
     @java.lang.Override
@@ -5245,7 +5245,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=134
+     *     See app/v1/billing.proto;l=140
      * @return The binaryDataCloudStorageUsageCost.
      */
     @java.lang.Override
@@ -5273,7 +5273,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=135
+     *     See app/v1/billing.proto;l=141
      * @return The otherCloudStorageUsageCost.
      */
     @java.lang.Override
@@ -5624,7 +5624,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=125
+       *     See app/v1/billing.proto;l=131
        * @return The cloudStorageUsageCost.
        */
       @java.lang.Override
@@ -5638,7 +5638,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=125
+       *     See app/v1/billing.proto;l=131
        * @param value The cloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5654,7 +5654,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=125
+       *     See app/v1/billing.proto;l=131
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearCloudStorageUsageCost() {
@@ -5666,7 +5666,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=126
+       *     See app/v1/billing.proto;l=132
        * @return The dataUploadUsageCost.
        */
       @java.lang.Override
@@ -5676,7 +5676,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=126
+       *     See app/v1/billing.proto;l=132
        * @param value The dataUploadUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5688,7 +5688,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=126
+       *     See app/v1/billing.proto;l=132
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDataUploadUsageCost() {
@@ -5700,7 +5700,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=127
+       *     See app/v1/billing.proto;l=133
        * @return The dataEgresUsageCost.
        */
       @java.lang.Override
@@ -5710,7 +5710,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=127
+       *     See app/v1/billing.proto;l=133
        * @param value The dataEgresUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5722,7 +5722,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=127
+       *     See app/v1/billing.proto;l=133
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDataEgresUsageCost() {
@@ -5734,7 +5734,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=128
+       *     See app/v1/billing.proto;l=134
        * @return The remoteControlUsageCost.
        */
       @java.lang.Override
@@ -5744,7 +5744,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=128
+       *     See app/v1/billing.proto;l=134
        * @param value The remoteControlUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5756,7 +5756,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=128
+       *     See app/v1/billing.proto;l=134
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearRemoteControlUsageCost() {
@@ -5768,7 +5768,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=129
+       *     See app/v1/billing.proto;l=135
        * @return The standardComputeUsageCost.
        */
       @java.lang.Override
@@ -5778,7 +5778,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=129
+       *     See app/v1/billing.proto;l=135
        * @param value The standardComputeUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5790,7 +5790,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=129
+       *     See app/v1/billing.proto;l=135
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearStandardComputeUsageCost() {
@@ -5802,7 +5802,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=130
+       *     See app/v1/billing.proto;l=136
        * @return The discountAmount.
        */
       @java.lang.Override
@@ -5812,7 +5812,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=130
+       *     See app/v1/billing.proto;l=136
        * @param value The discountAmount to set.
        * @return This builder for chaining.
        */
@@ -5824,7 +5824,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=130
+       *     See app/v1/billing.proto;l=136
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDiscountAmount() {
@@ -5836,7 +5836,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=131
+       *     See app/v1/billing.proto;l=137
        * @return The totalUsageWithDiscount.
        */
       @java.lang.Override
@@ -5846,7 +5846,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=131
+       *     See app/v1/billing.proto;l=137
        * @param value The totalUsageWithDiscount to set.
        * @return This builder for chaining.
        */
@@ -5858,7 +5858,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=131
+       *     See app/v1/billing.proto;l=137
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalUsageWithDiscount() {
@@ -5870,7 +5870,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=132
+       *     See app/v1/billing.proto;l=138
        * @return The totalUsageWithoutDiscount.
        */
       @java.lang.Override
@@ -5880,7 +5880,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=132
+       *     See app/v1/billing.proto;l=138
        * @param value The totalUsageWithoutDiscount to set.
        * @return This builder for chaining.
        */
@@ -5892,7 +5892,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=132
+       *     See app/v1/billing.proto;l=138
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalUsageWithoutDiscount() {
@@ -5904,7 +5904,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=133
+       *     See app/v1/billing.proto;l=139
        * @return The perMachineUsageCost.
        */
       @java.lang.Override
@@ -5914,7 +5914,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=133
+       *     See app/v1/billing.proto;l=139
        * @param value The perMachineUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5926,7 +5926,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=133
+       *     See app/v1/billing.proto;l=139
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearPerMachineUsageCost() {
@@ -5938,7 +5938,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=134
+       *     See app/v1/billing.proto;l=140
        * @return The binaryDataCloudStorageUsageCost.
        */
       @java.lang.Override
@@ -5948,7 +5948,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=134
+       *     See app/v1/billing.proto;l=140
        * @param value The binaryDataCloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5960,7 +5960,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=134
+       *     See app/v1/billing.proto;l=140
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearBinaryDataCloudStorageUsageCost() {
@@ -5972,7 +5972,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=135
+       *     See app/v1/billing.proto;l=141
        * @return The otherCloudStorageUsageCost.
        */
       @java.lang.Override
@@ -5982,7 +5982,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=135
+       *     See app/v1/billing.proto;l=141
        * @param value The otherCloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5994,7 +5994,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=135
+       *     See app/v1/billing.proto;l=141
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearOtherCloudStorageUsageCost() {
@@ -10604,6 +10604,2226 @@ public final class Billing {
     }
   }
 
+  public interface GetLocationBillingOrganizationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetLocationBillingOrganizationRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    java.lang.String getLocationId();
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    com.google.protobuf.ByteString
+        getLocationIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetLocationBillingOrganizationRequest}
+   */
+  public  static final class GetLocationBillingOrganizationRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetLocationBillingOrganizationRequest, GetLocationBillingOrganizationRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetLocationBillingOrganizationRequest)
+      GetLocationBillingOrganizationRequestOrBuilder {
+    private GetLocationBillingOrganizationRequest() {
+      locationId_ = "";
+    }
+    public static final int LOCATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String locationId_;
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    @java.lang.Override
+    public java.lang.String getLocationId() {
+      return locationId_;
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(locationId_);
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @param value The locationId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setLocationId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      locationId_ = value;
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     */
+    private void clearLocationId() {
+
+      locationId_ = getDefaultInstance().getLocationId();
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @param value The bytes for locationId to set.
+     */
+    private void setLocationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      locationId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.GetLocationBillingOrganizationRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetLocationBillingOrganizationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.GetLocationBillingOrganizationRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetLocationBillingOrganizationRequest)
+        viam.app.v1.Billing.GetLocationBillingOrganizationRequestOrBuilder {
+      // Construct using viam.app.v1.Billing.GetLocationBillingOrganizationRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @return The locationId.
+       */
+      @java.lang.Override
+      public java.lang.String getLocationId() {
+        return instance.getLocationId();
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @return The bytes for locationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLocationIdBytes() {
+        return instance.getLocationIdBytes();
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @param value The locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setLocationId(value);
+        return this;
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocationId() {
+        copyOnWrite();
+        instance.clearLocationId();
+        return this;
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @param value The bytes for locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setLocationIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetLocationBillingOrganizationRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.GetLocationBillingOrganizationRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "locationId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.GetLocationBillingOrganizationRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.GetLocationBillingOrganizationRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.GetLocationBillingOrganizationRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetLocationBillingOrganizationRequest)
+    private static final viam.app.v1.Billing.GetLocationBillingOrganizationRequest DEFAULT_INSTANCE;
+    static {
+      GetLocationBillingOrganizationRequest defaultInstance = new GetLocationBillingOrganizationRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetLocationBillingOrganizationRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetLocationBillingOrganizationRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetLocationBillingOrganizationRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetLocationBillingOrganizationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.GetLocationBillingOrganizationResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string billing_organization_id = 1 [json_name = "billingOrganizationId"];</code>
+     * @return The billingOrganizationId.
+     */
+    java.lang.String getBillingOrganizationId();
+    /**
+     * <code>string billing_organization_id = 1 [json_name = "billingOrganizationId"];</code>
+     * @return The bytes for billingOrganizationId.
+     */
+    com.google.protobuf.ByteString
+        getBillingOrganizationIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.GetLocationBillingOrganizationResponse}
+   */
+  public  static final class GetLocationBillingOrganizationResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetLocationBillingOrganizationResponse, GetLocationBillingOrganizationResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.GetLocationBillingOrganizationResponse)
+      GetLocationBillingOrganizationResponseOrBuilder {
+    private GetLocationBillingOrganizationResponse() {
+      billingOrganizationId_ = "";
+    }
+    public static final int BILLING_ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String billingOrganizationId_;
+    /**
+     * <code>string billing_organization_id = 1 [json_name = "billingOrganizationId"];</code>
+     * @return The billingOrganizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getBillingOrganizationId() {
+      return billingOrganizationId_;
+    }
+    /**
+     * <code>string billing_organization_id = 1 [json_name = "billingOrganizationId"];</code>
+     * @return The bytes for billingOrganizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBillingOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(billingOrganizationId_);
+    }
+    /**
+     * <code>string billing_organization_id = 1 [json_name = "billingOrganizationId"];</code>
+     * @param value The billingOrganizationId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setBillingOrganizationId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      billingOrganizationId_ = value;
+    }
+    /**
+     * <code>string billing_organization_id = 1 [json_name = "billingOrganizationId"];</code>
+     */
+    private void clearBillingOrganizationId() {
+
+      billingOrganizationId_ = getDefaultInstance().getBillingOrganizationId();
+    }
+    /**
+     * <code>string billing_organization_id = 1 [json_name = "billingOrganizationId"];</code>
+     * @param value The bytes for billingOrganizationId to set.
+     */
+    private void setBillingOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      billingOrganizationId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.GetLocationBillingOrganizationResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.GetLocationBillingOrganizationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.GetLocationBillingOrganizationResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.GetLocationBillingOrganizationResponse)
+        viam.app.v1.Billing.GetLocationBillingOrganizationResponseOrBuilder {
+      // Construct using viam.app.v1.Billing.GetLocationBillingOrganizationResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string billing_organization_id = 1 [json_name = "billingOrganizationId"];</code>
+       * @return The billingOrganizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getBillingOrganizationId() {
+        return instance.getBillingOrganizationId();
+      }
+      /**
+       * <code>string billing_organization_id = 1 [json_name = "billingOrganizationId"];</code>
+       * @return The bytes for billingOrganizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBillingOrganizationIdBytes() {
+        return instance.getBillingOrganizationIdBytes();
+      }
+      /**
+       * <code>string billing_organization_id = 1 [json_name = "billingOrganizationId"];</code>
+       * @param value The billingOrganizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBillingOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBillingOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string billing_organization_id = 1 [json_name = "billingOrganizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBillingOrganizationId() {
+        copyOnWrite();
+        instance.clearBillingOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string billing_organization_id = 1 [json_name = "billingOrganizationId"];</code>
+       * @param value The bytes for billingOrganizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBillingOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBillingOrganizationIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.GetLocationBillingOrganizationResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.GetLocationBillingOrganizationResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "billingOrganizationId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.GetLocationBillingOrganizationResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.GetLocationBillingOrganizationResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.GetLocationBillingOrganizationResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.GetLocationBillingOrganizationResponse)
+    private static final viam.app.v1.Billing.GetLocationBillingOrganizationResponse DEFAULT_INSTANCE;
+    static {
+      GetLocationBillingOrganizationResponse defaultInstance = new GetLocationBillingOrganizationResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetLocationBillingOrganizationResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.GetLocationBillingOrganizationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetLocationBillingOrganizationResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetLocationBillingOrganizationResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateLocationBillingOrganizationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateLocationBillingOrganizationRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    java.lang.String getLocationId();
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    com.google.protobuf.ByteString
+        getLocationIdBytes();
+
+    /**
+     * <code>string billing_organization_id = 2 [json_name = "billingOrganizationId"];</code>
+     * @return The billingOrganizationId.
+     */
+    java.lang.String getBillingOrganizationId();
+    /**
+     * <code>string billing_organization_id = 2 [json_name = "billingOrganizationId"];</code>
+     * @return The bytes for billingOrganizationId.
+     */
+    com.google.protobuf.ByteString
+        getBillingOrganizationIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateLocationBillingOrganizationRequest}
+   */
+  public  static final class UpdateLocationBillingOrganizationRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateLocationBillingOrganizationRequest, UpdateLocationBillingOrganizationRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateLocationBillingOrganizationRequest)
+      UpdateLocationBillingOrganizationRequestOrBuilder {
+    private UpdateLocationBillingOrganizationRequest() {
+      locationId_ = "";
+      billingOrganizationId_ = "";
+    }
+    public static final int LOCATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String locationId_;
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    @java.lang.Override
+    public java.lang.String getLocationId() {
+      return locationId_;
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(locationId_);
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @param value The locationId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setLocationId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      locationId_ = value;
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     */
+    private void clearLocationId() {
+
+      locationId_ = getDefaultInstance().getLocationId();
+    }
+    /**
+     * <code>string location_id = 1 [json_name = "locationId"];</code>
+     * @param value The bytes for locationId to set.
+     */
+    private void setLocationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      locationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int BILLING_ORGANIZATION_ID_FIELD_NUMBER = 2;
+    private java.lang.String billingOrganizationId_;
+    /**
+     * <code>string billing_organization_id = 2 [json_name = "billingOrganizationId"];</code>
+     * @return The billingOrganizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getBillingOrganizationId() {
+      return billingOrganizationId_;
+    }
+    /**
+     * <code>string billing_organization_id = 2 [json_name = "billingOrganizationId"];</code>
+     * @return The bytes for billingOrganizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBillingOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(billingOrganizationId_);
+    }
+    /**
+     * <code>string billing_organization_id = 2 [json_name = "billingOrganizationId"];</code>
+     * @param value The billingOrganizationId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setBillingOrganizationId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      billingOrganizationId_ = value;
+    }
+    /**
+     * <code>string billing_organization_id = 2 [json_name = "billingOrganizationId"];</code>
+     */
+    private void clearBillingOrganizationId() {
+
+      billingOrganizationId_ = getDefaultInstance().getBillingOrganizationId();
+    }
+    /**
+     * <code>string billing_organization_id = 2 [json_name = "billingOrganizationId"];</code>
+     * @param value The bytes for billingOrganizationId to set.
+     */
+    private void setBillingOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      billingOrganizationId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateLocationBillingOrganizationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateLocationBillingOrganizationRequest)
+        viam.app.v1.Billing.UpdateLocationBillingOrganizationRequestOrBuilder {
+      // Construct using viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @return The locationId.
+       */
+      @java.lang.Override
+      public java.lang.String getLocationId() {
+        return instance.getLocationId();
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @return The bytes for locationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLocationIdBytes() {
+        return instance.getLocationIdBytes();
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @param value The locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setLocationId(value);
+        return this;
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocationId() {
+        copyOnWrite();
+        instance.clearLocationId();
+        return this;
+      }
+      /**
+       * <code>string location_id = 1 [json_name = "locationId"];</code>
+       * @param value The bytes for locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setLocationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string billing_organization_id = 2 [json_name = "billingOrganizationId"];</code>
+       * @return The billingOrganizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getBillingOrganizationId() {
+        return instance.getBillingOrganizationId();
+      }
+      /**
+       * <code>string billing_organization_id = 2 [json_name = "billingOrganizationId"];</code>
+       * @return The bytes for billingOrganizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBillingOrganizationIdBytes() {
+        return instance.getBillingOrganizationIdBytes();
+      }
+      /**
+       * <code>string billing_organization_id = 2 [json_name = "billingOrganizationId"];</code>
+       * @param value The billingOrganizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBillingOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setBillingOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string billing_organization_id = 2 [json_name = "billingOrganizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBillingOrganizationId() {
+        copyOnWrite();
+        instance.clearBillingOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string billing_organization_id = 2 [json_name = "billingOrganizationId"];</code>
+       * @param value The bytes for billingOrganizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBillingOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBillingOrganizationIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateLocationBillingOrganizationRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "locationId_",
+              "billingOrganizationId_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateLocationBillingOrganizationRequest)
+    private static final viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest DEFAULT_INSTANCE;
+    static {
+      UpdateLocationBillingOrganizationRequest defaultInstance = new UpdateLocationBillingOrganizationRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateLocationBillingOrganizationRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateLocationBillingOrganizationRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateLocationBillingOrganizationRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateLocationBillingOrganizationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateLocationBillingOrganizationResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateLocationBillingOrganizationResponse}
+   */
+  public  static final class UpdateLocationBillingOrganizationResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateLocationBillingOrganizationResponse, UpdateLocationBillingOrganizationResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateLocationBillingOrganizationResponse)
+      UpdateLocationBillingOrganizationResponseOrBuilder {
+    private UpdateLocationBillingOrganizationResponse() {
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateLocationBillingOrganizationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateLocationBillingOrganizationResponse)
+        viam.app.v1.Billing.UpdateLocationBillingOrganizationResponseOrBuilder {
+      // Construct using viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateLocationBillingOrganizationResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateLocationBillingOrganizationResponse)
+    private static final viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse DEFAULT_INSTANCE;
+    static {
+      UpdateLocationBillingOrganizationResponse defaultInstance = new UpdateLocationBillingOrganizationResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateLocationBillingOrganizationResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.UpdateLocationBillingOrganizationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateLocationBillingOrganizationResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateLocationBillingOrganizationResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ChargeOrganizationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.ChargeOrganizationRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string org_id_to_charge = 1 [json_name = "orgIdToCharge"];</code>
+     * @return The orgIdToCharge.
+     */
+    java.lang.String getOrgIdToCharge();
+    /**
+     * <code>string org_id_to_charge = 1 [json_name = "orgIdToCharge"];</code>
+     * @return The bytes for orgIdToCharge.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdToChargeBytes();
+
+    /**
+     * <code>optional string description = 2 [json_name = "description"];</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <code>optional string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>double subtotal = 3 [json_name = "subtotal"];</code>
+     * @return The subtotal.
+     */
+    double getSubtotal();
+
+    /**
+     * <code>double tax = 4 [json_name = "tax"];</code>
+     * @return The tax.
+     */
+    double getTax();
+
+    /**
+     * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+     * @return Whether the orgIdForBranding field is set.
+     */
+    boolean hasOrgIdForBranding();
+    /**
+     * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+     * @return The orgIdForBranding.
+     */
+    java.lang.String getOrgIdForBranding();
+    /**
+     * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+     * @return The bytes for orgIdForBranding.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdForBrandingBytes();
+
+    /**
+     * <code>bool disable_confirmation_email = 6 [json_name = "disableConfirmationEmail"];</code>
+     * @return The disableConfirmationEmail.
+     */
+    boolean getDisableConfirmationEmail();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.ChargeOrganizationRequest}
+   */
+  public  static final class ChargeOrganizationRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ChargeOrganizationRequest, ChargeOrganizationRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.ChargeOrganizationRequest)
+      ChargeOrganizationRequestOrBuilder {
+    private ChargeOrganizationRequest() {
+      orgIdToCharge_ = "";
+      description_ = "";
+      orgIdForBranding_ = "";
+    }
+    private int bitField0_;
+    public static final int ORG_ID_TO_CHARGE_FIELD_NUMBER = 1;
+    private java.lang.String orgIdToCharge_;
+    /**
+     * <code>string org_id_to_charge = 1 [json_name = "orgIdToCharge"];</code>
+     * @return The orgIdToCharge.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgIdToCharge() {
+      return orgIdToCharge_;
+    }
+    /**
+     * <code>string org_id_to_charge = 1 [json_name = "orgIdToCharge"];</code>
+     * @return The bytes for orgIdToCharge.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdToChargeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgIdToCharge_);
+    }
+    /**
+     * <code>string org_id_to_charge = 1 [json_name = "orgIdToCharge"];</code>
+     * @param value The orgIdToCharge to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setOrgIdToCharge(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      orgIdToCharge_ = value;
+    }
+    /**
+     * <code>string org_id_to_charge = 1 [json_name = "orgIdToCharge"];</code>
+     */
+    private void clearOrgIdToCharge() {
+
+      orgIdToCharge_ = getDefaultInstance().getOrgIdToCharge();
+    }
+    /**
+     * <code>string org_id_to_charge = 1 [json_name = "orgIdToCharge"];</code>
+     * @param value The bytes for orgIdToCharge to set.
+     */
+    private void setOrgIdToChargeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgIdToCharge_ = value.toStringUtf8();
+
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private java.lang.String description_;
+    /**
+     * <code>optional string description = 2 [json_name = "description"];</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      return description_;
+    }
+    /**
+     * <code>optional string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(description_);
+    }
+    /**
+     * <code>optional string description = 2 [json_name = "description"];</code>
+     * @param value The description to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDescription(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      bitField0_ |= 0x00000001;
+      description_ = value;
+    }
+    /**
+     * <code>optional string description = 2 [json_name = "description"];</code>
+     */
+    private void clearDescription() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      description_ = getDefaultInstance().getDescription();
+    }
+    /**
+     * <code>optional string description = 2 [json_name = "description"];</code>
+     * @param value The bytes for description to set.
+     */
+    private void setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      description_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
+    }
+
+    public static final int SUBTOTAL_FIELD_NUMBER = 3;
+    private double subtotal_;
+    /**
+     * <code>double subtotal = 3 [json_name = "subtotal"];</code>
+     * @return The subtotal.
+     */
+    @java.lang.Override
+    public double getSubtotal() {
+      return subtotal_;
+    }
+    /**
+     * <code>double subtotal = 3 [json_name = "subtotal"];</code>
+     * @param value The subtotal to set.
+     */
+    private void setSubtotal(double value) {
+      
+      subtotal_ = value;
+    }
+    /**
+     * <code>double subtotal = 3 [json_name = "subtotal"];</code>
+     */
+    private void clearSubtotal() {
+
+      subtotal_ = 0D;
+    }
+
+    public static final int TAX_FIELD_NUMBER = 4;
+    private double tax_;
+    /**
+     * <code>double tax = 4 [json_name = "tax"];</code>
+     * @return The tax.
+     */
+    @java.lang.Override
+    public double getTax() {
+      return tax_;
+    }
+    /**
+     * <code>double tax = 4 [json_name = "tax"];</code>
+     * @param value The tax to set.
+     */
+    private void setTax(double value) {
+      
+      tax_ = value;
+    }
+    /**
+     * <code>double tax = 4 [json_name = "tax"];</code>
+     */
+    private void clearTax() {
+
+      tax_ = 0D;
+    }
+
+    public static final int ORG_ID_FOR_BRANDING_FIELD_NUMBER = 5;
+    private java.lang.String orgIdForBranding_;
+    /**
+     * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+     * @return Whether the orgIdForBranding field is set.
+     */
+    @java.lang.Override
+    public boolean hasOrgIdForBranding() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+     * @return The orgIdForBranding.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgIdForBranding() {
+      return orgIdForBranding_;
+    }
+    /**
+     * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+     * @return The bytes for orgIdForBranding.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdForBrandingBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(orgIdForBranding_);
+    }
+    /**
+     * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+     * @param value The orgIdForBranding to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setOrgIdForBranding(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      bitField0_ |= 0x00000002;
+      orgIdForBranding_ = value;
+    }
+    /**
+     * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+     */
+    private void clearOrgIdForBranding() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      orgIdForBranding_ = getDefaultInstance().getOrgIdForBranding();
+    }
+    /**
+     * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+     * @param value The bytes for orgIdForBranding to set.
+     */
+    private void setOrgIdForBrandingBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgIdForBranding_ = value.toStringUtf8();
+      bitField0_ |= 0x00000002;
+    }
+
+    public static final int DISABLE_CONFIRMATION_EMAIL_FIELD_NUMBER = 6;
+    private boolean disableConfirmationEmail_;
+    /**
+     * <code>bool disable_confirmation_email = 6 [json_name = "disableConfirmationEmail"];</code>
+     * @return The disableConfirmationEmail.
+     */
+    @java.lang.Override
+    public boolean getDisableConfirmationEmail() {
+      return disableConfirmationEmail_;
+    }
+    /**
+     * <code>bool disable_confirmation_email = 6 [json_name = "disableConfirmationEmail"];</code>
+     * @param value The disableConfirmationEmail to set.
+     */
+    private void setDisableConfirmationEmail(boolean value) {
+      
+      disableConfirmationEmail_ = value;
+    }
+    /**
+     * <code>bool disable_confirmation_email = 6 [json_name = "disableConfirmationEmail"];</code>
+     */
+    private void clearDisableConfirmationEmail() {
+
+      disableConfirmationEmail_ = false;
+    }
+
+    public static viam.app.v1.Billing.ChargeOrganizationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.ChargeOrganizationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.ChargeOrganizationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.ChargeOrganizationRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.ChargeOrganizationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.ChargeOrganizationRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.ChargeOrganizationRequest)
+        viam.app.v1.Billing.ChargeOrganizationRequestOrBuilder {
+      // Construct using viam.app.v1.Billing.ChargeOrganizationRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string org_id_to_charge = 1 [json_name = "orgIdToCharge"];</code>
+       * @return The orgIdToCharge.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgIdToCharge() {
+        return instance.getOrgIdToCharge();
+      }
+      /**
+       * <code>string org_id_to_charge = 1 [json_name = "orgIdToCharge"];</code>
+       * @return The bytes for orgIdToCharge.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdToChargeBytes() {
+        return instance.getOrgIdToChargeBytes();
+      }
+      /**
+       * <code>string org_id_to_charge = 1 [json_name = "orgIdToCharge"];</code>
+       * @param value The orgIdToCharge to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdToCharge(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgIdToCharge(value);
+        return this;
+      }
+      /**
+       * <code>string org_id_to_charge = 1 [json_name = "orgIdToCharge"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgIdToCharge() {
+        copyOnWrite();
+        instance.clearOrgIdToCharge();
+        return this;
+      }
+      /**
+       * <code>string org_id_to_charge = 1 [json_name = "orgIdToCharge"];</code>
+       * @param value The bytes for orgIdToCharge to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdToChargeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdToChargeBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>optional string description = 2 [json_name = "description"];</code>
+       * @return Whether the description field is set.
+       */
+      @java.lang.Override
+      public boolean hasDescription() {
+        return instance.hasDescription();
+      }
+      /**
+       * <code>optional string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      @java.lang.Override
+      public java.lang.String getDescription() {
+        return instance.getDescription();
+      }
+      /**
+       * <code>optional string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        return instance.getDescriptionBytes();
+      }
+      /**
+       * <code>optional string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDescription(value);
+        return this;
+      }
+      /**
+       * <code>optional string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        copyOnWrite();
+        instance.clearDescription();
+        return this;
+      }
+      /**
+       * <code>optional string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDescriptionBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>double subtotal = 3 [json_name = "subtotal"];</code>
+       * @return The subtotal.
+       */
+      @java.lang.Override
+      public double getSubtotal() {
+        return instance.getSubtotal();
+      }
+      /**
+       * <code>double subtotal = 3 [json_name = "subtotal"];</code>
+       * @param value The subtotal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubtotal(double value) {
+        copyOnWrite();
+        instance.setSubtotal(value);
+        return this;
+      }
+      /**
+       * <code>double subtotal = 3 [json_name = "subtotal"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubtotal() {
+        copyOnWrite();
+        instance.clearSubtotal();
+        return this;
+      }
+
+      /**
+       * <code>double tax = 4 [json_name = "tax"];</code>
+       * @return The tax.
+       */
+      @java.lang.Override
+      public double getTax() {
+        return instance.getTax();
+      }
+      /**
+       * <code>double tax = 4 [json_name = "tax"];</code>
+       * @param value The tax to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTax(double value) {
+        copyOnWrite();
+        instance.setTax(value);
+        return this;
+      }
+      /**
+       * <code>double tax = 4 [json_name = "tax"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTax() {
+        copyOnWrite();
+        instance.clearTax();
+        return this;
+      }
+
+      /**
+       * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+       * @return Whether the orgIdForBranding field is set.
+       */
+      @java.lang.Override
+      public boolean hasOrgIdForBranding() {
+        return instance.hasOrgIdForBranding();
+      }
+      /**
+       * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+       * @return The orgIdForBranding.
+       */
+      @java.lang.Override
+      public java.lang.String getOrgIdForBranding() {
+        return instance.getOrgIdForBranding();
+      }
+      /**
+       * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+       * @return The bytes for orgIdForBranding.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrgIdForBrandingBytes() {
+        return instance.getOrgIdForBrandingBytes();
+      }
+      /**
+       * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+       * @param value The orgIdForBranding to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdForBranding(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrgIdForBranding(value);
+        return this;
+      }
+      /**
+       * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgIdForBranding() {
+        copyOnWrite();
+        instance.clearOrgIdForBranding();
+        return this;
+      }
+      /**
+       * <code>optional string org_id_for_branding = 5 [json_name = "orgIdForBranding"];</code>
+       * @param value The bytes for orgIdForBranding to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdForBrandingBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrgIdForBrandingBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>bool disable_confirmation_email = 6 [json_name = "disableConfirmationEmail"];</code>
+       * @return The disableConfirmationEmail.
+       */
+      @java.lang.Override
+      public boolean getDisableConfirmationEmail() {
+        return instance.getDisableConfirmationEmail();
+      }
+      /**
+       * <code>bool disable_confirmation_email = 6 [json_name = "disableConfirmationEmail"];</code>
+       * @param value The disableConfirmationEmail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisableConfirmationEmail(boolean value) {
+        copyOnWrite();
+        instance.setDisableConfirmationEmail(value);
+        return this;
+      }
+      /**
+       * <code>bool disable_confirmation_email = 6 [json_name = "disableConfirmationEmail"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisableConfirmationEmail() {
+        copyOnWrite();
+        instance.clearDisableConfirmationEmail();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.ChargeOrganizationRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.ChargeOrganizationRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "orgIdToCharge_",
+              "description_",
+              "subtotal_",
+              "tax_",
+              "orgIdForBranding_",
+              "disableConfirmationEmail_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u1208" +
+                "\u0000\u0003\u0000\u0004\u0000\u0005\u1208\u0001\u0006\u0007";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.ChargeOrganizationRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.ChargeOrganizationRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.ChargeOrganizationRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.ChargeOrganizationRequest)
+    private static final viam.app.v1.Billing.ChargeOrganizationRequest DEFAULT_INSTANCE;
+    static {
+      ChargeOrganizationRequest defaultInstance = new ChargeOrganizationRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ChargeOrganizationRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.ChargeOrganizationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ChargeOrganizationRequest> PARSER;
+
+    public static com.google.protobuf.Parser<ChargeOrganizationRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ChargeOrganizationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.ChargeOrganizationResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @return The invoiceId.
+     */
+    java.lang.String getInvoiceId();
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @return The bytes for invoiceId.
+     */
+    com.google.protobuf.ByteString
+        getInvoiceIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.ChargeOrganizationResponse}
+   */
+  public  static final class ChargeOrganizationResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ChargeOrganizationResponse, ChargeOrganizationResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.ChargeOrganizationResponse)
+      ChargeOrganizationResponseOrBuilder {
+    private ChargeOrganizationResponse() {
+      invoiceId_ = "";
+    }
+    public static final int INVOICE_ID_FIELD_NUMBER = 1;
+    private java.lang.String invoiceId_;
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @return The invoiceId.
+     */
+    @java.lang.Override
+    public java.lang.String getInvoiceId() {
+      return invoiceId_;
+    }
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @return The bytes for invoiceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInvoiceIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(invoiceId_);
+    }
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @param value The invoiceId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setInvoiceId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      invoiceId_ = value;
+    }
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     */
+    private void clearInvoiceId() {
+
+      invoiceId_ = getDefaultInstance().getInvoiceId();
+    }
+    /**
+     * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+     * @param value The bytes for invoiceId to set.
+     */
+    private void setInvoiceIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      invoiceId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.Billing.ChargeOrganizationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Billing.ChargeOrganizationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Billing.ChargeOrganizationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Billing.ChargeOrganizationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Billing.ChargeOrganizationResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.ChargeOrganizationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.ChargeOrganizationResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.ChargeOrganizationResponse)
+        viam.app.v1.Billing.ChargeOrganizationResponseOrBuilder {
+      // Construct using viam.app.v1.Billing.ChargeOrganizationResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+       * @return The invoiceId.
+       */
+      @java.lang.Override
+      public java.lang.String getInvoiceId() {
+        return instance.getInvoiceId();
+      }
+      /**
+       * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+       * @return The bytes for invoiceId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getInvoiceIdBytes() {
+        return instance.getInvoiceIdBytes();
+      }
+      /**
+       * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+       * @param value The invoiceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvoiceId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setInvoiceId(value);
+        return this;
+      }
+      /**
+       * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInvoiceId() {
+        copyOnWrite();
+        instance.clearInvoiceId();
+        return this;
+      }
+      /**
+       * <code>string invoice_id = 1 [json_name = "invoiceId"];</code>
+       * @param value The bytes for invoiceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvoiceIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setInvoiceIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.ChargeOrganizationResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.ChargeOrganizationResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "invoiceId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.ChargeOrganizationResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.ChargeOrganizationResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.ChargeOrganizationResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.ChargeOrganizationResponse)
+    private static final viam.app.v1.Billing.ChargeOrganizationResponse DEFAULT_INSTANCE;
+    static {
+      ChargeOrganizationResponse defaultInstance = new ChargeOrganizationResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ChargeOrganizationResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Billing.ChargeOrganizationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ChargeOrganizationResponse> PARSER;
+
+    public static com.google.protobuf.Parser<ChargeOrganizationResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface CreateInvoiceAndChargeImmediatelyRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.CreateInvoiceAndChargeImmediatelyRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -10667,6 +12887,10 @@ public final class Billing {
     boolean getDisableEmail();
   }
   /**
+   * <pre>
+   * Deprecated: Use ChargeOrganizationRequest instead
+   * </pre>
+   *
    * Protobuf type {@code viam.app.v1.CreateInvoiceAndChargeImmediatelyRequest}
    */
   public  static final class CreateInvoiceAndChargeImmediatelyRequest extends
@@ -10976,6 +13200,10 @@ public final class Billing {
     }
 
     /**
+     * <pre>
+     * Deprecated: Use ChargeOrganizationRequest instead
+     * </pre>
+     *
      * Protobuf type {@code viam.app.v1.CreateInvoiceAndChargeImmediatelyRequest}
      */
     public static final class Builder extends
@@ -11305,6 +13533,10 @@ public final class Billing {
         getInvoiceIdBytes();
   }
   /**
+   * <pre>
+   * Deprecated: Use ChargeOrganizationResponse instead
+   * </pre>
+   *
    * Protobuf type {@code viam.app.v1.CreateInvoiceAndChargeImmediatelyResponse}
    */
   public  static final class CreateInvoiceAndChargeImmediatelyResponse extends
@@ -11447,6 +13679,10 @@ public final class Billing {
     }
 
     /**
+     * <pre>
+     * Deprecated: Use ChargeOrganizationResponse instead
+     * </pre>
+     *
      * Protobuf type {@code viam.app.v1.CreateInvoiceAndChargeImmediatelyResponse}
      */
     public static final class Builder extends

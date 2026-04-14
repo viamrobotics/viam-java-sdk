@@ -207,6 +207,16 @@ public final class EndUser {
      * @return The acceptedLegal.
      */
     boolean getAcceptedLegal();
+
+    /**
+     * <pre>
+     * Whether the user has ever accepted any version of the legal terms.
+     * </pre>
+     *
+     * <code>bool ever_accepted_legal = 2 [json_name = "everAcceptedLegal"];</code>
+     * @return The everAcceptedLegal.
+     */
+    boolean getEverAcceptedLegal();
   }
   /**
    * Protobuf type {@code viam.app.v1.IsLegalAcceptedResponse}
@@ -254,6 +264,44 @@ public final class EndUser {
     private void clearAcceptedLegal() {
 
       acceptedLegal_ = false;
+    }
+
+    public static final int EVER_ACCEPTED_LEGAL_FIELD_NUMBER = 2;
+    private boolean everAcceptedLegal_;
+    /**
+     * <pre>
+     * Whether the user has ever accepted any version of the legal terms.
+     * </pre>
+     *
+     * <code>bool ever_accepted_legal = 2 [json_name = "everAcceptedLegal"];</code>
+     * @return The everAcceptedLegal.
+     */
+    @java.lang.Override
+    public boolean getEverAcceptedLegal() {
+      return everAcceptedLegal_;
+    }
+    /**
+     * <pre>
+     * Whether the user has ever accepted any version of the legal terms.
+     * </pre>
+     *
+     * <code>bool ever_accepted_legal = 2 [json_name = "everAcceptedLegal"];</code>
+     * @param value The everAcceptedLegal to set.
+     */
+    private void setEverAcceptedLegal(boolean value) {
+      
+      everAcceptedLegal_ = value;
+    }
+    /**
+     * <pre>
+     * Whether the user has ever accepted any version of the legal terms.
+     * </pre>
+     *
+     * <code>bool ever_accepted_legal = 2 [json_name = "everAcceptedLegal"];</code>
+     */
+    private void clearEverAcceptedLegal() {
+
+      everAcceptedLegal_ = false;
     }
 
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse parseFrom(
@@ -393,6 +441,46 @@ public final class EndUser {
         return this;
       }
 
+      /**
+       * <pre>
+       * Whether the user has ever accepted any version of the legal terms.
+       * </pre>
+       *
+       * <code>bool ever_accepted_legal = 2 [json_name = "everAcceptedLegal"];</code>
+       * @return The everAcceptedLegal.
+       */
+      @java.lang.Override
+      public boolean getEverAcceptedLegal() {
+        return instance.getEverAcceptedLegal();
+      }
+      /**
+       * <pre>
+       * Whether the user has ever accepted any version of the legal terms.
+       * </pre>
+       *
+       * <code>bool ever_accepted_legal = 2 [json_name = "everAcceptedLegal"];</code>
+       * @param value The everAcceptedLegal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEverAcceptedLegal(boolean value) {
+        copyOnWrite();
+        instance.setEverAcceptedLegal(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the user has ever accepted any version of the legal terms.
+       * </pre>
+       *
+       * <code>bool ever_accepted_legal = 2 [json_name = "everAcceptedLegal"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEverAcceptedLegal() {
+        copyOnWrite();
+        instance.clearEverAcceptedLegal();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.IsLegalAcceptedResponse)
     }
     @java.lang.Override
@@ -410,9 +498,11 @@ public final class EndUser {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "acceptedLegal_",
+              "everAcceptedLegal_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0007";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0007\u0002\u0007" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {

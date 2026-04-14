@@ -290,6 +290,44 @@ java.lang.String defaultValue);
      * @return The versionInfo.
      */
     viam.app.agent.v1.Agent.VersionInfo getVersionInfo();
+
+    /**
+     * <pre>
+     * how long viam-agent has been running since its most recent start
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration agent_uptime = 5 [json_name = "agentUptime"];</code>
+     * @return Whether the agentUptime field is set.
+     */
+    boolean hasAgentUptime();
+    /**
+     * <pre>
+     * how long viam-agent has been running since its most recent start
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration agent_uptime = 5 [json_name = "agentUptime"];</code>
+     * @return The agentUptime.
+     */
+    com.google.protobuf.Duration getAgentUptime();
+
+    /**
+     * <pre>
+     * how long viam-server has been running since its most recent start (omitted if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 6 [json_name = "viamServerUptime"];</code>
+     * @return Whether the viamServerUptime field is set.
+     */
+    boolean hasViamServerUptime();
+    /**
+     * <pre>
+     * how long viam-server has been running since its most recent start (omitted if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 6 [json_name = "viamServerUptime"];</code>
+     * @return The viamServerUptime.
+     */
+    com.google.protobuf.Duration getViamServerUptime();
   }
   /**
    * <pre>
@@ -631,6 +669,142 @@ java.lang.String defaultValue) {
     private void clearVersionInfo() {
       versionInfo_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int AGENT_UPTIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Duration agentUptime_;
+    /**
+     * <pre>
+     * how long viam-agent has been running since its most recent start
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration agent_uptime = 5 [json_name = "agentUptime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAgentUptime() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * how long viam-agent has been running since its most recent start
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration agent_uptime = 5 [json_name = "agentUptime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getAgentUptime() {
+      return agentUptime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : agentUptime_;
+    }
+    /**
+     * <pre>
+     * how long viam-agent has been running since its most recent start
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration agent_uptime = 5 [json_name = "agentUptime"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setAgentUptime(com.google.protobuf.Duration value) {
+      value.getClass();  // minimal bytecode null check
+      agentUptime_ = value;
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * how long viam-agent has been running since its most recent start
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration agent_uptime = 5 [json_name = "agentUptime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeAgentUptime(com.google.protobuf.Duration value) {
+      value.getClass();  // minimal bytecode null check
+      if (agentUptime_ != null &&
+          agentUptime_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        agentUptime_ =
+          com.google.protobuf.Duration.newBuilder(agentUptime_).mergeFrom(value).buildPartial();
+      } else {
+        agentUptime_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * how long viam-agent has been running since its most recent start
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration agent_uptime = 5 [json_name = "agentUptime"];</code>
+     */
+    private void clearAgentUptime() {
+      agentUptime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static final int VIAM_SERVER_UPTIME_FIELD_NUMBER = 6;
+    private com.google.protobuf.Duration viamServerUptime_;
+    /**
+     * <pre>
+     * how long viam-server has been running since its most recent start (omitted if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 6 [json_name = "viamServerUptime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasViamServerUptime() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * how long viam-server has been running since its most recent start (omitted if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 6 [json_name = "viamServerUptime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getViamServerUptime() {
+      return viamServerUptime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : viamServerUptime_;
+    }
+    /**
+     * <pre>
+     * how long viam-server has been running since its most recent start (omitted if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 6 [json_name = "viamServerUptime"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setViamServerUptime(com.google.protobuf.Duration value) {
+      value.getClass();  // minimal bytecode null check
+      viamServerUptime_ = value;
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * how long viam-server has been running since its most recent start (omitted if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 6 [json_name = "viamServerUptime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeViamServerUptime(com.google.protobuf.Duration value) {
+      value.getClass();  // minimal bytecode null check
+      if (viamServerUptime_ != null &&
+          viamServerUptime_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        viamServerUptime_ =
+          com.google.protobuf.Duration.newBuilder(viamServerUptime_).mergeFrom(value).buildPartial();
+      } else {
+        viamServerUptime_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * how long viam-server has been running since its most recent start (omitted if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 6 [json_name = "viamServerUptime"];</code>
+     */
+    private void clearViamServerUptime() {
+      viamServerUptime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
     }
 
     public static viam.app.agent.v1.Agent.DeviceAgentConfigRequest parseFrom(
@@ -1080,6 +1254,148 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * how long viam-agent has been running since its most recent start
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration agent_uptime = 5 [json_name = "agentUptime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAgentUptime() {
+        return instance.hasAgentUptime();
+      }
+      /**
+       * <pre>
+       * how long viam-agent has been running since its most recent start
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration agent_uptime = 5 [json_name = "agentUptime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getAgentUptime() {
+        return instance.getAgentUptime();
+      }
+      /**
+       * <pre>
+       * how long viam-agent has been running since its most recent start
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration agent_uptime = 5 [json_name = "agentUptime"];</code>
+       */
+      public Builder setAgentUptime(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.setAgentUptime(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * how long viam-agent has been running since its most recent start
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration agent_uptime = 5 [json_name = "agentUptime"];</code>
+       */
+      public Builder setAgentUptime(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAgentUptime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * how long viam-agent has been running since its most recent start
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration agent_uptime = 5 [json_name = "agentUptime"];</code>
+       */
+      public Builder mergeAgentUptime(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.mergeAgentUptime(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * how long viam-agent has been running since its most recent start
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration agent_uptime = 5 [json_name = "agentUptime"];</code>
+       */
+      public Builder clearAgentUptime() {  copyOnWrite();
+        instance.clearAgentUptime();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * how long viam-server has been running since its most recent start (omitted if not running)
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration viam_server_uptime = 6 [json_name = "viamServerUptime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasViamServerUptime() {
+        return instance.hasViamServerUptime();
+      }
+      /**
+       * <pre>
+       * how long viam-server has been running since its most recent start (omitted if not running)
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration viam_server_uptime = 6 [json_name = "viamServerUptime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getViamServerUptime() {
+        return instance.getViamServerUptime();
+      }
+      /**
+       * <pre>
+       * how long viam-server has been running since its most recent start (omitted if not running)
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration viam_server_uptime = 6 [json_name = "viamServerUptime"];</code>
+       */
+      public Builder setViamServerUptime(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.setViamServerUptime(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * how long viam-server has been running since its most recent start (omitted if not running)
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration viam_server_uptime = 6 [json_name = "viamServerUptime"];</code>
+       */
+      public Builder setViamServerUptime(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setViamServerUptime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * how long viam-server has been running since its most recent start (omitted if not running)
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration viam_server_uptime = 6 [json_name = "viamServerUptime"];</code>
+       */
+      public Builder mergeViamServerUptime(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.mergeViamServerUptime(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * how long viam-server has been running since its most recent start (omitted if not running)
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration viam_server_uptime = 6 [json_name = "viamServerUptime"];</code>
+       */
+      public Builder clearViamServerUptime() {  copyOnWrite();
+        instance.clearViamServerUptime();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.agent.v1.DeviceAgentConfigRequest)
     }
     @java.lang.Override
@@ -1102,10 +1418,12 @@ java.lang.String defaultValue) {
               "subsystemVersions_",
               SubsystemVersionsDefaultEntryHolder.defaultEntry,
               "versionInfo_",
+              "agentUptime_",
+              "viamServerUptime_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0001\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u00032\u0004\u1009\u0001";
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0001\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u00032\u0004\u1009\u0001\u0005\u1009\u0002\u0006\u1009\u0003";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
