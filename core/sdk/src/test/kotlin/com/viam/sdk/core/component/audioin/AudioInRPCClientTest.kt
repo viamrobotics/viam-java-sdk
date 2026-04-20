@@ -1,13 +1,12 @@
-package com.viam.sdk.core.component.audioinput
+package com.viam.sdk.core.component.audioin
 
 import com.google.protobuf.ByteString
-import com.google.protobuf.Duration
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
+import com.viam.common.v1.Common
 import com.viam.common.v1.Common.Geometry
-import com.viam.component.audioinput.v1.Audioinput
-import com.viam.component.audioinput.v1.Audioinput.ChunksResponse
-import com.viam.component.audioinput.v1.Audioinput.PropertiesResponse
+import com.viam.component.audioin.v1.Audioin
+import com.viam.component.audioin.v1.Audioin.GetAudioResponse
 import com.viam.sdk.core.resource.ResourceManager
 import com.viam.sdk.core.rpc.BasicManagedChannel
 import io.grpc.inprocess.InProcessChannelBuilder
@@ -20,9 +19,9 @@ import org.junit.jupiter.api.Test
 import org.mockito.Mockito.*
 import java.util.*
 
-class AudioInputRPCClientTest {
-    private lateinit var audioInput: AudioInput
-    private lateinit var client: AudioInputRPCClient
+class AudioInRPCClientTest {
+    private lateinit var audioInput: AudioIn
+    private lateinit var client: AudioInRPCClient
 
     @JvmField
     @Rule
@@ -31,43 +30,40 @@ class AudioInputRPCClientTest {
     @BeforeEach
     fun setup() {
         audioInput = mock(
-            AudioInput::class.java, withSettings().useConstructor("mock-audioInput").defaultAnswer(
+            AudioIn::class.java, withSettings().useConstructor("mock-audioInput").defaultAnswer(
                 CALLS_REAL_METHODS
             )
         )
         val resourceManager = ResourceManager(listOf(audioInput))
-        val service = AudioInputRPCService(resourceManager)
+        val service = AudioInRPCService(resourceManager)
         val serviceName = InProcessServerBuilder.generateName()
         grpcCleanupRule.register(
             InProcessServerBuilder.forName(serviceName).directExecutor().addService(service).build().start()
         )
         val channel = grpcCleanupRule.register(InProcessChannelBuilder.forName(serviceName).directExecutor().build())
-        client = AudioInputRPCClient("mock-audioInput", BasicManagedChannel(channel))
+        client = AudioInRPCClient("mock-audioInput", BasicManagedChannel(channel))
     }
 
     @Test
-    fun stream() {
-
-        fun createChunks(): MutableList<ChunksResponse> {
-            val chunks: MutableList<ChunksResponse> = mutableListOf()
+    fun getAudio() {
+        fun createResponses(): MutableList<GetAudioResponse> {
+            val responses = mutableListOf<GetAudioResponse>()
             for (i in 0..5) {
-                val chunk =
-                    Audioinput.AudioChunk.newBuilder().setData(ByteString.copyFromUtf8(i.toString())).setLength(2)
-                        .build()
-                val info = Audioinput.AudioChunkInfo.newBuilder().setChannels(4)
-                    .setSampleFormat(Audioinput.SampleFormat.SAMPLE_FORMAT_FLOAT32_INTERLEAVED).setSamplingRate(1000L)
-                    .build()
-                val audioChunk = ChunksResponse.newBuilder().setChunk(chunk).setInfo(info).build()
-                chunks.add(audioChunk)
+                val info = Common.AudioInfo.newBuilder().setCodec("mp3").setNumChannels(2)
+                    .setSampleRateHz(44100).build()
+                val chunk = Audioin.AudioChunk.newBuilder()
+                    .setAudioData(ByteString.copyFromUtf8(i.toString())).setAudioInfo(info).build()
+                val resp = GetAudioResponse.newBuilder().setAudio(chunk).build()
+                responses.add(resp)
             }
-            return chunks
+            return responses
         }
 
-        val expected = createChunks()
+        val expected = createResponses()
 
-        `when`(audioInput.stream()).thenReturn(expected.iterator())
-        val chunks = client.stream()
-        verify(audioInput).stream()
+        `when`(audioInput.getAudio()).thenReturn(expected.iterator())
+        val chunks = client.getAudio()
+        verify(audioInput).getAudio()
         for ((index, value) in chunks.withIndex()) {
             assertEquals(expected[index], value)
         }
@@ -76,9 +72,8 @@ class AudioInputRPCClientTest {
 
     @Test
     fun getProperties() {
-        val properties =
-            PropertiesResponse.newBuilder().setLatency(Duration.newBuilder().setSeconds(3000L).build()).setSampleRate(2)
-                .setSampleSize(3).setIsFloat(true).setChannelCount(4).setIsBigEndian(true).setIsInterleaved(true)
+        val properties = Common.GetPropertiesResponse.newBuilder().setSampleRateHz(2)
+                .setNumChannels(2).addAllSupportedCodecs(listOf("pcm16, mp3"))
                 .build()
         `when`(audioInput.getProperties()).thenReturn(properties)
         val response = client.getProperties()

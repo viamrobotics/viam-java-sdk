@@ -1,21 +1,22 @@
-package com.viam.sdk.core.component.audioinput
+package com.viam.sdk.core.component.audioin
 
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
 import com.viam.common.v1.Common
+import com.viam.common.v1.Common.GetPropertiesRequest
 import com.viam.common.v1.Common.GetGeometriesRequest
-import com.viam.component.audioinput.v1.AudioInputServiceGrpc
-import com.viam.component.audioinput.v1.AudioInputServiceGrpc.AudioInputServiceBlockingStub
-import com.viam.component.audioinput.v1.Audioinput
+import com.viam.component.audioin.v1.AudioInServiceGrpc
+import com.viam.component.audioin.v1.AudioInServiceGrpc.AudioInServiceBlockingStub
+import com.viam.component.audioin.v1.Audioin
 import com.viam.sdk.core.rpc.Channel
 import java.util.*
 import kotlin.jvm.optionals.getOrDefault
 
-class AudioInputRPCClient(name: String, channel: Channel) : AudioInput(name) {
-    private val client: AudioInputServiceBlockingStub
+class AudioInRPCClient(name: String, channel: Channel) : AudioIn(name) {
+    private val client: AudioInServiceBlockingStub
 
     init {
-        val client = AudioInputServiceGrpc.newBlockingStub(channel)
+        val client = AudioInServiceGrpc.newBlockingStub(channel)
         if (channel.callCredentials.isPresent) {
             this.client = client.withCallCredentials(channel.callCredentials.get())
         } else {
@@ -23,16 +24,14 @@ class AudioInputRPCClient(name: String, channel: Channel) : AudioInput(name) {
         }
     }
 
-    override fun stream(): AudioStream {
-        val request = Audioinput.ChunksRequest.newBuilder().setName(this.name.name)
-            .setSampleFormat(Audioinput.SampleFormat.SAMPLE_FORMAT_FLOAT32_INTERLEAVED).build()
-        val response = this.client.chunks(request)
-        return response
+    override fun getAudio(): AudioStream {
+        val request = Audioin.GetAudioRequest.newBuilder().setName(this.name.name).build()
+        return this.client.getAudio(request)
     }
 
     override fun getProperties(): Properties {
-        val request = Audioinput.PropertiesRequest.newBuilder().setName(this.name.name).build()
-        return this.client.properties(request)
+        val request = GetPropertiesRequest.newBuilder().setName(this.name.name).build()
+        return this.client.getProperties(request)
     }
 
     override fun doCommand(command: Map<String, Value>?): Struct {
