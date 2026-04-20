@@ -5,7 +5,7 @@ ext.pomDisplayName = "Viam Android SDK - MLModel Service"
 
 buildscript {
     dependencies {
-        classpath 'com.android.tools.build:gradle:9.1.0'
+        classpath 'com.android.tools.build:gradle:9.1.1'
     }
 }
 

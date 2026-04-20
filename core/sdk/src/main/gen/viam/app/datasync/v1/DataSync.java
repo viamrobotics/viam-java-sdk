@@ -2998,15 +2998,19 @@ public final class DataSync {
     com.google.protobuf.Timestamp getTimeReceived();
 
     /**
-     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.SensorMetadata.mime_type is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=84
      * @return The enum numeric value on the wire for mimeType.
      */
-    int getMimeTypeValue();
+    @java.lang.Deprecated int getMimeTypeValue();
     /**
-     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.SensorMetadata.mime_type is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=84
      * @return The mimeType.
      */
-    viam.app.datasync.v1.DataSync.MimeType getMimeType();
+    @java.lang.Deprecated viam.app.datasync.v1.DataSync.MimeType getMimeType();
 
     /**
      * <code>.viam.app.data.v1.Annotations annotations = 4 [json_name = "annotations"];</code>
@@ -3134,24 +3138,28 @@ public final class DataSync {
     public static final int MIME_TYPE_FIELD_NUMBER = 3;
     private int mimeType_;
     /**
-     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.SensorMetadata.mime_type is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=84
      * @return The enum numeric value on the wire for mimeType.
      */
     @java.lang.Override
-    public int getMimeTypeValue() {
+    @java.lang.Deprecated public int getMimeTypeValue() {
       return mimeType_;
     }
     /**
-     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType", deprecated = true];</code>
+     * @deprecated viam.app.datasync.v1.SensorMetadata.mime_type is deprecated.
+     *     See app/datasync/v1/data_sync.proto;l=84
      * @return The mimeType.
      */
     @java.lang.Override
-    public viam.app.datasync.v1.DataSync.MimeType getMimeType() {
+    @java.lang.Deprecated public viam.app.datasync.v1.DataSync.MimeType getMimeType() {
       viam.app.datasync.v1.DataSync.MimeType result = viam.app.datasync.v1.DataSync.MimeType.forNumber(mimeType_);
       return result == null ? viam.app.datasync.v1.DataSync.MimeType.UNRECOGNIZED : result;
     }
     /**
-     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType", deprecated = true];</code>
      * @param value The enum numeric value on the wire for mimeType to set.
      * @throws IllegalArgumentException if UNRECOGNIZED is provided.
      */
@@ -3159,7 +3167,7 @@ public final class DataSync {
         mimeType_ = value;
     }
     /**
-     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType", deprecated = true];</code>
      * @param value The mimeType to set.
      */
     private void setMimeType(viam.app.datasync.v1.DataSync.MimeType value) {
@@ -3167,7 +3175,7 @@ public final class DataSync {
 
     }
     /**
-     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+     * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType", deprecated = true];</code>
      */
     private void clearMimeType() {
 
@@ -3419,47 +3427,57 @@ public final class DataSync {
       }
 
       /**
-       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.SensorMetadata.mime_type is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=84
        * @return The enum numeric value on the wire for mimeType.
        */
       @java.lang.Override
-      public int getMimeTypeValue() {
+      @java.lang.Deprecated public int getMimeTypeValue() {
         return instance.getMimeTypeValue();
       }
       /**
-       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.SensorMetadata.mime_type is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=84
        * @param value The mimeType to set.
        * @return This builder for chaining.
        */
-      public Builder setMimeTypeValue(int value) {
+      @java.lang.Deprecated public Builder setMimeTypeValue(int value) {
         copyOnWrite();
         instance.setMimeTypeValue(value);
         return this;
       }
       /**
-       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.SensorMetadata.mime_type is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=84
        * @return The mimeType.
        */
       @java.lang.Override
-      public viam.app.datasync.v1.DataSync.MimeType getMimeType() {
+      @java.lang.Deprecated public viam.app.datasync.v1.DataSync.MimeType getMimeType() {
         return instance.getMimeType();
       }
       /**
-       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.SensorMetadata.mime_type is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=84
        * @param value The enum numeric value on the wire for mimeType to set.
        * @throws IllegalArgumentException if UNRECOGNIZED is provided.
        * @return This builder for chaining.
        */
-      public Builder setMimeType(viam.app.datasync.v1.DataSync.MimeType value) {
+      @java.lang.Deprecated public Builder setMimeType(viam.app.datasync.v1.DataSync.MimeType value) {
         copyOnWrite();
         instance.setMimeType(value);
         return this;
       }
       /**
-       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType"];</code>
+       * <code>.viam.app.datasync.v1.MimeType mime_type = 3 [json_name = "mimeType", deprecated = true];</code>
+       * @deprecated viam.app.datasync.v1.SensorMetadata.mime_type is deprecated.
+       *     See app/datasync/v1/data_sync.proto;l=84
        * @return This builder for chaining.
        */
-      public Builder clearMimeType() {
+      @java.lang.Deprecated public Builder clearMimeType() {
         copyOnWrite();
         instance.clearMimeType();
         return this;
@@ -4470,18 +4488,6 @@ public final class DataSync {
     viam.app.datasync.v1.DataSync.DataType getType();
 
     /**
-     * <code>string file_name = 7 [json_name = "fileName"];</code>
-     * @return The fileName.
-     */
-    java.lang.String getFileName();
-    /**
-     * <code>string file_name = 7 [json_name = "fileName"];</code>
-     * @return The bytes for fileName.
-     */
-    com.google.protobuf.ByteString
-        getFileNameBytes();
-
-    /**
      * <code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code>
      */
     int getMethodParametersCount();
@@ -4518,6 +4524,18 @@ com.google.protobuf.Any defaultValue);
         java.lang.String key);
 
     /**
+     * <code>string file_name = 7 [json_name = "fileName"];</code>
+     * @return The fileName.
+     */
+    java.lang.String getFileName();
+    /**
+     * <code>string file_name = 7 [json_name = "fileName"];</code>
+     * @return The bytes for fileName.
+     */
+    com.google.protobuf.ByteString
+        getFileNameBytes();
+
+    /**
      * <code>string file_extension = 9 [json_name = "fileExtension"];</code>
      * @return The fileExtension.
      */
@@ -4528,6 +4546,28 @@ com.google.protobuf.Any defaultValue);
      */
     com.google.protobuf.ByteString
         getFileExtensionBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code>
+     * @return Whether the fileCreateTime field is set.
+     */
+    boolean hasFileCreateTime();
+    /**
+     * <code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code>
+     * @return The fileCreateTime.
+     */
+    com.google.protobuf.Timestamp getFileCreateTime();
+
+    /**
+     * <code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code>
+     * @return Whether the fileModifyTime field is set.
+     */
+    boolean hasFileModifyTime();
+    /**
+     * <code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code>
+     * @return The fileModifyTime.
+     */
+    com.google.protobuf.Timestamp getFileModifyTime();
 
     /**
      * <code>repeated string tags = 10 [json_name = "tags"];</code>
@@ -4578,6 +4618,18 @@ com.google.protobuf.Any defaultValue);
      */
     com.google.protobuf.ByteString
         getDatasetIdsBytes(int index);
+
+    /**
+     * <code>string mime_type = 13 [json_name = "mimeType"];</code>
+     * @return The mimeType.
+     */
+    java.lang.String getMimeType();
+    /**
+     * <code>string mime_type = 13 [json_name = "mimeType"];</code>
+     * @return The bytes for mimeType.
+     */
+    com.google.protobuf.ByteString
+        getMimeTypeBytes();
   }
   /**
    * <pre>
@@ -4600,7 +4652,9 @@ com.google.protobuf.Any defaultValue);
       fileExtension_ = "";
       tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       datasetIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      mimeType_ = "";
     }
+    private int bitField0_;
     public static final int PART_ID_FIELD_NUMBER = 1;
     private java.lang.String partId_;
     /**
@@ -4836,54 +4890,6 @@ com.google.protobuf.Any defaultValue);
       type_ = 0;
     }
 
-    public static final int FILE_NAME_FIELD_NUMBER = 7;
-    private java.lang.String fileName_;
-    /**
-     * <code>string file_name = 7 [json_name = "fileName"];</code>
-     * @return The fileName.
-     */
-    @java.lang.Override
-    public java.lang.String getFileName() {
-      return fileName_;
-    }
-    /**
-     * <code>string file_name = 7 [json_name = "fileName"];</code>
-     * @return The bytes for fileName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getFileNameBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(fileName_);
-    }
-    /**
-     * <code>string file_name = 7 [json_name = "fileName"];</code>
-     * @param value The fileName to set.
-     */
-    @java.lang.SuppressWarnings("ReturnValueIgnored")
-    private void setFileName(
-        java.lang.String value) {
-      value.getClass();  // minimal bytecode null check
-
-      fileName_ = value;
-    }
-    /**
-     * <code>string file_name = 7 [json_name = "fileName"];</code>
-     */
-    private void clearFileName() {
-
-      fileName_ = getDefaultInstance().getFileName();
-    }
-    /**
-     * <code>string file_name = 7 [json_name = "fileName"];</code>
-     * @param value The bytes for fileName to set.
-     */
-    private void setFileNameBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      fileName_ = value.toStringUtf8();
-
-    }
-
     public static final int METHOD_PARAMETERS_FIELD_NUMBER = 8;
     private static final class MethodParametersDefaultEntryHolder {
       static final com.google.protobuf.MapEntryLite<
@@ -4981,6 +4987,54 @@ com.google.protobuf.Any defaultValue) {
       return internalGetMutableMethodParameters();
     }
 
+    public static final int FILE_NAME_FIELD_NUMBER = 7;
+    private java.lang.String fileName_;
+    /**
+     * <code>string file_name = 7 [json_name = "fileName"];</code>
+     * @return The fileName.
+     */
+    @java.lang.Override
+    public java.lang.String getFileName() {
+      return fileName_;
+    }
+    /**
+     * <code>string file_name = 7 [json_name = "fileName"];</code>
+     * @return The bytes for fileName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFileNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(fileName_);
+    }
+    /**
+     * <code>string file_name = 7 [json_name = "fileName"];</code>
+     * @param value The fileName to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setFileName(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      fileName_ = value;
+    }
+    /**
+     * <code>string file_name = 7 [json_name = "fileName"];</code>
+     */
+    private void clearFileName() {
+
+      fileName_ = getDefaultInstance().getFileName();
+    }
+    /**
+     * <code>string file_name = 7 [json_name = "fileName"];</code>
+     * @param value The bytes for fileName to set.
+     */
+    private void setFileNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fileName_ = value.toStringUtf8();
+
+    }
+
     public static final int FILE_EXTENSION_FIELD_NUMBER = 9;
     private java.lang.String fileExtension_;
     /**
@@ -5027,6 +5081,102 @@ com.google.protobuf.Any defaultValue) {
       checkByteStringIsUtf8(value);
       fileExtension_ = value.toStringUtf8();
 
+    }
+
+    public static final int FILE_CREATE_TIME_FIELD_NUMBER = 14;
+    private com.google.protobuf.Timestamp fileCreateTime_;
+    /**
+     * <code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasFileCreateTime() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getFileCreateTime() {
+      return fileCreateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : fileCreateTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setFileCreateTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      fileCreateTime_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeFileCreateTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (fileCreateTime_ != null &&
+          fileCreateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        fileCreateTime_ =
+          com.google.protobuf.Timestamp.newBuilder(fileCreateTime_).mergeFrom(value).buildPartial();
+      } else {
+        fileCreateTime_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code>
+     */
+    private void clearFileCreateTime() {
+      fileCreateTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int FILE_MODIFY_TIME_FIELD_NUMBER = 15;
+    private com.google.protobuf.Timestamp fileModifyTime_;
+    /**
+     * <code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasFileModifyTime() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getFileModifyTime() {
+      return fileModifyTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : fileModifyTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setFileModifyTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      fileModifyTime_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeFileModifyTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (fileModifyTime_ != null &&
+          fileModifyTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        fileModifyTime_ =
+          com.google.protobuf.Timestamp.newBuilder(fileModifyTime_).mergeFrom(value).buildPartial();
+      } else {
+        fileModifyTime_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code>
+     */
+    private void clearFileModifyTime() {
+      fileModifyTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static final int TAGS_FIELD_NUMBER = 10;
@@ -5217,6 +5367,54 @@ com.google.protobuf.Any defaultValue) {
       checkByteStringIsUtf8(value);
       ensureDatasetIdsIsMutable();
       datasetIds_.add(value.toStringUtf8());
+    }
+
+    public static final int MIME_TYPE_FIELD_NUMBER = 13;
+    private java.lang.String mimeType_;
+    /**
+     * <code>string mime_type = 13 [json_name = "mimeType"];</code>
+     * @return The mimeType.
+     */
+    @java.lang.Override
+    public java.lang.String getMimeType() {
+      return mimeType_;
+    }
+    /**
+     * <code>string mime_type = 13 [json_name = "mimeType"];</code>
+     * @return The bytes for mimeType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMimeTypeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
+    }
+    /**
+     * <code>string mime_type = 13 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMimeType(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      mimeType_ = value;
+    }
+    /**
+     * <code>string mime_type = 13 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = getDefaultInstance().getMimeType();
+    }
+    /**
+     * <code>string mime_type = 13 [json_name = "mimeType"];</code>
+     * @param value The bytes for mimeType to set.
+     */
+    private void setMimeTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mimeType_ = value.toStringUtf8();
+
     }
 
     public static viam.app.datasync.v1.DataSync.UploadMetadata parseFrom(
@@ -5563,55 +5761,6 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
-      /**
-       * <code>string file_name = 7 [json_name = "fileName"];</code>
-       * @return The fileName.
-       */
-      @java.lang.Override
-      public java.lang.String getFileName() {
-        return instance.getFileName();
-      }
-      /**
-       * <code>string file_name = 7 [json_name = "fileName"];</code>
-       * @return The bytes for fileName.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getFileNameBytes() {
-        return instance.getFileNameBytes();
-      }
-      /**
-       * <code>string file_name = 7 [json_name = "fileName"];</code>
-       * @param value The fileName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFileName(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setFileName(value);
-        return this;
-      }
-      /**
-       * <code>string file_name = 7 [json_name = "fileName"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFileName() {
-        copyOnWrite();
-        instance.clearFileName();
-        return this;
-      }
-      /**
-       * <code>string file_name = 7 [json_name = "fileName"];</code>
-       * @param value The bytes for fileName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFileNameBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setFileNameBytes(value);
-        return this;
-      }
-
       @java.lang.Override
 
       public int getMethodParametersCount() {
@@ -5713,6 +5862,55 @@ com.google.protobuf.Any defaultValue) {
       }
 
       /**
+       * <code>string file_name = 7 [json_name = "fileName"];</code>
+       * @return The fileName.
+       */
+      @java.lang.Override
+      public java.lang.String getFileName() {
+        return instance.getFileName();
+      }
+      /**
+       * <code>string file_name = 7 [json_name = "fileName"];</code>
+       * @return The bytes for fileName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFileNameBytes() {
+        return instance.getFileNameBytes();
+      }
+      /**
+       * <code>string file_name = 7 [json_name = "fileName"];</code>
+       * @param value The fileName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFileName(value);
+        return this;
+      }
+      /**
+       * <code>string file_name = 7 [json_name = "fileName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFileName() {
+        copyOnWrite();
+        instance.clearFileName();
+        return this;
+      }
+      /**
+       * <code>string file_name = 7 [json_name = "fileName"];</code>
+       * @param value The bytes for fileName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFileNameBytes(value);
+        return this;
+      }
+
+      /**
        * <code>string file_extension = 9 [json_name = "fileExtension"];</code>
        * @return The fileExtension.
        */
@@ -5758,6 +5956,100 @@ com.google.protobuf.Any defaultValue) {
           com.google.protobuf.ByteString value) {
         copyOnWrite();
         instance.setFileExtensionBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasFileCreateTime() {
+        return instance.hasFileCreateTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getFileCreateTime() {
+        return instance.getFileCreateTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code>
+       */
+      public Builder setFileCreateTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setFileCreateTime(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code>
+       */
+      public Builder setFileCreateTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFileCreateTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code>
+       */
+      public Builder mergeFileCreateTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeFileCreateTime(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code>
+       */
+      public Builder clearFileCreateTime() {  copyOnWrite();
+        instance.clearFileCreateTime();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasFileModifyTime() {
+        return instance.hasFileModifyTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getFileModifyTime() {
+        return instance.getFileModifyTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code>
+       */
+      public Builder setFileModifyTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setFileModifyTime(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code>
+       */
+      public Builder setFileModifyTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFileModifyTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code>
+       */
+      public Builder mergeFileModifyTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeFileModifyTime(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code>
+       */
+      public Builder clearFileModifyTime() {  copyOnWrite();
+        instance.clearFileModifyTime();
         return this;
       }
 
@@ -5945,6 +6237,55 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>string mime_type = 13 [json_name = "mimeType"];</code>
+       * @return The mimeType.
+       */
+      @java.lang.Override
+      public java.lang.String getMimeType() {
+        return instance.getMimeType();
+      }
+      /**
+       * <code>string mime_type = 13 [json_name = "mimeType"];</code>
+       * @return The bytes for mimeType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMimeTypeBytes() {
+        return instance.getMimeTypeBytes();
+      }
+      /**
+       * <code>string mime_type = 13 [json_name = "mimeType"];</code>
+       * @param value The mimeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMimeType(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMimeType(value);
+        return this;
+      }
+      /**
+       * <code>string mime_type = 13 [json_name = "mimeType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMimeType() {
+        copyOnWrite();
+        instance.clearMimeType();
+        return this;
+      }
+      /**
+       * <code>string mime_type = 13 [json_name = "mimeType"];</code>
+       * @param value The bytes for mimeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMimeTypeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMimeTypeBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.UploadMetadata)
     }
     @java.lang.Override
@@ -5961,6 +6302,7 @@ com.google.protobuf.Any defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "partId_",
               "componentType_",
               "componentName_",
@@ -5972,10 +6314,14 @@ com.google.protobuf.Any defaultValue) {
               "fileExtension_",
               "tags_",
               "datasetIds_",
+              "mimeType_",
+              "fileCreateTime_",
+              "fileModifyTime_",
             };
             java.lang.String info =
-                "\u0000\n\u0000\u0000\u0001\f\n\u0001\u0002\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
-                "\u0005\u0208\u0006\f\u0007\u0208\b2\t\u0208\n\u021a\f\u021a";
+                "\u0000\r\u0000\u0001\u0001\u000f\r\u0001\u0002\u0000\u0001\u0208\u0002\u0208\u0003" +
+                "\u0208\u0005\u0208\u0006\f\u0007\u0208\b2\t\u0208\n\u021a\f\u021a\r\u0208\u000e\u1009" +
+                "\u0000\u000f\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -6562,6 +6908,18 @@ com.google.protobuf.Any defaultValue);
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
+
+    /**
+     * <code>string mime_type = 10 [json_name = "mimeType"];</code>
+     * @return The mimeType.
+     */
+    java.lang.String getMimeType();
+    /**
+     * <code>string mime_type = 10 [json_name = "mimeType"];</code>
+     * @return The bytes for mimeType.
+     */
+    com.google.protobuf.ByteString
+        getMimeTypeBytes();
   }
   /**
    * <pre>
@@ -6581,6 +6939,7 @@ com.google.protobuf.Any defaultValue);
       methodName_ = "";
       fileExtension_ = "";
       tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      mimeType_ = "";
     }
     public static final int COMPONENT_TYPE_FIELD_NUMBER = 1;
     private java.lang.String componentType_;
@@ -7007,6 +7366,54 @@ com.google.protobuf.Any defaultValue) {
       checkByteStringIsUtf8(value);
       ensureTagsIsMutable();
       tags_.add(value.toStringUtf8());
+    }
+
+    public static final int MIME_TYPE_FIELD_NUMBER = 10;
+    private java.lang.String mimeType_;
+    /**
+     * <code>string mime_type = 10 [json_name = "mimeType"];</code>
+     * @return The mimeType.
+     */
+    @java.lang.Override
+    public java.lang.String getMimeType() {
+      return mimeType_;
+    }
+    /**
+     * <code>string mime_type = 10 [json_name = "mimeType"];</code>
+     * @return The bytes for mimeType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMimeTypeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
+    }
+    /**
+     * <code>string mime_type = 10 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMimeType(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      mimeType_ = value;
+    }
+    /**
+     * <code>string mime_type = 10 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = getDefaultInstance().getMimeType();
+    }
+    /**
+     * <code>string mime_type = 10 [json_name = "mimeType"];</code>
+     * @param value The bytes for mimeType to set.
+     */
+    private void setMimeTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mimeType_ = value.toStringUtf8();
+
     }
 
     public static viam.app.datasync.v1.DataSync.DataCaptureMetadata parseFrom(
@@ -7545,6 +7952,55 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>string mime_type = 10 [json_name = "mimeType"];</code>
+       * @return The mimeType.
+       */
+      @java.lang.Override
+      public java.lang.String getMimeType() {
+        return instance.getMimeType();
+      }
+      /**
+       * <code>string mime_type = 10 [json_name = "mimeType"];</code>
+       * @return The bytes for mimeType.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMimeTypeBytes() {
+        return instance.getMimeTypeBytes();
+      }
+      /**
+       * <code>string mime_type = 10 [json_name = "mimeType"];</code>
+       * @param value The mimeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMimeType(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMimeType(value);
+        return this;
+      }
+      /**
+       * <code>string mime_type = 10 [json_name = "mimeType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMimeType() {
+        copyOnWrite();
+        instance.clearMimeType();
+        return this;
+      }
+      /**
+       * <code>string mime_type = 10 [json_name = "mimeType"];</code>
+       * @param value The bytes for mimeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMimeTypeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMimeTypeBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.datasync.v1.DataCaptureMetadata)
     }
     @java.lang.Override
@@ -7569,10 +8025,11 @@ com.google.protobuf.Any defaultValue) {
               MethodParametersDefaultEntryHolder.defaultEntry,
               "fileExtension_",
               "tags_",
+              "mimeType_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0000\u0001\b\u0007\u0001\u0001\u0000\u0001\u0208\u0002\u0208" +
-                "\u0004\u0208\u0005\f\u00062\u0007\u0208\b\u021a";
+                "\u0000\b\u0000\u0000\u0001\n\b\u0001\u0001\u0000\u0001\u0208\u0002\u0208\u0004\u0208" +
+                "\u0005\f\u00062\u0007\u0208\b\u021a\n\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {

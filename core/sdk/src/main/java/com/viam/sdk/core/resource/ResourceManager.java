@@ -4,7 +4,7 @@ import com.viam.common.v1.Common;
 import com.viam.common.v1.Common.ResourceName;
 import com.viam.component.base.v1.BaseServiceGrpc;
 import com.viam.component.arm.v1.ArmServiceGrpc;
-import com.viam.component.audioinput.v1.AudioInputServiceGrpc;
+import com.viam.component.audioin.v1.AudioInServiceGrpc;
 import com.viam.component.board.v1.BoardServiceGrpc;
 import com.viam.component.button.v1.ButtonServiceGrpc;
 import com.viam.component.camera.v1.CameraServiceGrpc;
@@ -22,7 +22,7 @@ import com.viam.sdk.core.component.base.*;
 import com.viam.sdk.core.component.button.*;
 import com.viam.sdk.core.component.arm.*;
 import com.viam.component.servo.v1.ServoServiceGrpc;
-import com.viam.sdk.core.component.audioinput.*;
+import com.viam.sdk.core.component.audioin.*;
 import com.viam.sdk.core.component.board.Board;
 import com.viam.sdk.core.component.board.BoardRPCClient;
 import com.viam.sdk.core.component.board.BoardRPCService;
@@ -86,10 +86,10 @@ public class ResourceManager implements Closeable {
                 ArmRPCClient::new
         ));
         Registry.registerSubtype(new ResourceRegistration<>(
-                AudioInput.SUBTYPE,
-                AudioInputServiceGrpc.SERVICE_NAME,
-                AudioInputRPCService::new,
-                AudioInputRPCClient::new
+                AudioIn.SUBTYPE,
+                AudioInServiceGrpc.SERVICE_NAME,
+                AudioInRPCService::new,
+                AudioInRPCClient::new
          ));
         Registry.registerSubtype(new ResourceRegistration<>(
                 Base.SUBTYPE,

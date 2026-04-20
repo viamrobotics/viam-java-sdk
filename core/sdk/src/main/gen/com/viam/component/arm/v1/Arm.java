@@ -6734,7 +6734,8 @@ public final class Arm {
 
     /**
      * <pre>
-     * Maximum allowable velocity of an arm joint, in degrees per second
+     * Maximum allowable velocity of an arm joint, in degrees per second.
+     * Ignored when max_vel_degs_per_sec_joints is set.
      * </pre>
      *
      * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
@@ -6743,7 +6744,8 @@ public final class Arm {
     boolean hasMaxVelDegsPerSec();
     /**
      * <pre>
-     * Maximum allowable velocity of an arm joint, in degrees per second
+     * Maximum allowable velocity of an arm joint, in degrees per second.
+     * Ignored when max_vel_degs_per_sec_joints is set.
      * </pre>
      *
      * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
@@ -6753,7 +6755,8 @@ public final class Arm {
 
     /**
      * <pre>
-     * Maximum allowable acceleration of an arm joint, in degrees per second squared
+     * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+     * ignored when max_acc_degs_per_sec2_joints is set.
      * </pre>
      *
      * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
@@ -6762,13 +6765,72 @@ public final class Arm {
     boolean hasMaxAccDegsPerSec2();
     /**
      * <pre>
-     * Maximum allowable acceleration of an arm joint, in degrees per second squared
+     * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+     * ignored when max_acc_degs_per_sec2_joints is set.
      * </pre>
      *
      * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
      * @return The maxAccDegsPerSec2.
      */
     double getMaxAccDegsPerSec2();
+
+    /**
+     * <pre>
+     * Per-joint maximum velocity in degrees per second.
+     * </pre>
+     *
+     * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+     * @return A list containing the maxVelDegsPerSecJoints.
+     */
+    java.util.List<java.lang.Double> getMaxVelDegsPerSecJointsList();
+    /**
+     * <pre>
+     * Per-joint maximum velocity in degrees per second.
+     * </pre>
+     *
+     * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+     * @return The count of maxVelDegsPerSecJoints.
+     */
+    int getMaxVelDegsPerSecJointsCount();
+    /**
+     * <pre>
+     * Per-joint maximum velocity in degrees per second.
+     * </pre>
+     *
+     * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+     * @param index The index of the element to return.
+     * @return The maxVelDegsPerSecJoints at the given index.
+     */
+    double getMaxVelDegsPerSecJoints(int index);
+
+    /**
+     * <pre>
+     * Per-joint maximum acceleration in degrees per second squared.
+     * </pre>
+     *
+     * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+     * @return A list containing the maxAccDegsPerSec2Joints.
+     */
+    java.util.List<java.lang.Double> getMaxAccDegsPerSec2JointsList();
+    /**
+     * <pre>
+     * Per-joint maximum acceleration in degrees per second squared.
+     * </pre>
+     *
+     * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+     * @return The count of maxAccDegsPerSec2Joints.
+     */
+    int getMaxAccDegsPerSec2JointsCount();
+    /**
+     * <pre>
+     * Per-joint maximum acceleration in degrees per second squared.
+     * </pre>
+     *
+     * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+     * @param index The index of the element to return.
+     * @return The maxAccDegsPerSec2Joints at the given index.
+     */
+    double getMaxAccDegsPerSec2Joints(int index);
   }
   /**
    * Protobuf type {@code viam.component.arm.v1.MoveOptions}
@@ -6779,13 +6841,16 @@ public final class Arm {
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.MoveOptions)
       MoveOptionsOrBuilder {
     private MoveOptions() {
+      maxVelDegsPerSecJoints_ = emptyDoubleList();
+      maxAccDegsPerSec2Joints_ = emptyDoubleList();
     }
     private int bitField0_;
     public static final int MAX_VEL_DEGS_PER_SEC_FIELD_NUMBER = 1;
     private double maxVelDegsPerSec_;
     /**
      * <pre>
-     * Maximum allowable velocity of an arm joint, in degrees per second
+     * Maximum allowable velocity of an arm joint, in degrees per second.
+     * Ignored when max_vel_degs_per_sec_joints is set.
      * </pre>
      *
      * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
@@ -6797,7 +6862,8 @@ public final class Arm {
     }
     /**
      * <pre>
-     * Maximum allowable velocity of an arm joint, in degrees per second
+     * Maximum allowable velocity of an arm joint, in degrees per second.
+     * Ignored when max_vel_degs_per_sec_joints is set.
      * </pre>
      *
      * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
@@ -6809,7 +6875,8 @@ public final class Arm {
     }
     /**
      * <pre>
-     * Maximum allowable velocity of an arm joint, in degrees per second
+     * Maximum allowable velocity of an arm joint, in degrees per second.
+     * Ignored when max_vel_degs_per_sec_joints is set.
      * </pre>
      *
      * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
@@ -6821,7 +6888,8 @@ public final class Arm {
     }
     /**
      * <pre>
-     * Maximum allowable velocity of an arm joint, in degrees per second
+     * Maximum allowable velocity of an arm joint, in degrees per second.
+     * Ignored when max_vel_degs_per_sec_joints is set.
      * </pre>
      *
      * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
@@ -6835,7 +6903,8 @@ public final class Arm {
     private double maxAccDegsPerSec2_;
     /**
      * <pre>
-     * Maximum allowable acceleration of an arm joint, in degrees per second squared
+     * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+     * ignored when max_acc_degs_per_sec2_joints is set.
      * </pre>
      *
      * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
@@ -6847,7 +6916,8 @@ public final class Arm {
     }
     /**
      * <pre>
-     * Maximum allowable acceleration of an arm joint, in degrees per second squared
+     * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+     * ignored when max_acc_degs_per_sec2_joints is set.
      * </pre>
      *
      * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
@@ -6859,7 +6929,8 @@ public final class Arm {
     }
     /**
      * <pre>
-     * Maximum allowable acceleration of an arm joint, in degrees per second squared
+     * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+     * ignored when max_acc_degs_per_sec2_joints is set.
      * </pre>
      *
      * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
@@ -6871,7 +6942,8 @@ public final class Arm {
     }
     /**
      * <pre>
-     * Maximum allowable acceleration of an arm joint, in degrees per second squared
+     * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+     * ignored when max_acc_degs_per_sec2_joints is set.
      * </pre>
      *
      * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
@@ -6879,6 +6951,204 @@ public final class Arm {
     private void clearMaxAccDegsPerSec2() {
       bitField0_ = (bitField0_ & ~0x00000002);
       maxAccDegsPerSec2_ = 0D;
+    }
+
+    public static final int MAX_VEL_DEGS_PER_SEC_JOINTS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.DoubleList maxVelDegsPerSecJoints_;
+    /**
+     * <pre>
+     * Per-joint maximum velocity in degrees per second.
+     * </pre>
+     *
+     * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+     * @return A list containing the maxVelDegsPerSecJoints.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Double>
+        getMaxVelDegsPerSecJointsList() {
+      return maxVelDegsPerSecJoints_;
+    }
+    /**
+     * <pre>
+     * Per-joint maximum velocity in degrees per second.
+     * </pre>
+     *
+     * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+     * @return The count of maxVelDegsPerSecJoints.
+     */
+    @java.lang.Override
+    public int getMaxVelDegsPerSecJointsCount() {
+      return maxVelDegsPerSecJoints_.size();
+    }
+    /**
+     * <pre>
+     * Per-joint maximum velocity in degrees per second.
+     * </pre>
+     *
+     * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+     * @param index The index of the element to return.
+     * @return The maxVelDegsPerSecJoints at the given index.
+     */
+    @java.lang.Override
+    public double getMaxVelDegsPerSecJoints(int index) {
+      return maxVelDegsPerSecJoints_.getDouble(index);
+    }
+    private int maxVelDegsPerSecJointsMemoizedSerializedSize = -1;
+    private void ensureMaxVelDegsPerSecJointsIsMutable() {
+      com.google.protobuf.Internal.DoubleList tmp = maxVelDegsPerSecJoints_;
+      if (!tmp.isModifiable()) {
+        maxVelDegsPerSecJoints_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * Per-joint maximum velocity in degrees per second.
+     * </pre>
+     *
+     * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+     * @param index The index to set the value at.
+     * @param value The maxVelDegsPerSecJoints to set.
+     */
+    private void setMaxVelDegsPerSecJoints(
+        int index, double value) {
+      ensureMaxVelDegsPerSecJointsIsMutable();
+      maxVelDegsPerSecJoints_.setDouble(index, value);
+    }
+    /**
+     * <pre>
+     * Per-joint maximum velocity in degrees per second.
+     * </pre>
+     *
+     * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+     * @param value The maxVelDegsPerSecJoints to add.
+     */
+    private void addMaxVelDegsPerSecJoints(double value) {
+      ensureMaxVelDegsPerSecJointsIsMutable();
+      maxVelDegsPerSecJoints_.addDouble(value);
+    }
+    /**
+     * <pre>
+     * Per-joint maximum velocity in degrees per second.
+     * </pre>
+     *
+     * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+     * @param values The maxVelDegsPerSecJoints to add.
+     */
+    private void addAllMaxVelDegsPerSecJoints(
+        java.lang.Iterable<? extends java.lang.Double> values) {
+      ensureMaxVelDegsPerSecJointsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, maxVelDegsPerSecJoints_);
+    }
+    /**
+     * <pre>
+     * Per-joint maximum velocity in degrees per second.
+     * </pre>
+     *
+     * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+     */
+    private void clearMaxVelDegsPerSecJoints() {
+      maxVelDegsPerSecJoints_ = emptyDoubleList();
+    }
+
+    public static final int MAX_ACC_DEGS_PER_SEC2_JOINTS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.DoubleList maxAccDegsPerSec2Joints_;
+    /**
+     * <pre>
+     * Per-joint maximum acceleration in degrees per second squared.
+     * </pre>
+     *
+     * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+     * @return A list containing the maxAccDegsPerSec2Joints.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Double>
+        getMaxAccDegsPerSec2JointsList() {
+      return maxAccDegsPerSec2Joints_;
+    }
+    /**
+     * <pre>
+     * Per-joint maximum acceleration in degrees per second squared.
+     * </pre>
+     *
+     * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+     * @return The count of maxAccDegsPerSec2Joints.
+     */
+    @java.lang.Override
+    public int getMaxAccDegsPerSec2JointsCount() {
+      return maxAccDegsPerSec2Joints_.size();
+    }
+    /**
+     * <pre>
+     * Per-joint maximum acceleration in degrees per second squared.
+     * </pre>
+     *
+     * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+     * @param index The index of the element to return.
+     * @return The maxAccDegsPerSec2Joints at the given index.
+     */
+    @java.lang.Override
+    public double getMaxAccDegsPerSec2Joints(int index) {
+      return maxAccDegsPerSec2Joints_.getDouble(index);
+    }
+    private int maxAccDegsPerSec2JointsMemoizedSerializedSize = -1;
+    private void ensureMaxAccDegsPerSec2JointsIsMutable() {
+      com.google.protobuf.Internal.DoubleList tmp = maxAccDegsPerSec2Joints_;
+      if (!tmp.isModifiable()) {
+        maxAccDegsPerSec2Joints_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * Per-joint maximum acceleration in degrees per second squared.
+     * </pre>
+     *
+     * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+     * @param index The index to set the value at.
+     * @param value The maxAccDegsPerSec2Joints to set.
+     */
+    private void setMaxAccDegsPerSec2Joints(
+        int index, double value) {
+      ensureMaxAccDegsPerSec2JointsIsMutable();
+      maxAccDegsPerSec2Joints_.setDouble(index, value);
+    }
+    /**
+     * <pre>
+     * Per-joint maximum acceleration in degrees per second squared.
+     * </pre>
+     *
+     * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+     * @param value The maxAccDegsPerSec2Joints to add.
+     */
+    private void addMaxAccDegsPerSec2Joints(double value) {
+      ensureMaxAccDegsPerSec2JointsIsMutable();
+      maxAccDegsPerSec2Joints_.addDouble(value);
+    }
+    /**
+     * <pre>
+     * Per-joint maximum acceleration in degrees per second squared.
+     * </pre>
+     *
+     * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+     * @param values The maxAccDegsPerSec2Joints to add.
+     */
+    private void addAllMaxAccDegsPerSec2Joints(
+        java.lang.Iterable<? extends java.lang.Double> values) {
+      ensureMaxAccDegsPerSec2JointsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, maxAccDegsPerSec2Joints_);
+    }
+    /**
+     * <pre>
+     * Per-joint maximum acceleration in degrees per second squared.
+     * </pre>
+     *
+     * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+     */
+    private void clearMaxAccDegsPerSec2Joints() {
+      maxAccDegsPerSec2Joints_ = emptyDoubleList();
     }
 
     public static com.viam.component.arm.v1.Arm.MoveOptions parseFrom(
@@ -6980,7 +7250,8 @@ public final class Arm {
 
       /**
        * <pre>
-       * Maximum allowable velocity of an arm joint, in degrees per second
+       * Maximum allowable velocity of an arm joint, in degrees per second.
+       * Ignored when max_vel_degs_per_sec_joints is set.
        * </pre>
        *
        * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
@@ -6992,7 +7263,8 @@ public final class Arm {
       }
       /**
        * <pre>
-       * Maximum allowable velocity of an arm joint, in degrees per second
+       * Maximum allowable velocity of an arm joint, in degrees per second.
+       * Ignored when max_vel_degs_per_sec_joints is set.
        * </pre>
        *
        * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
@@ -7004,7 +7276,8 @@ public final class Arm {
       }
       /**
        * <pre>
-       * Maximum allowable velocity of an arm joint, in degrees per second
+       * Maximum allowable velocity of an arm joint, in degrees per second.
+       * Ignored when max_vel_degs_per_sec_joints is set.
        * </pre>
        *
        * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
@@ -7018,7 +7291,8 @@ public final class Arm {
       }
       /**
        * <pre>
-       * Maximum allowable velocity of an arm joint, in degrees per second
+       * Maximum allowable velocity of an arm joint, in degrees per second.
+       * Ignored when max_vel_degs_per_sec_joints is set.
        * </pre>
        *
        * <code>optional double max_vel_degs_per_sec = 1 [json_name = "maxVelDegsPerSec"];</code>
@@ -7032,7 +7306,8 @@ public final class Arm {
 
       /**
        * <pre>
-       * Maximum allowable acceleration of an arm joint, in degrees per second squared
+       * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+       * ignored when max_acc_degs_per_sec2_joints is set.
        * </pre>
        *
        * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
@@ -7044,7 +7319,8 @@ public final class Arm {
       }
       /**
        * <pre>
-       * Maximum allowable acceleration of an arm joint, in degrees per second squared
+       * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+       * ignored when max_acc_degs_per_sec2_joints is set.
        * </pre>
        *
        * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
@@ -7056,7 +7332,8 @@ public final class Arm {
       }
       /**
        * <pre>
-       * Maximum allowable acceleration of an arm joint, in degrees per second squared
+       * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+       * ignored when max_acc_degs_per_sec2_joints is set.
        * </pre>
        *
        * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
@@ -7070,7 +7347,8 @@ public final class Arm {
       }
       /**
        * <pre>
-       * Maximum allowable acceleration of an arm joint, in degrees per second squared
+       * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+       * ignored when max_acc_degs_per_sec2_joints is set.
        * </pre>
        *
        * <code>optional double max_acc_degs_per_sec2 = 2 [json_name = "maxAccDegsPerSec2"];</code>
@@ -7079,6 +7357,200 @@ public final class Arm {
       public Builder clearMaxAccDegsPerSec2() {
         copyOnWrite();
         instance.clearMaxAccDegsPerSec2();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Per-joint maximum velocity in degrees per second.
+       * </pre>
+       *
+       * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+       * @return A list containing the maxVelDegsPerSecJoints.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Double>
+          getMaxVelDegsPerSecJointsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getMaxVelDegsPerSecJointsList());
+      }
+      /**
+       * <pre>
+       * Per-joint maximum velocity in degrees per second.
+       * </pre>
+       *
+       * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+       * @return The count of maxVelDegsPerSecJoints.
+       */
+      @java.lang.Override
+      public int getMaxVelDegsPerSecJointsCount() {
+        return instance.getMaxVelDegsPerSecJointsCount();
+      }
+      /**
+       * <pre>
+       * Per-joint maximum velocity in degrees per second.
+       * </pre>
+       *
+       * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+       * @param index The index of the element to return.
+       * @return The maxVelDegsPerSecJoints at the given index.
+       */
+      @java.lang.Override
+      public double getMaxVelDegsPerSecJoints(int index) {
+        return instance.getMaxVelDegsPerSecJoints(index);
+      }
+      /**
+       * <pre>
+       * Per-joint maximum velocity in degrees per second.
+       * </pre>
+       *
+       * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+       * @param value The maxVelDegsPerSecJoints to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxVelDegsPerSecJoints(
+          int index, double value) {
+        copyOnWrite();
+        instance.setMaxVelDegsPerSecJoints(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Per-joint maximum velocity in degrees per second.
+       * </pre>
+       *
+       * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+       * @param value The maxVelDegsPerSecJoints to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMaxVelDegsPerSecJoints(double value) {
+        copyOnWrite();
+        instance.addMaxVelDegsPerSecJoints(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Per-joint maximum velocity in degrees per second.
+       * </pre>
+       *
+       * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+       * @param values The maxVelDegsPerSecJoints to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMaxVelDegsPerSecJoints(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        copyOnWrite();
+        instance.addAllMaxVelDegsPerSecJoints(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Per-joint maximum velocity in degrees per second.
+       * </pre>
+       *
+       * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxVelDegsPerSecJoints() {
+        copyOnWrite();
+        instance.clearMaxVelDegsPerSecJoints();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Per-joint maximum acceleration in degrees per second squared.
+       * </pre>
+       *
+       * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+       * @return A list containing the maxAccDegsPerSec2Joints.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Double>
+          getMaxAccDegsPerSec2JointsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getMaxAccDegsPerSec2JointsList());
+      }
+      /**
+       * <pre>
+       * Per-joint maximum acceleration in degrees per second squared.
+       * </pre>
+       *
+       * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+       * @return The count of maxAccDegsPerSec2Joints.
+       */
+      @java.lang.Override
+      public int getMaxAccDegsPerSec2JointsCount() {
+        return instance.getMaxAccDegsPerSec2JointsCount();
+      }
+      /**
+       * <pre>
+       * Per-joint maximum acceleration in degrees per second squared.
+       * </pre>
+       *
+       * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+       * @param index The index of the element to return.
+       * @return The maxAccDegsPerSec2Joints at the given index.
+       */
+      @java.lang.Override
+      public double getMaxAccDegsPerSec2Joints(int index) {
+        return instance.getMaxAccDegsPerSec2Joints(index);
+      }
+      /**
+       * <pre>
+       * Per-joint maximum acceleration in degrees per second squared.
+       * </pre>
+       *
+       * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+       * @param value The maxAccDegsPerSec2Joints to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxAccDegsPerSec2Joints(
+          int index, double value) {
+        copyOnWrite();
+        instance.setMaxAccDegsPerSec2Joints(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Per-joint maximum acceleration in degrees per second squared.
+       * </pre>
+       *
+       * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+       * @param value The maxAccDegsPerSec2Joints to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMaxAccDegsPerSec2Joints(double value) {
+        copyOnWrite();
+        instance.addMaxAccDegsPerSec2Joints(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Per-joint maximum acceleration in degrees per second squared.
+       * </pre>
+       *
+       * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+       * @param values The maxAccDegsPerSec2Joints to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMaxAccDegsPerSec2Joints(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        copyOnWrite();
+        instance.addAllMaxAccDegsPerSec2Joints(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Per-joint maximum acceleration in degrees per second squared.
+       * </pre>
+       *
+       * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxAccDegsPerSec2Joints() {
+        copyOnWrite();
+        instance.clearMaxAccDegsPerSec2Joints();
         return this;
       }
 
@@ -7101,10 +7573,12 @@ public final class Arm {
               "bitField0_",
               "maxVelDegsPerSec_",
               "maxAccDegsPerSec2_",
+              "maxVelDegsPerSecJoints_",
+              "maxAccDegsPerSec2Joints_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1000\u0000\u0002" +
-                "\u1000\u0001";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0002\u0000\u0001\u1000\u0000\u0002" +
+                "\u1000\u0001\u0003#\u0004#";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
