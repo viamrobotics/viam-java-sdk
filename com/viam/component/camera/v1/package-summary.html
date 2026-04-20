@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <ul class="summary-list">
 <li>
 <div id="class-summary">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="class-summary-tab0" role="tab" aria-selected="true" aria-controls="class-summary.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary', 2)" class="active-table-tab">All Classes and Interfaces</button><button id="class-summary-tab1" role="tab" aria-selected="false" aria-controls="class-summary.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary-tab1', 2)" class="table-tab">Interfaces</button><button id="class-summary-tab2" role="tab" aria-selected="false" aria-controls="class-summary.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary-tab2', 2)" class="table-tab">Classes</button><button id="class-summary-tab3" role="tab" aria-selected="false" aria-controls="class-summary.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary-tab3', 2)" class="table-tab">Enum Classes</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="class-summary-tab0" role="tab" aria-selected="true" aria-controls="class-summary.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary', 2)" class="active-table-tab">All Classes and Interfaces</button><button id="class-summary-tab1" role="tab" aria-selected="false" aria-controls="class-summary.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary-tab1', 2)" class="table-tab">Interfaces</button><button id="class-summary-tab2" role="tab" aria-selected="false" aria-controls="class-summary.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary-tab2', 2)" class="table-tab">Classes</button></div>
 <div id="class-summary.tabpanel" role="tabpanel" aria-labelledby="class-summary-tab0">
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Class</div>
@@ -90,29 +90,19 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Camera.DistortionParametersOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.DistortionParametersOrBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab3"><a href="Camera.Format.html" title="enum class in com.viam.component.camera.v1">Camera.Format</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab3">
-<div class="block">Protobuf enum <code>viam.component.camera.v1.Format</code></div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Camera.GetImageRequest.html" title="class in com.viam.component.camera.v1">Camera.GetImageRequest</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Protobuf type <code>viam.component.camera.v1.GetImageRequest</code></div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Camera.GetImageRequest.Builder.html" title="class in com.viam.component.camera.v1">Camera.GetImageRequest.Builder</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Camera.ExtrinsicParameters.html" title="class in com.viam.component.camera.v1">Camera.ExtrinsicParameters</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Protobuf type <code>viam.component.camera.v1.GetImageRequest</code></div>
+<div class="block">
+ ExtrinsicParameters define the position of the camera
+ relative to a reference frame (the world or another sensor).</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Camera.GetImageRequestOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.GetImageRequestOrBuilder</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Camera.GetImageResponse.html" title="class in com.viam.component.camera.v1">Camera.GetImageResponse</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Protobuf type <code>viam.component.camera.v1.GetImageResponse</code></div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Camera.GetImageResponse.Builder.html" title="class in com.viam.component.camera.v1">Camera.GetImageResponse.Builder</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Camera.ExtrinsicParameters.Builder.html" title="class in com.viam.component.camera.v1">Camera.ExtrinsicParameters.Builder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Protobuf type <code>viam.component.camera.v1.GetImageResponse</code></div>
+<div class="block">
+ ExtrinsicParameters define the position of the camera
+ relative to a reference frame (the world or another sensor).</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="Camera.GetImageResponseOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.GetImageResponseOrBuilder</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="Camera.ExtrinsicParametersOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.ExtrinsicParametersOrBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Camera.GetImagesRequest.html" title="class in com.viam.component.camera.v1">Camera.GetImagesRequest</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -204,64 +194,54 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Camera.PropertyOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.PropertyOrBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Camera.RenderFrameRequest.html" title="class in com.viam.component.camera.v1">Camera.RenderFrameRequest</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Camera.Webcam.html" title="class in com.viam.component.camera.v1">Camera.Webcam</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Protobuf type <code>viam.component.camera.v1.RenderFrameRequest</code></div>
+<div class="block">Protobuf type <code>viam.component.camera.v1.Webcam</code></div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Camera.RenderFrameRequest.Builder.html" title="class in com.viam.component.camera.v1">Camera.RenderFrameRequest.Builder</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Camera.Webcam.Builder.html" title="class in com.viam.component.camera.v1">Camera.Webcam.Builder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Protobuf type <code>viam.component.camera.v1.RenderFrameRequest</code></div>
+<div class="block">Protobuf type <code>viam.component.camera.v1.Webcam</code></div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="Camera.RenderFrameRequestOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.RenderFrameRequestOrBuilder</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="Camera.WebcamOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.WebcamOrBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Camera.Webcam.html" title="class in com.viam.component.camera.v1">Camera.Webcam</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Camera.Webcams.html" title="class in com.viam.component.camera.v1">Camera.Webcams</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Protobuf type <code>viam.component.camera.v1.Webcam</code></div>
+<div class="block">Protobuf type <code>viam.component.camera.v1.Webcams</code></div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Camera.Webcam.Builder.html" title="class in com.viam.component.camera.v1">Camera.Webcam.Builder</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Camera.Webcams.Builder.html" title="class in com.viam.component.camera.v1">Camera.Webcams.Builder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Protobuf type <code>viam.component.camera.v1.Webcam</code></div>
+<div class="block">Protobuf type <code>viam.component.camera.v1.Webcams</code></div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Camera.WebcamOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.WebcamOrBuilder</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Camera.WebcamsOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.WebcamsOrBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Camera.Webcams.html" title="class in com.viam.component.camera.v1">Camera.Webcams</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="CameraServiceGrpc.html" title="class in com.viam.component.camera.v1">CameraServiceGrpc</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Protobuf type <code>viam.component.camera.v1.Webcams</code></div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Camera.Webcams.Builder.html" title="class in com.viam.component.camera.v1">Camera.Webcams.Builder</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Protobuf type <code>viam.component.camera.v1.Webcams</code></div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="Camera.WebcamsOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.WebcamsOrBuilder</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CameraServiceGrpc.html" title="class in com.viam.component.camera.v1">CameraServiceGrpc</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">
  A CameraService services all cameras associated with a robot</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="CameraServiceGrpc.AsyncService.html" title="interface in com.viam.component.camera.v1">CameraServiceGrpc.AsyncService</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="CameraServiceGrpc.AsyncService.html" title="interface in com.viam.component.camera.v1">CameraServiceGrpc.AsyncService</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
 <div class="block">
  A CameraService services all cameras associated with a robot</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CameraServiceGrpc.CameraServiceBlockingStub.html" title="class in com.viam.component.camera.v1">CameraServiceGrpc.CameraServiceBlockingStub</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="CameraServiceGrpc.CameraServiceBlockingStub.html" title="class in com.viam.component.camera.v1">CameraServiceGrpc.CameraServiceBlockingStub</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">A stub to allow clients to do limited synchronous rpc calls to service CameraService.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="CameraServiceGrpc.CameraServiceBlockingV2Stub.html" title="class in com.viam.component.camera.v1">CameraServiceGrpc.CameraServiceBlockingV2Stub</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CameraServiceGrpc.CameraServiceBlockingV2Stub.html" title="class in com.viam.component.camera.v1">CameraServiceGrpc.CameraServiceBlockingV2Stub</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">A stub to allow clients to do synchronous rpc calls to service CameraService.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CameraServiceGrpc.CameraServiceFutureStub.html" title="class in com.viam.component.camera.v1">CameraServiceGrpc.CameraServiceFutureStub</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="CameraServiceGrpc.CameraServiceFutureStub.html" title="class in com.viam.component.camera.v1">CameraServiceGrpc.CameraServiceFutureStub</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">A stub to allow clients to do ListenableFuture-style rpc calls to service CameraService.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="CameraServiceGrpc.CameraServiceImplBase.html" title="class in com.viam.component.camera.v1">CameraServiceGrpc.CameraServiceImplBase</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CameraServiceGrpc.CameraServiceImplBase.html" title="class in com.viam.component.camera.v1">CameraServiceGrpc.CameraServiceImplBase</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Base class for the server implementation of the service CameraService.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CameraServiceGrpc.CameraServiceStub.html" title="class in com.viam.component.camera.v1">CameraServiceGrpc.CameraServiceStub</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="CameraServiceGrpc.CameraServiceStub.html" title="class in com.viam.component.camera.v1">CameraServiceGrpc.CameraServiceStub</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">A stub to allow clients to do asynchronous rpc calls to service CameraService.</div>
 </div>
 </div>

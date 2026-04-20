@@ -160,15 +160,25 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFileExtension()" class="member-name-link">getFileExtension</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFileCreateTime()" class="member-name-link">getFileCreateTime</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFileExtension()" class="member-name-link">getFileExtension</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>string file_extension = 9 [json_name = "fileExtension"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFileExtensionBytes()" class="member-name-link">getFileExtensionBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string file_extension = 9 [json_name = "fileExtension"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFileExtensionBytes()" class="member-name-link">getFileExtensionBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFileModifyTime()" class="member-name-link">getFileModifyTime</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>string file_extension = 9 [json_name = "fileExtension"];</code></div>
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFileName()" class="member-name-link">getFileName</a>()</code></div>
@@ -217,6 +227,16 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMimeType()" class="member-name-link">getMimeType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMimeTypeBytes()" class="member-name-link">getMimeTypeBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPartId()" class="member-name-link">getPartId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
@@ -255,6 +275,16 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTypeValue()" class="member-name-link">getTypeValue</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasFileCreateTime()" class="member-name-link">hasFileCreateTime</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasFileModifyTime()" class="member-name-link">hasFileModifyTime</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
 </div>
 </div>
 </div>
@@ -384,28 +414,6 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getFileName()">
-<h3>getFileName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFileName</span>()</div>
-<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>The fileName.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getFileNameBytes()">
-<h3>getFileNameBytes</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getFileNameBytes</span>()</div>
-<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>The bytes for fileName.</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getMethodParametersCount()">
 <h3>getMethodParametersCount</h3>
 <div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getMethodParametersCount</span>()</div>
@@ -451,6 +459,28 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 </li>
 <li>
+<section class="detail" id="getFileName()">
+<h3>getFileName</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFileName</span>()</div>
+<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The fileName.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFileNameBytes()">
+<h3>getFileNameBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getFileNameBytes</span>()</div>
+<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for fileName.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getFileExtension()">
 <h3>getFileExtension</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFileExtension</span>()</div>
@@ -469,6 +499,50 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The bytes for fileExtension.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFileCreateTime()">
+<h3>hasFileCreateTime</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFileCreateTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the fileCreateTime field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFileCreateTime()">
+<h3>getFileCreateTime</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.Timestamp</span>&nbsp;<span class="element-name">getFileCreateTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The fileCreateTime.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFileModifyTime()">
+<h3>hasFileModifyTime</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFileModifyTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the fileModifyTime field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFileModifyTime()">
+<h3>getFileModifyTime</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.Timestamp</span>&nbsp;<span class="element-name">getFileModifyTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The fileModifyTime.</dd>
 </dl>
 </section>
 </li>
@@ -565,6 +639,28 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dd><code>index</code> - The index of the element to return.</dd>
 <dt>Returns:</dt>
 <dd>The datasetIds at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMimeType()">
+<h3>getMimeType</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getMimeType</span>()</div>
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The mimeType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMimeTypeBytes()">
+<h3>getMimeTypeBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getMimeTypeBytes</span>()</div>
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for mimeType.</dd>
 </dl>
 </section>
 </li>

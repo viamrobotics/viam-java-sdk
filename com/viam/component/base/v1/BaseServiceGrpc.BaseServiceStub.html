@@ -150,49 +150,56 @@ loadScripts(document, 'script');</script>
  GetProperties returns the properties of a base in its current configuration</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isMoving(com.viam.component.base.v1.Base.IsMovingRequest,io.grpc.stub.StreamObserver)" class="member-name-link">isMoving</a><wbr>(<a href="Base.IsMovingRequest.html" title="class in com.viam.component.base.v1">Base.IsMovingRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Base.IsMovingResponse.html" title="class in com.viam.component.base.v1">Base.IsMovingResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus(com.viam.common.v1.Common.GetStatusRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getStatus</a><wbr>(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetStatus returns the status of the resource</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isMoving(com.viam.component.base.v1.Base.IsMovingRequest,io.grpc.stub.StreamObserver)" class="member-name-link">isMoving</a><wbr>(<a href="Base.IsMovingRequest.html" title="class in com.viam.component.base.v1">Base.IsMovingRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Base.IsMovingResponse.html" title="class in com.viam.component.base.v1">Base.IsMovingResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  IsMoving reports if a component is in motion</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveStraight(com.viam.component.base.v1.Base.MoveStraightRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveStraight</a><wbr>(<a href="Base.MoveStraightRequest.html" title="class in com.viam.component.base.v1">Base.MoveStraightRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveStraight(com.viam.component.base.v1.Base.MoveStraightRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveStraight</a><wbr>(<a href="Base.MoveStraightRequest.html" title="class in com.viam.component.base.v1">Base.MoveStraightRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Base.MoveStraightResponse.html" title="class in com.viam.component.base.v1">Base.MoveStraightResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  MoveStraight moves a robot's base in a straight line by a given distance, expressed in millimeters
  and a given speed, expressed in millimeters per second
  This method blocks until completed or cancelled</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPower(com.viam.component.base.v1.Base.SetPowerRequest,io.grpc.stub.StreamObserver)" class="member-name-link">setPower</a><wbr>(<a href="Base.SetPowerRequest.html" title="class in com.viam.component.base.v1">Base.SetPowerRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPower(com.viam.component.base.v1.Base.SetPowerRequest,io.grpc.stub.StreamObserver)" class="member-name-link">setPower</a><wbr>(<a href="Base.SetPowerRequest.html" title="class in com.viam.component.base.v1">Base.SetPowerRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Base.SetPowerResponse.html" title="class in com.viam.component.base.v1">Base.SetPowerResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  SetPower sets the linear and angular power of a base
  -1 -&gt; 1 in terms of power for each direction</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVelocity(com.viam.component.base.v1.Base.SetVelocityRequest,io.grpc.stub.StreamObserver)" class="member-name-link">setVelocity</a><wbr>(<a href="Base.SetVelocityRequest.html" title="class in com.viam.component.base.v1">Base.SetVelocityRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVelocity(com.viam.component.base.v1.Base.SetVelocityRequest,io.grpc.stub.StreamObserver)" class="member-name-link">setVelocity</a><wbr>(<a href="Base.SetVelocityRequest.html" title="class in com.viam.component.base.v1">Base.SetVelocityRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Base.SetVelocityResponse.html" title="class in com.viam.component.base.v1">Base.SetVelocityResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  SetVelocity sets the linear and angular velocity of a base</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#spin(com.viam.component.base.v1.Base.SpinRequest,io.grpc.stub.StreamObserver)" class="member-name-link">spin</a><wbr>(<a href="Base.SpinRequest.html" title="class in com.viam.component.base.v1">Base.SpinRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#spin(com.viam.component.base.v1.Base.SpinRequest,io.grpc.stub.StreamObserver)" class="member-name-link">spin</a><wbr>(<a href="Base.SpinRequest.html" title="class in com.viam.component.base.v1">Base.SpinRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Base.SpinResponse.html" title="class in com.viam.component.base.v1">Base.SpinResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Spin spins a robot's base by an given angle, expressed in degrees, and a given
  angular speed, expressed in degrees per second
  This method blocks until completed or cancelled</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.base.v1.Base.StopRequest,io.grpc.stub.StreamObserver)" class="member-name-link">stop</a><wbr>(<a href="Base.StopRequest.html" title="class in com.viam.component.base.v1">Base.StopRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.base.v1.Base.StopRequest,io.grpc.stub.StreamObserver)" class="member-name-link">stop</a><wbr>(<a href="Base.StopRequest.html" title="class in com.viam.component.base.v1">Base.StopRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Base.StopResponse.html" title="class in com.viam.component.base.v1">Base.StopResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Stop stops a robot's base</div>
 </div>
@@ -302,6 +309,16 @@ loadScripts(document, 'script');</script>
  io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.DoCommandResponse.html" title="class in com.viam.common.v1">Common.DoCommandResponse</a>&gt;&nbsp;responseObserver)</span></div>
 <div class="block"><pre>
  DoCommand sends/receives arbitrary commands
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getStatus(com.viam.common.v1.Common.GetStatusRequest,io.grpc.stub.StreamObserver)">
+<h3>getStatus</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getStatus</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ GetStatus returns the status of the resource
  </pre></div>
 </section>
 </li>

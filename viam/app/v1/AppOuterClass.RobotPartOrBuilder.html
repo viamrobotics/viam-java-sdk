@@ -225,6 +225,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.google.protobuf.Struct robot_config = 5 [json_name = "robotConfig", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"robot_config&#92;""];</code></div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRobotConfigJson()" class="member-name-link">getRobotConfigJson</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ robot_config_json is the raw JSON string of the robot config, preserving user-defined key order.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRobotConfigJsonBytes()" class="member-name-link">getRobotConfigJsonBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ robot_config_json is the raw JSON string of the robot config, preserving user-defined key order.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>long</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSecondsSinceOnline()" class="member-name-link">getSecondsSinceOnline</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -285,8 +297,14 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block"><code>.google.protobuf.Struct robot_config = 5 [json_name = "robotConfig", (.tagger.v1.tags) = "bson:&#92;"config&#92;" json:&#92;"robot_config&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasUserSuppliedInfo()" class="member-name-link">hasUserSuppliedInfo</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasRobotConfigJson()" class="member-name-link">hasRobotConfigJson</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ robot_config_json is the raw JSON string of the robot config, preserving user-defined key order.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasUserSuppliedInfo()" class="member-name-link">hasUserSuppliedInfo</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.google.protobuf.Struct user_supplied_info = 7 [json_name = "userSuppliedInfo", (.tagger.v1.tags) = "bson:&#92;"user_supplied_info&#92;" json:&#92;"user_supplied_info&#92;""];</code></div>
 </div>
 </div>
@@ -692,6 +710,51 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The secondsSinceOnline.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasRobotConfigJson()">
+<h3>hasRobotConfigJson</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasRobotConfigJson</span>()</div>
+<div class="block"><pre>
+ robot_config_json is the raw JSON string of the robot config, preserving user-defined key order.
+ </pre>
+
+ <code>optional string robot_config_json = 18 [json_name = "robotConfigJson", (.tagger.v1.tags) = "bson:&#92;"config_json,omitempty&#92;" json:&#92;"config_json,omitempty&#92;""];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the robotConfigJson field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRobotConfigJson()">
+<h3>getRobotConfigJson</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getRobotConfigJson</span>()</div>
+<div class="block"><pre>
+ robot_config_json is the raw JSON string of the robot config, preserving user-defined key order.
+ </pre>
+
+ <code>optional string robot_config_json = 18 [json_name = "robotConfigJson", (.tagger.v1.tags) = "bson:&#92;"config_json,omitempty&#92;" json:&#92;"config_json,omitempty&#92;""];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The robotConfigJson.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRobotConfigJsonBytes()">
+<h3>getRobotConfigJsonBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getRobotConfigJsonBytes</span>()</div>
+<div class="block"><pre>
+ robot_config_json is the raw JSON string of the robot config, preserving user-defined key order.
+ </pre>
+
+ <code>optional string robot_config_json = 18 [json_name = "robotConfigJson", (.tagger.v1.tags) = "bson:&#92;"config_json,omitempty&#92;" json:&#92;"config_json,omitempty&#92;""];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for robotConfigJson.</dd>
 </dl>
 </section>
 </li>

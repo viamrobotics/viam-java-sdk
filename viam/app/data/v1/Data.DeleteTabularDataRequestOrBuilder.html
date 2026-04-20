@@ -120,15 +120,25 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>uint32 delete_older_than_days = 2 [json_name = "deleteOlderThanDays"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Data.DeleteTabularFilter.html" title="class in viam.app.data.v1">Data.DeleteTabularFilter</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFilter()" class="member-name-link">getFilter</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasFilter()" class="member-name-link">hasFilter</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+<div class="block"><code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code></div>
 </div>
 </div>
 </div>
@@ -177,6 +187,28 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The deleteOlderThanDays.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFilter()">
+<h3>hasFilter</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFilter</span>()</div>
+<div class="block"><code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the filter field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFilter()">
+<h3>getFilter</h3>
+<div class="member-signature"><span class="return-type"><a href="Data.DeleteTabularFilter.html" title="class in viam.app.data.v1">Data.DeleteTabularFilter</a></span>&nbsp;<span class="element-name">getFilter</span>()</div>
+<div class="block"><code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The filter.</dd>
 </dl>
 </section>
 </li>

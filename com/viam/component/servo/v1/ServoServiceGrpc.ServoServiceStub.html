@@ -153,23 +153,30 @@ loadScripts(document, 'script');</script>
  GetPosition returns the current set angle (degrees) of the servo of the underlying robot.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isMoving(com.viam.component.servo.v1.Servo.IsMovingRequest,io.grpc.stub.StreamObserver)" class="member-name-link">isMoving</a><wbr>(<a href="Servo.IsMovingRequest.html" title="class in com.viam.component.servo.v1">Servo.IsMovingRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Servo.IsMovingResponse.html" title="class in com.viam.component.servo.v1">Servo.IsMovingResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus(com.viam.common.v1.Common.GetStatusRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getStatus</a><wbr>(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetStatus returns the status of the resource</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isMoving(com.viam.component.servo.v1.Servo.IsMovingRequest,io.grpc.stub.StreamObserver)" class="member-name-link">isMoving</a><wbr>(<a href="Servo.IsMovingRequest.html" title="class in com.viam.component.servo.v1">Servo.IsMovingRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Servo.IsMovingResponse.html" title="class in com.viam.component.servo.v1">Servo.IsMovingResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  IsMoving reports if a component is in motion</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#move(com.viam.component.servo.v1.Servo.MoveRequest,io.grpc.stub.StreamObserver)" class="member-name-link">move</a><wbr>(<a href="Servo.MoveRequest.html" title="class in com.viam.component.servo.v1">Servo.MoveRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#move(com.viam.component.servo.v1.Servo.MoveRequest,io.grpc.stub.StreamObserver)" class="member-name-link">move</a><wbr>(<a href="Servo.MoveRequest.html" title="class in com.viam.component.servo.v1">Servo.MoveRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Servo.MoveResponse.html" title="class in com.viam.component.servo.v1">Servo.MoveResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Move requests the servo of the underlying robot to move.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.servo.v1.Servo.StopRequest,io.grpc.stub.StreamObserver)" class="member-name-link">stop</a><wbr>(<a href="Servo.StopRequest.html" title="class in com.viam.component.servo.v1">Servo.StopRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.servo.v1.Servo.StopRequest,io.grpc.stub.StreamObserver)" class="member-name-link">stop</a><wbr>(<a href="Servo.StopRequest.html" title="class in com.viam.component.servo.v1">Servo.StopRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Servo.StopResponse.html" title="class in com.viam.component.servo.v1">Servo.StopResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Stop stops a robot's servo</div>
 </div>
@@ -255,6 +262,16 @@ loadScripts(document, 'script');</script>
  io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.DoCommandResponse.html" title="class in com.viam.common.v1">Common.DoCommandResponse</a>&gt;&nbsp;responseObserver)</span></div>
 <div class="block"><pre>
  DoCommand sends/receives arbitrary commands
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getStatus(com.viam.common.v1.Common.GetStatusRequest,io.grpc.stub.StreamObserver)">
+<h3>getStatus</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getStatus</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ GetStatus returns the status of the resource
  </pre></div>
 </section>
 </li>

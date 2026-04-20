@@ -123,29 +123,64 @@ implements <a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interfac
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllVersions(java.lang.Iterable)" class="member-name-link">addAllVersions</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;values)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllDetailedVersions(java.lang.Iterable)" class="member-name-link">addAllDetailedVersions</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="AppOuterClass.MLModelVersion.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion</a>&gt;&nbsp;values)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- A list of package versions for a ML model</div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVersions(java.lang.String)" class="member-name-link">addVersions</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- A list of package versions for a ML model</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#addAllVersions(java.lang.Iterable)" class="member-name-link">addAllVersions</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;values)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.</div>
+</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVersionsBytes(com.google.protobuf.ByteString)" class="member-name-link">addVersionsBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetailedVersions(int,viam.app.v1.AppOuterClass.MLModelVersion)" class="member-name-link">addDetailedVersions</a><wbr>(int&nbsp;index,
+ <a href="AppOuterClass.MLModelVersion.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- A list of package versions for a ML model</div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetailedVersions(int,viam.app.v1.AppOuterClass.MLModelVersion.Builder)" class="member-name-link">addDetailedVersions</a><wbr>(int&nbsp;index,
+ <a href="AppOuterClass.MLModelVersion.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetailedVersions(viam.app.v1.AppOuterClass.MLModelVersion)" class="member-name-link">addDetailedVersions</a><wbr>(<a href="AppOuterClass.MLModelVersion.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetailedVersions(viam.app.v1.AppOuterClass.MLModelVersion.Builder)" class="member-name-link">addDetailedVersions</a><wbr>(<a href="AppOuterClass.MLModelVersion.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#addVersions(java.lang.String)" class="member-name-link">addVersions</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.</div>
+</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#addVersionsBytes(com.google.protobuf.ByteString)" class="member-name-link">addVersionsBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.</div>
+</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearDetailedVersions()" class="member-name-link">clearDetailedVersions</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearModelFramework()" class="member-name-link">clearModelFramework</a>()</code></div>
@@ -157,55 +192,92 @@ implements <a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interfac
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.mltraining.v1.ModelType model_type = 2 [json_name = "modelType"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearVersions()" class="member-name-link">clearVersions</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- A list of package versions for a ML model</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#clearVersions()" class="member-name-link">clearVersions</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../mltraining/v1/MlTraining.ModelFramework.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelFramework</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelFramework()" class="member-name-link">getModelFramework</a>()</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelVersion.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDetailedVersions(int)" class="member-name-link">getDetailedVersions</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 3 [json_name = "modelFramework"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelFrameworkValue()" class="member-name-link">getModelFrameworkValue</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDetailedVersionsCount()" class="member-name-link">getDetailedVersionsCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="AppOuterClass.MLModelVersion.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDetailedVersionsList()" class="member-name-link">getDetailedVersionsList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../mltraining/v1/MlTraining.ModelFramework.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelFramework</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelFramework()" class="member-name-link">getModelFramework</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 3 [json_name = "modelFramework"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../mltraining/v1/MlTraining.ModelType.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelType()" class="member-name-link">getModelType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.mltraining.v1.ModelType model_type = 2 [json_name = "modelType"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelTypeValue()" class="member-name-link">getModelTypeValue</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.mltraining.v1.ModelType model_type = 2 [json_name = "modelType"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersions(int)" class="member-name-link">getVersions</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- A list of package versions for a ML model</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersionsBytes(int)" class="member-name-link">getVersionsBytes</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- A list of package versions for a ML model</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersionsCount()" class="member-name-link">getVersionsCount</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelFrameworkValue()" class="member-name-link">getModelFrameworkValue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- A list of package versions for a ML model</div>
+<div class="block"><code>.viam.app.mltraining.v1.ModelFramework model_framework = 3 [json_name = "modelFramework"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersionsList()" class="member-name-link">getVersionsList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../mltraining/v1/MlTraining.ModelType.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelType()" class="member-name-link">getModelType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- A list of package versions for a ML model</div>
+<div class="block"><code>.viam.app.mltraining.v1.ModelType model_type = 2 [json_name = "modelType"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModelTypeValue()" class="member-name-link">getModelTypeValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.mltraining.v1.ModelType model_type = 2 [json_name = "modelType"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getVersions(int)" class="member-name-link">getVersions</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.</div>
+</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getVersionsBytes(int)" class="member-name-link">getVersionsBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.</div>
+</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getVersionsCount()" class="member-name-link">getVersionsCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.</div>
+</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getVersionsList()" class="member-name-link">getVersionsList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.</div>
+</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeDetailedVersions(int)" class="member-name-link">removeDetailedVersions</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDetailedVersions(int,viam.app.v1.AppOuterClass.MLModelVersion)" class="member-name-link">setDetailedVersions</a><wbr>(int&nbsp;index,
+ <a href="AppOuterClass.MLModelVersion.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDetailedVersions(int,viam.app.v1.AppOuterClass.MLModelVersion.Builder)" class="member-name-link">setDetailedVersions</a><wbr>(int&nbsp;index,
+ <a href="AppOuterClass.MLModelVersion.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModelFramework(viam.app.mltraining.v1.MlTraining.ModelFramework)" class="member-name-link">setModelFramework</a><wbr>(<a href="../mltraining/v1/MlTraining.ModelFramework.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelFramework</a>&nbsp;value)</code></div>
@@ -227,12 +299,13 @@ implements <a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interfac
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.mltraining.v1.ModelType model_type = 2 [json_name = "modelType"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVersions(int,java.lang.String)" class="member-name-link">setVersions</a><wbr>(int&nbsp;index,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#setVersions(int,java.lang.String)" class="member-name-link">setVersions</a><wbr>(int&nbsp;index,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- A list of package versions for a ML model</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.</div>
+</div>
 </div>
 </div>
 </div>
@@ -263,12 +336,17 @@ implements <a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interfac
 <li>
 <section class="detail" id="getVersionsList()">
 <h3>getVersionsList</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getVersionsList</span>()</div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getVersionsList</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.
+     See app/v1/app.proto;l=1432</div>
+</div>
 <div class="block"><pre>
  A list of package versions for a ML model
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
+ <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="AppOuterClass.MLModelMetadataOrBuilder.html#getVersionsList()">getVersionsList</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.MLModelMetadataOrBuilder</a></code></dd>
@@ -280,12 +358,17 @@ implements <a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interfac
 <li>
 <section class="detail" id="getVersionsCount()">
 <h3>getVersionsCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getVersionsCount</span>()</div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getVersionsCount</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.
+     See app/v1/app.proto;l=1432</div>
+</div>
 <div class="block"><pre>
  A list of package versions for a ML model
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
+ <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="AppOuterClass.MLModelMetadataOrBuilder.html#getVersionsCount()">getVersionsCount</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.MLModelMetadataOrBuilder</a></code></dd>
@@ -297,12 +380,17 @@ implements <a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interfac
 <li>
 <section class="detail" id="getVersions(int)">
 <h3>getVersions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getVersions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getVersions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.
+     See app/v1/app.proto;l=1432</div>
+</div>
 <div class="block"><pre>
  A list of package versions for a ML model
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
+ <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="AppOuterClass.MLModelMetadataOrBuilder.html#getVersions(int)">getVersions</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.MLModelMetadataOrBuilder</a></code></dd>
@@ -316,12 +404,17 @@ implements <a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interfac
 <li>
 <section class="detail" id="getVersionsBytes(int)">
 <h3>getVersionsBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getVersionsBytes</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getVersionsBytes</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.
+     See app/v1/app.proto;l=1432</div>
+</div>
 <div class="block"><pre>
  A list of package versions for a ML model
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
+ <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="AppOuterClass.MLModelMetadataOrBuilder.html#getVersionsBytes(int)">getVersionsBytes</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.MLModelMetadataOrBuilder</a></code></dd>
@@ -335,13 +428,18 @@ implements <a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interfac
 <li>
 <section class="detail" id="setVersions(int,java.lang.String)">
 <h3>setVersions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">setVersions</span><wbr><span class="parameters">(int&nbsp;index,
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">setVersions</span><wbr><span class="parameters">(int&nbsp;index,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.
+     See app/v1/app.proto;l=1432</div>
+</div>
 <div class="block"><pre>
  A list of package versions for a ML model
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
+ <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>index</code> - The index to set the value at.</dd>
@@ -354,12 +452,17 @@ implements <a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interfac
 <li>
 <section class="detail" id="addVersions(java.lang.String)">
 <h3>addVersions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">addVersions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">addVersions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.
+     See app/v1/app.proto;l=1432</div>
+</div>
 <div class="block"><pre>
  A list of package versions for a ML model
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
+ <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - The versions to add.</dd>
@@ -371,12 +474,17 @@ implements <a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interfac
 <li>
 <section class="detail" id="addAllVersions(java.lang.Iterable)">
 <h3>addAllVersions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">addAllVersions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;values)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">addAllVersions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;values)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.
+     See app/v1/app.proto;l=1432</div>
+</div>
 <div class="block"><pre>
  A list of package versions for a ML model
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
+ <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>values</code> - The versions to add.</dd>
@@ -388,12 +496,17 @@ implements <a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interfac
 <li>
 <section class="detail" id="clearVersions()">
 <h3>clearVersions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">clearVersions</span>()</div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">clearVersions</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.
+     See app/v1/app.proto;l=1432</div>
+</div>
 <div class="block"><pre>
  A list of package versions for a ML model
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
+ <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
@@ -403,12 +516,17 @@ implements <a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interfac
 <li>
 <section class="detail" id="addVersionsBytes(com.google.protobuf.ByteString)">
 <h3>addVersionsBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">addVersionsBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">addVersionsBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.app.v1.MLModelMetadata.versions is deprecated.
+     See app/v1/app.proto;l=1432</div>
+</div>
 <div class="block"><pre>
  A list of package versions for a ML model
  </pre>
 
- <code>repeated string versions = 1 [json_name = "versions"];</code></div>
+ <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - The bytes of the versions to add.</dd>
@@ -545,6 +663,106 @@ implements <a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interfac
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDetailedVersionsList()">
+<h3>getDetailedVersionsList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AppOuterClass.MLModelVersion.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion</a>&gt;</span>&nbsp;<span class="element-name">getDetailedVersionsList</span>()</div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.MLModelMetadataOrBuilder.html#getDetailedVersionsList()">getDetailedVersionsList</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.MLModelMetadataOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDetailedVersionsCount()">
+<h3>getDetailedVersionsCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getDetailedVersionsCount</span>()</div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.MLModelMetadataOrBuilder.html#getDetailedVersionsCount()">getDetailedVersionsCount</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.MLModelMetadataOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDetailedVersions(int)">
+<h3>getDetailedVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelVersion.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion</a></span>&nbsp;<span class="element-name">getDetailedVersions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.MLModelMetadataOrBuilder.html#getDetailedVersions(int)">getDetailedVersions</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.MLModelMetadataOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.MLModelMetadataOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setDetailedVersions(int,viam.app.v1.AppOuterClass.MLModelVersion)">
+<h3>setDetailedVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">setDetailedVersions</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="AppOuterClass.MLModelVersion.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setDetailedVersions(int,viam.app.v1.AppOuterClass.MLModelVersion.Builder)">
+<h3>setDetailedVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">setDetailedVersions</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="AppOuterClass.MLModelVersion.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addDetailedVersions(viam.app.v1.AppOuterClass.MLModelVersion)">
+<h3>addDetailedVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">addDetailedVersions</span><wbr><span class="parameters">(<a href="AppOuterClass.MLModelVersion.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addDetailedVersions(int,viam.app.v1.AppOuterClass.MLModelVersion)">
+<h3>addDetailedVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">addDetailedVersions</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="AppOuterClass.MLModelVersion.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addDetailedVersions(viam.app.v1.AppOuterClass.MLModelVersion.Builder)">
+<h3>addDetailedVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">addDetailedVersions</span><wbr><span class="parameters">(<a href="AppOuterClass.MLModelVersion.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addDetailedVersions(int,viam.app.v1.AppOuterClass.MLModelVersion.Builder)">
+<h3>addDetailedVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">addDetailedVersions</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="AppOuterClass.MLModelVersion.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addAllDetailedVersions(java.lang.Iterable)">
+<h3>addAllDetailedVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">addAllDetailedVersions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="AppOuterClass.MLModelVersion.html" title="class in viam.app.v1">AppOuterClass.MLModelVersion</a>&gt;&nbsp;values)</span></div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearDetailedVersions()">
+<h3>clearDetailedVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">clearDetailedVersions</span>()</div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="removeDetailedVersions(int)">
+<h3>removeDetailedVersions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.MLModelMetadata.Builder.html" title="class in viam.app.v1">AppOuterClass.MLModelMetadata.Builder</a></span>&nbsp;<span class="element-name">removeDetailedVersions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code></div>
 </section>
 </li>
 </ul>

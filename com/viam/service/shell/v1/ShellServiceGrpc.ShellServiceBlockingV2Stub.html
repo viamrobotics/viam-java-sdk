@@ -150,9 +150,15 @@ loadScripts(document, 'script');</script>
 <div class="block">
  DoCommand sends/receives arbitrary commands</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>io.grpc.stub.BlockingClientCall<wbr>&lt;<a href="Shell.ShellRequest.html" title="class in com.viam.service.shell.v1">Shell.ShellRequest</a>,<wbr><a href="Shell.ShellResponse.html" title="class in com.viam.service.shell.v1">Shell.ShellResponse</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shell()" class="member-name-link">shell</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus(com.viam.common.v1.Common.GetStatusRequest)" class="member-name-link">getStatus</a><wbr>(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetStatus returns the status of the resource</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>io.grpc.stub.BlockingClientCall<wbr>&lt;<a href="Shell.ShellRequest.html" title="class in com.viam.service.shell.v1">Shell.ShellRequest</a>,<wbr><a href="Shell.ShellResponse.html" title="class in com.viam.service.shell.v1">Shell.ShellResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shell()" class="member-name-link">shell</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Shell starts a shell with an input and output pipe.</div>
 </div>
@@ -240,6 +246,20 @@ loadScripts(document, 'script');</script>
                                    throws <span class="exceptions">io.grpc.StatusException</span></div>
 <div class="block"><pre>
  DoCommand sends/receives arbitrary commands
+ </pre></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code>io.grpc.StatusException</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getStatus(com.viam.common.v1.Common.GetStatusRequest)">
+<h3>getStatus</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a></span>&nbsp;<span class="element-name">getStatus</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request)</span>
+                                   throws <span class="exceptions">io.grpc.StatusException</span></div>
+<div class="block"><pre>
+ GetStatus returns the status of the resource
  </pre></div>
 <dl class="notes">
 <dt>Throws:</dt>

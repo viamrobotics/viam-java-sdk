@@ -132,15 +132,21 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build(io.grpc.Channel,io.grpc.CallOptions)" class="member-name-link">build</a><wbr>(io.grpc.Channel&nbsp;channel,
  io.grpc.CallOptions&nbsp;callOptions)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture<wbr>&lt;<a href="Mlmodel.InferResponse.html" title="class in com.viam.service.mlmodel.v1">Mlmodel.InferResponse</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#infer(com.viam.service.mlmodel.v1.Mlmodel.InferRequest)" class="member-name-link">infer</a><wbr>(<a href="Mlmodel.InferRequest.html" title="class in com.viam.service.mlmodel.v1">Mlmodel.InferRequest</a>&nbsp;request)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture<wbr>&lt;<a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus(com.viam.common.v1.Common.GetStatusRequest)" class="member-name-link">getStatus</a><wbr>(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetStatus returns the status of the resource</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture<wbr>&lt;<a href="Mlmodel.InferResponse.html" title="class in com.viam.service.mlmodel.v1">Mlmodel.InferResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#infer(com.viam.service.mlmodel.v1.Mlmodel.InferRequest)" class="member-name-link">infer</a><wbr>(<a href="Mlmodel.InferRequest.html" title="class in com.viam.service.mlmodel.v1">Mlmodel.InferRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Infer takes an already ordered input tensor as a map, makes an inference on the model, and returns an output data map.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture<wbr>&lt;<a href="Mlmodel.MetadataResponse.html" title="class in com.viam.service.mlmodel.v1">Mlmodel.MetadataResponse</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metadata(com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest)" class="member-name-link">metadata</a><wbr>(<a href="Mlmodel.MetadataRequest.html" title="class in com.viam.service.mlmodel.v1">Mlmodel.MetadataRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.common.util.concurrent.ListenableFuture<wbr>&lt;<a href="Mlmodel.MetadataResponse.html" title="class in com.viam.service.mlmodel.v1">Mlmodel.MetadataResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metadata(com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest)" class="member-name-link">metadata</a><wbr>(<a href="Mlmodel.MetadataRequest.html" title="class in com.viam.service.mlmodel.v1">Mlmodel.MetadataRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Metadata returns the metadata associated with the ML model.</div>
 </div>
@@ -193,6 +199,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.common.util.concurrent.ListenableFuture&lt;<a href="Mlmodel.MetadataResponse.html" title="class in com.viam.service.mlmodel.v1">Mlmodel.MetadataResponse</a>&gt;</span>&nbsp;<span class="element-name">metadata</span><wbr><span class="parameters">(<a href="Mlmodel.MetadataRequest.html" title="class in com.viam.service.mlmodel.v1">Mlmodel.MetadataRequest</a>&nbsp;request)</span></div>
 <div class="block"><pre>
  Metadata returns the metadata associated with the ML model.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getStatus(com.viam.common.v1.Common.GetStatusRequest)">
+<h3>getStatus</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.common.util.concurrent.ListenableFuture&lt;<a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a>&gt;</span>&nbsp;<span class="element-name">getStatus</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ GetStatus returns the status of the resource
  </pre></div>
 </section>
 </li>

@@ -115,20 +115,30 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Common.Pose.html" title="class in com.viam.common.v1">Common.Pose</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPose()" class="member-name-link">getPose</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Common.PoseCloud.html" title="class in com.viam.common.v1">Common.PoseCloud</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getGoalCloud()" class="member-name-link">getGoalCloud</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>optional .viam.common.v1.PoseCloud goal_cloud = 3 [json_name = "goalCloud"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Common.Pose.html" title="class in com.viam.common.v1">Common.Pose</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPose()" class="member-name-link">getPose</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReferenceFrame()" class="member-name-link">getReferenceFrame</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReferenceFrame()" class="member-name-link">getReferenceFrame</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>string reference_frame = 1 [json_name = "referenceFrame"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReferenceFrameBytes()" class="member-name-link">getReferenceFrameBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string reference_frame = 1 [json_name = "referenceFrame"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReferenceFrameBytes()" class="member-name-link">getReferenceFrameBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasGoalCloud()" class="member-name-link">hasGoalCloud</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>string reference_frame = 1 [json_name = "referenceFrame"];</code></div>
+<div class="block"><code>optional .viam.common.v1.PoseCloud goal_cloud = 3 [json_name = "goalCloud"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPose()" class="member-name-link">hasPose</a>()</code></div>
@@ -193,6 +203,28 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The pose.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasGoalCloud()">
+<h3>hasGoalCloud</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasGoalCloud</span>()</div>
+<div class="block"><code>optional .viam.common.v1.PoseCloud goal_cloud = 3 [json_name = "goalCloud"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the goalCloud field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getGoalCloud()">
+<h3>getGoalCloud</h3>
+<div class="member-signature"><span class="return-type"><a href="Common.PoseCloud.html" title="class in com.viam.common.v1">Common.PoseCloud</a></span>&nbsp;<span class="element-name">getGoalCloud</span>()</div>
+<div class="block"><code>optional .viam.common.v1.PoseCloud goal_cloud = 3 [json_name = "goalCloud"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The goalCloud.</dd>
 </dl>
 </section>
 </li>

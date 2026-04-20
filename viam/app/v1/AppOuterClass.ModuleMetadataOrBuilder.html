@@ -157,6 +157,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block">
  The path to a setup script that is run before a newly downloaded module starts.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AppOuterClass.ModuleLanguage.html" title="enum class in viam.app.v1">AppOuterClass.ModuleLanguage</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLanguage()" class="member-name-link">getLanguage</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Specifies the language that the module is written in.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLanguageValue()" class="member-name-link">getLanguageValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Specifies the language that the module is written in.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMarkdownDescription()" class="member-name-link">getMarkdownDescription</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -187,6 +199,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block">
  A list of models that are available in the module</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AppOuterClass.ModuleSourceType.html" title="enum class in viam.app.v1">AppOuterClass.ModuleSourceType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSourceType()" class="member-name-link">getSourceType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Determines the type of module, either a registry module or an inline module.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSourceTypeValue()" class="member-name-link">getSourceTypeValue</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Determines the type of module, either a registry module or an inline module.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="AppOuterClass.ModuleVersion.html" title="class in viam.app.v1">AppOuterClass.ModuleVersion</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersions(int)" class="member-name-link">getVersions</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -215,10 +239,22 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The path to a setup script that is run before a newly downloaded module starts.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasMarkdownDescription()" class="member-name-link">hasMarkdownDescription</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLanguage()" class="member-name-link">hasLanguage</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
+ Specifies the language that the module is written in.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasMarkdownDescription()" class="member-name-link">hasMarkdownDescription</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
  markdown content for the entire module</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasSourceType()" class="member-name-link">hasSourceType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Determines the type of module, either a registry module or an inline module.</div>
 </div>
 </div>
 </div>
@@ -457,6 +493,96 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  </pre>
 
  <code>repeated .viam.app.v1.App apps = 6 [json_name = "apps"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasSourceType()">
+<h3>hasSourceType</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasSourceType</span>()</div>
+<div class="block"><pre>
+ Determines the type of module, either a registry module or an inline module.
+ </pre>
+
+ <code>optional .viam.app.v1.ModuleSourceType source_type = 7 [json_name = "sourceType"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the sourceType field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSourceTypeValue()">
+<h3>getSourceTypeValue</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getSourceTypeValue</span>()</div>
+<div class="block"><pre>
+ Determines the type of module, either a registry module or an inline module.
+ </pre>
+
+ <code>optional .viam.app.v1.ModuleSourceType source_type = 7 [json_name = "sourceType"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire for sourceType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSourceType()">
+<h3>getSourceType</h3>
+<div class="member-signature"><span class="return-type"><a href="AppOuterClass.ModuleSourceType.html" title="enum class in viam.app.v1">AppOuterClass.ModuleSourceType</a></span>&nbsp;<span class="element-name">getSourceType</span>()</div>
+<div class="block"><pre>
+ Determines the type of module, either a registry module or an inline module.
+ </pre>
+
+ <code>optional .viam.app.v1.ModuleSourceType source_type = 7 [json_name = "sourceType"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The sourceType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasLanguage()">
+<h3>hasLanguage</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLanguage</span>()</div>
+<div class="block"><pre>
+ Specifies the language that the module is written in.
+ </pre>
+
+ <code>optional .viam.app.v1.ModuleLanguage language = 8 [json_name = "language"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the language field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLanguageValue()">
+<h3>getLanguageValue</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getLanguageValue</span>()</div>
+<div class="block"><pre>
+ Specifies the language that the module is written in.
+ </pre>
+
+ <code>optional .viam.app.v1.ModuleLanguage language = 8 [json_name = "language"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire for language.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLanguage()">
+<h3>getLanguage</h3>
+<div class="member-signature"><span class="return-type"><a href="AppOuterClass.ModuleLanguage.html" title="enum class in viam.app.v1">AppOuterClass.ModuleLanguage</a></span>&nbsp;<span class="element-name">getLanguage</span>()</div>
+<div class="block"><pre>
+ Specifies the language that the module is written in.
+ </pre>
+
+ <code>optional .viam.app.v1.ModuleLanguage language = 8 [json_name = "language"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The language.</dd>
+</dl>
 </section>
 </li>
 </ul>

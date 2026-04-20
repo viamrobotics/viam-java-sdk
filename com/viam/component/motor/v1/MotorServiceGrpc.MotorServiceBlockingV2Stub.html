@@ -156,59 +156,65 @@ loadScripts(document, 'script');</script>
 <div class="block">
  GetProperties returns a message of booleans indicating which optional features the robot's motor supports</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.GoForResponse.html" title="class in com.viam.component.motor.v1">Motor.GoForResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#goFor(com.viam.component.motor.v1.Motor.GoForRequest)" class="member-name-link">goFor</a><wbr>(<a href="Motor.GoForRequest.html" title="class in com.viam.component.motor.v1">Motor.GoForRequest</a>&nbsp;request)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus(com.viam.common.v1.Common.GetStatusRequest)" class="member-name-link">getStatus</a><wbr>(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetStatus returns the status of the resource</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.GoForResponse.html" title="class in com.viam.component.motor.v1">Motor.GoForResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#goFor(com.viam.component.motor.v1.Motor.GoForRequest)" class="member-name-link">goFor</a><wbr>(<a href="Motor.GoForRequest.html" title="class in com.viam.component.motor.v1">Motor.GoForRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  GoFor instructs the motor to turn at a specified speed, which is expressed in RPM,
  for a specified number of rotations relative to its starting position
  This method will return an error if position reporting is not supported
  If revolutions != 0, this will block until the number of revolutions has been completed or another operation comes in.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.GoToResponse.html" title="class in com.viam.component.motor.v1">Motor.GoToResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#goTo(com.viam.component.motor.v1.Motor.GoToRequest)" class="member-name-link">goTo</a><wbr>(<a href="Motor.GoToRequest.html" title="class in com.viam.component.motor.v1">Motor.GoToRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.GoToResponse.html" title="class in com.viam.component.motor.v1">Motor.GoToResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#goTo(com.viam.component.motor.v1.Motor.GoToRequest)" class="member-name-link">goTo</a><wbr>(<a href="Motor.GoToRequest.html" title="class in com.viam.component.motor.v1">Motor.GoToRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  GoTo requests the robot's motor to move to a specific position that
  is relative to its home position at a specified speed which is expressed in RPM
  This method will return an error if position reporting is not supported</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.IsMovingResponse.html" title="class in com.viam.component.motor.v1">Motor.IsMovingResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isMoving(com.viam.component.motor.v1.Motor.IsMovingRequest)" class="member-name-link">isMoving</a><wbr>(<a href="Motor.IsMovingRequest.html" title="class in com.viam.component.motor.v1">Motor.IsMovingRequest</a>&nbsp;request)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.IsMovingResponse.html" title="class in com.viam.component.motor.v1">Motor.IsMovingResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isMoving(com.viam.component.motor.v1.Motor.IsMovingRequest)" class="member-name-link">isMoving</a><wbr>(<a href="Motor.IsMovingRequest.html" title="class in com.viam.component.motor.v1">Motor.IsMovingRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  IsMoving reports if a component is in motion</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.IsPoweredResponse.html" title="class in com.viam.component.motor.v1">Motor.IsPoweredResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isPowered(com.viam.component.motor.v1.Motor.IsPoweredRequest)" class="member-name-link">isPowered</a><wbr>(<a href="Motor.IsPoweredRequest.html" title="class in com.viam.component.motor.v1">Motor.IsPoweredRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.IsPoweredResponse.html" title="class in com.viam.component.motor.v1">Motor.IsPoweredResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isPowered(com.viam.component.motor.v1.Motor.IsPoweredRequest)" class="member-name-link">isPowered</a><wbr>(<a href="Motor.IsPoweredRequest.html" title="class in com.viam.component.motor.v1">Motor.IsPoweredRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  IsPowered returns true if the robot's motor is on</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.ResetZeroPositionResponse.html" title="class in com.viam.component.motor.v1">Motor.ResetZeroPositionResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetZeroPosition(com.viam.component.motor.v1.Motor.ResetZeroPositionRequest)" class="member-name-link">resetZeroPosition</a><wbr>(<a href="Motor.ResetZeroPositionRequest.html" title="class in com.viam.component.motor.v1">Motor.ResetZeroPositionRequest</a>&nbsp;request)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.ResetZeroPositionResponse.html" title="class in com.viam.component.motor.v1">Motor.ResetZeroPositionResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resetZeroPosition(com.viam.component.motor.v1.Motor.ResetZeroPositionRequest)" class="member-name-link">resetZeroPosition</a><wbr>(<a href="Motor.ResetZeroPositionRequest.html" title="class in com.viam.component.motor.v1">Motor.ResetZeroPositionRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  ResetZeroPosition sets the current position of the motor as the new zero position
  This method will return an error if position reporting is not supported</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.SetPowerResponse.html" title="class in com.viam.component.motor.v1">Motor.SetPowerResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPower(com.viam.component.motor.v1.Motor.SetPowerRequest)" class="member-name-link">setPower</a><wbr>(<a href="Motor.SetPowerRequest.html" title="class in com.viam.component.motor.v1">Motor.SetPowerRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.SetPowerResponse.html" title="class in com.viam.component.motor.v1">Motor.SetPowerResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPower(com.viam.component.motor.v1.Motor.SetPowerRequest)" class="member-name-link">setPower</a><wbr>(<a href="Motor.SetPowerRequest.html" title="class in com.viam.component.motor.v1">Motor.SetPowerRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  SetPower sets the percentage of the motor's total power that should be employed
  expressed a value between -1 and 1 where negative values indicate a backwards
  direction and positive values a forward direction</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.SetRPMResponse.html" title="class in com.viam.component.motor.v1">Motor.SetRPMResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRPM(com.viam.component.motor.v1.Motor.SetRPMRequest)" class="member-name-link">setRPM</a><wbr>(<a href="Motor.SetRPMRequest.html" title="class in com.viam.component.motor.v1">Motor.SetRPMRequest</a>&nbsp;request)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.SetRPMResponse.html" title="class in com.viam.component.motor.v1">Motor.SetRPMResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRPM(com.viam.component.motor.v1.Motor.SetRPMRequest)" class="member-name-link">setRPM</a><wbr>(<a href="Motor.SetRPMRequest.html" title="class in com.viam.component.motor.v1">Motor.SetRPMRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  SetRPM instructs the motor to move at the specified RPM indefinitely.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.StopResponse.html" title="class in com.viam.component.motor.v1">Motor.StopResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.motor.v1.Motor.StopRequest)" class="member-name-link">stop</a><wbr>(<a href="Motor.StopRequest.html" title="class in com.viam.component.motor.v1">Motor.StopRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motor.StopResponse.html" title="class in com.viam.component.motor.v1">Motor.StopResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.motor.v1.Motor.StopRequest)" class="member-name-link">stop</a><wbr>(<a href="Motor.StopRequest.html" title="class in com.viam.component.motor.v1">Motor.StopRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Stop turns the robot's motor off</div>
 </div>
@@ -403,6 +409,20 @@ loadScripts(document, 'script');</script>
                                    throws <span class="exceptions">io.grpc.StatusException</span></div>
 <div class="block"><pre>
  DoCommand sends/receives arbitrary commands
+ </pre></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code>io.grpc.StatusException</code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getStatus(com.viam.common.v1.Common.GetStatusRequest)">
+<h3>getStatus</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a></span>&nbsp;<span class="element-name">getStatus</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request)</span>
+                                   throws <span class="exceptions">io.grpc.StatusException</span></div>
+<div class="block"><pre>
+ GetStatus returns the status of the resource
  </pre></div>
 <dl class="notes">
 <dt>Throws:</dt>

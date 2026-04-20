@@ -179,9 +179,19 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <div class="block"><code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearFileExtension()" class="member-name-link">clearFileExtension</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearFileCreateTime()" class="member-name-link">clearFileCreateTime</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearFileExtension()" class="member-name-link">clearFileExtension</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string file_extension = 9 [json_name = "fileExtension"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearFileModifyTime()" class="member-name-link">clearFileModifyTime</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearFileName()" class="member-name-link">clearFileName</a>()</code></div>
@@ -197,64 +207,74 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMethodParameters()" class="member-name-link">clearMethodParameters</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPartId()" class="member-name-link">clearPartId</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMimeType()" class="member-name-link">clearMimeType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearTags()" class="member-name-link">clearTags</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPartId()" class="member-name-link">clearPartId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated string tags = 10 [json_name = "tags"];</code></div>
+<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearType()" class="member-name-link">clearType</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearTags()" class="member-name-link">clearTags</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated string tags = 10 [json_name = "tags"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearType()" class="member-name-link">clearType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#containsMethodParameters(java.lang.String)" class="member-name-link">containsMethodParameters</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#containsMethodParameters(java.lang.String)" class="member-name-link">containsMethodParameters</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentName()" class="member-name-link">getComponentName</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string component_name = 3 [json_name = "componentName"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentNameBytes()" class="member-name-link">getComponentNameBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentName()" class="member-name-link">getComponentName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string component_name = 3 [json_name = "componentName"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentType()" class="member-name-link">getComponentType</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentNameBytes()" class="member-name-link">getComponentNameBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string component_type = 2 [json_name = "componentType"];</code></div>
+<div class="block"><code>string component_name = 3 [json_name = "componentName"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentTypeBytes()" class="member-name-link">getComponentTypeBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentType()" class="member-name-link">getComponentType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string component_type = 2 [json_name = "componentType"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatasetIds(int)" class="member-name-link">getDatasetIds</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getComponentTypeBytes()" class="member-name-link">getComponentTypeBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code></div>
+<div class="block"><code>string component_type = 2 [json_name = "componentType"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatasetIdsBytes(int)" class="member-name-link">getDatasetIdsBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatasetIds(int)" class="member-name-link">getDatasetIds</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatasetIdsCount()" class="member-name-link">getDatasetIdsCount</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatasetIdsBytes(int)" class="member-name-link">getDatasetIdsBytes</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatasetIdsList()" class="member-name-link">getDatasetIdsList</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatasetIdsCount()" class="member-name-link">getDatasetIdsCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatasetIdsList()" class="member-name-link">getDatasetIdsList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileCreateTime()" class="member-name-link">getFileCreateTime</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileExtension()" class="member-name-link">getFileExtension</a>()</code></div>
@@ -266,188 +286,253 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string file_extension = 9 [json_name = "fileExtension"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileName()" class="member-name-link">getFileName</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileModifyTime()" class="member-name-link">getFileModifyTime</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileNameBytes()" class="member-name-link">getFileNameBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileName()" class="member-name-link">getFileName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodName()" class="member-name-link">getMethodName</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileNameBytes()" class="member-name-link">getFileNameBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string method_name = 5 [json_name = "methodName"];</code></div>
+<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodNameBytes()" class="member-name-link">getMethodNameBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodName()" class="member-name-link">getMethodName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string method_name = 5 [json_name = "methodName"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>com.google.protobuf.Any&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getMethodParameters()" class="member-name-link">getMethodParameters</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodNameBytes()" class="member-name-link">getMethodNameBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string method_name = 5 [json_name = "methodName"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>com.google.protobuf.Any&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getMethodParameters()" class="member-name-link">getMethodParameters</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodParametersCount()" class="member-name-link">getMethodParametersCount</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>com.google.protobuf.Any&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodParametersMap()" class="member-name-link">getMethodParametersMap</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodParametersCount()" class="member-name-link">getMethodParametersCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Any</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodParametersOrDefault(java.lang.String,com.google.protobuf.Any)" class="member-name-link">getMethodParametersOrDefault</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- com.google.protobuf.Any&nbsp;defaultValue)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>com.google.protobuf.Any&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodParametersMap()" class="member-name-link">getMethodParametersMap</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Any</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodParametersOrThrow(java.lang.String)" class="member-name-link">getMethodParametersOrThrow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodParametersOrDefault(java.lang.String,com.google.protobuf.Any)" class="member-name-link">getMethodParametersOrDefault</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+ com.google.protobuf.Any&nbsp;defaultValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPartId()" class="member-name-link">getPartId</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Any</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMethodParametersOrThrow(java.lang.String)" class="member-name-link">getMethodParametersOrThrow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
+<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPartIdBytes()" class="member-name-link">getPartIdBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeType()" class="member-name-link">getMimeType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeTypeBytes()" class="member-name-link">getMimeTypeBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPartId()" class="member-name-link">getPartId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTags(int)" class="member-name-link">getTags</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPartIdBytes()" class="member-name-link">getPartIdBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated string tags = 10 [json_name = "tags"];</code></div>
+<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagsBytes(int)" class="member-name-link">getTagsBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTags(int)" class="member-name-link">getTags</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string tags = 10 [json_name = "tags"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagsCount()" class="member-name-link">getTagsCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagsBytes(int)" class="member-name-link">getTagsBytes</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string tags = 10 [json_name = "tags"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagsList()" class="member-name-link">getTagsList</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated string tags = 10 [json_name = "tags"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.DataType.html" title="enum class in viam.app.datasync.v1">DataSync.DataType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypeValue()" class="member-name-link">getTypeValue</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagsCount()" class="member-name-link">getTagsCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code></div>
+<div class="block"><code>repeated string tags = 10 [json_name = "tags"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putAllMethodParameters(java.util.Map)" class="member-name-link">putAllMethodParameters</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>com.google.protobuf.Any&gt;&nbsp;values)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putMethodParameters(java.lang.String,com.google.protobuf.Any)" class="member-name-link">putMethodParameters</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- com.google.protobuf.Any&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeMethodParameters(java.lang.String)" class="member-name-link">removeMethodParameters</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setComponentName(java.lang.String)" class="member-name-link">setComponentName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string component_name = 3 [json_name = "componentName"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setComponentNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setComponentNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string component_name = 3 [json_name = "componentName"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setComponentType(java.lang.String)" class="member-name-link">setComponentType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string component_type = 2 [json_name = "componentType"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setComponentTypeBytes(com.google.protobuf.ByteString)" class="member-name-link">setComponentTypeBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string component_type = 2 [json_name = "componentType"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDatasetIds(int,java.lang.String)" class="member-name-link">setDatasetIds</a><wbr>(int&nbsp;index,
- <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFileExtension(java.lang.String)" class="member-name-link">setFileExtension</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string file_extension = 9 [json_name = "fileExtension"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFileExtensionBytes(com.google.protobuf.ByteString)" class="member-name-link">setFileExtensionBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string file_extension = 9 [json_name = "fileExtension"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFileName(java.lang.String)" class="member-name-link">setFileName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFileNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setFileNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMethodName(java.lang.String)" class="member-name-link">setMethodName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string method_name = 5 [json_name = "methodName"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMethodNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setMethodNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string method_name = 5 [json_name = "methodName"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPartId(java.lang.String)" class="member-name-link">setPartId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPartIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setPartIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTags(int,java.lang.String)" class="member-name-link">setTags</a><wbr>(int&nbsp;index,
- <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagsList()" class="member-name-link">getTagsList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string tags = 10 [json_name = "tags"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setType(viam.app.datasync.v1.DataSync.DataType)" class="member-name-link">setType</a><wbr>(<a href="DataSync.DataType.html" title="enum class in viam.app.datasync.v1">DataSync.DataType</a>&nbsp;value)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.DataType.html" title="enum class in viam.app.datasync.v1">DataSync.DataType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTypeValue(int)" class="member-name-link">setTypeValue</a><wbr>(int&nbsp;value)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypeValue()" class="member-name-link">getTypeValue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFileCreateTime()" class="member-name-link">hasFileCreateTime</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFileModifyTime()" class="member-name-link">hasFileModifyTime</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFileCreateTime(com.google.protobuf.Timestamp)" class="member-name-link">mergeFileCreateTime</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFileModifyTime(com.google.protobuf.Timestamp)" class="member-name-link">mergeFileModifyTime</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putAllMethodParameters(java.util.Map)" class="member-name-link">putAllMethodParameters</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>com.google.protobuf.Any&gt;&nbsp;values)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#putMethodParameters(java.lang.String,com.google.protobuf.Any)" class="member-name-link">putMethodParameters</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+ com.google.protobuf.Any&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeMethodParameters(java.lang.String)" class="member-name-link">removeMethodParameters</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setComponentName(java.lang.String)" class="member-name-link">setComponentName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string component_name = 3 [json_name = "componentName"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setComponentNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setComponentNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string component_name = 3 [json_name = "componentName"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setComponentType(java.lang.String)" class="member-name-link">setComponentType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string component_type = 2 [json_name = "componentType"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setComponentTypeBytes(com.google.protobuf.ByteString)" class="member-name-link">setComponentTypeBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string component_type = 2 [json_name = "componentType"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDatasetIds(int,java.lang.String)" class="member-name-link">setDatasetIds</a><wbr>(int&nbsp;index,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated string dataset_ids = 12 [json_name = "datasetIds"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFileCreateTime(com.google.protobuf.Timestamp)" class="member-name-link">setFileCreateTime</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFileCreateTime(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setFileCreateTime</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFileExtension(java.lang.String)" class="member-name-link">setFileExtension</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string file_extension = 9 [json_name = "fileExtension"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFileExtensionBytes(com.google.protobuf.ByteString)" class="member-name-link">setFileExtensionBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string file_extension = 9 [json_name = "fileExtension"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFileModifyTime(com.google.protobuf.Timestamp)" class="member-name-link">setFileModifyTime</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFileModifyTime(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setFileModifyTime</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFileName(java.lang.String)" class="member-name-link">setFileName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFileNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setFileNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMethodName(java.lang.String)" class="member-name-link">setMethodName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string method_name = 5 [json_name = "methodName"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMethodNameBytes(com.google.protobuf.ByteString)" class="member-name-link">setMethodNameBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string method_name = 5 [json_name = "methodName"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMimeType(java.lang.String)" class="member-name-link">setMimeType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMimeTypeBytes(com.google.protobuf.ByteString)" class="member-name-link">setMimeTypeBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPartId(java.lang.String)" class="member-name-link">setPartId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPartIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setPartIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTags(int,java.lang.String)" class="member-name-link">setTags</a><wbr>(int&nbsp;index,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated string tags = 10 [json_name = "tags"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setType(viam.app.datasync.v1.DataSync.DataType)" class="member-name-link">setType</a><wbr>(<a href="DataSync.DataType.html" title="enum class in viam.app.datasync.v1">DataSync.DataType</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTypeValue(int)" class="member-name-link">setTypeValue</a><wbr>(int&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code></div>
 </div>
 </div>
@@ -794,69 +879,6 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 </section>
 </li>
 <li>
-<section class="detail" id="getFileName()">
-<h3>getFileName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFileName</span>()</div>
-<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getFileName()">getFileName</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
-<dt>Returns:</dt>
-<dd>The fileName.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getFileNameBytes()">
-<h3>getFileNameBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getFileNameBytes</span>()</div>
-<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getFileNameBytes()">getFileNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
-<dt>Returns:</dt>
-<dd>The bytes for fileName.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setFileName(java.lang.String)">
-<h3>setFileName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">setFileName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
-<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>value</code> - The fileName to set.</dd>
-<dt>Returns:</dt>
-<dd>This builder for chaining.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="clearFileName()">
-<h3>clearFileName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">clearFileName</span>()</div>
-<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>This builder for chaining.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setFileNameBytes(com.google.protobuf.ByteString)">
-<h3>setFileNameBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">setFileNameBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
-<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>value</code> - The bytes for fileName to set.</dd>
-<dt>Returns:</dt>
-<dd>This builder for chaining.</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getMethodParametersCount()">
 <h3>getMethodParametersCount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMethodParametersCount</span>()</div>
@@ -955,6 +977,69 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 </section>
 </li>
 <li>
+<section class="detail" id="getFileName()">
+<h3>getFileName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFileName</span>()</div>
+<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getFileName()">getFileName</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The fileName.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFileNameBytes()">
+<h3>getFileNameBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getFileNameBytes</span>()</div>
+<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getFileNameBytes()">getFileNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for fileName.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setFileName(java.lang.String)">
+<h3>setFileName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">setFileName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The fileName to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearFileName()">
+<h3>clearFileName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">clearFileName</span>()</div>
+<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setFileNameBytes(com.google.protobuf.ByteString)">
+<h3>setFileNameBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">setFileNameBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The bytes for fileName to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getFileExtension()">
 <h3>getFileExtension</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFileExtension</span>()</div>
@@ -1015,6 +1100,114 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFileCreateTime()">
+<h3>hasFileCreateTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFileCreateTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#hasFileCreateTime()">hasFileCreateTime</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the fileCreateTime field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFileCreateTime()">
+<h3>getFileCreateTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Timestamp</span>&nbsp;<span class="element-name">getFileCreateTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getFileCreateTime()">getFileCreateTime</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The fileCreateTime.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setFileCreateTime(com.google.protobuf.Timestamp)">
+<h3>setFileCreateTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">setFileCreateTime</span><wbr><span class="parameters">(com.google.protobuf.Timestamp&nbsp;value)</span></div>
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setFileCreateTime(com.google.protobuf.Timestamp.Builder)">
+<h3>setFileCreateTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">setFileCreateTime</span><wbr><span class="parameters">(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</span></div>
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeFileCreateTime(com.google.protobuf.Timestamp)">
+<h3>mergeFileCreateTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">mergeFileCreateTime</span><wbr><span class="parameters">(com.google.protobuf.Timestamp&nbsp;value)</span></div>
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearFileCreateTime()">
+<h3>clearFileCreateTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">clearFileCreateTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFileModifyTime()">
+<h3>hasFileModifyTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFileModifyTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#hasFileModifyTime()">hasFileModifyTime</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the fileModifyTime field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFileModifyTime()">
+<h3>getFileModifyTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Timestamp</span>&nbsp;<span class="element-name">getFileModifyTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getFileModifyTime()">getFileModifyTime</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The fileModifyTime.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setFileModifyTime(com.google.protobuf.Timestamp)">
+<h3>setFileModifyTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">setFileModifyTime</span><wbr><span class="parameters">(com.google.protobuf.Timestamp&nbsp;value)</span></div>
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setFileModifyTime(com.google.protobuf.Timestamp.Builder)">
+<h3>setFileModifyTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">setFileModifyTime</span><wbr><span class="parameters">(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</span></div>
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeFileModifyTime(com.google.protobuf.Timestamp)">
+<h3>mergeFileModifyTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">mergeFileModifyTime</span><wbr><span class="parameters">(com.google.protobuf.Timestamp&nbsp;value)</span></div>
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearFileModifyTime()">
+<h3>clearFileModifyTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">clearFileModifyTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
 </section>
 </li>
 <li>
@@ -1254,6 +1447,69 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - The bytes of the datasetIds to add.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMimeType()">
+<h3>getMimeType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getMimeType</span>()</div>
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getMimeType()">getMimeType</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The mimeType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMimeTypeBytes()">
+<h3>getMimeTypeBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getMimeTypeBytes</span>()</div>
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getMimeTypeBytes()">getMimeTypeBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for mimeType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMimeType(java.lang.String)">
+<h3>setMimeType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">setMimeType</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The mimeType to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearMimeType()">
+<h3>clearMimeType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">clearMimeType</span>()</div>
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMimeTypeBytes(com.google.protobuf.ByteString)">
+<h3>setMimeTypeBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></span>&nbsp;<span class="element-name">setMimeTypeBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The bytes for mimeType to set.</dd>
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
 </dl>

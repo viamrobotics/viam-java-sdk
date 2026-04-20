@@ -156,7 +156,13 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <div class="col-second even-row-color"><code><a href="#DATASET_IDS_FIELD_NUMBER" class="member-name-link">DATASET_IDS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#FILE_EXTENSION_FIELD_NUMBER" class="member-name-link">FILE_EXTENSION_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#FILE_CREATE_TIME_FIELD_NUMBER" class="member-name-link">FILE_CREATE_TIME_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#FILE_EXTENSION_FIELD_NUMBER" class="member-name-link">FILE_EXTENSION_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#FILE_MODIFY_TIME_FIELD_NUMBER" class="member-name-link">FILE_MODIFY_TIME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#FILE_NAME_FIELD_NUMBER" class="member-name-link">FILE_NAME_FIELD_NUMBER</a></code></div>
@@ -168,14 +174,17 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <div class="col-second even-row-color"><code><a href="#METHOD_PARAMETERS_FIELD_NUMBER" class="member-name-link">METHOD_PARAMETERS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#PART_ID_FIELD_NUMBER" class="member-name-link">PART_ID_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MIME_TYPE_FIELD_NUMBER" class="member-name-link">MIME_TYPE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#TAGS_FIELD_NUMBER" class="member-name-link">TAGS_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#PART_ID_FIELD_NUMBER" class="member-name-link">PART_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#TYPE_FIELD_NUMBER" class="member-name-link">TYPE_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#TAGS_FIELD_NUMBER" class="member-name-link">TAGS_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#TYPE_FIELD_NUMBER" class="member-name-link">TYPE_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -249,15 +258,25 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataSync.UploadMetadata.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileExtension()" class="member-name-link">getFileExtension</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileCreateTime()" class="member-name-link">getFileCreateTime</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileExtension()" class="member-name-link">getFileExtension</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string file_extension = 9 [json_name = "fileExtension"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileExtensionBytes()" class="member-name-link">getFileExtensionBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string file_extension = 9 [json_name = "fileExtension"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileExtensionBytes()" class="member-name-link">getFileExtensionBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileModifyTime()" class="member-name-link">getFileModifyTime</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string file_extension = 9 [json_name = "fileExtension"];</code></div>
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFileName()" class="member-name-link">getFileName</a>()</code></div>
@@ -306,6 +325,16 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <div class="block"><code>map&lt;string, .google.protobuf.Any&gt; method_parameters = 8 [json_name = "methodParameters"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeType()" class="member-name-link">getMimeType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMimeTypeBytes()" class="member-name-link">getMimeTypeBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPartId()" class="member-name-link">getPartId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string part_id = 1 [json_name = "partId"];</code></div>
@@ -344,6 +373,16 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypeValue()" class="member-name-link">getTypeValue</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.app.datasync.v1.DataType type = 6 [json_name = "type"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFileCreateTime()" class="member-name-link">hasFileCreateTime</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFileModifyTime()" class="member-name-link">hasFileModifyTime</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DataSync.UploadMetadata.Builder.html" title="class in viam.app.datasync.v1">DataSync.UploadMetadata.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -493,20 +532,6 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 </section>
 </li>
 <li>
-<section class="detail" id="FILE_NAME_FIELD_NUMBER">
-<h3>FILE_NAME_FIELD_NUMBER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">FILE_NAME_FIELD_NUMBER</span></div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="tag-list">
-<li><a href="../../../../constant-values.html#viam.app.datasync.v1.DataSync.UploadMetadata.FILE_NAME_FIELD_NUMBER">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="METHOD_PARAMETERS_FIELD_NUMBER">
 <h3>METHOD_PARAMETERS_FIELD_NUMBER</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">METHOD_PARAMETERS_FIELD_NUMBER</span></div>
@@ -521,6 +546,20 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 </section>
 </li>
 <li>
+<section class="detail" id="FILE_NAME_FIELD_NUMBER">
+<h3>FILE_NAME_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">FILE_NAME_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../constant-values.html#viam.app.datasync.v1.DataSync.UploadMetadata.FILE_NAME_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="FILE_EXTENSION_FIELD_NUMBER">
 <h3>FILE_EXTENSION_FIELD_NUMBER</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">FILE_EXTENSION_FIELD_NUMBER</span></div>
@@ -529,6 +568,34 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <dd>
 <ul class="tag-list">
 <li><a href="../../../../constant-values.html#viam.app.datasync.v1.DataSync.UploadMetadata.FILE_EXTENSION_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="FILE_CREATE_TIME_FIELD_NUMBER">
+<h3>FILE_CREATE_TIME_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">FILE_CREATE_TIME_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../constant-values.html#viam.app.datasync.v1.DataSync.UploadMetadata.FILE_CREATE_TIME_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="FILE_MODIFY_TIME_FIELD_NUMBER">
+<h3>FILE_MODIFY_TIME_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">FILE_MODIFY_TIME_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../constant-values.html#viam.app.datasync.v1.DataSync.UploadMetadata.FILE_MODIFY_TIME_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -557,6 +624,20 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <dd>
 <ul class="tag-list">
 <li><a href="../../../../constant-values.html#viam.app.datasync.v1.DataSync.UploadMetadata.DATASET_IDS_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="MIME_TYPE_FIELD_NUMBER">
+<h3>MIME_TYPE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MIME_TYPE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../constant-values.html#viam.app.datasync.v1.DataSync.UploadMetadata.MIME_TYPE_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -701,32 +782,6 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 </section>
 </li>
 <li>
-<section class="detail" id="getFileName()">
-<h3>getFileName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFileName</span>()</div>
-<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getFileName()">getFileName</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
-<dt>Returns:</dt>
-<dd>The fileName.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getFileNameBytes()">
-<h3>getFileNameBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getFileNameBytes</span>()</div>
-<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getFileNameBytes()">getFileNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
-<dt>Returns:</dt>
-<dd>The bytes for fileName.</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getMethodParametersCount()">
 <h3>getMethodParametersCount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMethodParametersCount</span>()</div>
@@ -797,6 +852,32 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 </section>
 </li>
 <li>
+<section class="detail" id="getFileName()">
+<h3>getFileName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFileName</span>()</div>
+<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getFileName()">getFileName</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The fileName.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFileNameBytes()">
+<h3>getFileNameBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getFileNameBytes</span>()</div>
+<div class="block"><code>string file_name = 7 [json_name = "fileName"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getFileNameBytes()">getFileNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for fileName.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getFileExtension()">
 <h3>getFileExtension</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFileExtension</span>()</div>
@@ -819,6 +900,58 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getFileExtensionBytes()">getFileExtensionBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for fileExtension.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFileCreateTime()">
+<h3>hasFileCreateTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFileCreateTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#hasFileCreateTime()">hasFileCreateTime</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the fileCreateTime field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFileCreateTime()">
+<h3>getFileCreateTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Timestamp</span>&nbsp;<span class="element-name">getFileCreateTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_create_time = 14 [json_name = "fileCreateTime"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getFileCreateTime()">getFileCreateTime</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The fileCreateTime.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFileModifyTime()">
+<h3>hasFileModifyTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFileModifyTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#hasFileModifyTime()">hasFileModifyTime</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the fileModifyTime field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFileModifyTime()">
+<h3>getFileModifyTime</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Timestamp</span>&nbsp;<span class="element-name">getFileModifyTime</span>()</div>
+<div class="block"><code>.google.protobuf.Timestamp file_modify_time = 15 [json_name = "fileModifyTime"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getFileModifyTime()">getFileModifyTime</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The fileModifyTime.</dd>
 </dl>
 </section>
 </li>
@@ -931,6 +1064,32 @@ implements <a href="DataSync.UploadMetadataOrBuilder.html" title="interface in v
 <dd><code>index</code> - The index of the value to return.</dd>
 <dt>Returns:</dt>
 <dd>The bytes of the datasetIds at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMimeType()">
+<h3>getMimeType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getMimeType</span>()</div>
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getMimeType()">getMimeType</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The mimeType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMimeTypeBytes()">
+<h3>getMimeTypeBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getMimeTypeBytes</span>()</div>
+<div class="block"><code>string mime_type = 13 [json_name = "mimeType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataSync.UploadMetadataOrBuilder.html#getMimeTypeBytes()">getMimeTypeBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataSync.UploadMetadataOrBuilder.html" title="interface in viam.app.datasync.v1">DataSync.UploadMetadataOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for mimeType.</dd>
 </dl>
 </section>
 </li>

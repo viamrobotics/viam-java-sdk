@@ -135,17 +135,35 @@ implements <a href="EndUser.IsLegalAcceptedResponseOrBuilder.html" title="interf
 <div class="block">
  If false, the user should not be able to use the application.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAcceptedLegal()" class="member-name-link">getAcceptedLegal</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EndUser.IsLegalAcceptedResponse.Builder.html" title="class in viam.app.v1">EndUser.IsLegalAcceptedResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearEverAcceptedLegal()" class="member-name-link">clearEverAcceptedLegal</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
+ Whether the user has ever accepted any version of the legal terms.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAcceptedLegal()" class="member-name-link">getAcceptedLegal</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
  If false, the user should not be able to use the application.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEverAcceptedLegal()" class="member-name-link">getEverAcceptedLegal</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Whether the user has ever accepted any version of the legal terms.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EndUser.IsLegalAcceptedResponse.Builder.html" title="class in viam.app.v1">EndUser.IsLegalAcceptedResponse.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAcceptedLegal(boolean)" class="member-name-link">setAcceptedLegal</a><wbr>(boolean&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  If false, the user should not be able to use the application.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EndUser.IsLegalAcceptedResponse.Builder.html" title="class in viam.app.v1">EndUser.IsLegalAcceptedResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEverAcceptedLegal(boolean)" class="member-name-link">setEverAcceptedLegal</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Whether the user has ever accepted any version of the legal terms.</div>
 </div>
 </div>
 </div>
@@ -216,6 +234,55 @@ implements <a href="EndUser.IsLegalAcceptedResponseOrBuilder.html" title="interf
  </pre>
 
  <code>bool accepted_legal = 1 [json_name = "acceptedLegal"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEverAcceptedLegal()">
+<h3>getEverAcceptedLegal</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getEverAcceptedLegal</span>()</div>
+<div class="block"><pre>
+ Whether the user has ever accepted any version of the legal terms.
+ </pre>
+
+ <code>bool ever_accepted_legal = 2 [json_name = "everAcceptedLegal"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="EndUser.IsLegalAcceptedResponseOrBuilder.html#getEverAcceptedLegal()">getEverAcceptedLegal</a></code>&nbsp;in interface&nbsp;<code><a href="EndUser.IsLegalAcceptedResponseOrBuilder.html" title="interface in viam.app.v1">EndUser.IsLegalAcceptedResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The everAcceptedLegal.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setEverAcceptedLegal(boolean)">
+<h3>setEverAcceptedLegal</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EndUser.IsLegalAcceptedResponse.Builder.html" title="class in viam.app.v1">EndUser.IsLegalAcceptedResponse.Builder</a></span>&nbsp;<span class="element-name">setEverAcceptedLegal</span><wbr><span class="parameters">(boolean&nbsp;value)</span></div>
+<div class="block"><pre>
+ Whether the user has ever accepted any version of the legal terms.
+ </pre>
+
+ <code>bool ever_accepted_legal = 2 [json_name = "everAcceptedLegal"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The everAcceptedLegal to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearEverAcceptedLegal()">
+<h3>clearEverAcceptedLegal</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EndUser.IsLegalAcceptedResponse.Builder.html" title="class in viam.app.v1">EndUser.IsLegalAcceptedResponse.Builder</a></span>&nbsp;<span class="element-name">clearEverAcceptedLegal</span>()</div>
+<div class="block"><pre>
+ Whether the user has ever accepted any version of the legal terms.
+ </pre>
+
+ <code>bool ever_accepted_legal = 2 [json_name = "everAcceptedLegal"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>

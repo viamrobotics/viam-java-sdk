@@ -112,6 +112,7 @@ implements <a href="Data.DeleteTabularDataRequestOrBuilder.html" title="interfac
  If the request is at 10PM EST on March 11 (March 12 2AM UTC), this deletes all data captured
  through March 11 11:59:59PM UTC.
  If delete_older_than_days is 0, all existing data is deleted.
+ If no filter is provided, data will be deleted based on organization_id.
  </pre>
 
  Protobuf type <code>viam.app.data.v1.DeleteTabularDataRequest</code></div>
@@ -156,8 +157,11 @@ implements <a href="Data.DeleteTabularDataRequestOrBuilder.html" title="interfac
 <div class="col-second even-row-color"><code><a href="#DELETE_OLDER_THAN_DAYS_FIELD_NUMBER" class="member-name-link">DELETE_OLDER_THAN_DAYS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ORGANIZATION_ID_FIELD_NUMBER" class="member-name-link">ORGANIZATION_ID_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#FILTER_FIELD_NUMBER" class="member-name-link">FILTER_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#ORGANIZATION_ID_FIELD_NUMBER" class="member-name-link">ORGANIZATION_ID_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -191,15 +195,25 @@ implements <a href="Data.DeleteTabularDataRequestOrBuilder.html" title="interfac
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>uint32 delete_older_than_days = 2 [json_name = "deleteOlderThanDays"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.DeleteTabularFilter.html" title="class in viam.app.data.v1">Data.DeleteTabularFilter</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFilter()" class="member-name-link">getFilter</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFilter()" class="member-name-link">hasFilter</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+<div class="block"><code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Data.DeleteTabularDataRequest.Builder.html" title="class in viam.app.data.v1">Data.DeleteTabularDataRequest.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -306,6 +320,20 @@ implements <a href="Data.DeleteTabularDataRequestOrBuilder.html" title="interfac
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="FILTER_FIELD_NUMBER">
+<h3>FILTER_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">FILTER_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../constant-values.html#viam.app.data.v1.Data.DeleteTabularDataRequest.FILTER_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -350,6 +378,32 @@ implements <a href="Data.DeleteTabularDataRequestOrBuilder.html" title="interfac
 <dd><code><a href="Data.DeleteTabularDataRequestOrBuilder.html#getDeleteOlderThanDays()">getDeleteOlderThanDays</a></code>&nbsp;in interface&nbsp;<code><a href="Data.DeleteTabularDataRequestOrBuilder.html" title="interface in viam.app.data.v1">Data.DeleteTabularDataRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The deleteOlderThanDays.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFilter()">
+<h3>hasFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFilter</span>()</div>
+<div class="block"><code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.DeleteTabularDataRequestOrBuilder.html#hasFilter()">hasFilter</a></code>&nbsp;in interface&nbsp;<code><a href="Data.DeleteTabularDataRequestOrBuilder.html" title="interface in viam.app.data.v1">Data.DeleteTabularDataRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the filter field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFilter()">
+<h3>getFilter</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.DeleteTabularFilter.html" title="class in viam.app.data.v1">Data.DeleteTabularFilter</a></span>&nbsp;<span class="element-name">getFilter</span>()</div>
+<div class="block"><code>optional .viam.app.data.v1.DeleteTabularFilter filter = 3 [json_name = "filter"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.DeleteTabularDataRequestOrBuilder.html#getFilter()">getFilter</a></code>&nbsp;in interface&nbsp;<code><a href="Data.DeleteTabularDataRequestOrBuilder.html" title="interface in viam.app.data.v1">Data.DeleteTabularDataRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The filter.</dd>
 </dl>
 </section>
 </li>

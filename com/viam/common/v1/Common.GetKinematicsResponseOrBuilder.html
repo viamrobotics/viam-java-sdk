@@ -109,31 +109,67 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Common.KinematicsFileFormat.html" title="enum class in com.viam.common.v1">Common.KinematicsFileFormat</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFormat()" class="member-name-link">getFormat</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#containsMeshesByUrdfFilepath(java.lang.String)" class="member-name-link">containsMeshesByUrdfFilepath</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
- https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters</div>
+ Map of URDF mesh file paths to mesh data</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFormatValue()" class="member-name-link">getFormatValue</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Common.KinematicsFileFormat.html" title="enum class in com.viam.common.v1">Common.KinematicsFileFormat</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFormat()" class="member-name-link">getFormat</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
  https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKinematicsData()" class="member-name-link">getKinematicsData</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFormatValue()" class="member-name-link">getFormatValue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
+ The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
+ https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKinematicsData()" class="member-name-link">getKinematicsData</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
  The byte contents of the file</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Common.Mesh.html" title="class in com.viam.common.v1">Common.Mesh</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getMeshesByUrdfFilepath()" class="member-name-link">getMeshesByUrdfFilepath</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMeshesByUrdfFilepathCount()" class="member-name-link">getMeshesByUrdfFilepathCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Map of URDF mesh file paths to mesh data</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Common.Mesh.html" title="class in com.viam.common.v1">Common.Mesh</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMeshesByUrdfFilepathMap()" class="member-name-link">getMeshesByUrdfFilepathMap</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Map of URDF mesh file paths to mesh data</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Common.Mesh.html" title="class in com.viam.common.v1">Common.Mesh</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMeshesByUrdfFilepathOrDefault(java.lang.String,com.viam.common.v1.Common.Mesh)" class="member-name-link">getMeshesByUrdfFilepathOrDefault</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+ <a href="Common.Mesh.html" title="class in com.viam.common.v1">Common.Mesh</a>&nbsp;defaultValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Map of URDF mesh file paths to mesh data</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Common.Mesh.html" title="class in com.viam.common.v1">Common.Mesh</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMeshesByUrdfFilepathOrThrow(java.lang.String)" class="member-name-link">getMeshesByUrdfFilepathOrThrow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Map of URDF mesh file paths to mesh data</div>
 </div>
 </div>
 </div>
@@ -197,6 +233,71 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The kinematicsData.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMeshesByUrdfFilepathCount()">
+<h3>getMeshesByUrdfFilepathCount</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getMeshesByUrdfFilepathCount</span>()</div>
+<div class="block"><pre>
+ Map of URDF mesh file paths to mesh data
+ </pre>
+
+ <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="containsMeshesByUrdfFilepath(java.lang.String)">
+<h3>containsMeshesByUrdfFilepath</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">containsMeshesByUrdfFilepath</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block"><pre>
+ Map of URDF mesh file paths to mesh data
+ </pre>
+
+ <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getMeshesByUrdfFilepath()">
+<h3>getMeshesByUrdfFilepath</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Common.Mesh.html" title="class in com.viam.common.v1">Common.Mesh</a>&gt;</span>&nbsp;<span class="element-name">getMeshesByUrdfFilepath</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">Use <a href="#getMeshesByUrdfFilepathMap()"><code>getMeshesByUrdfFilepathMap()</code></a> instead.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getMeshesByUrdfFilepathMap()">
+<h3>getMeshesByUrdfFilepathMap</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="Common.Mesh.html" title="class in com.viam.common.v1">Common.Mesh</a>&gt;</span>&nbsp;<span class="element-name">getMeshesByUrdfFilepathMap</span>()</div>
+<div class="block"><pre>
+ Map of URDF mesh file paths to mesh data
+ </pre>
+
+ <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getMeshesByUrdfFilepathOrDefault(java.lang.String,com.viam.common.v1.Common.Mesh)">
+<h3>getMeshesByUrdfFilepathOrDefault</h3>
+<div class="member-signature"><span class="return-type"><a href="Common.Mesh.html" title="class in com.viam.common.v1">Common.Mesh</a></span>&nbsp;<span class="element-name">getMeshesByUrdfFilepathOrDefault</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+ <a href="Common.Mesh.html" title="class in com.viam.common.v1">Common.Mesh</a>&nbsp;defaultValue)</span></div>
+<div class="block"><pre>
+ Map of URDF mesh file paths to mesh data
+ </pre>
+
+ <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getMeshesByUrdfFilepathOrThrow(java.lang.String)">
+<h3>getMeshesByUrdfFilepathOrThrow</h3>
+<div class="member-signature"><span class="return-type"><a href="Common.Mesh.html" title="class in com.viam.common.v1">Common.Mesh</a></span>&nbsp;<span class="element-name">getMeshesByUrdfFilepathOrThrow</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block"><pre>
+ Map of URDF mesh file paths to mesh data
+ </pre>
+
+ <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code></div>
 </section>
 </li>
 </ul>

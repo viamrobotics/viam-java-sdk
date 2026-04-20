@@ -148,20 +148,23 @@ implements <a href="AppOuterClass.OAuthConfigOrBuilder.html" title="interface in
 <div class="col-second odd-row-color"><code><a href="#ENABLED_GRANTS_FIELD_NUMBER" class="member-name-link">ENABLED_GRANTS_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#LOGOUT_URI_FIELD_NUMBER" class="member-name-link">LOGOUT_URI_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#INVITE_REDIRECT_URI_FIELD_NUMBER" class="member-name-link">INVITE_REDIRECT_URI_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ORIGIN_URIS_FIELD_NUMBER" class="member-name-link">ORIGIN_URIS_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#LOGOUT_URI_FIELD_NUMBER" class="member-name-link">LOGOUT_URI_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#PKCE_FIELD_NUMBER" class="member-name-link">PKCE_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ORIGIN_URIS_FIELD_NUMBER" class="member-name-link">ORIGIN_URIS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#REDIRECT_URIS_FIELD_NUMBER" class="member-name-link">REDIRECT_URIS_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#PKCE_FIELD_NUMBER" class="member-name-link">PKCE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#URL_VALIDATION_FIELD_NUMBER" class="member-name-link">URL_VALIDATION_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#REDIRECT_URIS_FIELD_NUMBER" class="member-name-link">REDIRECT_URIS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#URL_VALIDATION_FIELD_NUMBER" class="member-name-link">URL_VALIDATION_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -224,6 +227,16 @@ implements <a href="AppOuterClass.OAuthConfigOrBuilder.html" title="interface in
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnabledGrantsValueList()" class="member-name-link">getEnabledGrantsValueList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.EnabledGrant enabled_grants = 7 [json_name = "enabledGrants"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInviteRedirectUri()" class="member-name-link">getInviteRedirectUri</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string invite_redirect_uri = 8 [json_name = "inviteRedirectUri"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInviteRedirectUriBytes()" class="member-name-link">getInviteRedirectUriBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string invite_redirect_uri = 8 [json_name = "inviteRedirectUri"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLogoutUri()" class="member-name-link">getLogoutUri</a>()</code></div>
@@ -465,6 +478,20 @@ implements <a href="AppOuterClass.OAuthConfigOrBuilder.html" title="interface in
 <dd>
 <ul class="tag-list">
 <li><a href="../../../constant-values.html#viam.app.v1.AppOuterClass.OAuthConfig.ENABLED_GRANTS_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="INVITE_REDIRECT_URI_FIELD_NUMBER">
+<h3>INVITE_REDIRECT_URI_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">INVITE_REDIRECT_URI_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../constant-values.html#viam.app.v1.AppOuterClass.OAuthConfig.INVITE_REDIRECT_URI_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -760,6 +787,32 @@ implements <a href="AppOuterClass.OAuthConfigOrBuilder.html" title="interface in
 <dd><code>index</code> - The index of the value to return.</dd>
 <dt>Returns:</dt>
 <dd>The enum numeric value on the wire of enabledGrants at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInviteRedirectUri()">
+<h3>getInviteRedirectUri</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getInviteRedirectUri</span>()</div>
+<div class="block"><code>string invite_redirect_uri = 8 [json_name = "inviteRedirectUri"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.OAuthConfigOrBuilder.html#getInviteRedirectUri()">getInviteRedirectUri</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.OAuthConfigOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.OAuthConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The inviteRedirectUri.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInviteRedirectUriBytes()">
+<h3>getInviteRedirectUriBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getInviteRedirectUriBytes</span>()</div>
+<div class="block"><code>string invite_redirect_uri = 8 [json_name = "inviteRedirectUri"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.OAuthConfigOrBuilder.html#getInviteRedirectUriBytes()">getInviteRedirectUriBytes</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.OAuthConfigOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.OAuthConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for inviteRedirectUri.</dd>
 </dl>
 </section>
 </li>

@@ -156,39 +156,46 @@ loadScripts(document, 'script');</script>
  GetKinematics returns the kinematics file for the component</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#isMoving(com.viam.component.arm.v1.Arm.IsMovingRequest,io.grpc.stub.StreamObserver)" class="member-name-link">isMoving</a><wbr>(<a href="Arm.IsMovingRequest.html" title="class in com.viam.component.arm.v1">Arm.IsMovingRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Arm.IsMovingResponse.html" title="class in com.viam.component.arm.v1">Arm.IsMovingResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getStatus(com.viam.common.v1.Common.GetStatusRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getStatus</a><wbr>(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">
+ GetStatus returns the status of the resource</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#isMoving(com.viam.component.arm.v1.Arm.IsMovingRequest,io.grpc.stub.StreamObserver)" class="member-name-link">isMoving</a><wbr>(<a href="Arm.IsMovingRequest.html" title="class in com.viam.component.arm.v1">Arm.IsMovingRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Arm.IsMovingResponse.html" title="class in com.viam.component.arm.v1">Arm.IsMovingResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  IsMoving reports if a component is in motion</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#moveThroughJointPositions(com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveThroughJointPositions</a><wbr>(<a href="Arm.MoveThroughJointPositionsRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveThroughJointPositionsRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#moveThroughJointPositions(com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveThroughJointPositions</a><wbr>(<a href="Arm.MoveThroughJointPositionsRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveThroughJointPositionsRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Arm.MoveThroughJointPositionsResponse.html" title="class in com.viam.component.arm.v1">Arm.MoveThroughJointPositionsResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  MoveThroughJointPositions moves every joint on a robot's arm to the specified JointPositions in the order they are specified,
  obeying the specified velocity and acceleration limits.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#moveToJointPositions(com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveToJointPositions</a><wbr>(<a href="Arm.MoveToJointPositionsRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveToJointPositionsRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#moveToJointPositions(com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveToJointPositions</a><wbr>(<a href="Arm.MoveToJointPositionsRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveToJointPositionsRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Arm.MoveToJointPositionsResponse.html" title="class in com.viam.component.arm.v1">Arm.MoveToJointPositionsResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  MoveToJointPositions moves every joint on a robot's arm to specified angles which are expressed in degrees
  This will block until done or a new operation cancels this one</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#moveToPosition(com.viam.component.arm.v1.Arm.MoveToPositionRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveToPosition</a><wbr>(<a href="Arm.MoveToPositionRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveToPositionRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#moveToPosition(com.viam.component.arm.v1.Arm.MoveToPositionRequest,io.grpc.stub.StreamObserver)" class="member-name-link">moveToPosition</a><wbr>(<a href="Arm.MoveToPositionRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveToPositionRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Arm.MoveToPositionResponse.html" title="class in com.viam.component.arm.v1">Arm.MoveToPositionResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  MoveToPosition moves the mount point of the robot's end effector to the requested position.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#stop(com.viam.component.arm.v1.Arm.StopRequest,io.grpc.stub.StreamObserver)" class="member-name-link">stop</a><wbr>(<a href="Arm.StopRequest.html" title="class in com.viam.component.arm.v1">Arm.StopRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#stop(com.viam.component.arm.v1.Arm.StopRequest,io.grpc.stub.StreamObserver)" class="member-name-link">stop</a><wbr>(<a href="Arm.StopRequest.html" title="class in com.viam.component.arm.v1">Arm.StopRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Arm.StopResponse.html" title="class in com.viam.component.arm.v1">Arm.StopResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  Stop stops a robot's arm</div>
 </div>
@@ -287,6 +294,16 @@ loadScripts(document, 'script');</script>
  io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.DoCommandResponse.html" title="class in com.viam.common.v1">Common.DoCommandResponse</a>&gt;&nbsp;responseObserver)</span></div>
 <div class="block"><pre>
  DoCommand sends/receives arbitrary commands
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getStatus(com.viam.common.v1.Common.GetStatusRequest,io.grpc.stub.StreamObserver)">
+<h3>getStatus</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getStatus</span><wbr><span class="parameters">(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ GetStatus returns the status of the resource
  </pre></div>
 </section>
 </li>
