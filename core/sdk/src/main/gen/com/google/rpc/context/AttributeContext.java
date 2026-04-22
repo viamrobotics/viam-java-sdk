@@ -4317,6 +4317,32 @@ java.lang.String defaultValue);
      * @return The auth.
      */
     com.google.rpc.context.AttributeContext.Auth getAuth();
+
+    /**
+     * <pre>
+     * The values from Origin header from the HTTP request, such as
+     * "https://console.cloud.google.com". Modern browsers can only have one
+     * origin. Special browsers and/or HTTP clients may require multiple
+     * origins.
+     * </pre>
+     *
+     * <code>string origin = 14 [json_name = "origin"];</code>
+     * @return The origin.
+     */
+    java.lang.String getOrigin();
+    /**
+     * <pre>
+     * The values from Origin header from the HTTP request, such as
+     * "https://console.cloud.google.com". Modern browsers can only have one
+     * origin. Special browsers and/or HTTP clients may require multiple
+     * origins.
+     * </pre>
+     *
+     * <code>string origin = 14 [json_name = "origin"];</code>
+     * @return The bytes for origin.
+     */
+    com.google.protobuf.ByteString
+        getOriginBytes();
   }
   /**
    * <pre>
@@ -4341,6 +4367,7 @@ java.lang.String defaultValue);
       query_ = "";
       protocol_ = "";
       reason_ = "";
+      origin_ = "";
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
@@ -5231,6 +5258,89 @@ java.lang.String defaultValue) {
     private void clearAuth() {
       auth_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int ORIGIN_FIELD_NUMBER = 14;
+    private java.lang.String origin_;
+    /**
+     * <pre>
+     * The values from Origin header from the HTTP request, such as
+     * "https://console.cloud.google.com". Modern browsers can only have one
+     * origin. Special browsers and/or HTTP clients may require multiple
+     * origins.
+     * </pre>
+     *
+     * <code>string origin = 14 [json_name = "origin"];</code>
+     * @return The origin.
+     */
+    @java.lang.Override
+    public java.lang.String getOrigin() {
+      return origin_;
+    }
+    /**
+     * <pre>
+     * The values from Origin header from the HTTP request, such as
+     * "https://console.cloud.google.com". Modern browsers can only have one
+     * origin. Special browsers and/or HTTP clients may require multiple
+     * origins.
+     * </pre>
+     *
+     * <code>string origin = 14 [json_name = "origin"];</code>
+     * @return The bytes for origin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOriginBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(origin_);
+    }
+    /**
+     * <pre>
+     * The values from Origin header from the HTTP request, such as
+     * "https://console.cloud.google.com". Modern browsers can only have one
+     * origin. Special browsers and/or HTTP clients may require multiple
+     * origins.
+     * </pre>
+     *
+     * <code>string origin = 14 [json_name = "origin"];</code>
+     * @param value The origin to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setOrigin(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      origin_ = value;
+    }
+    /**
+     * <pre>
+     * The values from Origin header from the HTTP request, such as
+     * "https://console.cloud.google.com". Modern browsers can only have one
+     * origin. Special browsers and/or HTTP clients may require multiple
+     * origins.
+     * </pre>
+     *
+     * <code>string origin = 14 [json_name = "origin"];</code>
+     */
+    private void clearOrigin() {
+
+      origin_ = getDefaultInstance().getOrigin();
+    }
+    /**
+     * <pre>
+     * The values from Origin header from the HTTP request, such as
+     * "https://console.cloud.google.com". Modern browsers can only have one
+     * origin. Special browsers and/or HTTP clients may require multiple
+     * origins.
+     * </pre>
+     *
+     * <code>string origin = 14 [json_name = "origin"];</code>
+     * @param value The bytes for origin to set.
+     */
+    private void setOriginBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      origin_ = value.toStringUtf8();
+
     }
 
     public static com.google.rpc.context.AttributeContext.Request parseFrom(
@@ -6259,6 +6369,90 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * The values from Origin header from the HTTP request, such as
+       * "https://console.cloud.google.com". Modern browsers can only have one
+       * origin. Special browsers and/or HTTP clients may require multiple
+       * origins.
+       * </pre>
+       *
+       * <code>string origin = 14 [json_name = "origin"];</code>
+       * @return The origin.
+       */
+      @java.lang.Override
+      public java.lang.String getOrigin() {
+        return instance.getOrigin();
+      }
+      /**
+       * <pre>
+       * The values from Origin header from the HTTP request, such as
+       * "https://console.cloud.google.com". Modern browsers can only have one
+       * origin. Special browsers and/or HTTP clients may require multiple
+       * origins.
+       * </pre>
+       *
+       * <code>string origin = 14 [json_name = "origin"];</code>
+       * @return The bytes for origin.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOriginBytes() {
+        return instance.getOriginBytes();
+      }
+      /**
+       * <pre>
+       * The values from Origin header from the HTTP request, such as
+       * "https://console.cloud.google.com". Modern browsers can only have one
+       * origin. Special browsers and/or HTTP clients may require multiple
+       * origins.
+       * </pre>
+       *
+       * <code>string origin = 14 [json_name = "origin"];</code>
+       * @param value The origin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrigin(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrigin(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The values from Origin header from the HTTP request, such as
+       * "https://console.cloud.google.com". Modern browsers can only have one
+       * origin. Special browsers and/or HTTP clients may require multiple
+       * origins.
+       * </pre>
+       *
+       * <code>string origin = 14 [json_name = "origin"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrigin() {
+        copyOnWrite();
+        instance.clearOrigin();
+        return this;
+      }
+      /**
+       * <pre>
+       * The values from Origin header from the HTTP request, such as
+       * "https://console.cloud.google.com". Modern browsers can only have one
+       * origin. Special browsers and/or HTTP clients may require multiple
+       * origins.
+       * </pre>
+       *
+       * <code>string origin = 14 [json_name = "origin"];</code>
+       * @param value The bytes for origin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOriginBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:google.rpc.context.AttributeContext.Request)
     }
     @java.lang.Override
@@ -6289,11 +6483,12 @@ java.lang.String defaultValue) {
               "protocol_",
               "reason_",
               "auth_",
+              "origin_",
             };
             java.lang.String info =
-                "\u0000\f\u0000\u0001\u0001\r\f\u0001\u0000\u0000\u0001\u0208\u0002\u0208\u00032\u0004" +
-                "\u0208\u0005\u0208\u0006\u0208\u0007\u0208\t\u1009\u0000\n\u0002\u000b\u0208\f\u0208" +
-                "\r\u1009\u0001";
+                "\u0000\r\u0000\u0001\u0001\u000e\r\u0001\u0000\u0000\u0001\u0208\u0002\u0208\u0003" +
+                "2\u0004\u0208\u0005\u0208\u0006\u0208\u0007\u0208\t\u1009\u0000\n\u0002\u000b\u0208" +
+                "\f\u0208\r\u1009\u0001\u000e\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {

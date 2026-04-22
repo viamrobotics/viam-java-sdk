@@ -12,7 +12,8 @@ public interface LocalizedTextOrBuilder extends
 
   /**
    * <pre>
-   * Localized string in the language corresponding to `language_code' below.
+   * Localized string in the language corresponding to
+   * [language_code][google.type.LocalizedText.language_code] below.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>
@@ -21,7 +22,8 @@ public interface LocalizedTextOrBuilder extends
   java.lang.String getText();
   /**
    * <pre>
-   * Localized string in the language corresponding to `language_code' below.
+   * Localized string in the language corresponding to
+   * [language_code][google.type.LocalizedText.language_code] below.
    * </pre>
    *
    * <code>string text = 1 [json_name = "text"];</code>

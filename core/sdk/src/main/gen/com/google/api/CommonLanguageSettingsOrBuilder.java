@@ -88,6 +88,8 @@ public interface CommonLanguageSettingsOrBuilder extends
   /**
    * <pre>
    * Configuration for which RPCs should be generated in the GAPIC client.
+   *
+   * Note: This field should not be used in most cases.
    * </pre>
    *
    * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>
@@ -97,6 +99,8 @@ public interface CommonLanguageSettingsOrBuilder extends
   /**
    * <pre>
    * Configuration for which RPCs should be generated in the GAPIC client.
+   *
+   * Note: This field should not be used in most cases.
    * </pre>
    *
    * <code>.google.api.SelectiveGapicGeneration selective_gapic_generation = 3 [json_name = "selectiveGapicGeneration"];</code>

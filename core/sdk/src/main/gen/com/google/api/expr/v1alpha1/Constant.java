@@ -11,7 +11,7 @@ package com.google.api.expr.v1alpha1;
  *
  * Named 'Constant' here for backwards compatibility.
  *
- * This is similar as the primitives supported in the well-known type
+ * This is similar to the primitives supported in the well-known type
  * `google.protobuf.Value`, but richer so it can represent CEL's full range of
  * primitives.
  *
@@ -539,7 +539,7 @@ public  final class Constant extends
    * <pre>
    * protobuf.Duration value.
    *
-   * Deprecated: duration is no longer considered a builtin cel type.
+   * Deprecated: duration is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Duration duration_value = 8 [json_name = "durationValue", deprecated = true];</code>
@@ -552,7 +552,7 @@ public  final class Constant extends
    * <pre>
    * protobuf.Duration value.
    *
-   * Deprecated: duration is no longer considered a builtin cel type.
+   * Deprecated: duration is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Duration duration_value = 8 [json_name = "durationValue", deprecated = true];</code>
@@ -568,7 +568,7 @@ public  final class Constant extends
    * <pre>
    * protobuf.Duration value.
    *
-   * Deprecated: duration is no longer considered a builtin cel type.
+   * Deprecated: duration is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Duration duration_value = 8 [json_name = "durationValue", deprecated = true];</code>
@@ -583,7 +583,7 @@ public  final class Constant extends
    * <pre>
    * protobuf.Duration value.
    *
-   * Deprecated: duration is no longer considered a builtin cel type.
+   * Deprecated: duration is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Duration duration_value = 8 [json_name = "durationValue", deprecated = true];</code>
@@ -604,7 +604,7 @@ public  final class Constant extends
    * <pre>
    * protobuf.Duration value.
    *
-   * Deprecated: duration is no longer considered a builtin cel type.
+   * Deprecated: duration is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Duration duration_value = 8 [json_name = "durationValue", deprecated = true];</code>
@@ -621,7 +621,7 @@ public  final class Constant extends
    * <pre>
    * protobuf.Timestamp value.
    *
-   * Deprecated: timestamp is no longer considered a builtin cel type.
+   * Deprecated: timestamp is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp timestamp_value = 9 [json_name = "timestampValue", deprecated = true];</code>
@@ -634,7 +634,7 @@ public  final class Constant extends
    * <pre>
    * protobuf.Timestamp value.
    *
-   * Deprecated: timestamp is no longer considered a builtin cel type.
+   * Deprecated: timestamp is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp timestamp_value = 9 [json_name = "timestampValue", deprecated = true];</code>
@@ -650,7 +650,7 @@ public  final class Constant extends
    * <pre>
    * protobuf.Timestamp value.
    *
-   * Deprecated: timestamp is no longer considered a builtin cel type.
+   * Deprecated: timestamp is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp timestamp_value = 9 [json_name = "timestampValue", deprecated = true];</code>
@@ -665,7 +665,7 @@ public  final class Constant extends
    * <pre>
    * protobuf.Timestamp value.
    *
-   * Deprecated: timestamp is no longer considered a builtin cel type.
+   * Deprecated: timestamp is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp timestamp_value = 9 [json_name = "timestampValue", deprecated = true];</code>
@@ -686,7 +686,7 @@ public  final class Constant extends
    * <pre>
    * protobuf.Timestamp value.
    *
-   * Deprecated: timestamp is no longer considered a builtin cel type.
+   * Deprecated: timestamp is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp timestamp_value = 9 [json_name = "timestampValue", deprecated = true];</code>
@@ -787,7 +787,7 @@ public  final class Constant extends
    *
    * Named 'Constant' here for backwards compatibility.
    *
-   * This is similar as the primitives supported in the well-known type
+   * This is similar to the primitives supported in the well-known type
    * `google.protobuf.Value`, but richer so it can represent CEL's full range of
    * primitives.
    *
@@ -1248,7 +1248,7 @@ public  final class Constant extends
      * <pre>
      * protobuf.Duration value.
      *
-     * Deprecated: duration is no longer considered a builtin cel type.
+     * Deprecated: duration is no longer considered a builtin CEL type.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration_value = 8 [json_name = "durationValue", deprecated = true];</code>
@@ -1261,7 +1261,7 @@ public  final class Constant extends
      * <pre>
      * protobuf.Duration value.
      *
-     * Deprecated: duration is no longer considered a builtin cel type.
+     * Deprecated: duration is no longer considered a builtin CEL type.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration_value = 8 [json_name = "durationValue", deprecated = true];</code>
@@ -1274,7 +1274,7 @@ public  final class Constant extends
      * <pre>
      * protobuf.Duration value.
      *
-     * Deprecated: duration is no longer considered a builtin cel type.
+     * Deprecated: duration is no longer considered a builtin CEL type.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration_value = 8 [json_name = "durationValue", deprecated = true];</code>
@@ -1288,7 +1288,7 @@ public  final class Constant extends
      * <pre>
      * protobuf.Duration value.
      *
-     * Deprecated: duration is no longer considered a builtin cel type.
+     * Deprecated: duration is no longer considered a builtin CEL type.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration_value = 8 [json_name = "durationValue", deprecated = true];</code>
@@ -1303,7 +1303,7 @@ public  final class Constant extends
      * <pre>
      * protobuf.Duration value.
      *
-     * Deprecated: duration is no longer considered a builtin cel type.
+     * Deprecated: duration is no longer considered a builtin CEL type.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration_value = 8 [json_name = "durationValue", deprecated = true];</code>
@@ -1317,7 +1317,7 @@ public  final class Constant extends
      * <pre>
      * protobuf.Duration value.
      *
-     * Deprecated: duration is no longer considered a builtin cel type.
+     * Deprecated: duration is no longer considered a builtin CEL type.
      * </pre>
      *
      * <code>.google.protobuf.Duration duration_value = 8 [json_name = "durationValue", deprecated = true];</code>
@@ -1332,7 +1332,7 @@ public  final class Constant extends
      * <pre>
      * protobuf.Timestamp value.
      *
-     * Deprecated: timestamp is no longer considered a builtin cel type.
+     * Deprecated: timestamp is no longer considered a builtin CEL type.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp_value = 9 [json_name = "timestampValue", deprecated = true];</code>
@@ -1345,7 +1345,7 @@ public  final class Constant extends
      * <pre>
      * protobuf.Timestamp value.
      *
-     * Deprecated: timestamp is no longer considered a builtin cel type.
+     * Deprecated: timestamp is no longer considered a builtin CEL type.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp_value = 9 [json_name = "timestampValue", deprecated = true];</code>
@@ -1358,7 +1358,7 @@ public  final class Constant extends
      * <pre>
      * protobuf.Timestamp value.
      *
-     * Deprecated: timestamp is no longer considered a builtin cel type.
+     * Deprecated: timestamp is no longer considered a builtin CEL type.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp_value = 9 [json_name = "timestampValue", deprecated = true];</code>
@@ -1372,7 +1372,7 @@ public  final class Constant extends
      * <pre>
      * protobuf.Timestamp value.
      *
-     * Deprecated: timestamp is no longer considered a builtin cel type.
+     * Deprecated: timestamp is no longer considered a builtin CEL type.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp_value = 9 [json_name = "timestampValue", deprecated = true];</code>
@@ -1387,7 +1387,7 @@ public  final class Constant extends
      * <pre>
      * protobuf.Timestamp value.
      *
-     * Deprecated: timestamp is no longer considered a builtin cel type.
+     * Deprecated: timestamp is no longer considered a builtin CEL type.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp_value = 9 [json_name = "timestampValue", deprecated = true];</code>
@@ -1401,7 +1401,7 @@ public  final class Constant extends
      * <pre>
      * protobuf.Timestamp value.
      *
-     * Deprecated: timestamp is no longer considered a builtin cel type.
+     * Deprecated: timestamp is no longer considered a builtin CEL type.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp_value = 9 [json_name = "timestampValue", deprecated = true];</code>

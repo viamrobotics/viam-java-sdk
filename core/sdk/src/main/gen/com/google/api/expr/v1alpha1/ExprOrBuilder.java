@@ -14,7 +14,7 @@ public interface ExprOrBuilder extends
    * <pre>
    * Required. An id assigned to this node by the parser which is unique in a
    * given expression tree. This is used to associate type information and other
-   * attributes to a node in the parse tree.
+   * attributes with a node in the parse tree.
    * </pre>
    *
    * <code>int64 id = 2 [json_name = "id"];</code>

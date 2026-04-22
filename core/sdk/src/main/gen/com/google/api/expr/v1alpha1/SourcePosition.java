@@ -25,7 +25,7 @@ public  final class SourcePosition extends
   private java.lang.String location_;
   /**
    * <pre>
-   * The soucre location name (e.g. file name).
+   * The source location name (e.g. file name).
    * </pre>
    *
    * <code>string location = 1 [json_name = "location"];</code>
@@ -37,7 +37,7 @@ public  final class SourcePosition extends
   }
   /**
    * <pre>
-   * The soucre location name (e.g. file name).
+   * The source location name (e.g. file name).
    * </pre>
    *
    * <code>string location = 1 [json_name = "location"];</code>
@@ -50,7 +50,7 @@ public  final class SourcePosition extends
   }
   /**
    * <pre>
-   * The soucre location name (e.g. file name).
+   * The source location name (e.g. file name).
    * </pre>
    *
    * <code>string location = 1 [json_name = "location"];</code>
@@ -65,7 +65,7 @@ public  final class SourcePosition extends
   }
   /**
    * <pre>
-   * The soucre location name (e.g. file name).
+   * The source location name (e.g. file name).
    * </pre>
    *
    * <code>string location = 1 [json_name = "location"];</code>
@@ -76,7 +76,7 @@ public  final class SourcePosition extends
   }
   /**
    * <pre>
-   * The soucre location name (e.g. file name).
+   * The source location name (e.g. file name).
    * </pre>
    *
    * <code>string location = 1 [json_name = "location"];</code>
@@ -312,7 +312,7 @@ public  final class SourcePosition extends
 
     /**
      * <pre>
-     * The soucre location name (e.g. file name).
+     * The source location name (e.g. file name).
      * </pre>
      *
      * <code>string location = 1 [json_name = "location"];</code>
@@ -324,7 +324,7 @@ public  final class SourcePosition extends
     }
     /**
      * <pre>
-     * The soucre location name (e.g. file name).
+     * The source location name (e.g. file name).
      * </pre>
      *
      * <code>string location = 1 [json_name = "location"];</code>
@@ -337,7 +337,7 @@ public  final class SourcePosition extends
     }
     /**
      * <pre>
-     * The soucre location name (e.g. file name).
+     * The source location name (e.g. file name).
      * </pre>
      *
      * <code>string location = 1 [json_name = "location"];</code>
@@ -352,7 +352,7 @@ public  final class SourcePosition extends
     }
     /**
      * <pre>
-     * The soucre location name (e.g. file name).
+     * The source location name (e.g. file name).
      * </pre>
      *
      * <code>string location = 1 [json_name = "location"];</code>
@@ -365,7 +365,7 @@ public  final class SourcePosition extends
     }
     /**
      * <pre>
-     * The soucre location name (e.g. file name).
+     * The source location name (e.g. file name).
      * </pre>
      *
      * <code>string location = 1 [json_name = "location"];</code>

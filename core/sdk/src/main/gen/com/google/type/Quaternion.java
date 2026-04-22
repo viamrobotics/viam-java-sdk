@@ -7,6 +7,8 @@ package com.google.type;
 
 /**
  * <pre>
+ * A quaternion, represented by four 64-bit floating point values.
+ *
  * A quaternion is defined as the quotient of two directed lines in a
  * three-dimensional space or equivalently as the quotient of two Euclidean
  * vectors (https://en.wikipedia.org/wiki/Quaternion).
@@ -24,7 +26,7 @@ package com.google.type;
  * where x, y, z, and w are real numbers, and i, j, and k are three imaginary
  * numbers.
  *
- * Our naming choice `(x, y, z, w)` comes from the desire to avoid confusion for
+ * The naming choice `(x, y, z, w)` comes from the desire to avoid confusion for
  * those interested in the geometric properties of the quaternion in the 3D
  * Cartesian space. Other texts often use alternative names or subscripts, such
  * as `(a, b, c, d)`, `(1, i, j, k)`, or `(0, 1, 2, 3)`, which are perhaps
@@ -311,6 +313,8 @@ public  final class Quaternion extends
 
   /**
    * <pre>
+   * A quaternion, represented by four 64-bit floating point values.
+   *
    * A quaternion is defined as the quotient of two directed lines in a
    * three-dimensional space or equivalently as the quotient of two Euclidean
    * vectors (https://en.wikipedia.org/wiki/Quaternion).
@@ -328,7 +332,7 @@ public  final class Quaternion extends
    * where x, y, z, and w are real numbers, and i, j, and k are three imaginary
    * numbers.
    *
-   * Our naming choice `(x, y, z, w)` comes from the desire to avoid confusion for
+   * The naming choice `(x, y, z, w)` comes from the desire to avoid confusion for
    * those interested in the geometric properties of the quaternion in the 3D
    * Cartesian space. Other texts often use alternative names or subscripts, such
    * as `(a, b, c, d)`, `(1, i, j, k)`, or `(0, 1, 2, 3)`, which are perhaps

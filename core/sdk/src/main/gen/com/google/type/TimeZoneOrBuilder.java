@@ -12,7 +12,7 @@ public interface TimeZoneOrBuilder extends
 
   /**
    * <pre>
-   * IANA Time Zone Database time zone, e.g. "America/New_York".
+   * IANA Time Zone Database time zone. For example "America/New_York".
    * </pre>
    *
    * <code>string id = 1 [json_name = "id"];</code>
@@ -21,7 +21,7 @@ public interface TimeZoneOrBuilder extends
   java.lang.String getId();
   /**
    * <pre>
-   * IANA Time Zone Database time zone, e.g. "America/New_York".
+   * IANA Time Zone Database time zone. For example "America/New_York".
    * </pre>
    *
    * <code>string id = 1 [json_name = "id"];</code>
@@ -32,7 +32,7 @@ public interface TimeZoneOrBuilder extends
 
   /**
    * <pre>
-   * Optional. IANA Time Zone Database version number, e.g. "2019a".
+   * Optional. IANA Time Zone Database version number. For example "2019a".
    * </pre>
    *
    * <code>string version = 2 [json_name = "version"];</code>
@@ -41,7 +41,7 @@ public interface TimeZoneOrBuilder extends
   java.lang.String getVersion();
   /**
    * <pre>
-   * Optional. IANA Time Zone Database version number, e.g. "2019a".
+   * Optional. IANA Time Zone Database version number. For example "2019a".
    * </pre>
    *
    * <code>string version = 2 [json_name = "version"];</code>
