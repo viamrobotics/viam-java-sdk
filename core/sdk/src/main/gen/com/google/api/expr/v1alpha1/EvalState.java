@@ -9,7 +9,7 @@ package com.google.api.expr.v1alpha1;
  * <pre>
  * The state of an evaluation.
  *
- * Can represent an inital, partial, or completed state of evaluation.
+ * Can represent an initial, partial, or completed state of evaluation.
  * </pre>
  *
  * Protobuf type {@code google.api.expr.v1alpha1.EvalState}
@@ -30,7 +30,7 @@ public  final class EvalState extends
 
     /**
      * <pre>
-     * The id of the expression this result if for.
+     * The id of the expression this result is for.
      * </pre>
      *
      * <code>int64 expr = 1 [json_name = "expr"];</code>
@@ -50,7 +50,7 @@ public  final class EvalState extends
   }
   /**
    * <pre>
-   * A single evalution result.
+   * A single evaluation result.
    * </pre>
    *
    * Protobuf type {@code google.api.expr.v1alpha1.EvalState.Result}
@@ -66,7 +66,7 @@ public  final class EvalState extends
     private long expr_;
     /**
      * <pre>
-     * The id of the expression this result if for.
+     * The id of the expression this result is for.
      * </pre>
      *
      * <code>int64 expr = 1 [json_name = "expr"];</code>
@@ -78,7 +78,7 @@ public  final class EvalState extends
     }
     /**
      * <pre>
-     * The id of the expression this result if for.
+     * The id of the expression this result is for.
      * </pre>
      *
      * <code>int64 expr = 1 [json_name = "expr"];</code>
@@ -90,7 +90,7 @@ public  final class EvalState extends
     }
     /**
      * <pre>
-     * The id of the expression this result if for.
+     * The id of the expression this result is for.
      * </pre>
      *
      * <code>int64 expr = 1 [json_name = "expr"];</code>
@@ -223,7 +223,7 @@ public  final class EvalState extends
 
     /**
      * <pre>
-     * A single evalution result.
+     * A single evaluation result.
      * </pre>
      *
      * Protobuf type {@code google.api.expr.v1alpha1.EvalState.Result}
@@ -241,7 +241,7 @@ public  final class EvalState extends
 
       /**
        * <pre>
-       * The id of the expression this result if for.
+       * The id of the expression this result is for.
        * </pre>
        *
        * <code>int64 expr = 1 [json_name = "expr"];</code>
@@ -253,7 +253,7 @@ public  final class EvalState extends
       }
       /**
        * <pre>
-       * The id of the expression this result if for.
+       * The id of the expression this result is for.
        * </pre>
        *
        * <code>int64 expr = 1 [json_name = "expr"];</code>
@@ -267,7 +267,7 @@ public  final class EvalState extends
       }
       /**
        * <pre>
-       * The id of the expression this result if for.
+       * The id of the expression this result is for.
        * </pre>
        *
        * <code>int64 expr = 1 [json_name = "expr"];</code>
@@ -797,7 +797,7 @@ public  final class EvalState extends
    * <pre>
    * The state of an evaluation.
    *
-   * Can represent an inital, partial, or completed state of evaluation.
+   * Can represent an initial, partial, or completed state of evaluation.
    * </pre>
    *
    * Protobuf type {@code google.api.expr.v1alpha1.EvalState}

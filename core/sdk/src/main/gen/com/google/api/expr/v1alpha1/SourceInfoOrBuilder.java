@@ -65,7 +65,7 @@ public interface SourceInfoOrBuilder extends
    *
    * The line number of a given position is the index `i` where for a given
    * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-   * column may be derivd from `id_positions[id] - line_offsets[i]`.
+   * column may be derived from `id_positions[id] - line_offsets[i]`.
    * </pre>
    *
    * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -79,7 +79,7 @@ public interface SourceInfoOrBuilder extends
    *
    * The line number of a given position is the index `i` where for a given
    * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-   * column may be derivd from `id_positions[id] - line_offsets[i]`.
+   * column may be derived from `id_positions[id] - line_offsets[i]`.
    * </pre>
    *
    * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -93,7 +93,7 @@ public interface SourceInfoOrBuilder extends
    *
    * The line number of a given position is the index `i` where for a given
    * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-   * column may be derivd from `id_positions[id] - line_offsets[i]`.
+   * column may be derived from `id_positions[id] - line_offsets[i]`.
    * </pre>
    *
    * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>

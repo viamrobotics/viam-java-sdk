@@ -23,7 +23,8 @@ public interface DateTimeOrBuilder extends
 
   /**
    * <pre>
-   * Required. Month of year. Must be from 1 to 12.
+   * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a
+   * datetime without a month.
    * </pre>
    *
    * <code>int32 month = 2 [json_name = "month"];</code>
@@ -33,8 +34,8 @@ public interface DateTimeOrBuilder extends
 
   /**
    * <pre>
-   * Required. Day of month. Must be from 1 to 31 and valid for the year and
-   * month.
+   * Optional. Day of month. Must be from 1 to 31 and valid for the year and
+   * month, or 0 if specifying a datetime without a day.
    * </pre>
    *
    * <code>int32 day = 3 [json_name = "day"];</code>
@@ -44,9 +45,9 @@ public interface DateTimeOrBuilder extends
 
   /**
    * <pre>
-   * Required. Hours of day in 24 hour format. Should be from 0 to 23. An API
-   * may choose to allow the value "24:00:00" for scenarios like business
-   * closing time.
+   * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults
+   * to 0 (midnight). An API may choose to allow the value "24:00:00" for
+   * scenarios like business closing time.
    * </pre>
    *
    * <code>int32 hours = 4 [json_name = "hours"];</code>
@@ -56,7 +57,7 @@ public interface DateTimeOrBuilder extends
 
   /**
    * <pre>
-   * Required. Minutes of hour of day. Must be from 0 to 59.
+   * Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
    * </pre>
    *
    * <code>int32 minutes = 5 [json_name = "minutes"];</code>
@@ -66,8 +67,8 @@ public interface DateTimeOrBuilder extends
 
   /**
    * <pre>
-   * Required. Seconds of minutes of the time. Must normally be from 0 to 59. An
-   * API may allow the value 60 if it allows leap-seconds.
+   * Optional. Seconds of minutes of the time. Must normally be from 0 to 59,
+   * defaults to 0. An API may allow the value 60 if it allows leap-seconds.
    * </pre>
    *
    * <code>int32 seconds = 6 [json_name = "seconds"];</code>
@@ -77,8 +78,8 @@ public interface DateTimeOrBuilder extends
 
   /**
    * <pre>
-   * Required. Fractions of seconds in nanoseconds. Must be from 0 to
-   * 999,999,999.
+   * Optional. Fractions of seconds in nanoseconds. Must be from 0 to
+   * 999,999,999, defaults to 0.
    * </pre>
    *
    * <code>int32 nanos = 7 [json_name = "nanos"];</code>

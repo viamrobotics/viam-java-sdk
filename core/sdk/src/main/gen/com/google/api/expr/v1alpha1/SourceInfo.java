@@ -53,7 +53,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -65,7 +65,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -77,7 +77,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -90,7 +90,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -103,7 +103,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -768,7 +768,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -784,7 +784,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -799,7 +799,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -816,7 +816,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -832,7 +832,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -856,7 +856,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -875,7 +875,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -892,7 +892,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -910,7 +910,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * ```
      *
      * `repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];`
@@ -923,7 +923,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -940,7 +940,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -956,7 +956,7 @@ public  final class SourceInfo extends
      * If set, the listed components must understand the extension for the
      * expression to evaluate correctly.
      *
-     * This field has set semantics, repeated values should be deduplicated.
+     * This field has set semantics; repeated values should be deduplicated.
      * </pre>
      *
      * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -1219,7 +1219,7 @@ public  final class SourceInfo extends
        * If set, the listed components must understand the extension for the
        * expression to evaluate correctly.
        *
-       * This field has set semantics, repeated values should be deduplicated.
+       * This field has set semantics; repeated values should be deduplicated.
        * </pre>
        *
        * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -1234,7 +1234,7 @@ public  final class SourceInfo extends
        * If set, the listed components must understand the extension for the
        * expression to evaluate correctly.
        *
-       * This field has set semantics, repeated values should be deduplicated.
+       * This field has set semantics; repeated values should be deduplicated.
        * </pre>
        *
        * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -1249,7 +1249,7 @@ public  final class SourceInfo extends
        * If set, the listed components must understand the extension for the
        * expression to evaluate correctly.
        *
-       * This field has set semantics, repeated values should be deduplicated.
+       * This field has set semantics; repeated values should be deduplicated.
        * </pre>
        *
        * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -1265,7 +1265,7 @@ public  final class SourceInfo extends
        * If set, the listed components must understand the extension for the
        * expression to evaluate correctly.
        *
-       * This field has set semantics, repeated values should be deduplicated.
+       * This field has set semantics; repeated values should be deduplicated.
        * </pre>
        *
        * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -1284,7 +1284,7 @@ public  final class SourceInfo extends
        * If set, the listed components must understand the extension for the
        * expression to evaluate correctly.
        *
-       * This field has set semantics, repeated values should be deduplicated.
+       * This field has set semantics; repeated values should be deduplicated.
        * </pre>
        *
        * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -1301,7 +1301,7 @@ public  final class SourceInfo extends
        * If set, the listed components must understand the extension for the
        * expression to evaluate correctly.
        *
-       * This field has set semantics, repeated values should be deduplicated.
+       * This field has set semantics; repeated values should be deduplicated.
        * </pre>
        *
        * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -1318,7 +1318,7 @@ public  final class SourceInfo extends
        * If set, the listed components must understand the extension for the
        * expression to evaluate correctly.
        *
-       * This field has set semantics, repeated values should be deduplicated.
+       * This field has set semantics; repeated values should be deduplicated.
        * </pre>
        *
        * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -1334,7 +1334,7 @@ public  final class SourceInfo extends
        * If set, the listed components must understand the extension for the
        * expression to evaluate correctly.
        *
-       * This field has set semantics, repeated values should be deduplicated.
+       * This field has set semantics; repeated values should be deduplicated.
        * </pre>
        *
        * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -1351,7 +1351,7 @@ public  final class SourceInfo extends
        * If set, the listed components must understand the extension for the
        * expression to evaluate correctly.
        *
-       * This field has set semantics, repeated values should be deduplicated.
+       * This field has set semantics; repeated values should be deduplicated.
        * </pre>
        *
        * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -1367,7 +1367,7 @@ public  final class SourceInfo extends
        * If set, the listed components must understand the extension for the
        * expression to evaluate correctly.
        *
-       * This field has set semantics, repeated values should be deduplicated.
+       * This field has set semantics; repeated values should be deduplicated.
        * </pre>
        *
        * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -1386,7 +1386,7 @@ public  final class SourceInfo extends
        * If set, the listed components must understand the extension for the
        * expression to evaluate correctly.
        *
-       * This field has set semantics, repeated values should be deduplicated.
+       * This field has set semantics; repeated values should be deduplicated.
        * </pre>
        *
        * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -1404,7 +1404,7 @@ public  final class SourceInfo extends
        * If set, the listed components must understand the extension for the
        * expression to evaluate correctly.
        *
-       * This field has set semantics, repeated values should be deduplicated.
+       * This field has set semantics; repeated values should be deduplicated.
        * </pre>
        *
        * <code>repeated .google.api.expr.v1alpha1.SourceInfo.Extension.Component affected_components = 2 [json_name = "affectedComponents"];</code>
@@ -1739,7 +1739,7 @@ public  final class SourceInfo extends
    *
    * The line number of a given position is the index `i` where for a given
    * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-   * column may be derivd from `id_positions[id] - line_offsets[i]`.
+   * column may be derived from `id_positions[id] - line_offsets[i]`.
    * </pre>
    *
    * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -1757,7 +1757,7 @@ public  final class SourceInfo extends
    *
    * The line number of a given position is the index `i` where for a given
    * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-   * column may be derivd from `id_positions[id] - line_offsets[i]`.
+   * column may be derived from `id_positions[id] - line_offsets[i]`.
    * </pre>
    *
    * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -1774,7 +1774,7 @@ public  final class SourceInfo extends
    *
    * The line number of a given position is the index `i` where for a given
    * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-   * column may be derivd from `id_positions[id] - line_offsets[i]`.
+   * column may be derived from `id_positions[id] - line_offsets[i]`.
    * </pre>
    *
    * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -1800,7 +1800,7 @@ public  final class SourceInfo extends
    *
    * The line number of a given position is the index `i` where for a given
    * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-   * column may be derivd from `id_positions[id] - line_offsets[i]`.
+   * column may be derived from `id_positions[id] - line_offsets[i]`.
    * </pre>
    *
    * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -1819,7 +1819,7 @@ public  final class SourceInfo extends
    *
    * The line number of a given position is the index `i` where for a given
    * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-   * column may be derivd from `id_positions[id] - line_offsets[i]`.
+   * column may be derived from `id_positions[id] - line_offsets[i]`.
    * </pre>
    *
    * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -1836,7 +1836,7 @@ public  final class SourceInfo extends
    *
    * The line number of a given position is the index `i` where for a given
    * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-   * column may be derivd from `id_positions[id] - line_offsets[i]`.
+   * column may be derived from `id_positions[id] - line_offsets[i]`.
    * </pre>
    *
    * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -1855,7 +1855,7 @@ public  final class SourceInfo extends
    *
    * The line number of a given position is the index `i` where for a given
    * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-   * column may be derivd from `id_positions[id] - line_offsets[i]`.
+   * column may be derived from `id_positions[id] - line_offsets[i]`.
    * </pre>
    *
    * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -2609,7 +2609,7 @@ com.google.api.expr.v1alpha1.Expr defaultValue) {
      *
      * The line number of a given position is the index `i` where for a given
      * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-     * column may be derivd from `id_positions[id] - line_offsets[i]`.
+     * column may be derived from `id_positions[id] - line_offsets[i]`.
      * </pre>
      *
      * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -2628,7 +2628,7 @@ com.google.api.expr.v1alpha1.Expr defaultValue) {
      *
      * The line number of a given position is the index `i` where for a given
      * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-     * column may be derivd from `id_positions[id] - line_offsets[i]`.
+     * column may be derived from `id_positions[id] - line_offsets[i]`.
      * </pre>
      *
      * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -2645,7 +2645,7 @@ com.google.api.expr.v1alpha1.Expr defaultValue) {
      *
      * The line number of a given position is the index `i` where for a given
      * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-     * column may be derivd from `id_positions[id] - line_offsets[i]`.
+     * column may be derived from `id_positions[id] - line_offsets[i]`.
      * </pre>
      *
      * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -2663,7 +2663,7 @@ com.google.api.expr.v1alpha1.Expr defaultValue) {
      *
      * The line number of a given position is the index `i` where for a given
      * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-     * column may be derivd from `id_positions[id] - line_offsets[i]`.
+     * column may be derived from `id_positions[id] - line_offsets[i]`.
      * </pre>
      *
      * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -2683,7 +2683,7 @@ com.google.api.expr.v1alpha1.Expr defaultValue) {
      *
      * The line number of a given position is the index `i` where for a given
      * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-     * column may be derivd from `id_positions[id] - line_offsets[i]`.
+     * column may be derived from `id_positions[id] - line_offsets[i]`.
      * </pre>
      *
      * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -2702,7 +2702,7 @@ com.google.api.expr.v1alpha1.Expr defaultValue) {
      *
      * The line number of a given position is the index `i` where for a given
      * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-     * column may be derivd from `id_positions[id] - line_offsets[i]`.
+     * column may be derived from `id_positions[id] - line_offsets[i]`.
      * </pre>
      *
      * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>
@@ -2722,7 +2722,7 @@ com.google.api.expr.v1alpha1.Expr defaultValue) {
      *
      * The line number of a given position is the index `i` where for a given
      * `id` the `line_offsets[i] &lt; id_positions[id] &lt; line_offsets[i+1]`. The
-     * column may be derivd from `id_positions[id] - line_offsets[i]`.
+     * column may be derived from `id_positions[id] - line_offsets[i]`.
      * </pre>
      *
      * <code>repeated int32 line_offsets = 3 [json_name = "lineOffsets"];</code>

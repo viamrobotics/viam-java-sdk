@@ -141,14 +141,14 @@ public  final class ExprValue extends
   public static final int ERROR_FIELD_NUMBER = 2;
   /**
    * <pre>
-   * The set of errors in the critical path of evalution.
+   * The set of errors in the critical path of evaluation.
    *
    * Only errors in the critical path are included. For example,
    * `(&lt;error1&gt; || true) &amp;&amp; &lt;error2&gt;` will only result in `&lt;error2&gt;`,
    * while `&lt;error1&gt; || &lt;error2&gt;` will result in both `&lt;error1&gt;` and
    * `&lt;error2&gt;`.
    *
-   * Errors cause by the presence of other errors are not included in the
+   * Errors caused by the presence of other errors are not included in the
    * set. For example `&lt;error1&gt;.foo`, `foo(&lt;error1&gt;)`, and `&lt;error1&gt; + 1` will
    * only result in `&lt;error1&gt;`.
    *
@@ -167,14 +167,14 @@ public  final class ExprValue extends
   }
   /**
    * <pre>
-   * The set of errors in the critical path of evalution.
+   * The set of errors in the critical path of evaluation.
    *
    * Only errors in the critical path are included. For example,
    * `(&lt;error1&gt; || true) &amp;&amp; &lt;error2&gt;` will only result in `&lt;error2&gt;`,
    * while `&lt;error1&gt; || &lt;error2&gt;` will result in both `&lt;error1&gt;` and
    * `&lt;error2&gt;`.
    *
-   * Errors cause by the presence of other errors are not included in the
+   * Errors caused by the presence of other errors are not included in the
    * set. For example `&lt;error1&gt;.foo`, `foo(&lt;error1&gt;)`, and `&lt;error1&gt; + 1` will
    * only result in `&lt;error1&gt;`.
    *
@@ -196,14 +196,14 @@ public  final class ExprValue extends
   }
   /**
    * <pre>
-   * The set of errors in the critical path of evalution.
+   * The set of errors in the critical path of evaluation.
    *
    * Only errors in the critical path are included. For example,
    * `(&lt;error1&gt; || true) &amp;&amp; &lt;error2&gt;` will only result in `&lt;error2&gt;`,
    * while `&lt;error1&gt; || &lt;error2&gt;` will result in both `&lt;error1&gt;` and
    * `&lt;error2&gt;`.
    *
-   * Errors cause by the presence of other errors are not included in the
+   * Errors caused by the presence of other errors are not included in the
    * set. For example `&lt;error1&gt;.foo`, `foo(&lt;error1&gt;)`, and `&lt;error1&gt; + 1` will
    * only result in `&lt;error1&gt;`.
    *
@@ -224,14 +224,14 @@ public  final class ExprValue extends
   }
   /**
    * <pre>
-   * The set of errors in the critical path of evalution.
+   * The set of errors in the critical path of evaluation.
    *
    * Only errors in the critical path are included. For example,
    * `(&lt;error1&gt; || true) &amp;&amp; &lt;error2&gt;` will only result in `&lt;error2&gt;`,
    * while `&lt;error1&gt; || &lt;error2&gt;` will result in both `&lt;error1&gt;` and
    * `&lt;error2&gt;`.
    *
-   * Errors cause by the presence of other errors are not included in the
+   * Errors caused by the presence of other errors are not included in the
    * set. For example `&lt;error1&gt;.foo`, `foo(&lt;error1&gt;)`, and `&lt;error1&gt; + 1` will
    * only result in `&lt;error1&gt;`.
    *
@@ -258,14 +258,14 @@ public  final class ExprValue extends
   }
   /**
    * <pre>
-   * The set of errors in the critical path of evalution.
+   * The set of errors in the critical path of evaluation.
    *
    * Only errors in the critical path are included. For example,
    * `(&lt;error1&gt; || true) &amp;&amp; &lt;error2&gt;` will only result in `&lt;error2&gt;`,
    * while `&lt;error1&gt; || &lt;error2&gt;` will result in both `&lt;error1&gt;` and
    * `&lt;error2&gt;`.
    *
-   * Errors cause by the presence of other errors are not included in the
+   * Errors caused by the presence of other errors are not included in the
    * set. For example `&lt;error1&gt;.foo`, `foo(&lt;error1&gt;)`, and `&lt;error1&gt; + 1` will
    * only result in `&lt;error1&gt;`.
    *
@@ -302,13 +302,13 @@ public  final class ExprValue extends
    * foo(&lt;unknown[1]&gt;) -&gt; &lt;unknown[1]&gt;
    * &lt;unknown[1]&gt; + &lt;unknown[2]&gt; -&gt; &lt;unknown[1]&gt; or &lt;unknown[2[&gt;
    *
-   * Unknown takes precidence over Error in cases where a `Value` can short
+   * Unknown takes precedence over Error in cases where a `Value` can short
    * circuit the result:
    *
    * &lt;error&gt; || &lt;unknown&gt; -&gt; &lt;unknown&gt;
    * &lt;error&gt; &amp;&amp; &lt;unknown&gt; -&gt; &lt;unknown&gt;
    *
-   * Errors take precidence in all other cases:
+   * Errors take precedence in all other cases:
    *
    * &lt;unknown&gt; + &lt;error&gt; -&gt; &lt;error&gt;
    * foo(&lt;unknown&gt;, &lt;error&gt;) -&gt; &lt;error&gt;
@@ -336,13 +336,13 @@ public  final class ExprValue extends
    * foo(&lt;unknown[1]&gt;) -&gt; &lt;unknown[1]&gt;
    * &lt;unknown[1]&gt; + &lt;unknown[2]&gt; -&gt; &lt;unknown[1]&gt; or &lt;unknown[2[&gt;
    *
-   * Unknown takes precidence over Error in cases where a `Value` can short
+   * Unknown takes precedence over Error in cases where a `Value` can short
    * circuit the result:
    *
    * &lt;error&gt; || &lt;unknown&gt; -&gt; &lt;unknown&gt;
    * &lt;error&gt; &amp;&amp; &lt;unknown&gt; -&gt; &lt;unknown&gt;
    *
-   * Errors take precidence in all other cases:
+   * Errors take precedence in all other cases:
    *
    * &lt;unknown&gt; + &lt;error&gt; -&gt; &lt;error&gt;
    * foo(&lt;unknown&gt;, &lt;error&gt;) -&gt; &lt;error&gt;
@@ -373,13 +373,13 @@ public  final class ExprValue extends
    * foo(&lt;unknown[1]&gt;) -&gt; &lt;unknown[1]&gt;
    * &lt;unknown[1]&gt; + &lt;unknown[2]&gt; -&gt; &lt;unknown[1]&gt; or &lt;unknown[2[&gt;
    *
-   * Unknown takes precidence over Error in cases where a `Value` can short
+   * Unknown takes precedence over Error in cases where a `Value` can short
    * circuit the result:
    *
    * &lt;error&gt; || &lt;unknown&gt; -&gt; &lt;unknown&gt;
    * &lt;error&gt; &amp;&amp; &lt;unknown&gt; -&gt; &lt;unknown&gt;
    *
-   * Errors take precidence in all other cases:
+   * Errors take precedence in all other cases:
    *
    * &lt;unknown&gt; + &lt;error&gt; -&gt; &lt;error&gt;
    * foo(&lt;unknown&gt;, &lt;error&gt;) -&gt; &lt;error&gt;
@@ -409,13 +409,13 @@ public  final class ExprValue extends
    * foo(&lt;unknown[1]&gt;) -&gt; &lt;unknown[1]&gt;
    * &lt;unknown[1]&gt; + &lt;unknown[2]&gt; -&gt; &lt;unknown[1]&gt; or &lt;unknown[2[&gt;
    *
-   * Unknown takes precidence over Error in cases where a `Value` can short
+   * Unknown takes precedence over Error in cases where a `Value` can short
    * circuit the result:
    *
    * &lt;error&gt; || &lt;unknown&gt; -&gt; &lt;unknown&gt;
    * &lt;error&gt; &amp;&amp; &lt;unknown&gt; -&gt; &lt;unknown&gt;
    *
-   * Errors take precidence in all other cases:
+   * Errors take precedence in all other cases:
    *
    * &lt;unknown&gt; + &lt;error&gt; -&gt; &lt;error&gt;
    * foo(&lt;unknown&gt;, &lt;error&gt;) -&gt; &lt;error&gt;
@@ -451,13 +451,13 @@ public  final class ExprValue extends
    * foo(&lt;unknown[1]&gt;) -&gt; &lt;unknown[1]&gt;
    * &lt;unknown[1]&gt; + &lt;unknown[2]&gt; -&gt; &lt;unknown[1]&gt; or &lt;unknown[2[&gt;
    *
-   * Unknown takes precidence over Error in cases where a `Value` can short
+   * Unknown takes precedence over Error in cases where a `Value` can short
    * circuit the result:
    *
    * &lt;error&gt; || &lt;unknown&gt; -&gt; &lt;unknown&gt;
    * &lt;error&gt; &amp;&amp; &lt;unknown&gt; -&gt; &lt;unknown&gt;
    *
-   * Errors take precidence in all other cases:
+   * Errors take precedence in all other cases:
    *
    * &lt;unknown&gt; + &lt;error&gt; -&gt; &lt;error&gt;
    * foo(&lt;unknown&gt;, &lt;error&gt;) -&gt; &lt;error&gt;
@@ -659,14 +659,14 @@ public  final class ExprValue extends
 
     /**
      * <pre>
-     * The set of errors in the critical path of evalution.
+     * The set of errors in the critical path of evaluation.
      *
      * Only errors in the critical path are included. For example,
      * `(&lt;error1&gt; || true) &amp;&amp; &lt;error2&gt;` will only result in `&lt;error2&gt;`,
      * while `&lt;error1&gt; || &lt;error2&gt;` will result in both `&lt;error1&gt;` and
      * `&lt;error2&gt;`.
      *
-     * Errors cause by the presence of other errors are not included in the
+     * Errors caused by the presence of other errors are not included in the
      * set. For example `&lt;error1&gt;.foo`, `foo(&lt;error1&gt;)`, and `&lt;error1&gt; + 1` will
      * only result in `&lt;error1&gt;`.
      *
@@ -685,14 +685,14 @@ public  final class ExprValue extends
     }
     /**
      * <pre>
-     * The set of errors in the critical path of evalution.
+     * The set of errors in the critical path of evaluation.
      *
      * Only errors in the critical path are included. For example,
      * `(&lt;error1&gt; || true) &amp;&amp; &lt;error2&gt;` will only result in `&lt;error2&gt;`,
      * while `&lt;error1&gt; || &lt;error2&gt;` will result in both `&lt;error1&gt;` and
      * `&lt;error2&gt;`.
      *
-     * Errors cause by the presence of other errors are not included in the
+     * Errors caused by the presence of other errors are not included in the
      * set. For example `&lt;error1&gt;.foo`, `foo(&lt;error1&gt;)`, and `&lt;error1&gt; + 1` will
      * only result in `&lt;error1&gt;`.
      *
@@ -711,14 +711,14 @@ public  final class ExprValue extends
     }
     /**
      * <pre>
-     * The set of errors in the critical path of evalution.
+     * The set of errors in the critical path of evaluation.
      *
      * Only errors in the critical path are included. For example,
      * `(&lt;error1&gt; || true) &amp;&amp; &lt;error2&gt;` will only result in `&lt;error2&gt;`,
      * while `&lt;error1&gt; || &lt;error2&gt;` will result in both `&lt;error1&gt;` and
      * `&lt;error2&gt;`.
      *
-     * Errors cause by the presence of other errors are not included in the
+     * Errors caused by the presence of other errors are not included in the
      * set. For example `&lt;error1&gt;.foo`, `foo(&lt;error1&gt;)`, and `&lt;error1&gt; + 1` will
      * only result in `&lt;error1&gt;`.
      *
@@ -738,14 +738,14 @@ public  final class ExprValue extends
     }
     /**
      * <pre>
-     * The set of errors in the critical path of evalution.
+     * The set of errors in the critical path of evaluation.
      *
      * Only errors in the critical path are included. For example,
      * `(&lt;error1&gt; || true) &amp;&amp; &lt;error2&gt;` will only result in `&lt;error2&gt;`,
      * while `&lt;error1&gt; || &lt;error2&gt;` will result in both `&lt;error1&gt;` and
      * `&lt;error2&gt;`.
      *
-     * Errors cause by the presence of other errors are not included in the
+     * Errors caused by the presence of other errors are not included in the
      * set. For example `&lt;error1&gt;.foo`, `foo(&lt;error1&gt;)`, and `&lt;error1&gt; + 1` will
      * only result in `&lt;error1&gt;`.
      *
@@ -766,14 +766,14 @@ public  final class ExprValue extends
     }
     /**
      * <pre>
-     * The set of errors in the critical path of evalution.
+     * The set of errors in the critical path of evaluation.
      *
      * Only errors in the critical path are included. For example,
      * `(&lt;error1&gt; || true) &amp;&amp; &lt;error2&gt;` will only result in `&lt;error2&gt;`,
      * while `&lt;error1&gt; || &lt;error2&gt;` will result in both `&lt;error1&gt;` and
      * `&lt;error2&gt;`.
      *
-     * Errors cause by the presence of other errors are not included in the
+     * Errors caused by the presence of other errors are not included in the
      * set. For example `&lt;error1&gt;.foo`, `foo(&lt;error1&gt;)`, and `&lt;error1&gt; + 1` will
      * only result in `&lt;error1&gt;`.
      *
@@ -793,14 +793,14 @@ public  final class ExprValue extends
     }
     /**
      * <pre>
-     * The set of errors in the critical path of evalution.
+     * The set of errors in the critical path of evaluation.
      *
      * Only errors in the critical path are included. For example,
      * `(&lt;error1&gt; || true) &amp;&amp; &lt;error2&gt;` will only result in `&lt;error2&gt;`,
      * while `&lt;error1&gt; || &lt;error2&gt;` will result in both `&lt;error1&gt;` and
      * `&lt;error2&gt;`.
      *
-     * Errors cause by the presence of other errors are not included in the
+     * Errors caused by the presence of other errors are not included in the
      * set. For example `&lt;error1&gt;.foo`, `foo(&lt;error1&gt;)`, and `&lt;error1&gt; + 1` will
      * only result in `&lt;error1&gt;`.
      *
@@ -835,13 +835,13 @@ public  final class ExprValue extends
      * foo(&lt;unknown[1]&gt;) -&gt; &lt;unknown[1]&gt;
      * &lt;unknown[1]&gt; + &lt;unknown[2]&gt; -&gt; &lt;unknown[1]&gt; or &lt;unknown[2[&gt;
      *
-     * Unknown takes precidence over Error in cases where a `Value` can short
+     * Unknown takes precedence over Error in cases where a `Value` can short
      * circuit the result:
      *
      * &lt;error&gt; || &lt;unknown&gt; -&gt; &lt;unknown&gt;
      * &lt;error&gt; &amp;&amp; &lt;unknown&gt; -&gt; &lt;unknown&gt;
      *
-     * Errors take precidence in all other cases:
+     * Errors take precedence in all other cases:
      *
      * &lt;unknown&gt; + &lt;error&gt; -&gt; &lt;error&gt;
      * foo(&lt;unknown&gt;, &lt;error&gt;) -&gt; &lt;error&gt;
@@ -869,13 +869,13 @@ public  final class ExprValue extends
      * foo(&lt;unknown[1]&gt;) -&gt; &lt;unknown[1]&gt;
      * &lt;unknown[1]&gt; + &lt;unknown[2]&gt; -&gt; &lt;unknown[1]&gt; or &lt;unknown[2[&gt;
      *
-     * Unknown takes precidence over Error in cases where a `Value` can short
+     * Unknown takes precedence over Error in cases where a `Value` can short
      * circuit the result:
      *
      * &lt;error&gt; || &lt;unknown&gt; -&gt; &lt;unknown&gt;
      * &lt;error&gt; &amp;&amp; &lt;unknown&gt; -&gt; &lt;unknown&gt;
      *
-     * Errors take precidence in all other cases:
+     * Errors take precedence in all other cases:
      *
      * &lt;unknown&gt; + &lt;error&gt; -&gt; &lt;error&gt;
      * foo(&lt;unknown&gt;, &lt;error&gt;) -&gt; &lt;error&gt;
@@ -903,13 +903,13 @@ public  final class ExprValue extends
      * foo(&lt;unknown[1]&gt;) -&gt; &lt;unknown[1]&gt;
      * &lt;unknown[1]&gt; + &lt;unknown[2]&gt; -&gt; &lt;unknown[1]&gt; or &lt;unknown[2[&gt;
      *
-     * Unknown takes precidence over Error in cases where a `Value` can short
+     * Unknown takes precedence over Error in cases where a `Value` can short
      * circuit the result:
      *
      * &lt;error&gt; || &lt;unknown&gt; -&gt; &lt;unknown&gt;
      * &lt;error&gt; &amp;&amp; &lt;unknown&gt; -&gt; &lt;unknown&gt;
      *
-     * Errors take precidence in all other cases:
+     * Errors take precedence in all other cases:
      *
      * &lt;unknown&gt; + &lt;error&gt; -&gt; &lt;error&gt;
      * foo(&lt;unknown&gt;, &lt;error&gt;) -&gt; &lt;error&gt;
@@ -938,13 +938,13 @@ public  final class ExprValue extends
      * foo(&lt;unknown[1]&gt;) -&gt; &lt;unknown[1]&gt;
      * &lt;unknown[1]&gt; + &lt;unknown[2]&gt; -&gt; &lt;unknown[1]&gt; or &lt;unknown[2[&gt;
      *
-     * Unknown takes precidence over Error in cases where a `Value` can short
+     * Unknown takes precedence over Error in cases where a `Value` can short
      * circuit the result:
      *
      * &lt;error&gt; || &lt;unknown&gt; -&gt; &lt;unknown&gt;
      * &lt;error&gt; &amp;&amp; &lt;unknown&gt; -&gt; &lt;unknown&gt;
      *
-     * Errors take precidence in all other cases:
+     * Errors take precedence in all other cases:
      *
      * &lt;unknown&gt; + &lt;error&gt; -&gt; &lt;error&gt;
      * foo(&lt;unknown&gt;, &lt;error&gt;) -&gt; &lt;error&gt;
@@ -974,13 +974,13 @@ public  final class ExprValue extends
      * foo(&lt;unknown[1]&gt;) -&gt; &lt;unknown[1]&gt;
      * &lt;unknown[1]&gt; + &lt;unknown[2]&gt; -&gt; &lt;unknown[1]&gt; or &lt;unknown[2[&gt;
      *
-     * Unknown takes precidence over Error in cases where a `Value` can short
+     * Unknown takes precedence over Error in cases where a `Value` can short
      * circuit the result:
      *
      * &lt;error&gt; || &lt;unknown&gt; -&gt; &lt;unknown&gt;
      * &lt;error&gt; &amp;&amp; &lt;unknown&gt; -&gt; &lt;unknown&gt;
      *
-     * Errors take precidence in all other cases:
+     * Errors take precedence in all other cases:
      *
      * &lt;unknown&gt; + &lt;error&gt; -&gt; &lt;error&gt;
      * foo(&lt;unknown&gt;, &lt;error&gt;) -&gt; &lt;error&gt;
@@ -1009,13 +1009,13 @@ public  final class ExprValue extends
      * foo(&lt;unknown[1]&gt;) -&gt; &lt;unknown[1]&gt;
      * &lt;unknown[1]&gt; + &lt;unknown[2]&gt; -&gt; &lt;unknown[1]&gt; or &lt;unknown[2[&gt;
      *
-     * Unknown takes precidence over Error in cases where a `Value` can short
+     * Unknown takes precedence over Error in cases where a `Value` can short
      * circuit the result:
      *
      * &lt;error&gt; || &lt;unknown&gt; -&gt; &lt;unknown&gt;
      * &lt;error&gt; &amp;&amp; &lt;unknown&gt; -&gt; &lt;unknown&gt;
      *
-     * Errors take precidence in all other cases:
+     * Errors take precedence in all other cases:
      *
      * &lt;unknown&gt; + &lt;error&gt; -&gt; &lt;error&gt;
      * foo(&lt;unknown&gt;, &lt;error&gt;) -&gt; &lt;error&gt;

@@ -14,7 +14,7 @@ public interface MapValueOrBuilder extends
    * <pre>
    * The set of map entries.
    *
-   * CEL has fewer restrictions on keys, so a protobuf map represenation
+   * CEL has fewer restrictions on keys, so a protobuf map representation
    * cannot be used.
    * </pre>
    *
@@ -26,7 +26,7 @@ public interface MapValueOrBuilder extends
    * <pre>
    * The set of map entries.
    *
-   * CEL has fewer restrictions on keys, so a protobuf map represenation
+   * CEL has fewer restrictions on keys, so a protobuf map representation
    * cannot be used.
    * </pre>
    *
@@ -37,7 +37,7 @@ public interface MapValueOrBuilder extends
    * <pre>
    * The set of map entries.
    *
-   * CEL has fewer restrictions on keys, so a protobuf map represenation
+   * CEL has fewer restrictions on keys, so a protobuf map representation
    * cannot be used.
    * </pre>
    *

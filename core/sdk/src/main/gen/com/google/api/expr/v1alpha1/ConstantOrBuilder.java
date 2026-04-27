@@ -166,12 +166,12 @@ public interface ConstantOrBuilder extends
    * <pre>
    * protobuf.Duration value.
    *
-   * Deprecated: duration is no longer considered a builtin cel type.
+   * Deprecated: duration is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Duration duration_value = 8 [json_name = "durationValue", deprecated = true];</code>
    * @deprecated google.api.expr.v1alpha1.Constant.duration_value is deprecated.
-   *     See google/api/expr/v1alpha1/syntax.proto;l=325
+   *     See google/api/expr/v1alpha1/syntax.proto;l=323
    * @return Whether the durationValue field is set.
    */
   @java.lang.Deprecated boolean hasDurationValue();
@@ -179,12 +179,12 @@ public interface ConstantOrBuilder extends
    * <pre>
    * protobuf.Duration value.
    *
-   * Deprecated: duration is no longer considered a builtin cel type.
+   * Deprecated: duration is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Duration duration_value = 8 [json_name = "durationValue", deprecated = true];</code>
    * @deprecated google.api.expr.v1alpha1.Constant.duration_value is deprecated.
-   *     See google/api/expr/v1alpha1/syntax.proto;l=325
+   *     See google/api/expr/v1alpha1/syntax.proto;l=323
    * @return The durationValue.
    */
   @java.lang.Deprecated com.google.protobuf.Duration getDurationValue();
@@ -193,12 +193,12 @@ public interface ConstantOrBuilder extends
    * <pre>
    * protobuf.Timestamp value.
    *
-   * Deprecated: timestamp is no longer considered a builtin cel type.
+   * Deprecated: timestamp is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp timestamp_value = 9 [json_name = "timestampValue", deprecated = true];</code>
    * @deprecated google.api.expr.v1alpha1.Constant.timestamp_value is deprecated.
-   *     See google/api/expr/v1alpha1/syntax.proto;l=330
+   *     See google/api/expr/v1alpha1/syntax.proto;l=328
    * @return Whether the timestampValue field is set.
    */
   @java.lang.Deprecated boolean hasTimestampValue();
@@ -206,12 +206,12 @@ public interface ConstantOrBuilder extends
    * <pre>
    * protobuf.Timestamp value.
    *
-   * Deprecated: timestamp is no longer considered a builtin cel type.
+   * Deprecated: timestamp is no longer considered a builtin CEL type.
    * </pre>
    *
    * <code>.google.protobuf.Timestamp timestamp_value = 9 [json_name = "timestampValue", deprecated = true];</code>
    * @deprecated google.api.expr.v1alpha1.Constant.timestamp_value is deprecated.
-   *     See google/api/expr/v1alpha1/syntax.proto;l=330
+   *     See google/api/expr/v1alpha1/syntax.proto;l=328
    * @return The timestampValue.
    */
   @java.lang.Deprecated com.google.protobuf.Timestamp getTimestampValue();

@@ -1035,6 +1035,36 @@ public final class AppServiceGrpc {
     return getListOAuthAppsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.CreateOAuthAppUserRequest,
+      viam.app.v1.AppOuterClass.CreateOAuthAppUserResponse> getCreateOAuthAppUserMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateOAuthAppUser",
+      requestType = viam.app.v1.AppOuterClass.CreateOAuthAppUserRequest.class,
+      responseType = viam.app.v1.AppOuterClass.CreateOAuthAppUserResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.CreateOAuthAppUserRequest,
+      viam.app.v1.AppOuterClass.CreateOAuthAppUserResponse> getCreateOAuthAppUserMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.CreateOAuthAppUserRequest, viam.app.v1.AppOuterClass.CreateOAuthAppUserResponse> getCreateOAuthAppUserMethod;
+    if ((getCreateOAuthAppUserMethod = AppServiceGrpc.getCreateOAuthAppUserMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getCreateOAuthAppUserMethod = AppServiceGrpc.getCreateOAuthAppUserMethod) == null) {
+          AppServiceGrpc.getCreateOAuthAppUserMethod = getCreateOAuthAppUserMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.CreateOAuthAppUserRequest, viam.app.v1.AppOuterClass.CreateOAuthAppUserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateOAuthAppUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.CreateOAuthAppUserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.CreateOAuthAppUserResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getCreateOAuthAppUserMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.CreateLocationRequest,
       viam.app.v1.AppOuterClass.CreateLocationResponse> getCreateLocationMethod;
 
@@ -3827,6 +3857,13 @@ public final class AppServiceGrpc {
     }
 
     /**
+     */
+    default void createOAuthAppUser(viam.app.v1.AppOuterClass.CreateOAuthAppUserRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.CreateOAuthAppUserResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateOAuthAppUserMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * Create a location
      * </pre>
@@ -4935,6 +4972,14 @@ public final class AppServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListOAuthAppsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOAuthAppsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void createOAuthAppUser(viam.app.v1.AppOuterClass.CreateOAuthAppUserRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.CreateOAuthAppUserResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateOAuthAppUserMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -6082,6 +6127,13 @@ public final class AppServiceGrpc {
     }
 
     /**
+     */
+    public viam.app.v1.AppOuterClass.CreateOAuthAppUserResponse createOAuthAppUser(viam.app.v1.AppOuterClass.CreateOAuthAppUserRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateOAuthAppUserMethod(), getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * Create a location
      * </pre>
@@ -7146,6 +7198,13 @@ public final class AppServiceGrpc {
     public viam.app.v1.AppOuterClass.ListOAuthAppsResponse listOAuthApps(viam.app.v1.AppOuterClass.ListOAuthAppsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOAuthAppsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.CreateOAuthAppUserResponse createOAuthAppUser(viam.app.v1.AppOuterClass.CreateOAuthAppUserRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateOAuthAppUserMethod(), getCallOptions(), request);
     }
 
     /**
@@ -8240,6 +8299,14 @@ public final class AppServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.CreateOAuthAppUserResponse> createOAuthAppUser(
+        viam.app.v1.AppOuterClass.CreateOAuthAppUserRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateOAuthAppUserMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * Create a location
      * </pre>
@@ -9087,87 +9154,88 @@ public final class AppServiceGrpc {
   private static final int METHODID_UPDATE_OAUTH_APP = 31;
   private static final int METHODID_DELETE_OAUTH_APP = 32;
   private static final int METHODID_LIST_OAUTH_APPS = 33;
-  private static final int METHODID_CREATE_LOCATION = 34;
-  private static final int METHODID_GET_LOCATION = 35;
-  private static final int METHODID_UPDATE_LOCATION = 36;
-  private static final int METHODID_DELETE_LOCATION = 37;
-  private static final int METHODID_GET_LOCATION_METADATA = 38;
-  private static final int METHODID_UPDATE_LOCATION_METADATA = 39;
-  private static final int METHODID_LIST_LOCATIONS = 40;
-  private static final int METHODID_SHARE_LOCATION = 41;
-  private static final int METHODID_UNSHARE_LOCATION = 42;
-  private static final int METHODID_LOCATION_AUTH = 43;
-  private static final int METHODID_CREATE_LOCATION_SECRET = 44;
-  private static final int METHODID_DELETE_LOCATION_SECRET = 45;
-  private static final int METHODID_GET_ROBOT = 46;
-  private static final int METHODID_GET_ROBOT_METADATA = 47;
-  private static final int METHODID_UPDATE_ROBOT_METADATA = 48;
-  private static final int METHODID_GET_ROVER_RENTAL_ROBOTS = 49;
-  private static final int METHODID_GET_ROBOT_PARTS = 50;
-  private static final int METHODID_GET_ROBOT_PART = 51;
-  private static final int METHODID_GET_ROBOT_PART_BY_NAME_AND_LOCATION = 52;
-  private static final int METHODID_GET_ROBOT_PART_LOGS = 53;
-  private static final int METHODID_TAIL_ROBOT_PART_LOGS = 54;
-  private static final int METHODID_GET_ROBOT_PART_HISTORY = 55;
-  private static final int METHODID_UPDATE_ROBOT_PART = 56;
-  private static final int METHODID_NEW_ROBOT_PART = 57;
-  private static final int METHODID_DELETE_ROBOT_PART = 58;
-  private static final int METHODID_GET_ROBOT_PART_METADATA = 59;
-  private static final int METHODID_UPDATE_ROBOT_PART_METADATA = 60;
-  private static final int METHODID_GET_ROBOT_APIKEYS = 61;
-  private static final int METHODID_MARK_PART_AS_MAIN = 62;
-  private static final int METHODID_MARK_PART_FOR_RESTART = 63;
-  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 64;
-  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 65;
-  private static final int METHODID_LIST_ROBOTS = 66;
-  private static final int METHODID_LIST_ROBOTS_FOR_LOCATIONS = 67;
-  private static final int METHODID_LIST_ROBOTS_FOR_ORG = 68;
-  private static final int METHODID_NEW_ROBOT = 69;
-  private static final int METHODID_UPDATE_ROBOT = 70;
-  private static final int METHODID_DELETE_ROBOT = 71;
-  private static final int METHODID_LIST_FRAGMENTS = 72;
-  private static final int METHODID_GET_FRAGMENT = 73;
-  private static final int METHODID_CREATE_FRAGMENT = 74;
-  private static final int METHODID_UPDATE_FRAGMENT = 75;
-  private static final int METHODID_DELETE_FRAGMENT = 76;
-  private static final int METHODID_LIST_NESTED_FRAGMENTS = 77;
-  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 78;
-  private static final int METHODID_LIST_MACHINE_SUMMARIES = 79;
-  private static final int METHODID_GET_FRAGMENT_HISTORY = 80;
-  private static final int METHODID_GET_FRAGMENT_USAGE = 81;
-  private static final int METHODID_SET_FRAGMENT_TAG = 82;
-  private static final int METHODID_DELETE_FRAGMENT_TAG = 83;
-  private static final int METHODID_ADD_ROLE = 84;
-  private static final int METHODID_REMOVE_ROLE = 85;
-  private static final int METHODID_CHANGE_ROLE = 86;
-  private static final int METHODID_LIST_AUTHORIZATIONS = 87;
-  private static final int METHODID_CHECK_PERMISSIONS = 88;
-  private static final int METHODID_GET_REGISTRY_ITEM = 89;
-  private static final int METHODID_CREATE_REGISTRY_ITEM = 90;
-  private static final int METHODID_UPDATE_REGISTRY_ITEM = 91;
-  private static final int METHODID_LIST_REGISTRY_ITEMS = 92;
-  private static final int METHODID_DELETE_REGISTRY_ITEM = 93;
-  private static final int METHODID_RENAME_REGISTRY_ITEM = 94;
-  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 95;
-  private static final int METHODID_CREATE_MODULE = 96;
-  private static final int METHODID_UPDATE_MODULE = 97;
-  private static final int METHODID_GET_MODULE = 98;
-  private static final int METHODID_LIST_MODULES = 99;
-  private static final int METHODID_CREATE_KEY = 100;
-  private static final int METHODID_DELETE_KEY = 101;
-  private static final int METHODID_LIST_KEYS = 102;
-  private static final int METHODID_RENAME_KEY = 103;
-  private static final int METHODID_ROTATE_KEY = 104;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 105;
-  private static final int METHODID_GET_APP_CONTENT = 106;
-  private static final int METHODID_GET_APP_BRANDING = 107;
-  private static final int METHODID_UPLOAD_DEVICE_PUSH_TOKEN = 108;
-  private static final int METHODID_DELETE_DEVICE_PUSH_TOKEN = 109;
-  private static final int METHODID_GET_DEVICE_PUSH_TOKENS = 110;
-  private static final int METHODID_SET_FIREBASE_CONFIG = 111;
-  private static final int METHODID_GET_FIREBASE_CONFIG = 112;
-  private static final int METHODID_DELETE_FIREBASE_CONFIG = 113;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 114;
+  private static final int METHODID_CREATE_OAUTH_APP_USER = 34;
+  private static final int METHODID_CREATE_LOCATION = 35;
+  private static final int METHODID_GET_LOCATION = 36;
+  private static final int METHODID_UPDATE_LOCATION = 37;
+  private static final int METHODID_DELETE_LOCATION = 38;
+  private static final int METHODID_GET_LOCATION_METADATA = 39;
+  private static final int METHODID_UPDATE_LOCATION_METADATA = 40;
+  private static final int METHODID_LIST_LOCATIONS = 41;
+  private static final int METHODID_SHARE_LOCATION = 42;
+  private static final int METHODID_UNSHARE_LOCATION = 43;
+  private static final int METHODID_LOCATION_AUTH = 44;
+  private static final int METHODID_CREATE_LOCATION_SECRET = 45;
+  private static final int METHODID_DELETE_LOCATION_SECRET = 46;
+  private static final int METHODID_GET_ROBOT = 47;
+  private static final int METHODID_GET_ROBOT_METADATA = 48;
+  private static final int METHODID_UPDATE_ROBOT_METADATA = 49;
+  private static final int METHODID_GET_ROVER_RENTAL_ROBOTS = 50;
+  private static final int METHODID_GET_ROBOT_PARTS = 51;
+  private static final int METHODID_GET_ROBOT_PART = 52;
+  private static final int METHODID_GET_ROBOT_PART_BY_NAME_AND_LOCATION = 53;
+  private static final int METHODID_GET_ROBOT_PART_LOGS = 54;
+  private static final int METHODID_TAIL_ROBOT_PART_LOGS = 55;
+  private static final int METHODID_GET_ROBOT_PART_HISTORY = 56;
+  private static final int METHODID_UPDATE_ROBOT_PART = 57;
+  private static final int METHODID_NEW_ROBOT_PART = 58;
+  private static final int METHODID_DELETE_ROBOT_PART = 59;
+  private static final int METHODID_GET_ROBOT_PART_METADATA = 60;
+  private static final int METHODID_UPDATE_ROBOT_PART_METADATA = 61;
+  private static final int METHODID_GET_ROBOT_APIKEYS = 62;
+  private static final int METHODID_MARK_PART_AS_MAIN = 63;
+  private static final int METHODID_MARK_PART_FOR_RESTART = 64;
+  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 65;
+  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 66;
+  private static final int METHODID_LIST_ROBOTS = 67;
+  private static final int METHODID_LIST_ROBOTS_FOR_LOCATIONS = 68;
+  private static final int METHODID_LIST_ROBOTS_FOR_ORG = 69;
+  private static final int METHODID_NEW_ROBOT = 70;
+  private static final int METHODID_UPDATE_ROBOT = 71;
+  private static final int METHODID_DELETE_ROBOT = 72;
+  private static final int METHODID_LIST_FRAGMENTS = 73;
+  private static final int METHODID_GET_FRAGMENT = 74;
+  private static final int METHODID_CREATE_FRAGMENT = 75;
+  private static final int METHODID_UPDATE_FRAGMENT = 76;
+  private static final int METHODID_DELETE_FRAGMENT = 77;
+  private static final int METHODID_LIST_NESTED_FRAGMENTS = 78;
+  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 79;
+  private static final int METHODID_LIST_MACHINE_SUMMARIES = 80;
+  private static final int METHODID_GET_FRAGMENT_HISTORY = 81;
+  private static final int METHODID_GET_FRAGMENT_USAGE = 82;
+  private static final int METHODID_SET_FRAGMENT_TAG = 83;
+  private static final int METHODID_DELETE_FRAGMENT_TAG = 84;
+  private static final int METHODID_ADD_ROLE = 85;
+  private static final int METHODID_REMOVE_ROLE = 86;
+  private static final int METHODID_CHANGE_ROLE = 87;
+  private static final int METHODID_LIST_AUTHORIZATIONS = 88;
+  private static final int METHODID_CHECK_PERMISSIONS = 89;
+  private static final int METHODID_GET_REGISTRY_ITEM = 90;
+  private static final int METHODID_CREATE_REGISTRY_ITEM = 91;
+  private static final int METHODID_UPDATE_REGISTRY_ITEM = 92;
+  private static final int METHODID_LIST_REGISTRY_ITEMS = 93;
+  private static final int METHODID_DELETE_REGISTRY_ITEM = 94;
+  private static final int METHODID_RENAME_REGISTRY_ITEM = 95;
+  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 96;
+  private static final int METHODID_CREATE_MODULE = 97;
+  private static final int METHODID_UPDATE_MODULE = 98;
+  private static final int METHODID_GET_MODULE = 99;
+  private static final int METHODID_LIST_MODULES = 100;
+  private static final int METHODID_CREATE_KEY = 101;
+  private static final int METHODID_DELETE_KEY = 102;
+  private static final int METHODID_LIST_KEYS = 103;
+  private static final int METHODID_RENAME_KEY = 104;
+  private static final int METHODID_ROTATE_KEY = 105;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 106;
+  private static final int METHODID_GET_APP_CONTENT = 107;
+  private static final int METHODID_GET_APP_BRANDING = 108;
+  private static final int METHODID_UPLOAD_DEVICE_PUSH_TOKEN = 109;
+  private static final int METHODID_DELETE_DEVICE_PUSH_TOKEN = 110;
+  private static final int METHODID_GET_DEVICE_PUSH_TOKENS = 111;
+  private static final int METHODID_SET_FIREBASE_CONFIG = 112;
+  private static final int METHODID_GET_FIREBASE_CONFIG = 113;
+  private static final int METHODID_DELETE_FIREBASE_CONFIG = 114;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 115;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -9321,6 +9389,10 @@ public final class AppServiceGrpc {
         case METHODID_LIST_OAUTH_APPS:
           serviceImpl.listOAuthApps((viam.app.v1.AppOuterClass.ListOAuthAppsRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListOAuthAppsResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_OAUTH_APP_USER:
+          serviceImpl.createOAuthAppUser((viam.app.v1.AppOuterClass.CreateOAuthAppUserRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.CreateOAuthAppUserResponse>) responseObserver);
           break;
         case METHODID_CREATE_LOCATION:
           serviceImpl.createLocation((viam.app.v1.AppOuterClass.CreateLocationRequest) request,
@@ -9901,6 +9973,13 @@ public final class AppServiceGrpc {
               viam.app.v1.AppOuterClass.ListOAuthAppsRequest,
               viam.app.v1.AppOuterClass.ListOAuthAppsResponse>(
                 service, METHODID_LIST_OAUTH_APPS)))
+        .addMethod(
+          getCreateOAuthAppUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.CreateOAuthAppUserRequest,
+              viam.app.v1.AppOuterClass.CreateOAuthAppUserResponse>(
+                service, METHODID_CREATE_OAUTH_APP_USER)))
         .addMethod(
           getCreateLocationMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -10514,6 +10593,7 @@ public final class AppServiceGrpc {
               .addMethod(getUpdateOAuthAppMethod())
               .addMethod(getDeleteOAuthAppMethod())
               .addMethod(getListOAuthAppsMethod())
+              .addMethod(getCreateOAuthAppUserMethod())
               .addMethod(getCreateLocationMethod())
               .addMethod(getGetLocationMethod())
               .addMethod(getUpdateLocationMethod())

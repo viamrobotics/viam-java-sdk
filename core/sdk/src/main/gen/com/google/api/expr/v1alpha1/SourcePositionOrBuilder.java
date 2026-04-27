@@ -12,7 +12,7 @@ public interface SourcePositionOrBuilder extends
 
   /**
    * <pre>
-   * The soucre location name (e.g. file name).
+   * The source location name (e.g. file name).
    * </pre>
    *
    * <code>string location = 1 [json_name = "location"];</code>
@@ -21,7 +21,7 @@ public interface SourcePositionOrBuilder extends
   java.lang.String getLocation();
   /**
    * <pre>
-   * The soucre location name (e.g. file name).
+   * The source location name (e.g. file name).
    * </pre>
    *
    * <code>string location = 1 [json_name = "location"];</code>

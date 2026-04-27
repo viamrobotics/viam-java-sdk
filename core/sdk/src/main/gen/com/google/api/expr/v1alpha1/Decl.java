@@ -748,6 +748,46 @@ public  final class Decl extends
      * <code>repeated .google.api.expr.v1alpha1.Decl.FunctionDecl.Overload overloads = 1 [json_name = "overloads"];</code>
      */
     int getOverloadsCount();
+
+    /**
+     * <pre>
+     * Documentation string for the function that indicates the general purpose
+     * of the function and its behavior.
+     *
+     * Documentation strings for the function should be general purpose with
+     * specific examples provided in the overload doc string.
+     *
+     * Examples:
+     *
+     * The 'in' operator tests whether an item exists in a collection.
+     *
+     * The 'substring' function returns a substring of a target string.
+     * </pre>
+     *
+     * <code>string doc = 2 [json_name = "doc"];</code>
+     * @return The doc.
+     */
+    java.lang.String getDoc();
+    /**
+     * <pre>
+     * Documentation string for the function that indicates the general purpose
+     * of the function and its behavior.
+     *
+     * Documentation strings for the function should be general purpose with
+     * specific examples provided in the overload doc string.
+     *
+     * Examples:
+     *
+     * The 'in' operator tests whether an item exists in a collection.
+     *
+     * The 'substring' function returns a substring of a target string.
+     * </pre>
+     *
+     * <code>string doc = 2 [json_name = "doc"];</code>
+     * @return The bytes for doc.
+     */
+    com.google.protobuf.ByteString
+        getDocBytes();
   }
   /**
    * <pre>
@@ -767,6 +807,7 @@ public  final class Decl extends
       FunctionDeclOrBuilder {
     private FunctionDecl() {
       overloads_ = emptyProtobufList();
+      doc_ = "";
     }
     public interface OverloadOrBuilder extends
         // @@protoc_insertion_point(interface_extends:google.api.expr.v1alpha1.Decl.FunctionDecl.Overload)
@@ -948,7 +989,23 @@ public  final class Decl extends
 
       /**
        * <pre>
-       * Documentation string for the overload.
+       * Examples for the overload and its expected return value, separated by
+       * newlines.
+       *
+       * Prefer using CEL literals in examples as they are easily consumed by
+       * humans and simple to validate with machines. The example should contain
+       * an expression with a literal return value in comments inline. If the
+       * expression example is too complex or would need an example for a
+       * variable that cannot be expressed in CEL, document the input and return
+       * in a comment preceding the example.
+       *
+       * Examples:
+       *
+       * 1 in [1, 2, 3] // true
+       * 'key' in {'key1: 1, 'key2': 2} // false
+       * // Test whether one or more keys exist within a map.
+       * // returns true if list_of_keys contains 'key2' or 'key3'
+       * list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
        * </pre>
        *
        * <code>string doc = 6 [json_name = "doc"];</code>
@@ -957,7 +1014,23 @@ public  final class Decl extends
       java.lang.String getDoc();
       /**
        * <pre>
-       * Documentation string for the overload.
+       * Examples for the overload and its expected return value, separated by
+       * newlines.
+       *
+       * Prefer using CEL literals in examples as they are easily consumed by
+       * humans and simple to validate with machines. The example should contain
+       * an expression with a literal return value in comments inline. If the
+       * expression example is too complex or would need an example for a
+       * variable that cannot be expressed in CEL, document the input and return
+       * in a comment preceding the example.
+       *
+       * Examples:
+       *
+       * 1 in [1, 2, 3] // true
+       * 'key' in {'key1: 1, 'key2': 2} // false
+       * // Test whether one or more keys exist within a map.
+       * // returns true if list_of_keys contains 'key2' or 'key3'
+       * list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
        * </pre>
        *
        * <code>string doc = 6 [json_name = "doc"];</code>
@@ -1623,7 +1696,23 @@ public  final class Decl extends
       private java.lang.String doc_;
       /**
        * <pre>
-       * Documentation string for the overload.
+       * Examples for the overload and its expected return value, separated by
+       * newlines.
+       *
+       * Prefer using CEL literals in examples as they are easily consumed by
+       * humans and simple to validate with machines. The example should contain
+       * an expression with a literal return value in comments inline. If the
+       * expression example is too complex or would need an example for a
+       * variable that cannot be expressed in CEL, document the input and return
+       * in a comment preceding the example.
+       *
+       * Examples:
+       *
+       * 1 in [1, 2, 3] // true
+       * 'key' in {'key1: 1, 'key2': 2} // false
+       * // Test whether one or more keys exist within a map.
+       * // returns true if list_of_keys contains 'key2' or 'key3'
+       * list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
        * </pre>
        *
        * <code>string doc = 6 [json_name = "doc"];</code>
@@ -1635,7 +1724,23 @@ public  final class Decl extends
       }
       /**
        * <pre>
-       * Documentation string for the overload.
+       * Examples for the overload and its expected return value, separated by
+       * newlines.
+       *
+       * Prefer using CEL literals in examples as they are easily consumed by
+       * humans and simple to validate with machines. The example should contain
+       * an expression with a literal return value in comments inline. If the
+       * expression example is too complex or would need an example for a
+       * variable that cannot be expressed in CEL, document the input and return
+       * in a comment preceding the example.
+       *
+       * Examples:
+       *
+       * 1 in [1, 2, 3] // true
+       * 'key' in {'key1: 1, 'key2': 2} // false
+       * // Test whether one or more keys exist within a map.
+       * // returns true if list_of_keys contains 'key2' or 'key3'
+       * list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
        * </pre>
        *
        * <code>string doc = 6 [json_name = "doc"];</code>
@@ -1648,7 +1753,23 @@ public  final class Decl extends
       }
       /**
        * <pre>
-       * Documentation string for the overload.
+       * Examples for the overload and its expected return value, separated by
+       * newlines.
+       *
+       * Prefer using CEL literals in examples as they are easily consumed by
+       * humans and simple to validate with machines. The example should contain
+       * an expression with a literal return value in comments inline. If the
+       * expression example is too complex or would need an example for a
+       * variable that cannot be expressed in CEL, document the input and return
+       * in a comment preceding the example.
+       *
+       * Examples:
+       *
+       * 1 in [1, 2, 3] // true
+       * 'key' in {'key1: 1, 'key2': 2} // false
+       * // Test whether one or more keys exist within a map.
+       * // returns true if list_of_keys contains 'key2' or 'key3'
+       * list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
        * </pre>
        *
        * <code>string doc = 6 [json_name = "doc"];</code>
@@ -1663,7 +1784,23 @@ public  final class Decl extends
       }
       /**
        * <pre>
-       * Documentation string for the overload.
+       * Examples for the overload and its expected return value, separated by
+       * newlines.
+       *
+       * Prefer using CEL literals in examples as they are easily consumed by
+       * humans and simple to validate with machines. The example should contain
+       * an expression with a literal return value in comments inline. If the
+       * expression example is too complex or would need an example for a
+       * variable that cannot be expressed in CEL, document the input and return
+       * in a comment preceding the example.
+       *
+       * Examples:
+       *
+       * 1 in [1, 2, 3] // true
+       * 'key' in {'key1: 1, 'key2': 2} // false
+       * // Test whether one or more keys exist within a map.
+       * // returns true if list_of_keys contains 'key2' or 'key3'
+       * list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
        * </pre>
        *
        * <code>string doc = 6 [json_name = "doc"];</code>
@@ -1674,7 +1811,23 @@ public  final class Decl extends
       }
       /**
        * <pre>
-       * Documentation string for the overload.
+       * Examples for the overload and its expected return value, separated by
+       * newlines.
+       *
+       * Prefer using CEL literals in examples as they are easily consumed by
+       * humans and simple to validate with machines. The example should contain
+       * an expression with a literal return value in comments inline. If the
+       * expression example is too complex or would need an example for a
+       * variable that cannot be expressed in CEL, document the input and return
+       * in a comment preceding the example.
+       *
+       * Examples:
+       *
+       * 1 in [1, 2, 3] // true
+       * 'key' in {'key1: 1, 'key2': 2} // false
+       * // Test whether one or more keys exist within a map.
+       * // returns true if list_of_keys contains 'key2' or 'key3'
+       * list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
        * </pre>
        *
        * <code>string doc = 6 [json_name = "doc"];</code>
@@ -2447,7 +2600,23 @@ public  final class Decl extends
 
         /**
          * <pre>
-         * Documentation string for the overload.
+         * Examples for the overload and its expected return value, separated by
+         * newlines.
+         *
+         * Prefer using CEL literals in examples as they are easily consumed by
+         * humans and simple to validate with machines. The example should contain
+         * an expression with a literal return value in comments inline. If the
+         * expression example is too complex or would need an example for a
+         * variable that cannot be expressed in CEL, document the input and return
+         * in a comment preceding the example.
+         *
+         * Examples:
+         *
+         * 1 in [1, 2, 3] // true
+         * 'key' in {'key1: 1, 'key2': 2} // false
+         * // Test whether one or more keys exist within a map.
+         * // returns true if list_of_keys contains 'key2' or 'key3'
+         * list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
          * </pre>
          *
          * <code>string doc = 6 [json_name = "doc"];</code>
@@ -2459,7 +2628,23 @@ public  final class Decl extends
         }
         /**
          * <pre>
-         * Documentation string for the overload.
+         * Examples for the overload and its expected return value, separated by
+         * newlines.
+         *
+         * Prefer using CEL literals in examples as they are easily consumed by
+         * humans and simple to validate with machines. The example should contain
+         * an expression with a literal return value in comments inline. If the
+         * expression example is too complex or would need an example for a
+         * variable that cannot be expressed in CEL, document the input and return
+         * in a comment preceding the example.
+         *
+         * Examples:
+         *
+         * 1 in [1, 2, 3] // true
+         * 'key' in {'key1: 1, 'key2': 2} // false
+         * // Test whether one or more keys exist within a map.
+         * // returns true if list_of_keys contains 'key2' or 'key3'
+         * list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
          * </pre>
          *
          * <code>string doc = 6 [json_name = "doc"];</code>
@@ -2472,7 +2657,23 @@ public  final class Decl extends
         }
         /**
          * <pre>
-         * Documentation string for the overload.
+         * Examples for the overload and its expected return value, separated by
+         * newlines.
+         *
+         * Prefer using CEL literals in examples as they are easily consumed by
+         * humans and simple to validate with machines. The example should contain
+         * an expression with a literal return value in comments inline. If the
+         * expression example is too complex or would need an example for a
+         * variable that cannot be expressed in CEL, document the input and return
+         * in a comment preceding the example.
+         *
+         * Examples:
+         *
+         * 1 in [1, 2, 3] // true
+         * 'key' in {'key1: 1, 'key2': 2} // false
+         * // Test whether one or more keys exist within a map.
+         * // returns true if list_of_keys contains 'key2' or 'key3'
+         * list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
          * </pre>
          *
          * <code>string doc = 6 [json_name = "doc"];</code>
@@ -2487,7 +2688,23 @@ public  final class Decl extends
         }
         /**
          * <pre>
-         * Documentation string for the overload.
+         * Examples for the overload and its expected return value, separated by
+         * newlines.
+         *
+         * Prefer using CEL literals in examples as they are easily consumed by
+         * humans and simple to validate with machines. The example should contain
+         * an expression with a literal return value in comments inline. If the
+         * expression example is too complex or would need an example for a
+         * variable that cannot be expressed in CEL, document the input and return
+         * in a comment preceding the example.
+         *
+         * Examples:
+         *
+         * 1 in [1, 2, 3] // true
+         * 'key' in {'key1: 1, 'key2': 2} // false
+         * // Test whether one or more keys exist within a map.
+         * // returns true if list_of_keys contains 'key2' or 'key3'
+         * list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
          * </pre>
          *
          * <code>string doc = 6 [json_name = "doc"];</code>
@@ -2500,7 +2717,23 @@ public  final class Decl extends
         }
         /**
          * <pre>
-         * Documentation string for the overload.
+         * Examples for the overload and its expected return value, separated by
+         * newlines.
+         *
+         * Prefer using CEL literals in examples as they are easily consumed by
+         * humans and simple to validate with machines. The example should contain
+         * an expression with a literal return value in comments inline. If the
+         * expression example is too complex or would need an example for a
+         * variable that cannot be expressed in CEL, document the input and return
+         * in a comment preceding the example.
+         *
+         * Examples:
+         *
+         * 1 in [1, 2, 3] // true
+         * 'key' in {'key1: 1, 'key2': 2} // false
+         * // Test whether one or more keys exist within a map.
+         * // returns true if list_of_keys contains 'key2' or 'key3'
+         * list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
          * </pre>
          *
          * <code>string doc = 6 [json_name = "doc"];</code>
@@ -2735,6 +2968,124 @@ public  final class Decl extends
     private void removeOverloads(int index) {
       ensureOverloadsIsMutable();
       overloads_.remove(index);
+    }
+
+    public static final int DOC_FIELD_NUMBER = 2;
+    private java.lang.String doc_;
+    /**
+     * <pre>
+     * Documentation string for the function that indicates the general purpose
+     * of the function and its behavior.
+     *
+     * Documentation strings for the function should be general purpose with
+     * specific examples provided in the overload doc string.
+     *
+     * Examples:
+     *
+     * The 'in' operator tests whether an item exists in a collection.
+     *
+     * The 'substring' function returns a substring of a target string.
+     * </pre>
+     *
+     * <code>string doc = 2 [json_name = "doc"];</code>
+     * @return The doc.
+     */
+    @java.lang.Override
+    public java.lang.String getDoc() {
+      return doc_;
+    }
+    /**
+     * <pre>
+     * Documentation string for the function that indicates the general purpose
+     * of the function and its behavior.
+     *
+     * Documentation strings for the function should be general purpose with
+     * specific examples provided in the overload doc string.
+     *
+     * Examples:
+     *
+     * The 'in' operator tests whether an item exists in a collection.
+     *
+     * The 'substring' function returns a substring of a target string.
+     * </pre>
+     *
+     * <code>string doc = 2 [json_name = "doc"];</code>
+     * @return The bytes for doc.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDocBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(doc_);
+    }
+    /**
+     * <pre>
+     * Documentation string for the function that indicates the general purpose
+     * of the function and its behavior.
+     *
+     * Documentation strings for the function should be general purpose with
+     * specific examples provided in the overload doc string.
+     *
+     * Examples:
+     *
+     * The 'in' operator tests whether an item exists in a collection.
+     *
+     * The 'substring' function returns a substring of a target string.
+     * </pre>
+     *
+     * <code>string doc = 2 [json_name = "doc"];</code>
+     * @param value The doc to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDoc(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      doc_ = value;
+    }
+    /**
+     * <pre>
+     * Documentation string for the function that indicates the general purpose
+     * of the function and its behavior.
+     *
+     * Documentation strings for the function should be general purpose with
+     * specific examples provided in the overload doc string.
+     *
+     * Examples:
+     *
+     * The 'in' operator tests whether an item exists in a collection.
+     *
+     * The 'substring' function returns a substring of a target string.
+     * </pre>
+     *
+     * <code>string doc = 2 [json_name = "doc"];</code>
+     */
+    private void clearDoc() {
+
+      doc_ = getDefaultInstance().getDoc();
+    }
+    /**
+     * <pre>
+     * Documentation string for the function that indicates the general purpose
+     * of the function and its behavior.
+     *
+     * Documentation strings for the function should be general purpose with
+     * specific examples provided in the overload doc string.
+     *
+     * Examples:
+     *
+     * The 'in' operator tests whether an item exists in a collection.
+     *
+     * The 'substring' function returns a substring of a target string.
+     * </pre>
+     *
+     * <code>string doc = 2 [json_name = "doc"];</code>
+     * @param value The bytes for doc to set.
+     */
+    private void setDocBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      doc_ = value.toStringUtf8();
+
     }
 
     public static com.google.api.expr.v1alpha1.Decl.FunctionDecl parseFrom(
@@ -2992,6 +3343,125 @@ public  final class Decl extends
         return this;
       }
 
+      /**
+       * <pre>
+       * Documentation string for the function that indicates the general purpose
+       * of the function and its behavior.
+       *
+       * Documentation strings for the function should be general purpose with
+       * specific examples provided in the overload doc string.
+       *
+       * Examples:
+       *
+       * The 'in' operator tests whether an item exists in a collection.
+       *
+       * The 'substring' function returns a substring of a target string.
+       * </pre>
+       *
+       * <code>string doc = 2 [json_name = "doc"];</code>
+       * @return The doc.
+       */
+      @java.lang.Override
+      public java.lang.String getDoc() {
+        return instance.getDoc();
+      }
+      /**
+       * <pre>
+       * Documentation string for the function that indicates the general purpose
+       * of the function and its behavior.
+       *
+       * Documentation strings for the function should be general purpose with
+       * specific examples provided in the overload doc string.
+       *
+       * Examples:
+       *
+       * The 'in' operator tests whether an item exists in a collection.
+       *
+       * The 'substring' function returns a substring of a target string.
+       * </pre>
+       *
+       * <code>string doc = 2 [json_name = "doc"];</code>
+       * @return The bytes for doc.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDocBytes() {
+        return instance.getDocBytes();
+      }
+      /**
+       * <pre>
+       * Documentation string for the function that indicates the general purpose
+       * of the function and its behavior.
+       *
+       * Documentation strings for the function should be general purpose with
+       * specific examples provided in the overload doc string.
+       *
+       * Examples:
+       *
+       * The 'in' operator tests whether an item exists in a collection.
+       *
+       * The 'substring' function returns a substring of a target string.
+       * </pre>
+       *
+       * <code>string doc = 2 [json_name = "doc"];</code>
+       * @param value The doc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDoc(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDoc(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Documentation string for the function that indicates the general purpose
+       * of the function and its behavior.
+       *
+       * Documentation strings for the function should be general purpose with
+       * specific examples provided in the overload doc string.
+       *
+       * Examples:
+       *
+       * The 'in' operator tests whether an item exists in a collection.
+       *
+       * The 'substring' function returns a substring of a target string.
+       * </pre>
+       *
+       * <code>string doc = 2 [json_name = "doc"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDoc() {
+        copyOnWrite();
+        instance.clearDoc();
+        return this;
+      }
+      /**
+       * <pre>
+       * Documentation string for the function that indicates the general purpose
+       * of the function and its behavior.
+       *
+       * Documentation strings for the function should be general purpose with
+       * specific examples provided in the overload doc string.
+       *
+       * Examples:
+       *
+       * The 'in' operator tests whether an item exists in a collection.
+       *
+       * The 'substring' function returns a substring of a target string.
+       * </pre>
+       *
+       * <code>string doc = 2 [json_name = "doc"];</code>
+       * @param value The bytes for doc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDocBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDocBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:google.api.expr.v1alpha1.Decl.FunctionDecl)
     }
     @java.lang.Override
@@ -3010,9 +3480,11 @@ public  final class Decl extends
             java.lang.Object[] objects = new java.lang.Object[] {
               "overloads_",
               com.google.api.expr.v1alpha1.Decl.FunctionDecl.Overload.class,
+              "doc_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u0208" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
