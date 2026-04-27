@@ -149,13 +149,13 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIterVar2()" class="member-name-link">getIterVar2</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- The name of the second iteration variable, empty if not set.</div>
+ The name of the second iteration variable; empty if not set.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIterVar2Bytes()" class="member-name-link">getIterVar2Bytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- The name of the second iteration variable, empty if not set.</div>
+ The name of the second iteration variable; empty if not set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIterVarBytes()" class="member-name-link">getIterVarBytes</a>()</code></div>
@@ -234,8 +234,9 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getIterVar</span>()</div>
 <div class="block"><pre>
  The name of the first iteration variable.
- When the iter_range is a list, this variable is the list element.
- When the iter_range is a map, this variable is the map entry key.
+ For the single iteration variable macros, when iter_range is a list, this
+ variable is the list element and when the iter_range is a map, this
+ variable is the map key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -251,8 +252,9 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getIterVarBytes</span>()</div>
 <div class="block"><pre>
  The name of the first iteration variable.
- When the iter_range is a list, this variable is the list element.
- When the iter_range is a map, this variable is the map entry key.
+ For the single iteration variable macros, when iter_range is a list, this
+ variable is the list element and when the iter_range is a map, this
+ variable is the map key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -267,9 +269,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>getIterVar2</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getIterVar2</span>()</div>
 <div class="block"><pre>
- The name of the second iteration variable, empty if not set.
- When the iter_range is a list, this variable is the integer index.
- When the iter_range is a map, this variable is the map entry value.
+ The name of the second iteration variable; empty if not set.
  This field is only set for comprehension v2 macros.
  </pre>
 
@@ -285,9 +285,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>getIterVar2Bytes</h3>
 <div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getIterVar2Bytes</span>()</div>
 <div class="block"><pre>
- The name of the second iteration variable, empty if not set.
- When the iter_range is a list, this variable is the integer index.
- When the iter_range is a map, this variable is the map entry value.
+ The name of the second iteration variable; empty if not set.
  This field is only set for comprehension v2 macros.
  </pre>
 

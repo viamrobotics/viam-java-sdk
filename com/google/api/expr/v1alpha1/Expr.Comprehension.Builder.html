@@ -129,7 +129,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 
  The `has(m.x)` macro tests whether the property `x` is present in struct
  `m`. The semantics of this macro depend on the type of `m`. For proto2
- messages `has(m.x)` is defined as 'defined, but not set`. For proto3, the
+ messages `has(m.x)` is defined as 'defined, but not set'. For proto3, the
  macro tests whether the property is set to its default. For map and struct
  types, the macro tests whether the property `x` is defined on `m`.
 
@@ -149,7 +149,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 
  Comprehensions for the optional V2 macros which support map-to-map
  translation differ slightly from the standard environment macros in that
- they expose both the key or index in addition to the value for each list
+ they expose the key or index in addition to the value for each list
  or map entry:
 
  ```
@@ -216,7 +216,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearIterVar2()" class="member-name-link">clearIterVar2</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The name of the second iteration variable, empty if not set.</div>
+ The name of the second iteration variable; empty if not set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLoopCondition()" class="member-name-link">clearLoopCondition</a>()</code></div>
@@ -270,13 +270,13 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIterVar2()" class="member-name-link">getIterVar2</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The name of the second iteration variable, empty if not set.</div>
+ The name of the second iteration variable; empty if not set.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIterVar2Bytes()" class="member-name-link">getIterVar2Bytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The name of the second iteration variable, empty if not set.</div>
+ The name of the second iteration variable; empty if not set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIterVarBytes()" class="member-name-link">getIterVarBytes</a>()</code></div>
@@ -408,13 +408,13 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIterVar2(java.lang.String)" class="member-name-link">setIterVar2</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The name of the second iteration variable, empty if not set.</div>
+ The name of the second iteration variable; empty if not set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIterVar2Bytes(com.google.protobuf.ByteString)" class="member-name-link">setIterVar2Bytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- The name of the second iteration variable, empty if not set.</div>
+ The name of the second iteration variable; empty if not set.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIterVarBytes(com.google.protobuf.ByteString)" class="member-name-link">setIterVarBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
@@ -490,8 +490,9 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getIterVar</span>()</div>
 <div class="block"><pre>
  The name of the first iteration variable.
- When the iter_range is a list, this variable is the list element.
- When the iter_range is a map, this variable is the map entry key.
+ For the single iteration variable macros, when iter_range is a list, this
+ variable is the list element and when the iter_range is a map, this
+ variable is the map key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -509,8 +510,9 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getIterVarBytes</span>()</div>
 <div class="block"><pre>
  The name of the first iteration variable.
- When the iter_range is a list, this variable is the list element.
- When the iter_range is a map, this variable is the map entry key.
+ For the single iteration variable macros, when iter_range is a list, this
+ variable is the list element and when the iter_range is a map, this
+ variable is the map key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -528,8 +530,9 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setIterVar</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
 <div class="block"><pre>
  The name of the first iteration variable.
- When the iter_range is a list, this variable is the list element.
- When the iter_range is a map, this variable is the map entry key.
+ For the single iteration variable macros, when iter_range is a list, this
+ variable is the list element and when the iter_range is a map, this
+ variable is the map key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -547,8 +550,9 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">clearIterVar</span>()</div>
 <div class="block"><pre>
  The name of the first iteration variable.
- When the iter_range is a list, this variable is the list element.
- When the iter_range is a map, this variable is the map entry key.
+ For the single iteration variable macros, when iter_range is a list, this
+ variable is the list element and when the iter_range is a map, this
+ variable is the map key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -564,8 +568,9 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setIterVarBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
 <div class="block"><pre>
  The name of the first iteration variable.
- When the iter_range is a list, this variable is the list element.
- When the iter_range is a map, this variable is the map entry key.
+ For the single iteration variable macros, when iter_range is a list, this
+ variable is the list element and when the iter_range is a map, this
+ variable is the map key.
  </pre>
 
  <code>string iter_var = 1 [json_name = "iterVar"];</code></div>
@@ -582,9 +587,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>getIterVar2</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getIterVar2</span>()</div>
 <div class="block"><pre>
- The name of the second iteration variable, empty if not set.
- When the iter_range is a list, this variable is the integer index.
- When the iter_range is a map, this variable is the map entry value.
+ The name of the second iteration variable; empty if not set.
  This field is only set for comprehension v2 macros.
  </pre>
 
@@ -602,9 +605,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>getIterVar2Bytes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getIterVar2Bytes</span>()</div>
 <div class="block"><pre>
- The name of the second iteration variable, empty if not set.
- When the iter_range is a list, this variable is the integer index.
- When the iter_range is a map, this variable is the map entry value.
+ The name of the second iteration variable; empty if not set.
  This field is only set for comprehension v2 macros.
  </pre>
 
@@ -622,9 +623,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>setIterVar2</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setIterVar2</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
 <div class="block"><pre>
- The name of the second iteration variable, empty if not set.
- When the iter_range is a list, this variable is the integer index.
- When the iter_range is a map, this variable is the map entry value.
+ The name of the second iteration variable; empty if not set.
  This field is only set for comprehension v2 macros.
  </pre>
 
@@ -642,9 +641,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>clearIterVar2</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">clearIterVar2</span>()</div>
 <div class="block"><pre>
- The name of the second iteration variable, empty if not set.
- When the iter_range is a list, this variable is the integer index.
- When the iter_range is a map, this variable is the map entry value.
+ The name of the second iteration variable; empty if not set.
  This field is only set for comprehension v2 macros.
  </pre>
 
@@ -660,9 +657,7 @@ implements <a href="Expr.ComprehensionOrBuilder.html" title="interface in com.go
 <h3>setIterVar2Bytes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expr.Comprehension.Builder.html" title="class in com.google.api.expr.v1alpha1">Expr.Comprehension.Builder</a></span>&nbsp;<span class="element-name">setIterVar2Bytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
 <div class="block"><pre>
- The name of the second iteration variable, empty if not set.
- When the iter_range is a list, this variable is the integer index.
- When the iter_range is a map, this variable is the map entry value.
+ The name of the second iteration variable; empty if not set.
  This field is only set for comprehension v2 macros.
  </pre>
 

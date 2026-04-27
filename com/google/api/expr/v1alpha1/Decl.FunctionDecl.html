@@ -163,8 +163,11 @@ implements <a href="Decl.FunctionDeclOrBuilder.html" title="interface in com.goo
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#OVERLOADS_FIELD_NUMBER" class="member-name-link">OVERLOADS_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#DOC_FIELD_NUMBER" class="member-name-link">DOC_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#OVERLOADS_FIELD_NUMBER" class="member-name-link">OVERLOADS_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -193,6 +196,20 @@ implements <a href="Decl.FunctionDeclOrBuilder.html" title="interface in com.goo
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Decl.FunctionDecl.html" title="class in com.google.api.expr.v1alpha1">Decl.FunctionDecl</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDoc()" class="member-name-link">getDoc</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Documentation string for the function that indicates the general purpose
+ of the function and its behavior.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDocBytes()" class="member-name-link">getDocBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Documentation string for the function that indicates the general purpose
+ of the function and its behavior.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Decl.FunctionDecl.Overload.html" title="class in com.google.api.expr.v1alpha1">Decl.FunctionDecl.Overload</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOverloads(int)" class="member-name-link">getOverloads</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -314,6 +331,20 @@ implements <a href="Decl.FunctionDeclOrBuilder.html" title="interface in com.goo
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="DOC_FIELD_NUMBER">
+<h3>DOC_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">DOC_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../../constant-values.html#com.google.api.expr.v1alpha1.Decl.FunctionDecl.DOC_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -387,6 +418,60 @@ implements <a href="Decl.FunctionDeclOrBuilder.html" title="interface in com.goo
  </pre>
 
  <code>repeated .google.api.expr.v1alpha1.Decl.FunctionDecl.Overload overloads = 1 [json_name = "overloads"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getDoc()">
+<h3>getDoc</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDoc</span>()</div>
+<div class="block"><pre>
+ Documentation string for the function that indicates the general purpose
+ of the function and its behavior.
+
+ Documentation strings for the function should be general purpose with
+ specific examples provided in the overload doc string.
+
+ Examples:
+
+ The 'in' operator tests whether an item exists in a collection.
+
+ The 'substring' function returns a substring of a target string.
+ </pre>
+
+ <code>string doc = 2 [json_name = "doc"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Decl.FunctionDeclOrBuilder.html#getDoc()">getDoc</a></code>&nbsp;in interface&nbsp;<code><a href="Decl.FunctionDeclOrBuilder.html" title="interface in com.google.api.expr.v1alpha1">Decl.FunctionDeclOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The doc.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDocBytes()">
+<h3>getDocBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getDocBytes</span>()</div>
+<div class="block"><pre>
+ Documentation string for the function that indicates the general purpose
+ of the function and its behavior.
+
+ Documentation strings for the function should be general purpose with
+ specific examples provided in the overload doc string.
+
+ Examples:
+
+ The 'in' operator tests whether an item exists in a collection.
+
+ The 'substring' function returns a substring of a target string.
+ </pre>
+
+ <code>string doc = 2 [json_name = "doc"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Decl.FunctionDeclOrBuilder.html#getDocBytes()">getDocBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Decl.FunctionDeclOrBuilder.html" title="interface in com.google.api.expr.v1alpha1">Decl.FunctionDeclOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for doc.</dd>
+</dl>
 </section>
 </li>
 <li>

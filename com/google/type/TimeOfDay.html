@@ -190,25 +190,25 @@ implements <a href="TimeOfDayOrBuilder.html" title="interface in com.google.type
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHours()" class="member-name-link">getHours</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- Hours of day in 24 hour format.</div>
+ Hours of a day in 24 hour format.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMinutes()" class="member-name-link">getMinutes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- Minutes of hour of day.</div>
+ Minutes of an hour.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNanos()" class="member-name-link">getNanos</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- Fractions of seconds in nanoseconds.</div>
+ Fractions of seconds, in nanoseconds.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSeconds()" class="member-name-link">getSeconds</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- Seconds of minutes of the time.</div>
+ Seconds of a minute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="TimeOfDay.Builder.html" title="class in com.google.type">TimeOfDay.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -356,8 +356,9 @@ implements <a href="TimeOfDayOrBuilder.html" title="interface in com.google.type
 <h3>getHours</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getHours</span>()</div>
 <div class="block"><pre>
- Hours of day in 24 hour format. Should be from 0 to 23. An API may choose
- to allow the value "24:00:00" for scenarios like business closing time.
+ Hours of a day in 24 hour format. Must be greater than or equal to 0 and
+ typically must be less than or equal to 23. An API may choose to allow the
+ value "24:00:00" for scenarios like business closing time.
  </pre>
 
  <code>int32 hours = 1 [json_name = "hours"];</code></div>
@@ -374,7 +375,8 @@ implements <a href="TimeOfDayOrBuilder.html" title="interface in com.google.type
 <h3>getMinutes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMinutes</span>()</div>
 <div class="block"><pre>
- Minutes of hour of day. Must be from 0 to 59.
+ Minutes of an hour. Must be greater than or equal to 0 and less than or
+ equal to 59.
  </pre>
 
  <code>int32 minutes = 2 [json_name = "minutes"];</code></div>
@@ -391,8 +393,9 @@ implements <a href="TimeOfDayOrBuilder.html" title="interface in com.google.type
 <h3>getSeconds</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getSeconds</span>()</div>
 <div class="block"><pre>
- Seconds of minutes of the time. Must normally be from 0 to 59. An API may
- allow the value 60 if it allows leap-seconds.
+ Seconds of a minute. Must be greater than or equal to 0 and typically must
+ be less than or equal to 59. An API may allow the value 60 if it allows
+ leap-seconds.
  </pre>
 
  <code>int32 seconds = 3 [json_name = "seconds"];</code></div>
@@ -409,7 +412,8 @@ implements <a href="TimeOfDayOrBuilder.html" title="interface in com.google.type
 <h3>getNanos</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getNanos</span>()</div>
 <div class="block"><pre>
- Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+ Fractions of seconds, in nanoseconds. Must be greater than or equal to 0
+ and less than or equal to 999,999,999.
  </pre>
 
  <code>int32 nanos = 4 [json_name = "nanos"];</code></div>

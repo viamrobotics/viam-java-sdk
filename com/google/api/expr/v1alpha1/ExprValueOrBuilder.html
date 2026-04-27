@@ -116,7 +116,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getError()" class="member-name-link">getError</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- The set of errors in the critical path of evalution.</div>
+ The set of errors in the critical path of evaluation.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ExprValue.KindCase.html" title="enum class in com.google.api.expr.v1alpha1">ExprValue.KindCase</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKindCase()" class="member-name-link">getKindCase</a>()</code></div>
@@ -137,7 +137,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasError()" class="member-name-link">hasError</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- The set of errors in the critical path of evalution.</div>
+ The set of errors in the critical path of evaluation.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasUnknown()" class="member-name-link">hasUnknown</a>()</code></div>
@@ -203,14 +203,14 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>hasError</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasError</span>()</div>
 <div class="block"><pre>
- The set of errors in the critical path of evalution.
+ The set of errors in the critical path of evaluation.
 
  Only errors in the critical path are included. For example,
  `(&lt;error1&gt; || true) &amp;&amp; &lt;error2&gt;` will only result in `&lt;error2&gt;`,
  while `&lt;error1&gt; || &lt;error2&gt;` will result in both `&lt;error1&gt;` and
  `&lt;error2&gt;`.
 
- Errors cause by the presence of other errors are not included in the
+ Errors caused by the presence of other errors are not included in the
  set. For example `&lt;error1&gt;.foo`, `foo(&lt;error1&gt;)`, and `&lt;error1&gt; + 1` will
  only result in `&lt;error1&gt;`.
 
@@ -233,14 +233,14 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>getError</h3>
 <div class="member-signature"><span class="return-type"><a href="ErrorSet.html" title="class in com.google.api.expr.v1alpha1">ErrorSet</a></span>&nbsp;<span class="element-name">getError</span>()</div>
 <div class="block"><pre>
- The set of errors in the critical path of evalution.
+ The set of errors in the critical path of evaluation.
 
  Only errors in the critical path are included. For example,
  `(&lt;error1&gt; || true) &amp;&amp; &lt;error2&gt;` will only result in `&lt;error2&gt;`,
  while `&lt;error1&gt; || &lt;error2&gt;` will result in both `&lt;error1&gt;` and
  `&lt;error2&gt;`.
 
- Errors cause by the presence of other errors are not included in the
+ Errors caused by the presence of other errors are not included in the
  set. For example `&lt;error1&gt;.foo`, `foo(&lt;error1&gt;)`, and `&lt;error1&gt; + 1` will
  only result in `&lt;error1&gt;`.
 
@@ -277,13 +277,13 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  foo(&lt;unknown[1]&gt;) -&gt; &lt;unknown[1]&gt;
  &lt;unknown[1]&gt; + &lt;unknown[2]&gt; -&gt; &lt;unknown[1]&gt; or &lt;unknown[2[&gt;
 
- Unknown takes precidence over Error in cases where a `Value` can short
+ Unknown takes precedence over Error in cases where a `Value` can short
  circuit the result:
 
  &lt;error&gt; || &lt;unknown&gt; -&gt; &lt;unknown&gt;
  &lt;error&gt; &amp;&amp; &lt;unknown&gt; -&gt; &lt;unknown&gt;
 
- Errors take precidence in all other cases:
+ Errors take precedence in all other cases:
 
  &lt;unknown&gt; + &lt;error&gt; -&gt; &lt;error&gt;
  foo(&lt;unknown&gt;, &lt;error&gt;) -&gt; &lt;error&gt;
@@ -315,13 +315,13 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  foo(&lt;unknown[1]&gt;) -&gt; &lt;unknown[1]&gt;
  &lt;unknown[1]&gt; + &lt;unknown[2]&gt; -&gt; &lt;unknown[1]&gt; or &lt;unknown[2[&gt;
 
- Unknown takes precidence over Error in cases where a `Value` can short
+ Unknown takes precedence over Error in cases where a `Value` can short
  circuit the result:
 
  &lt;error&gt; || &lt;unknown&gt; -&gt; &lt;unknown&gt;
  &lt;error&gt; &amp;&amp; &lt;unknown&gt; -&gt; &lt;unknown&gt;
 
- Errors take precidence in all other cases:
+ Errors take precedence in all other cases:
 
  &lt;unknown&gt; + &lt;error&gt; -&gt; &lt;error&gt;
  foo(&lt;unknown&gt;, &lt;error&gt;) -&gt; &lt;error&gt;

@@ -164,26 +164,29 @@ implements <a href="AttributeContext.RequestOrBuilder.html" title="interface in 
 <div class="col-second even-row-color"><code><a href="#METHOD_FIELD_NUMBER" class="member-name-link">METHOD_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#PATH_FIELD_NUMBER" class="member-name-link">PATH_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ORIGIN_FIELD_NUMBER" class="member-name-link">ORIGIN_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#PROTOCOL_FIELD_NUMBER" class="member-name-link">PROTOCOL_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#PATH_FIELD_NUMBER" class="member-name-link">PATH_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#QUERY_FIELD_NUMBER" class="member-name-link">QUERY_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#PROTOCOL_FIELD_NUMBER" class="member-name-link">PROTOCOL_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#REASON_FIELD_NUMBER" class="member-name-link">REASON_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#QUERY_FIELD_NUMBER" class="member-name-link">QUERY_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#SCHEME_FIELD_NUMBER" class="member-name-link">SCHEME_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#REASON_FIELD_NUMBER" class="member-name-link">REASON_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#SIZE_FIELD_NUMBER" class="member-name-link">SIZE_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#SCHEME_FIELD_NUMBER" class="member-name-link">SCHEME_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#TIME_FIELD_NUMBER" class="member-name-link">TIME_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#SIZE_FIELD_NUMBER" class="member-name-link">SIZE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#TIME_FIELD_NUMBER" class="member-name-link">TIME_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -291,6 +294,20 @@ implements <a href="AttributeContext.RequestOrBuilder.html" title="interface in 
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  The HTTP request method, such as `GET`, `POST`.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrigin()" class="member-name-link">getOrigin</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The values from Origin header from the HTTP request, such as
+ "https://console.cloud.google.com".</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOriginBytes()" class="member-name-link">getOriginBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The values from Origin header from the HTTP request, such as
+ "https://console.cloud.google.com".</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPath()" class="member-name-link">getPath</a>()</code></div>
@@ -622,6 +639,20 @@ implements <a href="AttributeContext.RequestOrBuilder.html" title="interface in 
 <dd>
 <ul class="tag-list">
 <li><a href="../../../../constant-values.html#com.google.rpc.context.AttributeContext.Request.AUTH_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="ORIGIN_FIELD_NUMBER">
+<h3>ORIGIN_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ORIGIN_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../constant-values.html#com.google.rpc.context.AttributeContext.Request.ORIGIN_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -1107,6 +1138,46 @@ implements <a href="AttributeContext.RequestOrBuilder.html" title="interface in 
 <dd><code><a href="AttributeContext.RequestOrBuilder.html#getAuth()">getAuth</a></code>&nbsp;in interface&nbsp;<code><a href="AttributeContext.RequestOrBuilder.html" title="interface in com.google.rpc.context">AttributeContext.RequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The auth.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getOrigin()">
+<h3>getOrigin</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getOrigin</span>()</div>
+<div class="block"><pre>
+ The values from Origin header from the HTTP request, such as
+ "https://console.cloud.google.com". Modern browsers can only have one
+ origin. Special browsers and/or HTTP clients may require multiple
+ origins.
+ </pre>
+
+ <code>string origin = 14 [json_name = "origin"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AttributeContext.RequestOrBuilder.html#getOrigin()">getOrigin</a></code>&nbsp;in interface&nbsp;<code><a href="AttributeContext.RequestOrBuilder.html" title="interface in com.google.rpc.context">AttributeContext.RequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The origin.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getOriginBytes()">
+<h3>getOriginBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getOriginBytes</span>()</div>
+<div class="block"><pre>
+ The values from Origin header from the HTTP request, such as
+ "https://console.cloud.google.com". Modern browsers can only have one
+ origin. Special browsers and/or HTTP clients may require multiple
+ origins.
+ </pre>
+
+ <code>string origin = 14 [json_name = "origin"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AttributeContext.RequestOrBuilder.html#getOriginBytes()">getOriginBytes</a></code>&nbsp;in interface&nbsp;<code><a href="AttributeContext.RequestOrBuilder.html" title="interface in com.google.rpc.context">AttributeContext.RequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for origin.</dd>
 </dl>
 </section>
 </li>

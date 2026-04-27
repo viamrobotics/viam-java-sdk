@@ -160,7 +160,8 @@ implements <a href="PhoneNumberOrBuilder.html" title="interface in com.google.ty
  An object representing a short code, which is a phone number that is
  typically much shorter than regular phone numbers and can be used to
  address messages in MMS and SMS systems, as well as for abbreviated dialing
- (e.g.</div>
+ (For example "Text 611 to see how many minutes you have remaining on your
+ plan.").</div>
 </div>
 <div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
 <div class="col-second odd-row-color"><code><a href="PhoneNumber.ShortCodeOrBuilder.html" class="type-name-link" title="interface in com.google.type">PhoneNumber.ShortCodeOrBuilder</a></code></div>
@@ -227,9 +228,7 @@ implements <a href="PhoneNumberOrBuilder.html" title="interface in com.google.ty
  The phone number, represented as a leading plus sign ('+'), followed by a
  phone number that uses a relaxed ITU E.164 format consisting of the
  country calling code (1 to 3 digits) and the subscriber number, with no
- additional spaces or formatting, e.g.:
- - correct: "+15552220123"
- - incorrect: "+1 (555) 222-01234 x123".</div>
+ additional spaces or formatting.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getE164NumberBytes()" class="member-name-link">getE164NumberBytes</a>()</code></div>
@@ -238,9 +237,7 @@ implements <a href="PhoneNumberOrBuilder.html" title="interface in com.google.ty
  The phone number, represented as a leading plus sign ('+'), followed by a
  phone number that uses a relaxed ITU E.164 format consisting of the
  country calling code (1 to 3 digits) and the subscriber number, with no
- additional spaces or formatting, e.g.:
- - correct: "+15552220123"
- - incorrect: "+1 (555) 222-01234 x123".</div>
+ additional spaces or formatting.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExtension()" class="member-name-link">getExtension</a>()</code></div>
@@ -270,9 +267,7 @@ implements <a href="PhoneNumberOrBuilder.html" title="interface in com.google.ty
  The phone number, represented as a leading plus sign ('+'), followed by a
  phone number that uses a relaxed ITU E.164 format consisting of the
  country calling code (1 to 3 digits) and the subscriber number, with no
- additional spaces or formatting, e.g.:
- - correct: "+15552220123"
- - incorrect: "+1 (555) 222-01234 x123".</div>
+ additional spaces or formatting.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasShortCode()" class="member-name-link">hasShortCode</a>()</code></div>
@@ -425,17 +420,22 @@ implements <a href="PhoneNumberOrBuilder.html" title="interface in com.google.ty
  The phone number, represented as a leading plus sign ('+'), followed by a
  phone number that uses a relaxed ITU E.164 format consisting of the
  country calling code (1 to 3 digits) and the subscriber number, with no
- additional spaces or formatting, e.g.:
+ additional spaces or formatting. For example:
+
  - correct: "+15552220123"
- - incorrect: "+1 (555) 222-01234 x123".
+
+ - incorrect: "+1 (555) 222-01234 x123"
 
  The ITU E.164 format limits the latter to 12 digits, but in practice not
  all countries respect that, so we relax that restriction here.
  National-only numbers are not allowed.
 
  References:
+
  - https://www.itu.int/rec/T-REC-E.164-201011-I
+
  - https://en.wikipedia.org/wiki/E.164.
+
  - https://en.wikipedia.org/wiki/List_of_country_calling_codes
  </pre>
 
@@ -456,17 +456,22 @@ implements <a href="PhoneNumberOrBuilder.html" title="interface in com.google.ty
  The phone number, represented as a leading plus sign ('+'), followed by a
  phone number that uses a relaxed ITU E.164 format consisting of the
  country calling code (1 to 3 digits) and the subscriber number, with no
- additional spaces or formatting, e.g.:
+ additional spaces or formatting. For example:
+
  - correct: "+15552220123"
- - incorrect: "+1 (555) 222-01234 x123".
+
+ - incorrect: "+1 (555) 222-01234 x123"
 
  The ITU E.164 format limits the latter to 12 digits, but in practice not
  all countries respect that, so we relax that restriction here.
  National-only numbers are not allowed.
 
  References:
+
  - https://www.itu.int/rec/T-REC-E.164-201011-I
+
  - https://en.wikipedia.org/wiki/E.164.
+
  - https://en.wikipedia.org/wiki/List_of_country_calling_codes
  </pre>
 
@@ -487,17 +492,22 @@ implements <a href="PhoneNumberOrBuilder.html" title="interface in com.google.ty
  The phone number, represented as a leading plus sign ('+'), followed by a
  phone number that uses a relaxed ITU E.164 format consisting of the
  country calling code (1 to 3 digits) and the subscriber number, with no
- additional spaces or formatting, e.g.:
+ additional spaces or formatting. For example:
+
  - correct: "+15552220123"
- - incorrect: "+1 (555) 222-01234 x123".
+
+ - incorrect: "+1 (555) 222-01234 x123"
 
  The ITU E.164 format limits the latter to 12 digits, but in practice not
  all countries respect that, so we relax that restriction here.
  National-only numbers are not allowed.
 
  References:
+
  - https://www.itu.int/rec/T-REC-E.164-201011-I
+
  - https://en.wikipedia.org/wiki/E.164.
+
  - https://en.wikipedia.org/wiki/List_of_country_calling_codes
  </pre>
 
@@ -518,7 +528,7 @@ implements <a href="PhoneNumberOrBuilder.html" title="interface in com.google.ty
  A short code.
 
  Reference(s):
- - https://en.wikipedia.org/wiki/Short_code
+ - https://wikipedia.org/wiki/Short_code
  </pre>
 
  <code>.google.type.PhoneNumber.ShortCode short_code = 2 [json_name = "shortCode"];</code></div>
@@ -538,7 +548,7 @@ implements <a href="PhoneNumberOrBuilder.html" title="interface in com.google.ty
  A short code.
 
  Reference(s):
- - https://en.wikipedia.org/wiki/Short_code
+ - https://wikipedia.org/wiki/Short_code
  </pre>
 
  <code>.google.type.PhoneNumber.ShortCode short_code = 2 [json_name = "shortCode"];</code></div>

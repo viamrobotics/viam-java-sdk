@@ -119,13 +119,15 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDoc()" class="member-name-link">getDoc</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- Documentation string for the overload.</div>
+ Examples for the overload and its expected return value, separated by
+ newlines.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDocBytes()" class="member-name-link">getDocBytes</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- Documentation string for the overload.</div>
+ Examples for the overload and its expected return value, separated by
+ newlines.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIsInstanceFunction()" class="member-name-link">getIsInstanceFunction</a>()</code></div>
@@ -455,7 +457,23 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>getDoc</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDoc</span>()</div>
 <div class="block"><pre>
- Documentation string for the overload.
+ Examples for the overload and its expected return value, separated by
+ newlines.
+
+ Prefer using CEL literals in examples as they are easily consumed by
+ humans and simple to validate with machines. The example should contain
+ an expression with a literal return value in comments inline. If the
+ expression example is too complex or would need an example for a
+ variable that cannot be expressed in CEL, document the input and return
+ in a comment preceding the example.
+
+ Examples:
+
+ 1 in [1, 2, 3] // true
+ 'key' in {'key1: 1, 'key2': 2} // false
+ // Test whether one or more keys exist within a map.
+ // returns true if list_of_keys contains 'key2' or 'key3'
+ list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
  </pre>
 
  <code>string doc = 6 [json_name = "doc"];</code></div>
@@ -470,7 +488,23 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>getDocBytes</h3>
 <div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getDocBytes</span>()</div>
 <div class="block"><pre>
- Documentation string for the overload.
+ Examples for the overload and its expected return value, separated by
+ newlines.
+
+ Prefer using CEL literals in examples as they are easily consumed by
+ humans and simple to validate with machines. The example should contain
+ an expression with a literal return value in comments inline. If the
+ expression example is too complex or would need an example for a
+ variable that cannot be expressed in CEL, document the input and return
+ in a comment preceding the example.
+
+ Examples:
+
+ 1 in [1, 2, 3] // true
+ 'key' in {'key1: 1, 'key2': 2} // false
+ // Test whether one or more keys exist within a map.
+ // returns true if list_of_keys contains 'key2' or 'key3'
+ list_of_keys.exists(key, key in {'key3': 1, 'key2': 2})
  </pre>
 
  <code>string doc = 6 [json_name = "doc"];</code></div>

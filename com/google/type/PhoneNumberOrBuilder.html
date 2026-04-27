@@ -119,9 +119,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The phone number, represented as a leading plus sign ('+'), followed by a
  phone number that uses a relaxed ITU E.164 format consisting of the
  country calling code (1 to 3 digits) and the subscriber number, with no
- additional spaces or formatting, e.g.:
- - correct: "+15552220123"
- - incorrect: "+1 (555) 222-01234 x123".</div>
+ additional spaces or formatting.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getE164NumberBytes()" class="member-name-link">getE164NumberBytes</a>()</code></div>
@@ -130,9 +128,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The phone number, represented as a leading plus sign ('+'), followed by a
  phone number that uses a relaxed ITU E.164 format consisting of the
  country calling code (1 to 3 digits) and the subscriber number, with no
- additional spaces or formatting, e.g.:
- - correct: "+15552220123"
- - incorrect: "+1 (555) 222-01234 x123".</div>
+ additional spaces or formatting.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExtension()" class="member-name-link">getExtension</a>()</code></div>
@@ -162,9 +158,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The phone number, represented as a leading plus sign ('+'), followed by a
  phone number that uses a relaxed ITU E.164 format consisting of the
  country calling code (1 to 3 digits) and the subscriber number, with no
- additional spaces or formatting, e.g.:
- - correct: "+15552220123"
- - incorrect: "+1 (555) 222-01234 x123".</div>
+ additional spaces or formatting.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasShortCode()" class="member-name-link">hasShortCode</a>()</code></div>
@@ -197,17 +191,22 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The phone number, represented as a leading plus sign ('+'), followed by a
  phone number that uses a relaxed ITU E.164 format consisting of the
  country calling code (1 to 3 digits) and the subscriber number, with no
- additional spaces or formatting, e.g.:
+ additional spaces or formatting. For example:
+
  - correct: "+15552220123"
- - incorrect: "+1 (555) 222-01234 x123".
+
+ - incorrect: "+1 (555) 222-01234 x123"
 
  The ITU E.164 format limits the latter to 12 digits, but in practice not
  all countries respect that, so we relax that restriction here.
  National-only numbers are not allowed.
 
  References:
+
  - https://www.itu.int/rec/T-REC-E.164-201011-I
+
  - https://en.wikipedia.org/wiki/E.164.
+
  - https://en.wikipedia.org/wiki/List_of_country_calling_codes
  </pre>
 
@@ -226,17 +225,22 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The phone number, represented as a leading plus sign ('+'), followed by a
  phone number that uses a relaxed ITU E.164 format consisting of the
  country calling code (1 to 3 digits) and the subscriber number, with no
- additional spaces or formatting, e.g.:
+ additional spaces or formatting. For example:
+
  - correct: "+15552220123"
- - incorrect: "+1 (555) 222-01234 x123".
+
+ - incorrect: "+1 (555) 222-01234 x123"
 
  The ITU E.164 format limits the latter to 12 digits, but in practice not
  all countries respect that, so we relax that restriction here.
  National-only numbers are not allowed.
 
  References:
+
  - https://www.itu.int/rec/T-REC-E.164-201011-I
+
  - https://en.wikipedia.org/wiki/E.164.
+
  - https://en.wikipedia.org/wiki/List_of_country_calling_codes
  </pre>
 
@@ -255,17 +259,22 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The phone number, represented as a leading plus sign ('+'), followed by a
  phone number that uses a relaxed ITU E.164 format consisting of the
  country calling code (1 to 3 digits) and the subscriber number, with no
- additional spaces or formatting, e.g.:
+ additional spaces or formatting. For example:
+
  - correct: "+15552220123"
- - incorrect: "+1 (555) 222-01234 x123".
+
+ - incorrect: "+1 (555) 222-01234 x123"
 
  The ITU E.164 format limits the latter to 12 digits, but in practice not
  all countries respect that, so we relax that restriction here.
  National-only numbers are not allowed.
 
  References:
+
  - https://www.itu.int/rec/T-REC-E.164-201011-I
+
  - https://en.wikipedia.org/wiki/E.164.
+
  - https://en.wikipedia.org/wiki/List_of_country_calling_codes
  </pre>
 
@@ -284,7 +293,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  A short code.
 
  Reference(s):
- - https://en.wikipedia.org/wiki/Short_code
+ - https://wikipedia.org/wiki/Short_code
  </pre>
 
  <code>.google.type.PhoneNumber.ShortCode short_code = 2 [json_name = "shortCode"];</code></div>
@@ -302,7 +311,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  A short code.
 
  Reference(s):
- - https://en.wikipedia.org/wiki/Short_code
+ - https://wikipedia.org/wiki/Short_code
  </pre>
 
  <code>.google.type.PhoneNumber.ShortCode short_code = 2 [json_name = "shortCode"];</code></div>

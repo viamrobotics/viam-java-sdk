@@ -115,6 +115,20 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDoc()" class="member-name-link">getDoc</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Documentation string for the function that indicates the general purpose
+ of the function and its behavior.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDocBytes()" class="member-name-link">getDocBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Documentation string for the function that indicates the general purpose
+ of the function and its behavior.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Decl.FunctionDecl.Overload.html" title="class in com.google.api.expr.v1alpha1">Decl.FunctionDecl.Overload</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOverloads(int)" class="member-name-link">getOverloads</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -181,6 +195,56 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  </pre>
 
  <code>repeated .google.api.expr.v1alpha1.Decl.FunctionDecl.Overload overloads = 1 [json_name = "overloads"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getDoc()">
+<h3>getDoc</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDoc</span>()</div>
+<div class="block"><pre>
+ Documentation string for the function that indicates the general purpose
+ of the function and its behavior.
+
+ Documentation strings for the function should be general purpose with
+ specific examples provided in the overload doc string.
+
+ Examples:
+
+ The 'in' operator tests whether an item exists in a collection.
+
+ The 'substring' function returns a substring of a target string.
+ </pre>
+
+ <code>string doc = 2 [json_name = "doc"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The doc.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDocBytes()">
+<h3>getDocBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getDocBytes</span>()</div>
+<div class="block"><pre>
+ Documentation string for the function that indicates the general purpose
+ of the function and its behavior.
+
+ Documentation strings for the function should be general purpose with
+ specific examples provided in the overload doc string.
+
+ Examples:
+
+ The 'in' operator tests whether an item exists in a collection.
+
+ The 'substring' function returns a substring of a target string.
+ </pre>
+
+ <code>string doc = 2 [json_name = "doc"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for doc.</dd>
+</dl>
 </section>
 </li>
 </ul>
