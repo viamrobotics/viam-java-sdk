@@ -165,6 +165,66 @@ public final class GripperServiceGrpc {
     return getIsHoldingSomethingMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest,
+      com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse> getGetCurrentInputsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCurrentInputs",
+      requestType = com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest.class,
+      responseType = com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest,
+      com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse> getGetCurrentInputsMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest, com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse> getGetCurrentInputsMethod;
+    if ((getGetCurrentInputsMethod = GripperServiceGrpc.getGetCurrentInputsMethod) == null) {
+      synchronized (GripperServiceGrpc.class) {
+        if ((getGetCurrentInputsMethod = GripperServiceGrpc.getGetCurrentInputsMethod) == null) {
+          GripperServiceGrpc.getGetCurrentInputsMethod = getGetCurrentInputsMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest, com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCurrentInputs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetCurrentInputsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.GoToInputsRequest,
+      com.viam.component.gripper.v1.Gripper.GoToInputsResponse> getGoToInputsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GoToInputs",
+      requestType = com.viam.component.gripper.v1.Gripper.GoToInputsRequest.class,
+      responseType = com.viam.component.gripper.v1.Gripper.GoToInputsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.GoToInputsRequest,
+      com.viam.component.gripper.v1.Gripper.GoToInputsResponse> getGoToInputsMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.GoToInputsRequest, com.viam.component.gripper.v1.Gripper.GoToInputsResponse> getGoToInputsMethod;
+    if ((getGoToInputsMethod = GripperServiceGrpc.getGoToInputsMethod) == null) {
+      synchronized (GripperServiceGrpc.class) {
+        if ((getGoToInputsMethod = GripperServiceGrpc.getGoToInputsMethod) == null) {
+          GripperServiceGrpc.getGoToInputsMethod = getGoToInputsMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.gripper.v1.Gripper.GoToInputsRequest, com.viam.component.gripper.v1.Gripper.GoToInputsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GoToInputs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.gripper.v1.Gripper.GoToInputsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.gripper.v1.Gripper.GoToInputsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGoToInputsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
       com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
 
@@ -403,6 +463,26 @@ public final class GripperServiceGrpc {
 
     /**
      * <pre>
+     * GetCurrentInputs returns the current input values of a gripper
+     * </pre>
+     */
+    default void getCurrentInputs(com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCurrentInputsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GoToInputs moves the gripper to the given input values.
+     * </pre>
+     */
+    default void goToInputs(com.viam.component.gripper.v1.Gripper.GoToInputsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GoToInputsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGoToInputsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -532,6 +612,28 @@ public final class GripperServiceGrpc {
 
     /**
      * <pre>
+     * GetCurrentInputs returns the current input values of a gripper
+     * </pre>
+     */
+    public void getCurrentInputs(com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetCurrentInputsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GoToInputs moves the gripper to the given input values.
+     * </pre>
+     */
+    public void goToInputs(com.viam.component.gripper.v1.Gripper.GoToInputsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GoToInputsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGoToInputsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -646,6 +748,26 @@ public final class GripperServiceGrpc {
 
     /**
      * <pre>
+     * GetCurrentInputs returns the current input values of a gripper
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse getCurrentInputs(com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetCurrentInputsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GoToInputs moves the gripper to the given input values.
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.GoToInputsResponse goToInputs(com.viam.component.gripper.v1.Gripper.GoToInputsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGoToInputsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -752,6 +874,26 @@ public final class GripperServiceGrpc {
     public com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse isHoldingSomething(com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getIsHoldingSomethingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetCurrentInputs returns the current input values of a gripper
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse getCurrentInputs(com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetCurrentInputsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GoToInputs moves the gripper to the given input values.
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.GoToInputsResponse goToInputs(com.viam.component.gripper.v1.Gripper.GoToInputsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGoToInputsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -871,6 +1013,28 @@ public final class GripperServiceGrpc {
 
     /**
      * <pre>
+     * GetCurrentInputs returns the current input values of a gripper
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse> getCurrentInputs(
+        com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetCurrentInputsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GoToInputs moves the gripper to the given input values.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.gripper.v1.Gripper.GoToInputsResponse> goToInputs(
+        com.viam.component.gripper.v1.Gripper.GoToInputsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGoToInputsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -919,10 +1083,12 @@ public final class GripperServiceGrpc {
   private static final int METHODID_STOP = 2;
   private static final int METHODID_IS_MOVING = 3;
   private static final int METHODID_IS_HOLDING_SOMETHING = 4;
-  private static final int METHODID_DO_COMMAND = 5;
-  private static final int METHODID_GET_STATUS = 6;
-  private static final int METHODID_GET_GEOMETRIES = 7;
-  private static final int METHODID_GET_KINEMATICS = 8;
+  private static final int METHODID_GET_CURRENT_INPUTS = 5;
+  private static final int METHODID_GO_TO_INPUTS = 6;
+  private static final int METHODID_DO_COMMAND = 7;
+  private static final int METHODID_GET_STATUS = 8;
+  private static final int METHODID_GET_GEOMETRIES = 9;
+  private static final int METHODID_GET_KINEMATICS = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -960,6 +1126,14 @@ public final class GripperServiceGrpc {
         case METHODID_IS_HOLDING_SOMETHING:
           serviceImpl.isHoldingSomething((com.viam.component.gripper.v1.Gripper.IsHoldingSomethingRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse>) responseObserver);
+          break;
+        case METHODID_GET_CURRENT_INPUTS:
+          serviceImpl.getCurrentInputs((com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse>) responseObserver);
+          break;
+        case METHODID_GO_TO_INPUTS:
+          serviceImpl.goToInputs((com.viam.component.gripper.v1.Gripper.GoToInputsRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GoToInputsResponse>) responseObserver);
           break;
         case METHODID_DO_COMMAND:
           serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
@@ -1031,6 +1205,20 @@ public final class GripperServiceGrpc {
               com.viam.component.gripper.v1.Gripper.IsHoldingSomethingResponse>(
                 service, METHODID_IS_HOLDING_SOMETHING)))
         .addMethod(
+          getGetCurrentInputsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest,
+              com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse>(
+                service, METHODID_GET_CURRENT_INPUTS)))
+        .addMethod(
+          getGoToInputsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.gripper.v1.Gripper.GoToInputsRequest,
+              com.viam.component.gripper.v1.Gripper.GoToInputsResponse>(
+                service, METHODID_GO_TO_INPUTS)))
+        .addMethod(
           getDoCommandMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1075,6 +1263,8 @@ public final class GripperServiceGrpc {
               .addMethod(getStopMethod())
               .addMethod(getIsMovingMethod())
               .addMethod(getIsHoldingSomethingMethod())
+              .addMethod(getGetCurrentInputsMethod())
+              .addMethod(getGoToInputsMethod())
               .addMethod(getDoCommandMethod())
               .addMethod(getGetStatusMethod())
               .addMethod(getGetGeometriesMethod())
