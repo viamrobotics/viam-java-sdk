@@ -594,6 +594,51 @@ public final class Billing {
      * @return The paidDate.
      */
     com.google.protobuf.Timestamp getPaidDate();
+
+    /**
+     * <pre>
+     * Category of the most recent payment failure. One of: card_declined,
+     * insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+     * authentication_required, processing_error, other. Empty when no failure
+     * is recorded. Clients must tolerate unknown values.
+     * </pre>
+     *
+     * <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code>
+     * @return The lastPaymentFailureReason.
+     */
+    java.lang.String getLastPaymentFailureReason();
+    /**
+     * <pre>
+     * Category of the most recent payment failure. One of: card_declined,
+     * insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+     * authentication_required, processing_error, other. Empty when no failure
+     * is recorded. Clients must tolerate unknown values.
+     * </pre>
+     *
+     * <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code>
+     * @return The bytes for lastPaymentFailureReason.
+     */
+    com.google.protobuf.ByteString
+        getLastPaymentFailureReasonBytes();
+
+    /**
+     * <pre>
+     * Time of the most recent payment failure. Empty when no failure recorded.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code>
+     * @return Whether the lastPaymentFailureAt field is set.
+     */
+    boolean hasLastPaymentFailureAt();
+    /**
+     * <pre>
+     * Time of the most recent payment failure. Empty when no failure recorded.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code>
+     * @return The lastPaymentFailureAt.
+     */
+    com.google.protobuf.Timestamp getLastPaymentFailureAt();
   }
   /**
    * Protobuf type {@code viam.app.v1.InvoiceSummary}
@@ -606,6 +651,7 @@ public final class Billing {
     private InvoiceSummary() {
       id_ = "";
       status_ = "";
+      lastPaymentFailureReason_ = "";
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
@@ -872,6 +918,157 @@ public final class Billing {
     private void clearPaidDate() {
       paidDate_ = null;
       bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static final int LAST_PAYMENT_FAILURE_REASON_FIELD_NUMBER = 7;
+    private java.lang.String lastPaymentFailureReason_;
+    /**
+     * <pre>
+     * Category of the most recent payment failure. One of: card_declined,
+     * insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+     * authentication_required, processing_error, other. Empty when no failure
+     * is recorded. Clients must tolerate unknown values.
+     * </pre>
+     *
+     * <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code>
+     * @return The lastPaymentFailureReason.
+     */
+    @java.lang.Override
+    public java.lang.String getLastPaymentFailureReason() {
+      return lastPaymentFailureReason_;
+    }
+    /**
+     * <pre>
+     * Category of the most recent payment failure. One of: card_declined,
+     * insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+     * authentication_required, processing_error, other. Empty when no failure
+     * is recorded. Clients must tolerate unknown values.
+     * </pre>
+     *
+     * <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code>
+     * @return The bytes for lastPaymentFailureReason.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLastPaymentFailureReasonBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(lastPaymentFailureReason_);
+    }
+    /**
+     * <pre>
+     * Category of the most recent payment failure. One of: card_declined,
+     * insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+     * authentication_required, processing_error, other. Empty when no failure
+     * is recorded. Clients must tolerate unknown values.
+     * </pre>
+     *
+     * <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code>
+     * @param value The lastPaymentFailureReason to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setLastPaymentFailureReason(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      lastPaymentFailureReason_ = value;
+    }
+    /**
+     * <pre>
+     * Category of the most recent payment failure. One of: card_declined,
+     * insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+     * authentication_required, processing_error, other. Empty when no failure
+     * is recorded. Clients must tolerate unknown values.
+     * </pre>
+     *
+     * <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code>
+     */
+    private void clearLastPaymentFailureReason() {
+
+      lastPaymentFailureReason_ = getDefaultInstance().getLastPaymentFailureReason();
+    }
+    /**
+     * <pre>
+     * Category of the most recent payment failure. One of: card_declined,
+     * insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+     * authentication_required, processing_error, other. Empty when no failure
+     * is recorded. Clients must tolerate unknown values.
+     * </pre>
+     *
+     * <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code>
+     * @param value The bytes for lastPaymentFailureReason to set.
+     */
+    private void setLastPaymentFailureReasonBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      lastPaymentFailureReason_ = value.toStringUtf8();
+
+    }
+
+    public static final int LAST_PAYMENT_FAILURE_AT_FIELD_NUMBER = 8;
+    private com.google.protobuf.Timestamp lastPaymentFailureAt_;
+    /**
+     * <pre>
+     * Time of the most recent payment failure. Empty when no failure recorded.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code>
+     */
+    @java.lang.Override
+    public boolean hasLastPaymentFailureAt() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Time of the most recent payment failure. Empty when no failure recorded.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastPaymentFailureAt() {
+      return lastPaymentFailureAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastPaymentFailureAt_;
+    }
+    /**
+     * <pre>
+     * Time of the most recent payment failure. Empty when no failure recorded.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setLastPaymentFailureAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      lastPaymentFailureAt_ = value;
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * Time of the most recent payment failure. Empty when no failure recorded.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeLastPaymentFailureAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (lastPaymentFailureAt_ != null &&
+          lastPaymentFailureAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        lastPaymentFailureAt_ =
+          com.google.protobuf.Timestamp.newBuilder(lastPaymentFailureAt_).mergeFrom(value).buildPartial();
+      } else {
+        lastPaymentFailureAt_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * Time of the most recent payment failure. Empty when no failure recorded.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code>
+     */
+    private void clearLastPaymentFailureAt() {
+      lastPaymentFailureAt_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
     }
 
     public static viam.app.v1.Billing.InvoiceSummary parseFrom(
@@ -1238,6 +1435,161 @@ public final class Billing {
         return this;
       }
 
+      /**
+       * <pre>
+       * Category of the most recent payment failure. One of: card_declined,
+       * insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+       * authentication_required, processing_error, other. Empty when no failure
+       * is recorded. Clients must tolerate unknown values.
+       * </pre>
+       *
+       * <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code>
+       * @return The lastPaymentFailureReason.
+       */
+      @java.lang.Override
+      public java.lang.String getLastPaymentFailureReason() {
+        return instance.getLastPaymentFailureReason();
+      }
+      /**
+       * <pre>
+       * Category of the most recent payment failure. One of: card_declined,
+       * insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+       * authentication_required, processing_error, other. Empty when no failure
+       * is recorded. Clients must tolerate unknown values.
+       * </pre>
+       *
+       * <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code>
+       * @return The bytes for lastPaymentFailureReason.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLastPaymentFailureReasonBytes() {
+        return instance.getLastPaymentFailureReasonBytes();
+      }
+      /**
+       * <pre>
+       * Category of the most recent payment failure. One of: card_declined,
+       * insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+       * authentication_required, processing_error, other. Empty when no failure
+       * is recorded. Clients must tolerate unknown values.
+       * </pre>
+       *
+       * <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code>
+       * @param value The lastPaymentFailureReason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastPaymentFailureReason(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setLastPaymentFailureReason(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Category of the most recent payment failure. One of: card_declined,
+       * insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+       * authentication_required, processing_error, other. Empty when no failure
+       * is recorded. Clients must tolerate unknown values.
+       * </pre>
+       *
+       * <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastPaymentFailureReason() {
+        copyOnWrite();
+        instance.clearLastPaymentFailureReason();
+        return this;
+      }
+      /**
+       * <pre>
+       * Category of the most recent payment failure. One of: card_declined,
+       * insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+       * authentication_required, processing_error, other. Empty when no failure
+       * is recorded. Clients must tolerate unknown values.
+       * </pre>
+       *
+       * <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code>
+       * @param value The bytes for lastPaymentFailureReason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastPaymentFailureReasonBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setLastPaymentFailureReasonBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Time of the most recent payment failure. Empty when no failure recorded.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code>
+       */
+      @java.lang.Override
+      public boolean hasLastPaymentFailureAt() {
+        return instance.hasLastPaymentFailureAt();
+      }
+      /**
+       * <pre>
+       * Time of the most recent payment failure. Empty when no failure recorded.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getLastPaymentFailureAt() {
+        return instance.getLastPaymentFailureAt();
+      }
+      /**
+       * <pre>
+       * Time of the most recent payment failure. Empty when no failure recorded.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code>
+       */
+      public Builder setLastPaymentFailureAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setLastPaymentFailureAt(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Time of the most recent payment failure. Empty when no failure recorded.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code>
+       */
+      public Builder setLastPaymentFailureAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLastPaymentFailureAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Time of the most recent payment failure. Empty when no failure recorded.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code>
+       */
+      public Builder mergeLastPaymentFailureAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeLastPaymentFailureAt(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Time of the most recent payment failure. Empty when no failure recorded.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code>
+       */
+      public Builder clearLastPaymentFailureAt() {  copyOnWrite();
+        instance.clearLastPaymentFailureAt();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.InvoiceSummary)
     }
     @java.lang.Override
@@ -1261,10 +1613,13 @@ public final class Billing {
               "status_",
               "dueDate_",
               "paidDate_",
+              "lastPaymentFailureReason_",
+              "lastPaymentFailureAt_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u0000\u0004\u0208\u0005\u1009\u0001\u0006\u1009\u0002";
+                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000\u0003" +
+                "\u0000\u0004\u0208\u0005\u1009\u0001\u0006\u1009\u0002\u0007\u0208\b\u1009\u0003" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -4660,7 +5015,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=131
+     *     See app/v1/billing.proto;l=140
      * @return The cloudStorageUsageCost.
      */
     @java.lang.Deprecated double getCloudStorageUsageCost();
@@ -4668,7 +5023,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=132
+     *     See app/v1/billing.proto;l=141
      * @return The dataUploadUsageCost.
      */
     @java.lang.Deprecated double getDataUploadUsageCost();
@@ -4676,7 +5031,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=133
+     *     See app/v1/billing.proto;l=142
      * @return The dataEgresUsageCost.
      */
     @java.lang.Deprecated double getDataEgresUsageCost();
@@ -4684,7 +5039,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=134
+     *     See app/v1/billing.proto;l=143
      * @return The remoteControlUsageCost.
      */
     @java.lang.Deprecated double getRemoteControlUsageCost();
@@ -4692,7 +5047,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=135
+     *     See app/v1/billing.proto;l=144
      * @return The standardComputeUsageCost.
      */
     @java.lang.Deprecated double getStandardComputeUsageCost();
@@ -4700,7 +5055,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=136
+     *     See app/v1/billing.proto;l=145
      * @return The discountAmount.
      */
     @java.lang.Deprecated double getDiscountAmount();
@@ -4708,7 +5063,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=137
+     *     See app/v1/billing.proto;l=146
      * @return The totalUsageWithDiscount.
      */
     @java.lang.Deprecated double getTotalUsageWithDiscount();
@@ -4716,7 +5071,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=138
+     *     See app/v1/billing.proto;l=147
      * @return The totalUsageWithoutDiscount.
      */
     @java.lang.Deprecated double getTotalUsageWithoutDiscount();
@@ -4724,7 +5079,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=139
+     *     See app/v1/billing.proto;l=148
      * @return The perMachineUsageCost.
      */
     @java.lang.Deprecated double getPerMachineUsageCost();
@@ -4732,7 +5087,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=140
+     *     See app/v1/billing.proto;l=149
      * @return The binaryDataCloudStorageUsageCost.
      */
     @java.lang.Deprecated double getBinaryDataCloudStorageUsageCost();
@@ -4740,7 +5095,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=141
+     *     See app/v1/billing.proto;l=150
      * @return The otherCloudStorageUsageCost.
      */
     @java.lang.Deprecated double getOtherCloudStorageUsageCost();
@@ -4985,7 +5340,7 @@ public final class Billing {
      *
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=131
+     *     See app/v1/billing.proto;l=140
      * @return The cloudStorageUsageCost.
      */
     @java.lang.Override
@@ -5021,7 +5376,7 @@ public final class Billing {
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=132
+     *     See app/v1/billing.proto;l=141
      * @return The dataUploadUsageCost.
      */
     @java.lang.Override
@@ -5049,7 +5404,7 @@ public final class Billing {
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=133
+     *     See app/v1/billing.proto;l=142
      * @return The dataEgresUsageCost.
      */
     @java.lang.Override
@@ -5077,7 +5432,7 @@ public final class Billing {
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=134
+     *     See app/v1/billing.proto;l=143
      * @return The remoteControlUsageCost.
      */
     @java.lang.Override
@@ -5105,7 +5460,7 @@ public final class Billing {
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=135
+     *     See app/v1/billing.proto;l=144
      * @return The standardComputeUsageCost.
      */
     @java.lang.Override
@@ -5133,7 +5488,7 @@ public final class Billing {
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     *     See app/v1/billing.proto;l=136
+     *     See app/v1/billing.proto;l=145
      * @return The discountAmount.
      */
     @java.lang.Override
@@ -5161,7 +5516,7 @@ public final class Billing {
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     *     See app/v1/billing.proto;l=137
+     *     See app/v1/billing.proto;l=146
      * @return The totalUsageWithDiscount.
      */
     @java.lang.Override
@@ -5189,7 +5544,7 @@ public final class Billing {
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     *     See app/v1/billing.proto;l=138
+     *     See app/v1/billing.proto;l=147
      * @return The totalUsageWithoutDiscount.
      */
     @java.lang.Override
@@ -5217,7 +5572,7 @@ public final class Billing {
     /**
      * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=139
+     *     See app/v1/billing.proto;l=148
      * @return The perMachineUsageCost.
      */
     @java.lang.Override
@@ -5245,7 +5600,7 @@ public final class Billing {
     /**
      * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=140
+     *     See app/v1/billing.proto;l=149
      * @return The binaryDataCloudStorageUsageCost.
      */
     @java.lang.Override
@@ -5273,7 +5628,7 @@ public final class Billing {
     /**
      * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
      * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     *     See app/v1/billing.proto;l=141
+     *     See app/v1/billing.proto;l=150
      * @return The otherCloudStorageUsageCost.
      */
     @java.lang.Override
@@ -5624,7 +5979,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=131
+       *     See app/v1/billing.proto;l=140
        * @return The cloudStorageUsageCost.
        */
       @java.lang.Override
@@ -5638,7 +5993,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=131
+       *     See app/v1/billing.proto;l=140
        * @param value The cloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5654,7 +6009,7 @@ public final class Billing {
        *
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=131
+       *     See app/v1/billing.proto;l=140
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearCloudStorageUsageCost() {
@@ -5666,7 +6021,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=132
+       *     See app/v1/billing.proto;l=141
        * @return The dataUploadUsageCost.
        */
       @java.lang.Override
@@ -5676,7 +6031,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=132
+       *     See app/v1/billing.proto;l=141
        * @param value The dataUploadUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5688,7 +6043,7 @@ public final class Billing {
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=132
+       *     See app/v1/billing.proto;l=141
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDataUploadUsageCost() {
@@ -5700,7 +6055,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=133
+       *     See app/v1/billing.proto;l=142
        * @return The dataEgresUsageCost.
        */
       @java.lang.Override
@@ -5710,7 +6065,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=133
+       *     See app/v1/billing.proto;l=142
        * @param value The dataEgresUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5722,7 +6077,7 @@ public final class Billing {
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=133
+       *     See app/v1/billing.proto;l=142
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDataEgresUsageCost() {
@@ -5734,7 +6089,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=134
+       *     See app/v1/billing.proto;l=143
        * @return The remoteControlUsageCost.
        */
       @java.lang.Override
@@ -5744,7 +6099,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=134
+       *     See app/v1/billing.proto;l=143
        * @param value The remoteControlUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5756,7 +6111,7 @@ public final class Billing {
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=134
+       *     See app/v1/billing.proto;l=143
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearRemoteControlUsageCost() {
@@ -5768,7 +6123,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=135
+       *     See app/v1/billing.proto;l=144
        * @return The standardComputeUsageCost.
        */
       @java.lang.Override
@@ -5778,7 +6133,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=135
+       *     See app/v1/billing.proto;l=144
        * @param value The standardComputeUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5790,7 +6145,7 @@ public final class Billing {
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=135
+       *     See app/v1/billing.proto;l=144
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearStandardComputeUsageCost() {
@@ -5802,7 +6157,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=136
+       *     See app/v1/billing.proto;l=145
        * @return The discountAmount.
        */
       @java.lang.Override
@@ -5812,7 +6167,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=136
+       *     See app/v1/billing.proto;l=145
        * @param value The discountAmount to set.
        * @return This builder for chaining.
        */
@@ -5824,7 +6179,7 @@ public final class Billing {
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-       *     See app/v1/billing.proto;l=136
+       *     See app/v1/billing.proto;l=145
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDiscountAmount() {
@@ -5836,7 +6191,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=137
+       *     See app/v1/billing.proto;l=146
        * @return The totalUsageWithDiscount.
        */
       @java.lang.Override
@@ -5846,7 +6201,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=137
+       *     See app/v1/billing.proto;l=146
        * @param value The totalUsageWithDiscount to set.
        * @return This builder for chaining.
        */
@@ -5858,7 +6213,7 @@ public final class Billing {
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-       *     See app/v1/billing.proto;l=137
+       *     See app/v1/billing.proto;l=146
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalUsageWithDiscount() {
@@ -5870,7 +6225,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=138
+       *     See app/v1/billing.proto;l=147
        * @return The totalUsageWithoutDiscount.
        */
       @java.lang.Override
@@ -5880,7 +6235,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=138
+       *     See app/v1/billing.proto;l=147
        * @param value The totalUsageWithoutDiscount to set.
        * @return This builder for chaining.
        */
@@ -5892,7 +6247,7 @@ public final class Billing {
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-       *     See app/v1/billing.proto;l=138
+       *     See app/v1/billing.proto;l=147
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTotalUsageWithoutDiscount() {
@@ -5904,7 +6259,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=139
+       *     See app/v1/billing.proto;l=148
        * @return The perMachineUsageCost.
        */
       @java.lang.Override
@@ -5914,7 +6269,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=139
+       *     See app/v1/billing.proto;l=148
        * @param value The perMachineUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5926,7 +6281,7 @@ public final class Billing {
       /**
        * <code>double per_machine_usage_cost = 11 [json_name = "perMachineUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=139
+       *     See app/v1/billing.proto;l=148
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearPerMachineUsageCost() {
@@ -5938,7 +6293,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=140
+       *     See app/v1/billing.proto;l=149
        * @return The binaryDataCloudStorageUsageCost.
        */
       @java.lang.Override
@@ -5948,7 +6303,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=140
+       *     See app/v1/billing.proto;l=149
        * @param value The binaryDataCloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5960,7 +6315,7 @@ public final class Billing {
       /**
        * <code>double binary_data_cloud_storage_usage_cost = 12 [json_name = "binaryDataCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=140
+       *     See app/v1/billing.proto;l=149
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearBinaryDataCloudStorageUsageCost() {
@@ -5972,7 +6327,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=141
+       *     See app/v1/billing.proto;l=150
        * @return The otherCloudStorageUsageCost.
        */
       @java.lang.Override
@@ -5982,7 +6337,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=141
+       *     See app/v1/billing.proto;l=150
        * @param value The otherCloudStorageUsageCost to set.
        * @return This builder for chaining.
        */
@@ -5994,7 +6349,7 @@ public final class Billing {
       /**
        * <code>double other_cloud_storage_usage_cost = 13 [json_name = "otherCloudStorageUsageCost", deprecated = true];</code>
        * @deprecated viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-       *     See app/v1/billing.proto;l=141
+       *     See app/v1/billing.proto;l=150
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearOtherCloudStorageUsageCost() {
