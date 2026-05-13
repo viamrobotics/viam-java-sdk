@@ -975,6 +975,156 @@ public final class DataServiceGrpc {
     return getCreateBinaryDataSignedURLMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateSequenceRequest,
+      viam.app.data.v1.Data.CreateSequenceResponse> getCreateSequenceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateSequence",
+      requestType = viam.app.data.v1.Data.CreateSequenceRequest.class,
+      responseType = viam.app.data.v1.Data.CreateSequenceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateSequenceRequest,
+      viam.app.data.v1.Data.CreateSequenceResponse> getCreateSequenceMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateSequenceRequest, viam.app.data.v1.Data.CreateSequenceResponse> getCreateSequenceMethod;
+    if ((getCreateSequenceMethod = DataServiceGrpc.getCreateSequenceMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getCreateSequenceMethod = DataServiceGrpc.getCreateSequenceMethod) == null) {
+          DataServiceGrpc.getCreateSequenceMethod = getCreateSequenceMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.CreateSequenceRequest, viam.app.data.v1.Data.CreateSequenceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSequence"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.CreateSequenceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.CreateSequenceResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getCreateSequenceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetSequenceRequest,
+      viam.app.data.v1.Data.GetSequenceResponse> getGetSequenceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSequence",
+      requestType = viam.app.data.v1.Data.GetSequenceRequest.class,
+      responseType = viam.app.data.v1.Data.GetSequenceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetSequenceRequest,
+      viam.app.data.v1.Data.GetSequenceResponse> getGetSequenceMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetSequenceRequest, viam.app.data.v1.Data.GetSequenceResponse> getGetSequenceMethod;
+    if ((getGetSequenceMethod = DataServiceGrpc.getGetSequenceMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getGetSequenceMethod = DataServiceGrpc.getGetSequenceMethod) == null) {
+          DataServiceGrpc.getGetSequenceMethod = getGetSequenceMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.GetSequenceRequest, viam.app.data.v1.Data.GetSequenceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSequence"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.GetSequenceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.GetSequenceResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetSequenceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.UpdateSequenceRequest,
+      viam.app.data.v1.Data.UpdateSequenceResponse> getUpdateSequenceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateSequence",
+      requestType = viam.app.data.v1.Data.UpdateSequenceRequest.class,
+      responseType = viam.app.data.v1.Data.UpdateSequenceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.UpdateSequenceRequest,
+      viam.app.data.v1.Data.UpdateSequenceResponse> getUpdateSequenceMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.UpdateSequenceRequest, viam.app.data.v1.Data.UpdateSequenceResponse> getUpdateSequenceMethod;
+    if ((getUpdateSequenceMethod = DataServiceGrpc.getUpdateSequenceMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getUpdateSequenceMethod = DataServiceGrpc.getUpdateSequenceMethod) == null) {
+          DataServiceGrpc.getUpdateSequenceMethod = getUpdateSequenceMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.UpdateSequenceRequest, viam.app.data.v1.Data.UpdateSequenceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSequence"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.UpdateSequenceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.UpdateSequenceResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUpdateSequenceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteSequenceRequest,
+      viam.app.data.v1.Data.DeleteSequenceResponse> getDeleteSequenceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteSequence",
+      requestType = viam.app.data.v1.Data.DeleteSequenceRequest.class,
+      responseType = viam.app.data.v1.Data.DeleteSequenceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteSequenceRequest,
+      viam.app.data.v1.Data.DeleteSequenceResponse> getDeleteSequenceMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteSequenceRequest, viam.app.data.v1.Data.DeleteSequenceResponse> getDeleteSequenceMethod;
+    if ((getDeleteSequenceMethod = DataServiceGrpc.getDeleteSequenceMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getDeleteSequenceMethod = DataServiceGrpc.getDeleteSequenceMethod) == null) {
+          DataServiceGrpc.getDeleteSequenceMethod = getDeleteSequenceMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.DeleteSequenceRequest, viam.app.data.v1.Data.DeleteSequenceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSequence"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.DeleteSequenceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.DeleteSequenceResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getDeleteSequenceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.ListSequencesRequest,
+      viam.app.data.v1.Data.ListSequencesResponse> getListSequencesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSequences",
+      requestType = viam.app.data.v1.Data.ListSequencesRequest.class,
+      responseType = viam.app.data.v1.Data.ListSequencesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.ListSequencesRequest,
+      viam.app.data.v1.Data.ListSequencesResponse> getListSequencesMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.ListSequencesRequest, viam.app.data.v1.Data.ListSequencesResponse> getListSequencesMethod;
+    if ((getListSequencesMethod = DataServiceGrpc.getListSequencesMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getListSequencesMethod = DataServiceGrpc.getListSequencesMethod) == null) {
+          DataServiceGrpc.getListSequencesMethod = getListSequencesMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.ListSequencesRequest, viam.app.data.v1.Data.ListSequencesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSequences"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.ListSequencesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.ListSequencesResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getListSequencesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1366,6 +1516,56 @@ public final class DataServiceGrpc {
     default void createBinaryDataSignedURL(viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateBinaryDataSignedURLMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * CreateSequence creates a new sequence.
+     * </pre>
+     */
+    default void createSequence(viam.app.data.v1.Data.CreateSequenceRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateSequenceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSequenceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetSequence retrieves a sequence by ID.
+     * </pre>
+     */
+    default void getSequence(viam.app.data.v1.Data.GetSequenceRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetSequenceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSequenceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateSequence updates the mutable fields of a sequence.
+     * </pre>
+     */
+    default void updateSequence(viam.app.data.v1.Data.UpdateSequenceRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.UpdateSequenceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSequenceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteSequence deletes a sequence by ID.
+     * </pre>
+     */
+    default void deleteSequence(viam.app.data.v1.Data.DeleteSequenceRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteSequenceResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSequenceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListSequences lists sequences for a given organization.
+     * </pre>
+     */
+    default void listSequences(viam.app.data.v1.Data.ListSequencesRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListSequencesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSequencesMethod(), responseObserver);
     }
   }
 
@@ -1760,6 +1960,61 @@ public final class DataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateBinaryDataSignedURLMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * CreateSequence creates a new sequence.
+     * </pre>
+     */
+    public void createSequence(viam.app.data.v1.Data.CreateSequenceRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateSequenceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateSequenceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetSequence retrieves a sequence by ID.
+     * </pre>
+     */
+    public void getSequence(viam.app.data.v1.Data.GetSequenceRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetSequenceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetSequenceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * UpdateSequence updates the mutable fields of a sequence.
+     * </pre>
+     */
+    public void updateSequence(viam.app.data.v1.Data.UpdateSequenceRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.UpdateSequenceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateSequenceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DeleteSequence deletes a sequence by ID.
+     * </pre>
+     */
+    public void deleteSequence(viam.app.data.v1.Data.DeleteSequenceRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteSequenceResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteSequenceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListSequences lists sequences for a given organization.
+     * </pre>
+     */
+    public void listSequences(viam.app.data.v1.Data.ListSequencesRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListSequencesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListSequencesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -2109,6 +2364,56 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getCreateBinaryDataSignedURLMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * CreateSequence creates a new sequence.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.CreateSequenceResponse createSequence(viam.app.data.v1.Data.CreateSequenceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateSequenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetSequence retrieves a sequence by ID.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.GetSequenceResponse getSequence(viam.app.data.v1.Data.GetSequenceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetSequenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateSequence updates the mutable fields of a sequence.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.UpdateSequenceResponse updateSequence(viam.app.data.v1.Data.UpdateSequenceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUpdateSequenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteSequence deletes a sequence by ID.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.DeleteSequenceResponse deleteSequence(viam.app.data.v1.Data.DeleteSequenceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteSequenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListSequences lists sequences for a given organization.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.ListSequencesResponse listSequences(viam.app.data.v1.Data.ListSequencesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListSequencesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -2456,6 +2761,56 @@ public final class DataServiceGrpc {
     public viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse createBinaryDataSignedURL(viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateBinaryDataSignedURLMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * CreateSequence creates a new sequence.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.CreateSequenceResponse createSequence(viam.app.data.v1.Data.CreateSequenceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateSequenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetSequence retrieves a sequence by ID.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.GetSequenceResponse getSequence(viam.app.data.v1.Data.GetSequenceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetSequenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateSequence updates the mutable fields of a sequence.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.UpdateSequenceResponse updateSequence(viam.app.data.v1.Data.UpdateSequenceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateSequenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteSequence deletes a sequence by ID.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.DeleteSequenceResponse deleteSequence(viam.app.data.v1.Data.DeleteSequenceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteSequenceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListSequences lists sequences for a given organization.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.ListSequencesResponse listSequences(viam.app.data.v1.Data.ListSequencesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListSequencesMethod(), getCallOptions(), request);
     }
   }
 
@@ -2825,6 +3180,61 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateBinaryDataSignedURLMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * CreateSequence creates a new sequence.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.CreateSequenceResponse> createSequence(
+        viam.app.data.v1.Data.CreateSequenceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateSequenceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetSequence retrieves a sequence by ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.GetSequenceResponse> getSequence(
+        viam.app.data.v1.Data.GetSequenceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetSequenceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateSequence updates the mutable fields of a sequence.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.UpdateSequenceResponse> updateSequence(
+        viam.app.data.v1.Data.UpdateSequenceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateSequenceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DeleteSequence deletes a sequence by ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.DeleteSequenceResponse> deleteSequence(
+        viam.app.data.v1.Data.DeleteSequenceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteSequenceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListSequences lists sequences for a given organization.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.ListSequencesResponse> listSequences(
+        viam.app.data.v1.Data.ListSequencesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListSequencesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TABULAR_DATA_BY_FILTER = 0;
@@ -2859,6 +3269,11 @@ public final class DataServiceGrpc {
   private static final int METHODID_DELETE_SAVED_QUERY = 29;
   private static final int METHODID_LIST_SAVED_QUERIES = 30;
   private static final int METHODID_CREATE_BINARY_DATA_SIGNED_URL = 31;
+  private static final int METHODID_CREATE_SEQUENCE = 32;
+  private static final int METHODID_GET_SEQUENCE = 33;
+  private static final int METHODID_UPDATE_SEQUENCE = 34;
+  private static final int METHODID_DELETE_SEQUENCE = 35;
+  private static final int METHODID_LIST_SEQUENCES = 36;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3004,6 +3419,26 @@ public final class DataServiceGrpc {
         case METHODID_CREATE_BINARY_DATA_SIGNED_URL:
           serviceImpl.createBinaryDataSignedURL((viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_SEQUENCE:
+          serviceImpl.createSequence((viam.app.data.v1.Data.CreateSequenceRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateSequenceResponse>) responseObserver);
+          break;
+        case METHODID_GET_SEQUENCE:
+          serviceImpl.getSequence((viam.app.data.v1.Data.GetSequenceRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetSequenceResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_SEQUENCE:
+          serviceImpl.updateSequence((viam.app.data.v1.Data.UpdateSequenceRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.UpdateSequenceResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_SEQUENCE:
+          serviceImpl.deleteSequence((viam.app.data.v1.Data.DeleteSequenceRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteSequenceResponse>) responseObserver);
+          break;
+        case METHODID_LIST_SEQUENCES:
+          serviceImpl.listSequences((viam.app.data.v1.Data.ListSequencesRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListSequencesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -3247,6 +3682,41 @@ public final class DataServiceGrpc {
               viam.app.data.v1.Data.CreateBinaryDataSignedURLRequest,
               viam.app.data.v1.Data.CreateBinaryDataSignedURLResponse>(
                 service, METHODID_CREATE_BINARY_DATA_SIGNED_URL)))
+        .addMethod(
+          getCreateSequenceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.CreateSequenceRequest,
+              viam.app.data.v1.Data.CreateSequenceResponse>(
+                service, METHODID_CREATE_SEQUENCE)))
+        .addMethod(
+          getGetSequenceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.GetSequenceRequest,
+              viam.app.data.v1.Data.GetSequenceResponse>(
+                service, METHODID_GET_SEQUENCE)))
+        .addMethod(
+          getUpdateSequenceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.UpdateSequenceRequest,
+              viam.app.data.v1.Data.UpdateSequenceResponse>(
+                service, METHODID_UPDATE_SEQUENCE)))
+        .addMethod(
+          getDeleteSequenceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.DeleteSequenceRequest,
+              viam.app.data.v1.Data.DeleteSequenceResponse>(
+                service, METHODID_DELETE_SEQUENCE)))
+        .addMethod(
+          getListSequencesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.ListSequencesRequest,
+              viam.app.data.v1.Data.ListSequencesResponse>(
+                service, METHODID_LIST_SEQUENCES)))
         .build();
   }
 
@@ -3291,6 +3761,11 @@ public final class DataServiceGrpc {
               .addMethod(getDeleteSavedQueryMethod())
               .addMethod(getListSavedQueriesMethod())
               .addMethod(getCreateBinaryDataSignedURLMethod())
+              .addMethod(getCreateSequenceMethod())
+              .addMethod(getGetSequenceMethod())
+              .addMethod(getUpdateSequenceMethod())
+              .addMethod(getDeleteSequenceMethod())
+              .addMethod(getListSequencesMethod())
               .build();
         }
       }
