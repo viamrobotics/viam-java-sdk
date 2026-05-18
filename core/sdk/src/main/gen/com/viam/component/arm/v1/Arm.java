@@ -6735,6 +6735,7 @@ public final class Arm {
     /**
      * <pre>
      * Maximum allowable velocity of an arm joint, in degrees per second.
+     * The arm driver will move as fast as possible up to the set value.
      * Ignored when max_vel_degs_per_sec_joints is set.
      * </pre>
      *
@@ -6745,6 +6746,7 @@ public final class Arm {
     /**
      * <pre>
      * Maximum allowable velocity of an arm joint, in degrees per second.
+     * The arm driver will move as fast as possible up to the set value.
      * Ignored when max_vel_degs_per_sec_joints is set.
      * </pre>
      *
@@ -6756,6 +6758,7 @@ public final class Arm {
     /**
      * <pre>
      * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+     * The arm driver will accelerate as fast as possible up to the set value.
      * ignored when max_acc_degs_per_sec2_joints is set.
      * </pre>
      *
@@ -6766,6 +6769,7 @@ public final class Arm {
     /**
      * <pre>
      * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+     * The arm driver will accelerate as fast as possible up to the set value.
      * ignored when max_acc_degs_per_sec2_joints is set.
      * </pre>
      *
@@ -6777,6 +6781,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum velocity in degrees per second.
+     * The arm driver will move each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -6786,6 +6791,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum velocity in degrees per second.
+     * The arm driver will move each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -6795,6 +6801,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum velocity in degrees per second.
+     * The arm driver will move each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -6806,6 +6813,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum acceleration in degrees per second squared.
+     * The arm driver will accelerate each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -6815,6 +6823,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum acceleration in degrees per second squared.
+     * The arm driver will accelerate each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -6824,6 +6833,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum acceleration in degrees per second squared.
+     * The arm driver will accelerate each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -6831,8 +6841,36 @@ public final class Arm {
      * @return The maxAccDegsPerSec2Joints at the given index.
      */
     double getMaxAccDegsPerSec2Joints(int index);
+
+    /**
+     * <pre>
+     * Maximum allowable speed of an arm's tool center point in meters per second.
+     * The arm driver will move the tool center point as fast as possible up to this set value.
+     * </pre>
+     *
+     * <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code>
+     * @return Whether the maxTcpSpeed field is set.
+     */
+    boolean hasMaxTcpSpeed();
+    /**
+     * <pre>
+     * Maximum allowable speed of an arm's tool center point in meters per second.
+     * The arm driver will move the tool center point as fast as possible up to this set value.
+     * </pre>
+     *
+     * <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code>
+     * @return The maxTcpSpeed.
+     */
+    double getMaxTcpSpeed();
   }
   /**
+   * <pre>
+   * MoveOptions specifies kinematic constraints for an arm motion. All fields
+   * are optional ceilings; any combination may be set. Every constraint that
+   * is set is respected at every point along the executed trajectory.
+   * The limiting constraint may change throughout execution.
+   * </pre>
+   *
    * Protobuf type {@code viam.component.arm.v1.MoveOptions}
    */
   public  static final class MoveOptions extends
@@ -6850,6 +6888,7 @@ public final class Arm {
     /**
      * <pre>
      * Maximum allowable velocity of an arm joint, in degrees per second.
+     * The arm driver will move as fast as possible up to the set value.
      * Ignored when max_vel_degs_per_sec_joints is set.
      * </pre>
      *
@@ -6863,6 +6902,7 @@ public final class Arm {
     /**
      * <pre>
      * Maximum allowable velocity of an arm joint, in degrees per second.
+     * The arm driver will move as fast as possible up to the set value.
      * Ignored when max_vel_degs_per_sec_joints is set.
      * </pre>
      *
@@ -6876,6 +6916,7 @@ public final class Arm {
     /**
      * <pre>
      * Maximum allowable velocity of an arm joint, in degrees per second.
+     * The arm driver will move as fast as possible up to the set value.
      * Ignored when max_vel_degs_per_sec_joints is set.
      * </pre>
      *
@@ -6889,6 +6930,7 @@ public final class Arm {
     /**
      * <pre>
      * Maximum allowable velocity of an arm joint, in degrees per second.
+     * The arm driver will move as fast as possible up to the set value.
      * Ignored when max_vel_degs_per_sec_joints is set.
      * </pre>
      *
@@ -6904,6 +6946,7 @@ public final class Arm {
     /**
      * <pre>
      * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+     * The arm driver will accelerate as fast as possible up to the set value.
      * ignored when max_acc_degs_per_sec2_joints is set.
      * </pre>
      *
@@ -6917,6 +6960,7 @@ public final class Arm {
     /**
      * <pre>
      * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+     * The arm driver will accelerate as fast as possible up to the set value.
      * ignored when max_acc_degs_per_sec2_joints is set.
      * </pre>
      *
@@ -6930,6 +6974,7 @@ public final class Arm {
     /**
      * <pre>
      * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+     * The arm driver will accelerate as fast as possible up to the set value.
      * ignored when max_acc_degs_per_sec2_joints is set.
      * </pre>
      *
@@ -6943,6 +6988,7 @@ public final class Arm {
     /**
      * <pre>
      * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+     * The arm driver will accelerate as fast as possible up to the set value.
      * ignored when max_acc_degs_per_sec2_joints is set.
      * </pre>
      *
@@ -6958,6 +7004,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum velocity in degrees per second.
+     * The arm driver will move each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -6971,6 +7018,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum velocity in degrees per second.
+     * The arm driver will move each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -6983,6 +7031,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum velocity in degrees per second.
+     * The arm driver will move each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -7004,6 +7053,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum velocity in degrees per second.
+     * The arm driver will move each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -7018,6 +7068,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum velocity in degrees per second.
+     * The arm driver will move each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -7030,6 +7081,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum velocity in degrees per second.
+     * The arm driver will move each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -7044,6 +7096,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum velocity in degrees per second.
+     * The arm driver will move each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -7057,6 +7110,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum acceleration in degrees per second squared.
+     * The arm driver will accelerate each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -7070,6 +7124,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum acceleration in degrees per second squared.
+     * The arm driver will accelerate each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -7082,6 +7137,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum acceleration in degrees per second squared.
+     * The arm driver will accelerate each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -7103,6 +7159,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum acceleration in degrees per second squared.
+     * The arm driver will accelerate each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -7117,6 +7174,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum acceleration in degrees per second squared.
+     * The arm driver will accelerate each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -7129,6 +7187,7 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum acceleration in degrees per second squared.
+     * The arm driver will accelerate each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -7143,12 +7202,67 @@ public final class Arm {
     /**
      * <pre>
      * Per-joint maximum acceleration in degrees per second squared.
+     * The arm driver will accelerate each joint as fast as possible up to its respective set value.
      * </pre>
      *
      * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
      */
     private void clearMaxAccDegsPerSec2Joints() {
       maxAccDegsPerSec2Joints_ = emptyDoubleList();
+    }
+
+    public static final int MAX_TCP_SPEED_FIELD_NUMBER = 5;
+    private double maxTcpSpeed_;
+    /**
+     * <pre>
+     * Maximum allowable speed of an arm's tool center point in meters per second.
+     * The arm driver will move the tool center point as fast as possible up to this set value.
+     * </pre>
+     *
+     * <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code>
+     * @return Whether the maxTcpSpeed field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxTcpSpeed() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Maximum allowable speed of an arm's tool center point in meters per second.
+     * The arm driver will move the tool center point as fast as possible up to this set value.
+     * </pre>
+     *
+     * <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code>
+     * @return The maxTcpSpeed.
+     */
+    @java.lang.Override
+    public double getMaxTcpSpeed() {
+      return maxTcpSpeed_;
+    }
+    /**
+     * <pre>
+     * Maximum allowable speed of an arm's tool center point in meters per second.
+     * The arm driver will move the tool center point as fast as possible up to this set value.
+     * </pre>
+     *
+     * <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code>
+     * @param value The maxTcpSpeed to set.
+     */
+    private void setMaxTcpSpeed(double value) {
+      bitField0_ |= 0x00000004;
+      maxTcpSpeed_ = value;
+    }
+    /**
+     * <pre>
+     * Maximum allowable speed of an arm's tool center point in meters per second.
+     * The arm driver will move the tool center point as fast as possible up to this set value.
+     * </pre>
+     *
+     * <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code>
+     */
+    private void clearMaxTcpSpeed() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      maxTcpSpeed_ = 0D;
     }
 
     public static com.viam.component.arm.v1.Arm.MoveOptions parseFrom(
@@ -7235,6 +7349,13 @@ public final class Arm {
     }
 
     /**
+     * <pre>
+     * MoveOptions specifies kinematic constraints for an arm motion. All fields
+     * are optional ceilings; any combination may be set. Every constraint that
+     * is set is respected at every point along the executed trajectory.
+     * The limiting constraint may change throughout execution.
+     * </pre>
+     *
      * Protobuf type {@code viam.component.arm.v1.MoveOptions}
      */
     public static final class Builder extends
@@ -7251,6 +7372,7 @@ public final class Arm {
       /**
        * <pre>
        * Maximum allowable velocity of an arm joint, in degrees per second.
+       * The arm driver will move as fast as possible up to the set value.
        * Ignored when max_vel_degs_per_sec_joints is set.
        * </pre>
        *
@@ -7264,6 +7386,7 @@ public final class Arm {
       /**
        * <pre>
        * Maximum allowable velocity of an arm joint, in degrees per second.
+       * The arm driver will move as fast as possible up to the set value.
        * Ignored when max_vel_degs_per_sec_joints is set.
        * </pre>
        *
@@ -7277,6 +7400,7 @@ public final class Arm {
       /**
        * <pre>
        * Maximum allowable velocity of an arm joint, in degrees per second.
+       * The arm driver will move as fast as possible up to the set value.
        * Ignored when max_vel_degs_per_sec_joints is set.
        * </pre>
        *
@@ -7292,6 +7416,7 @@ public final class Arm {
       /**
        * <pre>
        * Maximum allowable velocity of an arm joint, in degrees per second.
+       * The arm driver will move as fast as possible up to the set value.
        * Ignored when max_vel_degs_per_sec_joints is set.
        * </pre>
        *
@@ -7307,6 +7432,7 @@ public final class Arm {
       /**
        * <pre>
        * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+       * The arm driver will accelerate as fast as possible up to the set value.
        * ignored when max_acc_degs_per_sec2_joints is set.
        * </pre>
        *
@@ -7320,6 +7446,7 @@ public final class Arm {
       /**
        * <pre>
        * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+       * The arm driver will accelerate as fast as possible up to the set value.
        * ignored when max_acc_degs_per_sec2_joints is set.
        * </pre>
        *
@@ -7333,6 +7460,7 @@ public final class Arm {
       /**
        * <pre>
        * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+       * The arm driver will accelerate as fast as possible up to the set value.
        * ignored when max_acc_degs_per_sec2_joints is set.
        * </pre>
        *
@@ -7348,6 +7476,7 @@ public final class Arm {
       /**
        * <pre>
        * Maximum allowable acceleration of an arm joint, in degrees per second squared.
+       * The arm driver will accelerate as fast as possible up to the set value.
        * ignored when max_acc_degs_per_sec2_joints is set.
        * </pre>
        *
@@ -7363,6 +7492,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum velocity in degrees per second.
+       * The arm driver will move each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -7377,6 +7507,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum velocity in degrees per second.
+       * The arm driver will move each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -7389,6 +7520,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum velocity in degrees per second.
+       * The arm driver will move each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -7402,6 +7534,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum velocity in degrees per second.
+       * The arm driver will move each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -7417,6 +7550,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum velocity in degrees per second.
+       * The arm driver will move each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -7431,6 +7565,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum velocity in degrees per second.
+       * The arm driver will move each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -7446,6 +7581,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum velocity in degrees per second.
+       * The arm driver will move each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code>
@@ -7460,6 +7596,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum acceleration in degrees per second squared.
+       * The arm driver will accelerate each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -7474,6 +7611,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum acceleration in degrees per second squared.
+       * The arm driver will accelerate each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -7486,6 +7624,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum acceleration in degrees per second squared.
+       * The arm driver will accelerate each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -7499,6 +7638,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum acceleration in degrees per second squared.
+       * The arm driver will accelerate each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -7514,6 +7654,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum acceleration in degrees per second squared.
+       * The arm driver will accelerate each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -7528,6 +7669,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum acceleration in degrees per second squared.
+       * The arm driver will accelerate each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -7543,6 +7685,7 @@ public final class Arm {
       /**
        * <pre>
        * Per-joint maximum acceleration in degrees per second squared.
+       * The arm driver will accelerate each joint as fast as possible up to its respective set value.
        * </pre>
        *
        * <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code>
@@ -7551,6 +7694,62 @@ public final class Arm {
       public Builder clearMaxAccDegsPerSec2Joints() {
         copyOnWrite();
         instance.clearMaxAccDegsPerSec2Joints();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Maximum allowable speed of an arm's tool center point in meters per second.
+       * The arm driver will move the tool center point as fast as possible up to this set value.
+       * </pre>
+       *
+       * <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code>
+       * @return Whether the maxTcpSpeed field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxTcpSpeed() {
+        return instance.hasMaxTcpSpeed();
+      }
+      /**
+       * <pre>
+       * Maximum allowable speed of an arm's tool center point in meters per second.
+       * The arm driver will move the tool center point as fast as possible up to this set value.
+       * </pre>
+       *
+       * <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code>
+       * @return The maxTcpSpeed.
+       */
+      @java.lang.Override
+      public double getMaxTcpSpeed() {
+        return instance.getMaxTcpSpeed();
+      }
+      /**
+       * <pre>
+       * Maximum allowable speed of an arm's tool center point in meters per second.
+       * The arm driver will move the tool center point as fast as possible up to this set value.
+       * </pre>
+       *
+       * <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code>
+       * @param value The maxTcpSpeed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxTcpSpeed(double value) {
+        copyOnWrite();
+        instance.setMaxTcpSpeed(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum allowable speed of an arm's tool center point in meters per second.
+       * The arm driver will move the tool center point as fast as possible up to this set value.
+       * </pre>
+       *
+       * <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxTcpSpeed() {
+        copyOnWrite();
+        instance.clearMaxTcpSpeed();
         return this;
       }
 
@@ -7575,10 +7774,11 @@ public final class Arm {
               "maxAccDegsPerSec2_",
               "maxVelDegsPerSecJoints_",
               "maxAccDegsPerSec2Joints_",
+              "maxTcpSpeed_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0002\u0000\u0001\u1000\u0000\u0002" +
-                "\u1000\u0001\u0003#\u0004#";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0002\u0000\u0001\u1000\u0000\u0002" +
+                "\u1000\u0001\u0003#\u0004#\u0005\u1000\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {

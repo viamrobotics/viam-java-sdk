@@ -19778,14 +19778,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=423
+     *     See app/data/v1/data.proto;l=439
      * @return The id.
      */
     @java.lang.Deprecated java.lang.String getId();
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=423
+     *     See app/data/v1/data.proto;l=439
      * @return The bytes for id.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -19940,7 +19940,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=423
+     *     See app/data/v1/data.proto;l=439
      * @return The id.
      */
     @java.lang.Override
@@ -19950,7 +19950,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=423
+     *     See app/data/v1/data.proto;l=439
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -20596,7 +20596,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=423
+       *     See app/data/v1/data.proto;l=439
        * @return The id.
        */
       @java.lang.Override
@@ -20606,7 +20606,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=423
+       *     See app/data/v1/data.proto;l=439
        * @return The bytes for id.
        */
       @java.lang.Override
@@ -20617,7 +20617,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=423
+       *     See app/data/v1/data.proto;l=439
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -20630,7 +20630,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=423
+       *     See app/data/v1/data.proto;l=439
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearId() {
@@ -20641,7 +20641,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=423
+       *     See app/data/v1/data.proto;l=439
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -28837,14 +28837,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=561
+     *     See app/data/v1/data.proto;l=577
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=561
+     *     See app/data/v1/data.proto;l=577
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -29996,14 +29996,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=581
+     *     See app/data/v1/data.proto;l=597
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=581
+     *     See app/data/v1/data.proto;l=597
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -30707,14 +30707,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=593
+     *     See app/data/v1/data.proto;l=609
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=593
+     *     See app/data/v1/data.proto;l=609
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -44815,6 +44815,6419 @@ com.google.protobuf.Any defaultValue) {
     private static volatile com.google.protobuf.Parser<CreateBinaryDataSignedURLResponse> PARSER;
 
     public static com.google.protobuf.Parser<CreateBinaryDataSignedURLResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface SequenceResourceFilterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.SequenceResourceFilter)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The resourceName.
+     */
+    java.lang.String getResourceName();
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The bytes for resourceName.
+     */
+    com.google.protobuf.ByteString
+        getResourceNameBytes();
+
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     * @return The methodName.
+     */
+    java.lang.String getMethodName();
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     * @return The bytes for methodName.
+     */
+    com.google.protobuf.ByteString
+        getMethodNameBytes();
+  }
+  /**
+   * <pre>
+   * SequenceResourceFilter filters binary and/or tabular data by source identifiers.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.SequenceResourceFilter}
+   */
+  public  static final class SequenceResourceFilter extends
+      com.google.protobuf.GeneratedMessageLite<
+          SequenceResourceFilter, SequenceResourceFilter.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.SequenceResourceFilter)
+      SequenceResourceFilterOrBuilder {
+    private SequenceResourceFilter() {
+      resourceName_ = "";
+      methodName_ = "";
+    }
+    public static final int RESOURCE_NAME_FIELD_NUMBER = 2;
+    private java.lang.String resourceName_;
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The resourceName.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceName() {
+      return resourceName_;
+    }
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @return The bytes for resourceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(resourceName_);
+    }
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @param value The resourceName to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setResourceName(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      resourceName_ = value;
+    }
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     */
+    private void clearResourceName() {
+
+      resourceName_ = getDefaultInstance().getResourceName();
+    }
+    /**
+     * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+     * @param value The bytes for resourceName to set.
+     */
+    private void setResourceNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      resourceName_ = value.toStringUtf8();
+
+    }
+
+    public static final int METHOD_NAME_FIELD_NUMBER = 3;
+    private java.lang.String methodName_;
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     * @return The methodName.
+     */
+    @java.lang.Override
+    public java.lang.String getMethodName() {
+      return methodName_;
+    }
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     * @return The bytes for methodName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMethodNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(methodName_);
+    }
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     * @param value The methodName to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMethodName(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      methodName_ = value;
+    }
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     */
+    private void clearMethodName() {
+
+      methodName_ = getDefaultInstance().getMethodName();
+    }
+    /**
+     * <code>string method_name = 3 [json_name = "methodName"];</code>
+     * @param value The bytes for methodName to set.
+     */
+    private void setMethodNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      methodName_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.data.v1.Data.SequenceResourceFilter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.SequenceResourceFilter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.SequenceResourceFilter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.SequenceResourceFilter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.SequenceResourceFilter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.SequenceResourceFilter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.SequenceResourceFilter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.SequenceResourceFilter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.SequenceResourceFilter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.SequenceResourceFilter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.SequenceResourceFilter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.SequenceResourceFilter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.SequenceResourceFilter prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * SequenceResourceFilter filters binary and/or tabular data by source identifiers.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.SequenceResourceFilter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.SequenceResourceFilter, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.SequenceResourceFilter)
+        viam.app.data.v1.Data.SequenceResourceFilterOrBuilder {
+      // Construct using viam.app.data.v1.Data.SequenceResourceFilter.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @return The resourceName.
+       */
+      @java.lang.Override
+      public java.lang.String getResourceName() {
+        return instance.getResourceName();
+      }
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @return The bytes for resourceName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getResourceNameBytes() {
+        return instance.getResourceNameBytes();
+      }
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @param value The resourceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setResourceName(value);
+        return this;
+      }
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceName() {
+        copyOnWrite();
+        instance.clearResourceName();
+        return this;
+      }
+      /**
+       * <code>string resource_name = 2 [json_name = "resourceName"];</code>
+       * @param value The bytes for resourceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setResourceNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string method_name = 3 [json_name = "methodName"];</code>
+       * @return The methodName.
+       */
+      @java.lang.Override
+      public java.lang.String getMethodName() {
+        return instance.getMethodName();
+      }
+      /**
+       * <code>string method_name = 3 [json_name = "methodName"];</code>
+       * @return The bytes for methodName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMethodNameBytes() {
+        return instance.getMethodNameBytes();
+      }
+      /**
+       * <code>string method_name = 3 [json_name = "methodName"];</code>
+       * @param value The methodName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMethodName(value);
+        return this;
+      }
+      /**
+       * <code>string method_name = 3 [json_name = "methodName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethodName() {
+        copyOnWrite();
+        instance.clearMethodName();
+        return this;
+      }
+      /**
+       * <code>string method_name = 3 [json_name = "methodName"];</code>
+       * @param value The bytes for methodName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMethodNameBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.SequenceResourceFilter)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.SequenceResourceFilter();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "resourceName_",
+              "methodName_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0002\u0003\u0002\u0000\u0000\u0000\u0002\u0208\u0003\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.SequenceResourceFilter> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.SequenceResourceFilter.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.SequenceResourceFilter>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.SequenceResourceFilter)
+    private static final viam.app.data.v1.Data.SequenceResourceFilter DEFAULT_INSTANCE;
+    static {
+      SequenceResourceFilter defaultInstance = new SequenceResourceFilter();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SequenceResourceFilter.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.SequenceResourceFilter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SequenceResourceFilter> PARSER;
+
+    public static com.google.protobuf.Parser<SequenceResourceFilter> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface SequenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.Sequence)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Metadata associated with the sequence.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Metadata associated with the sequence.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string part_id = 9 [json_name = "partId"];</code>
+     * @return The partId.
+     */
+    java.lang.String getPartId();
+    /**
+     * <code>string part_id = 9 [json_name = "partId"];</code>
+     * @return The bytes for partId.
+     */
+    com.google.protobuf.ByteString
+        getPartIdBytes();
+
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @return A list containing the sequenceTags.
+     */
+    java.util.List<java.lang.String>
+        getSequenceTagsList();
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @return The count of sequenceTags.
+     */
+    int getSequenceTagsCount();
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceTags at the given index.
+     */
+    java.lang.String getSequenceTags(int index);
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceTags at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSequenceTagsBytes(int index);
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 5 [json_name = "updatedAt"];</code>
+     * @return Whether the updatedAt field is set.
+     */
+    boolean hasUpdatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 5 [json_name = "updatedAt"];</code>
+     * @return The updatedAt.
+     */
+    com.google.protobuf.Timestamp getUpdatedAt();
+
+    /**
+     * <pre>
+     * The time range the sequence applies to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * The time range the sequence applies to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    java.util.List<viam.app.data.v1.Data.SequenceResourceFilter> 
+        getResourcesList();
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    viam.app.data.v1.Data.SequenceResourceFilter getResources(int index);
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    int getResourcesCount();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.Sequence}
+   */
+  public  static final class Sequence extends
+      com.google.protobuf.GeneratedMessageLite<
+          Sequence, Sequence.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.Sequence)
+      SequenceOrBuilder {
+    private Sequence() {
+      id_ = "";
+      partId_ = "";
+      sequenceTags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      resources_ = emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <pre>
+     * Metadata associated with the sequence.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <pre>
+     * Metadata associated with the sequence.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <pre>
+     * Metadata associated with the sequence.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      id_ = value;
+    }
+    /**
+     * <pre>
+     * Metadata associated with the sequence.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <pre>
+     * Metadata associated with the sequence.
+     * </pre>
+     *
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static final int PART_ID_FIELD_NUMBER = 9;
+    private java.lang.String partId_;
+    /**
+     * <code>string part_id = 9 [json_name = "partId"];</code>
+     * @return The partId.
+     */
+    @java.lang.Override
+    public java.lang.String getPartId() {
+      return partId_;
+    }
+    /**
+     * <code>string part_id = 9 [json_name = "partId"];</code>
+     * @return The bytes for partId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPartIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(partId_);
+    }
+    /**
+     * <code>string part_id = 9 [json_name = "partId"];</code>
+     * @param value The partId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPartId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      partId_ = value;
+    }
+    /**
+     * <code>string part_id = 9 [json_name = "partId"];</code>
+     */
+    private void clearPartId() {
+
+      partId_ = getDefaultInstance().getPartId();
+    }
+    /**
+     * <code>string part_id = 9 [json_name = "partId"];</code>
+     * @param value The bytes for partId to set.
+     */
+    private void setPartIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      partId_ = value.toStringUtf8();
+
+    }
+
+    public static final int SEQUENCE_TAGS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> sequenceTags_;
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @return A list containing the sequenceTags.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getSequenceTagsList() {
+      return sequenceTags_;
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @return The count of sequenceTags.
+     */
+    @java.lang.Override
+    public int getSequenceTagsCount() {
+      return sequenceTags_.size();
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceTags at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getSequenceTags(int index) {
+      return sequenceTags_.get(index);
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sequenceTags at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSequenceTagsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          sequenceTags_.get(index));
+    }
+    private void ensureSequenceTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          sequenceTags_;  if (!tmp.isModifiable()) {
+        sequenceTags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index to set the value at.
+     * @param value The sequenceTags to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setSequenceTags(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequenceTagsIsMutable();
+      sequenceTags_.set(index, value);
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param value The sequenceTags to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addSequenceTags(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequenceTagsIsMutable();
+      sequenceTags_.add(value);
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param values The sequenceTags to add.
+     */
+    private void addAllSequenceTags(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureSequenceTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, sequenceTags_);
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     */
+    private void clearSequenceTags() {
+      sequenceTags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param value The bytes of the sequenceTags to add.
+     */
+    private void addSequenceTagsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureSequenceTagsIsMutable();
+      sequenceTags_.add(value.toStringUtf8());
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setCreatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      createdAt_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeCreatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (createdAt_ != null &&
+          createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        createdAt_ =
+          com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+      } else {
+        createdAt_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+     */
+    private void clearCreatedAt() {
+      createdAt_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int UPDATED_AT_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp updatedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 5 [json_name = "updatedAt"];</code>
+     */
+    @java.lang.Override
+    public boolean hasUpdatedAt() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 5 [json_name = "updatedAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getUpdatedAt() {
+      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 5 [json_name = "updatedAt"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setUpdatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      updatedAt_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 5 [json_name = "updatedAt"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (updatedAt_ != null &&
+          updatedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        updatedAt_ =
+          com.google.protobuf.Timestamp.newBuilder(updatedAt_).mergeFrom(value).buildPartial();
+      } else {
+        updatedAt_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 5 [json_name = "updatedAt"];</code>
+     */
+    private void clearUpdatedAt() {
+      updatedAt_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * The time range the sequence applies to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The time range the sequence applies to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * The time range the sequence applies to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setStartTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      startTime_ = value;
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * The time range the sequence applies to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeStartTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (startTime_ != null &&
+          startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        startTime_ =
+          com.google.protobuf.Timestamp.newBuilder(startTime_).mergeFrom(value).buildPartial();
+      } else {
+        startTime_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * The time range the sequence applies to.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+     */
+    private void clearStartTime() {
+      startTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setEndTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      endTime_ = value;
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeEndTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (endTime_ != null &&
+          endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        endTime_ =
+          com.google.protobuf.Timestamp.newBuilder(endTime_).mergeFrom(value).buildPartial();
+      } else {
+        endTime_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+     */
+    private void clearEndTime() {
+      endTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+    }
+
+    public static final int RESOURCES_FIELD_NUMBER = 8;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.SequenceResourceFilter> resources_;
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.data.v1.Data.SequenceResourceFilter> getResourcesList() {
+      return resources_;
+    }
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    public java.util.List<? extends viam.app.data.v1.Data.SequenceResourceFilterOrBuilder> 
+        getResourcesOrBuilderList() {
+      return resources_;
+    }
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    @java.lang.Override
+    public int getResourcesCount() {
+      return resources_.size();
+    }
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.SequenceResourceFilter getResources(int index) {
+      return resources_.get(index);
+    }
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    public viam.app.data.v1.Data.SequenceResourceFilterOrBuilder getResourcesOrBuilder(
+        int index) {
+      return resources_.get(index);
+    }
+    private void ensureResourcesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.SequenceResourceFilter> tmp = resources_;
+      if (!tmp.isModifiable()) {
+        resources_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setResources(
+        int index, viam.app.data.v1.Data.SequenceResourceFilter value) {
+      value.getClass();  // minimal bytecode null check
+      ensureResourcesIsMutable();
+      resources_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addResources(viam.app.data.v1.Data.SequenceResourceFilter value) {
+      value.getClass();  // minimal bytecode null check
+      ensureResourcesIsMutable();
+      resources_.add(value);
+    }
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addResources(
+        int index, viam.app.data.v1.Data.SequenceResourceFilter value) {
+      value.getClass();  // minimal bytecode null check
+      ensureResourcesIsMutable();
+      resources_.add(index, value);
+    }
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    private void addAllResources(
+        java.lang.Iterable<? extends viam.app.data.v1.Data.SequenceResourceFilter> values) {
+      ensureResourcesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, resources_);
+    }
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    private void clearResources() {
+      resources_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Resources whose data is associated with this sequence.
+     * </pre>
+     *
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+     */
+    private void removeResources(int index) {
+      ensureResourcesIsMutable();
+      resources_.remove(index);
+    }
+
+    public static viam.app.data.v1.Data.Sequence parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.Sequence parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Sequence parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.Sequence parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Sequence parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.Sequence parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Sequence parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.Sequence parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.Sequence parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.Sequence parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.Sequence parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.Sequence parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.Sequence prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.Sequence}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.Sequence, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.Sequence)
+        viam.app.data.v1.Data.SequenceOrBuilder {
+      // Construct using viam.app.data.v1.Data.Sequence.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * Metadata associated with the sequence.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <pre>
+       * Metadata associated with the sequence.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <pre>
+       * Metadata associated with the sequence.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata associated with the sequence.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata associated with the sequence.
+       * </pre>
+       *
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string part_id = 9 [json_name = "partId"];</code>
+       * @return The partId.
+       */
+      @java.lang.Override
+      public java.lang.String getPartId() {
+        return instance.getPartId();
+      }
+      /**
+       * <code>string part_id = 9 [json_name = "partId"];</code>
+       * @return The bytes for partId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPartIdBytes() {
+        return instance.getPartIdBytes();
+      }
+      /**
+       * <code>string part_id = 9 [json_name = "partId"];</code>
+       * @param value The partId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPartId(value);
+        return this;
+      }
+      /**
+       * <code>string part_id = 9 [json_name = "partId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartId() {
+        copyOnWrite();
+        instance.clearPartId();
+        return this;
+      }
+      /**
+       * <code>string part_id = 9 [json_name = "partId"];</code>
+       * @param value The bytes for partId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPartIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @return A list containing the sequenceTags.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getSequenceTagsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getSequenceTagsList());
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @return The count of sequenceTags.
+       */
+      @java.lang.Override
+      public int getSequenceTagsCount() {
+        return instance.getSequenceTagsCount();
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param index The index of the element to return.
+       * @return The sequenceTags at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getSequenceTags(int index) {
+        return instance.getSequenceTags(index);
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the sequenceTags at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSequenceTagsBytes(int index) {
+        return instance.getSequenceTagsBytes(index);
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param index The index to set the value at.
+       * @param value The sequenceTags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequenceTags(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setSequenceTags(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param value The sequenceTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSequenceTags(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addSequenceTags(value);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param values The sequenceTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSequenceTags(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllSequenceTags(values);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequenceTags() {
+        copyOnWrite();
+        instance.clearSequenceTags();
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param value The bytes of the sequenceTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSequenceTagsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addSequenceTagsBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       */
+      @java.lang.Override
+      public boolean hasCreatedAt() {
+        return instance.hasCreatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        return instance.getCreatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setCreatedAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCreatedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeCreatedAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
+       */
+      public Builder clearCreatedAt() {  copyOnWrite();
+        instance.clearCreatedAt();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 5 [json_name = "updatedAt"];</code>
+       */
+      @java.lang.Override
+      public boolean hasUpdatedAt() {
+        return instance.hasUpdatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 5 [json_name = "updatedAt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getUpdatedAt() {
+        return instance.getUpdatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 5 [json_name = "updatedAt"];</code>
+       */
+      public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setUpdatedAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 5 [json_name = "updatedAt"];</code>
+       */
+      public Builder setUpdatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setUpdatedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 5 [json_name = "updatedAt"];</code>
+       */
+      public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeUpdatedAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 5 [json_name = "updatedAt"];</code>
+       */
+      public Builder clearUpdatedAt() {  copyOnWrite();
+        instance.clearUpdatedAt();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The time range the sequence applies to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasStartTime() {
+        return instance.hasStartTime();
+      }
+      /**
+       * <pre>
+       * The time range the sequence applies to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getStartTime() {
+        return instance.getStartTime();
+      }
+      /**
+       * <pre>
+       * The time range the sequence applies to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setStartTime(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * The time range the sequence applies to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setStartTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The time range the sequence applies to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeStartTime(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The time range the sequence applies to.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 6 [json_name = "startTime"];</code>
+       */
+      public Builder clearStartTime() {  copyOnWrite();
+        instance.clearStartTime();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasEndTime() {
+        return instance.hasEndTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getEndTime() {
+        return instance.getEndTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setEndTime(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setEndTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeEndTime(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 7 [json_name = "endTime"];</code>
+       */
+      public Builder clearEndTime() {  copyOnWrite();
+        instance.clearEndTime();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Resources whose data is associated with this sequence.
+       * </pre>
+       *
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.data.v1.Data.SequenceResourceFilter> getResourcesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getResourcesList());
+      }
+      /**
+       * <pre>
+       * Resources whose data is associated with this sequence.
+       * </pre>
+       *
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+       */
+      @java.lang.Override
+      public int getResourcesCount() {
+        return instance.getResourcesCount();
+      }/**
+       * <pre>
+       * Resources whose data is associated with this sequence.
+       * </pre>
+       *
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.SequenceResourceFilter getResources(int index) {
+        return instance.getResources(index);
+      }
+      /**
+       * <pre>
+       * Resources whose data is associated with this sequence.
+       * </pre>
+       *
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+       */
+      public Builder setResources(
+          int index, viam.app.data.v1.Data.SequenceResourceFilter value) {
+        copyOnWrite();
+        instance.setResources(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources whose data is associated with this sequence.
+       * </pre>
+       *
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+       */
+      public Builder setResources(
+          int index, viam.app.data.v1.Data.SequenceResourceFilter.Builder builderForValue) {
+        copyOnWrite();
+        instance.setResources(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources whose data is associated with this sequence.
+       * </pre>
+       *
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+       */
+      public Builder addResources(viam.app.data.v1.Data.SequenceResourceFilter value) {
+        copyOnWrite();
+        instance.addResources(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources whose data is associated with this sequence.
+       * </pre>
+       *
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+       */
+      public Builder addResources(
+          int index, viam.app.data.v1.Data.SequenceResourceFilter value) {
+        copyOnWrite();
+        instance.addResources(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources whose data is associated with this sequence.
+       * </pre>
+       *
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+       */
+      public Builder addResources(
+          viam.app.data.v1.Data.SequenceResourceFilter.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResources(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources whose data is associated with this sequence.
+       * </pre>
+       *
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+       */
+      public Builder addResources(
+          int index, viam.app.data.v1.Data.SequenceResourceFilter.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResources(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources whose data is associated with this sequence.
+       * </pre>
+       *
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+       */
+      public Builder addAllResources(
+          java.lang.Iterable<? extends viam.app.data.v1.Data.SequenceResourceFilter> values) {
+        copyOnWrite();
+        instance.addAllResources(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources whose data is associated with this sequence.
+       * </pre>
+       *
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+       */
+      public Builder clearResources() {
+        copyOnWrite();
+        instance.clearResources();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resources whose data is associated with this sequence.
+       * </pre>
+       *
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
+       */
+      public Builder removeResources(int index) {
+        copyOnWrite();
+        instance.removeResources(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.Sequence)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.Sequence();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "id_",
+              "sequenceTags_",
+              "createdAt_",
+              "updatedAt_",
+              "startTime_",
+              "endTime_",
+              "resources_",
+              viam.app.data.v1.Data.SequenceResourceFilter.class,
+              "partId_",
+            };
+            java.lang.String info =
+                "\u0000\b\u0000\u0001\u0001\t\b\u0000\u0002\u0000\u0001\u0208\u0003\u021a\u0004\u1009" +
+                "\u0000\u0005\u1009\u0001\u0006\u1009\u0002\u0007\u1009\u0003\b\u001b\t\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.Sequence> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.Sequence.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.Sequence>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.Sequence)
+    private static final viam.app.data.v1.Data.Sequence DEFAULT_INSTANCE;
+    static {
+      Sequence defaultInstance = new Sequence();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Sequence.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.Sequence getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<Sequence> PARSER;
+
+    public static com.google.protobuf.Parser<Sequence> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CreateSequenceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.CreateSequenceRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string part_id = 6 [json_name = "partId"];</code>
+     * @return The partId.
+     */
+    java.lang.String getPartId();
+    /**
+     * <code>string part_id = 6 [json_name = "partId"];</code>
+     * @return The bytes for partId.
+     */
+    com.google.protobuf.ByteString
+        getPartIdBytes();
+
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    java.util.List<viam.app.data.v1.Data.SequenceResourceFilter> 
+        getResourcesList();
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    viam.app.data.v1.Data.SequenceResourceFilter getResources(int index);
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    int getResourcesCount();
+
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @return A list containing the sequenceTags.
+     */
+    java.util.List<java.lang.String>
+        getSequenceTagsList();
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @return The count of sequenceTags.
+     */
+    int getSequenceTagsCount();
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceTags at the given index.
+     */
+    java.lang.String getSequenceTags(int index);
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceTags at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSequenceTagsBytes(int index);
+
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.CreateSequenceRequest}
+   */
+  public  static final class CreateSequenceRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreateSequenceRequest, CreateSequenceRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.CreateSequenceRequest)
+      CreateSequenceRequestOrBuilder {
+    private CreateSequenceRequest() {
+      partId_ = "";
+      resources_ = emptyProtobufList();
+      sequenceTags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int PART_ID_FIELD_NUMBER = 6;
+    private java.lang.String partId_;
+    /**
+     * <code>string part_id = 6 [json_name = "partId"];</code>
+     * @return The partId.
+     */
+    @java.lang.Override
+    public java.lang.String getPartId() {
+      return partId_;
+    }
+    /**
+     * <code>string part_id = 6 [json_name = "partId"];</code>
+     * @return The bytes for partId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPartIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(partId_);
+    }
+    /**
+     * <code>string part_id = 6 [json_name = "partId"];</code>
+     * @param value The partId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPartId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      partId_ = value;
+    }
+    /**
+     * <code>string part_id = 6 [json_name = "partId"];</code>
+     */
+    private void clearPartId() {
+
+      partId_ = getDefaultInstance().getPartId();
+    }
+    /**
+     * <code>string part_id = 6 [json_name = "partId"];</code>
+     * @param value The bytes for partId to set.
+     */
+    private void setPartIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      partId_ = value.toStringUtf8();
+
+    }
+
+    public static final int RESOURCES_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.SequenceResourceFilter> resources_;
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.data.v1.Data.SequenceResourceFilter> getResourcesList() {
+      return resources_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    public java.util.List<? extends viam.app.data.v1.Data.SequenceResourceFilterOrBuilder> 
+        getResourcesOrBuilderList() {
+      return resources_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    @java.lang.Override
+    public int getResourcesCount() {
+      return resources_.size();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.SequenceResourceFilter getResources(int index) {
+      return resources_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    public viam.app.data.v1.Data.SequenceResourceFilterOrBuilder getResourcesOrBuilder(
+        int index) {
+      return resources_.get(index);
+    }
+    private void ensureResourcesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.SequenceResourceFilter> tmp = resources_;
+      if (!tmp.isModifiable()) {
+        resources_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setResources(
+        int index, viam.app.data.v1.Data.SequenceResourceFilter value) {
+      value.getClass();  // minimal bytecode null check
+      ensureResourcesIsMutable();
+      resources_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addResources(viam.app.data.v1.Data.SequenceResourceFilter value) {
+      value.getClass();  // minimal bytecode null check
+      ensureResourcesIsMutable();
+      resources_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addResources(
+        int index, viam.app.data.v1.Data.SequenceResourceFilter value) {
+      value.getClass();  // minimal bytecode null check
+      ensureResourcesIsMutable();
+      resources_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    private void addAllResources(
+        java.lang.Iterable<? extends viam.app.data.v1.Data.SequenceResourceFilter> values) {
+      ensureResourcesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, resources_);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    private void clearResources() {
+      resources_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    private void removeResources(int index) {
+      ensureResourcesIsMutable();
+      resources_.remove(index);
+    }
+
+    public static final int SEQUENCE_TAGS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> sequenceTags_;
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @return A list containing the sequenceTags.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getSequenceTagsList() {
+      return sequenceTags_;
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @return The count of sequenceTags.
+     */
+    @java.lang.Override
+    public int getSequenceTagsCount() {
+      return sequenceTags_.size();
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceTags at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getSequenceTags(int index) {
+      return sequenceTags_.get(index);
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sequenceTags at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSequenceTagsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          sequenceTags_.get(index));
+    }
+    private void ensureSequenceTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          sequenceTags_;  if (!tmp.isModifiable()) {
+        sequenceTags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index to set the value at.
+     * @param value The sequenceTags to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setSequenceTags(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequenceTagsIsMutable();
+      sequenceTags_.set(index, value);
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param value The sequenceTags to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addSequenceTags(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequenceTagsIsMutable();
+      sequenceTags_.add(value);
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param values The sequenceTags to add.
+     */
+    private void addAllSequenceTags(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureSequenceTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, sequenceTags_);
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     */
+    private void clearSequenceTags() {
+      sequenceTags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param value The bytes of the sequenceTags to add.
+     */
+    private void addSequenceTagsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureSequenceTagsIsMutable();
+      sequenceTags_.add(value.toStringUtf8());
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setStartTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      startTime_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeStartTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (startTime_ != null &&
+          startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        startTime_ =
+          com.google.protobuf.Timestamp.newBuilder(startTime_).mergeFrom(value).buildPartial();
+      } else {
+        startTime_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     */
+    private void clearStartTime() {
+      startTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setEndTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      endTime_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeEndTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (endTime_ != null &&
+          endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        endTime_ =
+          com.google.protobuf.Timestamp.newBuilder(endTime_).mergeFrom(value).buildPartial();
+      } else {
+        endTime_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     */
+    private void clearEndTime() {
+      endTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static viam.app.data.v1.Data.CreateSequenceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.CreateSequenceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.CreateSequenceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.CreateSequenceRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.CreateSequenceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.CreateSequenceRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.CreateSequenceRequest)
+        viam.app.data.v1.Data.CreateSequenceRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.CreateSequenceRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string part_id = 6 [json_name = "partId"];</code>
+       * @return The partId.
+       */
+      @java.lang.Override
+      public java.lang.String getPartId() {
+        return instance.getPartId();
+      }
+      /**
+       * <code>string part_id = 6 [json_name = "partId"];</code>
+       * @return The bytes for partId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPartIdBytes() {
+        return instance.getPartIdBytes();
+      }
+      /**
+       * <code>string part_id = 6 [json_name = "partId"];</code>
+       * @param value The partId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPartId(value);
+        return this;
+      }
+      /**
+       * <code>string part_id = 6 [json_name = "partId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPartId() {
+        copyOnWrite();
+        instance.clearPartId();
+        return this;
+      }
+      /**
+       * <code>string part_id = 6 [json_name = "partId"];</code>
+       * @param value The bytes for partId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPartIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPartIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.data.v1.Data.SequenceResourceFilter> getResourcesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getResourcesList());
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      @java.lang.Override
+      public int getResourcesCount() {
+        return instance.getResourcesCount();
+      }/**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.SequenceResourceFilter getResources(int index) {
+        return instance.getResources(index);
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder setResources(
+          int index, viam.app.data.v1.Data.SequenceResourceFilter value) {
+        copyOnWrite();
+        instance.setResources(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder setResources(
+          int index, viam.app.data.v1.Data.SequenceResourceFilter.Builder builderForValue) {
+        copyOnWrite();
+        instance.setResources(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder addResources(viam.app.data.v1.Data.SequenceResourceFilter value) {
+        copyOnWrite();
+        instance.addResources(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder addResources(
+          int index, viam.app.data.v1.Data.SequenceResourceFilter value) {
+        copyOnWrite();
+        instance.addResources(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder addResources(
+          viam.app.data.v1.Data.SequenceResourceFilter.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResources(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder addResources(
+          int index, viam.app.data.v1.Data.SequenceResourceFilter.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResources(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder addAllResources(
+          java.lang.Iterable<? extends viam.app.data.v1.Data.SequenceResourceFilter> values) {
+        copyOnWrite();
+        instance.addAllResources(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder clearResources() {
+        copyOnWrite();
+        instance.clearResources();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder removeResources(int index) {
+        copyOnWrite();
+        instance.removeResources(index);
+        return this;
+      }
+
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @return A list containing the sequenceTags.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getSequenceTagsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getSequenceTagsList());
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @return The count of sequenceTags.
+       */
+      @java.lang.Override
+      public int getSequenceTagsCount() {
+        return instance.getSequenceTagsCount();
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param index The index of the element to return.
+       * @return The sequenceTags at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getSequenceTags(int index) {
+        return instance.getSequenceTags(index);
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the sequenceTags at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSequenceTagsBytes(int index) {
+        return instance.getSequenceTagsBytes(index);
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param index The index to set the value at.
+       * @param value The sequenceTags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequenceTags(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setSequenceTags(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param value The sequenceTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSequenceTags(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addSequenceTags(value);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param values The sequenceTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSequenceTags(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllSequenceTags(values);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequenceTags() {
+        copyOnWrite();
+        instance.clearSequenceTags();
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param value The bytes of the sequenceTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSequenceTagsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addSequenceTagsBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasStartTime() {
+        return instance.hasStartTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getStartTime() {
+        return instance.getStartTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setStartTime(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setStartTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeStartTime(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+       */
+      public Builder clearStartTime() {  copyOnWrite();
+        instance.clearStartTime();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasEndTime() {
+        return instance.hasEndTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getEndTime() {
+        return instance.getEndTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setEndTime(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setEndTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeEndTime(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+       */
+      public Builder clearEndTime() {  copyOnWrite();
+        instance.clearEndTime();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.CreateSequenceRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.CreateSequenceRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "resources_",
+              viam.app.data.v1.Data.SequenceResourceFilter.class,
+              "sequenceTags_",
+              "startTime_",
+              "endTime_",
+              "partId_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0002\u0006\u0005\u0000\u0002\u0000\u0002\u001b\u0003\u021a" +
+                "\u0004\u1009\u0000\u0005\u1009\u0001\u0006\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.CreateSequenceRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.CreateSequenceRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.CreateSequenceRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.CreateSequenceRequest)
+    private static final viam.app.data.v1.Data.CreateSequenceRequest DEFAULT_INSTANCE;
+    static {
+      CreateSequenceRequest defaultInstance = new CreateSequenceRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CreateSequenceRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.CreateSequenceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CreateSequenceRequest> PARSER;
+
+    public static com.google.protobuf.Parser<CreateSequenceRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface CreateSequenceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.CreateSequenceResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.CreateSequenceResponse}
+   */
+  public  static final class CreateSequenceResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          CreateSequenceResponse, CreateSequenceResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.CreateSequenceResponse)
+      CreateSequenceResponseOrBuilder {
+    private CreateSequenceResponse() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.data.v1.Data.CreateSequenceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.CreateSequenceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.CreateSequenceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.CreateSequenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.CreateSequenceResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.CreateSequenceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.CreateSequenceResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.CreateSequenceResponse)
+        viam.app.data.v1.Data.CreateSequenceResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.CreateSequenceResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.CreateSequenceResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.CreateSequenceResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.CreateSequenceResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.CreateSequenceResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.CreateSequenceResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.CreateSequenceResponse)
+    private static final viam.app.data.v1.Data.CreateSequenceResponse DEFAULT_INSTANCE;
+    static {
+      CreateSequenceResponse defaultInstance = new CreateSequenceResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CreateSequenceResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.CreateSequenceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<CreateSequenceResponse> PARSER;
+
+    public static com.google.protobuf.Parser<CreateSequenceResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetSequenceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.GetSequenceRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.GetSequenceRequest}
+   */
+  public  static final class GetSequenceRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetSequenceRequest, GetSequenceRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.GetSequenceRequest)
+      GetSequenceRequestOrBuilder {
+    private GetSequenceRequest() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSequenceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSequenceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSequenceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetSequenceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetSequenceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.GetSequenceRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.GetSequenceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.GetSequenceRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.GetSequenceRequest)
+        viam.app.data.v1.Data.GetSequenceRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.GetSequenceRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.GetSequenceRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.GetSequenceRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.GetSequenceRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.GetSequenceRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.GetSequenceRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.GetSequenceRequest)
+    private static final viam.app.data.v1.Data.GetSequenceRequest DEFAULT_INSTANCE;
+    static {
+      GetSequenceRequest defaultInstance = new GetSequenceRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetSequenceRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetSequenceRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetSequenceRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetSequenceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.GetSequenceResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.app.data.v1.Sequence sequence = 1 [json_name = "sequence"];</code>
+     * @return Whether the sequence field is set.
+     */
+    boolean hasSequence();
+    /**
+     * <code>.viam.app.data.v1.Sequence sequence = 1 [json_name = "sequence"];</code>
+     * @return The sequence.
+     */
+    viam.app.data.v1.Data.Sequence getSequence();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.GetSequenceResponse}
+   */
+  public  static final class GetSequenceResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetSequenceResponse, GetSequenceResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.GetSequenceResponse)
+      GetSequenceResponseOrBuilder {
+    private GetSequenceResponse() {
+    }
+    private int bitField0_;
+    public static final int SEQUENCE_FIELD_NUMBER = 1;
+    private viam.app.data.v1.Data.Sequence sequence_;
+    /**
+     * <code>.viam.app.data.v1.Sequence sequence = 1 [json_name = "sequence"];</code>
+     */
+    @java.lang.Override
+    public boolean hasSequence() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.app.data.v1.Sequence sequence = 1 [json_name = "sequence"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.Sequence getSequence() {
+      return sequence_ == null ? viam.app.data.v1.Data.Sequence.getDefaultInstance() : sequence_;
+    }
+    /**
+     * <code>.viam.app.data.v1.Sequence sequence = 1 [json_name = "sequence"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setSequence(viam.app.data.v1.Data.Sequence value) {
+      value.getClass();  // minimal bytecode null check
+      sequence_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.data.v1.Sequence sequence = 1 [json_name = "sequence"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeSequence(viam.app.data.v1.Data.Sequence value) {
+      value.getClass();  // minimal bytecode null check
+      if (sequence_ != null &&
+          sequence_ != viam.app.data.v1.Data.Sequence.getDefaultInstance()) {
+        sequence_ =
+          viam.app.data.v1.Data.Sequence.newBuilder(sequence_).mergeFrom(value).buildPartial();
+      } else {
+        sequence_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.data.v1.Sequence sequence = 1 [json_name = "sequence"];</code>
+     */
+    private void clearSequence() {
+      sequence_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSequenceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSequenceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSequenceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetSequenceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetSequenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.GetSequenceResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.GetSequenceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.GetSequenceResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.GetSequenceResponse)
+        viam.app.data.v1.Data.GetSequenceResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.GetSequenceResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.viam.app.data.v1.Sequence sequence = 1 [json_name = "sequence"];</code>
+       */
+      @java.lang.Override
+      public boolean hasSequence() {
+        return instance.hasSequence();
+      }
+      /**
+       * <code>.viam.app.data.v1.Sequence sequence = 1 [json_name = "sequence"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.Sequence getSequence() {
+        return instance.getSequence();
+      }
+      /**
+       * <code>.viam.app.data.v1.Sequence sequence = 1 [json_name = "sequence"];</code>
+       */
+      public Builder setSequence(viam.app.data.v1.Data.Sequence value) {
+        copyOnWrite();
+        instance.setSequence(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.data.v1.Sequence sequence = 1 [json_name = "sequence"];</code>
+       */
+      public Builder setSequence(
+          viam.app.data.v1.Data.Sequence.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSequence(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.Sequence sequence = 1 [json_name = "sequence"];</code>
+       */
+      public Builder mergeSequence(viam.app.data.v1.Data.Sequence value) {
+        copyOnWrite();
+        instance.mergeSequence(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.data.v1.Sequence sequence = 1 [json_name = "sequence"];</code>
+       */
+      public Builder clearSequence() {  copyOnWrite();
+        instance.clearSequence();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.GetSequenceResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.GetSequenceResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "sequence_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.GetSequenceResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.GetSequenceResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.GetSequenceResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.GetSequenceResponse)
+    private static final viam.app.data.v1.Data.GetSequenceResponse DEFAULT_INSTANCE;
+    static {
+      GetSequenceResponse defaultInstance = new GetSequenceResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetSequenceResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetSequenceResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetSequenceResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateSequenceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.UpdateSequenceRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    java.util.List<viam.app.data.v1.Data.SequenceResourceFilter> 
+        getResourcesList();
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    viam.app.data.v1.Data.SequenceResourceFilter getResources(int index);
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    int getResourcesCount();
+
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @return A list containing the sequenceTags.
+     */
+    java.util.List<java.lang.String>
+        getSequenceTagsList();
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @return The count of sequenceTags.
+     */
+    int getSequenceTagsCount();
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceTags at the given index.
+     */
+    java.lang.String getSequenceTags(int index);
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceTags at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSequenceTagsBytes(int index);
+
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 6 [json_name = "fieldMask"];</code>
+     * @return Whether the fieldMask field is set.
+     */
+    boolean hasFieldMask();
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 6 [json_name = "fieldMask"];</code>
+     * @return The fieldMask.
+     */
+    com.google.protobuf.FieldMask getFieldMask();
+  }
+  /**
+   * <pre>
+   * UpdateSequenceRequest updates the mutable fields of a sequence.
+   * Only fields listed in field_mask will be updated; others are left unchanged.
+   * Fields 2-5 are allowed fields for the field_mask.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.UpdateSequenceRequest}
+   */
+  public  static final class UpdateSequenceRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateSequenceRequest, UpdateSequenceRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.UpdateSequenceRequest)
+      UpdateSequenceRequestOrBuilder {
+    private UpdateSequenceRequest() {
+      id_ = "";
+      resources_ = emptyProtobufList();
+      sequenceTags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static final int RESOURCES_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.SequenceResourceFilter> resources_;
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.data.v1.Data.SequenceResourceFilter> getResourcesList() {
+      return resources_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    public java.util.List<? extends viam.app.data.v1.Data.SequenceResourceFilterOrBuilder> 
+        getResourcesOrBuilderList() {
+      return resources_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    @java.lang.Override
+    public int getResourcesCount() {
+      return resources_.size();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.SequenceResourceFilter getResources(int index) {
+      return resources_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    public viam.app.data.v1.Data.SequenceResourceFilterOrBuilder getResourcesOrBuilder(
+        int index) {
+      return resources_.get(index);
+    }
+    private void ensureResourcesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.SequenceResourceFilter> tmp = resources_;
+      if (!tmp.isModifiable()) {
+        resources_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setResources(
+        int index, viam.app.data.v1.Data.SequenceResourceFilter value) {
+      value.getClass();  // minimal bytecode null check
+      ensureResourcesIsMutable();
+      resources_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addResources(viam.app.data.v1.Data.SequenceResourceFilter value) {
+      value.getClass();  // minimal bytecode null check
+      ensureResourcesIsMutable();
+      resources_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addResources(
+        int index, viam.app.data.v1.Data.SequenceResourceFilter value) {
+      value.getClass();  // minimal bytecode null check
+      ensureResourcesIsMutable();
+      resources_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    private void addAllResources(
+        java.lang.Iterable<? extends viam.app.data.v1.Data.SequenceResourceFilter> values) {
+      ensureResourcesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, resources_);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    private void clearResources() {
+      resources_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+     */
+    private void removeResources(int index) {
+      ensureResourcesIsMutable();
+      resources_.remove(index);
+    }
+
+    public static final int SEQUENCE_TAGS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> sequenceTags_;
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @return A list containing the sequenceTags.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getSequenceTagsList() {
+      return sequenceTags_;
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @return The count of sequenceTags.
+     */
+    @java.lang.Override
+    public int getSequenceTagsCount() {
+      return sequenceTags_.size();
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceTags at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getSequenceTags(int index) {
+      return sequenceTags_.get(index);
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sequenceTags at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSequenceTagsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          sequenceTags_.get(index));
+    }
+    private void ensureSequenceTagsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          sequenceTags_;  if (!tmp.isModifiable()) {
+        sequenceTags_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param index The index to set the value at.
+     * @param value The sequenceTags to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setSequenceTags(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequenceTagsIsMutable();
+      sequenceTags_.set(index, value);
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param value The sequenceTags to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addSequenceTags(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequenceTagsIsMutable();
+      sequenceTags_.add(value);
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param values The sequenceTags to add.
+     */
+    private void addAllSequenceTags(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureSequenceTagsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, sequenceTags_);
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     */
+    private void clearSequenceTags() {
+      sequenceTags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+     * @param value The bytes of the sequenceTags to add.
+     */
+    private void addSequenceTagsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureSequenceTagsIsMutable();
+      sequenceTags_.add(value.toStringUtf8());
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setStartTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      startTime_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeStartTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (startTime_ != null &&
+          startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        startTime_ =
+          com.google.protobuf.Timestamp.newBuilder(startTime_).mergeFrom(value).buildPartial();
+      } else {
+        startTime_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+     */
+    private void clearStartTime() {
+      startTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setEndTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      endTime_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeEndTime(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (endTime_ != null &&
+          endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        endTime_ =
+          com.google.protobuf.Timestamp.newBuilder(endTime_).mergeFrom(value).buildPartial();
+      } else {
+        endTime_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+     */
+    private void clearEndTime() {
+      endTime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int FIELD_MASK_FIELD_NUMBER = 6;
+    private com.google.protobuf.FieldMask fieldMask_;
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 6 [json_name = "fieldMask"];</code>
+     */
+    @java.lang.Override
+    public boolean hasFieldMask() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 6 [json_name = "fieldMask"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMask getFieldMask() {
+      return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
+    }
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 6 [json_name = "fieldMask"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setFieldMask(com.google.protobuf.FieldMask value) {
+      value.getClass();  // minimal bytecode null check
+      fieldMask_ = value;
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 6 [json_name = "fieldMask"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeFieldMask(com.google.protobuf.FieldMask value) {
+      value.getClass();  // minimal bytecode null check
+      if (fieldMask_ != null &&
+          fieldMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+        fieldMask_ =
+          com.google.protobuf.FieldMask.newBuilder(fieldMask_).mergeFrom(value).buildPartial();
+      } else {
+        fieldMask_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.google.protobuf.FieldMask field_mask = 6 [json_name = "fieldMask"];</code>
+     */
+    private void clearFieldMask() {
+      fieldMask_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static viam.app.data.v1.Data.UpdateSequenceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.UpdateSequenceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.UpdateSequenceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.UpdateSequenceRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * UpdateSequenceRequest updates the mutable fields of a sequence.
+     * Only fields listed in field_mask will be updated; others are left unchanged.
+     * Fields 2-5 are allowed fields for the field_mask.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.UpdateSequenceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.UpdateSequenceRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.UpdateSequenceRequest)
+        viam.app.data.v1.Data.UpdateSequenceRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.UpdateSequenceRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.data.v1.Data.SequenceResourceFilter> getResourcesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getResourcesList());
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      @java.lang.Override
+      public int getResourcesCount() {
+        return instance.getResourcesCount();
+      }/**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.SequenceResourceFilter getResources(int index) {
+        return instance.getResources(index);
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder setResources(
+          int index, viam.app.data.v1.Data.SequenceResourceFilter value) {
+        copyOnWrite();
+        instance.setResources(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder setResources(
+          int index, viam.app.data.v1.Data.SequenceResourceFilter.Builder builderForValue) {
+        copyOnWrite();
+        instance.setResources(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder addResources(viam.app.data.v1.Data.SequenceResourceFilter value) {
+        copyOnWrite();
+        instance.addResources(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder addResources(
+          int index, viam.app.data.v1.Data.SequenceResourceFilter value) {
+        copyOnWrite();
+        instance.addResources(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder addResources(
+          viam.app.data.v1.Data.SequenceResourceFilter.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResources(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder addResources(
+          int index, viam.app.data.v1.Data.SequenceResourceFilter.Builder builderForValue) {
+        copyOnWrite();
+        instance.addResources(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder addAllResources(
+          java.lang.Iterable<? extends viam.app.data.v1.Data.SequenceResourceFilter> values) {
+        copyOnWrite();
+        instance.addAllResources(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder clearResources() {
+        copyOnWrite();
+        instance.clearResources();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 2 [json_name = "resources"];</code>
+       */
+      public Builder removeResources(int index) {
+        copyOnWrite();
+        instance.removeResources(index);
+        return this;
+      }
+
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @return A list containing the sequenceTags.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getSequenceTagsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getSequenceTagsList());
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @return The count of sequenceTags.
+       */
+      @java.lang.Override
+      public int getSequenceTagsCount() {
+        return instance.getSequenceTagsCount();
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param index The index of the element to return.
+       * @return The sequenceTags at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getSequenceTags(int index) {
+        return instance.getSequenceTags(index);
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the sequenceTags at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSequenceTagsBytes(int index) {
+        return instance.getSequenceTagsBytes(index);
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param index The index to set the value at.
+       * @param value The sequenceTags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequenceTags(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setSequenceTags(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param value The sequenceTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSequenceTags(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addSequenceTags(value);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param values The sequenceTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSequenceTags(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllSequenceTags(values);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequenceTags() {
+        copyOnWrite();
+        instance.clearSequenceTags();
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_tags = 3 [json_name = "sequenceTags"];</code>
+       * @param value The bytes of the sequenceTags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSequenceTagsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addSequenceTagsBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasStartTime() {
+        return instance.hasStartTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getStartTime() {
+        return instance.getStartTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setStartTime(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setStartTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeStartTime(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime"];</code>
+       */
+      public Builder clearStartTime() {  copyOnWrite();
+        instance.clearStartTime();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasEndTime() {
+        return instance.hasEndTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getEndTime() {
+        return instance.getEndTime();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setEndTime(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setEndTime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeEndTime(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime"];</code>
+       */
+      public Builder clearEndTime() {  copyOnWrite();
+        instance.clearEndTime();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.FieldMask field_mask = 6 [json_name = "fieldMask"];</code>
+       */
+      @java.lang.Override
+      public boolean hasFieldMask() {
+        return instance.hasFieldMask();
+      }
+      /**
+       * <code>.google.protobuf.FieldMask field_mask = 6 [json_name = "fieldMask"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.FieldMask getFieldMask() {
+        return instance.getFieldMask();
+      }
+      /**
+       * <code>.google.protobuf.FieldMask field_mask = 6 [json_name = "fieldMask"];</code>
+       */
+      public Builder setFieldMask(com.google.protobuf.FieldMask value) {
+        copyOnWrite();
+        instance.setFieldMask(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.FieldMask field_mask = 6 [json_name = "fieldMask"];</code>
+       */
+      public Builder setFieldMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFieldMask(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FieldMask field_mask = 6 [json_name = "fieldMask"];</code>
+       */
+      public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
+        copyOnWrite();
+        instance.mergeFieldMask(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FieldMask field_mask = 6 [json_name = "fieldMask"];</code>
+       */
+      public Builder clearFieldMask() {  copyOnWrite();
+        instance.clearFieldMask();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.UpdateSequenceRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.UpdateSequenceRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "id_",
+              "resources_",
+              viam.app.data.v1.Data.SequenceResourceFilter.class,
+              "sequenceTags_",
+              "startTime_",
+              "endTime_",
+              "fieldMask_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0002\u0000\u0001\u0208\u0002\u001b" +
+                "\u0003\u021a\u0004\u1009\u0000\u0005\u1009\u0001\u0006\u1009\u0002";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.UpdateSequenceRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.UpdateSequenceRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.UpdateSequenceRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.UpdateSequenceRequest)
+    private static final viam.app.data.v1.Data.UpdateSequenceRequest DEFAULT_INSTANCE;
+    static {
+      UpdateSequenceRequest defaultInstance = new UpdateSequenceRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateSequenceRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.UpdateSequenceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateSequenceRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateSequenceRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UpdateSequenceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.UpdateSequenceResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.UpdateSequenceResponse}
+   */
+  public  static final class UpdateSequenceResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateSequenceResponse, UpdateSequenceResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.UpdateSequenceResponse)
+      UpdateSequenceResponseOrBuilder {
+    private UpdateSequenceResponse() {
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.UpdateSequenceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.UpdateSequenceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.UpdateSequenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.UpdateSequenceResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.UpdateSequenceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.UpdateSequenceResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.UpdateSequenceResponse)
+        viam.app.data.v1.Data.UpdateSequenceResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.UpdateSequenceResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.UpdateSequenceResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.UpdateSequenceResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.UpdateSequenceResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.UpdateSequenceResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.UpdateSequenceResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.UpdateSequenceResponse)
+    private static final viam.app.data.v1.Data.UpdateSequenceResponse DEFAULT_INSTANCE;
+    static {
+      UpdateSequenceResponse defaultInstance = new UpdateSequenceResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateSequenceResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.UpdateSequenceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UpdateSequenceResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UpdateSequenceResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeleteSequenceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.DeleteSequenceRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.DeleteSequenceRequest}
+   */
+  public  static final class DeleteSequenceRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteSequenceRequest, DeleteSequenceRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.DeleteSequenceRequest)
+      DeleteSequenceRequestOrBuilder {
+    private DeleteSequenceRequest() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.data.v1.Data.DeleteSequenceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.DeleteSequenceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.DeleteSequenceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.DeleteSequenceRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.DeleteSequenceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.DeleteSequenceRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.DeleteSequenceRequest)
+        viam.app.data.v1.Data.DeleteSequenceRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.DeleteSequenceRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.DeleteSequenceRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.DeleteSequenceRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.DeleteSequenceRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.DeleteSequenceRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.DeleteSequenceRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.DeleteSequenceRequest)
+    private static final viam.app.data.v1.Data.DeleteSequenceRequest DEFAULT_INSTANCE;
+    static {
+      DeleteSequenceRequest defaultInstance = new DeleteSequenceRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteSequenceRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.DeleteSequenceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeleteSequenceRequest> PARSER;
+
+    public static com.google.protobuf.Parser<DeleteSequenceRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeleteSequenceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.DeleteSequenceResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.DeleteSequenceResponse}
+   */
+  public  static final class DeleteSequenceResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteSequenceResponse, DeleteSequenceResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.DeleteSequenceResponse)
+      DeleteSequenceResponseOrBuilder {
+    private DeleteSequenceResponse() {
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.DeleteSequenceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.DeleteSequenceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.DeleteSequenceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.DeleteSequenceResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.DeleteSequenceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.DeleteSequenceResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.DeleteSequenceResponse)
+        viam.app.data.v1.Data.DeleteSequenceResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.DeleteSequenceResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.DeleteSequenceResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.DeleteSequenceResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.DeleteSequenceResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.DeleteSequenceResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.DeleteSequenceResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.DeleteSequenceResponse)
+    private static final viam.app.data.v1.Data.DeleteSequenceResponse DEFAULT_INSTANCE;
+    static {
+      DeleteSequenceResponse defaultInstance = new DeleteSequenceResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteSequenceResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.DeleteSequenceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeleteSequenceResponse> PARSER;
+
+    public static com.google.protobuf.Parser<DeleteSequenceResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListSequencesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.ListSequencesRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    int getPageSize();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.ListSequencesRequest}
+   */
+  public  static final class ListSequencesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListSequencesRequest, ListSequencesRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.ListSequencesRequest)
+      ListSequencesRequestOrBuilder {
+    private ListSequencesRequest() {
+      organizationId_ = "";
+      pageToken_ = "";
+    }
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setOrganizationId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 2;
+    private java.lang.String pageToken_;
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      return pageToken_;
+    }
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(pageToken_);
+    }
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @param value The pageToken to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPageToken(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      pageToken_ = value;
+    }
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     */
+    private void clearPageToken() {
+
+      pageToken_ = getDefaultInstance().getPageToken();
+    }
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @param value The bytes for pageToken to set.
+     */
+    private void setPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      pageToken_ = value.toStringUtf8();
+
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 3;
+    private int pageSize_;
+    /**
+     * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public int getPageSize() {
+      return pageSize_;
+    }
+    /**
+     * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+     * @param value The pageSize to set.
+     */
+    private void setPageSize(int value) {
+      
+      pageSize_ = value;
+    }
+    /**
+     * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+     */
+    private void clearPageSize() {
+
+      pageSize_ = 0;
+    }
+
+    public static viam.app.data.v1.Data.ListSequencesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListSequencesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSequencesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListSequencesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSequencesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListSequencesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSequencesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ListSequencesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.ListSequencesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.ListSequencesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSequencesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ListSequencesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.ListSequencesRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.ListSequencesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.ListSequencesRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.ListSequencesRequest)
+        viam.app.data.v1.Data.ListSequencesRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.ListSequencesRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @return The pageToken.
+       */
+      @java.lang.Override
+      public java.lang.String getPageToken() {
+        return instance.getPageToken();
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @return The bytes for pageToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        return instance.getPageTokenBytes();
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPageToken(value);
+        return this;
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        copyOnWrite();
+        instance.clearPageToken();
+        return this;
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPageTokenBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public int getPageSize() {
+        return instance.getPageSize();
+      }
+      /**
+       * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(int value) {
+        copyOnWrite();
+        instance.setPageSize(value);
+        return this;
+      }
+      /**
+       * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        copyOnWrite();
+        instance.clearPageSize();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.ListSequencesRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.ListSequencesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "organizationId_",
+              "pageToken_",
+              "pageSize_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u000b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.ListSequencesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.ListSequencesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.ListSequencesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.ListSequencesRequest)
+    private static final viam.app.data.v1.Data.ListSequencesRequest DEFAULT_INSTANCE;
+    static {
+      ListSequencesRequest defaultInstance = new ListSequencesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListSequencesRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.ListSequencesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListSequencesRequest> PARSER;
+
+    public static com.google.protobuf.Parser<ListSequencesRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListSequencesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.ListSequencesResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    java.util.List<viam.app.data.v1.Data.Sequence> 
+        getSequencesList();
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    viam.app.data.v1.Data.Sequence getSequences(int index);
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    int getSequencesCount();
+
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.ListSequencesResponse}
+   */
+  public  static final class ListSequencesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListSequencesResponse, ListSequencesResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.ListSequencesResponse)
+      ListSequencesResponseOrBuilder {
+    private ListSequencesResponse() {
+      sequences_ = emptyProtobufList();
+      nextPageToken_ = "";
+    }
+    public static final int SEQUENCES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.Sequence> sequences_;
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.data.v1.Data.Sequence> getSequencesList() {
+      return sequences_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    public java.util.List<? extends viam.app.data.v1.Data.SequenceOrBuilder> 
+        getSequencesOrBuilderList() {
+      return sequences_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    @java.lang.Override
+    public int getSequencesCount() {
+      return sequences_.size();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.Sequence getSequences(int index) {
+      return sequences_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    public viam.app.data.v1.Data.SequenceOrBuilder getSequencesOrBuilder(
+        int index) {
+      return sequences_.get(index);
+    }
+    private void ensureSequencesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.Sequence> tmp = sequences_;
+      if (!tmp.isModifiable()) {
+        sequences_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setSequences(
+        int index, viam.app.data.v1.Data.Sequence value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequencesIsMutable();
+      sequences_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addSequences(viam.app.data.v1.Data.Sequence value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequencesIsMutable();
+      sequences_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addSequences(
+        int index, viam.app.data.v1.Data.Sequence value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequencesIsMutable();
+      sequences_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    private void addAllSequences(
+        java.lang.Iterable<? extends viam.app.data.v1.Data.Sequence> values) {
+      ensureSequencesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, sequences_);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    private void clearSequences() {
+      sequences_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    private void removeSequences(int index) {
+      ensureSequencesIsMutable();
+      sequences_.remove(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private java.lang.String nextPageToken_;
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      return nextPageToken_;
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(nextPageToken_);
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @param value The nextPageToken to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setNextPageToken(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      nextPageToken_ = value;
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     */
+    private void clearNextPageToken() {
+
+      nextPageToken_ = getDefaultInstance().getNextPageToken();
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @param value The bytes for nextPageToken to set.
+     */
+    private void setNextPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      nextPageToken_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.data.v1.Data.ListSequencesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListSequencesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSequencesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListSequencesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSequencesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.ListSequencesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSequencesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ListSequencesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.ListSequencesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.ListSequencesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.ListSequencesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.ListSequencesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.ListSequencesResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.ListSequencesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.ListSequencesResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.ListSequencesResponse)
+        viam.app.data.v1.Data.ListSequencesResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.ListSequencesResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.data.v1.Data.Sequence> getSequencesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getSequencesList());
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      @java.lang.Override
+      public int getSequencesCount() {
+        return instance.getSequencesCount();
+      }/**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.Sequence getSequences(int index) {
+        return instance.getSequences(index);
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder setSequences(
+          int index, viam.app.data.v1.Data.Sequence value) {
+        copyOnWrite();
+        instance.setSequences(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder setSequences(
+          int index, viam.app.data.v1.Data.Sequence.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSequences(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder addSequences(viam.app.data.v1.Data.Sequence value) {
+        copyOnWrite();
+        instance.addSequences(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder addSequences(
+          int index, viam.app.data.v1.Data.Sequence value) {
+        copyOnWrite();
+        instance.addSequences(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder addSequences(
+          viam.app.data.v1.Data.Sequence.Builder builderForValue) {
+        copyOnWrite();
+        instance.addSequences(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder addSequences(
+          int index, viam.app.data.v1.Data.Sequence.Builder builderForValue) {
+        copyOnWrite();
+        instance.addSequences(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder addAllSequences(
+          java.lang.Iterable<? extends viam.app.data.v1.Data.Sequence> values) {
+        copyOnWrite();
+        instance.addAllSequences(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder clearSequences() {
+        copyOnWrite();
+        instance.clearSequences();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder removeSequences(int index) {
+        copyOnWrite();
+        instance.removeSequences(index);
+        return this;
+      }
+
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return The nextPageToken.
+       */
+      @java.lang.Override
+      public java.lang.String getNextPageToken() {
+        return instance.getNextPageToken();
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return The bytes for nextPageToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        return instance.getNextPageTokenBytes();
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setNextPageToken(value);
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        copyOnWrite();
+        instance.clearNextPageToken();
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNextPageTokenBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.ListSequencesResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.ListSequencesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sequences_",
+              viam.app.data.v1.Data.Sequence.class,
+              "nextPageToken_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.ListSequencesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.ListSequencesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.ListSequencesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.ListSequencesResponse)
+    private static final viam.app.data.v1.Data.ListSequencesResponse DEFAULT_INSTANCE;
+    static {
+      ListSequencesResponse defaultInstance = new ListSequencesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListSequencesResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.ListSequencesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListSequencesResponse> PARSER;
+
+    public static com.google.protobuf.Parser<ListSequencesResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

@@ -3295,6 +3295,1837 @@ public final class Gripper {
     }
   }
 
+  public interface GetCurrentInputsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.gripper.v1.GetCurrentInputsRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * Protobuf type {@code viam.component.gripper.v1.GetCurrentInputsRequest}
+   */
+  public  static final class GetCurrentInputsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetCurrentInputsRequest, GetCurrentInputsRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.gripper.v1.GetCurrentInputsRequest)
+      GetCurrentInputsRequestOrBuilder {
+    private GetCurrentInputsRequest() {
+      name_ = "";
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setName(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();  // minimal bytecode null check
+      extra_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();  // minimal bytecode null check
+      if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {
+      extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.component.gripper.v1.GetCurrentInputsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.gripper.v1.GetCurrentInputsRequest)
+        com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequestOrBuilder {
+      // Construct using com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * Name of a gripper
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <pre>
+       * Name of a gripper
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <pre>
+       * Name of a gripper
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of a gripper
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of a gripper
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.component.gripper.v1.GetCurrentInputsRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.gripper.v1.GetCurrentInputsRequest)
+    private static final com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest DEFAULT_INSTANCE;
+    static {
+      GetCurrentInputsRequest defaultInstance = new GetCurrentInputsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetCurrentInputsRequest.class, defaultInstance);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetCurrentInputsRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetCurrentInputsRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetCurrentInputsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.gripper.v1.GetCurrentInputsResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The current input values of the gripper
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    java.util.List<java.lang.Double> getValuesList();
+    /**
+     * <pre>
+     * The current input values of the gripper
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    int getValuesCount();
+    /**
+     * <pre>
+     * The current input values of the gripper
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    double getValues(int index);
+  }
+  /**
+   * Protobuf type {@code viam.component.gripper.v1.GetCurrentInputsResponse}
+   */
+  public  static final class GetCurrentInputsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetCurrentInputsResponse, GetCurrentInputsResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.gripper.v1.GetCurrentInputsResponse)
+      GetCurrentInputsResponseOrBuilder {
+    private GetCurrentInputsResponse() {
+      values_ = emptyDoubleList();
+    }
+    public static final int VALUES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.DoubleList values_;
+    /**
+     * <pre>
+     * The current input values of the gripper
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Double>
+        getValuesList() {
+      return values_;
+    }
+    /**
+     * <pre>
+     * The current input values of the gripper
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    @java.lang.Override
+    public int getValuesCount() {
+      return values_.size();
+    }
+    /**
+     * <pre>
+     * The current input values of the gripper
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    @java.lang.Override
+    public double getValues(int index) {
+      return values_.getDouble(index);
+    }
+    private int valuesMemoizedSerializedSize = -1;
+    private void ensureValuesIsMutable() {
+      com.google.protobuf.Internal.DoubleList tmp = values_;
+      if (!tmp.isModifiable()) {
+        values_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * The current input values of the gripper
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     * @param index The index to set the value at.
+     * @param value The values to set.
+     */
+    private void setValues(
+        int index, double value) {
+      ensureValuesIsMutable();
+      values_.setDouble(index, value);
+    }
+    /**
+     * <pre>
+     * The current input values of the gripper
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     * @param value The values to add.
+     */
+    private void addValues(double value) {
+      ensureValuesIsMutable();
+      values_.addDouble(value);
+    }
+    /**
+     * <pre>
+     * The current input values of the gripper
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     * @param values The values to add.
+     */
+    private void addAllValues(
+        java.lang.Iterable<? extends java.lang.Double> values) {
+      ensureValuesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, values_);
+    }
+    /**
+     * <pre>
+     * The current input values of the gripper
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     */
+    private void clearValues() {
+      values_ = emptyDoubleList();
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.component.gripper.v1.GetCurrentInputsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.gripper.v1.GetCurrentInputsResponse)
+        com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponseOrBuilder {
+      // Construct using com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * The current input values of the gripper
+       * </pre>
+       *
+       * <code>repeated double values = 1 [json_name = "values"];</code>
+       * @return A list containing the values.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Double>
+          getValuesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getValuesList());
+      }
+      /**
+       * <pre>
+       * The current input values of the gripper
+       * </pre>
+       *
+       * <code>repeated double values = 1 [json_name = "values"];</code>
+       * @return The count of values.
+       */
+      @java.lang.Override
+      public int getValuesCount() {
+        return instance.getValuesCount();
+      }
+      /**
+       * <pre>
+       * The current input values of the gripper
+       * </pre>
+       *
+       * <code>repeated double values = 1 [json_name = "values"];</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      @java.lang.Override
+      public double getValues(int index) {
+        return instance.getValues(index);
+      }
+      /**
+       * <pre>
+       * The current input values of the gripper
+       * </pre>
+       *
+       * <code>repeated double values = 1 [json_name = "values"];</code>
+       * @param value The values to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValues(
+          int index, double value) {
+        copyOnWrite();
+        instance.setValues(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The current input values of the gripper
+       * </pre>
+       *
+       * <code>repeated double values = 1 [json_name = "values"];</code>
+       * @param value The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValues(double value) {
+        copyOnWrite();
+        instance.addValues(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The current input values of the gripper
+       * </pre>
+       *
+       * <code>repeated double values = 1 [json_name = "values"];</code>
+       * @param values The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllValues(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        copyOnWrite();
+        instance.addAllValues(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * The current input values of the gripper
+       * </pre>
+       *
+       * <code>repeated double values = 1 [json_name = "values"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValues() {
+        copyOnWrite();
+        instance.clearValues();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.component.gripper.v1.GetCurrentInputsResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "values_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001#";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.gripper.v1.GetCurrentInputsResponse)
+    private static final com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse DEFAULT_INSTANCE;
+    static {
+      GetCurrentInputsResponse defaultInstance = new GetCurrentInputsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetCurrentInputsResponse.class, defaultInstance);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GetCurrentInputsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetCurrentInputsResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetCurrentInputsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GoToInputsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.gripper.v1.GoToInputsRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * The input values to move the gripper to
+     * </pre>
+     *
+     * <code>repeated double values = 2 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    java.util.List<java.lang.Double> getValuesList();
+    /**
+     * <pre>
+     * The input values to move the gripper to
+     * </pre>
+     *
+     * <code>repeated double values = 2 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    int getValuesCount();
+    /**
+     * <pre>
+     * The input values to move the gripper to
+     * </pre>
+     *
+     * <code>repeated double values = 2 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    double getValues(int index);
+
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * Protobuf type {@code viam.component.gripper.v1.GoToInputsRequest}
+   */
+  public  static final class GoToInputsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GoToInputsRequest, GoToInputsRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.gripper.v1.GoToInputsRequest)
+      GoToInputsRequestOrBuilder {
+    private GoToInputsRequest() {
+      name_ = "";
+      values_ = emptyDoubleList();
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setName(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a gripper
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int VALUES_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.DoubleList values_;
+    /**
+     * <pre>
+     * The input values to move the gripper to
+     * </pre>
+     *
+     * <code>repeated double values = 2 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Double>
+        getValuesList() {
+      return values_;
+    }
+    /**
+     * <pre>
+     * The input values to move the gripper to
+     * </pre>
+     *
+     * <code>repeated double values = 2 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    @java.lang.Override
+    public int getValuesCount() {
+      return values_.size();
+    }
+    /**
+     * <pre>
+     * The input values to move the gripper to
+     * </pre>
+     *
+     * <code>repeated double values = 2 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    @java.lang.Override
+    public double getValues(int index) {
+      return values_.getDouble(index);
+    }
+    private int valuesMemoizedSerializedSize = -1;
+    private void ensureValuesIsMutable() {
+      com.google.protobuf.Internal.DoubleList tmp = values_;
+      if (!tmp.isModifiable()) {
+        values_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * The input values to move the gripper to
+     * </pre>
+     *
+     * <code>repeated double values = 2 [json_name = "values"];</code>
+     * @param index The index to set the value at.
+     * @param value The values to set.
+     */
+    private void setValues(
+        int index, double value) {
+      ensureValuesIsMutable();
+      values_.setDouble(index, value);
+    }
+    /**
+     * <pre>
+     * The input values to move the gripper to
+     * </pre>
+     *
+     * <code>repeated double values = 2 [json_name = "values"];</code>
+     * @param value The values to add.
+     */
+    private void addValues(double value) {
+      ensureValuesIsMutable();
+      values_.addDouble(value);
+    }
+    /**
+     * <pre>
+     * The input values to move the gripper to
+     * </pre>
+     *
+     * <code>repeated double values = 2 [json_name = "values"];</code>
+     * @param values The values to add.
+     */
+    private void addAllValues(
+        java.lang.Iterable<? extends java.lang.Double> values) {
+      ensureValuesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, values_);
+    }
+    /**
+     * <pre>
+     * The input values to move the gripper to
+     * </pre>
+     *
+     * <code>repeated double values = 2 [json_name = "values"];</code>
+     */
+    private void clearValues() {
+      values_ = emptyDoubleList();
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();  // minimal bytecode null check
+      extra_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();  // minimal bytecode null check
+      if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {
+      extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.gripper.v1.Gripper.GoToInputsRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.component.gripper.v1.GoToInputsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.gripper.v1.Gripper.GoToInputsRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.gripper.v1.GoToInputsRequest)
+        com.viam.component.gripper.v1.Gripper.GoToInputsRequestOrBuilder {
+      // Construct using com.viam.component.gripper.v1.Gripper.GoToInputsRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * Name of a gripper
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <pre>
+       * Name of a gripper
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <pre>
+       * Name of a gripper
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of a gripper
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of a gripper
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The input values to move the gripper to
+       * </pre>
+       *
+       * <code>repeated double values = 2 [json_name = "values"];</code>
+       * @return A list containing the values.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Double>
+          getValuesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getValuesList());
+      }
+      /**
+       * <pre>
+       * The input values to move the gripper to
+       * </pre>
+       *
+       * <code>repeated double values = 2 [json_name = "values"];</code>
+       * @return The count of values.
+       */
+      @java.lang.Override
+      public int getValuesCount() {
+        return instance.getValuesCount();
+      }
+      /**
+       * <pre>
+       * The input values to move the gripper to
+       * </pre>
+       *
+       * <code>repeated double values = 2 [json_name = "values"];</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      @java.lang.Override
+      public double getValues(int index) {
+        return instance.getValues(index);
+      }
+      /**
+       * <pre>
+       * The input values to move the gripper to
+       * </pre>
+       *
+       * <code>repeated double values = 2 [json_name = "values"];</code>
+       * @param value The values to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValues(
+          int index, double value) {
+        copyOnWrite();
+        instance.setValues(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The input values to move the gripper to
+       * </pre>
+       *
+       * <code>repeated double values = 2 [json_name = "values"];</code>
+       * @param value The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValues(double value) {
+        copyOnWrite();
+        instance.addValues(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The input values to move the gripper to
+       * </pre>
+       *
+       * <code>repeated double values = 2 [json_name = "values"];</code>
+       * @param values The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllValues(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        copyOnWrite();
+        instance.addAllValues(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * The input values to move the gripper to
+       * </pre>
+       *
+       * <code>repeated double values = 2 [json_name = "values"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValues() {
+        copyOnWrite();
+        instance.clearValues();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.component.gripper.v1.GoToInputsRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.gripper.v1.Gripper.GoToInputsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "values_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0001\u0000\u0001\u0208\u0002#c\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.gripper.v1.Gripper.GoToInputsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.gripper.v1.Gripper.GoToInputsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.gripper.v1.Gripper.GoToInputsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.gripper.v1.GoToInputsRequest)
+    private static final com.viam.component.gripper.v1.Gripper.GoToInputsRequest DEFAULT_INSTANCE;
+    static {
+      GoToInputsRequest defaultInstance = new GoToInputsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GoToInputsRequest.class, defaultInstance);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GoToInputsRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GoToInputsRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GoToInputsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.gripper.v1.GoToInputsResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.component.gripper.v1.GoToInputsResponse}
+   */
+  public  static final class GoToInputsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GoToInputsResponse, GoToInputsResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.gripper.v1.GoToInputsResponse)
+      GoToInputsResponseOrBuilder {
+    private GoToInputsResponse() {
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.gripper.v1.Gripper.GoToInputsResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.component.gripper.v1.GoToInputsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.gripper.v1.Gripper.GoToInputsResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.gripper.v1.GoToInputsResponse)
+        com.viam.component.gripper.v1.Gripper.GoToInputsResponseOrBuilder {
+      // Construct using com.viam.component.gripper.v1.Gripper.GoToInputsResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.component.gripper.v1.GoToInputsResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.gripper.v1.Gripper.GoToInputsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.gripper.v1.Gripper.GoToInputsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.gripper.v1.Gripper.GoToInputsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.gripper.v1.Gripper.GoToInputsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.gripper.v1.GoToInputsResponse)
+    private static final com.viam.component.gripper.v1.Gripper.GoToInputsResponse DEFAULT_INSTANCE;
+    static {
+      GoToInputsResponse defaultInstance = new GoToInputsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GoToInputsResponse.class, defaultInstance);
+    }
+
+    public static com.viam.component.gripper.v1.Gripper.GoToInputsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GoToInputsResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GoToInputsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
 
   static {
   }
