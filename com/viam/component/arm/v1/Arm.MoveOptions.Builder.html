@@ -105,7 +105,14 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public static final class </span><span class="element-name type-name-label">Arm.MoveOptions.Builder</span>
 <span class="extends-implements">extends com.google.protobuf.GeneratedMessageLite.Builder&lt;<a href="Arm.MoveOptions.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions</a>,<wbr><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a>&gt;
 implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.component.arm.v1">Arm.MoveOptionsOrBuilder</a></span></div>
-<div class="block">Protobuf type <code>viam.component.arm.v1.MoveOptions</code></div>
+<div class="block"><pre>
+ MoveOptions specifies kinematic constraints for an arm motion. All fields
+ are optional ceilings; any combination may be set. Every constraint that
+ is set is respected at every point along the executed trajectory.
+ The limiting constraint may change throughout execution.
+ </pre>
+
+ Protobuf type <code>viam.component.arm.v1.MoveOptions</code></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -166,40 +173,52 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
  Per-joint maximum acceleration in degrees per second squared.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMaxVelDegsPerSec()" class="member-name-link">clearMaxVelDegsPerSec</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMaxTcpSpeed()" class="member-name-link">clearMaxTcpSpeed</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Maximum allowable speed of an arm's tool center point in meters per second.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMaxVelDegsPerSec()" class="member-name-link">clearMaxVelDegsPerSec</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Maximum allowable velocity of an arm joint, in degrees per second.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMaxVelDegsPerSecJoints()" class="member-name-link">clearMaxVelDegsPerSecJoints</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMaxVelDegsPerSecJoints()" class="member-name-link">clearMaxVelDegsPerSecJoints</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Per-joint maximum velocity in degrees per second.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxAccDegsPerSec2()" class="member-name-link">getMaxAccDegsPerSec2</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxAccDegsPerSec2()" class="member-name-link">getMaxAccDegsPerSec2</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Maximum allowable acceleration of an arm joint, in degrees per second squared.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxAccDegsPerSec2Joints(int)" class="member-name-link">getMaxAccDegsPerSec2Joints</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Per-joint maximum acceleration in degrees per second squared.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxAccDegsPerSec2JointsCount()" class="member-name-link">getMaxAccDegsPerSec2JointsCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxAccDegsPerSec2Joints(int)" class="member-name-link">getMaxAccDegsPerSec2Joints</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Per-joint maximum acceleration in degrees per second squared.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxAccDegsPerSec2JointsList()" class="member-name-link">getMaxAccDegsPerSec2JointsList</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxAccDegsPerSec2JointsCount()" class="member-name-link">getMaxAccDegsPerSec2JointsCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Per-joint maximum acceleration in degrees per second squared.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxAccDegsPerSec2JointsList()" class="member-name-link">getMaxAccDegsPerSec2JointsList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Per-joint maximum acceleration in degrees per second squared.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxTcpSpeed()" class="member-name-link">getMaxTcpSpeed</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Maximum allowable speed of an arm's tool center point in meters per second.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxVelDegsPerSec()" class="member-name-link">getMaxVelDegsPerSec</a>()</code></div>
@@ -232,23 +251,35 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
  Maximum allowable acceleration of an arm joint, in degrees per second squared.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMaxVelDegsPerSec()" class="member-name-link">hasMaxVelDegsPerSec</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMaxTcpSpeed()" class="member-name-link">hasMaxTcpSpeed</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Maximum allowable speed of an arm's tool center point in meters per second.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasMaxVelDegsPerSec()" class="member-name-link">hasMaxVelDegsPerSec</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Maximum allowable velocity of an arm joint, in degrees per second.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxAccDegsPerSec2(double)" class="member-name-link">setMaxAccDegsPerSec2</a><wbr>(double&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxAccDegsPerSec2(double)" class="member-name-link">setMaxAccDegsPerSec2</a><wbr>(double&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Maximum allowable acceleration of an arm joint, in degrees per second squared.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxAccDegsPerSec2Joints(int,double)" class="member-name-link">setMaxAccDegsPerSec2Joints</a><wbr>(int&nbsp;index,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxAccDegsPerSec2Joints(int,double)" class="member-name-link">setMaxAccDegsPerSec2Joints</a><wbr>(int&nbsp;index,
  double&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Per-joint maximum acceleration in degrees per second squared.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxTcpSpeed(double)" class="member-name-link">setMaxTcpSpeed</a><wbr>(double&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Maximum allowable speed of an arm's tool center point in meters per second.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxVelDegsPerSec(double)" class="member-name-link">setMaxVelDegsPerSec</a><wbr>(double&nbsp;value)</code></div>
@@ -295,6 +326,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMaxVelDegsPerSec</span>()</div>
 <div class="block"><pre>
  Maximum allowable velocity of an arm joint, in degrees per second.
+ The arm driver will move as fast as possible up to the set value.
  Ignored when max_vel_degs_per_sec_joints is set.
  </pre>
 
@@ -313,6 +345,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getMaxVelDegsPerSec</span>()</div>
 <div class="block"><pre>
  Maximum allowable velocity of an arm joint, in degrees per second.
+ The arm driver will move as fast as possible up to the set value.
  Ignored when max_vel_degs_per_sec_joints is set.
  </pre>
 
@@ -331,6 +364,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></span>&nbsp;<span class="element-name">setMaxVelDegsPerSec</span><wbr><span class="parameters">(double&nbsp;value)</span></div>
 <div class="block"><pre>
  Maximum allowable velocity of an arm joint, in degrees per second.
+ The arm driver will move as fast as possible up to the set value.
  Ignored when max_vel_degs_per_sec_joints is set.
  </pre>
 
@@ -349,6 +383,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></span>&nbsp;<span class="element-name">clearMaxVelDegsPerSec</span>()</div>
 <div class="block"><pre>
  Maximum allowable velocity of an arm joint, in degrees per second.
+ The arm driver will move as fast as possible up to the set value.
  Ignored when max_vel_degs_per_sec_joints is set.
  </pre>
 
@@ -365,6 +400,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMaxAccDegsPerSec2</span>()</div>
 <div class="block"><pre>
  Maximum allowable acceleration of an arm joint, in degrees per second squared.
+ The arm driver will accelerate as fast as possible up to the set value.
  ignored when max_acc_degs_per_sec2_joints is set.
  </pre>
 
@@ -383,6 +419,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getMaxAccDegsPerSec2</span>()</div>
 <div class="block"><pre>
  Maximum allowable acceleration of an arm joint, in degrees per second squared.
+ The arm driver will accelerate as fast as possible up to the set value.
  ignored when max_acc_degs_per_sec2_joints is set.
  </pre>
 
@@ -401,6 +438,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></span>&nbsp;<span class="element-name">setMaxAccDegsPerSec2</span><wbr><span class="parameters">(double&nbsp;value)</span></div>
 <div class="block"><pre>
  Maximum allowable acceleration of an arm joint, in degrees per second squared.
+ The arm driver will accelerate as fast as possible up to the set value.
  ignored when max_acc_degs_per_sec2_joints is set.
  </pre>
 
@@ -419,6 +457,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></span>&nbsp;<span class="element-name">clearMaxAccDegsPerSec2</span>()</div>
 <div class="block"><pre>
  Maximum allowable acceleration of an arm joint, in degrees per second squared.
+ The arm driver will accelerate as fast as possible up to the set value.
  ignored when max_acc_degs_per_sec2_joints is set.
  </pre>
 
@@ -435,6 +474,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</span>&nbsp;<span class="element-name">getMaxVelDegsPerSecJointsList</span>()</div>
 <div class="block"><pre>
  Per-joint maximum velocity in degrees per second.
+ The arm driver will move each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code></div>
@@ -452,6 +492,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMaxVelDegsPerSecJointsCount</span>()</div>
 <div class="block"><pre>
  Per-joint maximum velocity in degrees per second.
+ The arm driver will move each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code></div>
@@ -469,6 +510,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getMaxVelDegsPerSecJoints</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><pre>
  Per-joint maximum velocity in degrees per second.
+ The arm driver will move each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code></div>
@@ -489,6 +531,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
  double&nbsp;value)</span></div>
 <div class="block"><pre>
  Per-joint maximum velocity in degrees per second.
+ The arm driver will move each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code></div>
@@ -506,6 +549,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></span>&nbsp;<span class="element-name">addMaxVelDegsPerSecJoints</span><wbr><span class="parameters">(double&nbsp;value)</span></div>
 <div class="block"><pre>
  Per-joint maximum velocity in degrees per second.
+ The arm driver will move each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code></div>
@@ -523,6 +567,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></span>&nbsp;<span class="element-name">addAllMaxVelDegsPerSecJoints</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;values)</span></div>
 <div class="block"><pre>
  Per-joint maximum velocity in degrees per second.
+ The arm driver will move each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code></div>
@@ -540,6 +585,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></span>&nbsp;<span class="element-name">clearMaxVelDegsPerSecJoints</span>()</div>
 <div class="block"><pre>
  Per-joint maximum velocity in degrees per second.
+ The arm driver will move each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_vel_degs_per_sec_joints = 3 [json_name = "maxVelDegsPerSecJoints"];</code></div>
@@ -555,6 +601,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</span>&nbsp;<span class="element-name">getMaxAccDegsPerSec2JointsList</span>()</div>
 <div class="block"><pre>
  Per-joint maximum acceleration in degrees per second squared.
+ The arm driver will accelerate each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code></div>
@@ -572,6 +619,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMaxAccDegsPerSec2JointsCount</span>()</div>
 <div class="block"><pre>
  Per-joint maximum acceleration in degrees per second squared.
+ The arm driver will accelerate each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code></div>
@@ -589,6 +637,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getMaxAccDegsPerSec2Joints</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><pre>
  Per-joint maximum acceleration in degrees per second squared.
+ The arm driver will accelerate each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code></div>
@@ -609,6 +658,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
  double&nbsp;value)</span></div>
 <div class="block"><pre>
  Per-joint maximum acceleration in degrees per second squared.
+ The arm driver will accelerate each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code></div>
@@ -626,6 +676,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></span>&nbsp;<span class="element-name">addMaxAccDegsPerSec2Joints</span><wbr><span class="parameters">(double&nbsp;value)</span></div>
 <div class="block"><pre>
  Per-joint maximum acceleration in degrees per second squared.
+ The arm driver will accelerate each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code></div>
@@ -643,6 +694,7 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></span>&nbsp;<span class="element-name">addAllMaxAccDegsPerSec2Joints</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;values)</span></div>
 <div class="block"><pre>
  Per-joint maximum acceleration in degrees per second squared.
+ The arm driver will accelerate each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code></div>
@@ -660,9 +712,80 @@ implements <a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></span>&nbsp;<span class="element-name">clearMaxAccDegsPerSec2Joints</span>()</div>
 <div class="block"><pre>
  Per-joint maximum acceleration in degrees per second squared.
+ The arm driver will accelerate each joint as fast as possible up to its respective set value.
  </pre>
 
  <code>repeated double max_acc_degs_per_sec2_joints = 4 [json_name = "maxAccDegsPerSec2Joints"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasMaxTcpSpeed()">
+<h3>hasMaxTcpSpeed</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMaxTcpSpeed</span>()</div>
+<div class="block"><pre>
+ Maximum allowable speed of an arm's tool center point in meters per second.
+ The arm driver will move the tool center point as fast as possible up to this set value.
+ </pre>
+
+ <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Arm.MoveOptionsOrBuilder.html#hasMaxTcpSpeed()">hasMaxTcpSpeed</a></code>&nbsp;in interface&nbsp;<code><a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.component.arm.v1">Arm.MoveOptionsOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the maxTcpSpeed field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaxTcpSpeed()">
+<h3>getMaxTcpSpeed</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getMaxTcpSpeed</span>()</div>
+<div class="block"><pre>
+ Maximum allowable speed of an arm's tool center point in meters per second.
+ The arm driver will move the tool center point as fast as possible up to this set value.
+ </pre>
+
+ <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Arm.MoveOptionsOrBuilder.html#getMaxTcpSpeed()">getMaxTcpSpeed</a></code>&nbsp;in interface&nbsp;<code><a href="Arm.MoveOptionsOrBuilder.html" title="interface in com.viam.component.arm.v1">Arm.MoveOptionsOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The maxTcpSpeed.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMaxTcpSpeed(double)">
+<h3>setMaxTcpSpeed</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></span>&nbsp;<span class="element-name">setMaxTcpSpeed</span><wbr><span class="parameters">(double&nbsp;value)</span></div>
+<div class="block"><pre>
+ Maximum allowable speed of an arm's tool center point in meters per second.
+ The arm driver will move the tool center point as fast as possible up to this set value.
+ </pre>
+
+ <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The maxTcpSpeed to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearMaxTcpSpeed()">
+<h3>clearMaxTcpSpeed</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Arm.MoveOptions.Builder.html" title="class in com.viam.component.arm.v1">Arm.MoveOptions.Builder</a></span>&nbsp;<span class="element-name">clearMaxTcpSpeed</span>()</div>
+<div class="block"><pre>
+ Maximum allowable speed of an arm's tool center point in meters per second.
+ The arm driver will move the tool center point as fast as possible up to this set value.
+ </pre>
+
+ <code>optional double max_tcp_speed = 5 [json_name = "maxTcpSpeed"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>

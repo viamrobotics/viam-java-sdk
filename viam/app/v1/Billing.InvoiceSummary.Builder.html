@@ -150,6 +150,18 @@ implements <a href="Billing.InvoiceSummaryOrBuilder.html" title="interface in vi
 <div class="block"><code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLastPaymentFailureAt()" class="member-name-link">clearLastPaymentFailureAt</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Time of the most recent payment failure.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLastPaymentFailureReason()" class="member-name-link">clearLastPaymentFailureReason</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Category of the most recent payment failure.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPaidDate()" class="member-name-link">clearPaidDate</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code></div>
@@ -185,29 +197,53 @@ implements <a href="Billing.InvoiceSummaryOrBuilder.html" title="interface in vi
 <div class="block"><code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPaidDate()" class="member-name-link">getPaidDate</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastPaymentFailureAt()" class="member-name-link">getLastPaymentFailureAt</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code></div>
+<div class="block">
+ Time of the most recent payment failure.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus()" class="member-name-link">getStatus</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastPaymentFailureReason()" class="member-name-link">getLastPaymentFailureReason</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string status = 4 [json_name = "status"];</code></div>
+<div class="block">
+ Category of the most recent payment failure.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatusBytes()" class="member-name-link">getStatusBytes</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastPaymentFailureReasonBytes()" class="member-name-link">getLastPaymentFailureReasonBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Category of the most recent payment failure.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPaidDate()" class="member-name-link">getPaidDate</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus()" class="member-name-link">getStatus</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string status = 4 [json_name = "status"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDueDate()" class="member-name-link">hasDueDate</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatusBytes()" class="member-name-link">getStatusBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code></div>
+<div class="block"><code>string status = 4 [json_name = "status"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasInvoiceDate()" class="member-name-link">hasInvoiceDate</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasDueDate()" class="member-name-link">hasDueDate</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasInvoiceDate()" class="member-name-link">hasInvoiceDate</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLastPaymentFailureAt()" class="member-name-link">hasLastPaymentFailureAt</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Time of the most recent payment failure.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPaidDate()" class="member-name-link">hasPaidDate</a>()</code></div>
@@ -225,63 +261,93 @@ implements <a href="Billing.InvoiceSummaryOrBuilder.html" title="interface in vi
 <div class="block"><code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergePaidDate(com.google.protobuf.Timestamp)" class="member-name-link">mergePaidDate</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeLastPaymentFailureAt(com.google.protobuf.Timestamp)" class="member-name-link">mergeLastPaymentFailureAt</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Time of the most recent payment failure.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergePaidDate(com.google.protobuf.Timestamp)" class="member-name-link">mergePaidDate</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDueDate(com.google.protobuf.Timestamp)" class="member-name-link">setDueDate</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code></div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDueDate(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setDueDate</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDueDate(com.google.protobuf.Timestamp)" class="member-name-link">setDueDate</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDueDate(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setDueDate</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
+<div class="block"><code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string id = 1 [json_name = "id"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInvoiceAmount(double)" class="member-name-link">setInvoiceAmount</a><wbr>(double&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInvoiceAmount(double)" class="member-name-link">setInvoiceAmount</a><wbr>(double&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInvoiceDate(com.google.protobuf.Timestamp)" class="member-name-link">setInvoiceDate</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code></div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInvoiceDate(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setInvoiceDate</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInvoiceDate(com.google.protobuf.Timestamp)" class="member-name-link">setInvoiceDate</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPaidDate(com.google.protobuf.Timestamp)" class="member-name-link">setPaidDate</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInvoiceDate(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setInvoiceDate</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code></div>
+<div class="block"><code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPaidDate(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setPaidDate</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastPaymentFailureAt(com.google.protobuf.Timestamp)" class="member-name-link">setLastPaymentFailureAt</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Time of the most recent payment failure.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastPaymentFailureAt(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setLastPaymentFailureAt</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Time of the most recent payment failure.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastPaymentFailureReason(java.lang.String)" class="member-name-link">setLastPaymentFailureReason</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Category of the most recent payment failure.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLastPaymentFailureReasonBytes(com.google.protobuf.ByteString)" class="member-name-link">setLastPaymentFailureReasonBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Category of the most recent payment failure.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPaidDate(com.google.protobuf.Timestamp)" class="member-name-link">setPaidDate</a><wbr>(com.google.protobuf.Timestamp&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStatus(java.lang.String)" class="member-name-link">setStatus</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPaidDate(com.google.protobuf.Timestamp.Builder)" class="member-name-link">setPaidDate</a><wbr>(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStatus(java.lang.String)" class="member-name-link">setStatus</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string status = 4 [json_name = "status"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStatusBytes(com.google.protobuf.ByteString)" class="member-name-link">setStatusBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStatusBytes(com.google.protobuf.ByteString)" class="member-name-link">setStatusBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string status = 4 [json_name = "status"];</code></div>
 </div>
 </div>
@@ -633,6 +699,182 @@ implements <a href="Billing.InvoiceSummaryOrBuilder.html" title="interface in vi
 <h3>clearPaidDate</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></span>&nbsp;<span class="element-name">clearPaidDate</span>()</div>
 <div class="block"><code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getLastPaymentFailureReason()">
+<h3>getLastPaymentFailureReason</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getLastPaymentFailureReason</span>()</div>
+<div class="block"><pre>
+ Category of the most recent payment failure. One of: card_declined,
+ insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+ authentication_required, processing_error, other. Empty when no failure
+ is recorded. Clients must tolerate unknown values.
+ </pre>
+
+ <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Billing.InvoiceSummaryOrBuilder.html#getLastPaymentFailureReason()">getLastPaymentFailureReason</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.InvoiceSummaryOrBuilder.html" title="interface in viam.app.v1">Billing.InvoiceSummaryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The lastPaymentFailureReason.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLastPaymentFailureReasonBytes()">
+<h3>getLastPaymentFailureReasonBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getLastPaymentFailureReasonBytes</span>()</div>
+<div class="block"><pre>
+ Category of the most recent payment failure. One of: card_declined,
+ insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+ authentication_required, processing_error, other. Empty when no failure
+ is recorded. Clients must tolerate unknown values.
+ </pre>
+
+ <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Billing.InvoiceSummaryOrBuilder.html#getLastPaymentFailureReasonBytes()">getLastPaymentFailureReasonBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.InvoiceSummaryOrBuilder.html" title="interface in viam.app.v1">Billing.InvoiceSummaryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for lastPaymentFailureReason.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLastPaymentFailureReason(java.lang.String)">
+<h3>setLastPaymentFailureReason</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></span>&nbsp;<span class="element-name">setLastPaymentFailureReason</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ Category of the most recent payment failure. One of: card_declined,
+ insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+ authentication_required, processing_error, other. Empty when no failure
+ is recorded. Clients must tolerate unknown values.
+ </pre>
+
+ <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The lastPaymentFailureReason to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearLastPaymentFailureReason()">
+<h3>clearLastPaymentFailureReason</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></span>&nbsp;<span class="element-name">clearLastPaymentFailureReason</span>()</div>
+<div class="block"><pre>
+ Category of the most recent payment failure. One of: card_declined,
+ insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+ authentication_required, processing_error, other. Empty when no failure
+ is recorded. Clients must tolerate unknown values.
+ </pre>
+
+ <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLastPaymentFailureReasonBytes(com.google.protobuf.ByteString)">
+<h3>setLastPaymentFailureReasonBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></span>&nbsp;<span class="element-name">setLastPaymentFailureReasonBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="block"><pre>
+ Category of the most recent payment failure. One of: card_declined,
+ insufficient_funds, expired_card, incorrect_cvc, incorrect_card_number,
+ authentication_required, processing_error, other. Empty when no failure
+ is recorded. Clients must tolerate unknown values.
+ </pre>
+
+ <code>string last_payment_failure_reason = 7 [json_name = "lastPaymentFailureReason"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The bytes for lastPaymentFailureReason to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasLastPaymentFailureAt()">
+<h3>hasLastPaymentFailureAt</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLastPaymentFailureAt</span>()</div>
+<div class="block"><pre>
+ Time of the most recent payment failure. Empty when no failure recorded.
+ </pre>
+
+ <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Billing.InvoiceSummaryOrBuilder.html#hasLastPaymentFailureAt()">hasLastPaymentFailureAt</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.InvoiceSummaryOrBuilder.html" title="interface in viam.app.v1">Billing.InvoiceSummaryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the lastPaymentFailureAt field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLastPaymentFailureAt()">
+<h3>getLastPaymentFailureAt</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Timestamp</span>&nbsp;<span class="element-name">getLastPaymentFailureAt</span>()</div>
+<div class="block"><pre>
+ Time of the most recent payment failure. Empty when no failure recorded.
+ </pre>
+
+ <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Billing.InvoiceSummaryOrBuilder.html#getLastPaymentFailureAt()">getLastPaymentFailureAt</a></code>&nbsp;in interface&nbsp;<code><a href="Billing.InvoiceSummaryOrBuilder.html" title="interface in viam.app.v1">Billing.InvoiceSummaryOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The lastPaymentFailureAt.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setLastPaymentFailureAt(com.google.protobuf.Timestamp)">
+<h3>setLastPaymentFailureAt</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></span>&nbsp;<span class="element-name">setLastPaymentFailureAt</span><wbr><span class="parameters">(com.google.protobuf.Timestamp&nbsp;value)</span></div>
+<div class="block"><pre>
+ Time of the most recent payment failure. Empty when no failure recorded.
+ </pre>
+
+ <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setLastPaymentFailureAt(com.google.protobuf.Timestamp.Builder)">
+<h3>setLastPaymentFailureAt</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></span>&nbsp;<span class="element-name">setLastPaymentFailureAt</span><wbr><span class="parameters">(com.google.protobuf.Timestamp.Builder&nbsp;builderForValue)</span></div>
+<div class="block"><pre>
+ Time of the most recent payment failure. Empty when no failure recorded.
+ </pre>
+
+ <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeLastPaymentFailureAt(com.google.protobuf.Timestamp)">
+<h3>mergeLastPaymentFailureAt</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></span>&nbsp;<span class="element-name">mergeLastPaymentFailureAt</span><wbr><span class="parameters">(com.google.protobuf.Timestamp&nbsp;value)</span></div>
+<div class="block"><pre>
+ Time of the most recent payment failure. Empty when no failure recorded.
+ </pre>
+
+ <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearLastPaymentFailureAt()">
+<h3>clearLastPaymentFailureAt</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Billing.InvoiceSummary.Builder.html" title="class in viam.app.v1">Billing.InvoiceSummary.Builder</a></span>&nbsp;<span class="element-name">clearLastPaymentFailureAt</span>()</div>
+<div class="block"><pre>
+ Time of the most recent payment failure. Empty when no failure recorded.
+ </pre>
+
+ <code>.google.protobuf.Timestamp last_payment_failure_at = 8 [json_name = "lastPaymentFailureAt"];</code></div>
 </section>
 </li>
 </ul>
