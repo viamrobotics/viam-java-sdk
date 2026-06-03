@@ -195,6 +195,66 @@ public final class DatasetServiceGrpc {
     return getMergeDatasetsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest,
+      viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse> getStartSequenceDatasetExportMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StartSequenceDatasetExport",
+      requestType = viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest.class,
+      responseType = viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest,
+      viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse> getStartSequenceDatasetExportMethod() {
+    io.grpc.MethodDescriptor<viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest, viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse> getStartSequenceDatasetExportMethod;
+    if ((getStartSequenceDatasetExportMethod = DatasetServiceGrpc.getStartSequenceDatasetExportMethod) == null) {
+      synchronized (DatasetServiceGrpc.class) {
+        if ((getStartSequenceDatasetExportMethod = DatasetServiceGrpc.getStartSequenceDatasetExportMethod) == null) {
+          DatasetServiceGrpc.getStartSequenceDatasetExportMethod = getStartSequenceDatasetExportMethod =
+              io.grpc.MethodDescriptor.<viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest, viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StartSequenceDatasetExport"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getStartSequenceDatasetExportMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest,
+      viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse> getGetSequenceDatasetExportMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSequenceDatasetExport",
+      requestType = viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest.class,
+      responseType = viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest,
+      viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse> getGetSequenceDatasetExportMethod() {
+    io.grpc.MethodDescriptor<viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest, viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse> getGetSequenceDatasetExportMethod;
+    if ((getGetSequenceDatasetExportMethod = DatasetServiceGrpc.getGetSequenceDatasetExportMethod) == null) {
+      synchronized (DatasetServiceGrpc.class) {
+        if ((getGetSequenceDatasetExportMethod = DatasetServiceGrpc.getGetSequenceDatasetExportMethod) == null) {
+          DatasetServiceGrpc.getGetSequenceDatasetExportMethod = getGetSequenceDatasetExportMethod =
+              io.grpc.MethodDescriptor.<viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest, viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSequenceDatasetExport"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetSequenceDatasetExportMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -293,7 +353,7 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * ListDatasetsByOrganizationID lists all of the datasets for an organization.
+     * ListDatasetsByOrganizationID lists all of the datasets for an organization, optionally filtering by DatasetType.
      * </pre>
      */
     default void listDatasetsByOrganizationID(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest request,
@@ -319,6 +379,26 @@ public final class DatasetServiceGrpc {
     default void mergeDatasets(viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest request,
         io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMergeDatasetsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * StartSequenceDatasetExport kicks off an async export of all data for a sequence dataset.
+     * </pre>
+     */
+    default void startSequenceDatasetExport(viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest request,
+        io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStartSequenceDatasetExportMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetSequenceDatasetExport returns the current status of an export job.
+     * </pre>
+     */
+    default void getSequenceDatasetExport(viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest request,
+        io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSequenceDatasetExportMethod(), responseObserver);
     }
   }
 
@@ -390,7 +470,7 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * ListDatasetsByOrganizationID lists all of the datasets for an organization.
+     * ListDatasetsByOrganizationID lists all of the datasets for an organization, optionally filtering by DatasetType.
      * </pre>
      */
     public void listDatasetsByOrganizationID(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest request,
@@ -419,6 +499,28 @@ public final class DatasetServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getMergeDatasetsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * StartSequenceDatasetExport kicks off an async export of all data for a sequence dataset.
+     * </pre>
+     */
+    public void startSequenceDatasetExport(viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest request,
+        io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getStartSequenceDatasetExportMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetSequenceDatasetExport returns the current status of an export job.
+     * </pre>
+     */
+    public void getSequenceDatasetExport(viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest request,
+        io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetSequenceDatasetExportMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -473,7 +575,7 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * ListDatasetsByOrganizationID lists all of the datasets for an organization.
+     * ListDatasetsByOrganizationID lists all of the datasets for an organization, optionally filtering by DatasetType.
      * </pre>
      */
     public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse listDatasetsByOrganizationID(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest request) throws io.grpc.StatusException {
@@ -499,6 +601,26 @@ public final class DatasetServiceGrpc {
     public viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse mergeDatasets(viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMergeDatasetsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * StartSequenceDatasetExport kicks off an async export of all data for a sequence dataset.
+     * </pre>
+     */
+    public viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse startSequenceDatasetExport(viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getStartSequenceDatasetExportMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetSequenceDatasetExport returns the current status of an export job.
+     * </pre>
+     */
+    public viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse getSequenceDatasetExport(viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetSequenceDatasetExportMethod(), getCallOptions(), request);
     }
   }
 
@@ -553,7 +675,7 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * ListDatasetsByOrganizationID lists all of the datasets for an organization.
+     * ListDatasetsByOrganizationID lists all of the datasets for an organization, optionally filtering by DatasetType.
      * </pre>
      */
     public viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse listDatasetsByOrganizationID(viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest request) {
@@ -579,6 +701,26 @@ public final class DatasetServiceGrpc {
     public viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse mergeDatasets(viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMergeDatasetsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * StartSequenceDatasetExport kicks off an async export of all data for a sequence dataset.
+     * </pre>
+     */
+    public viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse startSequenceDatasetExport(viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getStartSequenceDatasetExportMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetSequenceDatasetExport returns the current status of an export job.
+     * </pre>
+     */
+    public viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse getSequenceDatasetExport(viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetSequenceDatasetExportMethod(), getCallOptions(), request);
     }
   }
 
@@ -636,7 +778,7 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
-     * ListDatasetsByOrganizationID lists all of the datasets for an organization.
+     * ListDatasetsByOrganizationID lists all of the datasets for an organization, optionally filtering by DatasetType.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse> listDatasetsByOrganizationID(
@@ -666,6 +808,28 @@ public final class DatasetServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getMergeDatasetsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * StartSequenceDatasetExport kicks off an async export of all data for a sequence dataset.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse> startSequenceDatasetExport(
+        viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getStartSequenceDatasetExportMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetSequenceDatasetExport returns the current status of an export job.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse> getSequenceDatasetExport(
+        viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetSequenceDatasetExportMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_DATASET = 0;
@@ -674,6 +838,8 @@ public final class DatasetServiceGrpc {
   private static final int METHODID_LIST_DATASETS_BY_ORGANIZATION_ID = 3;
   private static final int METHODID_LIST_DATASETS_BY_IDS = 4;
   private static final int METHODID_MERGE_DATASETS = 5;
+  private static final int METHODID_START_SEQUENCE_DATASET_EXPORT = 6;
+  private static final int METHODID_GET_SEQUENCE_DATASET_EXPORT = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -715,6 +881,14 @@ public final class DatasetServiceGrpc {
         case METHODID_MERGE_DATASETS:
           serviceImpl.mergeDatasets((viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse>) responseObserver);
+          break;
+        case METHODID_START_SEQUENCE_DATASET_EXPORT:
+          serviceImpl.startSequenceDatasetExport((viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse>) responseObserver);
+          break;
+        case METHODID_GET_SEQUENCE_DATASET_EXPORT:
+          serviceImpl.getSequenceDatasetExport((viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -776,6 +950,20 @@ public final class DatasetServiceGrpc {
               viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsRequest,
               viam.app.dataset.v1.DatasetOuterClass.MergeDatasetsResponse>(
                 service, METHODID_MERGE_DATASETS)))
+        .addMethod(
+          getStartSequenceDatasetExportMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest,
+              viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse>(
+                service, METHODID_START_SEQUENCE_DATASET_EXPORT)))
+        .addMethod(
+          getGetSequenceDatasetExportMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest,
+              viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse>(
+                service, METHODID_GET_SEQUENCE_DATASET_EXPORT)))
         .build();
   }
 
@@ -794,6 +982,8 @@ public final class DatasetServiceGrpc {
               .addMethod(getListDatasetsByOrganizationIDMethod())
               .addMethod(getListDatasetsByIDsMethod())
               .addMethod(getMergeDatasetsMethod())
+              .addMethod(getStartSequenceDatasetExportMethod())
+              .addMethod(getGetSequenceDatasetExportMethod())
               .build();
         }
       }

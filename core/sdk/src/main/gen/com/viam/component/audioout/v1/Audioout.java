@@ -638,6 +638,1286 @@ public final class Audioout {
     }
   }
 
+  public interface PlayStreamRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.audioout.v1.PlayStreamRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * sent on first message
+     * </pre>
+     *
+     * <code>.viam.component.audioout.v1.PlayStreamInit init = 1 [json_name = "init"];</code>
+     * @return Whether the init field is set.
+     */
+    boolean hasInit();
+    /**
+     * <pre>
+     * sent on first message
+     * </pre>
+     *
+     * <code>.viam.component.audioout.v1.PlayStreamInit init = 1 [json_name = "init"];</code>
+     * @return The init.
+     */
+    com.viam.component.audioout.v1.Audioout.PlayStreamInit getInit();
+
+    /**
+     * <code>.viam.component.audioout.v1.PlayStreamChunk audio_chunk = 2 [json_name = "audioChunk"];</code>
+     * @return Whether the audioChunk field is set.
+     */
+    boolean hasAudioChunk();
+    /**
+     * <code>.viam.component.audioout.v1.PlayStreamChunk audio_chunk = 2 [json_name = "audioChunk"];</code>
+     * @return The audioChunk.
+     */
+    com.viam.component.audioout.v1.Audioout.PlayStreamChunk getAudioChunk();
+
+    public com.viam.component.audioout.v1.Audioout.PlayStreamRequest.PayloadCase getPayloadCase();
+  }
+  /**
+   * Protobuf type {@code viam.component.audioout.v1.PlayStreamRequest}
+   */
+  public  static final class PlayStreamRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          PlayStreamRequest, PlayStreamRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.audioout.v1.PlayStreamRequest)
+      PlayStreamRequestOrBuilder {
+    private PlayStreamRequest() {
+    }
+    private int payloadCase_ = 0;
+    private java.lang.Object payload_;
+    public enum PayloadCase
+        implements com.google.protobuf.AbstractMessageLite.InternalOneOfEnum {
+      INIT(1),
+      AUDIO_CHUNK(2),
+      PAYLOAD_NOT_SET(0);
+      private final int value;
+      private PayloadCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PayloadCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PayloadCase forNumber(int value) {
+        switch (value) {
+          case 1: return INIT;
+          case 2: return AUDIO_CHUNK;
+          case 0: return PAYLOAD_NOT_SET;
+          default: return null;
+        }
+      }
+      @java.lang.Override public int getNumber() {
+        return this.value;
+      }
+    };
+
+    @java.lang.Override
+    public PayloadCase
+    getPayloadCase() {
+      return PayloadCase.forNumber(
+          payloadCase_);
+    }
+
+    private void clearPayload() {
+      payloadCase_ = 0;
+      payload_ = null;
+    }
+
+    public static final int INIT_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * sent on first message
+     * </pre>
+     *
+     * <code>.viam.component.audioout.v1.PlayStreamInit init = 1 [json_name = "init"];</code>
+     */
+    @java.lang.Override
+    public boolean hasInit() {
+      return payloadCase_ == 1;
+    }
+    /**
+     * <pre>
+     * sent on first message
+     * </pre>
+     *
+     * <code>.viam.component.audioout.v1.PlayStreamInit init = 1 [json_name = "init"];</code>
+     */
+    @java.lang.Override
+    public com.viam.component.audioout.v1.Audioout.PlayStreamInit getInit() {
+      if (payloadCase_ == 1) {
+         return (com.viam.component.audioout.v1.Audioout.PlayStreamInit) payload_;
+      }
+      return com.viam.component.audioout.v1.Audioout.PlayStreamInit.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * sent on first message
+     * </pre>
+     *
+     * <code>.viam.component.audioout.v1.PlayStreamInit init = 1 [json_name = "init"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setInit(com.viam.component.audioout.v1.Audioout.PlayStreamInit value) {
+      value.getClass();  // minimal bytecode null check
+      payload_ = value;
+      payloadCase_ = 1;
+    }
+    /**
+     * <pre>
+     * sent on first message
+     * </pre>
+     *
+     * <code>.viam.component.audioout.v1.PlayStreamInit init = 1 [json_name = "init"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void mergeInit(com.viam.component.audioout.v1.Audioout.PlayStreamInit value) {
+      value.getClass();  // minimal bytecode null check
+      if (payloadCase_ == 1 &&
+          payload_ != com.viam.component.audioout.v1.Audioout.PlayStreamInit.getDefaultInstance()) {
+        payload_ = com.viam.component.audioout.v1.Audioout.PlayStreamInit.newBuilder((com.viam.component.audioout.v1.Audioout.PlayStreamInit) payload_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        payload_ = value;
+      }
+      payloadCase_ = 1;
+    }
+    /**
+     * <pre>
+     * sent on first message
+     * </pre>
+     *
+     * <code>.viam.component.audioout.v1.PlayStreamInit init = 1 [json_name = "init"];</code>
+     */
+    private void clearInit() {
+      if (payloadCase_ == 1) {
+        payloadCase_ = 0;
+        payload_ = null;
+      }
+    }
+
+    public static final int AUDIO_CHUNK_FIELD_NUMBER = 2;
+    /**
+     * <code>.viam.component.audioout.v1.PlayStreamChunk audio_chunk = 2 [json_name = "audioChunk"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAudioChunk() {
+      return payloadCase_ == 2;
+    }
+    /**
+     * <code>.viam.component.audioout.v1.PlayStreamChunk audio_chunk = 2 [json_name = "audioChunk"];</code>
+     */
+    @java.lang.Override
+    public com.viam.component.audioout.v1.Audioout.PlayStreamChunk getAudioChunk() {
+      if (payloadCase_ == 2) {
+         return (com.viam.component.audioout.v1.Audioout.PlayStreamChunk) payload_;
+      }
+      return com.viam.component.audioout.v1.Audioout.PlayStreamChunk.getDefaultInstance();
+    }
+    /**
+     * <code>.viam.component.audioout.v1.PlayStreamChunk audio_chunk = 2 [json_name = "audioChunk"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setAudioChunk(com.viam.component.audioout.v1.Audioout.PlayStreamChunk value) {
+      value.getClass();  // minimal bytecode null check
+      payload_ = value;
+      payloadCase_ = 2;
+    }
+    /**
+     * <code>.viam.component.audioout.v1.PlayStreamChunk audio_chunk = 2 [json_name = "audioChunk"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void mergeAudioChunk(com.viam.component.audioout.v1.Audioout.PlayStreamChunk value) {
+      value.getClass();  // minimal bytecode null check
+      if (payloadCase_ == 2 &&
+          payload_ != com.viam.component.audioout.v1.Audioout.PlayStreamChunk.getDefaultInstance()) {
+        payload_ = com.viam.component.audioout.v1.Audioout.PlayStreamChunk.newBuilder((com.viam.component.audioout.v1.Audioout.PlayStreamChunk) payload_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        payload_ = value;
+      }
+      payloadCase_ = 2;
+    }
+    /**
+     * <code>.viam.component.audioout.v1.PlayStreamChunk audio_chunk = 2 [json_name = "audioChunk"];</code>
+     */
+    private void clearAudioChunk() {
+      if (payloadCase_ == 2) {
+        payloadCase_ = 0;
+        payload_ = null;
+      }
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.audioout.v1.Audioout.PlayStreamRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.component.audioout.v1.PlayStreamRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.audioout.v1.Audioout.PlayStreamRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.audioout.v1.PlayStreamRequest)
+        com.viam.component.audioout.v1.Audioout.PlayStreamRequestOrBuilder {
+      // Construct using com.viam.component.audioout.v1.Audioout.PlayStreamRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+      @java.lang.Override
+      public PayloadCase
+          getPayloadCase() {
+        return instance.getPayloadCase();
+      }
+
+      public Builder clearPayload() {
+        copyOnWrite();
+        instance.clearPayload();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * sent on first message
+       * </pre>
+       *
+       * <code>.viam.component.audioout.v1.PlayStreamInit init = 1 [json_name = "init"];</code>
+       */
+      @java.lang.Override
+      public boolean hasInit() {
+        return instance.hasInit();
+      }
+      /**
+       * <pre>
+       * sent on first message
+       * </pre>
+       *
+       * <code>.viam.component.audioout.v1.PlayStreamInit init = 1 [json_name = "init"];</code>
+       */
+      @java.lang.Override
+      public com.viam.component.audioout.v1.Audioout.PlayStreamInit getInit() {
+        return instance.getInit();
+      }
+      /**
+       * <pre>
+       * sent on first message
+       * </pre>
+       *
+       * <code>.viam.component.audioout.v1.PlayStreamInit init = 1 [json_name = "init"];</code>
+       */
+      public Builder setInit(com.viam.component.audioout.v1.Audioout.PlayStreamInit value) {
+        copyOnWrite();
+        instance.setInit(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * sent on first message
+       * </pre>
+       *
+       * <code>.viam.component.audioout.v1.PlayStreamInit init = 1 [json_name = "init"];</code>
+       */
+      public Builder setInit(
+          com.viam.component.audioout.v1.Audioout.PlayStreamInit.Builder builderForValue) {
+        copyOnWrite();
+        instance.setInit(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * sent on first message
+       * </pre>
+       *
+       * <code>.viam.component.audioout.v1.PlayStreamInit init = 1 [json_name = "init"];</code>
+       */
+      public Builder mergeInit(com.viam.component.audioout.v1.Audioout.PlayStreamInit value) {
+        copyOnWrite();
+        instance.mergeInit(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * sent on first message
+       * </pre>
+       *
+       * <code>.viam.component.audioout.v1.PlayStreamInit init = 1 [json_name = "init"];</code>
+       */
+      public Builder clearInit() {
+        copyOnWrite();
+        instance.clearInit();
+        return this;
+      }
+
+      /**
+       * <code>.viam.component.audioout.v1.PlayStreamChunk audio_chunk = 2 [json_name = "audioChunk"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAudioChunk() {
+        return instance.hasAudioChunk();
+      }
+      /**
+       * <code>.viam.component.audioout.v1.PlayStreamChunk audio_chunk = 2 [json_name = "audioChunk"];</code>
+       */
+      @java.lang.Override
+      public com.viam.component.audioout.v1.Audioout.PlayStreamChunk getAudioChunk() {
+        return instance.getAudioChunk();
+      }
+      /**
+       * <code>.viam.component.audioout.v1.PlayStreamChunk audio_chunk = 2 [json_name = "audioChunk"];</code>
+       */
+      public Builder setAudioChunk(com.viam.component.audioout.v1.Audioout.PlayStreamChunk value) {
+        copyOnWrite();
+        instance.setAudioChunk(value);
+        return this;
+      }
+      /**
+       * <code>.viam.component.audioout.v1.PlayStreamChunk audio_chunk = 2 [json_name = "audioChunk"];</code>
+       */
+      public Builder setAudioChunk(
+          com.viam.component.audioout.v1.Audioout.PlayStreamChunk.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAudioChunk(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.component.audioout.v1.PlayStreamChunk audio_chunk = 2 [json_name = "audioChunk"];</code>
+       */
+      public Builder mergeAudioChunk(com.viam.component.audioout.v1.Audioout.PlayStreamChunk value) {
+        copyOnWrite();
+        instance.mergeAudioChunk(value);
+        return this;
+      }
+      /**
+       * <code>.viam.component.audioout.v1.PlayStreamChunk audio_chunk = 2 [json_name = "audioChunk"];</code>
+       */
+      public Builder clearAudioChunk() {
+        copyOnWrite();
+        instance.clearAudioChunk();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.component.audioout.v1.PlayStreamRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.audioout.v1.Audioout.PlayStreamRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "payload_",
+              "payloadCase_",
+              com.viam.component.audioout.v1.Audioout.PlayStreamInit.class,
+              com.viam.component.audioout.v1.Audioout.PlayStreamChunk.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0001\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001<\u0000\u0002<" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.audioout.v1.Audioout.PlayStreamRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.audioout.v1.Audioout.PlayStreamRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.audioout.v1.Audioout.PlayStreamRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.audioout.v1.PlayStreamRequest)
+    private static final com.viam.component.audioout.v1.Audioout.PlayStreamRequest DEFAULT_INSTANCE;
+    static {
+      PlayStreamRequest defaultInstance = new PlayStreamRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PlayStreamRequest.class, defaultInstance);
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PlayStreamRequest> PARSER;
+
+    public static com.google.protobuf.Parser<PlayStreamRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PlayStreamChunkOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.audioout.v1.PlayStreamChunk)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>bytes audio_data = 1 [json_name = "audioData"];</code>
+     * @return The audioData.
+     */
+    com.google.protobuf.ByteString getAudioData();
+  }
+  /**
+   * Protobuf type {@code viam.component.audioout.v1.PlayStreamChunk}
+   */
+  public  static final class PlayStreamChunk extends
+      com.google.protobuf.GeneratedMessageLite<
+          PlayStreamChunk, PlayStreamChunk.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.audioout.v1.PlayStreamChunk)
+      PlayStreamChunkOrBuilder {
+    private PlayStreamChunk() {
+      audioData_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    public static final int AUDIO_DATA_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString audioData_;
+    /**
+     * <code>bytes audio_data = 1 [json_name = "audioData"];</code>
+     * @return The audioData.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getAudioData() {
+      return audioData_;
+    }
+    /**
+     * <code>bytes audio_data = 1 [json_name = "audioData"];</code>
+     * @param value The audioData to set.
+     */
+    private void setAudioData(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      audioData_ = value;
+    }
+    /**
+     * <code>bytes audio_data = 1 [json_name = "audioData"];</code>
+     */
+    private void clearAudioData() {
+
+      audioData_ = getDefaultInstance().getAudioData();
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamChunk parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamChunk parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamChunk parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamChunk parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamChunk parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamChunk parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamChunk parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamChunk parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamChunk parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamChunk parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamChunk parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamChunk parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.audioout.v1.Audioout.PlayStreamChunk prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.component.audioout.v1.PlayStreamChunk}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.audioout.v1.Audioout.PlayStreamChunk, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.audioout.v1.PlayStreamChunk)
+        com.viam.component.audioout.v1.Audioout.PlayStreamChunkOrBuilder {
+      // Construct using com.viam.component.audioout.v1.Audioout.PlayStreamChunk.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>bytes audio_data = 1 [json_name = "audioData"];</code>
+       * @return The audioData.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getAudioData() {
+        return instance.getAudioData();
+      }
+      /**
+       * <code>bytes audio_data = 1 [json_name = "audioData"];</code>
+       * @param value The audioData to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAudioData(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setAudioData(value);
+        return this;
+      }
+      /**
+       * <code>bytes audio_data = 1 [json_name = "audioData"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAudioData() {
+        copyOnWrite();
+        instance.clearAudioData();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.component.audioout.v1.PlayStreamChunk)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.audioout.v1.Audioout.PlayStreamChunk();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "audioData_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\n";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.audioout.v1.Audioout.PlayStreamChunk> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.audioout.v1.Audioout.PlayStreamChunk.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.audioout.v1.Audioout.PlayStreamChunk>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.audioout.v1.PlayStreamChunk)
+    private static final com.viam.component.audioout.v1.Audioout.PlayStreamChunk DEFAULT_INSTANCE;
+    static {
+      PlayStreamChunk defaultInstance = new PlayStreamChunk();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PlayStreamChunk.class, defaultInstance);
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamChunk getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PlayStreamChunk> PARSER;
+
+    public static com.google.protobuf.Parser<PlayStreamChunk> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PlayStreamInitOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.audioout.v1.PlayStreamInit)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>.viam.common.v1.AudioInfo audio_info = 2 [json_name = "audioInfo"];</code>
+     * @return Whether the audioInfo field is set.
+     */
+    boolean hasAudioInfo();
+    /**
+     * <code>.viam.common.v1.AudioInfo audio_info = 2 [json_name = "audioInfo"];</code>
+     * @return The audioInfo.
+     */
+    com.viam.common.v1.Common.AudioInfo getAudioInfo();
+
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * Protobuf type {@code viam.component.audioout.v1.PlayStreamInit}
+   */
+  public  static final class PlayStreamInit extends
+      com.google.protobuf.GeneratedMessageLite<
+          PlayStreamInit, PlayStreamInit.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.audioout.v1.PlayStreamInit)
+      PlayStreamInitOrBuilder {
+    private PlayStreamInit() {
+      name_ = "";
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setName(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int AUDIO_INFO_FIELD_NUMBER = 2;
+    private com.viam.common.v1.Common.AudioInfo audioInfo_;
+    /**
+     * <code>.viam.common.v1.AudioInfo audio_info = 2 [json_name = "audioInfo"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAudioInfo() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.common.v1.AudioInfo audio_info = 2 [json_name = "audioInfo"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.AudioInfo getAudioInfo() {
+      return audioInfo_ == null ? com.viam.common.v1.Common.AudioInfo.getDefaultInstance() : audioInfo_;
+    }
+    /**
+     * <code>.viam.common.v1.AudioInfo audio_info = 2 [json_name = "audioInfo"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setAudioInfo(com.viam.common.v1.Common.AudioInfo value) {
+      value.getClass();  // minimal bytecode null check
+      audioInfo_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.AudioInfo audio_info = 2 [json_name = "audioInfo"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeAudioInfo(com.viam.common.v1.Common.AudioInfo value) {
+      value.getClass();  // minimal bytecode null check
+      if (audioInfo_ != null &&
+          audioInfo_ != com.viam.common.v1.Common.AudioInfo.getDefaultInstance()) {
+        audioInfo_ =
+          com.viam.common.v1.Common.AudioInfo.newBuilder(audioInfo_).mergeFrom(value).buildPartial();
+      } else {
+        audioInfo_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.AudioInfo audio_info = 2 [json_name = "audioInfo"];</code>
+     */
+    private void clearAudioInfo() {
+      audioInfo_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();  // minimal bytecode null check
+      extra_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();  // minimal bytecode null check
+      if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {
+      extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamInit parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamInit parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamInit parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamInit parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamInit parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamInit parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamInit parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamInit parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamInit parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamInit parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamInit parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamInit parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.audioout.v1.Audioout.PlayStreamInit prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.component.audioout.v1.PlayStreamInit}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.audioout.v1.Audioout.PlayStreamInit, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.audioout.v1.PlayStreamInit)
+        com.viam.component.audioout.v1.Audioout.PlayStreamInitOrBuilder {
+      // Construct using com.viam.component.audioout.v1.Audioout.PlayStreamInit.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.common.v1.AudioInfo audio_info = 2 [json_name = "audioInfo"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAudioInfo() {
+        return instance.hasAudioInfo();
+      }
+      /**
+       * <code>.viam.common.v1.AudioInfo audio_info = 2 [json_name = "audioInfo"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.AudioInfo getAudioInfo() {
+        return instance.getAudioInfo();
+      }
+      /**
+       * <code>.viam.common.v1.AudioInfo audio_info = 2 [json_name = "audioInfo"];</code>
+       */
+      public Builder setAudioInfo(com.viam.common.v1.Common.AudioInfo value) {
+        copyOnWrite();
+        instance.setAudioInfo(value);
+        return this;
+        }
+      /**
+       * <code>.viam.common.v1.AudioInfo audio_info = 2 [json_name = "audioInfo"];</code>
+       */
+      public Builder setAudioInfo(
+          com.viam.common.v1.Common.AudioInfo.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAudioInfo(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.AudioInfo audio_info = 2 [json_name = "audioInfo"];</code>
+       */
+      public Builder mergeAudioInfo(com.viam.common.v1.Common.AudioInfo value) {
+        copyOnWrite();
+        instance.mergeAudioInfo(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.AudioInfo audio_info = 2 [json_name = "audioInfo"];</code>
+       */
+      public Builder clearAudioInfo() {  copyOnWrite();
+        instance.clearAudioInfo();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.component.audioout.v1.PlayStreamInit)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.audioout.v1.Audioout.PlayStreamInit();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "audioInfo_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000" +
+                "c\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.audioout.v1.Audioout.PlayStreamInit> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.audioout.v1.Audioout.PlayStreamInit.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.audioout.v1.Audioout.PlayStreamInit>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.audioout.v1.PlayStreamInit)
+    private static final com.viam.component.audioout.v1.Audioout.PlayStreamInit DEFAULT_INSTANCE;
+    static {
+      PlayStreamInit defaultInstance = new PlayStreamInit();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PlayStreamInit.class, defaultInstance);
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamInit getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PlayStreamInit> PARSER;
+
+    public static com.google.protobuf.Parser<PlayStreamInit> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface PlayResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.audioout.v1.PlayResponse)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -817,6 +2097,189 @@ public final class Audioout {
     private static volatile com.google.protobuf.Parser<PlayResponse> PARSER;
 
     public static com.google.protobuf.Parser<PlayResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PlayStreamResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.audioout.v1.PlayStreamResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.component.audioout.v1.PlayStreamResponse}
+   */
+  public  static final class PlayStreamResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          PlayStreamResponse, PlayStreamResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.component.audioout.v1.PlayStreamResponse)
+      PlayStreamResponseOrBuilder {
+    private PlayStreamResponse() {
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.audioout.v1.Audioout.PlayStreamResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.component.audioout.v1.PlayStreamResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.audioout.v1.Audioout.PlayStreamResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.audioout.v1.PlayStreamResponse)
+        com.viam.component.audioout.v1.Audioout.PlayStreamResponseOrBuilder {
+      // Construct using com.viam.component.audioout.v1.Audioout.PlayStreamResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.component.audioout.v1.PlayStreamResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.audioout.v1.Audioout.PlayStreamResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.audioout.v1.Audioout.PlayStreamResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.audioout.v1.Audioout.PlayStreamResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.audioout.v1.Audioout.PlayStreamResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.component.audioout.v1.PlayStreamResponse)
+    private static final com.viam.component.audioout.v1.Audioout.PlayStreamResponse DEFAULT_INSTANCE;
+    static {
+      PlayStreamResponse defaultInstance = new PlayStreamResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PlayStreamResponse.class, defaultInstance);
+    }
+
+    public static com.viam.component.audioout.v1.Audioout.PlayStreamResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<PlayStreamResponse> PARSER;
+
+    public static com.google.protobuf.Parser<PlayStreamResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

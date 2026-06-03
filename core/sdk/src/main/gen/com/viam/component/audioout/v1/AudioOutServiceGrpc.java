@@ -45,6 +45,36 @@ public final class AudioOutServiceGrpc {
     return getPlayMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.audioout.v1.Audioout.PlayStreamRequest,
+      com.viam.component.audioout.v1.Audioout.PlayStreamResponse> getPlayStreamMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "PlayStream",
+      requestType = com.viam.component.audioout.v1.Audioout.PlayStreamRequest.class,
+      responseType = com.viam.component.audioout.v1.Audioout.PlayStreamResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<com.viam.component.audioout.v1.Audioout.PlayStreamRequest,
+      com.viam.component.audioout.v1.Audioout.PlayStreamResponse> getPlayStreamMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.audioout.v1.Audioout.PlayStreamRequest, com.viam.component.audioout.v1.Audioout.PlayStreamResponse> getPlayStreamMethod;
+    if ((getPlayStreamMethod = AudioOutServiceGrpc.getPlayStreamMethod) == null) {
+      synchronized (AudioOutServiceGrpc.class) {
+        if ((getPlayStreamMethod = AudioOutServiceGrpc.getPlayStreamMethod) == null) {
+          AudioOutServiceGrpc.getPlayStreamMethod = getPlayStreamMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.audioout.v1.Audioout.PlayStreamRequest, com.viam.component.audioout.v1.Audioout.PlayStreamResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PlayStream"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.audioout.v1.Audioout.PlayStreamRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.audioout.v1.Audioout.PlayStreamResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getPlayStreamMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetPropertiesRequest,
       com.viam.common.v1.Common.GetPropertiesResponse> getGetPropertiesMethod;
 
@@ -243,6 +273,19 @@ public final class AudioOutServiceGrpc {
 
     /**
      * <pre>
+     * PlayStream streams audio chunks to the audioout component for playback.
+     * The first message on the stream must be a PlayStreamInit containing the
+     * component name and AudioInfo describing the audio format; subsequent
+     * messages must be PlayStreamChunk payloads.
+     * </pre>
+     */
+    default io.grpc.stub.StreamObserver<com.viam.component.audioout.v1.Audioout.PlayStreamRequest> playStream(
+        io.grpc.stub.StreamObserver<com.viam.component.audioout.v1.Audioout.PlayStreamResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getPlayStreamMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetProperties returns the properties of the audioout.
      * </pre>
      */
@@ -328,6 +371,20 @@ public final class AudioOutServiceGrpc {
 
     /**
      * <pre>
+     * PlayStream streams audio chunks to the audioout component for playback.
+     * The first message on the stream must be a PlayStreamInit containing the
+     * component name and AudioInfo describing the audio format; subsequent
+     * messages must be PlayStreamChunk payloads.
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<com.viam.component.audioout.v1.Audioout.PlayStreamRequest> playStream(
+        io.grpc.stub.StreamObserver<com.viam.component.audioout.v1.Audioout.PlayStreamResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
+          getChannel().newCall(getPlayStreamMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetProperties returns the properties of the audioout.
      * </pre>
      */
@@ -398,6 +455,21 @@ public final class AudioOutServiceGrpc {
     public com.viam.component.audioout.v1.Audioout.PlayResponse play(com.viam.component.audioout.v1.Audioout.PlayRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getPlayMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * PlayStream streams audio chunks to the audioout component for playback.
+     * The first message on the stream must be a PlayStreamInit containing the
+     * component name and AudioInfo describing the audio format; subsequent
+     * messages must be PlayStreamChunk payloads.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<com.viam.component.audioout.v1.Audioout.PlayStreamRequest, com.viam.component.audioout.v1.Audioout.PlayStreamResponse>
+        playStream() {
+      return io.grpc.stub.ClientCalls.blockingClientStreamingCall(
+          getChannel(), getPlayStreamMethod(), getCallOptions());
     }
 
     /**
@@ -591,6 +663,7 @@ public final class AudioOutServiceGrpc {
   private static final int METHODID_DO_COMMAND = 2;
   private static final int METHODID_GET_STATUS = 3;
   private static final int METHODID_GET_GEOMETRIES = 4;
+  private static final int METHODID_PLAY_STREAM = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -639,6 +712,9 @@ public final class AudioOutServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_PLAY_STREAM:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.playStream(
+              (io.grpc.stub.StreamObserver<com.viam.component.audioout.v1.Audioout.PlayStreamResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -654,6 +730,13 @@ public final class AudioOutServiceGrpc {
               com.viam.component.audioout.v1.Audioout.PlayRequest,
               com.viam.component.audioout.v1.Audioout.PlayResponse>(
                 service, METHODID_PLAY)))
+        .addMethod(
+          getPlayStreamMethod(),
+          io.grpc.stub.ServerCalls.asyncClientStreamingCall(
+            new MethodHandlers<
+              com.viam.component.audioout.v1.Audioout.PlayStreamRequest,
+              com.viam.component.audioout.v1.Audioout.PlayStreamResponse>(
+                service, METHODID_PLAY_STREAM)))
         .addMethod(
           getGetPropertiesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -695,6 +778,7 @@ public final class AudioOutServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .addMethod(getPlayMethod())
+              .addMethod(getPlayStreamMethod())
               .addMethod(getGetPropertiesMethod())
               .addMethod(getDoCommandMethod())
               .addMethod(getGetStatusMethod())
