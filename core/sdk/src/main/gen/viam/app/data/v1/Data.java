@@ -19778,14 +19778,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=439
+     *     See app/data/v1/data.proto;l=448
      * @return The id.
      */
     @java.lang.Deprecated java.lang.String getId();
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=439
+     *     See app/data/v1/data.proto;l=448
      * @return The bytes for id.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -19940,7 +19940,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=439
+     *     See app/data/v1/data.proto;l=448
      * @return The id.
      */
     @java.lang.Override
@@ -19950,7 +19950,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=439
+     *     See app/data/v1/data.proto;l=448
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -20596,7 +20596,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=439
+       *     See app/data/v1/data.proto;l=448
        * @return The id.
        */
       @java.lang.Override
@@ -20606,7 +20606,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=439
+       *     See app/data/v1/data.proto;l=448
        * @return The bytes for id.
        */
       @java.lang.Override
@@ -20617,7 +20617,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=439
+       *     See app/data/v1/data.proto;l=448
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -20630,7 +20630,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=439
+       *     See app/data/v1/data.proto;l=448
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearId() {
@@ -20641,7 +20641,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=439
+       *     See app/data/v1/data.proto;l=448
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -28837,14 +28837,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=577
+     *     See app/data/v1/data.proto;l=586
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=577
+     *     See app/data/v1/data.proto;l=586
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -29996,14 +29996,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=597
+     *     See app/data/v1/data.proto;l=606
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=597
+     *     See app/data/v1/data.proto;l=606
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -30707,14 +30707,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=609
+     *     See app/data/v1/data.proto;l=618
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=609
+     *     See app/data/v1/data.proto;l=618
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -35876,6 +35876,1408 @@ com.google.protobuf.Any defaultValue) {
     private static volatile com.google.protobuf.Parser<RemoveBinaryDataFromDatasetByIDsResponse> PARSER;
 
     public static com.google.protobuf.Parser<RemoveBinaryDataFromDatasetByIDsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface AddSequencesToDatasetRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.AddSequencesToDatasetRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The datasetId.
+     */
+    java.lang.String getDatasetId();
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The bytes for datasetId.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdBytes();
+
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @return A list containing the sequenceIds.
+     */
+    java.util.List<java.lang.String>
+        getSequenceIdsList();
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @return The count of sequenceIds.
+     */
+    int getSequenceIdsCount();
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceIds at the given index.
+     */
+    java.lang.String getSequenceIds(int index);
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSequenceIdsBytes(int index);
+  }
+  /**
+   * <pre>
+   * AddSequencesToDatasetRequest adds the sequences with the given IDs to the dataset with dataset_id.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.AddSequencesToDatasetRequest}
+   */
+  public  static final class AddSequencesToDatasetRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          AddSequencesToDatasetRequest, AddSequencesToDatasetRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.AddSequencesToDatasetRequest)
+      AddSequencesToDatasetRequestOrBuilder {
+    private AddSequencesToDatasetRequest() {
+      datasetId_ = "";
+      sequenceIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    public static final int DATASET_ID_FIELD_NUMBER = 1;
+    private java.lang.String datasetId_;
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The datasetId.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetId() {
+      return datasetId_;
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The bytes for datasetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(datasetId_);
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @param value The datasetId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDatasetId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      datasetId_ = value;
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     */
+    private void clearDatasetId() {
+
+      datasetId_ = getDefaultInstance().getDatasetId();
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @param value The bytes for datasetId to set.
+     */
+    private void setDatasetIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      datasetId_ = value.toStringUtf8();
+
+    }
+
+    public static final int SEQUENCE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> sequenceIds_;
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @return A list containing the sequenceIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getSequenceIdsList() {
+      return sequenceIds_;
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @return The count of sequenceIds.
+     */
+    @java.lang.Override
+    public int getSequenceIdsCount() {
+      return sequenceIds_.size();
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getSequenceIds(int index) {
+      return sequenceIds_.get(index);
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sequenceIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSequenceIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          sequenceIds_.get(index));
+    }
+    private void ensureSequenceIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          sequenceIds_;  if (!tmp.isModifiable()) {
+        sequenceIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The sequenceIds to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setSequenceIds(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequenceIdsIsMutable();
+      sequenceIds_.set(index, value);
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param value The sequenceIds to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addSequenceIds(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequenceIdsIsMutable();
+      sequenceIds_.add(value);
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param values The sequenceIds to add.
+     */
+    private void addAllSequenceIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureSequenceIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, sequenceIds_);
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     */
+    private void clearSequenceIds() {
+      sequenceIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param value The bytes of the sequenceIds to add.
+     */
+    private void addSequenceIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureSequenceIdsIsMutable();
+      sequenceIds_.add(value.toStringUtf8());
+    }
+
+    public static viam.app.data.v1.Data.AddSequencesToDatasetRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.AddSequencesToDatasetRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.AddSequencesToDatasetRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.AddSequencesToDatasetRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * AddSequencesToDatasetRequest adds the sequences with the given IDs to the dataset with dataset_id.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.AddSequencesToDatasetRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.AddSequencesToDatasetRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.AddSequencesToDatasetRequest)
+        viam.app.data.v1.Data.AddSequencesToDatasetRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.AddSequencesToDatasetRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return The datasetId.
+       */
+      @java.lang.Override
+      public java.lang.String getDatasetId() {
+        return instance.getDatasetId();
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return The bytes for datasetId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDatasetIdBytes() {
+        return instance.getDatasetIdBytes();
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @param value The datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDatasetId(value);
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetId() {
+        copyOnWrite();
+        instance.clearDatasetId();
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @param value The bytes for datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDatasetIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @return A list containing the sequenceIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getSequenceIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getSequenceIdsList());
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @return The count of sequenceIds.
+       */
+      @java.lang.Override
+      public int getSequenceIdsCount() {
+        return instance.getSequenceIdsCount();
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @param index The index of the element to return.
+       * @return The sequenceIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getSequenceIds(int index) {
+        return instance.getSequenceIds(index);
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the sequenceIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSequenceIdsBytes(int index) {
+        return instance.getSequenceIdsBytes(index);
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The sequenceIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequenceIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setSequenceIds(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @param value The sequenceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSequenceIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addSequenceIds(value);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @param values The sequenceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSequenceIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllSequenceIds(values);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequenceIds() {
+        copyOnWrite();
+        instance.clearSequenceIds();
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @param value The bytes of the sequenceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSequenceIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addSequenceIdsBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.AddSequencesToDatasetRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.AddSequencesToDatasetRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "datasetId_",
+              "sequenceIds_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u0208\u0002\u021a" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.AddSequencesToDatasetRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.AddSequencesToDatasetRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.AddSequencesToDatasetRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.AddSequencesToDatasetRequest)
+    private static final viam.app.data.v1.Data.AddSequencesToDatasetRequest DEFAULT_INSTANCE;
+    static {
+      AddSequencesToDatasetRequest defaultInstance = new AddSequencesToDatasetRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AddSequencesToDatasetRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.AddSequencesToDatasetRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<AddSequencesToDatasetRequest> PARSER;
+
+    public static com.google.protobuf.Parser<AddSequencesToDatasetRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface AddSequencesToDatasetResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.AddSequencesToDatasetResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.AddSequencesToDatasetResponse}
+   */
+  public  static final class AddSequencesToDatasetResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          AddSequencesToDatasetResponse, AddSequencesToDatasetResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.AddSequencesToDatasetResponse)
+      AddSequencesToDatasetResponseOrBuilder {
+    private AddSequencesToDatasetResponse() {
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.AddSequencesToDatasetResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.AddSequencesToDatasetResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.AddSequencesToDatasetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.AddSequencesToDatasetResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.AddSequencesToDatasetResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.AddSequencesToDatasetResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.AddSequencesToDatasetResponse)
+        viam.app.data.v1.Data.AddSequencesToDatasetResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.AddSequencesToDatasetResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.AddSequencesToDatasetResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.AddSequencesToDatasetResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.AddSequencesToDatasetResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.AddSequencesToDatasetResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.AddSequencesToDatasetResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.AddSequencesToDatasetResponse)
+    private static final viam.app.data.v1.Data.AddSequencesToDatasetResponse DEFAULT_INSTANCE;
+    static {
+      AddSequencesToDatasetResponse defaultInstance = new AddSequencesToDatasetResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AddSequencesToDatasetResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.AddSequencesToDatasetResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<AddSequencesToDatasetResponse> PARSER;
+
+    public static com.google.protobuf.Parser<AddSequencesToDatasetResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface RemoveSequencesFromDatasetRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.RemoveSequencesFromDatasetRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The datasetId.
+     */
+    java.lang.String getDatasetId();
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The bytes for datasetId.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdBytes();
+
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @return A list containing the sequenceIds.
+     */
+    java.util.List<java.lang.String>
+        getSequenceIdsList();
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @return The count of sequenceIds.
+     */
+    int getSequenceIdsCount();
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceIds at the given index.
+     */
+    java.lang.String getSequenceIds(int index);
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSequenceIdsBytes(int index);
+  }
+  /**
+   * <pre>
+   * RemoveSequencesFromDatasetRequest removes the sequences with the given IDs from the dataset with dataset_id.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.data.v1.RemoveSequencesFromDatasetRequest}
+   */
+  public  static final class RemoveSequencesFromDatasetRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          RemoveSequencesFromDatasetRequest, RemoveSequencesFromDatasetRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.RemoveSequencesFromDatasetRequest)
+      RemoveSequencesFromDatasetRequestOrBuilder {
+    private RemoveSequencesFromDatasetRequest() {
+      datasetId_ = "";
+      sequenceIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    public static final int DATASET_ID_FIELD_NUMBER = 1;
+    private java.lang.String datasetId_;
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The datasetId.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetId() {
+      return datasetId_;
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The bytes for datasetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(datasetId_);
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @param value The datasetId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDatasetId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      datasetId_ = value;
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     */
+    private void clearDatasetId() {
+
+      datasetId_ = getDefaultInstance().getDatasetId();
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @param value The bytes for datasetId to set.
+     */
+    private void setDatasetIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      datasetId_ = value.toStringUtf8();
+
+    }
+
+    public static final int SEQUENCE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> sequenceIds_;
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @return A list containing the sequenceIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getSequenceIdsList() {
+      return sequenceIds_;
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @return The count of sequenceIds.
+     */
+    @java.lang.Override
+    public int getSequenceIdsCount() {
+      return sequenceIds_.size();
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param index The index of the element to return.
+     * @return The sequenceIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getSequenceIds(int index) {
+      return sequenceIds_.get(index);
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the sequenceIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSequenceIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          sequenceIds_.get(index));
+    }
+    private void ensureSequenceIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          sequenceIds_;  if (!tmp.isModifiable()) {
+        sequenceIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The sequenceIds to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setSequenceIds(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequenceIdsIsMutable();
+      sequenceIds_.set(index, value);
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param value The sequenceIds to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addSequenceIds(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequenceIdsIsMutable();
+      sequenceIds_.add(value);
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param values The sequenceIds to add.
+     */
+    private void addAllSequenceIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureSequenceIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, sequenceIds_);
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     */
+    private void clearSequenceIds() {
+      sequenceIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+     * @param value The bytes of the sequenceIds to add.
+     */
+    private void addSequenceIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureSequenceIdsIsMutable();
+      sequenceIds_.add(value.toStringUtf8());
+    }
+
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * RemoveSequencesFromDatasetRequest removes the sequences with the given IDs from the dataset with dataset_id.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.data.v1.RemoveSequencesFromDatasetRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.RemoveSequencesFromDatasetRequest)
+        viam.app.data.v1.Data.RemoveSequencesFromDatasetRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return The datasetId.
+       */
+      @java.lang.Override
+      public java.lang.String getDatasetId() {
+        return instance.getDatasetId();
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return The bytes for datasetId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDatasetIdBytes() {
+        return instance.getDatasetIdBytes();
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @param value The datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDatasetId(value);
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetId() {
+        copyOnWrite();
+        instance.clearDatasetId();
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @param value The bytes for datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDatasetIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @return A list containing the sequenceIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getSequenceIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getSequenceIdsList());
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @return The count of sequenceIds.
+       */
+      @java.lang.Override
+      public int getSequenceIdsCount() {
+        return instance.getSequenceIdsCount();
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @param index The index of the element to return.
+       * @return The sequenceIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getSequenceIds(int index) {
+        return instance.getSequenceIds(index);
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the sequenceIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSequenceIdsBytes(int index) {
+        return instance.getSequenceIdsBytes(index);
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The sequenceIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequenceIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setSequenceIds(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @param value The sequenceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSequenceIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addSequenceIds(value);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @param values The sequenceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSequenceIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllSequenceIds(values);
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequenceIds() {
+        copyOnWrite();
+        instance.clearSequenceIds();
+        return this;
+      }
+      /**
+       * <code>repeated string sequence_ids = 2 [json_name = "sequenceIds"];</code>
+       * @param value The bytes of the sequenceIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSequenceIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addSequenceIdsBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.RemoveSequencesFromDatasetRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "datasetId_",
+              "sequenceIds_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u0208\u0002\u021a" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.RemoveSequencesFromDatasetRequest)
+    private static final viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest DEFAULT_INSTANCE;
+    static {
+      RemoveSequencesFromDatasetRequest defaultInstance = new RemoveSequencesFromDatasetRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RemoveSequencesFromDatasetRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<RemoveSequencesFromDatasetRequest> PARSER;
+
+    public static com.google.protobuf.Parser<RemoveSequencesFromDatasetRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface RemoveSequencesFromDatasetResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.RemoveSequencesFromDatasetResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.RemoveSequencesFromDatasetResponse}
+   */
+  public  static final class RemoveSequencesFromDatasetResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          RemoveSequencesFromDatasetResponse, RemoveSequencesFromDatasetResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.RemoveSequencesFromDatasetResponse)
+      RemoveSequencesFromDatasetResponseOrBuilder {
+    private RemoveSequencesFromDatasetResponse() {
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.RemoveSequencesFromDatasetResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.RemoveSequencesFromDatasetResponse)
+        viam.app.data.v1.Data.RemoveSequencesFromDatasetResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.RemoveSequencesFromDatasetResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.RemoveSequencesFromDatasetResponse)
+    private static final viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse DEFAULT_INSTANCE;
+    static {
+      RemoveSequencesFromDatasetResponse defaultInstance = new RemoveSequencesFromDatasetResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RemoveSequencesFromDatasetResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<RemoveSequencesFromDatasetResponse> PARSER;
+
+    public static com.google.protobuf.Parser<RemoveSequencesFromDatasetResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -45372,6 +46774,51 @@ com.google.protobuf.Any defaultValue) {
      * <code>repeated .viam.app.data.v1.SequenceResourceFilter resources = 8 [json_name = "resources"];</code>
      */
     int getResourcesCount();
+
+    /**
+     * <pre>
+     * Datasets this sequence is a member of. Membership is added/removed via
+     * AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+     * @return A list containing the datasetIds.
+     */
+    java.util.List<java.lang.String>
+        getDatasetIdsList();
+    /**
+     * <pre>
+     * Datasets this sequence is a member of. Membership is added/removed via
+     * AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+     * @return The count of datasetIds.
+     */
+    int getDatasetIdsCount();
+    /**
+     * <pre>
+     * Datasets this sequence is a member of. Membership is added/removed via
+     * AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    java.lang.String getDatasetIds(int index);
+    /**
+     * <pre>
+     * Datasets this sequence is a member of. Membership is added/removed via
+     * AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdsBytes(int index);
   }
   /**
    * Protobuf type {@code viam.app.data.v1.Sequence}
@@ -45386,6 +46833,7 @@ com.google.protobuf.Any defaultValue) {
       partId_ = "";
       sequenceTags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       resources_ = emptyProtobufList();
+      datasetIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
@@ -45950,6 +47398,146 @@ com.google.protobuf.Any defaultValue) {
     private void removeResources(int index) {
       ensureResourcesIsMutable();
       resources_.remove(index);
+    }
+
+    public static final int DATASET_IDS_FIELD_NUMBER = 10;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> datasetIds_;
+    /**
+     * <pre>
+     * Datasets this sequence is a member of. Membership is added/removed via
+     * AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+     * @return A list containing the datasetIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getDatasetIdsList() {
+      return datasetIds_;
+    }
+    /**
+     * <pre>
+     * Datasets this sequence is a member of. Membership is added/removed via
+     * AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+     * @return The count of datasetIds.
+     */
+    @java.lang.Override
+    public int getDatasetIdsCount() {
+      return datasetIds_.size();
+    }
+    /**
+     * <pre>
+     * Datasets this sequence is a member of. Membership is added/removed via
+     * AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetIds(int index) {
+      return datasetIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Datasets this sequence is a member of. Membership is added/removed via
+     * AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the datasetIds at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          datasetIds_.get(index));
+    }
+    private void ensureDatasetIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          datasetIds_;  if (!tmp.isModifiable()) {
+        datasetIds_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * Datasets this sequence is a member of. Membership is added/removed via
+     * AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+     * @param index The index to set the value at.
+     * @param value The datasetIds to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDatasetIds(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDatasetIdsIsMutable();
+      datasetIds_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Datasets this sequence is a member of. Membership is added/removed via
+     * AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+     * @param value The datasetIds to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addDatasetIds(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDatasetIdsIsMutable();
+      datasetIds_.add(value);
+    }
+    /**
+     * <pre>
+     * Datasets this sequence is a member of. Membership is added/removed via
+     * AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+     * @param values The datasetIds to add.
+     */
+    private void addAllDatasetIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDatasetIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, datasetIds_);
+    }
+    /**
+     * <pre>
+     * Datasets this sequence is a member of. Membership is added/removed via
+     * AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+     */
+    private void clearDatasetIds() {
+      datasetIds_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Datasets this sequence is a member of. Membership is added/removed via
+     * AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+     * @param value The bytes of the datasetIds to add.
+     */
+    private void addDatasetIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureDatasetIdsIsMutable();
+      datasetIds_.add(value.toStringUtf8());
     }
 
     public static viam.app.data.v1.Data.Sequence parseFrom(
@@ -46621,6 +48209,143 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * Datasets this sequence is a member of. Membership is added/removed via
+       * AddSequencesToDataset / RemoveSequencesFromDataset.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+       * @return A list containing the datasetIds.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getDatasetIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getDatasetIdsList());
+      }
+      /**
+       * <pre>
+       * Datasets this sequence is a member of. Membership is added/removed via
+       * AddSequencesToDataset / RemoveSequencesFromDataset.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+       * @return The count of datasetIds.
+       */
+      @java.lang.Override
+      public int getDatasetIdsCount() {
+        return instance.getDatasetIdsCount();
+      }
+      /**
+       * <pre>
+       * Datasets this sequence is a member of. Membership is added/removed via
+       * AddSequencesToDataset / RemoveSequencesFromDataset.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+       * @param index The index of the element to return.
+       * @return The datasetIds at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getDatasetIds(int index) {
+        return instance.getDatasetIds(index);
+      }
+      /**
+       * <pre>
+       * Datasets this sequence is a member of. Membership is added/removed via
+       * AddSequencesToDataset / RemoveSequencesFromDataset.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the datasetIds at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDatasetIdsBytes(int index) {
+        return instance.getDatasetIdsBytes(index);
+      }
+      /**
+       * <pre>
+       * Datasets this sequence is a member of. Membership is added/removed via
+       * AddSequencesToDataset / RemoveSequencesFromDataset.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The datasetIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setDatasetIds(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Datasets this sequence is a member of. Membership is added/removed via
+       * AddSequencesToDataset / RemoveSequencesFromDataset.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+       * @param value The datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDatasetIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addDatasetIds(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Datasets this sequence is a member of. Membership is added/removed via
+       * AddSequencesToDataset / RemoveSequencesFromDataset.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+       * @param values The datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDatasetIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllDatasetIds(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Datasets this sequence is a member of. Membership is added/removed via
+       * AddSequencesToDataset / RemoveSequencesFromDataset.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetIds() {
+        copyOnWrite();
+        instance.clearDatasetIds();
+        return this;
+      }
+      /**
+       * <pre>
+       * Datasets this sequence is a member of. Membership is added/removed via
+       * AddSequencesToDataset / RemoveSequencesFromDataset.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 10 [json_name = "datasetIds"];</code>
+       * @param value The bytes of the datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDatasetIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addDatasetIdsBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.Sequence)
     }
     @java.lang.Override
@@ -46647,10 +48372,12 @@ com.google.protobuf.Any defaultValue) {
               "resources_",
               viam.app.data.v1.Data.SequenceResourceFilter.class,
               "partId_",
+              "datasetIds_",
             };
             java.lang.String info =
-                "\u0000\b\u0000\u0001\u0001\t\b\u0000\u0002\u0000\u0001\u0208\u0003\u021a\u0004\u1009" +
-                "\u0000\u0005\u1009\u0001\u0006\u1009\u0002\u0007\u1009\u0003\b\u001b\t\u0208";
+                "\u0000\t\u0000\u0001\u0001\n\t\u0000\u0003\u0000\u0001\u0208\u0003\u021a\u0004\u1009" +
+                "\u0000\u0005\u1009\u0001\u0006\u1009\u0002\u0007\u1009\u0003\b\u001b\t\u0208\n\u021a" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -51228,6 +52955,986 @@ com.google.protobuf.Any defaultValue) {
     private static volatile com.google.protobuf.Parser<ListSequencesResponse> PARSER;
 
     public static com.google.protobuf.Parser<ListSequencesResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface SequencesByDatasetIDRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.SequencesByDatasetIDRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The datasetId.
+     */
+    java.lang.String getDatasetId();
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The bytes for datasetId.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdBytes();
+
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    int getPageSize();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.SequencesByDatasetIDRequest}
+   */
+  public  static final class SequencesByDatasetIDRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          SequencesByDatasetIDRequest, SequencesByDatasetIDRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.SequencesByDatasetIDRequest)
+      SequencesByDatasetIDRequestOrBuilder {
+    private SequencesByDatasetIDRequest() {
+      datasetId_ = "";
+      pageToken_ = "";
+    }
+    public static final int DATASET_ID_FIELD_NUMBER = 1;
+    private java.lang.String datasetId_;
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The datasetId.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetId() {
+      return datasetId_;
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The bytes for datasetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(datasetId_);
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @param value The datasetId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDatasetId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      datasetId_ = value;
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     */
+    private void clearDatasetId() {
+
+      datasetId_ = getDefaultInstance().getDatasetId();
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @param value The bytes for datasetId to set.
+     */
+    private void setDatasetIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      datasetId_ = value.toStringUtf8();
+
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 2;
+    private java.lang.String pageToken_;
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      return pageToken_;
+    }
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(pageToken_);
+    }
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @param value The pageToken to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPageToken(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      pageToken_ = value;
+    }
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     */
+    private void clearPageToken() {
+
+      pageToken_ = getDefaultInstance().getPageToken();
+    }
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @param value The bytes for pageToken to set.
+     */
+    private void setPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      pageToken_ = value.toStringUtf8();
+
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 3;
+    private int pageSize_;
+    /**
+     * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public int getPageSize() {
+      return pageSize_;
+    }
+    /**
+     * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+     * @param value The pageSize to set.
+     */
+    private void setPageSize(int value) {
+      
+      pageSize_ = value;
+    }
+    /**
+     * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+     */
+    private void clearPageSize() {
+
+      pageSize_ = 0;
+    }
+
+    public static viam.app.data.v1.Data.SequencesByDatasetIDRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.SequencesByDatasetIDRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.SequencesByDatasetIDRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.SequencesByDatasetIDRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.SequencesByDatasetIDRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.SequencesByDatasetIDRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.SequencesByDatasetIDRequest)
+        viam.app.data.v1.Data.SequencesByDatasetIDRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.SequencesByDatasetIDRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return The datasetId.
+       */
+      @java.lang.Override
+      public java.lang.String getDatasetId() {
+        return instance.getDatasetId();
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return The bytes for datasetId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDatasetIdBytes() {
+        return instance.getDatasetIdBytes();
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @param value The datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDatasetId(value);
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetId() {
+        copyOnWrite();
+        instance.clearDatasetId();
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @param value The bytes for datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDatasetIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @return The pageToken.
+       */
+      @java.lang.Override
+      public java.lang.String getPageToken() {
+        return instance.getPageToken();
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @return The bytes for pageToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        return instance.getPageTokenBytes();
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPageToken(value);
+        return this;
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        copyOnWrite();
+        instance.clearPageToken();
+        return this;
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPageTokenBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public int getPageSize() {
+        return instance.getPageSize();
+      }
+      /**
+       * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(int value) {
+        copyOnWrite();
+        instance.setPageSize(value);
+        return this;
+      }
+      /**
+       * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        copyOnWrite();
+        instance.clearPageSize();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.SequencesByDatasetIDRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.SequencesByDatasetIDRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "datasetId_",
+              "pageToken_",
+              "pageSize_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u000b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.SequencesByDatasetIDRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.SequencesByDatasetIDRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.SequencesByDatasetIDRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.SequencesByDatasetIDRequest)
+    private static final viam.app.data.v1.Data.SequencesByDatasetIDRequest DEFAULT_INSTANCE;
+    static {
+      SequencesByDatasetIDRequest defaultInstance = new SequencesByDatasetIDRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SequencesByDatasetIDRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.SequencesByDatasetIDRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SequencesByDatasetIDRequest> PARSER;
+
+    public static com.google.protobuf.Parser<SequencesByDatasetIDRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface SequencesByDatasetIDResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.SequencesByDatasetIDResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    java.util.List<viam.app.data.v1.Data.Sequence> 
+        getSequencesList();
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    viam.app.data.v1.Data.Sequence getSequences(int index);
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    int getSequencesCount();
+
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.SequencesByDatasetIDResponse}
+   */
+  public  static final class SequencesByDatasetIDResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          SequencesByDatasetIDResponse, SequencesByDatasetIDResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.SequencesByDatasetIDResponse)
+      SequencesByDatasetIDResponseOrBuilder {
+    private SequencesByDatasetIDResponse() {
+      sequences_ = emptyProtobufList();
+      nextPageToken_ = "";
+    }
+    public static final int SEQUENCES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.Sequence> sequences_;
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.data.v1.Data.Sequence> getSequencesList() {
+      return sequences_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    public java.util.List<? extends viam.app.data.v1.Data.SequenceOrBuilder> 
+        getSequencesOrBuilderList() {
+      return sequences_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    @java.lang.Override
+    public int getSequencesCount() {
+      return sequences_.size();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.Sequence getSequences(int index) {
+      return sequences_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    public viam.app.data.v1.Data.SequenceOrBuilder getSequencesOrBuilder(
+        int index) {
+      return sequences_.get(index);
+    }
+    private void ensureSequencesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.Sequence> tmp = sequences_;
+      if (!tmp.isModifiable()) {
+        sequences_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setSequences(
+        int index, viam.app.data.v1.Data.Sequence value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequencesIsMutable();
+      sequences_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addSequences(viam.app.data.v1.Data.Sequence value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequencesIsMutable();
+      sequences_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addSequences(
+        int index, viam.app.data.v1.Data.Sequence value) {
+      value.getClass();  // minimal bytecode null check
+      ensureSequencesIsMutable();
+      sequences_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    private void addAllSequences(
+        java.lang.Iterable<? extends viam.app.data.v1.Data.Sequence> values) {
+      ensureSequencesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, sequences_);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    private void clearSequences() {
+      sequences_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+     */
+    private void removeSequences(int index) {
+      ensureSequencesIsMutable();
+      sequences_.remove(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private java.lang.String nextPageToken_;
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      return nextPageToken_;
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(nextPageToken_);
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @param value The nextPageToken to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setNextPageToken(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      nextPageToken_ = value;
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     */
+    private void clearNextPageToken() {
+
+      nextPageToken_ = getDefaultInstance().getNextPageToken();
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @param value The bytes for nextPageToken to set.
+     */
+    private void setNextPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      nextPageToken_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.data.v1.Data.SequencesByDatasetIDResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.SequencesByDatasetIDResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.SequencesByDatasetIDResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.SequencesByDatasetIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.SequencesByDatasetIDResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.SequencesByDatasetIDResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.SequencesByDatasetIDResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.SequencesByDatasetIDResponse)
+        viam.app.data.v1.Data.SequencesByDatasetIDResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.SequencesByDatasetIDResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.data.v1.Data.Sequence> getSequencesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getSequencesList());
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      @java.lang.Override
+      public int getSequencesCount() {
+        return instance.getSequencesCount();
+      }/**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.Sequence getSequences(int index) {
+        return instance.getSequences(index);
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder setSequences(
+          int index, viam.app.data.v1.Data.Sequence value) {
+        copyOnWrite();
+        instance.setSequences(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder setSequences(
+          int index, viam.app.data.v1.Data.Sequence.Builder builderForValue) {
+        copyOnWrite();
+        instance.setSequences(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder addSequences(viam.app.data.v1.Data.Sequence value) {
+        copyOnWrite();
+        instance.addSequences(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder addSequences(
+          int index, viam.app.data.v1.Data.Sequence value) {
+        copyOnWrite();
+        instance.addSequences(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder addSequences(
+          viam.app.data.v1.Data.Sequence.Builder builderForValue) {
+        copyOnWrite();
+        instance.addSequences(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder addSequences(
+          int index, viam.app.data.v1.Data.Sequence.Builder builderForValue) {
+        copyOnWrite();
+        instance.addSequences(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder addAllSequences(
+          java.lang.Iterable<? extends viam.app.data.v1.Data.Sequence> values) {
+        copyOnWrite();
+        instance.addAllSequences(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder clearSequences() {
+        copyOnWrite();
+        instance.clearSequences();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.Sequence sequences = 1 [json_name = "sequences"];</code>
+       */
+      public Builder removeSequences(int index) {
+        copyOnWrite();
+        instance.removeSequences(index);
+        return this;
+      }
+
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return The nextPageToken.
+       */
+      @java.lang.Override
+      public java.lang.String getNextPageToken() {
+        return instance.getNextPageToken();
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return The bytes for nextPageToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        return instance.getNextPageTokenBytes();
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setNextPageToken(value);
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        copyOnWrite();
+        instance.clearNextPageToken();
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNextPageTokenBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.SequencesByDatasetIDResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.SequencesByDatasetIDResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sequences_",
+              viam.app.data.v1.Data.Sequence.class,
+              "nextPageToken_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.SequencesByDatasetIDResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.SequencesByDatasetIDResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.SequencesByDatasetIDResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.SequencesByDatasetIDResponse)
+    private static final viam.app.data.v1.Data.SequencesByDatasetIDResponse DEFAULT_INSTANCE;
+    static {
+      SequencesByDatasetIDResponse defaultInstance = new SequencesByDatasetIDResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SequencesByDatasetIDResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.SequencesByDatasetIDResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SequencesByDatasetIDResponse> PARSER;
+
+    public static com.google.protobuf.Parser<SequencesByDatasetIDResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

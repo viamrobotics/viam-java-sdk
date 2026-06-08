@@ -705,6 +705,66 @@ public final class DataServiceGrpc {
     return getRemoveBinaryDataFromDatasetByIDsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddSequencesToDatasetRequest,
+      viam.app.data.v1.Data.AddSequencesToDatasetResponse> getAddSequencesToDatasetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddSequencesToDataset",
+      requestType = viam.app.data.v1.Data.AddSequencesToDatasetRequest.class,
+      responseType = viam.app.data.v1.Data.AddSequencesToDatasetResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddSequencesToDatasetRequest,
+      viam.app.data.v1.Data.AddSequencesToDatasetResponse> getAddSequencesToDatasetMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddSequencesToDatasetRequest, viam.app.data.v1.Data.AddSequencesToDatasetResponse> getAddSequencesToDatasetMethod;
+    if ((getAddSequencesToDatasetMethod = DataServiceGrpc.getAddSequencesToDatasetMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getAddSequencesToDatasetMethod = DataServiceGrpc.getAddSequencesToDatasetMethod) == null) {
+          DataServiceGrpc.getAddSequencesToDatasetMethod = getAddSequencesToDatasetMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.AddSequencesToDatasetRequest, viam.app.data.v1.Data.AddSequencesToDatasetResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddSequencesToDataset"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.AddSequencesToDatasetRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.AddSequencesToDatasetResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getAddSequencesToDatasetMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest,
+      viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse> getRemoveSequencesFromDatasetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveSequencesFromDataset",
+      requestType = viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest.class,
+      responseType = viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest,
+      viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse> getRemoveSequencesFromDatasetMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest, viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse> getRemoveSequencesFromDatasetMethod;
+    if ((getRemoveSequencesFromDatasetMethod = DataServiceGrpc.getRemoveSequencesFromDatasetMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getRemoveSequencesFromDatasetMethod = DataServiceGrpc.getRemoveSequencesFromDatasetMethod) == null) {
+          DataServiceGrpc.getRemoveSequencesFromDatasetMethod = getRemoveSequencesFromDatasetMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest, viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveSequencesFromDataset"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getRemoveSequencesFromDatasetMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.CreateIndexRequest,
       viam.app.data.v1.Data.CreateIndexResponse> getCreateIndexMethod;
 
@@ -1125,6 +1185,36 @@ public final class DataServiceGrpc {
     return getListSequencesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.SequencesByDatasetIDRequest,
+      viam.app.data.v1.Data.SequencesByDatasetIDResponse> getSequencesByDatasetIDMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SequencesByDatasetID",
+      requestType = viam.app.data.v1.Data.SequencesByDatasetIDRequest.class,
+      responseType = viam.app.data.v1.Data.SequencesByDatasetIDResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.SequencesByDatasetIDRequest,
+      viam.app.data.v1.Data.SequencesByDatasetIDResponse> getSequencesByDatasetIDMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.SequencesByDatasetIDRequest, viam.app.data.v1.Data.SequencesByDatasetIDResponse> getSequencesByDatasetIDMethod;
+    if ((getSequencesByDatasetIDMethod = DataServiceGrpc.getSequencesByDatasetIDMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getSequencesByDatasetIDMethod = DataServiceGrpc.getSequencesByDatasetIDMethod) == null) {
+          DataServiceGrpc.getSequencesByDatasetIDMethod = getSequencesByDatasetIDMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.SequencesByDatasetIDRequest, viam.app.data.v1.Data.SequencesByDatasetIDResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SequencesByDatasetID"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.SequencesByDatasetIDRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.SequencesByDatasetIDResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getSequencesByDatasetIDMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1430,6 +1520,26 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
+     * AddSequencesToDataset adds the sequences with the given IDs to the dataset.
+     * </pre>
+     */
+    default void addSequencesToDataset(viam.app.data.v1.Data.AddSequencesToDatasetRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddSequencesToDatasetResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddSequencesToDatasetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveSequencesFromDataset removes the sequences with the given IDs from the dataset.
+     * </pre>
+     */
+    default void removeSequencesFromDataset(viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveSequencesFromDatasetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * CreateIndex starts a custom index build
      * </pre>
      */
@@ -1566,6 +1676,16 @@ public final class DataServiceGrpc {
     default void listSequences(viam.app.data.v1.Data.ListSequencesRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListSequencesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSequencesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SequencesByDatasetID lists sequences that belong to the given dataset.
+     * </pre>
+     */
+    default void sequencesByDatasetID(viam.app.data.v1.Data.SequencesByDatasetIDRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.SequencesByDatasetIDResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSequencesByDatasetIDMethod(), responseObserver);
     }
   }
 
@@ -1864,6 +1984,28 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
+     * AddSequencesToDataset adds the sequences with the given IDs to the dataset.
+     * </pre>
+     */
+    public void addSequencesToDataset(viam.app.data.v1.Data.AddSequencesToDatasetRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddSequencesToDatasetResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddSequencesToDatasetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveSequencesFromDataset removes the sequences with the given IDs from the dataset.
+     * </pre>
+     */
+    public void removeSequencesFromDataset(viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveSequencesFromDatasetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * CreateIndex starts a custom index build
      * </pre>
      */
@@ -2014,6 +2156,17 @@ public final class DataServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListSequencesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListSequencesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SequencesByDatasetID lists sequences that belong to the given dataset.
+     * </pre>
+     */
+    public void sequencesByDatasetID(viam.app.data.v1.Data.SequencesByDatasetIDRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.SequencesByDatasetIDResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSequencesByDatasetIDMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -2277,6 +2430,26 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
+     * AddSequencesToDataset adds the sequences with the given IDs to the dataset.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.AddSequencesToDatasetResponse addSequencesToDataset(viam.app.data.v1.Data.AddSequencesToDatasetRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAddSequencesToDatasetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveSequencesFromDataset removes the sequences with the given IDs from the dataset.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse removeSequencesFromDataset(viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRemoveSequencesFromDatasetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * CreateIndex starts a custom index build
      * </pre>
      */
@@ -2413,6 +2586,16 @@ public final class DataServiceGrpc {
     public viam.app.data.v1.Data.ListSequencesResponse listSequences(viam.app.data.v1.Data.ListSequencesRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListSequencesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SequencesByDatasetID lists sequences that belong to the given dataset.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.SequencesByDatasetIDResponse sequencesByDatasetID(viam.app.data.v1.Data.SequencesByDatasetIDRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSequencesByDatasetIDMethod(), getCallOptions(), request);
     }
   }
 
@@ -2675,6 +2858,26 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
+     * AddSequencesToDataset adds the sequences with the given IDs to the dataset.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.AddSequencesToDatasetResponse addSequencesToDataset(viam.app.data.v1.Data.AddSequencesToDatasetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddSequencesToDatasetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveSequencesFromDataset removes the sequences with the given IDs from the dataset.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse removeSequencesFromDataset(viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveSequencesFromDatasetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * CreateIndex starts a custom index build
      * </pre>
      */
@@ -2811,6 +3014,16 @@ public final class DataServiceGrpc {
     public viam.app.data.v1.Data.ListSequencesResponse listSequences(viam.app.data.v1.Data.ListSequencesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListSequencesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SequencesByDatasetID lists sequences that belong to the given dataset.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.SequencesByDatasetIDResponse sequencesByDatasetID(viam.app.data.v1.Data.SequencesByDatasetIDRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSequencesByDatasetIDMethod(), getCallOptions(), request);
     }
   }
 
@@ -3084,6 +3297,28 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
+     * AddSequencesToDataset adds the sequences with the given IDs to the dataset.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.AddSequencesToDatasetResponse> addSequencesToDataset(
+        viam.app.data.v1.Data.AddSequencesToDatasetRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddSequencesToDatasetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveSequencesFromDataset removes the sequences with the given IDs from the dataset.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse> removeSequencesFromDataset(
+        viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveSequencesFromDatasetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * CreateIndex starts a custom index build
      * </pre>
      */
@@ -3235,6 +3470,17 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListSequencesMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * SequencesByDatasetID lists sequences that belong to the given dataset.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.SequencesByDatasetIDResponse> sequencesByDatasetID(
+        viam.app.data.v1.Data.SequencesByDatasetIDRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSequencesByDatasetIDMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TABULAR_DATA_BY_FILTER = 0;
@@ -3260,20 +3506,23 @@ public final class DataServiceGrpc {
   private static final int METHODID_CONFIGURE_DATABASE_USER = 20;
   private static final int METHODID_ADD_BINARY_DATA_TO_DATASET_BY_IDS = 21;
   private static final int METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS = 22;
-  private static final int METHODID_CREATE_INDEX = 23;
-  private static final int METHODID_LIST_INDEXES = 24;
-  private static final int METHODID_DELETE_INDEX = 25;
-  private static final int METHODID_CREATE_SAVED_QUERY = 26;
-  private static final int METHODID_UPDATE_SAVED_QUERY = 27;
-  private static final int METHODID_GET_SAVED_QUERY = 28;
-  private static final int METHODID_DELETE_SAVED_QUERY = 29;
-  private static final int METHODID_LIST_SAVED_QUERIES = 30;
-  private static final int METHODID_CREATE_BINARY_DATA_SIGNED_URL = 31;
-  private static final int METHODID_CREATE_SEQUENCE = 32;
-  private static final int METHODID_GET_SEQUENCE = 33;
-  private static final int METHODID_UPDATE_SEQUENCE = 34;
-  private static final int METHODID_DELETE_SEQUENCE = 35;
-  private static final int METHODID_LIST_SEQUENCES = 36;
+  private static final int METHODID_ADD_SEQUENCES_TO_DATASET = 23;
+  private static final int METHODID_REMOVE_SEQUENCES_FROM_DATASET = 24;
+  private static final int METHODID_CREATE_INDEX = 25;
+  private static final int METHODID_LIST_INDEXES = 26;
+  private static final int METHODID_DELETE_INDEX = 27;
+  private static final int METHODID_CREATE_SAVED_QUERY = 28;
+  private static final int METHODID_UPDATE_SAVED_QUERY = 29;
+  private static final int METHODID_GET_SAVED_QUERY = 30;
+  private static final int METHODID_DELETE_SAVED_QUERY = 31;
+  private static final int METHODID_LIST_SAVED_QUERIES = 32;
+  private static final int METHODID_CREATE_BINARY_DATA_SIGNED_URL = 33;
+  private static final int METHODID_CREATE_SEQUENCE = 34;
+  private static final int METHODID_GET_SEQUENCE = 35;
+  private static final int METHODID_UPDATE_SEQUENCE = 36;
+  private static final int METHODID_DELETE_SEQUENCE = 37;
+  private static final int METHODID_LIST_SEQUENCES = 38;
+  private static final int METHODID_SEQUENCES_BY_DATASET_ID = 39;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3384,6 +3633,14 @@ public final class DataServiceGrpc {
           serviceImpl.removeBinaryDataFromDatasetByIDs((viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse>) responseObserver);
           break;
+        case METHODID_ADD_SEQUENCES_TO_DATASET:
+          serviceImpl.addSequencesToDataset((viam.app.data.v1.Data.AddSequencesToDatasetRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddSequencesToDatasetResponse>) responseObserver);
+          break;
+        case METHODID_REMOVE_SEQUENCES_FROM_DATASET:
+          serviceImpl.removeSequencesFromDataset((viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse>) responseObserver);
+          break;
         case METHODID_CREATE_INDEX:
           serviceImpl.createIndex((viam.app.data.v1.Data.CreateIndexRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.CreateIndexResponse>) responseObserver);
@@ -3439,6 +3696,10 @@ public final class DataServiceGrpc {
         case METHODID_LIST_SEQUENCES:
           serviceImpl.listSequences((viam.app.data.v1.Data.ListSequencesRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ListSequencesResponse>) responseObserver);
+          break;
+        case METHODID_SEQUENCES_BY_DATASET_ID:
+          serviceImpl.sequencesByDatasetID((viam.app.data.v1.Data.SequencesByDatasetIDRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.SequencesByDatasetIDResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -3620,6 +3881,20 @@ public final class DataServiceGrpc {
               viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse>(
                 service, METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS)))
         .addMethod(
+          getAddSequencesToDatasetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.AddSequencesToDatasetRequest,
+              viam.app.data.v1.Data.AddSequencesToDatasetResponse>(
+                service, METHODID_ADD_SEQUENCES_TO_DATASET)))
+        .addMethod(
+          getRemoveSequencesFromDatasetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest,
+              viam.app.data.v1.Data.RemoveSequencesFromDatasetResponse>(
+                service, METHODID_REMOVE_SEQUENCES_FROM_DATASET)))
+        .addMethod(
           getCreateIndexMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -3717,6 +3992,13 @@ public final class DataServiceGrpc {
               viam.app.data.v1.Data.ListSequencesRequest,
               viam.app.data.v1.Data.ListSequencesResponse>(
                 service, METHODID_LIST_SEQUENCES)))
+        .addMethod(
+          getSequencesByDatasetIDMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.SequencesByDatasetIDRequest,
+              viam.app.data.v1.Data.SequencesByDatasetIDResponse>(
+                service, METHODID_SEQUENCES_BY_DATASET_ID)))
         .build();
   }
 
@@ -3752,6 +4034,8 @@ public final class DataServiceGrpc {
               .addMethod(getConfigureDatabaseUserMethod())
               .addMethod(getAddBinaryDataToDatasetByIDsMethod())
               .addMethod(getRemoveBinaryDataFromDatasetByIDsMethod())
+              .addMethod(getAddSequencesToDatasetMethod())
+              .addMethod(getRemoveSequencesFromDatasetMethod())
               .addMethod(getCreateIndexMethod())
               .addMethod(getListIndexesMethod())
               .addMethod(getDeleteIndexMethod())
@@ -3766,6 +4050,7 @@ public final class DataServiceGrpc {
               .addMethod(getUpdateSequenceMethod())
               .addMethod(getDeleteSequenceMethod())
               .addMethod(getListSequencesMethod())
+              .addMethod(getSequencesByDatasetIDMethod())
               .build();
         }
       }

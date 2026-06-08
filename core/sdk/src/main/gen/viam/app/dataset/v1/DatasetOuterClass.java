@@ -11,6 +11,261 @@ public final class DatasetOuterClass {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
+  /**
+   * <pre>
+   * DatasetType describes the kind of membership a dataset stores.
+   * buf:lint:ignore ENUM_ZERO_VALUE_SUFFIX
+   * </pre>
+   *
+   * Protobuf enum {@code viam.app.dataset.v1.DatasetType}
+   */
+  public enum DatasetType
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <pre>
+     * DATASET_TYPE_BINARY_DATA is a dataset whose members are individual binary data objects (frames).
+     * This is the default for datasets created without an explicit type, including all pre-existing
+     * datasets.
+     * </pre>
+     *
+     * <code>DATASET_TYPE_BINARY_DATA = 0;</code>
+     */
+    DATASET_TYPE_BINARY_DATA(0),
+    /**
+     * <pre>
+     * DATASET_TYPE_SEQUENCE_DATA is a dataset whose members are sequences. Binary-data writes
+     * (AddBinaryDataToDatasetByIDs, AddBinaryDataToDatasetByFilter) are rejected against datasets
+     * of this type; sequences are added/removed via AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>DATASET_TYPE_SEQUENCE_DATA = 1;</code>
+     */
+    DATASET_TYPE_SEQUENCE_DATA(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * DATASET_TYPE_BINARY_DATA is a dataset whose members are individual binary data objects (frames).
+     * This is the default for datasets created without an explicit type, including all pre-existing
+     * datasets.
+     * </pre>
+     *
+     * <code>DATASET_TYPE_BINARY_DATA = 0;</code>
+     */
+    public static final int DATASET_TYPE_BINARY_DATA_VALUE = 0;
+    /**
+     * <pre>
+     * DATASET_TYPE_SEQUENCE_DATA is a dataset whose members are sequences. Binary-data writes
+     * (AddBinaryDataToDatasetByIDs, AddBinaryDataToDatasetByFilter) are rejected against datasets
+     * of this type; sequences are added/removed via AddSequencesToDataset / RemoveSequencesFromDataset.
+     * </pre>
+     *
+     * <code>DATASET_TYPE_SEQUENCE_DATA = 1;</code>
+     */
+    public static final int DATASET_TYPE_SEQUENCE_DATA_VALUE = 1;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static DatasetType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static DatasetType forNumber(int value) {
+      switch (value) {
+        case 0: return DATASET_TYPE_BINARY_DATA;
+        case 1: return DATASET_TYPE_SEQUENCE_DATA;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DatasetType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DatasetType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DatasetType>() {
+            @java.lang.Override
+            public DatasetType findValueByNumber(int number) {
+              return DatasetType.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return DatasetTypeVerifier.INSTANCE;
+    }
+
+    private static final class DatasetTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier
+                INSTANCE = new DatasetTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return DatasetType.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private DatasetType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.dataset.v1.DatasetType)
+  }
+
+  /**
+   * <pre>
+   * SequenceDatasetExportStatus is the lifecycle state of an export job.
+   * </pre>
+   *
+   * Protobuf enum {@code viam.app.dataset.v1.SequenceDatasetExportStatus}
+   */
+  public enum SequenceDatasetExportStatus
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>SEQUENCE_DATASET_EXPORT_STATUS_UNSPECIFIED = 0;</code>
+     */
+    SEQUENCE_DATASET_EXPORT_STATUS_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * PENDING — accepted, not yet picked up.
+     * </pre>
+     *
+     * <code>SEQUENCE_DATASET_EXPORT_STATUS_RUNNING = 1;</code>
+     */
+    SEQUENCE_DATASET_EXPORT_STATUS_RUNNING(1),
+    /**
+     * <pre>
+     * COMPLETED — Parquet file is uploaded; download_url is set.
+     * </pre>
+     *
+     * <code>SEQUENCE_DATASET_EXPORT_STATUS_COMPLETED = 2;</code>
+     */
+    SEQUENCE_DATASET_EXPORT_STATUS_COMPLETED(2),
+    /**
+     * <pre>
+     * FAILED — terminal; error_message describes the cause.
+     * </pre>
+     *
+     * <code>SEQUENCE_DATASET_EXPORT_STATUS_FAILED = 3;</code>
+     */
+    SEQUENCE_DATASET_EXPORT_STATUS_FAILED(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>SEQUENCE_DATASET_EXPORT_STATUS_UNSPECIFIED = 0;</code>
+     */
+    public static final int SEQUENCE_DATASET_EXPORT_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * PENDING — accepted, not yet picked up.
+     * </pre>
+     *
+     * <code>SEQUENCE_DATASET_EXPORT_STATUS_RUNNING = 1;</code>
+     */
+    public static final int SEQUENCE_DATASET_EXPORT_STATUS_RUNNING_VALUE = 1;
+    /**
+     * <pre>
+     * COMPLETED — Parquet file is uploaded; download_url is set.
+     * </pre>
+     *
+     * <code>SEQUENCE_DATASET_EXPORT_STATUS_COMPLETED = 2;</code>
+     */
+    public static final int SEQUENCE_DATASET_EXPORT_STATUS_COMPLETED_VALUE = 2;
+    /**
+     * <pre>
+     * FAILED — terminal; error_message describes the cause.
+     * </pre>
+     *
+     * <code>SEQUENCE_DATASET_EXPORT_STATUS_FAILED = 3;</code>
+     */
+    public static final int SEQUENCE_DATASET_EXPORT_STATUS_FAILED_VALUE = 3;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SequenceDatasetExportStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static SequenceDatasetExportStatus forNumber(int value) {
+      switch (value) {
+        case 0: return SEQUENCE_DATASET_EXPORT_STATUS_UNSPECIFIED;
+        case 1: return SEQUENCE_DATASET_EXPORT_STATUS_RUNNING;
+        case 2: return SEQUENCE_DATASET_EXPORT_STATUS_COMPLETED;
+        case 3: return SEQUENCE_DATASET_EXPORT_STATUS_FAILED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SequenceDatasetExportStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SequenceDatasetExportStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SequenceDatasetExportStatus>() {
+            @java.lang.Override
+            public SequenceDatasetExportStatus findValueByNumber(int number) {
+              return SequenceDatasetExportStatus.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return SequenceDatasetExportStatusVerifier.INSTANCE;
+    }
+
+    private static final class SequenceDatasetExportStatusVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier
+                INSTANCE = new SequenceDatasetExportStatusVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return SequenceDatasetExportStatus.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private SequenceDatasetExportStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.dataset.v1.SequenceDatasetExportStatus)
+  }
+
   public interface DatasetOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.Dataset)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -61,6 +316,27 @@ public final class DatasetOuterClass {
      * @return The timeCreated.
      */
     com.google.protobuf.Timestamp getTimeCreated();
+
+    /**
+     * <pre>
+     * type is the membership kind of this dataset. Immutable after creation; defaults to
+     * DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+     * </pre>
+     *
+     * <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * type is the membership kind of this dataset. Immutable after creation; defaults to
+     * DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+     * </pre>
+     *
+     * <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code>
+     * @return The type.
+     */
+    viam.app.dataset.v1.DatasetOuterClass.DatasetType getType();
   }
   /**
    * <pre>
@@ -270,6 +546,74 @@ public final class DatasetOuterClass {
     private void clearTimeCreated() {
       timeCreated_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 5;
+    private int type_;
+    /**
+     * <pre>
+     * type is the membership kind of this dataset. Immutable after creation; defaults to
+     * DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+     * </pre>
+     *
+     * <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * type is the membership kind of this dataset. Immutable after creation; defaults to
+     * DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+     * </pre>
+     *
+     * <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public viam.app.dataset.v1.DatasetOuterClass.DatasetType getType() {
+      viam.app.dataset.v1.DatasetOuterClass.DatasetType result = viam.app.dataset.v1.DatasetOuterClass.DatasetType.forNumber(type_);
+      return result == null ? viam.app.dataset.v1.DatasetOuterClass.DatasetType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * type is the membership kind of this dataset. Immutable after creation; defaults to
+     * DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+     * </pre>
+     *
+     * <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setTypeValue(int value) {
+        type_ = value;
+    }
+    /**
+     * <pre>
+     * type is the membership kind of this dataset. Immutable after creation; defaults to
+     * DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+     * </pre>
+     *
+     * <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(viam.app.dataset.v1.DatasetOuterClass.DatasetType value) {
+      type_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * type is the membership kind of this dataset. Immutable after creation; defaults to
+     * DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+     * </pre>
+     *
+     * <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = 0;
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.Dataset parseFrom(
@@ -567,6 +911,78 @@ public final class DatasetOuterClass {
         return this;
       }
 
+      /**
+       * <pre>
+       * type is the membership kind of this dataset. Immutable after creation; defaults to
+       * DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+       * </pre>
+       *
+       * <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
+      }
+      /**
+       * <pre>
+       * type is the membership kind of this dataset. Immutable after creation; defaults to
+       * DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+       * </pre>
+       *
+       * <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        copyOnWrite();
+        instance.setTypeValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * type is the membership kind of this dataset. Immutable after creation; defaults to
+       * DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+       * </pre>
+       *
+       * <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public viam.app.dataset.v1.DatasetOuterClass.DatasetType getType() {
+        return instance.getType();
+      }
+      /**
+       * <pre>
+       * type is the membership kind of this dataset. Immutable after creation; defaults to
+       * DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+       * </pre>
+       *
+       * <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setType(viam.app.dataset.v1.DatasetOuterClass.DatasetType value) {
+        copyOnWrite();
+        instance.setType(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * type is the membership kind of this dataset. Immutable after creation; defaults to
+       * DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+       * </pre>
+       *
+       * <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        copyOnWrite();
+        instance.clearType();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.Dataset)
     }
     @java.lang.Override
@@ -588,10 +1004,11 @@ public final class DatasetOuterClass {
               "name_",
               "organizationId_",
               "timeCreated_",
+              "type_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u1009\u0000";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u1009\u0000\u0005\f";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -673,6 +1090,34 @@ public final class DatasetOuterClass {
      */
     com.google.protobuf.ByteString
         getOrganizationIdBytes();
+
+    /**
+     * <pre>
+     * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+     * @return Whether the type field is set.
+     */
+    boolean hasType();
+    /**
+     * <pre>
+     * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+     * @return The type.
+     */
+    viam.app.dataset.v1.DatasetOuterClass.DatasetType getType();
   }
   /**
    * <pre>
@@ -690,6 +1135,7 @@ public final class DatasetOuterClass {
       name_ = "";
       organizationId_ = "";
     }
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private java.lang.String name_;
     /**
@@ -784,6 +1230,81 @@ public final class DatasetOuterClass {
       checkByteStringIsUtf8(value);
       organizationId_ = value.toStringUtf8();
 
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private int type_;
+    /**
+     * <pre>
+     * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+     * @return Whether the type field is set.
+     */
+    @java.lang.Override
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public viam.app.dataset.v1.DatasetOuterClass.DatasetType getType() {
+      viam.app.dataset.v1.DatasetOuterClass.DatasetType result = viam.app.dataset.v1.DatasetOuterClass.DatasetType.forNumber(type_);
+      return result == null ? viam.app.dataset.v1.DatasetOuterClass.DatasetType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setTypeValue(int value) {
+      bitField0_ |= 0x00000001;  type_ = value;
+    }
+    /**
+     * <pre>
+     * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(viam.app.dataset.v1.DatasetOuterClass.DatasetType value) {
+      type_ = value.getNumber();
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+     */
+    private void clearType() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      type_ = 0;
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest parseFrom(
@@ -985,6 +1506,85 @@ public final class DatasetOuterClass {
         return this;
       }
 
+      /**
+       * <pre>
+       * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+       * </pre>
+       *
+       * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+       * @return Whether the type field is set.
+       */
+      @java.lang.Override
+      public boolean hasType() {
+        return instance.hasType();
+      }
+      /**
+       * <pre>
+       * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+       * </pre>
+       *
+       * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
+      }
+      /**
+       * <pre>
+       * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+       * </pre>
+       *
+       * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        copyOnWrite();
+        instance.setTypeValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+       * </pre>
+       *
+       * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public viam.app.dataset.v1.DatasetOuterClass.DatasetType getType() {
+        return instance.getType();
+      }
+      /**
+       * <pre>
+       * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+       * </pre>
+       *
+       * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setType(viam.app.dataset.v1.DatasetOuterClass.DatasetType value) {
+        copyOnWrite();
+        instance.setType(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * type is the membership kind for the new dataset. Defaults to DATASET_TYPE_BINARY_DATA when unset.
+       * </pre>
+       *
+       * <code>optional .viam.app.dataset.v1.DatasetType type = 3 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        copyOnWrite();
+        instance.clearType();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.CreateDatasetRequest)
     }
     @java.lang.Override
@@ -1001,12 +1601,14 @@ public final class DatasetOuterClass {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "name_",
               "organizationId_",
+              "type_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "";
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u100c\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -2463,10 +3065,42 @@ public final class DatasetOuterClass {
      */
     com.google.protobuf.ByteString
         getOrganizationIdBytes();
+
+    /**
+     * <pre>
+     * Optional DataseType to filter on.
+     * If unset, will return all types.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+     * @return Whether the type field is set.
+     */
+    boolean hasType();
+    /**
+     * <pre>
+     * Optional DataseType to filter on.
+     * If unset, will return all types.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Optional DataseType to filter on.
+     * If unset, will return all types.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    viam.app.dataset.v1.DatasetOuterClass.DatasetType getType();
   }
   /**
    * <pre>
-   * ListDatasetsByOrganizationIDRequest requests all of the datasets for an organization.
+   * ListDatasetsByOrganizationIDRequest requests all of the datasets for an organization,
+   * optionally filtering on DatasetType
    * </pre>
    *
    * Protobuf type {@code viam.app.dataset.v1.ListDatasetsByOrganizationIDRequest}
@@ -2479,6 +3113,7 @@ public final class DatasetOuterClass {
     private ListDatasetsByOrganizationIDRequest() {
       organizationId_ = "";
     }
+    private int bitField0_;
     public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
     private java.lang.String organizationId_;
     /**
@@ -2525,6 +3160,87 @@ public final class DatasetOuterClass {
       checkByteStringIsUtf8(value);
       organizationId_ = value.toStringUtf8();
 
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private int type_;
+    /**
+     * <pre>
+     * Optional DataseType to filter on.
+     * If unset, will return all types.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+     * @return Whether the type field is set.
+     */
+    @java.lang.Override
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Optional DataseType to filter on.
+     * If unset, will return all types.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Optional DataseType to filter on.
+     * If unset, will return all types.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public viam.app.dataset.v1.DatasetOuterClass.DatasetType getType() {
+      viam.app.dataset.v1.DatasetOuterClass.DatasetType result = viam.app.dataset.v1.DatasetOuterClass.DatasetType.forNumber(type_);
+      return result == null ? viam.app.dataset.v1.DatasetOuterClass.DatasetType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Optional DataseType to filter on.
+     * If unset, will return all types.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setTypeValue(int value) {
+      bitField0_ |= 0x00000001;  type_ = value;
+    }
+    /**
+     * <pre>
+     * Optional DataseType to filter on.
+     * If unset, will return all types.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(viam.app.dataset.v1.DatasetOuterClass.DatasetType value) {
+      type_ = value.getNumber();
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Optional DataseType to filter on.
+     * If unset, will return all types.
+     * </pre>
+     *
+     * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+     */
+    private void clearType() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      type_ = 0;
     }
 
     public static viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest parseFrom(
@@ -2612,7 +3328,8 @@ public final class DatasetOuterClass {
 
     /**
      * <pre>
-     * ListDatasetsByOrganizationIDRequest requests all of the datasets for an organization.
+     * ListDatasetsByOrganizationIDRequest requests all of the datasets for an organization,
+     * optionally filtering on DatasetType
      * </pre>
      *
      * Protobuf type {@code viam.app.dataset.v1.ListDatasetsByOrganizationIDRequest}
@@ -2677,6 +3394,91 @@ public final class DatasetOuterClass {
         return this;
       }
 
+      /**
+       * <pre>
+       * Optional DataseType to filter on.
+       * If unset, will return all types.
+       * </pre>
+       *
+       * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+       * @return Whether the type field is set.
+       */
+      @java.lang.Override
+      public boolean hasType() {
+        return instance.hasType();
+      }
+      /**
+       * <pre>
+       * Optional DataseType to filter on.
+       * If unset, will return all types.
+       * </pre>
+       *
+       * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
+      }
+      /**
+       * <pre>
+       * Optional DataseType to filter on.
+       * If unset, will return all types.
+       * </pre>
+       *
+       * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        copyOnWrite();
+        instance.setTypeValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional DataseType to filter on.
+       * If unset, will return all types.
+       * </pre>
+       *
+       * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public viam.app.dataset.v1.DatasetOuterClass.DatasetType getType() {
+        return instance.getType();
+      }
+      /**
+       * <pre>
+       * Optional DataseType to filter on.
+       * If unset, will return all types.
+       * </pre>
+       *
+       * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setType(viam.app.dataset.v1.DatasetOuterClass.DatasetType value) {
+        copyOnWrite();
+        instance.setType(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional DataseType to filter on.
+       * If unset, will return all types.
+       * </pre>
+       *
+       * <code>optional .viam.app.dataset.v1.DatasetType type = 2 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        copyOnWrite();
+        instance.clearType();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.ListDatasetsByOrganizationIDRequest)
     }
     @java.lang.Override
@@ -2693,10 +3495,13 @@ public final class DatasetOuterClass {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "organizationId_",
+              "type_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u100c" +
+                "\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -4901,6 +5706,2030 @@ public final class DatasetOuterClass {
     private static volatile com.google.protobuf.Parser<MergeDatasetsResponse> PARSER;
 
     public static com.google.protobuf.Parser<MergeDatasetsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface StartSequenceDatasetExportRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.StartSequenceDatasetExportRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The datasetId.
+     */
+    java.lang.String getDatasetId();
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The bytes for datasetId.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdBytes();
+  }
+  /**
+   * <pre>
+   * StartSequenceDatasetExportRequest specifies the sequence dataset to export.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.dataset.v1.StartSequenceDatasetExportRequest}
+   */
+  public  static final class StartSequenceDatasetExportRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          StartSequenceDatasetExportRequest, StartSequenceDatasetExportRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.StartSequenceDatasetExportRequest)
+      StartSequenceDatasetExportRequestOrBuilder {
+    private StartSequenceDatasetExportRequest() {
+      datasetId_ = "";
+    }
+    public static final int DATASET_ID_FIELD_NUMBER = 1;
+    private java.lang.String datasetId_;
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The datasetId.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetId() {
+      return datasetId_;
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @return The bytes for datasetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(datasetId_);
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @param value The datasetId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDatasetId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      datasetId_ = value;
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     */
+    private void clearDatasetId() {
+
+      datasetId_ = getDefaultInstance().getDatasetId();
+    }
+    /**
+     * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+     * @param value The bytes for datasetId to set.
+     */
+    private void setDatasetIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      datasetId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * StartSequenceDatasetExportRequest specifies the sequence dataset to export.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.dataset.v1.StartSequenceDatasetExportRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.StartSequenceDatasetExportRequest)
+        viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequestOrBuilder {
+      // Construct using viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return The datasetId.
+       */
+      @java.lang.Override
+      public java.lang.String getDatasetId() {
+        return instance.getDatasetId();
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return The bytes for datasetId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDatasetIdBytes() {
+        return instance.getDatasetIdBytes();
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @param value The datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDatasetId(value);
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetId() {
+        copyOnWrite();
+        instance.clearDatasetId();
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 1 [json_name = "datasetId"];</code>
+       * @param value The bytes for datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDatasetIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.StartSequenceDatasetExportRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "datasetId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.StartSequenceDatasetExportRequest)
+    private static final viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest DEFAULT_INSTANCE;
+    static {
+      StartSequenceDatasetExportRequest defaultInstance = new StartSequenceDatasetExportRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StartSequenceDatasetExportRequest.class, defaultInstance);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<StartSequenceDatasetExportRequest> PARSER;
+
+    public static com.google.protobuf.Parser<StartSequenceDatasetExportRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface StartSequenceDatasetExportResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.StartSequenceDatasetExportResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @return The jobId.
+     */
+    java.lang.String getJobId();
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @return The bytes for jobId.
+     */
+    com.google.protobuf.ByteString
+        getJobIdBytes();
+  }
+  /**
+   * <pre>
+   * StartSequenceDatasetExportResponse returns the job_id to poll with
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.dataset.v1.StartSequenceDatasetExportResponse}
+   */
+  public  static final class StartSequenceDatasetExportResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          StartSequenceDatasetExportResponse, StartSequenceDatasetExportResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.StartSequenceDatasetExportResponse)
+      StartSequenceDatasetExportResponseOrBuilder {
+    private StartSequenceDatasetExportResponse() {
+      jobId_ = "";
+    }
+    public static final int JOB_ID_FIELD_NUMBER = 1;
+    private java.lang.String jobId_;
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @return The jobId.
+     */
+    @java.lang.Override
+    public java.lang.String getJobId() {
+      return jobId_;
+    }
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @return The bytes for jobId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJobIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(jobId_);
+    }
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @param value The jobId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setJobId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      jobId_ = value;
+    }
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     */
+    private void clearJobId() {
+
+      jobId_ = getDefaultInstance().getJobId();
+    }
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @param value The bytes for jobId to set.
+     */
+    private void setJobIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      jobId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * StartSequenceDatasetExportResponse returns the job_id to poll with
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.dataset.v1.StartSequenceDatasetExportResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.StartSequenceDatasetExportResponse)
+        viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponseOrBuilder {
+      // Construct using viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @return The jobId.
+       */
+      @java.lang.Override
+      public java.lang.String getJobId() {
+        return instance.getJobId();
+      }
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @return The bytes for jobId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getJobIdBytes() {
+        return instance.getJobIdBytes();
+      }
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setJobId(value);
+        return this;
+      }
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJobId() {
+        copyOnWrite();
+        instance.clearJobId();
+        return this;
+      }
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @param value The bytes for jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setJobIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.StartSequenceDatasetExportResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "jobId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.StartSequenceDatasetExportResponse)
+    private static final viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse DEFAULT_INSTANCE;
+    static {
+      StartSequenceDatasetExportResponse defaultInstance = new StartSequenceDatasetExportResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StartSequenceDatasetExportResponse.class, defaultInstance);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.StartSequenceDatasetExportResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<StartSequenceDatasetExportResponse> PARSER;
+
+    public static com.google.protobuf.Parser<StartSequenceDatasetExportResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetSequenceDatasetExportRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.GetSequenceDatasetExportRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @return The jobId.
+     */
+    java.lang.String getJobId();
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @return The bytes for jobId.
+     */
+    com.google.protobuf.ByteString
+        getJobIdBytes();
+  }
+  /**
+   * <pre>
+   * GetSequenceDatasetExportRequest looks up an export job by its job_id.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.dataset.v1.GetSequenceDatasetExportRequest}
+   */
+  public  static final class GetSequenceDatasetExportRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetSequenceDatasetExportRequest, GetSequenceDatasetExportRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.GetSequenceDatasetExportRequest)
+      GetSequenceDatasetExportRequestOrBuilder {
+    private GetSequenceDatasetExportRequest() {
+      jobId_ = "";
+    }
+    public static final int JOB_ID_FIELD_NUMBER = 1;
+    private java.lang.String jobId_;
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @return The jobId.
+     */
+    @java.lang.Override
+    public java.lang.String getJobId() {
+      return jobId_;
+    }
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @return The bytes for jobId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJobIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(jobId_);
+    }
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @param value The jobId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setJobId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      jobId_ = value;
+    }
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     */
+    private void clearJobId() {
+
+      jobId_ = getDefaultInstance().getJobId();
+    }
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @param value The bytes for jobId to set.
+     */
+    private void setJobIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      jobId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * GetSequenceDatasetExportRequest looks up an export job by its job_id.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.dataset.v1.GetSequenceDatasetExportRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.GetSequenceDatasetExportRequest)
+        viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequestOrBuilder {
+      // Construct using viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @return The jobId.
+       */
+      @java.lang.Override
+      public java.lang.String getJobId() {
+        return instance.getJobId();
+      }
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @return The bytes for jobId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getJobIdBytes() {
+        return instance.getJobIdBytes();
+      }
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setJobId(value);
+        return this;
+      }
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJobId() {
+        copyOnWrite();
+        instance.clearJobId();
+        return this;
+      }
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @param value The bytes for jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setJobIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.GetSequenceDatasetExportRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "jobId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.GetSequenceDatasetExportRequest)
+    private static final viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest DEFAULT_INSTANCE;
+    static {
+      GetSequenceDatasetExportRequest defaultInstance = new GetSequenceDatasetExportRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetSequenceDatasetExportRequest.class, defaultInstance);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetSequenceDatasetExportRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetSequenceDatasetExportRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetSequenceDatasetExportResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.dataset.v1.GetSequenceDatasetExportResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @return The jobId.
+     */
+    java.lang.String getJobId();
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @return The bytes for jobId.
+     */
+    com.google.protobuf.ByteString
+        getJobIdBytes();
+
+    /**
+     * <code>.viam.app.dataset.v1.SequenceDatasetExportStatus status = 2 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.viam.app.dataset.v1.SequenceDatasetExportStatus status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    viam.app.dataset.v1.DatasetOuterClass.SequenceDatasetExportStatus getStatus();
+
+    /**
+     * <pre>
+     * Short-lived (e.g. 1h) signed URL for direct download from backing
+     * storage. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+     * @return The downloadUrl.
+     */
+    java.lang.String getDownloadUrl();
+    /**
+     * <pre>
+     * Short-lived (e.g. 1h) signed URL for direct download from backing
+     * storage. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+     * @return The bytes for downloadUrl.
+     */
+    com.google.protobuf.ByteString
+        getDownloadUrlBytes();
+
+    /**
+     * <pre>
+     * When download_url stops working. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * @return Whether the expiresAt field is set.
+     */
+    boolean hasExpiresAt();
+    /**
+     * <pre>
+     * When download_url stops working. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     * @return The expiresAt.
+     */
+    com.google.protobuf.Timestamp getExpiresAt();
+
+    /**
+     * <pre>
+     * Human-readable cause; empty unless status is FAILED.
+     * </pre>
+     *
+     * <code>string error_message = 5 [json_name = "errorMessage"];</code>
+     * @return The errorMessage.
+     */
+    java.lang.String getErrorMessage();
+    /**
+     * <pre>
+     * Human-readable cause; empty unless status is FAILED.
+     * </pre>
+     *
+     * <code>string error_message = 5 [json_name = "errorMessage"];</code>
+     * @return The bytes for errorMessage.
+     */
+    com.google.protobuf.ByteString
+        getErrorMessageBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+
+    /**
+     * <code>.google.protobuf.Timestamp completed_at = 7 [json_name = "completedAt"];</code>
+     * @return Whether the completedAt field is set.
+     */
+    boolean hasCompletedAt();
+    /**
+     * <code>.google.protobuf.Timestamp completed_at = 7 [json_name = "completedAt"];</code>
+     * @return The completedAt.
+     */
+    com.google.protobuf.Timestamp getCompletedAt();
+  }
+  /**
+   * <pre>
+   * GetSequenceDatasetExportResponse reports the current status of an export
+   * job. download_url and expires_at are set only when status is COMPLETED;
+   * error_message is set only when status is FAILED.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.dataset.v1.GetSequenceDatasetExportResponse}
+   */
+  public  static final class GetSequenceDatasetExportResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetSequenceDatasetExportResponse, GetSequenceDatasetExportResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.dataset.v1.GetSequenceDatasetExportResponse)
+      GetSequenceDatasetExportResponseOrBuilder {
+    private GetSequenceDatasetExportResponse() {
+      jobId_ = "";
+      downloadUrl_ = "";
+      errorMessage_ = "";
+    }
+    private int bitField0_;
+    public static final int JOB_ID_FIELD_NUMBER = 1;
+    private java.lang.String jobId_;
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @return The jobId.
+     */
+    @java.lang.Override
+    public java.lang.String getJobId() {
+      return jobId_;
+    }
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @return The bytes for jobId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJobIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(jobId_);
+    }
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @param value The jobId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setJobId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      jobId_ = value;
+    }
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     */
+    private void clearJobId() {
+
+      jobId_ = getDefaultInstance().getJobId();
+    }
+    /**
+     * <code>string job_id = 1 [json_name = "jobId"];</code>
+     * @param value The bytes for jobId to set.
+     */
+    private void setJobIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      jobId_ = value.toStringUtf8();
+
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_;
+    /**
+     * <code>.viam.app.dataset.v1.SequenceDatasetExportStatus status = 2 [json_name = "status"];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override
+    public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.viam.app.dataset.v1.SequenceDatasetExportStatus status = 2 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public viam.app.dataset.v1.DatasetOuterClass.SequenceDatasetExportStatus getStatus() {
+      viam.app.dataset.v1.DatasetOuterClass.SequenceDatasetExportStatus result = viam.app.dataset.v1.DatasetOuterClass.SequenceDatasetExportStatus.forNumber(status_);
+      return result == null ? viam.app.dataset.v1.DatasetOuterClass.SequenceDatasetExportStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.app.dataset.v1.SequenceDatasetExportStatus status = 2 [json_name = "status"];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setStatusValue(int value) {
+        status_ = value;
+    }
+    /**
+     * <code>.viam.app.dataset.v1.SequenceDatasetExportStatus status = 2 [json_name = "status"];</code>
+     * @param value The status to set.
+     */
+    private void setStatus(viam.app.dataset.v1.DatasetOuterClass.SequenceDatasetExportStatus value) {
+      status_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.dataset.v1.SequenceDatasetExportStatus status = 2 [json_name = "status"];</code>
+     */
+    private void clearStatus() {
+
+      status_ = 0;
+    }
+
+    public static final int DOWNLOAD_URL_FIELD_NUMBER = 3;
+    private java.lang.String downloadUrl_;
+    /**
+     * <pre>
+     * Short-lived (e.g. 1h) signed URL for direct download from backing
+     * storage. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+     * @return The downloadUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getDownloadUrl() {
+      return downloadUrl_;
+    }
+    /**
+     * <pre>
+     * Short-lived (e.g. 1h) signed URL for direct download from backing
+     * storage. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+     * @return The bytes for downloadUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDownloadUrlBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(downloadUrl_);
+    }
+    /**
+     * <pre>
+     * Short-lived (e.g. 1h) signed URL for direct download from backing
+     * storage. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+     * @param value The downloadUrl to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDownloadUrl(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      downloadUrl_ = value;
+    }
+    /**
+     * <pre>
+     * Short-lived (e.g. 1h) signed URL for direct download from backing
+     * storage. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+     */
+    private void clearDownloadUrl() {
+
+      downloadUrl_ = getDefaultInstance().getDownloadUrl();
+    }
+    /**
+     * <pre>
+     * Short-lived (e.g. 1h) signed URL for direct download from backing
+     * storage. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+     * @param value The bytes for downloadUrl to set.
+     */
+    private void setDownloadUrlBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      downloadUrl_ = value.toStringUtf8();
+
+    }
+
+    public static final int EXPIRES_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp expiresAt_;
+    /**
+     * <pre>
+     * When download_url stops working. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExpiresAt() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * When download_url stops working. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getExpiresAt() {
+      return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
+    }
+    /**
+     * <pre>
+     * When download_url stops working. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setExpiresAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      expiresAt_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * When download_url stops working. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeExpiresAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (expiresAt_ != null &&
+          expiresAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        expiresAt_ =
+          com.google.protobuf.Timestamp.newBuilder(expiresAt_).mergeFrom(value).buildPartial();
+      } else {
+        expiresAt_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * When download_url stops working. Empty unless status is COMPLETED.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+     */
+    private void clearExpiresAt() {
+      expiresAt_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int ERROR_MESSAGE_FIELD_NUMBER = 5;
+    private java.lang.String errorMessage_;
+    /**
+     * <pre>
+     * Human-readable cause; empty unless status is FAILED.
+     * </pre>
+     *
+     * <code>string error_message = 5 [json_name = "errorMessage"];</code>
+     * @return The errorMessage.
+     */
+    @java.lang.Override
+    public java.lang.String getErrorMessage() {
+      return errorMessage_;
+    }
+    /**
+     * <pre>
+     * Human-readable cause; empty unless status is FAILED.
+     * </pre>
+     *
+     * <code>string error_message = 5 [json_name = "errorMessage"];</code>
+     * @return The bytes for errorMessage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorMessageBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(errorMessage_);
+    }
+    /**
+     * <pre>
+     * Human-readable cause; empty unless status is FAILED.
+     * </pre>
+     *
+     * <code>string error_message = 5 [json_name = "errorMessage"];</code>
+     * @param value The errorMessage to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setErrorMessage(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      errorMessage_ = value;
+    }
+    /**
+     * <pre>
+     * Human-readable cause; empty unless status is FAILED.
+     * </pre>
+     *
+     * <code>string error_message = 5 [json_name = "errorMessage"];</code>
+     */
+    private void clearErrorMessage() {
+
+      errorMessage_ = getDefaultInstance().getErrorMessage();
+    }
+    /**
+     * <pre>
+     * Human-readable cause; empty unless status is FAILED.
+     * </pre>
+     *
+     * <code>string error_message = 5 [json_name = "errorMessage"];</code>
+     * @param value The bytes for errorMessage to set.
+     */
+    private void setErrorMessageBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      errorMessage_ = value.toStringUtf8();
+
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setCreatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      createdAt_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeCreatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (createdAt_ != null &&
+          createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        createdAt_ =
+          com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+      } else {
+        createdAt_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
+     */
+    private void clearCreatedAt() {
+      createdAt_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int COMPLETED_AT_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp completedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp completed_at = 7 [json_name = "completedAt"];</code>
+     */
+    @java.lang.Override
+    public boolean hasCompletedAt() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp completed_at = 7 [json_name = "completedAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCompletedAt() {
+      return completedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp completed_at = 7 [json_name = "completedAt"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setCompletedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      completedAt_ = value;
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp completed_at = 7 [json_name = "completedAt"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeCompletedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (completedAt_ != null &&
+          completedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        completedAt_ =
+          com.google.protobuf.Timestamp.newBuilder(completedAt_).mergeFrom(value).buildPartial();
+      } else {
+        completedAt_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp completed_at = 7 [json_name = "completedAt"];</code>
+     */
+    private void clearCompletedAt() {
+      completedAt_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * GetSequenceDatasetExportResponse reports the current status of an export
+     * job. download_url and expires_at are set only when status is COMPLETED;
+     * error_message is set only when status is FAILED.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.dataset.v1.GetSequenceDatasetExportResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.dataset.v1.GetSequenceDatasetExportResponse)
+        viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponseOrBuilder {
+      // Construct using viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @return The jobId.
+       */
+      @java.lang.Override
+      public java.lang.String getJobId() {
+        return instance.getJobId();
+      }
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @return The bytes for jobId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getJobIdBytes() {
+        return instance.getJobIdBytes();
+      }
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setJobId(value);
+        return this;
+      }
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJobId() {
+        copyOnWrite();
+        instance.clearJobId();
+        return this;
+      }
+      /**
+       * <code>string job_id = 1 [json_name = "jobId"];</code>
+       * @param value The bytes for jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setJobIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.dataset.v1.SequenceDatasetExportStatus status = 2 [json_name = "status"];</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override
+      public int getStatusValue() {
+        return instance.getStatusValue();
+      }
+      /**
+       * <code>.viam.app.dataset.v1.SequenceDatasetExportStatus status = 2 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        copyOnWrite();
+        instance.setStatusValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.dataset.v1.SequenceDatasetExportStatus status = 2 [json_name = "status"];</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public viam.app.dataset.v1.DatasetOuterClass.SequenceDatasetExportStatus getStatus() {
+        return instance.getStatus();
+      }
+      /**
+       * <code>.viam.app.dataset.v1.SequenceDatasetExportStatus status = 2 [json_name = "status"];</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(viam.app.dataset.v1.DatasetOuterClass.SequenceDatasetExportStatus value) {
+        copyOnWrite();
+        instance.setStatus(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.dataset.v1.SequenceDatasetExportStatus status = 2 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        copyOnWrite();
+        instance.clearStatus();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Short-lived (e.g. 1h) signed URL for direct download from backing
+       * storage. Empty unless status is COMPLETED.
+       * </pre>
+       *
+       * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+       * @return The downloadUrl.
+       */
+      @java.lang.Override
+      public java.lang.String getDownloadUrl() {
+        return instance.getDownloadUrl();
+      }
+      /**
+       * <pre>
+       * Short-lived (e.g. 1h) signed URL for direct download from backing
+       * storage. Empty unless status is COMPLETED.
+       * </pre>
+       *
+       * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+       * @return The bytes for downloadUrl.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDownloadUrlBytes() {
+        return instance.getDownloadUrlBytes();
+      }
+      /**
+       * <pre>
+       * Short-lived (e.g. 1h) signed URL for direct download from backing
+       * storage. Empty unless status is COMPLETED.
+       * </pre>
+       *
+       * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+       * @param value The downloadUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDownloadUrl(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDownloadUrl(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Short-lived (e.g. 1h) signed URL for direct download from backing
+       * storage. Empty unless status is COMPLETED.
+       * </pre>
+       *
+       * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDownloadUrl() {
+        copyOnWrite();
+        instance.clearDownloadUrl();
+        return this;
+      }
+      /**
+       * <pre>
+       * Short-lived (e.g. 1h) signed URL for direct download from backing
+       * storage. Empty unless status is COMPLETED.
+       * </pre>
+       *
+       * <code>string download_url = 3 [json_name = "downloadUrl"];</code>
+       * @param value The bytes for downloadUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDownloadUrlBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDownloadUrlBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * When download_url stops working. Empty unless status is COMPLETED.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExpiresAt() {
+        return instance.hasExpiresAt();
+      }
+      /**
+       * <pre>
+       * When download_url stops working. Empty unless status is COMPLETED.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getExpiresAt() {
+        return instance.getExpiresAt();
+      }
+      /**
+       * <pre>
+       * When download_url stops working. Empty unless status is COMPLETED.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       */
+      public Builder setExpiresAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setExpiresAt(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * When download_url stops working. Empty unless status is COMPLETED.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       */
+      public Builder setExpiresAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExpiresAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * When download_url stops working. Empty unless status is COMPLETED.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       */
+      public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeExpiresAt(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * When download_url stops working. Empty unless status is COMPLETED.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp expires_at = 4 [json_name = "expiresAt"];</code>
+       */
+      public Builder clearExpiresAt() {  copyOnWrite();
+        instance.clearExpiresAt();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Human-readable cause; empty unless status is FAILED.
+       * </pre>
+       *
+       * <code>string error_message = 5 [json_name = "errorMessage"];</code>
+       * @return The errorMessage.
+       */
+      @java.lang.Override
+      public java.lang.String getErrorMessage() {
+        return instance.getErrorMessage();
+      }
+      /**
+       * <pre>
+       * Human-readable cause; empty unless status is FAILED.
+       * </pre>
+       *
+       * <code>string error_message = 5 [json_name = "errorMessage"];</code>
+       * @return The bytes for errorMessage.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getErrorMessageBytes() {
+        return instance.getErrorMessageBytes();
+      }
+      /**
+       * <pre>
+       * Human-readable cause; empty unless status is FAILED.
+       * </pre>
+       *
+       * <code>string error_message = 5 [json_name = "errorMessage"];</code>
+       * @param value The errorMessage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorMessage(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setErrorMessage(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Human-readable cause; empty unless status is FAILED.
+       * </pre>
+       *
+       * <code>string error_message = 5 [json_name = "errorMessage"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearErrorMessage() {
+        copyOnWrite();
+        instance.clearErrorMessage();
+        return this;
+      }
+      /**
+       * <pre>
+       * Human-readable cause; empty unless status is FAILED.
+       * </pre>
+       *
+       * <code>string error_message = 5 [json_name = "errorMessage"];</code>
+       * @param value The bytes for errorMessage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorMessageBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setErrorMessageBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
+       */
+      @java.lang.Override
+      public boolean hasCreatedAt() {
+        return instance.hasCreatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        return instance.getCreatedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setCreatedAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCreatedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeCreatedAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 6 [json_name = "createdAt"];</code>
+       */
+      public Builder clearCreatedAt() {  copyOnWrite();
+        instance.clearCreatedAt();
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp completed_at = 7 [json_name = "completedAt"];</code>
+       */
+      @java.lang.Override
+      public boolean hasCompletedAt() {
+        return instance.hasCompletedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp completed_at = 7 [json_name = "completedAt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getCompletedAt() {
+        return instance.getCompletedAt();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp completed_at = 7 [json_name = "completedAt"];</code>
+       */
+      public Builder setCompletedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setCompletedAt(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp completed_at = 7 [json_name = "completedAt"];</code>
+       */
+      public Builder setCompletedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCompletedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp completed_at = 7 [json_name = "completedAt"];</code>
+       */
+      public Builder mergeCompletedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeCompletedAt(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp completed_at = 7 [json_name = "completedAt"];</code>
+       */
+      public Builder clearCompletedAt() {  copyOnWrite();
+        instance.clearCompletedAt();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.dataset.v1.GetSequenceDatasetExportResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "jobId_",
+              "status_",
+              "downloadUrl_",
+              "expiresAt_",
+              "errorMessage_",
+              "createdAt_",
+              "completedAt_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\f" +
+                "\u0003\u0208\u0004\u1009\u0000\u0005\u0208\u0006\u1009\u0001\u0007\u1009\u0002";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.dataset.v1.GetSequenceDatasetExportResponse)
+    private static final viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse DEFAULT_INSTANCE;
+    static {
+      GetSequenceDatasetExportResponse defaultInstance = new GetSequenceDatasetExportResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetSequenceDatasetExportResponse.class, defaultInstance);
+    }
+
+    public static viam.app.dataset.v1.DatasetOuterClass.GetSequenceDatasetExportResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetSequenceDatasetExportResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetSequenceDatasetExportResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
