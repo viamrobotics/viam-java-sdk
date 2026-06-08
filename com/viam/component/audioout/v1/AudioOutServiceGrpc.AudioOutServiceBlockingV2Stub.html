@@ -161,6 +161,12 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Play plays audio from the audioout component.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>io.grpc.stub.BlockingClientCall<wbr>&lt;<a href="Audioout.PlayStreamRequest.html" title="class in com.viam.component.audioout.v1">Audioout.PlayStreamRequest</a>,<wbr><a href="Audioout.PlayStreamResponse.html" title="class in com.viam.component.audioout.v1">Audioout.PlayStreamResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playStream()" class="member-name-link">playStream</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ PlayStream streams audio chunks to the audioout component for playback.</div>
+</div>
 </div>
 </div>
 </div>
@@ -207,6 +213,19 @@ loadScripts(document, 'script');</script>
 <dt>Throws:</dt>
 <dd><code>io.grpc.StatusException</code></dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="playStream()">
+<h3>playStream</h3>
+<div class="member-signature"><span class="annotations">@ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">io.grpc.stub.BlockingClientCall&lt;<a href="Audioout.PlayStreamRequest.html" title="class in com.viam.component.audioout.v1">Audioout.PlayStreamRequest</a>,<wbr><a href="Audioout.PlayStreamResponse.html" title="class in com.viam.component.audioout.v1">Audioout.PlayStreamResponse</a>&gt;</span>&nbsp;<span class="element-name">playStream</span>()</div>
+<div class="block"><pre>
+ PlayStream streams audio chunks to the audioout component for playback.
+ The first message on the stream must be a PlayStreamInit containing the
+ component name and AudioInfo describing the audio format; subsequent
+ messages must be PlayStreamChunk payloads.
+ </pre></div>
 </section>
 </li>
 <li>

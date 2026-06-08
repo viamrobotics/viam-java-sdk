@@ -166,6 +166,12 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Play plays audio from the audioout component.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>io.grpc.stub.StreamObserver<wbr>&lt;<a href="Audioout.PlayStreamRequest.html" title="class in com.viam.component.audioout.v1">Audioout.PlayStreamRequest</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#playStream(io.grpc.stub.StreamObserver)" class="member-name-link">playStream</a><wbr>(io.grpc.stub.StreamObserver&lt;<a href="Audioout.PlayStreamResponse.html" title="class in com.viam.component.audioout.v1">Audioout.PlayStreamResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ PlayStream streams audio chunks to the audioout component for playback.</div>
+</div>
 </div>
 </div>
 </div>
@@ -207,6 +213,18 @@ loadScripts(document, 'script');</script>
  io.grpc.stub.StreamObserver&lt;<a href="Audioout.PlayResponse.html" title="class in com.viam.component.audioout.v1">Audioout.PlayResponse</a>&gt;&nbsp;responseObserver)</span></div>
 <div class="block"><pre>
  Play plays audio from the audioout component.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="playStream(io.grpc.stub.StreamObserver)">
+<h3>playStream</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">io.grpc.stub.StreamObserver&lt;<a href="Audioout.PlayStreamRequest.html" title="class in com.viam.component.audioout.v1">Audioout.PlayStreamRequest</a>&gt;</span>&nbsp;<span class="element-name">playStream</span><wbr><span class="parameters">(io.grpc.stub.StreamObserver&lt;<a href="Audioout.PlayStreamResponse.html" title="class in com.viam.component.audioout.v1">Audioout.PlayStreamResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ PlayStream streams audio chunks to the audioout component for playback.
+ The first message on the stream must be a PlayStreamInit containing the
+ component name and AudioInfo describing the audio format; subsequent
+ messages must be PlayStreamChunk payloads.
  </pre></div>
 </section>
 </li>

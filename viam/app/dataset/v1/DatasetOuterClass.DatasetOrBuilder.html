@@ -150,6 +150,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.google.protobuf.Timestamp time_created = 4 [json_name = "timeCreated"];</code></div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="DatasetOuterClass.DatasetType.html" title="enum class in viam.app.dataset.v1">DatasetOuterClass.DatasetType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ type is the membership kind of this dataset.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTypeValue()" class="member-name-link">getTypeValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ type is the membership kind of this dataset.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasTimeCreated()" class="member-name-link">hasTimeCreated</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -257,6 +269,38 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The timeCreated.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTypeValue()">
+<h3>getTypeValue</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getTypeValue</span>()</div>
+<div class="block"><pre>
+ type is the membership kind of this dataset. Immutable after creation; defaults to
+ DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+ </pre>
+
+ <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire for type.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getType()">
+<h3>getType</h3>
+<div class="member-signature"><span class="return-type"><a href="DatasetOuterClass.DatasetType.html" title="enum class in viam.app.dataset.v1">DatasetOuterClass.DatasetType</a></span>&nbsp;<span class="element-name">getType</span>()</div>
+<div class="block"><pre>
+ type is the membership kind of this dataset. Immutable after creation; defaults to
+ DATASET_TYPE_BINARY_DATA when unset (including for pre-existing datasets).
+ </pre>
+
+ <code>.viam.app.dataset.v1.DatasetType type = 5 [json_name = "type"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The type.</dd>
 </dl>
 </section>
 </li>
