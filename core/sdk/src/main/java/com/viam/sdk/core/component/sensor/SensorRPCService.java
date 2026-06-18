@@ -66,6 +66,17 @@ public class SensorRPCService extends SensorServiceGrpc.SensorServiceImplBase
     }
 
     @Override
+    public void getGeometries(Common.GetGeometriesRequest request,
+                              StreamObserver<GetGeometriesResponse> responseObserver) {
+        final com.viam.sdk.core.component.sensor.Sensor sensor = getResource(
+                com.viam.sdk.core.component.sensor.Sensor.named(request.getName())
+        );
+        final List<Geometry> result = sensor.getGeometries(Optional.of(request.getExtra()));
+        responseObserver.onNext(GetGeometriesResponse.newBuilder().addAllGeometries(result).build());
+        responseObserver.onCompleted();
+    }
+
+    @Override
     public Class<Sensor> getResourceClass() {
         return Sensor.class;
     }
