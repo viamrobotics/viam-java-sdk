@@ -19434,6 +19434,20 @@ public final class Robot {
      * <code>repeated .viam.robot.v1.JobStatus job_statuses = 4 [json_name = "jobStatuses"];</code>
      */
     int getJobStatusesCount();
+
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    java.util.List<com.viam.robot.v1.Robot.ModuleStatus> 
+        getModulesList();
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    com.viam.robot.v1.Robot.ModuleStatus getModules(int index);
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    int getModulesCount();
   }
   /**
    * Protobuf type {@code viam.robot.v1.GetMachineStatusResponse}
@@ -19446,6 +19460,7 @@ public final class Robot {
     private GetMachineStatusResponse() {
       resources_ = emptyProtobufList();
       jobStatuses_ = emptyProtobufList();
+      modules_ = emptyProtobufList();
     }
     /**
      * Protobuf enum {@code viam.robot.v1.GetMachineStatusResponse.State}
@@ -19850,6 +19865,103 @@ public final class Robot {
       jobStatuses_.remove(index);
     }
 
+    public static final int MODULES_FIELD_NUMBER = 5;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.robot.v1.Robot.ModuleStatus> modules_;
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.robot.v1.Robot.ModuleStatus> getModulesList() {
+      return modules_;
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    public java.util.List<? extends com.viam.robot.v1.Robot.ModuleStatusOrBuilder> 
+        getModulesOrBuilderList() {
+      return modules_;
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    @java.lang.Override
+    public int getModulesCount() {
+      return modules_.size();
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.ModuleStatus getModules(int index) {
+      return modules_.get(index);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    public com.viam.robot.v1.Robot.ModuleStatusOrBuilder getModulesOrBuilder(
+        int index) {
+      return modules_.get(index);
+    }
+    private void ensureModulesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.robot.v1.Robot.ModuleStatus> tmp = modules_;
+      if (!tmp.isModifiable()) {
+        modules_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setModules(
+        int index, com.viam.robot.v1.Robot.ModuleStatus value) {
+      value.getClass();  // minimal bytecode null check
+      ensureModulesIsMutable();
+      modules_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addModules(com.viam.robot.v1.Robot.ModuleStatus value) {
+      value.getClass();  // minimal bytecode null check
+      ensureModulesIsMutable();
+      modules_.add(value);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addModules(
+        int index, com.viam.robot.v1.Robot.ModuleStatus value) {
+      value.getClass();  // minimal bytecode null check
+      ensureModulesIsMutable();
+      modules_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    private void addAllModules(
+        java.lang.Iterable<? extends com.viam.robot.v1.Robot.ModuleStatus> values) {
+      ensureModulesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, modules_);
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    private void clearModules() {
+      modules_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+     */
+    private void removeModules(int index) {
+      ensureModulesIsMutable();
+      modules_.remove(index);
+    }
+
     public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -20245,6 +20357,108 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.robot.v1.Robot.ModuleStatus> getModulesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getModulesList());
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+       */
+      @java.lang.Override
+      public int getModulesCount() {
+        return instance.getModulesCount();
+      }/**
+       * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+       */
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.ModuleStatus getModules(int index) {
+        return instance.getModules(index);
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+       */
+      public Builder setModules(
+          int index, com.viam.robot.v1.Robot.ModuleStatus value) {
+        copyOnWrite();
+        instance.setModules(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+       */
+      public Builder setModules(
+          int index, com.viam.robot.v1.Robot.ModuleStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.setModules(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+       */
+      public Builder addModules(com.viam.robot.v1.Robot.ModuleStatus value) {
+        copyOnWrite();
+        instance.addModules(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+       */
+      public Builder addModules(
+          int index, com.viam.robot.v1.Robot.ModuleStatus value) {
+        copyOnWrite();
+        instance.addModules(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+       */
+      public Builder addModules(
+          com.viam.robot.v1.Robot.ModuleStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.addModules(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+       */
+      public Builder addModules(
+          int index, com.viam.robot.v1.Robot.ModuleStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.addModules(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+       */
+      public Builder addAllModules(
+          java.lang.Iterable<? extends com.viam.robot.v1.Robot.ModuleStatus> values) {
+        copyOnWrite();
+        instance.addAllModules(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+       */
+      public Builder clearModules() {
+        copyOnWrite();
+        instance.clearModules();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.robot.v1.ModuleStatus modules = 5 [json_name = "modules"];</code>
+       */
+      public Builder removeModules(int index) {
+        copyOnWrite();
+        instance.removeModules(index);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.robot.v1.GetMachineStatusResponse)
     }
     @java.lang.Override
@@ -20268,10 +20482,12 @@ public final class Robot {
               "state_",
               "jobStatuses_",
               com.viam.robot.v1.Robot.JobStatus.class,
+              "modules_",
+              com.viam.robot.v1.Robot.ModuleStatus.class,
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0002\u0000\u0001\u001b\u0002\u1009" +
-                "\u0000\u0003\f\u0004\u001b";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0003\u0000\u0001\u001b\u0002\u1009" +
+                "\u0000\u0003\f\u0004\u001b\u0005\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -22362,6 +22578,1038 @@ public final class Robot {
     private static volatile com.google.protobuf.Parser<ResourceStatus> PARSER;
 
     public static com.google.protobuf.Parser<ResourceStatus> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ModuleStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.ModuleStatus)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string module_name = 1 [json_name = "moduleName"];</code>
+     * @return The moduleName.
+     */
+    java.lang.String getModuleName();
+    /**
+     * <code>string module_name = 1 [json_name = "moduleName"];</code>
+     * @return The bytes for moduleName.
+     */
+    com.google.protobuf.ByteString
+        getModuleNameBytes();
+
+    /**
+     * <code>.viam.robot.v1.ModuleStatus.State state = 2 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <code>.viam.robot.v1.ModuleStatus.State state = 2 [json_name = "state"];</code>
+     * @return The state.
+     */
+    com.viam.robot.v1.Robot.ModuleStatus.State getState();
+
+    /**
+     * <pre>
+     * updated on every state transition
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     * @return Whether the lastUpdated field is set.
+     */
+    boolean hasLastUpdated();
+    /**
+     * <pre>
+     * updated on every state transition
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     * @return The lastUpdated.
+     */
+    com.google.protobuf.Timestamp getLastUpdated();
+
+    /**
+     * <pre>
+     * when a module transitions to unhealthy, this field is populated with the error that caused the transition.
+     * the error persists until the module reenters the Ready state, guaranteed to be nil in the Ready state
+     * </pre>
+     *
+     * <code>string error = 4 [json_name = "error"];</code>
+     * @return The error.
+     */
+    java.lang.String getError();
+    /**
+     * <pre>
+     * when a module transitions to unhealthy, this field is populated with the error that caused the transition.
+     * the error persists until the module reenters the Ready state, guaranteed to be nil in the Ready state
+     * </pre>
+     *
+     * <code>string error = 4 [json_name = "error"];</code>
+     * @return The bytes for error.
+     */
+    com.google.protobuf.ByteString
+        getErrorBytes();
+
+    /**
+     * <pre>
+     * number of times this module has entered the unhealthy state since the last time this module was in the ready state
+     * this will increment if the module is in a restart loop (state transitioning between pending and starting repeatedly)
+     * Resets to zero when the module enters the ready state or is reconfigured.
+     * Useful for detecting modules stuck in a restart loop (like a python module with a syntax error)
+     * </pre>
+     *
+     * <code>uint32 consecutive_failures = 5 [json_name = "consecutiveFailures"];</code>
+     * @return The consecutiveFailures.
+     */
+    int getConsecutiveFailures();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.ModuleStatus}
+   */
+  public  static final class ModuleStatus extends
+      com.google.protobuf.GeneratedMessageLite<
+          ModuleStatus, ModuleStatus.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.ModuleStatus)
+      ModuleStatusOrBuilder {
+    private ModuleStatus() {
+      moduleName_ = "";
+      error_ = "";
+    }
+    /**
+     * Protobuf enum {@code viam.robot.v1.ModuleStatus.State}
+     */
+    public enum State
+        implements com.google.protobuf.Internal.EnumLite {
+      /**
+       * <pre>
+       * state is unknown or has not been set yet
+       * </pre>
+       *
+       * <code>STATE_UNSPECIFIED = 0;</code>
+       */
+      STATE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * module is configured but viam-server has not yet attempted to start it
+       * (because e.g. a required package is still downloading)
+       * transitions -&gt; state_starting after pre-setup completes
+       * </pre>
+       *
+       * <code>STATE_PENDING = 1;</code>
+       */
+      STATE_PENDING(1),
+      /**
+       * <pre>
+       * module process has been spawned and viam-server is waiting for it
+       * to send a Ready response and register its models
+       * transitions -&gt; state_ready on success
+       * </pre>
+       *
+       * <code>STATE_STARTING = 2;</code>
+       */
+      STATE_STARTING(2),
+      /**
+       * <pre>
+       * module has sent a Ready response, registered its models, and is running
+       * transitions -&gt; state_unhealthy on bad exit
+       * </pre>
+       *
+       * <code>STATE_READY = 3;</code>
+       */
+      STATE_READY(3),
+      /**
+       * <pre>
+       * module failed to start, exited unexpectedly,
+       * or is being restarted after a crash. any failure in any other state goes to this state
+       * </pre>
+       *
+       * <code>STATE_UNHEALTHY = 4;</code>
+       */
+      STATE_UNHEALTHY(4),
+      /**
+       * <pre>
+       * module process is shutting down, either because the module is being
+       * removed from the machine or because it is restarting during a reconfigure.
+       * on removal the module's status stops being tracked once shutdown completes;
+       * on restart it transitions -&gt; state_starting
+       * </pre>
+       *
+       * <code>STATE_CLOSING = 5;</code>
+       */
+      STATE_CLOSING(5),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * state is unknown or has not been set yet
+       * </pre>
+       *
+       * <code>STATE_UNSPECIFIED = 0;</code>
+       */
+      public static final int STATE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * module is configured but viam-server has not yet attempted to start it
+       * (because e.g. a required package is still downloading)
+       * transitions -&gt; state_starting after pre-setup completes
+       * </pre>
+       *
+       * <code>STATE_PENDING = 1;</code>
+       */
+      public static final int STATE_PENDING_VALUE = 1;
+      /**
+       * <pre>
+       * module process has been spawned and viam-server is waiting for it
+       * to send a Ready response and register its models
+       * transitions -&gt; state_ready on success
+       * </pre>
+       *
+       * <code>STATE_STARTING = 2;</code>
+       */
+      public static final int STATE_STARTING_VALUE = 2;
+      /**
+       * <pre>
+       * module has sent a Ready response, registered its models, and is running
+       * transitions -&gt; state_unhealthy on bad exit
+       * </pre>
+       *
+       * <code>STATE_READY = 3;</code>
+       */
+      public static final int STATE_READY_VALUE = 3;
+      /**
+       * <pre>
+       * module failed to start, exited unexpectedly,
+       * or is being restarted after a crash. any failure in any other state goes to this state
+       * </pre>
+       *
+       * <code>STATE_UNHEALTHY = 4;</code>
+       */
+      public static final int STATE_UNHEALTHY_VALUE = 4;
+      /**
+       * <pre>
+       * module process is shutting down, either because the module is being
+       * removed from the machine or because it is restarting during a reconfigure.
+       * on removal the module's status stops being tracked once shutdown completes;
+       * on restart it transitions -&gt; state_starting
+       * </pre>
+       *
+       * <code>STATE_CLOSING = 5;</code>
+       */
+      public static final int STATE_CLOSING_VALUE = 5;
+
+
+      @java.lang.Override
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static State valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static State forNumber(int value) {
+        switch (value) {
+          case 0: return STATE_UNSPECIFIED;
+          case 1: return STATE_PENDING;
+          case 2: return STATE_STARTING;
+          case 3: return STATE_READY;
+          case 4: return STATE_UNHEALTHY;
+          case 5: return STATE_CLOSING;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<State>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          State> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<State>() {
+              @java.lang.Override
+              public State findValueByNumber(int number) {
+                return State.forNumber(number);
+              }
+            };
+
+      public static com.google.protobuf.Internal.EnumVerifier 
+          internalGetVerifier() {
+        return StateVerifier.INSTANCE;
+      }
+
+      private static final class StateVerifier implements 
+           com.google.protobuf.Internal.EnumVerifier { 
+              static final com.google.protobuf.Internal.EnumVerifier
+                  INSTANCE = new StateVerifier();
+              @java.lang.Override
+              public boolean isInRange(int number) {
+                return State.forNumber(number) != null;
+              }
+            };
+
+      private final int value;
+
+      private State(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:viam.robot.v1.ModuleStatus.State)
+    }
+
+    private int bitField0_;
+    public static final int MODULE_NAME_FIELD_NUMBER = 1;
+    private java.lang.String moduleName_;
+    /**
+     * <code>string module_name = 1 [json_name = "moduleName"];</code>
+     * @return The moduleName.
+     */
+    @java.lang.Override
+    public java.lang.String getModuleName() {
+      return moduleName_;
+    }
+    /**
+     * <code>string module_name = 1 [json_name = "moduleName"];</code>
+     * @return The bytes for moduleName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(moduleName_);
+    }
+    /**
+     * <code>string module_name = 1 [json_name = "moduleName"];</code>
+     * @param value The moduleName to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setModuleName(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      moduleName_ = value;
+    }
+    /**
+     * <code>string module_name = 1 [json_name = "moduleName"];</code>
+     */
+    private void clearModuleName() {
+
+      moduleName_ = getDefaultInstance().getModuleName();
+    }
+    /**
+     * <code>string module_name = 1 [json_name = "moduleName"];</code>
+     * @param value The bytes for moduleName to set.
+     */
+    private void setModuleNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      moduleName_ = value.toStringUtf8();
+
+    }
+
+    public static final int STATE_FIELD_NUMBER = 2;
+    private int state_;
+    /**
+     * <code>.viam.robot.v1.ModuleStatus.State state = 2 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override
+    public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <code>.viam.robot.v1.ModuleStatus.State state = 2 [json_name = "state"];</code>
+     * @return The state.
+     */
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.ModuleStatus.State getState() {
+      com.viam.robot.v1.Robot.ModuleStatus.State result = com.viam.robot.v1.Robot.ModuleStatus.State.forNumber(state_);
+      return result == null ? com.viam.robot.v1.Robot.ModuleStatus.State.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.robot.v1.ModuleStatus.State state = 2 [json_name = "state"];</code>
+     * @param value The enum numeric value on the wire for state to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setStateValue(int value) {
+        state_ = value;
+    }
+    /**
+     * <code>.viam.robot.v1.ModuleStatus.State state = 2 [json_name = "state"];</code>
+     * @param value The state to set.
+     */
+    private void setState(com.viam.robot.v1.Robot.ModuleStatus.State value) {
+      state_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.robot.v1.ModuleStatus.State state = 2 [json_name = "state"];</code>
+     */
+    private void clearState() {
+
+      state_ = 0;
+    }
+
+    public static final int LAST_UPDATED_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp lastUpdated_;
+    /**
+     * <pre>
+     * updated on every state transition
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     */
+    @java.lang.Override
+    public boolean hasLastUpdated() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * updated on every state transition
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastUpdated() {
+      return lastUpdated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdated_;
+    }
+    /**
+     * <pre>
+     * updated on every state transition
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setLastUpdated(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      lastUpdated_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * updated on every state transition
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeLastUpdated(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (lastUpdated_ != null &&
+          lastUpdated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        lastUpdated_ =
+          com.google.protobuf.Timestamp.newBuilder(lastUpdated_).mergeFrom(value).buildPartial();
+      } else {
+        lastUpdated_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * updated on every state transition
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+     */
+    private void clearLastUpdated() {
+      lastUpdated_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 4;
+    private java.lang.String error_;
+    /**
+     * <pre>
+     * when a module transitions to unhealthy, this field is populated with the error that caused the transition.
+     * the error persists until the module reenters the Ready state, guaranteed to be nil in the Ready state
+     * </pre>
+     *
+     * <code>string error = 4 [json_name = "error"];</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public java.lang.String getError() {
+      return error_;
+    }
+    /**
+     * <pre>
+     * when a module transitions to unhealthy, this field is populated with the error that caused the transition.
+     * the error persists until the module reenters the Ready state, guaranteed to be nil in the Ready state
+     * </pre>
+     *
+     * <code>string error = 4 [json_name = "error"];</code>
+     * @return The bytes for error.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(error_);
+    }
+    /**
+     * <pre>
+     * when a module transitions to unhealthy, this field is populated with the error that caused the transition.
+     * the error persists until the module reenters the Ready state, guaranteed to be nil in the Ready state
+     * </pre>
+     *
+     * <code>string error = 4 [json_name = "error"];</code>
+     * @param value The error to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setError(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      error_ = value;
+    }
+    /**
+     * <pre>
+     * when a module transitions to unhealthy, this field is populated with the error that caused the transition.
+     * the error persists until the module reenters the Ready state, guaranteed to be nil in the Ready state
+     * </pre>
+     *
+     * <code>string error = 4 [json_name = "error"];</code>
+     */
+    private void clearError() {
+
+      error_ = getDefaultInstance().getError();
+    }
+    /**
+     * <pre>
+     * when a module transitions to unhealthy, this field is populated with the error that caused the transition.
+     * the error persists until the module reenters the Ready state, guaranteed to be nil in the Ready state
+     * </pre>
+     *
+     * <code>string error = 4 [json_name = "error"];</code>
+     * @param value The bytes for error to set.
+     */
+    private void setErrorBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      error_ = value.toStringUtf8();
+
+    }
+
+    public static final int CONSECUTIVE_FAILURES_FIELD_NUMBER = 5;
+    private int consecutiveFailures_;
+    /**
+     * <pre>
+     * number of times this module has entered the unhealthy state since the last time this module was in the ready state
+     * this will increment if the module is in a restart loop (state transitioning between pending and starting repeatedly)
+     * Resets to zero when the module enters the ready state or is reconfigured.
+     * Useful for detecting modules stuck in a restart loop (like a python module with a syntax error)
+     * </pre>
+     *
+     * <code>uint32 consecutive_failures = 5 [json_name = "consecutiveFailures"];</code>
+     * @return The consecutiveFailures.
+     */
+    @java.lang.Override
+    public int getConsecutiveFailures() {
+      return consecutiveFailures_;
+    }
+    /**
+     * <pre>
+     * number of times this module has entered the unhealthy state since the last time this module was in the ready state
+     * this will increment if the module is in a restart loop (state transitioning between pending and starting repeatedly)
+     * Resets to zero when the module enters the ready state or is reconfigured.
+     * Useful for detecting modules stuck in a restart loop (like a python module with a syntax error)
+     * </pre>
+     *
+     * <code>uint32 consecutive_failures = 5 [json_name = "consecutiveFailures"];</code>
+     * @param value The consecutiveFailures to set.
+     */
+    private void setConsecutiveFailures(int value) {
+      
+      consecutiveFailures_ = value;
+    }
+    /**
+     * <pre>
+     * number of times this module has entered the unhealthy state since the last time this module was in the ready state
+     * this will increment if the module is in a restart loop (state transitioning between pending and starting repeatedly)
+     * Resets to zero when the module enters the ready state or is reconfigured.
+     * Useful for detecting modules stuck in a restart loop (like a python module with a syntax error)
+     * </pre>
+     *
+     * <code>uint32 consecutive_failures = 5 [json_name = "consecutiveFailures"];</code>
+     */
+    private void clearConsecutiveFailures() {
+
+      consecutiveFailures_ = 0;
+    }
+
+    public static com.viam.robot.v1.Robot.ModuleStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ModuleStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ModuleStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ModuleStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ModuleStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.ModuleStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ModuleStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.ModuleStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.ModuleStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.ModuleStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.ModuleStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.ModuleStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.ModuleStatus prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.ModuleStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.ModuleStatus, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.ModuleStatus)
+        com.viam.robot.v1.Robot.ModuleStatusOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.ModuleStatus.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string module_name = 1 [json_name = "moduleName"];</code>
+       * @return The moduleName.
+       */
+      @java.lang.Override
+      public java.lang.String getModuleName() {
+        return instance.getModuleName();
+      }
+      /**
+       * <code>string module_name = 1 [json_name = "moduleName"];</code>
+       * @return The bytes for moduleName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getModuleNameBytes() {
+        return instance.getModuleNameBytes();
+      }
+      /**
+       * <code>string module_name = 1 [json_name = "moduleName"];</code>
+       * @param value The moduleName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setModuleName(value);
+        return this;
+      }
+      /**
+       * <code>string module_name = 1 [json_name = "moduleName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModuleName() {
+        copyOnWrite();
+        instance.clearModuleName();
+        return this;
+      }
+      /**
+       * <code>string module_name = 1 [json_name = "moduleName"];</code>
+       * @param value The bytes for moduleName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setModuleNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.robot.v1.ModuleStatus.State state = 2 [json_name = "state"];</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override
+      public int getStateValue() {
+        return instance.getStateValue();
+      }
+      /**
+       * <code>.viam.robot.v1.ModuleStatus.State state = 2 [json_name = "state"];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        copyOnWrite();
+        instance.setStateValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.robot.v1.ModuleStatus.State state = 2 [json_name = "state"];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.ModuleStatus.State getState() {
+        return instance.getState();
+      }
+      /**
+       * <code>.viam.robot.v1.ModuleStatus.State state = 2 [json_name = "state"];</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.viam.robot.v1.Robot.ModuleStatus.State value) {
+        copyOnWrite();
+        instance.setState(value);
+        return this;
+      }
+      /**
+       * <code>.viam.robot.v1.ModuleStatus.State state = 2 [json_name = "state"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        copyOnWrite();
+        instance.clearState();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * updated on every state transition
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+       */
+      @java.lang.Override
+      public boolean hasLastUpdated() {
+        return instance.hasLastUpdated();
+      }
+      /**
+       * <pre>
+       * updated on every state transition
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getLastUpdated() {
+        return instance.getLastUpdated();
+      }
+      /**
+       * <pre>
+       * updated on every state transition
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+       */
+      public Builder setLastUpdated(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setLastUpdated(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * updated on every state transition
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+       */
+      public Builder setLastUpdated(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLastUpdated(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * updated on every state transition
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+       */
+      public Builder mergeLastUpdated(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeLastUpdated(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * updated on every state transition
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_updated = 3 [json_name = "lastUpdated"];</code>
+       */
+      public Builder clearLastUpdated() {  copyOnWrite();
+        instance.clearLastUpdated();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * when a module transitions to unhealthy, this field is populated with the error that caused the transition.
+       * the error persists until the module reenters the Ready state, guaranteed to be nil in the Ready state
+       * </pre>
+       *
+       * <code>string error = 4 [json_name = "error"];</code>
+       * @return The error.
+       */
+      @java.lang.Override
+      public java.lang.String getError() {
+        return instance.getError();
+      }
+      /**
+       * <pre>
+       * when a module transitions to unhealthy, this field is populated with the error that caused the transition.
+       * the error persists until the module reenters the Ready state, guaranteed to be nil in the Ready state
+       * </pre>
+       *
+       * <code>string error = 4 [json_name = "error"];</code>
+       * @return The bytes for error.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getErrorBytes() {
+        return instance.getErrorBytes();
+      }
+      /**
+       * <pre>
+       * when a module transitions to unhealthy, this field is populated with the error that caused the transition.
+       * the error persists until the module reenters the Ready state, guaranteed to be nil in the Ready state
+       * </pre>
+       *
+       * <code>string error = 4 [json_name = "error"];</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setError(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setError(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * when a module transitions to unhealthy, this field is populated with the error that caused the transition.
+       * the error persists until the module reenters the Ready state, guaranteed to be nil in the Ready state
+       * </pre>
+       *
+       * <code>string error = 4 [json_name = "error"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearError() {
+        copyOnWrite();
+        instance.clearError();
+        return this;
+      }
+      /**
+       * <pre>
+       * when a module transitions to unhealthy, this field is populated with the error that caused the transition.
+       * the error persists until the module reenters the Ready state, guaranteed to be nil in the Ready state
+       * </pre>
+       *
+       * <code>string error = 4 [json_name = "error"];</code>
+       * @param value The bytes for error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setErrorBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * number of times this module has entered the unhealthy state since the last time this module was in the ready state
+       * this will increment if the module is in a restart loop (state transitioning between pending and starting repeatedly)
+       * Resets to zero when the module enters the ready state or is reconfigured.
+       * Useful for detecting modules stuck in a restart loop (like a python module with a syntax error)
+       * </pre>
+       *
+       * <code>uint32 consecutive_failures = 5 [json_name = "consecutiveFailures"];</code>
+       * @return The consecutiveFailures.
+       */
+      @java.lang.Override
+      public int getConsecutiveFailures() {
+        return instance.getConsecutiveFailures();
+      }
+      /**
+       * <pre>
+       * number of times this module has entered the unhealthy state since the last time this module was in the ready state
+       * this will increment if the module is in a restart loop (state transitioning between pending and starting repeatedly)
+       * Resets to zero when the module enters the ready state or is reconfigured.
+       * Useful for detecting modules stuck in a restart loop (like a python module with a syntax error)
+       * </pre>
+       *
+       * <code>uint32 consecutive_failures = 5 [json_name = "consecutiveFailures"];</code>
+       * @param value The consecutiveFailures to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConsecutiveFailures(int value) {
+        copyOnWrite();
+        instance.setConsecutiveFailures(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * number of times this module has entered the unhealthy state since the last time this module was in the ready state
+       * this will increment if the module is in a restart loop (state transitioning between pending and starting repeatedly)
+       * Resets to zero when the module enters the ready state or is reconfigured.
+       * Useful for detecting modules stuck in a restart loop (like a python module with a syntax error)
+       * </pre>
+       *
+       * <code>uint32 consecutive_failures = 5 [json_name = "consecutiveFailures"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConsecutiveFailures() {
+        copyOnWrite();
+        instance.clearConsecutiveFailures();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.ModuleStatus)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.ModuleStatus();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "moduleName_",
+              "state_",
+              "lastUpdated_",
+              "error_",
+              "consecutiveFailures_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\f" +
+                "\u0003\u1009\u0000\u0004\u0208\u0005\u000b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.ModuleStatus> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.ModuleStatus.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.ModuleStatus>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.ModuleStatus)
+    private static final com.viam.robot.v1.Robot.ModuleStatus DEFAULT_INSTANCE;
+    static {
+      ModuleStatus defaultInstance = new ModuleStatus();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ModuleStatus.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.ModuleStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ModuleStatus> PARSER;
+
+    public static com.google.protobuf.Parser<ModuleStatus> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
