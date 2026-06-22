@@ -25908,7 +25908,7 @@ public final class AppOuterClass {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=645
+     *     See app/v1/app.proto;l=653
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -25919,7 +25919,7 @@ public final class AppOuterClass {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=645
+     *     See app/v1/app.proto;l=653
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -25993,7 +25993,7 @@ public final class AppOuterClass {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=645
+     *     See app/v1/app.proto;l=653
      * @return The secret.
      */
     @java.lang.Override
@@ -26007,7 +26007,7 @@ public final class AppOuterClass {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=645
+     *     See app/v1/app.proto;l=653
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -26369,7 +26369,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=645
+       *     See app/v1/app.proto;l=653
        * @return The secret.
        */
       @java.lang.Override
@@ -26383,7 +26383,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=645
+       *     See app/v1/app.proto;l=653
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -26398,7 +26398,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=645
+       *     See app/v1/app.proto;l=653
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -26415,7 +26415,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=645
+       *     See app/v1/app.proto;l=653
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -26430,7 +26430,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=645
+       *     See app/v1/app.proto;l=653
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -43090,7 +43090,7 @@ public final class AppOuterClass {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=876
+     *     See app/v1/app.proto;l=884
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -43304,7 +43304,7 @@ public final class AppOuterClass {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=876
+     *     See app/v1/app.proto;l=884
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -43951,7 +43951,7 @@ public final class AppOuterClass {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=876
+       *     See app/v1/app.proto;l=884
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -43965,7 +43965,7 @@ public final class AppOuterClass {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=876
+       *     See app/v1/app.proto;l=884
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -43981,7 +43981,7 @@ public final class AppOuterClass {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=876
+       *     See app/v1/app.proto;l=884
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
@@ -56483,20 +56483,20 @@ public final class AppOuterClass {
 
     /**
      * <pre>
-     * key-value pairs for fragment variables
+     * Deprecated: use fragment_variables
      * </pre>
      *
-     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
      */
-    int getVariablesCount();
+    @java.lang.Deprecated int getVariablesCount();
     /**
      * <pre>
-     * key-value pairs for fragment variables
+     * Deprecated: use fragment_variables
      * </pre>
      *
-     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
      */
-    boolean containsVariables(
+    @java.lang.Deprecated boolean containsVariables(
         java.lang.String key);
     /**
      * Use {@link #getVariablesMap()} instead.
@@ -56506,21 +56506,21 @@ public final class AppOuterClass {
     getVariables();
     /**
      * <pre>
-     * key-value pairs for fragment variables
+     * Deprecated: use fragment_variables
      * </pre>
      *
-     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
      */
-    java.util.Map<java.lang.String, java.lang.String>
+    @java.lang.Deprecated java.util.Map<java.lang.String, java.lang.String>
     getVariablesMap();
     /**
      * <pre>
-     * key-value pairs for fragment variables
+     * Deprecated: use fragment_variables
      * </pre>
      *
-     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
      */
-
+    @java.lang.Deprecated 
     /* nullable */
 java.lang.String getVariablesOrDefault(
         java.lang.String key,
@@ -56528,14 +56528,25 @@ java.lang.String getVariablesOrDefault(
 java.lang.String defaultValue);
     /**
      * <pre>
-     * key-value pairs for fragment variables
+     * Deprecated: use fragment_variables
      * </pre>
      *
-     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
      */
-
+    @java.lang.Deprecated 
     java.lang.String getVariablesOrThrow(
         java.lang.String key);
+
+    /**
+     * <code>optional .google.protobuf.Struct fragment_variables = 5 [json_name = "fragmentVariables"];</code>
+     * @return Whether the fragmentVariables field is set.
+     */
+    boolean hasFragmentVariables();
+    /**
+     * <code>optional .google.protobuf.Struct fragment_variables = 5 [json_name = "fragmentVariables"];</code>
+     * @return The fragmentVariables.
+     */
+    com.google.protobuf.Struct getFragmentVariables();
   }
   /**
    * Protobuf type {@code viam.app.v1.FragmentImport}
@@ -56773,19 +56784,19 @@ java.lang.String defaultValue);
       return variables_;
     }
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public int getVariablesCount() {
       return internalGetVariables().size();
     }
     /**
      * <pre>
-     * key-value pairs for fragment variables
+     * Deprecated: use fragment_variables
      * </pre>
      *
-     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public boolean containsVariables(
         java.lang.String key) {
       java.lang.Class<?> keyClass = key.getClass();
@@ -56801,26 +56812,26 @@ java.lang.String defaultValue);
     }
     /**
      * <pre>
-     * key-value pairs for fragment variables
+     * Deprecated: use fragment_variables
      * </pre>
      *
-     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public java.util.Map<java.lang.String, java.lang.String> getVariablesMap() {
       return java.util.Collections.unmodifiableMap(
           internalGetVariables());
     }
     /**
      * <pre>
-     * key-value pairs for fragment variables
+     * Deprecated: use fragment_variables
      * </pre>
      *
-     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public /* nullable */
 java.lang.String getVariablesOrDefault(
         java.lang.String key,
@@ -56834,13 +56845,13 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * key-value pairs for fragment variables
+     * Deprecated: use fragment_variables
      * </pre>
      *
-     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public java.lang.String getVariablesOrThrow(
         java.lang.String key) {
       java.lang.Class<?> keyClass = key.getClass();
@@ -56854,14 +56865,62 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * key-value pairs for fragment variables
+     * Deprecated: use fragment_variables
      * </pre>
      *
-     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+     * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
      */
     private java.util.Map<java.lang.String, java.lang.String>
     getMutableVariablesMap() {
       return internalGetMutableVariables();
+    }
+
+    public static final int FRAGMENT_VARIABLES_FIELD_NUMBER = 5;
+    private com.google.protobuf.Struct fragmentVariables_;
+    /**
+     * <code>optional .google.protobuf.Struct fragment_variables = 5 [json_name = "fragmentVariables"];</code>
+     */
+    @java.lang.Override
+    public boolean hasFragmentVariables() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .google.protobuf.Struct fragment_variables = 5 [json_name = "fragmentVariables"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getFragmentVariables() {
+      return fragmentVariables_ == null ? com.google.protobuf.Struct.getDefaultInstance() : fragmentVariables_;
+    }
+    /**
+     * <code>optional .google.protobuf.Struct fragment_variables = 5 [json_name = "fragmentVariables"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setFragmentVariables(com.google.protobuf.Struct value) {
+      value.getClass();  // minimal bytecode null check
+      fragmentVariables_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>optional .google.protobuf.Struct fragment_variables = 5 [json_name = "fragmentVariables"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeFragmentVariables(com.google.protobuf.Struct value) {
+      value.getClass();  // minimal bytecode null check
+      if (fragmentVariables_ != null &&
+          fragmentVariables_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        fragmentVariables_ =
+          com.google.protobuf.Struct.newBuilder(fragmentVariables_).mergeFrom(value).buildPartial();
+      } else {
+        fragmentVariables_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>optional .google.protobuf.Struct fragment_variables = 5 [json_name = "fragmentVariables"];</code>
+     */
+    private void clearFragmentVariables() {
+      fragmentVariables_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.v1.AppOuterClass.FragmentImport parseFrom(
@@ -57161,25 +57220,25 @@ java.lang.String defaultValue) {
       }
 
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public int getVariablesCount() {
         return instance.getVariablesMap().size();
       }
       /**
        * <pre>
-       * key-value pairs for fragment variables
+       * Deprecated: use fragment_variables
        * </pre>
        *
-       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
        */
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public boolean containsVariables(
           java.lang.String key) {
         java.lang.Class<?> keyClass = key.getClass();
         return instance.getVariablesMap().containsKey(key);
       }
-
+      @java.lang.Deprecated 
       public Builder clearVariables() {
         copyOnWrite();
         instance.getMutableVariablesMap().clear();
@@ -57187,12 +57246,12 @@ java.lang.String defaultValue) {
       }
       /**
        * <pre>
-       * key-value pairs for fragment variables
+       * Deprecated: use fragment_variables
        * </pre>
        *
-       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
        */
-
+      @java.lang.Deprecated 
       public Builder removeVariables(
           java.lang.String key) {
         java.lang.Class<?> keyClass = key.getClass();
@@ -57210,25 +57269,25 @@ java.lang.String defaultValue) {
       }
       /**
        * <pre>
-       * key-value pairs for fragment variables
+       * Deprecated: use fragment_variables
        * </pre>
        *
-       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
        */
       @java.lang.Override
-      public java.util.Map<java.lang.String, java.lang.String> getVariablesMap() {
+      @java.lang.Deprecated public java.util.Map<java.lang.String, java.lang.String> getVariablesMap() {
         return java.util.Collections.unmodifiableMap(
             instance.getVariablesMap());
       }
       /**
        * <pre>
-       * key-value pairs for fragment variables
+       * Deprecated: use fragment_variables
        * </pre>
        *
-       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
        */
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public /* nullable */
 java.lang.String getVariablesOrDefault(
           java.lang.String key,
@@ -57241,13 +57300,13 @@ java.lang.String defaultValue) {
       }
       /**
        * <pre>
-       * key-value pairs for fragment variables
+       * Deprecated: use fragment_variables
        * </pre>
        *
-       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
        */
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public java.lang.String getVariablesOrThrow(
           java.lang.String key) {
         java.lang.Class<?> keyClass = key.getClass();
@@ -57260,12 +57319,12 @@ java.lang.String defaultValue) {
       }
       /**
        * <pre>
-       * key-value pairs for fragment variables
+       * Deprecated: use fragment_variables
        * </pre>
        *
-       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
        */
-      public Builder putVariables(
+      @java.lang.Deprecated public Builder putVariables(
           java.lang.String key,
           java.lang.String value) {
         java.lang.Class<?> keyClass = key.getClass();
@@ -57276,15 +57335,62 @@ java.lang.String defaultValue) {
       }
       /**
        * <pre>
-       * key-value pairs for fragment variables
+       * Deprecated: use fragment_variables
        * </pre>
        *
-       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables"];</code>
+       * <code>map&lt;string, string&gt; variables = 4 [json_name = "variables", deprecated = true];</code>
        */
-      public Builder putAllVariables(
+      @java.lang.Deprecated public Builder putAllVariables(
           java.util.Map<java.lang.String, java.lang.String> values) {
         copyOnWrite();
         instance.getMutableVariablesMap().putAll(values);
+        return this;
+      }
+
+      /**
+       * <code>optional .google.protobuf.Struct fragment_variables = 5 [json_name = "fragmentVariables"];</code>
+       */
+      @java.lang.Override
+      public boolean hasFragmentVariables() {
+        return instance.hasFragmentVariables();
+      }
+      /**
+       * <code>optional .google.protobuf.Struct fragment_variables = 5 [json_name = "fragmentVariables"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getFragmentVariables() {
+        return instance.getFragmentVariables();
+      }
+      /**
+       * <code>optional .google.protobuf.Struct fragment_variables = 5 [json_name = "fragmentVariables"];</code>
+       */
+      public Builder setFragmentVariables(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setFragmentVariables(value);
+        return this;
+        }
+      /**
+       * <code>optional .google.protobuf.Struct fragment_variables = 5 [json_name = "fragmentVariables"];</code>
+       */
+      public Builder setFragmentVariables(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFragmentVariables(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>optional .google.protobuf.Struct fragment_variables = 5 [json_name = "fragmentVariables"];</code>
+       */
+      public Builder mergeFragmentVariables(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeFragmentVariables(value);
+        return this;
+      }
+      /**
+       * <code>optional .google.protobuf.Struct fragment_variables = 5 [json_name = "fragmentVariables"];</code>
+       */
+      public Builder clearFragmentVariables() {  copyOnWrite();
+        instance.clearFragmentVariables();
         return this;
       }
 
@@ -57310,10 +57416,11 @@ java.lang.String defaultValue) {
               "prefix_",
               "variables_",
               VariablesDefaultEntryHolder.defaultEntry,
+              "fragmentVariables_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0001\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u1208\u0000\u00042";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0001\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u1208\u0000\u00042\u0005\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -88528,6 +88635,25 @@ java.lang.String defaultValue) {
      * <code>repeated .viam.app.v1.App apps = 7 [json_name = "apps"];</code>
      */
     int getAppsCount();
+
+    /**
+     * <pre>
+     * When set, marks this specific version as deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     * @return Whether the deprecatedStatus field is set.
+     */
+    boolean hasDeprecatedStatus();
+    /**
+     * <pre>
+     * When set, marks this specific version as deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     * @return The deprecatedStatus.
+     */
+    viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus();
   }
   /**
    * Protobuf type {@code viam.app.v1.ModuleVersion}
@@ -89264,6 +89390,74 @@ java.lang.String defaultValue) {
     private void removeApps(int index) {
       ensureAppsIsMutable();
       apps_.remove(index);
+    }
+
+    public static final int DEPRECATED_STATUS_FIELD_NUMBER = 8;
+    private viam.app.v1.AppOuterClass.DeprecatedStatus deprecatedStatus_;
+    /**
+     * <pre>
+     * When set, marks this specific version as deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.Override
+    public boolean hasDeprecatedStatus() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * When set, marks this specific version as deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus() {
+      return deprecatedStatus_ == null ? viam.app.v1.AppOuterClass.DeprecatedStatus.getDefaultInstance() : deprecatedStatus_;
+    }
+    /**
+     * <pre>
+     * When set, marks this specific version as deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+      value.getClass();  // minimal bytecode null check
+      deprecatedStatus_ = value;
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * When set, marks this specific version as deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+      value.getClass();  // minimal bytecode null check
+      if (deprecatedStatus_ != null &&
+          deprecatedStatus_ != viam.app.v1.AppOuterClass.DeprecatedStatus.getDefaultInstance()) {
+        deprecatedStatus_ =
+          viam.app.v1.AppOuterClass.DeprecatedStatus.newBuilder(deprecatedStatus_).mergeFrom(value).buildPartial();
+      } else {
+        deprecatedStatus_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * When set, marks this specific version as deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     */
+    private void clearDeprecatedStatus() {
+      deprecatedStatus_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static viam.app.v1.AppOuterClass.ModuleVersion parseFrom(
@@ -90113,6 +90307,77 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * When set, marks this specific version as deprecated
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+       */
+      @java.lang.Override
+      public boolean hasDeprecatedStatus() {
+        return instance.hasDeprecatedStatus();
+      }
+      /**
+       * <pre>
+       * When set, marks this specific version as deprecated
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus() {
+        return instance.getDeprecatedStatus();
+      }
+      /**
+       * <pre>
+       * When set, marks this specific version as deprecated
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder setDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+        copyOnWrite();
+        instance.setDeprecatedStatus(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * When set, marks this specific version as deprecated
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder setDeprecatedStatus(
+          viam.app.v1.AppOuterClass.DeprecatedStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDeprecatedStatus(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * When set, marks this specific version as deprecated
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder mergeDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+        copyOnWrite();
+        instance.mergeDeprecatedStatus(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * When set, marks this specific version as deprecated
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder clearDeprecatedStatus() {  copyOnWrite();
+        instance.clearDeprecatedStatus();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ModuleVersion)
     }
     @java.lang.Override
@@ -90140,10 +90405,11 @@ java.lang.String defaultValue) {
               "markdownDescription_",
               "apps_",
               viam.app.v1.AppOuterClass.App.class,
+              "deprecatedStatus_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0003\u0000\u0001\u0208\u0002\u001b" +
-                "\u0003\u001b\u0004\u0208\u0005\u1208\u0000\u0006\u1208\u0001\u0007\u001b";
+                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0003\u0000\u0001\u0208\u0002\u001b\u0003\u001b" +
+                "\u0004\u0208\u0005\u1208\u0000\u0006\u1208\u0001\u0007\u001b\b\u1009\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -92697,7 +92963,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1434
+     *     See app/v1/app.proto;l=1446
      * @return A list containing the versions.
      */
     @java.lang.Deprecated java.util.List<java.lang.String>
@@ -92709,7 +92975,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1434
+     *     See app/v1/app.proto;l=1446
      * @return The count of versions.
      */
     @java.lang.Deprecated int getVersionsCount();
@@ -92720,7 +92986,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1434
+     *     See app/v1/app.proto;l=1446
      * @param index The index of the element to return.
      * @return The versions at the given index.
      */
@@ -92732,7 +92998,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1434
+     *     See app/v1/app.proto;l=1446
      * @param index The index of the element to return.
      * @return The versions at the given index.
      */
@@ -92796,7 +93062,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1434
+     *     See app/v1/app.proto;l=1446
      * @return A list containing the versions.
      */
     @java.lang.Override
@@ -92810,7 +93076,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1434
+     *     See app/v1/app.proto;l=1446
      * @return The count of versions.
      */
     @java.lang.Override
@@ -92824,7 +93090,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1434
+     *     See app/v1/app.proto;l=1446
      * @param index The index of the element to return.
      * @return The versions at the given index.
      */
@@ -92839,7 +93105,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1434
+     *     See app/v1/app.proto;l=1446
      * @param index The index of the value to return.
      * @return The bytes of the versions at the given index.
      */
@@ -93213,7 +93479,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1434
+       *     See app/v1/app.proto;l=1446
        * @return A list containing the versions.
        */
       @java.lang.Override
@@ -93229,7 +93495,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1434
+       *     See app/v1/app.proto;l=1446
        * @return The count of versions.
        */
       @java.lang.Override
@@ -93243,7 +93509,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1434
+       *     See app/v1/app.proto;l=1446
        * @param index The index of the element to return.
        * @return The versions at the given index.
        */
@@ -93258,7 +93524,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1434
+       *     See app/v1/app.proto;l=1446
        * @param index The index of the value to return.
        * @return The bytes of the versions at the given index.
        */
@@ -93274,7 +93540,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1434
+       *     See app/v1/app.proto;l=1446
        * @param index The index to set the value at.
        * @param value The versions to set.
        * @return This builder for chaining.
@@ -93292,7 +93558,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1434
+       *     See app/v1/app.proto;l=1446
        * @param value The versions to add.
        * @return This builder for chaining.
        */
@@ -93309,7 +93575,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1434
+       *     See app/v1/app.proto;l=1446
        * @param values The versions to add.
        * @return This builder for chaining.
        */
@@ -93326,7 +93592,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1434
+       *     See app/v1/app.proto;l=1446
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearVersions() {
@@ -93341,7 +93607,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1434
+       *     See app/v1/app.proto;l=1446
        * @param value The bytes of the versions to add.
        * @return This builder for chaining.
        */
@@ -94802,6 +95068,521 @@ java.lang.String defaultValue) {
     }
   }
 
+  public interface DeprecatedStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.DeprecatedStatus)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * time of deprecation
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deprecated_at = 1 [json_name = "deprecatedAt"];</code>
+     * @return Whether the deprecatedAt field is set.
+     */
+    boolean hasDeprecatedAt();
+    /**
+     * <pre>
+     * time of deprecation
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deprecated_at = 1 [json_name = "deprecatedAt"];</code>
+     * @return The deprecatedAt.
+     */
+    com.google.protobuf.Timestamp getDeprecatedAt();
+
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+  }
+  /**
+   * <pre>
+   * note: current project will only support deprecation of modules;
+   * Training Script and ML Model aren't supported yet.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.v1.DeprecatedStatus}
+   */
+  public  static final class DeprecatedStatus extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeprecatedStatus, DeprecatedStatus.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.DeprecatedStatus)
+      DeprecatedStatusOrBuilder {
+    private DeprecatedStatus() {
+      message_ = "";
+    }
+    private int bitField0_;
+    public static final int DEPRECATED_AT_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp deprecatedAt_;
+    /**
+     * <pre>
+     * time of deprecation
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deprecated_at = 1 [json_name = "deprecatedAt"];</code>
+     */
+    @java.lang.Override
+    public boolean hasDeprecatedAt() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * time of deprecation
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deprecated_at = 1 [json_name = "deprecatedAt"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDeprecatedAt() {
+      return deprecatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deprecatedAt_;
+    }
+    /**
+     * <pre>
+     * time of deprecation
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deprecated_at = 1 [json_name = "deprecatedAt"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDeprecatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      deprecatedAt_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * time of deprecation
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deprecated_at = 1 [json_name = "deprecatedAt"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeDeprecatedAt(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (deprecatedAt_ != null &&
+          deprecatedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        deprecatedAt_ =
+          com.google.protobuf.Timestamp.newBuilder(deprecatedAt_).mergeFrom(value).buildPartial();
+      } else {
+        deprecatedAt_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * time of deprecation
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deprecated_at = 1 [json_name = "deprecatedAt"];</code>
+     */
+    private void clearDeprecatedAt() {
+      deprecatedAt_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private java.lang.String message_;
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      return message_;
+    }
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(message_);
+    }
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @param value The message to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMessage(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      message_ = value;
+    }
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 2 [json_name = "message"];</code>
+     */
+    private void clearMessage() {
+
+      message_ = getDefaultInstance().getMessage();
+    }
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @param value The bytes for message to set.
+     */
+    private void setMessageBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      message_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecatedStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecatedStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecatedStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecatedStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecatedStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecatedStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecatedStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecatedStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecatedStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecatedStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecatedStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecatedStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.DeprecatedStatus prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * note: current project will only support deprecation of modules;
+     * Training Script and ML Model aren't supported yet.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.v1.DeprecatedStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.DeprecatedStatus, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.DeprecatedStatus)
+        viam.app.v1.AppOuterClass.DeprecatedStatusOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.DeprecatedStatus.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * time of deprecation
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deprecated_at = 1 [json_name = "deprecatedAt"];</code>
+       */
+      @java.lang.Override
+      public boolean hasDeprecatedAt() {
+        return instance.hasDeprecatedAt();
+      }
+      /**
+       * <pre>
+       * time of deprecation
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deprecated_at = 1 [json_name = "deprecatedAt"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getDeprecatedAt() {
+        return instance.getDeprecatedAt();
+      }
+      /**
+       * <pre>
+       * time of deprecation
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deprecated_at = 1 [json_name = "deprecatedAt"];</code>
+       */
+      public Builder setDeprecatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setDeprecatedAt(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * time of deprecation
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deprecated_at = 1 [json_name = "deprecatedAt"];</code>
+       */
+      public Builder setDeprecatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDeprecatedAt(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * time of deprecation
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deprecated_at = 1 [json_name = "deprecatedAt"];</code>
+       */
+      public Builder mergeDeprecatedAt(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeDeprecatedAt(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * time of deprecation
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deprecated_at = 1 [json_name = "deprecatedAt"];</code>
+       */
+      public Builder clearDeprecatedAt() {  copyOnWrite();
+        instance.clearDeprecatedAt();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * msg explaining reason for deprecation
+       * </pre>
+       *
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return The message.
+       */
+      @java.lang.Override
+      public java.lang.String getMessage() {
+        return instance.getMessage();
+      }
+      /**
+       * <pre>
+       * msg explaining reason for deprecation
+       * </pre>
+       *
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return The bytes for message.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        return instance.getMessageBytes();
+      }
+      /**
+       * <pre>
+       * msg explaining reason for deprecation
+       * </pre>
+       *
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMessage(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * msg explaining reason for deprecation
+       * </pre>
+       *
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        copyOnWrite();
+        instance.clearMessage();
+        return this;
+      }
+      /**
+       * <pre>
+       * msg explaining reason for deprecation
+       * </pre>
+       *
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMessageBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.DeprecatedStatus)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.DeprecatedStatus();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "deprecatedAt_",
+              "message_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.DeprecatedStatus> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.DeprecatedStatus.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.DeprecatedStatus>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.DeprecatedStatus)
+    private static final viam.app.v1.AppOuterClass.DeprecatedStatus DEFAULT_INSTANCE;
+    static {
+      DeprecatedStatus defaultInstance = new DeprecatedStatus();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeprecatedStatus.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecatedStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeprecatedStatus> PARSER;
+
+    public static com.google.protobuf.Parser<DeprecatedStatus> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface RegistryItemOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.RegistryItem)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -95080,6 +95861,25 @@ java.lang.String defaultValue) {
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
+
+    /**
+     * <pre>
+     * Whether the item is deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 17 [json_name = "deprecatedStatus"];</code>
+     * @return Whether the deprecatedStatus field is set.
+     */
+    boolean hasDeprecatedStatus();
+    /**
+     * <pre>
+     * Whether the item is deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 17 [json_name = "deprecatedStatus"];</code>
+     * @return The deprecatedStatus.
+     */
+    viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus();
 
     public viam.app.v1.AppOuterClass.RegistryItem.MetadataCase getMetadataCase();
   }
@@ -96137,6 +96937,74 @@ java.lang.String defaultValue) {
     private void clearUpdatedAt() {
       updatedAt_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int DEPRECATED_STATUS_FIELD_NUMBER = 17;
+    private viam.app.v1.AppOuterClass.DeprecatedStatus deprecatedStatus_;
+    /**
+     * <pre>
+     * Whether the item is deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 17 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.Override
+    public boolean hasDeprecatedStatus() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Whether the item is deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 17 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus() {
+      return deprecatedStatus_ == null ? viam.app.v1.AppOuterClass.DeprecatedStatus.getDefaultInstance() : deprecatedStatus_;
+    }
+    /**
+     * <pre>
+     * Whether the item is deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 17 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+      value.getClass();  // minimal bytecode null check
+      deprecatedStatus_ = value;
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * Whether the item is deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 17 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+      value.getClass();  // minimal bytecode null check
+      if (deprecatedStatus_ != null &&
+          deprecatedStatus_ != viam.app.v1.AppOuterClass.DeprecatedStatus.getDefaultInstance()) {
+        deprecatedStatus_ =
+          viam.app.v1.AppOuterClass.DeprecatedStatus.newBuilder(deprecatedStatus_).mergeFrom(value).buildPartial();
+      } else {
+        deprecatedStatus_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * Whether the item is deprecated
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 17 [json_name = "deprecatedStatus"];</code>
+     */
+    private void clearDeprecatedStatus() {
+      deprecatedStatus_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static viam.app.v1.AppOuterClass.RegistryItem parseFrom(
@@ -97257,6 +98125,77 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * Whether the item is deprecated
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 17 [json_name = "deprecatedStatus"];</code>
+       */
+      @java.lang.Override
+      public boolean hasDeprecatedStatus() {
+        return instance.hasDeprecatedStatus();
+      }
+      /**
+       * <pre>
+       * Whether the item is deprecated
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 17 [json_name = "deprecatedStatus"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus() {
+        return instance.getDeprecatedStatus();
+      }
+      /**
+       * <pre>
+       * Whether the item is deprecated
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 17 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder setDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+        copyOnWrite();
+        instance.setDeprecatedStatus(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Whether the item is deprecated
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 17 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder setDeprecatedStatus(
+          viam.app.v1.AppOuterClass.DeprecatedStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDeprecatedStatus(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the item is deprecated
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 17 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder mergeDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+        copyOnWrite();
+        instance.mergeDeprecatedStatus(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the item is deprecated
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 17 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder clearDeprecatedStatus() {  copyOnWrite();
+        instance.clearDeprecatedStatus();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RegistryItem)
     }
     @java.lang.Override
@@ -97292,13 +98231,14 @@ java.lang.String defaultValue) {
               "totalExternalOrganizationUsage_",
               "createdAt_",
               "updatedAt_",
+              "deprecatedStatus_",
               viam.app.v1.AppOuterClass.MLTrainingMetadata.class,
             };
             java.lang.String info =
-                "\u0000\u0011\u0001\u0001\u0001\u0012\u0011\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0000\u0012\u0001\u0001\u0001\u0012\u0012\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
                 "\u0003\u0208\u0004\u0208\u0005\f\u0006\f\u0007\u0208\b\u0208\t\u0002\n\u0002\u000b" +
-                "<\u0000\f<\u0000\r\u0002\u000e\u0002\u000f\u1009\u0000\u0010\u1009\u0001\u0012<\u0000" +
-                "";
+                "<\u0000\f<\u0000\r\u0002\u000e\u0002\u000f\u1009\u0000\u0010\u1009\u0001\u0011\u1009" +
+                "\u0002\u0012<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -100608,6 +101548,17 @@ java.lang.String defaultValue) {
      * @return The enum numeric value on the wire of moduleLanguages at the given index.
      */
     int getModuleLanguagesValue(int index);
+
+    /**
+     * <code>optional bool show_owned_deprecated = 12 [json_name = "showOwnedDeprecated"];</code>
+     * @return Whether the showOwnedDeprecated field is set.
+     */
+    boolean hasShowOwnedDeprecated();
+    /**
+     * <code>optional bool show_owned_deprecated = 12 [json_name = "showOwnedDeprecated"];</code>
+     * @return The showOwnedDeprecated.
+     */
+    boolean getShowOwnedDeprecated();
   }
   /**
    * Protobuf type {@code viam.app.v1.ListRegistryItemsRequest}
@@ -101760,6 +102711,40 @@ java.lang.String defaultValue) {
       for (int value : values) {
         moduleLanguages_.addInt(value);
       }
+    }
+
+    public static final int SHOW_OWNED_DEPRECATED_FIELD_NUMBER = 12;
+    private boolean showOwnedDeprecated_;
+    /**
+     * <code>optional bool show_owned_deprecated = 12 [json_name = "showOwnedDeprecated"];</code>
+     * @return Whether the showOwnedDeprecated field is set.
+     */
+    @java.lang.Override
+    public boolean hasShowOwnedDeprecated() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional bool show_owned_deprecated = 12 [json_name = "showOwnedDeprecated"];</code>
+     * @return The showOwnedDeprecated.
+     */
+    @java.lang.Override
+    public boolean getShowOwnedDeprecated() {
+      return showOwnedDeprecated_;
+    }
+    /**
+     * <code>optional bool show_owned_deprecated = 12 [json_name = "showOwnedDeprecated"];</code>
+     * @param value The showOwnedDeprecated to set.
+     */
+    private void setShowOwnedDeprecated(boolean value) {
+      bitField0_ |= 0x00000010;
+      showOwnedDeprecated_ = value;
+    }
+    /**
+     * <code>optional bool show_owned_deprecated = 12 [json_name = "showOwnedDeprecated"];</code>
+     */
+    private void clearShowOwnedDeprecated() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      showOwnedDeprecated_ = false;
     }
 
     public static viam.app.v1.AppOuterClass.ListRegistryItemsRequest parseFrom(
@@ -102915,6 +103900,42 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <code>optional bool show_owned_deprecated = 12 [json_name = "showOwnedDeprecated"];</code>
+       * @return Whether the showOwnedDeprecated field is set.
+       */
+      @java.lang.Override
+      public boolean hasShowOwnedDeprecated() {
+        return instance.hasShowOwnedDeprecated();
+      }
+      /**
+       * <code>optional bool show_owned_deprecated = 12 [json_name = "showOwnedDeprecated"];</code>
+       * @return The showOwnedDeprecated.
+       */
+      @java.lang.Override
+      public boolean getShowOwnedDeprecated() {
+        return instance.getShowOwnedDeprecated();
+      }
+      /**
+       * <code>optional bool show_owned_deprecated = 12 [json_name = "showOwnedDeprecated"];</code>
+       * @param value The showOwnedDeprecated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShowOwnedDeprecated(boolean value) {
+        copyOnWrite();
+        instance.setShowOwnedDeprecated(value);
+        return this;
+      }
+      /**
+       * <code>optional bool show_owned_deprecated = 12 [json_name = "showOwnedDeprecated"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShowOwnedDeprecated() {
+        copyOnWrite();
+        instance.clearShowOwnedDeprecated();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ListRegistryItemsRequest)
     }
     @java.lang.Override
@@ -102943,11 +103964,12 @@ java.lang.String defaultValue) {
               "includeMarkdownDocumentation_",
               "moduleSourceTypes_",
               "moduleLanguages_",
+              "showOwnedDeprecated_",
             };
             java.lang.String info =
-                "\u0000\u000b\u0000\u0001\u0001\u000b\u000b\u0000\u0007\u0000\u0001\u1208\u0000\u0002" +
-                ",\u0003,\u0004\u021a\u0005,\u0006\u1208\u0001\u0007\u1208\u0002\b\u021a\t\u1007\u0003" +
-                "\n,\u000b,";
+                "\u0000\f\u0000\u0001\u0001\f\f\u0000\u0007\u0000\u0001\u1208\u0000\u0002,\u0003," +
+                "\u0004\u021a\u0005,\u0006\u1208\u0001\u0007\u1208\u0002\b\u021a\t\u1007\u0003\n," +
+                "\u000b,\f\u1007\u0004";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -105214,6 +106236,1074 @@ java.lang.String defaultValue) {
     private static volatile com.google.protobuf.Parser<TransferRegistryItemResponse> PARSER;
 
     public static com.google.protobuf.Parser<TransferRegistryItemResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeprecateRegistryItemRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.DeprecateRegistryItemRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The itemId.
+     */
+    java.lang.String getItemId();
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The bytes for itemId.
+     */
+    com.google.protobuf.ByteString
+        getItemIdBytes();
+
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.DeprecateRegistryItemRequest}
+   */
+  public  static final class DeprecateRegistryItemRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeprecateRegistryItemRequest, DeprecateRegistryItemRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.DeprecateRegistryItemRequest)
+      DeprecateRegistryItemRequestOrBuilder {
+    private DeprecateRegistryItemRequest() {
+      itemId_ = "";
+      message_ = "";
+    }
+    public static final int ITEM_ID_FIELD_NUMBER = 1;
+    private java.lang.String itemId_;
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The itemId.
+     */
+    @java.lang.Override
+    public java.lang.String getItemId() {
+      return itemId_;
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The bytes for itemId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getItemIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(itemId_);
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @param value The itemId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setItemId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      itemId_ = value;
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     */
+    private void clearItemId() {
+
+      itemId_ = getDefaultInstance().getItemId();
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @param value The bytes for itemId to set.
+     */
+    private void setItemIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      itemId_ = value.toStringUtf8();
+
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private java.lang.String message_;
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      return message_;
+    }
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(message_);
+    }
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @param value The message to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMessage(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      message_ = value;
+    }
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     */
+    private void clearMessage() {
+
+      message_ = getDefaultInstance().getMessage();
+    }
+    /**
+     * <code>string message = 2 [json_name = "message"];</code>
+     * @param value The bytes for message to set.
+     */
+    private void setMessageBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      message_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.DeprecateRegistryItemRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.DeprecateRegistryItemRequest)
+        viam.app.v1.AppOuterClass.DeprecateRegistryItemRequestOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return The itemId.
+       */
+      @java.lang.Override
+      public java.lang.String getItemId() {
+        return instance.getItemId();
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return The bytes for itemId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getItemIdBytes() {
+        return instance.getItemIdBytes();
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @param value The itemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setItemId(value);
+        return this;
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearItemId() {
+        copyOnWrite();
+        instance.clearItemId();
+        return this;
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @param value The bytes for itemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setItemIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return The message.
+       */
+      @java.lang.Override
+      public java.lang.String getMessage() {
+        return instance.getMessage();
+      }
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return The bytes for message.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        return instance.getMessageBytes();
+      }
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMessage(value);
+        return this;
+      }
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        copyOnWrite();
+        instance.clearMessage();
+        return this;
+      }
+      /**
+       * <code>string message = 2 [json_name = "message"];</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMessageBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.DeprecateRegistryItemRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "itemId_",
+              "message_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.DeprecateRegistryItemRequest)
+    private static final viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest DEFAULT_INSTANCE;
+    static {
+      DeprecateRegistryItemRequest defaultInstance = new DeprecateRegistryItemRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeprecateRegistryItemRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeprecateRegistryItemRequest> PARSER;
+
+    public static com.google.protobuf.Parser<DeprecateRegistryItemRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeprecateRegistryItemResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.DeprecateRegistryItemResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.DeprecateRegistryItemResponse}
+   */
+  public  static final class DeprecateRegistryItemResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeprecateRegistryItemResponse, DeprecateRegistryItemResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.DeprecateRegistryItemResponse)
+      DeprecateRegistryItemResponseOrBuilder {
+    private DeprecateRegistryItemResponse() {
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.DeprecateRegistryItemResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.DeprecateRegistryItemResponse)
+        viam.app.v1.AppOuterClass.DeprecateRegistryItemResponseOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.DeprecateRegistryItemResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.DeprecateRegistryItemResponse)
+    private static final viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse DEFAULT_INSTANCE;
+    static {
+      DeprecateRegistryItemResponse defaultInstance = new DeprecateRegistryItemResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeprecateRegistryItemResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeprecateRegistryItemResponse> PARSER;
+
+    public static com.google.protobuf.Parser<DeprecateRegistryItemResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UndeprecateRegistryItemRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UndeprecateRegistryItemRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The itemId.
+     */
+    java.lang.String getItemId();
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The bytes for itemId.
+     */
+    com.google.protobuf.ByteString
+        getItemIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UndeprecateRegistryItemRequest}
+   */
+  public  static final class UndeprecateRegistryItemRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UndeprecateRegistryItemRequest, UndeprecateRegistryItemRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UndeprecateRegistryItemRequest)
+      UndeprecateRegistryItemRequestOrBuilder {
+    private UndeprecateRegistryItemRequest() {
+      itemId_ = "";
+    }
+    public static final int ITEM_ID_FIELD_NUMBER = 1;
+    private java.lang.String itemId_;
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The itemId.
+     */
+    @java.lang.Override
+    public java.lang.String getItemId() {
+      return itemId_;
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The bytes for itemId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getItemIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(itemId_);
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @param value The itemId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setItemId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      itemId_ = value;
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     */
+    private void clearItemId() {
+
+      itemId_ = getDefaultInstance().getItemId();
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @param value The bytes for itemId to set.
+     */
+    private void setItemIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      itemId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UndeprecateRegistryItemRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UndeprecateRegistryItemRequest)
+        viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequestOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return The itemId.
+       */
+      @java.lang.Override
+      public java.lang.String getItemId() {
+        return instance.getItemId();
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return The bytes for itemId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getItemIdBytes() {
+        return instance.getItemIdBytes();
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @param value The itemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setItemId(value);
+        return this;
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearItemId() {
+        copyOnWrite();
+        instance.clearItemId();
+        return this;
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @param value The bytes for itemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setItemIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UndeprecateRegistryItemRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "itemId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UndeprecateRegistryItemRequest)
+    private static final viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest DEFAULT_INSTANCE;
+    static {
+      UndeprecateRegistryItemRequest defaultInstance = new UndeprecateRegistryItemRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UndeprecateRegistryItemRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UndeprecateRegistryItemRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UndeprecateRegistryItemRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UndeprecateRegistryItemResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UndeprecateRegistryItemResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UndeprecateRegistryItemResponse}
+   */
+  public  static final class UndeprecateRegistryItemResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UndeprecateRegistryItemResponse, UndeprecateRegistryItemResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UndeprecateRegistryItemResponse)
+      UndeprecateRegistryItemResponseOrBuilder {
+    private UndeprecateRegistryItemResponse() {
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UndeprecateRegistryItemResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UndeprecateRegistryItemResponse)
+        viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponseOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UndeprecateRegistryItemResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UndeprecateRegistryItemResponse)
+    private static final viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse DEFAULT_INSTANCE;
+    static {
+      UndeprecateRegistryItemResponse defaultInstance = new UndeprecateRegistryItemResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UndeprecateRegistryItemResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UndeprecateRegistryItemResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UndeprecateRegistryItemResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -116809,6 +118899,25 @@ java.lang.String defaultValue) {
      * <code>repeated .viam.app.v1.App apps = 15 [json_name = "apps"];</code>
      */
     int getAppsCount();
+
+    /**
+     * <pre>
+     * Deprecated status of an individual module
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 16 [json_name = "deprecatedStatus"];</code>
+     * @return Whether the deprecatedStatus field is set.
+     */
+    boolean hasDeprecatedStatus();
+    /**
+     * <pre>
+     * Deprecated status of an individual module
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 16 [json_name = "deprecatedStatus"];</code>
+     * @return The deprecatedStatus.
+     */
+    viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus();
   }
   /**
    * Protobuf type {@code viam.app.v1.Module}
@@ -118045,6 +120154,74 @@ java.lang.String defaultValue) {
     private void removeApps(int index) {
       ensureAppsIsMutable();
       apps_.remove(index);
+    }
+
+    public static final int DEPRECATED_STATUS_FIELD_NUMBER = 16;
+    private viam.app.v1.AppOuterClass.DeprecatedStatus deprecatedStatus_;
+    /**
+     * <pre>
+     * Deprecated status of an individual module
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 16 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.Override
+    public boolean hasDeprecatedStatus() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Deprecated status of an individual module
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 16 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus() {
+      return deprecatedStatus_ == null ? viam.app.v1.AppOuterClass.DeprecatedStatus.getDefaultInstance() : deprecatedStatus_;
+    }
+    /**
+     * <pre>
+     * Deprecated status of an individual module
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 16 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+      value.getClass();  // minimal bytecode null check
+      deprecatedStatus_ = value;
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * Deprecated status of an individual module
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 16 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+      value.getClass();  // minimal bytecode null check
+      if (deprecatedStatus_ != null &&
+          deprecatedStatus_ != viam.app.v1.AppOuterClass.DeprecatedStatus.getDefaultInstance()) {
+        deprecatedStatus_ =
+          viam.app.v1.AppOuterClass.DeprecatedStatus.newBuilder(deprecatedStatus_).mergeFrom(value).buildPartial();
+      } else {
+        deprecatedStatus_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * Deprecated status of an individual module
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 16 [json_name = "deprecatedStatus"];</code>
+     */
+    private void clearDeprecatedStatus() {
+      deprecatedStatus_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static viam.app.v1.AppOuterClass.Module parseFrom(
@@ -119403,6 +121580,77 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * Deprecated status of an individual module
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 16 [json_name = "deprecatedStatus"];</code>
+       */
+      @java.lang.Override
+      public boolean hasDeprecatedStatus() {
+        return instance.hasDeprecatedStatus();
+      }
+      /**
+       * <pre>
+       * Deprecated status of an individual module
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 16 [json_name = "deprecatedStatus"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus() {
+        return instance.getDeprecatedStatus();
+      }
+      /**
+       * <pre>
+       * Deprecated status of an individual module
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 16 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder setDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+        copyOnWrite();
+        instance.setDeprecatedStatus(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Deprecated status of an individual module
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 16 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder setDeprecatedStatus(
+          viam.app.v1.AppOuterClass.DeprecatedStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDeprecatedStatus(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Deprecated status of an individual module
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 16 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder mergeDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+        copyOnWrite();
+        instance.mergeDeprecatedStatus(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Deprecated status of an individual module
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 16 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder clearDeprecatedStatus() {  copyOnWrite();
+        instance.clearDeprecatedStatus();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.Module)
     }
     @java.lang.Override
@@ -119438,11 +121686,13 @@ java.lang.String defaultValue) {
               "markdownDescription_",
               "apps_",
               viam.app.v1.AppOuterClass.App.class,
+              "deprecatedStatus_",
             };
             java.lang.String info =
-                "\u0000\u000f\u0000\u0001\u0001\u000f\u000f\u0000\u0003\u0000\u0001\u0208\u0002\u0208" +
+                "\u0000\u0010\u0000\u0001\u0001\u0010\u0010\u0000\u0003\u0000\u0001\u0208\u0002\u0208" +
                 "\u0003\f\u0004\u001b\u0005\u0208\u0006\u0208\u0007\u001b\b\u0002\t\u0002\n\u0208" +
-                "\u000b\u0208\f\u0208\r\u1208\u0000\u000e\u1208\u0001\u000f\u001b";
+                "\u000b\u0208\f\u0208\r\u1208\u0000\u000e\u1208\u0001\u000f\u001b\u0010\u1009\u0002" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -119676,6 +121926,25 @@ java.lang.String defaultValue) {
      * <code>repeated .viam.app.v1.App apps = 7 [json_name = "apps"];</code>
      */
     int getAppsCount();
+
+    /**
+     * <pre>
+     * Deprecated status of an individual module version
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     * @return Whether the deprecatedStatus field is set.
+     */
+    boolean hasDeprecatedStatus();
+    /**
+     * <pre>
+     * Deprecated status of an individual module version
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     * @return The deprecatedStatus.
+     */
+    viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus();
   }
   /**
    * Protobuf type {@code viam.app.v1.VersionHistory}
@@ -120412,6 +122681,74 @@ java.lang.String defaultValue) {
     private void removeApps(int index) {
       ensureAppsIsMutable();
       apps_.remove(index);
+    }
+
+    public static final int DEPRECATED_STATUS_FIELD_NUMBER = 8;
+    private viam.app.v1.AppOuterClass.DeprecatedStatus deprecatedStatus_;
+    /**
+     * <pre>
+     * Deprecated status of an individual module version
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.Override
+    public boolean hasDeprecatedStatus() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Deprecated status of an individual module version
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus() {
+      return deprecatedStatus_ == null ? viam.app.v1.AppOuterClass.DeprecatedStatus.getDefaultInstance() : deprecatedStatus_;
+    }
+    /**
+     * <pre>
+     * Deprecated status of an individual module version
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+      value.getClass();  // minimal bytecode null check
+      deprecatedStatus_ = value;
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * Deprecated status of an individual module version
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+      value.getClass();  // minimal bytecode null check
+      if (deprecatedStatus_ != null &&
+          deprecatedStatus_ != viam.app.v1.AppOuterClass.DeprecatedStatus.getDefaultInstance()) {
+        deprecatedStatus_ =
+          viam.app.v1.AppOuterClass.DeprecatedStatus.newBuilder(deprecatedStatus_).mergeFrom(value).buildPartial();
+      } else {
+        deprecatedStatus_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * Deprecated status of an individual module version
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+     */
+    private void clearDeprecatedStatus() {
+      deprecatedStatus_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static viam.app.v1.AppOuterClass.VersionHistory parseFrom(
@@ -121261,6 +123598,77 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * Deprecated status of an individual module version
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+       */
+      @java.lang.Override
+      public boolean hasDeprecatedStatus() {
+        return instance.hasDeprecatedStatus();
+      }
+      /**
+       * <pre>
+       * Deprecated status of an individual module version
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus() {
+        return instance.getDeprecatedStatus();
+      }
+      /**
+       * <pre>
+       * Deprecated status of an individual module version
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder setDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+        copyOnWrite();
+        instance.setDeprecatedStatus(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Deprecated status of an individual module version
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder setDeprecatedStatus(
+          viam.app.v1.AppOuterClass.DeprecatedStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.setDeprecatedStatus(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Deprecated status of an individual module version
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder mergeDeprecatedStatus(viam.app.v1.AppOuterClass.DeprecatedStatus value) {
+        copyOnWrite();
+        instance.mergeDeprecatedStatus(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Deprecated status of an individual module version
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.DeprecatedStatus deprecated_status = 8 [json_name = "deprecatedStatus"];</code>
+       */
+      public Builder clearDeprecatedStatus() {  copyOnWrite();
+        instance.clearDeprecatedStatus();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.VersionHistory)
     }
     @java.lang.Override
@@ -121288,10 +123696,11 @@ java.lang.String defaultValue) {
               "markdownDescription_",
               "apps_",
               viam.app.v1.AppOuterClass.App.class,
+              "deprecatedStatus_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0003\u0000\u0001\u0208\u0002\u001b" +
-                "\u0003\u001b\u0004\u0208\u0005\u1208\u0000\u0006\u1208\u0001\u0007\u001b";
+                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0003\u0000\u0001\u0208\u0002\u001b\u0003\u001b" +
+                "\u0004\u0208\u0005\u1208\u0000\u0006\u1208\u0001\u0007\u001b\b\u1009\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -122812,6 +125221,1449 @@ java.lang.String defaultValue) {
     private static volatile com.google.protobuf.Parser<ListModulesResponse> PARSER;
 
     public static com.google.protobuf.Parser<ListModulesResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeprecateRegistryItemVersionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.DeprecateRegistryItemVersionRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The id of the registry item
+     * </pre>
+     *
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The itemId.
+     */
+    java.lang.String getItemId();
+    /**
+     * <pre>
+     * The id of the registry item
+     * </pre>
+     *
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The bytes for itemId.
+     */
+    com.google.protobuf.ByteString
+        getItemIdBytes();
+
+    /**
+     * <pre>
+     * The semver string of the version to deprecate.
+     * </pre>
+     *
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <pre>
+     * The semver string of the version to deprecate.
+     * </pre>
+     *
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
+
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 3 [json_name = "message"];</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 3 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
+  }
+  /**
+   * <pre>
+   * Deprecates a specific version of a registry item.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.v1.DeprecateRegistryItemVersionRequest}
+   */
+  public  static final class DeprecateRegistryItemVersionRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeprecateRegistryItemVersionRequest, DeprecateRegistryItemVersionRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.DeprecateRegistryItemVersionRequest)
+      DeprecateRegistryItemVersionRequestOrBuilder {
+    private DeprecateRegistryItemVersionRequest() {
+      itemId_ = "";
+      version_ = "";
+      message_ = "";
+    }
+    public static final int ITEM_ID_FIELD_NUMBER = 1;
+    private java.lang.String itemId_;
+    /**
+     * <pre>
+     * The id of the registry item
+     * </pre>
+     *
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The itemId.
+     */
+    @java.lang.Override
+    public java.lang.String getItemId() {
+      return itemId_;
+    }
+    /**
+     * <pre>
+     * The id of the registry item
+     * </pre>
+     *
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The bytes for itemId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getItemIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(itemId_);
+    }
+    /**
+     * <pre>
+     * The id of the registry item
+     * </pre>
+     *
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @param value The itemId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setItemId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      itemId_ = value;
+    }
+    /**
+     * <pre>
+     * The id of the registry item
+     * </pre>
+     *
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     */
+    private void clearItemId() {
+
+      itemId_ = getDefaultInstance().getItemId();
+    }
+    /**
+     * <pre>
+     * The id of the registry item
+     * </pre>
+     *
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @param value The bytes for itemId to set.
+     */
+    private void setItemIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      itemId_ = value.toStringUtf8();
+
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private java.lang.String version_;
+    /**
+     * <pre>
+     * The semver string of the version to deprecate.
+     * </pre>
+     *
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      return version_;
+    }
+    /**
+     * <pre>
+     * The semver string of the version to deprecate.
+     * </pre>
+     *
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(version_);
+    }
+    /**
+     * <pre>
+     * The semver string of the version to deprecate.
+     * </pre>
+     *
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @param value The version to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setVersion(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      version_ = value;
+    }
+    /**
+     * <pre>
+     * The semver string of the version to deprecate.
+     * </pre>
+     *
+     * <code>string version = 2 [json_name = "version"];</code>
+     */
+    private void clearVersion() {
+
+      version_ = getDefaultInstance().getVersion();
+    }
+    /**
+     * <pre>
+     * The semver string of the version to deprecate.
+     * </pre>
+     *
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @param value The bytes for version to set.
+     */
+    private void setVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      version_ = value.toStringUtf8();
+
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 3;
+    private java.lang.String message_;
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 3 [json_name = "message"];</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      return message_;
+    }
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 3 [json_name = "message"];</code>
+     * @return The bytes for message.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(message_);
+    }
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 3 [json_name = "message"];</code>
+     * @param value The message to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMessage(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      message_ = value;
+    }
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 3 [json_name = "message"];</code>
+     */
+    private void clearMessage() {
+
+      message_ = getDefaultInstance().getMessage();
+    }
+    /**
+     * <pre>
+     * msg explaining reason for deprecation
+     * </pre>
+     *
+     * <code>string message = 3 [json_name = "message"];</code>
+     * @param value The bytes for message to set.
+     */
+    private void setMessageBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      message_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * Deprecates a specific version of a registry item.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.v1.DeprecateRegistryItemVersionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.DeprecateRegistryItemVersionRequest)
+        viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequestOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * The id of the registry item
+       * </pre>
+       *
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return The itemId.
+       */
+      @java.lang.Override
+      public java.lang.String getItemId() {
+        return instance.getItemId();
+      }
+      /**
+       * <pre>
+       * The id of the registry item
+       * </pre>
+       *
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return The bytes for itemId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getItemIdBytes() {
+        return instance.getItemIdBytes();
+      }
+      /**
+       * <pre>
+       * The id of the registry item
+       * </pre>
+       *
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @param value The itemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setItemId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The id of the registry item
+       * </pre>
+       *
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearItemId() {
+        copyOnWrite();
+        instance.clearItemId();
+        return this;
+      }
+      /**
+       * <pre>
+       * The id of the registry item
+       * </pre>
+       *
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @param value The bytes for itemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setItemIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The semver string of the version to deprecate.
+       * </pre>
+       *
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public java.lang.String getVersion() {
+        return instance.getVersion();
+      }
+      /**
+       * <pre>
+       * The semver string of the version to deprecate.
+       * </pre>
+       *
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @return The bytes for version.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        return instance.getVersionBytes();
+      }
+      /**
+       * <pre>
+       * The semver string of the version to deprecate.
+       * </pre>
+       *
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setVersion(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The semver string of the version to deprecate.
+       * </pre>
+       *
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        copyOnWrite();
+        instance.clearVersion();
+        return this;
+      }
+      /**
+       * <pre>
+       * The semver string of the version to deprecate.
+       * </pre>
+       *
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setVersionBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * msg explaining reason for deprecation
+       * </pre>
+       *
+       * <code>string message = 3 [json_name = "message"];</code>
+       * @return The message.
+       */
+      @java.lang.Override
+      public java.lang.String getMessage() {
+        return instance.getMessage();
+      }
+      /**
+       * <pre>
+       * msg explaining reason for deprecation
+       * </pre>
+       *
+       * <code>string message = 3 [json_name = "message"];</code>
+       * @return The bytes for message.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        return instance.getMessageBytes();
+      }
+      /**
+       * <pre>
+       * msg explaining reason for deprecation
+       * </pre>
+       *
+       * <code>string message = 3 [json_name = "message"];</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMessage(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * msg explaining reason for deprecation
+       * </pre>
+       *
+       * <code>string message = 3 [json_name = "message"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        copyOnWrite();
+        instance.clearMessage();
+        return this;
+      }
+      /**
+       * <pre>
+       * msg explaining reason for deprecation
+       * </pre>
+       *
+       * <code>string message = 3 [json_name = "message"];</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMessageBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.DeprecateRegistryItemVersionRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "itemId_",
+              "version_",
+              "message_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.DeprecateRegistryItemVersionRequest)
+    private static final viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest DEFAULT_INSTANCE;
+    static {
+      DeprecateRegistryItemVersionRequest defaultInstance = new DeprecateRegistryItemVersionRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeprecateRegistryItemVersionRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeprecateRegistryItemVersionRequest> PARSER;
+
+    public static com.google.protobuf.Parser<DeprecateRegistryItemVersionRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeprecateRegistryItemVersionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.DeprecateRegistryItemVersionResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.DeprecateRegistryItemVersionResponse}
+   */
+  public  static final class DeprecateRegistryItemVersionResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeprecateRegistryItemVersionResponse, DeprecateRegistryItemVersionResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.DeprecateRegistryItemVersionResponse)
+      DeprecateRegistryItemVersionResponseOrBuilder {
+    private DeprecateRegistryItemVersionResponse() {
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.DeprecateRegistryItemVersionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.DeprecateRegistryItemVersionResponse)
+        viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponseOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.DeprecateRegistryItemVersionResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.DeprecateRegistryItemVersionResponse)
+    private static final viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse DEFAULT_INSTANCE;
+    static {
+      DeprecateRegistryItemVersionResponse defaultInstance = new DeprecateRegistryItemVersionResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeprecateRegistryItemVersionResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeprecateRegistryItemVersionResponse> PARSER;
+
+    public static com.google.protobuf.Parser<DeprecateRegistryItemVersionResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UndeprecateRegistryItemVersionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UndeprecateRegistryItemVersionRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The itemId.
+     */
+    java.lang.String getItemId();
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The bytes for itemId.
+     */
+    com.google.protobuf.ByteString
+        getItemIdBytes();
+
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UndeprecateRegistryItemVersionRequest}
+   */
+  public  static final class UndeprecateRegistryItemVersionRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UndeprecateRegistryItemVersionRequest, UndeprecateRegistryItemVersionRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UndeprecateRegistryItemVersionRequest)
+      UndeprecateRegistryItemVersionRequestOrBuilder {
+    private UndeprecateRegistryItemVersionRequest() {
+      itemId_ = "";
+      version_ = "";
+    }
+    public static final int ITEM_ID_FIELD_NUMBER = 1;
+    private java.lang.String itemId_;
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The itemId.
+     */
+    @java.lang.Override
+    public java.lang.String getItemId() {
+      return itemId_;
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @return The bytes for itemId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getItemIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(itemId_);
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @param value The itemId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setItemId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      itemId_ = value;
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     */
+    private void clearItemId() {
+
+      itemId_ = getDefaultInstance().getItemId();
+    }
+    /**
+     * <code>string item_id = 1 [json_name = "itemId"];</code>
+     * @param value The bytes for itemId to set.
+     */
+    private void setItemIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      itemId_ = value.toStringUtf8();
+
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private java.lang.String version_;
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      return version_;
+    }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(version_);
+    }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @param value The version to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setVersion(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      version_ = value;
+    }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     */
+    private void clearVersion() {
+
+      version_ = getDefaultInstance().getVersion();
+    }
+    /**
+     * <code>string version = 2 [json_name = "version"];</code>
+     * @param value The bytes for version to set.
+     */
+    private void setVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      version_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UndeprecateRegistryItemVersionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UndeprecateRegistryItemVersionRequest)
+        viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequestOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return The itemId.
+       */
+      @java.lang.Override
+      public java.lang.String getItemId() {
+        return instance.getItemId();
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return The bytes for itemId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getItemIdBytes() {
+        return instance.getItemIdBytes();
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @param value The itemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setItemId(value);
+        return this;
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearItemId() {
+        copyOnWrite();
+        instance.clearItemId();
+        return this;
+      }
+      /**
+       * <code>string item_id = 1 [json_name = "itemId"];</code>
+       * @param value The bytes for itemId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setItemIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setItemIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public java.lang.String getVersion() {
+        return instance.getVersion();
+      }
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @return The bytes for version.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        return instance.getVersionBytes();
+      }
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setVersion(value);
+        return this;
+      }
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        copyOnWrite();
+        instance.clearVersion();
+        return this;
+      }
+      /**
+       * <code>string version = 2 [json_name = "version"];</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setVersionBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UndeprecateRegistryItemVersionRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "itemId_",
+              "version_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UndeprecateRegistryItemVersionRequest)
+    private static final viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest DEFAULT_INSTANCE;
+    static {
+      UndeprecateRegistryItemVersionRequest defaultInstance = new UndeprecateRegistryItemVersionRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UndeprecateRegistryItemVersionRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UndeprecateRegistryItemVersionRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UndeprecateRegistryItemVersionRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UndeprecateRegistryItemVersionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UndeprecateRegistryItemVersionResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UndeprecateRegistryItemVersionResponse}
+   */
+  public  static final class UndeprecateRegistryItemVersionResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UndeprecateRegistryItemVersionResponse, UndeprecateRegistryItemVersionResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UndeprecateRegistryItemVersionResponse)
+      UndeprecateRegistryItemVersionResponseOrBuilder {
+    private UndeprecateRegistryItemVersionResponse() {
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.UndeprecateRegistryItemVersionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UndeprecateRegistryItemVersionResponse)
+        viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponseOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UndeprecateRegistryItemVersionResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UndeprecateRegistryItemVersionResponse)
+    private static final viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse DEFAULT_INSTANCE;
+    static {
+      UndeprecateRegistryItemVersionResponse defaultInstance = new UndeprecateRegistryItemVersionResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UndeprecateRegistryItemVersionResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UndeprecateRegistryItemVersionResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UndeprecateRegistryItemVersionResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

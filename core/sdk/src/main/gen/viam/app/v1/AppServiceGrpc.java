@@ -2925,6 +2925,66 @@ public final class AppServiceGrpc {
     return getTransferRegistryItemMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest,
+      viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse> getDeprecateRegistryItemMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeprecateRegistryItem",
+      requestType = viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest.class,
+      responseType = viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest,
+      viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse> getDeprecateRegistryItemMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest, viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse> getDeprecateRegistryItemMethod;
+    if ((getDeprecateRegistryItemMethod = AppServiceGrpc.getDeprecateRegistryItemMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getDeprecateRegistryItemMethod = AppServiceGrpc.getDeprecateRegistryItemMethod) == null) {
+          AppServiceGrpc.getDeprecateRegistryItemMethod = getDeprecateRegistryItemMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest, viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeprecateRegistryItem"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getDeprecateRegistryItemMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest,
+      viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse> getUndeprecateRegistryItemMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UndeprecateRegistryItem",
+      requestType = viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest.class,
+      responseType = viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest,
+      viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse> getUndeprecateRegistryItemMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest, viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse> getUndeprecateRegistryItemMethod;
+    if ((getUndeprecateRegistryItemMethod = AppServiceGrpc.getUndeprecateRegistryItemMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getUndeprecateRegistryItemMethod = AppServiceGrpc.getUndeprecateRegistryItemMethod) == null) {
+          AppServiceGrpc.getUndeprecateRegistryItemMethod = getUndeprecateRegistryItemMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest, viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UndeprecateRegistryItem"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUndeprecateRegistryItemMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.CreateModuleRequest,
       viam.app.v1.AppOuterClass.CreateModuleResponse> getCreateModuleMethod;
 
@@ -3073,6 +3133,66 @@ public final class AppServiceGrpc {
       }
     }
     return getListModulesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest,
+      viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse> getDeprecateRegistryItemVersionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeprecateRegistryItemVersion",
+      requestType = viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest.class,
+      responseType = viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest,
+      viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse> getDeprecateRegistryItemVersionMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest, viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse> getDeprecateRegistryItemVersionMethod;
+    if ((getDeprecateRegistryItemVersionMethod = AppServiceGrpc.getDeprecateRegistryItemVersionMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getDeprecateRegistryItemVersionMethod = AppServiceGrpc.getDeprecateRegistryItemVersionMethod) == null) {
+          AppServiceGrpc.getDeprecateRegistryItemVersionMethod = getDeprecateRegistryItemVersionMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest, viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeprecateRegistryItemVersion"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getDeprecateRegistryItemVersionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest,
+      viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse> getUndeprecateRegistryItemVersionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UndeprecateRegistryItemVersion",
+      requestType = viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest.class,
+      responseType = viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest,
+      viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse> getUndeprecateRegistryItemVersionMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest, viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse> getUndeprecateRegistryItemVersionMethod;
+    if ((getUndeprecateRegistryItemVersionMethod = AppServiceGrpc.getUndeprecateRegistryItemVersionMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getUndeprecateRegistryItemVersionMethod = AppServiceGrpc.getUndeprecateRegistryItemVersionMethod) == null) {
+          AppServiceGrpc.getUndeprecateRegistryItemVersionMethod = getUndeprecateRegistryItemVersionMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest, viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UndeprecateRegistryItemVersion"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUndeprecateRegistryItemVersionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.CreateKeyRequest,
@@ -4461,6 +4581,20 @@ public final class AppServiceGrpc {
 
     /**
      */
+    default void deprecateRegistryItem(viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeprecateRegistryItemMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void undeprecateRegistryItem(viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUndeprecateRegistryItemMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void createModule(viam.app.v1.AppOuterClass.CreateModuleRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.CreateModuleResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateModuleMethod(), responseObserver);
@@ -4492,6 +4626,20 @@ public final class AppServiceGrpc {
     default void listModules(viam.app.v1.AppOuterClass.ListModulesRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListModulesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListModulesMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void deprecateRegistryItemVersion(viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeprecateRegistryItemVersionMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void undeprecateRegistryItemVersion(viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUndeprecateRegistryItemVersionMethod(), responseObserver);
     }
 
     /**
@@ -5642,6 +5790,22 @@ public final class AppServiceGrpc {
 
     /**
      */
+    public void deprecateRegistryItem(viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeprecateRegistryItemMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void undeprecateRegistryItem(viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUndeprecateRegistryItemMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void createModule(viam.app.v1.AppOuterClass.CreateModuleRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.CreateModuleResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -5678,6 +5842,22 @@ public final class AppServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListModulesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListModulesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deprecateRegistryItemVersion(viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeprecateRegistryItemVersionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void undeprecateRegistryItemVersion(viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUndeprecateRegistryItemVersionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -6733,6 +6913,20 @@ public final class AppServiceGrpc {
 
     /**
      */
+    public viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse deprecateRegistryItem(viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeprecateRegistryItemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse undeprecateRegistryItem(viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUndeprecateRegistryItemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public viam.app.v1.AppOuterClass.CreateModuleResponse createModule(viam.app.v1.AppOuterClass.CreateModuleRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getCreateModuleMethod(), getCallOptions(), request);
@@ -6766,6 +6960,20 @@ public final class AppServiceGrpc {
     public viam.app.v1.AppOuterClass.ListModulesResponse listModules(viam.app.v1.AppOuterClass.ListModulesRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListModulesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse deprecateRegistryItemVersion(viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeprecateRegistryItemVersionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse undeprecateRegistryItemVersion(viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUndeprecateRegistryItemVersionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -7806,6 +8014,20 @@ public final class AppServiceGrpc {
 
     /**
      */
+    public viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse deprecateRegistryItem(viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeprecateRegistryItemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse undeprecateRegistryItem(viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUndeprecateRegistryItemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public viam.app.v1.AppOuterClass.CreateModuleResponse createModule(viam.app.v1.AppOuterClass.CreateModuleRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateModuleMethod(), getCallOptions(), request);
@@ -7830,6 +8052,20 @@ public final class AppServiceGrpc {
     public viam.app.v1.AppOuterClass.ListModulesResponse listModules(viam.app.v1.AppOuterClass.ListModulesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListModulesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse deprecateRegistryItemVersion(viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeprecateRegistryItemVersionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse undeprecateRegistryItemVersion(viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUndeprecateRegistryItemVersionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -8958,6 +9194,22 @@ public final class AppServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse> deprecateRegistryItem(
+        viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeprecateRegistryItemMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse> undeprecateRegistryItem(
+        viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUndeprecateRegistryItemMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.CreateModuleResponse> createModule(
         viam.app.v1.AppOuterClass.CreateModuleRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -8986,6 +9238,22 @@ public final class AppServiceGrpc {
         viam.app.v1.AppOuterClass.ListModulesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListModulesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse> deprecateRegistryItemVersion(
+        viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeprecateRegistryItemVersionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse> undeprecateRegistryItemVersion(
+        viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUndeprecateRegistryItemVersionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -9217,25 +9485,29 @@ public final class AppServiceGrpc {
   private static final int METHODID_DELETE_REGISTRY_ITEM = 94;
   private static final int METHODID_RENAME_REGISTRY_ITEM = 95;
   private static final int METHODID_TRANSFER_REGISTRY_ITEM = 96;
-  private static final int METHODID_CREATE_MODULE = 97;
-  private static final int METHODID_UPDATE_MODULE = 98;
-  private static final int METHODID_GET_MODULE = 99;
-  private static final int METHODID_LIST_MODULES = 100;
-  private static final int METHODID_CREATE_KEY = 101;
-  private static final int METHODID_DELETE_KEY = 102;
-  private static final int METHODID_LIST_KEYS = 103;
-  private static final int METHODID_RENAME_KEY = 104;
-  private static final int METHODID_ROTATE_KEY = 105;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 106;
-  private static final int METHODID_GET_APP_CONTENT = 107;
-  private static final int METHODID_GET_APP_BRANDING = 108;
-  private static final int METHODID_UPLOAD_DEVICE_PUSH_TOKEN = 109;
-  private static final int METHODID_DELETE_DEVICE_PUSH_TOKEN = 110;
-  private static final int METHODID_GET_DEVICE_PUSH_TOKENS = 111;
-  private static final int METHODID_SET_FIREBASE_CONFIG = 112;
-  private static final int METHODID_GET_FIREBASE_CONFIG = 113;
-  private static final int METHODID_DELETE_FIREBASE_CONFIG = 114;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 115;
+  private static final int METHODID_DEPRECATE_REGISTRY_ITEM = 97;
+  private static final int METHODID_UNDEPRECATE_REGISTRY_ITEM = 98;
+  private static final int METHODID_CREATE_MODULE = 99;
+  private static final int METHODID_UPDATE_MODULE = 100;
+  private static final int METHODID_GET_MODULE = 101;
+  private static final int METHODID_LIST_MODULES = 102;
+  private static final int METHODID_DEPRECATE_REGISTRY_ITEM_VERSION = 103;
+  private static final int METHODID_UNDEPRECATE_REGISTRY_ITEM_VERSION = 104;
+  private static final int METHODID_CREATE_KEY = 105;
+  private static final int METHODID_DELETE_KEY = 106;
+  private static final int METHODID_LIST_KEYS = 107;
+  private static final int METHODID_RENAME_KEY = 108;
+  private static final int METHODID_ROTATE_KEY = 109;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 110;
+  private static final int METHODID_GET_APP_CONTENT = 111;
+  private static final int METHODID_GET_APP_BRANDING = 112;
+  private static final int METHODID_UPLOAD_DEVICE_PUSH_TOKEN = 113;
+  private static final int METHODID_DELETE_DEVICE_PUSH_TOKEN = 114;
+  private static final int METHODID_GET_DEVICE_PUSH_TOKENS = 115;
+  private static final int METHODID_SET_FIREBASE_CONFIG = 116;
+  private static final int METHODID_GET_FIREBASE_CONFIG = 117;
+  private static final int METHODID_DELETE_FIREBASE_CONFIG = 118;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 119;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -9642,6 +9914,14 @@ public final class AppServiceGrpc {
           serviceImpl.transferRegistryItem((viam.app.v1.AppOuterClass.TransferRegistryItemRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.TransferRegistryItemResponse>) responseObserver);
           break;
+        case METHODID_DEPRECATE_REGISTRY_ITEM:
+          serviceImpl.deprecateRegistryItem((viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse>) responseObserver);
+          break;
+        case METHODID_UNDEPRECATE_REGISTRY_ITEM:
+          serviceImpl.undeprecateRegistryItem((viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse>) responseObserver);
+          break;
         case METHODID_CREATE_MODULE:
           serviceImpl.createModule((viam.app.v1.AppOuterClass.CreateModuleRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.CreateModuleResponse>) responseObserver);
@@ -9657,6 +9937,14 @@ public final class AppServiceGrpc {
         case METHODID_LIST_MODULES:
           serviceImpl.listModules((viam.app.v1.AppOuterClass.ListModulesRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListModulesResponse>) responseObserver);
+          break;
+        case METHODID_DEPRECATE_REGISTRY_ITEM_VERSION:
+          serviceImpl.deprecateRegistryItemVersion((viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse>) responseObserver);
+          break;
+        case METHODID_UNDEPRECATE_REGISTRY_ITEM_VERSION:
+          serviceImpl.undeprecateRegistryItemVersion((viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse>) responseObserver);
           break;
         case METHODID_CREATE_KEY:
           serviceImpl.createKey((viam.app.v1.AppOuterClass.CreateKeyRequest) request,
@@ -10415,6 +10703,20 @@ public final class AppServiceGrpc {
               viam.app.v1.AppOuterClass.TransferRegistryItemResponse>(
                 service, METHODID_TRANSFER_REGISTRY_ITEM)))
         .addMethod(
+          getDeprecateRegistryItemMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.DeprecateRegistryItemRequest,
+              viam.app.v1.AppOuterClass.DeprecateRegistryItemResponse>(
+                service, METHODID_DEPRECATE_REGISTRY_ITEM)))
+        .addMethod(
+          getUndeprecateRegistryItemMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.UndeprecateRegistryItemRequest,
+              viam.app.v1.AppOuterClass.UndeprecateRegistryItemResponse>(
+                service, METHODID_UNDEPRECATE_REGISTRY_ITEM)))
+        .addMethod(
           getCreateModuleMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -10449,6 +10751,20 @@ public final class AppServiceGrpc {
               viam.app.v1.AppOuterClass.ListModulesRequest,
               viam.app.v1.AppOuterClass.ListModulesResponse>(
                 service, METHODID_LIST_MODULES)))
+        .addMethod(
+          getDeprecateRegistryItemVersionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionRequest,
+              viam.app.v1.AppOuterClass.DeprecateRegistryItemVersionResponse>(
+                service, METHODID_DEPRECATE_REGISTRY_ITEM_VERSION)))
+        .addMethod(
+          getUndeprecateRegistryItemVersionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionRequest,
+              viam.app.v1.AppOuterClass.UndeprecateRegistryItemVersionResponse>(
+                service, METHODID_UNDEPRECATE_REGISTRY_ITEM_VERSION)))
         .addMethod(
           getCreateKeyMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -10656,11 +10972,15 @@ public final class AppServiceGrpc {
               .addMethod(getDeleteRegistryItemMethod())
               .addMethod(getRenameRegistryItemMethod())
               .addMethod(getTransferRegistryItemMethod())
+              .addMethod(getDeprecateRegistryItemMethod())
+              .addMethod(getUndeprecateRegistryItemMethod())
               .addMethod(getCreateModuleMethod())
               .addMethod(getUpdateModuleMethod())
               .addMethod(getUploadModuleFileMethod())
               .addMethod(getGetModuleMethod())
               .addMethod(getListModulesMethod())
+              .addMethod(getDeprecateRegistryItemVersionMethod())
+              .addMethod(getUndeprecateRegistryItemVersionMethod())
               .addMethod(getCreateKeyMethod())
               .addMethod(getDeleteKeyMethod())
               .addMethod(getListKeysMethod())

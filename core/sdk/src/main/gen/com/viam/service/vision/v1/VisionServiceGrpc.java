@@ -353,7 +353,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetDetectionsFromCamera will return a list of detections in the next image given a camera and a detector
+     * GetDetectionsFromCamera will return a list of detections in the next image
+     * given a camera and a detector
      * </pre>
      */
     default void getDetectionsFromCamera(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest request,
@@ -363,7 +364,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetDetections will return a list of detections in the next image given the image bytes and a detector
+     * GetDetections will return a list of detections in the next image given the
+     * image bytes and a detector
      * </pre>
      */
     default void getDetections(com.viam.service.vision.v1.Vision.GetDetectionsRequest request,
@@ -373,7 +375,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetClassificationsFromCamera will return a list of classifications in the next image given a camera and a classifier
+     * GetClassificationsFromCamera will return a list of classifications in the
+     * next image given a camera and a classifier
      * </pre>
      */
     default void getClassificationsFromCamera(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest request,
@@ -383,7 +386,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetClassifications will return a list of classifications in the next image given the image bytes and a classifier
+     * GetClassifications will return a list of classifications in the next image
+     * given the image bytes and a classifier
      * </pre>
      */
     default void getClassifications(com.viam.service.vision.v1.Vision.GetClassificationsRequest request,
@@ -393,9 +397,10 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetObjectPointClouds returns all the found objects in a pointcloud from a camera of the underlying robot,
-     * as well as the 3-vector center of each of the found objects.
-     * A specific MIME type can be requested but may not necessarily be the same one returned.
+     * GetObjectPointClouds returns all the found objects in a pointcloud from a
+     * camera of the underlying robot, as well as the 3-vector center of each of
+     * the found objects. A specific MIME type can be requested but may not
+     * necessarily be the same one returned.
      * </pre>
      */
     default void getObjectPointClouds(com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest request,
@@ -405,7 +410,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetProperties will return the properties as booleans given the name of the vision service
+     * GetProperties will return the properties as booleans given the name of the
+     * vision service
      * </pre>
      */
     default void getProperties(com.viam.service.vision.v1.Vision.GetPropertiesRequest request,
@@ -476,7 +482,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetDetectionsFromCamera will return a list of detections in the next image given a camera and a detector
+     * GetDetectionsFromCamera will return a list of detections in the next image
+     * given a camera and a detector
      * </pre>
      */
     public void getDetectionsFromCamera(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest request,
@@ -487,7 +494,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetDetections will return a list of detections in the next image given the image bytes and a detector
+     * GetDetections will return a list of detections in the next image given the
+     * image bytes and a detector
      * </pre>
      */
     public void getDetections(com.viam.service.vision.v1.Vision.GetDetectionsRequest request,
@@ -498,7 +506,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetClassificationsFromCamera will return a list of classifications in the next image given a camera and a classifier
+     * GetClassificationsFromCamera will return a list of classifications in the
+     * next image given a camera and a classifier
      * </pre>
      */
     public void getClassificationsFromCamera(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest request,
@@ -509,7 +518,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetClassifications will return a list of classifications in the next image given the image bytes and a classifier
+     * GetClassifications will return a list of classifications in the next image
+     * given the image bytes and a classifier
      * </pre>
      */
     public void getClassifications(com.viam.service.vision.v1.Vision.GetClassificationsRequest request,
@@ -520,9 +530,10 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetObjectPointClouds returns all the found objects in a pointcloud from a camera of the underlying robot,
-     * as well as the 3-vector center of each of the found objects.
-     * A specific MIME type can be requested but may not necessarily be the same one returned.
+     * GetObjectPointClouds returns all the found objects in a pointcloud from a
+     * camera of the underlying robot, as well as the 3-vector center of each of
+     * the found objects. A specific MIME type can be requested but may not
+     * necessarily be the same one returned.
      * </pre>
      */
     public void getObjectPointClouds(com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest request,
@@ -533,7 +544,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetProperties will return the properties as booleans given the name of the vision service
+     * GetProperties will return the properties as booleans given the name of the
+     * vision service
      * </pre>
      */
     public void getProperties(com.viam.service.vision.v1.Vision.GetPropertiesRequest request,
@@ -594,7 +606,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetDetectionsFromCamera will return a list of detections in the next image given a camera and a detector
+     * GetDetectionsFromCamera will return a list of detections in the next image
+     * given a camera and a detector
      * </pre>
      */
     public com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse getDetectionsFromCamera(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest request) throws io.grpc.StatusException {
@@ -604,7 +617,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetDetections will return a list of detections in the next image given the image bytes and a detector
+     * GetDetections will return a list of detections in the next image given the
+     * image bytes and a detector
      * </pre>
      */
     public com.viam.service.vision.v1.Vision.GetDetectionsResponse getDetections(com.viam.service.vision.v1.Vision.GetDetectionsRequest request) throws io.grpc.StatusException {
@@ -614,7 +628,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetClassificationsFromCamera will return a list of classifications in the next image given a camera and a classifier
+     * GetClassificationsFromCamera will return a list of classifications in the
+     * next image given a camera and a classifier
      * </pre>
      */
     public com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse getClassificationsFromCamera(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest request) throws io.grpc.StatusException {
@@ -624,7 +639,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetClassifications will return a list of classifications in the next image given the image bytes and a classifier
+     * GetClassifications will return a list of classifications in the next image
+     * given the image bytes and a classifier
      * </pre>
      */
     public com.viam.service.vision.v1.Vision.GetClassificationsResponse getClassifications(com.viam.service.vision.v1.Vision.GetClassificationsRequest request) throws io.grpc.StatusException {
@@ -634,9 +650,10 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetObjectPointClouds returns all the found objects in a pointcloud from a camera of the underlying robot,
-     * as well as the 3-vector center of each of the found objects.
-     * A specific MIME type can be requested but may not necessarily be the same one returned.
+     * GetObjectPointClouds returns all the found objects in a pointcloud from a
+     * camera of the underlying robot, as well as the 3-vector center of each of
+     * the found objects. A specific MIME type can be requested but may not
+     * necessarily be the same one returned.
      * </pre>
      */
     public com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse getObjectPointClouds(com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest request) throws io.grpc.StatusException {
@@ -646,7 +663,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetProperties will return the properties as booleans given the name of the vision service
+     * GetProperties will return the properties as booleans given the name of the
+     * vision service
      * </pre>
      */
     public com.viam.service.vision.v1.Vision.GetPropertiesResponse getProperties(com.viam.service.vision.v1.Vision.GetPropertiesRequest request) throws io.grpc.StatusException {
@@ -703,7 +721,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetDetectionsFromCamera will return a list of detections in the next image given a camera and a detector
+     * GetDetectionsFromCamera will return a list of detections in the next image
+     * given a camera and a detector
      * </pre>
      */
     public com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse getDetectionsFromCamera(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest request) {
@@ -713,7 +732,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetDetections will return a list of detections in the next image given the image bytes and a detector
+     * GetDetections will return a list of detections in the next image given the
+     * image bytes and a detector
      * </pre>
      */
     public com.viam.service.vision.v1.Vision.GetDetectionsResponse getDetections(com.viam.service.vision.v1.Vision.GetDetectionsRequest request) {
@@ -723,7 +743,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetClassificationsFromCamera will return a list of classifications in the next image given a camera and a classifier
+     * GetClassificationsFromCamera will return a list of classifications in the
+     * next image given a camera and a classifier
      * </pre>
      */
     public com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse getClassificationsFromCamera(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest request) {
@@ -733,7 +754,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetClassifications will return a list of classifications in the next image given the image bytes and a classifier
+     * GetClassifications will return a list of classifications in the next image
+     * given the image bytes and a classifier
      * </pre>
      */
     public com.viam.service.vision.v1.Vision.GetClassificationsResponse getClassifications(com.viam.service.vision.v1.Vision.GetClassificationsRequest request) {
@@ -743,9 +765,10 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetObjectPointClouds returns all the found objects in a pointcloud from a camera of the underlying robot,
-     * as well as the 3-vector center of each of the found objects.
-     * A specific MIME type can be requested but may not necessarily be the same one returned.
+     * GetObjectPointClouds returns all the found objects in a pointcloud from a
+     * camera of the underlying robot, as well as the 3-vector center of each of
+     * the found objects. A specific MIME type can be requested but may not
+     * necessarily be the same one returned.
      * </pre>
      */
     public com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse getObjectPointClouds(com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest request) {
@@ -755,7 +778,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetProperties will return the properties as booleans given the name of the vision service
+     * GetProperties will return the properties as booleans given the name of the
+     * vision service
      * </pre>
      */
     public com.viam.service.vision.v1.Vision.GetPropertiesResponse getProperties(com.viam.service.vision.v1.Vision.GetPropertiesRequest request) {
@@ -812,7 +836,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetDetectionsFromCamera will return a list of detections in the next image given a camera and a detector
+     * GetDetectionsFromCamera will return a list of detections in the next image
+     * given a camera and a detector
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse> getDetectionsFromCamera(
@@ -823,7 +848,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetDetections will return a list of detections in the next image given the image bytes and a detector
+     * GetDetections will return a list of detections in the next image given the
+     * image bytes and a detector
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.GetDetectionsResponse> getDetections(
@@ -834,7 +860,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetClassificationsFromCamera will return a list of classifications in the next image given a camera and a classifier
+     * GetClassificationsFromCamera will return a list of classifications in the
+     * next image given a camera and a classifier
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse> getClassificationsFromCamera(
@@ -845,7 +872,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetClassifications will return a list of classifications in the next image given the image bytes and a classifier
+     * GetClassifications will return a list of classifications in the next image
+     * given the image bytes and a classifier
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.GetClassificationsResponse> getClassifications(
@@ -856,9 +884,10 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetObjectPointClouds returns all the found objects in a pointcloud from a camera of the underlying robot,
-     * as well as the 3-vector center of each of the found objects.
-     * A specific MIME type can be requested but may not necessarily be the same one returned.
+     * GetObjectPointClouds returns all the found objects in a pointcloud from a
+     * camera of the underlying robot, as well as the 3-vector center of each of
+     * the found objects. A specific MIME type can be requested but may not
+     * necessarily be the same one returned.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse> getObjectPointClouds(
@@ -869,7 +898,8 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetProperties will return the properties as booleans given the name of the vision service
+     * GetProperties will return the properties as booleans given the name of the
+     * vision service
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.GetPropertiesResponse> getProperties(
