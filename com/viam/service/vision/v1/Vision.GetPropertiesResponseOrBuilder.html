@@ -121,6 +121,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block">
  whether or not classifactions are supported by the vision service</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDefaultCamera()" class="member-name-link">getDefaultCamera</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ the default camera used for *FromCamera and GetObjectPointClouds calls</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDefaultCameraBytes()" class="member-name-link">getDefaultCameraBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ the default camera used for *FromCamera and GetObjectPointClouds calls</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDetectionsSupported()" class="member-name-link">getDetectionsSupported</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -132,6 +144,12 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  whether or not 3d segmentation is supported by the vision service</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasDefaultCamera()" class="member-name-link">hasDefaultCamera</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ the default camera used for *FromCamera and GetObjectPointClouds calls</div>
 </div>
 </div>
 </div>
@@ -192,6 +210,51 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The objectPointCloudsSupported.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasDefaultCamera()">
+<h3>hasDefaultCamera</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasDefaultCamera</span>()</div>
+<div class="block"><pre>
+ the default camera used for *FromCamera and GetObjectPointClouds calls
+ </pre>
+
+ <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the defaultCamera field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDefaultCamera()">
+<h3>getDefaultCamera</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDefaultCamera</span>()</div>
+<div class="block"><pre>
+ the default camera used for *FromCamera and GetObjectPointClouds calls
+ </pre>
+
+ <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The defaultCamera.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDefaultCameraBytes()">
+<h3>getDefaultCameraBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getDefaultCameraBytes</span>()</div>
+<div class="block"><pre>
+ the default camera used for *FromCamera and GetObjectPointClouds calls
+ </pre>
+
+ <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for defaultCamera.</dd>
 </dl>
 </section>
 </li>
