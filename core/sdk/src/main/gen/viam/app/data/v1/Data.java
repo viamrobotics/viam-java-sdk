@@ -19778,14 +19778,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=448
+     *     See app/data/v1/data.proto;l=452
      * @return The id.
      */
     @java.lang.Deprecated java.lang.String getId();
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=448
+     *     See app/data/v1/data.proto;l=452
      * @return The bytes for id.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -19940,7 +19940,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=448
+     *     See app/data/v1/data.proto;l=452
      * @return The id.
      */
     @java.lang.Override
@@ -19950,7 +19950,7 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>string id = 1 [json_name = "id", deprecated = true];</code>
      * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-     *     See app/data/v1/data.proto;l=448
+     *     See app/data/v1/data.proto;l=452
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -20596,7 +20596,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=448
+       *     See app/data/v1/data.proto;l=452
        * @return The id.
        */
       @java.lang.Override
@@ -20606,7 +20606,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=448
+       *     See app/data/v1/data.proto;l=452
        * @return The bytes for id.
        */
       @java.lang.Override
@@ -20617,7 +20617,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=448
+       *     See app/data/v1/data.proto;l=452
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -20630,7 +20630,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=448
+       *     See app/data/v1/data.proto;l=452
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearId() {
@@ -20641,7 +20641,7 @@ com.google.protobuf.Any defaultValue) {
       /**
        * <code>string id = 1 [json_name = "id", deprecated = true];</code>
        * @deprecated viam.app.data.v1.BinaryMetadata.id is deprecated.
-       *     See app/data/v1/data.proto;l=448
+       *     See app/data/v1/data.proto;l=452
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -28837,14 +28837,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=586
+     *     See app/data/v1/data.proto;l=590
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 7 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.AddBoundingBoxToImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=586
+     *     See app/data/v1/data.proto;l=590
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -29996,14 +29996,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=606
+     *     See app/data/v1/data.proto;l=610
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 3 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.RemoveBoundingBoxFromImageByIDRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=606
+     *     See app/data/v1/data.proto;l=610
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -30707,14 +30707,14 @@ com.google.protobuf.Any defaultValue) {
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=618
+     *     See app/data/v1/data.proto;l=622
      * @return Whether the binaryId field is set.
      */
     @java.lang.Deprecated boolean hasBinaryId();
     /**
      * <code>.viam.app.data.v1.BinaryID binary_id = 1 [json_name = "binaryId", deprecated = true];</code>
      * @deprecated viam.app.data.v1.UpdateBoundingBoxRequest.binary_id is deprecated.
-     *     See app/data/v1/data.proto;l=618
+     *     See app/data/v1/data.proto;l=622
      * @return The binaryId.
      */
     @java.lang.Deprecated viam.app.data.v1.Data.BinaryID getBinaryId();
@@ -53935,6 +53935,986 @@ com.google.protobuf.Any defaultValue) {
     private static volatile com.google.protobuf.Parser<SequencesByDatasetIDResponse> PARSER;
 
     public static com.google.protobuf.Parser<SequencesByDatasetIDResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetSequenceBinaryDataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.GetSequenceBinaryDataRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string sequence_id = 1 [json_name = "sequenceId"];</code>
+     * @return The sequenceId.
+     */
+    java.lang.String getSequenceId();
+    /**
+     * <code>string sequence_id = 1 [json_name = "sequenceId"];</code>
+     * @return The bytes for sequenceId.
+     */
+    com.google.protobuf.ByteString
+        getSequenceIdBytes();
+
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    int getPageSize();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.GetSequenceBinaryDataRequest}
+   */
+  public  static final class GetSequenceBinaryDataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetSequenceBinaryDataRequest, GetSequenceBinaryDataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.GetSequenceBinaryDataRequest)
+      GetSequenceBinaryDataRequestOrBuilder {
+    private GetSequenceBinaryDataRequest() {
+      sequenceId_ = "";
+      pageToken_ = "";
+    }
+    public static final int SEQUENCE_ID_FIELD_NUMBER = 1;
+    private java.lang.String sequenceId_;
+    /**
+     * <code>string sequence_id = 1 [json_name = "sequenceId"];</code>
+     * @return The sequenceId.
+     */
+    @java.lang.Override
+    public java.lang.String getSequenceId() {
+      return sequenceId_;
+    }
+    /**
+     * <code>string sequence_id = 1 [json_name = "sequenceId"];</code>
+     * @return The bytes for sequenceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSequenceIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(sequenceId_);
+    }
+    /**
+     * <code>string sequence_id = 1 [json_name = "sequenceId"];</code>
+     * @param value The sequenceId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setSequenceId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      sequenceId_ = value;
+    }
+    /**
+     * <code>string sequence_id = 1 [json_name = "sequenceId"];</code>
+     */
+    private void clearSequenceId() {
+
+      sequenceId_ = getDefaultInstance().getSequenceId();
+    }
+    /**
+     * <code>string sequence_id = 1 [json_name = "sequenceId"];</code>
+     * @param value The bytes for sequenceId to set.
+     */
+    private void setSequenceIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sequenceId_ = value.toStringUtf8();
+
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 2;
+    private java.lang.String pageToken_;
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      return pageToken_;
+    }
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(pageToken_);
+    }
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @param value The pageToken to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPageToken(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      pageToken_ = value;
+    }
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     */
+    private void clearPageToken() {
+
+      pageToken_ = getDefaultInstance().getPageToken();
+    }
+    /**
+     * <code>string page_token = 2 [json_name = "pageToken"];</code>
+     * @param value The bytes for pageToken to set.
+     */
+    private void setPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      pageToken_ = value.toStringUtf8();
+
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 3;
+    private int pageSize_;
+    /**
+     * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public int getPageSize() {
+      return pageSize_;
+    }
+    /**
+     * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+     * @param value The pageSize to set.
+     */
+    private void setPageSize(int value) {
+      
+      pageSize_ = value;
+    }
+    /**
+     * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+     */
+    private void clearPageSize() {
+
+      pageSize_ = 0;
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.GetSequenceBinaryDataRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.GetSequenceBinaryDataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.GetSequenceBinaryDataRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.GetSequenceBinaryDataRequest)
+        viam.app.data.v1.Data.GetSequenceBinaryDataRequestOrBuilder {
+      // Construct using viam.app.data.v1.Data.GetSequenceBinaryDataRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string sequence_id = 1 [json_name = "sequenceId"];</code>
+       * @return The sequenceId.
+       */
+      @java.lang.Override
+      public java.lang.String getSequenceId() {
+        return instance.getSequenceId();
+      }
+      /**
+       * <code>string sequence_id = 1 [json_name = "sequenceId"];</code>
+       * @return The bytes for sequenceId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSequenceIdBytes() {
+        return instance.getSequenceIdBytes();
+      }
+      /**
+       * <code>string sequence_id = 1 [json_name = "sequenceId"];</code>
+       * @param value The sequenceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequenceId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setSequenceId(value);
+        return this;
+      }
+      /**
+       * <code>string sequence_id = 1 [json_name = "sequenceId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSequenceId() {
+        copyOnWrite();
+        instance.clearSequenceId();
+        return this;
+      }
+      /**
+       * <code>string sequence_id = 1 [json_name = "sequenceId"];</code>
+       * @param value The bytes for sequenceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSequenceIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setSequenceIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @return The pageToken.
+       */
+      @java.lang.Override
+      public java.lang.String getPageToken() {
+        return instance.getPageToken();
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @return The bytes for pageToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        return instance.getPageTokenBytes();
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPageToken(value);
+        return this;
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        copyOnWrite();
+        instance.clearPageToken();
+        return this;
+      }
+      /**
+       * <code>string page_token = 2 [json_name = "pageToken"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPageTokenBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public int getPageSize() {
+        return instance.getPageSize();
+      }
+      /**
+       * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(int value) {
+        copyOnWrite();
+        instance.setPageSize(value);
+        return this;
+      }
+      /**
+       * <code>uint32 page_size = 3 [json_name = "pageSize"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        copyOnWrite();
+        instance.clearPageSize();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.GetSequenceBinaryDataRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.GetSequenceBinaryDataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sequenceId_",
+              "pageToken_",
+              "pageSize_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u000b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.GetSequenceBinaryDataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.GetSequenceBinaryDataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.GetSequenceBinaryDataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.GetSequenceBinaryDataRequest)
+    private static final viam.app.data.v1.Data.GetSequenceBinaryDataRequest DEFAULT_INSTANCE;
+    static {
+      GetSequenceBinaryDataRequest defaultInstance = new GetSequenceBinaryDataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetSequenceBinaryDataRequest.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetSequenceBinaryDataRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetSequenceBinaryDataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetSequenceBinaryDataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.data.v1.GetSequenceBinaryDataResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    java.util.List<viam.app.data.v1.Data.BinaryData> 
+        getDataList();
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    viam.app.data.v1.Data.BinaryData getData(int index);
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    int getDataCount();
+
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.data.v1.GetSequenceBinaryDataResponse}
+   */
+  public  static final class GetSequenceBinaryDataResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetSequenceBinaryDataResponse, GetSequenceBinaryDataResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.data.v1.GetSequenceBinaryDataResponse)
+      GetSequenceBinaryDataResponseOrBuilder {
+    private GetSequenceBinaryDataResponse() {
+      data_ = emptyProtobufList();
+      nextPageToken_ = "";
+    }
+    public static final int DATA_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.BinaryData> data_;
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.data.v1.Data.BinaryData> getDataList() {
+      return data_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    public java.util.List<? extends viam.app.data.v1.Data.BinaryDataOrBuilder> 
+        getDataOrBuilderList() {
+      return data_;
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public int getDataCount() {
+      return data_.size();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.BinaryData getData(int index) {
+      return data_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    public viam.app.data.v1.Data.BinaryDataOrBuilder getDataOrBuilder(
+        int index) {
+      return data_.get(index);
+    }
+    private void ensureDataIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.data.v1.Data.BinaryData> tmp = data_;
+      if (!tmp.isModifiable()) {
+        data_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setData(
+        int index, viam.app.data.v1.Data.BinaryData value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDataIsMutable();
+      data_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addData(viam.app.data.v1.Data.BinaryData value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDataIsMutable();
+      data_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addData(
+        int index, viam.app.data.v1.Data.BinaryData value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDataIsMutable();
+      data_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    private void addAllData(
+        java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryData> values) {
+      ensureDataIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, data_);
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    private void clearData() {
+      data_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+     */
+    private void removeData(int index) {
+      ensureDataIsMutable();
+      data_.remove(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private java.lang.String nextPageToken_;
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      return nextPageToken_;
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(nextPageToken_);
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @param value The nextPageToken to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setNextPageToken(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      nextPageToken_ = value;
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     */
+    private void clearNextPageToken() {
+
+      nextPageToken_ = getDefaultInstance().getNextPageToken();
+    }
+    /**
+     * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+     * @param value The bytes for nextPageToken to set.
+     */
+    private void setNextPageTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      nextPageToken_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.data.v1.Data.GetSequenceBinaryDataResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.data.v1.GetSequenceBinaryDataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.data.v1.Data.GetSequenceBinaryDataResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.data.v1.GetSequenceBinaryDataResponse)
+        viam.app.data.v1.Data.GetSequenceBinaryDataResponseOrBuilder {
+      // Construct using viam.app.data.v1.Data.GetSequenceBinaryDataResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.data.v1.Data.BinaryData> getDataList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getDataList());
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public int getDataCount() {
+        return instance.getDataCount();
+      }/**
+       * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.BinaryData getData(int index) {
+        return instance.getData(index);
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+       */
+      public Builder setData(
+          int index, viam.app.data.v1.Data.BinaryData value) {
+        copyOnWrite();
+        instance.setData(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+       */
+      public Builder setData(
+          int index, viam.app.data.v1.Data.BinaryData.Builder builderForValue) {
+        copyOnWrite();
+        instance.setData(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+       */
+      public Builder addData(viam.app.data.v1.Data.BinaryData value) {
+        copyOnWrite();
+        instance.addData(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+       */
+      public Builder addData(
+          int index, viam.app.data.v1.Data.BinaryData value) {
+        copyOnWrite();
+        instance.addData(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+       */
+      public Builder addData(
+          viam.app.data.v1.Data.BinaryData.Builder builderForValue) {
+        copyOnWrite();
+        instance.addData(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+       */
+      public Builder addData(
+          int index, viam.app.data.v1.Data.BinaryData.Builder builderForValue) {
+        copyOnWrite();
+        instance.addData(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+       */
+      public Builder addAllData(
+          java.lang.Iterable<? extends viam.app.data.v1.Data.BinaryData> values) {
+        copyOnWrite();
+        instance.addAllData(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+       */
+      public Builder clearData() {
+        copyOnWrite();
+        instance.clearData();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.data.v1.BinaryData data = 1 [json_name = "data"];</code>
+       */
+      public Builder removeData(int index) {
+        copyOnWrite();
+        instance.removeData(index);
+        return this;
+      }
+
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return The nextPageToken.
+       */
+      @java.lang.Override
+      public java.lang.String getNextPageToken() {
+        return instance.getNextPageToken();
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return The bytes for nextPageToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        return instance.getNextPageTokenBytes();
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setNextPageToken(value);
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        copyOnWrite();
+        instance.clearNextPageToken();
+        return this;
+      }
+      /**
+       * <code>string next_page_token = 2 [json_name = "nextPageToken"];</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNextPageTokenBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.data.v1.GetSequenceBinaryDataResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.data.v1.Data.GetSequenceBinaryDataResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "data_",
+              viam.app.data.v1.Data.BinaryData.class,
+              "nextPageToken_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.data.v1.Data.GetSequenceBinaryDataResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.data.v1.Data.GetSequenceBinaryDataResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.data.v1.Data.GetSequenceBinaryDataResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.data.v1.GetSequenceBinaryDataResponse)
+    private static final viam.app.data.v1.Data.GetSequenceBinaryDataResponse DEFAULT_INSTANCE;
+    static {
+      GetSequenceBinaryDataResponse defaultInstance = new GetSequenceBinaryDataResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetSequenceBinaryDataResponse.class, defaultInstance);
+    }
+
+    public static viam.app.data.v1.Data.GetSequenceBinaryDataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetSequenceBinaryDataResponse> PARSER;
+
+    public static com.google.protobuf.Parser<GetSequenceBinaryDataResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
