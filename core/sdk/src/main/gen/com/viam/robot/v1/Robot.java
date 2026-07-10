@@ -693,6 +693,1513 @@ public final class Robot {
     }
   }
 
+  public interface UploadDataFromPathRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.UploadDataFromPathRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * File or folder path on the robot to upload.
+     * </pre>
+     *
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @return The path.
+     */
+    java.lang.String getPath();
+    /**
+     * <pre>
+     * File or folder path on the robot to upload.
+     * </pre>
+     *
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @return The bytes for path.
+     */
+    com.google.protobuf.ByteString
+        getPathBytes();
+
+    /**
+     * <pre>
+     * Optional metadata to apply to uploaded files.
+     * </pre>
+     *
+     * <code>optional .viam.app.datasync.v1.UploadMetadata upload_metadata = 2 [json_name = "uploadMetadata"];</code>
+     * @return Whether the uploadMetadata field is set.
+     */
+    boolean hasUploadMetadata();
+    /**
+     * <pre>
+     * Optional metadata to apply to uploaded files.
+     * </pre>
+     *
+     * <code>optional .viam.app.datasync.v1.UploadMetadata upload_metadata = 2 [json_name = "uploadMetadata"];</code>
+     * @return The uploadMetadata.
+     */
+    viam.app.datasync.v1.DataSync.UploadMetadata getUploadMetadata();
+
+    /**
+     * <pre>
+     * Additional arguments to the method.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <pre>
+     * Additional arguments to the method.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.UploadDataFromPathRequest}
+   */
+  public  static final class UploadDataFromPathRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UploadDataFromPathRequest, UploadDataFromPathRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.UploadDataFromPathRequest)
+      UploadDataFromPathRequestOrBuilder {
+    private UploadDataFromPathRequest() {
+      path_ = "";
+    }
+    private int bitField0_;
+    public static final int PATH_FIELD_NUMBER = 1;
+    private java.lang.String path_;
+    /**
+     * <pre>
+     * File or folder path on the robot to upload.
+     * </pre>
+     *
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @return The path.
+     */
+    @java.lang.Override
+    public java.lang.String getPath() {
+      return path_;
+    }
+    /**
+     * <pre>
+     * File or folder path on the robot to upload.
+     * </pre>
+     *
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @return The bytes for path.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPathBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(path_);
+    }
+    /**
+     * <pre>
+     * File or folder path on the robot to upload.
+     * </pre>
+     *
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @param value The path to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPath(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      path_ = value;
+    }
+    /**
+     * <pre>
+     * File or folder path on the robot to upload.
+     * </pre>
+     *
+     * <code>string path = 1 [json_name = "path"];</code>
+     */
+    private void clearPath() {
+
+      path_ = getDefaultInstance().getPath();
+    }
+    /**
+     * <pre>
+     * File or folder path on the robot to upload.
+     * </pre>
+     *
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @param value The bytes for path to set.
+     */
+    private void setPathBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      path_ = value.toStringUtf8();
+
+    }
+
+    public static final int UPLOAD_METADATA_FIELD_NUMBER = 2;
+    private viam.app.datasync.v1.DataSync.UploadMetadata uploadMetadata_;
+    /**
+     * <pre>
+     * Optional metadata to apply to uploaded files.
+     * </pre>
+     *
+     * <code>optional .viam.app.datasync.v1.UploadMetadata upload_metadata = 2 [json_name = "uploadMetadata"];</code>
+     */
+    @java.lang.Override
+    public boolean hasUploadMetadata() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Optional metadata to apply to uploaded files.
+     * </pre>
+     *
+     * <code>optional .viam.app.datasync.v1.UploadMetadata upload_metadata = 2 [json_name = "uploadMetadata"];</code>
+     */
+    @java.lang.Override
+    public viam.app.datasync.v1.DataSync.UploadMetadata getUploadMetadata() {
+      return uploadMetadata_ == null ? viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance() : uploadMetadata_;
+    }
+    /**
+     * <pre>
+     * Optional metadata to apply to uploaded files.
+     * </pre>
+     *
+     * <code>optional .viam.app.datasync.v1.UploadMetadata upload_metadata = 2 [json_name = "uploadMetadata"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setUploadMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
+      value.getClass();  // minimal bytecode null check
+      uploadMetadata_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Optional metadata to apply to uploaded files.
+     * </pre>
+     *
+     * <code>optional .viam.app.datasync.v1.UploadMetadata upload_metadata = 2 [json_name = "uploadMetadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeUploadMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
+      value.getClass();  // minimal bytecode null check
+      if (uploadMetadata_ != null &&
+          uploadMetadata_ != viam.app.datasync.v1.DataSync.UploadMetadata.getDefaultInstance()) {
+        uploadMetadata_ =
+          viam.app.datasync.v1.DataSync.UploadMetadata.newBuilder(uploadMetadata_).mergeFrom(value).buildPartial();
+      } else {
+        uploadMetadata_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Optional metadata to apply to uploaded files.
+     * </pre>
+     *
+     * <code>optional .viam.app.datasync.v1.UploadMetadata upload_metadata = 2 [json_name = "uploadMetadata"];</code>
+     */
+    private void clearUploadMetadata() {
+      uploadMetadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <pre>
+     * Additional arguments to the method.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();  // minimal bytecode null check
+      extra_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();  // minimal bytecode null check
+      if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {
+      extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static com.viam.robot.v1.Robot.UploadDataFromPathRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.UploadDataFromPathRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.UploadDataFromPathRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.UploadDataFromPathRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.UploadDataFromPathRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.UploadDataFromPathRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.UploadDataFromPathRequest)
+        com.viam.robot.v1.Robot.UploadDataFromPathRequestOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.UploadDataFromPathRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * File or folder path on the robot to upload.
+       * </pre>
+       *
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @return The path.
+       */
+      @java.lang.Override
+      public java.lang.String getPath() {
+        return instance.getPath();
+      }
+      /**
+       * <pre>
+       * File or folder path on the robot to upload.
+       * </pre>
+       *
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @return The bytes for path.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPathBytes() {
+        return instance.getPathBytes();
+      }
+      /**
+       * <pre>
+       * File or folder path on the robot to upload.
+       * </pre>
+       *
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @param value The path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPath(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPath(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * File or folder path on the robot to upload.
+       * </pre>
+       *
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPath() {
+        copyOnWrite();
+        instance.clearPath();
+        return this;
+      }
+      /**
+       * <pre>
+       * File or folder path on the robot to upload.
+       * </pre>
+       *
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @param value The bytes for path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPathBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPathBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Optional metadata to apply to uploaded files.
+       * </pre>
+       *
+       * <code>optional .viam.app.datasync.v1.UploadMetadata upload_metadata = 2 [json_name = "uploadMetadata"];</code>
+       */
+      @java.lang.Override
+      public boolean hasUploadMetadata() {
+        return instance.hasUploadMetadata();
+      }
+      /**
+       * <pre>
+       * Optional metadata to apply to uploaded files.
+       * </pre>
+       *
+       * <code>optional .viam.app.datasync.v1.UploadMetadata upload_metadata = 2 [json_name = "uploadMetadata"];</code>
+       */
+      @java.lang.Override
+      public viam.app.datasync.v1.DataSync.UploadMetadata getUploadMetadata() {
+        return instance.getUploadMetadata();
+      }
+      /**
+       * <pre>
+       * Optional metadata to apply to uploaded files.
+       * </pre>
+       *
+       * <code>optional .viam.app.datasync.v1.UploadMetadata upload_metadata = 2 [json_name = "uploadMetadata"];</code>
+       */
+      public Builder setUploadMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
+        copyOnWrite();
+        instance.setUploadMetadata(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Optional metadata to apply to uploaded files.
+       * </pre>
+       *
+       * <code>optional .viam.app.datasync.v1.UploadMetadata upload_metadata = 2 [json_name = "uploadMetadata"];</code>
+       */
+      public Builder setUploadMetadata(
+          viam.app.datasync.v1.DataSync.UploadMetadata.Builder builderForValue) {
+        copyOnWrite();
+        instance.setUploadMetadata(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional metadata to apply to uploaded files.
+       * </pre>
+       *
+       * <code>optional .viam.app.datasync.v1.UploadMetadata upload_metadata = 2 [json_name = "uploadMetadata"];</code>
+       */
+      public Builder mergeUploadMetadata(viam.app.datasync.v1.DataSync.UploadMetadata value) {
+        copyOnWrite();
+        instance.mergeUploadMetadata(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional metadata to apply to uploaded files.
+       * </pre>
+       *
+       * <code>optional .viam.app.datasync.v1.UploadMetadata upload_metadata = 2 [json_name = "uploadMetadata"];</code>
+       */
+      public Builder clearUploadMetadata() {  copyOnWrite();
+        instance.clearUploadMetadata();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Additional arguments to the method.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return instance.hasExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return instance.getExtra();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.setExtra(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Additional arguments to the method.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        copyOnWrite();
+        instance.mergeExtra(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.UploadDataFromPathRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.UploadDataFromPathRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "path_",
+              "uploadMetadata_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000" +
+                "c\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.UploadDataFromPathRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.UploadDataFromPathRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.UploadDataFromPathRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.UploadDataFromPathRequest)
+    private static final com.viam.robot.v1.Robot.UploadDataFromPathRequest DEFAULT_INSTANCE;
+    static {
+      UploadDataFromPathRequest defaultInstance = new UploadDataFromPathRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UploadDataFromPathRequest.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.UploadDataFromPathRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UploadDataFromPathRequest> PARSER;
+
+    public static com.google.protobuf.Parser<UploadDataFromPathRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UploadDataFromPathResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.UploadDataFromPathResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Total number of files successfully uploaded.
+     * </pre>
+     *
+     * <code>uint64 files_uploaded = 1 [json_name = "filesUploaded"];</code>
+     * @return The filesUploaded.
+     */
+    long getFilesUploaded();
+
+    /**
+     * <pre>
+     * Total number of files that failed to upload.
+     * </pre>
+     *
+     * <code>uint64 files_failed = 2 [json_name = "filesFailed"];</code>
+     * @return The filesFailed.
+     */
+    long getFilesFailed();
+
+    /**
+     * <pre>
+     * Total bytes successfully uploaded.
+     * </pre>
+     *
+     * <code>uint64 bytes_uploaded = 3 [json_name = "bytesUploaded"];</code>
+     * @return The bytesUploaded.
+     */
+    long getBytesUploaded();
+
+    /**
+     * <pre>
+     * Total bytes discovered in the directory.
+     * </pre>
+     *
+     * <code>uint64 bytes_total = 4 [json_name = "bytesTotal"];</code>
+     * @return The bytesTotal.
+     */
+    long getBytesTotal();
+
+    /**
+     * <pre>
+     * Successfully uploaded binary data ids.
+     * </pre>
+     *
+     * <code>repeated string ids = 5 [json_name = "ids"];</code>
+     * @return A list containing the ids.
+     */
+    java.util.List<java.lang.String>
+        getIdsList();
+    /**
+     * <pre>
+     * Successfully uploaded binary data ids.
+     * </pre>
+     *
+     * <code>repeated string ids = 5 [json_name = "ids"];</code>
+     * @return The count of ids.
+     */
+    int getIdsCount();
+    /**
+     * <pre>
+     * Successfully uploaded binary data ids.
+     * </pre>
+     *
+     * <code>repeated string ids = 5 [json_name = "ids"];</code>
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
+     */
+    java.lang.String getIds(int index);
+    /**
+     * <pre>
+     * Successfully uploaded binary data ids.
+     * </pre>
+     *
+     * <code>repeated string ids = 5 [json_name = "ids"];</code>
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
+     */
+    com.google.protobuf.ByteString
+        getIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.UploadDataFromPathResponse}
+   */
+  public  static final class UploadDataFromPathResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UploadDataFromPathResponse, UploadDataFromPathResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.UploadDataFromPathResponse)
+      UploadDataFromPathResponseOrBuilder {
+    private UploadDataFromPathResponse() {
+      ids_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    public static final int FILES_UPLOADED_FIELD_NUMBER = 1;
+    private long filesUploaded_;
+    /**
+     * <pre>
+     * Total number of files successfully uploaded.
+     * </pre>
+     *
+     * <code>uint64 files_uploaded = 1 [json_name = "filesUploaded"];</code>
+     * @return The filesUploaded.
+     */
+    @java.lang.Override
+    public long getFilesUploaded() {
+      return filesUploaded_;
+    }
+    /**
+     * <pre>
+     * Total number of files successfully uploaded.
+     * </pre>
+     *
+     * <code>uint64 files_uploaded = 1 [json_name = "filesUploaded"];</code>
+     * @param value The filesUploaded to set.
+     */
+    private void setFilesUploaded(long value) {
+      
+      filesUploaded_ = value;
+    }
+    /**
+     * <pre>
+     * Total number of files successfully uploaded.
+     * </pre>
+     *
+     * <code>uint64 files_uploaded = 1 [json_name = "filesUploaded"];</code>
+     */
+    private void clearFilesUploaded() {
+
+      filesUploaded_ = 0L;
+    }
+
+    public static final int FILES_FAILED_FIELD_NUMBER = 2;
+    private long filesFailed_;
+    /**
+     * <pre>
+     * Total number of files that failed to upload.
+     * </pre>
+     *
+     * <code>uint64 files_failed = 2 [json_name = "filesFailed"];</code>
+     * @return The filesFailed.
+     */
+    @java.lang.Override
+    public long getFilesFailed() {
+      return filesFailed_;
+    }
+    /**
+     * <pre>
+     * Total number of files that failed to upload.
+     * </pre>
+     *
+     * <code>uint64 files_failed = 2 [json_name = "filesFailed"];</code>
+     * @param value The filesFailed to set.
+     */
+    private void setFilesFailed(long value) {
+      
+      filesFailed_ = value;
+    }
+    /**
+     * <pre>
+     * Total number of files that failed to upload.
+     * </pre>
+     *
+     * <code>uint64 files_failed = 2 [json_name = "filesFailed"];</code>
+     */
+    private void clearFilesFailed() {
+
+      filesFailed_ = 0L;
+    }
+
+    public static final int BYTES_UPLOADED_FIELD_NUMBER = 3;
+    private long bytesUploaded_;
+    /**
+     * <pre>
+     * Total bytes successfully uploaded.
+     * </pre>
+     *
+     * <code>uint64 bytes_uploaded = 3 [json_name = "bytesUploaded"];</code>
+     * @return The bytesUploaded.
+     */
+    @java.lang.Override
+    public long getBytesUploaded() {
+      return bytesUploaded_;
+    }
+    /**
+     * <pre>
+     * Total bytes successfully uploaded.
+     * </pre>
+     *
+     * <code>uint64 bytes_uploaded = 3 [json_name = "bytesUploaded"];</code>
+     * @param value The bytesUploaded to set.
+     */
+    private void setBytesUploaded(long value) {
+      
+      bytesUploaded_ = value;
+    }
+    /**
+     * <pre>
+     * Total bytes successfully uploaded.
+     * </pre>
+     *
+     * <code>uint64 bytes_uploaded = 3 [json_name = "bytesUploaded"];</code>
+     */
+    private void clearBytesUploaded() {
+
+      bytesUploaded_ = 0L;
+    }
+
+    public static final int BYTES_TOTAL_FIELD_NUMBER = 4;
+    private long bytesTotal_;
+    /**
+     * <pre>
+     * Total bytes discovered in the directory.
+     * </pre>
+     *
+     * <code>uint64 bytes_total = 4 [json_name = "bytesTotal"];</code>
+     * @return The bytesTotal.
+     */
+    @java.lang.Override
+    public long getBytesTotal() {
+      return bytesTotal_;
+    }
+    /**
+     * <pre>
+     * Total bytes discovered in the directory.
+     * </pre>
+     *
+     * <code>uint64 bytes_total = 4 [json_name = "bytesTotal"];</code>
+     * @param value The bytesTotal to set.
+     */
+    private void setBytesTotal(long value) {
+      
+      bytesTotal_ = value;
+    }
+    /**
+     * <pre>
+     * Total bytes discovered in the directory.
+     * </pre>
+     *
+     * <code>uint64 bytes_total = 4 [json_name = "bytesTotal"];</code>
+     */
+    private void clearBytesTotal() {
+
+      bytesTotal_ = 0L;
+    }
+
+    public static final int IDS_FIELD_NUMBER = 5;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> ids_;
+    /**
+     * <pre>
+     * Successfully uploaded binary data ids.
+     * </pre>
+     *
+     * <code>repeated string ids = 5 [json_name = "ids"];</code>
+     * @return A list containing the ids.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getIdsList() {
+      return ids_;
+    }
+    /**
+     * <pre>
+     * Successfully uploaded binary data ids.
+     * </pre>
+     *
+     * <code>repeated string ids = 5 [json_name = "ids"];</code>
+     * @return The count of ids.
+     */
+    @java.lang.Override
+    public int getIdsCount() {
+      return ids_.size();
+    }
+    /**
+     * <pre>
+     * Successfully uploaded binary data ids.
+     * </pre>
+     *
+     * <code>repeated string ids = 5 [json_name = "ids"];</code>
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getIds(int index) {
+      return ids_.get(index);
+    }
+    /**
+     * <pre>
+     * Successfully uploaded binary data ids.
+     * </pre>
+     *
+     * <code>repeated string ids = 5 [json_name = "ids"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ids at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          ids_.get(index));
+    }
+    private void ensureIdsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          ids_;  if (!tmp.isModifiable()) {
+        ids_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * Successfully uploaded binary data ids.
+     * </pre>
+     *
+     * <code>repeated string ids = 5 [json_name = "ids"];</code>
+     * @param index The index to set the value at.
+     * @param value The ids to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setIds(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureIdsIsMutable();
+      ids_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Successfully uploaded binary data ids.
+     * </pre>
+     *
+     * <code>repeated string ids = 5 [json_name = "ids"];</code>
+     * @param value The ids to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addIds(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureIdsIsMutable();
+      ids_.add(value);
+    }
+    /**
+     * <pre>
+     * Successfully uploaded binary data ids.
+     * </pre>
+     *
+     * <code>repeated string ids = 5 [json_name = "ids"];</code>
+     * @param values The ids to add.
+     */
+    private void addAllIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, ids_);
+    }
+    /**
+     * <pre>
+     * Successfully uploaded binary data ids.
+     * </pre>
+     *
+     * <code>repeated string ids = 5 [json_name = "ids"];</code>
+     */
+    private void clearIds() {
+      ids_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Successfully uploaded binary data ids.
+     * </pre>
+     *
+     * <code>repeated string ids = 5 [json_name = "ids"];</code>
+     * @param value The bytes of the ids to add.
+     */
+    private void addIdsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureIdsIsMutable();
+      ids_.add(value.toStringUtf8());
+    }
+
+    public static com.viam.robot.v1.Robot.UploadDataFromPathResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.UploadDataFromPathResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.UploadDataFromPathResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.UploadDataFromPathResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.UploadDataFromPathResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.UploadDataFromPathResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.UploadDataFromPathResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.UploadDataFromPathResponse)
+        com.viam.robot.v1.Robot.UploadDataFromPathResponseOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.UploadDataFromPathResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * Total number of files successfully uploaded.
+       * </pre>
+       *
+       * <code>uint64 files_uploaded = 1 [json_name = "filesUploaded"];</code>
+       * @return The filesUploaded.
+       */
+      @java.lang.Override
+      public long getFilesUploaded() {
+        return instance.getFilesUploaded();
+      }
+      /**
+       * <pre>
+       * Total number of files successfully uploaded.
+       * </pre>
+       *
+       * <code>uint64 files_uploaded = 1 [json_name = "filesUploaded"];</code>
+       * @param value The filesUploaded to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilesUploaded(long value) {
+        copyOnWrite();
+        instance.setFilesUploaded(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Total number of files successfully uploaded.
+       * </pre>
+       *
+       * <code>uint64 files_uploaded = 1 [json_name = "filesUploaded"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilesUploaded() {
+        copyOnWrite();
+        instance.clearFilesUploaded();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Total number of files that failed to upload.
+       * </pre>
+       *
+       * <code>uint64 files_failed = 2 [json_name = "filesFailed"];</code>
+       * @return The filesFailed.
+       */
+      @java.lang.Override
+      public long getFilesFailed() {
+        return instance.getFilesFailed();
+      }
+      /**
+       * <pre>
+       * Total number of files that failed to upload.
+       * </pre>
+       *
+       * <code>uint64 files_failed = 2 [json_name = "filesFailed"];</code>
+       * @param value The filesFailed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilesFailed(long value) {
+        copyOnWrite();
+        instance.setFilesFailed(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Total number of files that failed to upload.
+       * </pre>
+       *
+       * <code>uint64 files_failed = 2 [json_name = "filesFailed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilesFailed() {
+        copyOnWrite();
+        instance.clearFilesFailed();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Total bytes successfully uploaded.
+       * </pre>
+       *
+       * <code>uint64 bytes_uploaded = 3 [json_name = "bytesUploaded"];</code>
+       * @return The bytesUploaded.
+       */
+      @java.lang.Override
+      public long getBytesUploaded() {
+        return instance.getBytesUploaded();
+      }
+      /**
+       * <pre>
+       * Total bytes successfully uploaded.
+       * </pre>
+       *
+       * <code>uint64 bytes_uploaded = 3 [json_name = "bytesUploaded"];</code>
+       * @param value The bytesUploaded to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBytesUploaded(long value) {
+        copyOnWrite();
+        instance.setBytesUploaded(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Total bytes successfully uploaded.
+       * </pre>
+       *
+       * <code>uint64 bytes_uploaded = 3 [json_name = "bytesUploaded"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBytesUploaded() {
+        copyOnWrite();
+        instance.clearBytesUploaded();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Total bytes discovered in the directory.
+       * </pre>
+       *
+       * <code>uint64 bytes_total = 4 [json_name = "bytesTotal"];</code>
+       * @return The bytesTotal.
+       */
+      @java.lang.Override
+      public long getBytesTotal() {
+        return instance.getBytesTotal();
+      }
+      /**
+       * <pre>
+       * Total bytes discovered in the directory.
+       * </pre>
+       *
+       * <code>uint64 bytes_total = 4 [json_name = "bytesTotal"];</code>
+       * @param value The bytesTotal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBytesTotal(long value) {
+        copyOnWrite();
+        instance.setBytesTotal(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Total bytes discovered in the directory.
+       * </pre>
+       *
+       * <code>uint64 bytes_total = 4 [json_name = "bytesTotal"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBytesTotal() {
+        copyOnWrite();
+        instance.clearBytesTotal();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Successfully uploaded binary data ids.
+       * </pre>
+       *
+       * <code>repeated string ids = 5 [json_name = "ids"];</code>
+       * @return A list containing the ids.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getIdsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getIdsList());
+      }
+      /**
+       * <pre>
+       * Successfully uploaded binary data ids.
+       * </pre>
+       *
+       * <code>repeated string ids = 5 [json_name = "ids"];</code>
+       * @return The count of ids.
+       */
+      @java.lang.Override
+      public int getIdsCount() {
+        return instance.getIdsCount();
+      }
+      /**
+       * <pre>
+       * Successfully uploaded binary data ids.
+       * </pre>
+       *
+       * <code>repeated string ids = 5 [json_name = "ids"];</code>
+       * @param index The index of the element to return.
+       * @return The ids at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getIds(int index) {
+        return instance.getIds(index);
+      }
+      /**
+       * <pre>
+       * Successfully uploaded binary data ids.
+       * </pre>
+       *
+       * <code>repeated string ids = 5 [json_name = "ids"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the ids at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdsBytes(int index) {
+        return instance.getIdsBytes(index);
+      }
+      /**
+       * <pre>
+       * Successfully uploaded binary data ids.
+       * </pre>
+       *
+       * <code>repeated string ids = 5 [json_name = "ids"];</code>
+       * @param index The index to set the value at.
+       * @param value The ids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIds(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setIds(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Successfully uploaded binary data ids.
+       * </pre>
+       *
+       * <code>repeated string ids = 5 [json_name = "ids"];</code>
+       * @param value The ids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIds(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addIds(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Successfully uploaded binary data ids.
+       * </pre>
+       *
+       * <code>repeated string ids = 5 [json_name = "ids"];</code>
+       * @param values The ids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIds(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllIds(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Successfully uploaded binary data ids.
+       * </pre>
+       *
+       * <code>repeated string ids = 5 [json_name = "ids"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIds() {
+        copyOnWrite();
+        instance.clearIds();
+        return this;
+      }
+      /**
+       * <pre>
+       * Successfully uploaded binary data ids.
+       * </pre>
+       *
+       * <code>repeated string ids = 5 [json_name = "ids"];</code>
+       * @param value The bytes of the ids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIdsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addIdsBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.UploadDataFromPathResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.UploadDataFromPathResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "filesUploaded_",
+              "filesFailed_",
+              "bytesUploaded_",
+              "bytesTotal_",
+              "ids_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0003\u0002\u0003" +
+                "\u0003\u0003\u0004\u0003\u0005\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.UploadDataFromPathResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.UploadDataFromPathResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.UploadDataFromPathResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.UploadDataFromPathResponse)
+    private static final com.viam.robot.v1.Robot.UploadDataFromPathResponse DEFAULT_INSTANCE;
+    static {
+      UploadDataFromPathResponse defaultInstance = new UploadDataFromPathResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UploadDataFromPathResponse.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.UploadDataFromPathResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UploadDataFromPathResponse> PARSER;
+
+    public static com.google.protobuf.Parser<UploadDataFromPathResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface TunnelRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.robot.v1.TunnelRequest)
       com.google.protobuf.MessageLiteOrBuilder {

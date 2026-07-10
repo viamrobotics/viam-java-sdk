@@ -237,6 +237,127 @@ public final class AppOuterClass {
   }
 
   /**
+   * <pre>
+   * LoginMethod is an interactive login mechanism an organization may allow.
+   * </pre>
+   *
+   * Protobuf enum {@code viam.app.v1.LoginMethod}
+   */
+  public enum LoginMethod
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>LOGIN_METHOD_UNSPECIFIED = 0;</code>
+     */
+    LOGIN_METHOD_UNSPECIFIED(0),
+    /**
+     * <code>LOGIN_METHOD_PASSWORD = 1;</code>
+     */
+    LOGIN_METHOD_PASSWORD(1),
+    /**
+     * <code>LOGIN_METHOD_GOOGLE = 2;</code>
+     */
+    LOGIN_METHOD_GOOGLE(2),
+    /**
+     * <code>LOGIN_METHOD_GITHUB = 3;</code>
+     */
+    LOGIN_METHOD_GITHUB(3),
+    /**
+     * <code>LOGIN_METHOD_APPLE = 4;</code>
+     */
+    LOGIN_METHOD_APPLE(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>LOGIN_METHOD_UNSPECIFIED = 0;</code>
+     */
+    public static final int LOGIN_METHOD_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>LOGIN_METHOD_PASSWORD = 1;</code>
+     */
+    public static final int LOGIN_METHOD_PASSWORD_VALUE = 1;
+    /**
+     * <code>LOGIN_METHOD_GOOGLE = 2;</code>
+     */
+    public static final int LOGIN_METHOD_GOOGLE_VALUE = 2;
+    /**
+     * <code>LOGIN_METHOD_GITHUB = 3;</code>
+     */
+    public static final int LOGIN_METHOD_GITHUB_VALUE = 3;
+    /**
+     * <code>LOGIN_METHOD_APPLE = 4;</code>
+     */
+    public static final int LOGIN_METHOD_APPLE_VALUE = 4;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static LoginMethod valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static LoginMethod forNumber(int value) {
+      switch (value) {
+        case 0: return LOGIN_METHOD_UNSPECIFIED;
+        case 1: return LOGIN_METHOD_PASSWORD;
+        case 2: return LOGIN_METHOD_GOOGLE;
+        case 3: return LOGIN_METHOD_GITHUB;
+        case 4: return LOGIN_METHOD_APPLE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LoginMethod>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        LoginMethod> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LoginMethod>() {
+            @java.lang.Override
+            public LoginMethod findValueByNumber(int number) {
+              return LoginMethod.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return LoginMethodVerifier.INSTANCE;
+    }
+
+    private static final class LoginMethodVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier
+                INSTANCE = new LoginMethodVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return LoginMethod.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private LoginMethod(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.v1.LoginMethod)
+  }
+
+  /**
    * Protobuf enum {@code viam.app.v1.FragmentVisibility}
    */
   public enum FragmentVisibility
@@ -6232,6 +6353,486 @@ public final class AppOuterClass {
     }
   }
 
+  public interface AllowedLoginMethodsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.AllowedLoginMethods)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @return A list containing the methods.
+     */
+    java.util.List<viam.app.v1.AppOuterClass.LoginMethod> getMethodsList();
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @return The count of methods.
+     */
+    int getMethodsCount();
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @param index The index of the element to return.
+     * @return The methods at the given index.
+     */
+    viam.app.v1.AppOuterClass.LoginMethod getMethods(int index);
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @return A list containing the enum numeric values on the wire for methods.
+     */
+    java.util.List<java.lang.Integer>
+    getMethodsValueList();
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of methods at the given index.
+     */
+    int getMethodsValue(int index);
+  }
+  /**
+   * <pre>
+   * An empty list means that all methods are allowed.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.v1.AllowedLoginMethods}
+   */
+  public  static final class AllowedLoginMethods extends
+      com.google.protobuf.GeneratedMessageLite<
+          AllowedLoginMethods, AllowedLoginMethods.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.AllowedLoginMethods)
+      AllowedLoginMethodsOrBuilder {
+    private AllowedLoginMethods() {
+      methods_ = emptyIntList();
+    }
+    public static final int METHODS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.IntList methods_;
+    private static final com.google.protobuf.Internal.IntListAdapter.IntConverter<
+        viam.app.v1.AppOuterClass.LoginMethod> methods_converter_ =
+            new com.google.protobuf.Internal.IntListAdapter.IntConverter<
+                viam.app.v1.AppOuterClass.LoginMethod>() {
+              @java.lang.Override
+              public viam.app.v1.AppOuterClass.LoginMethod convert(int from) {
+                viam.app.v1.AppOuterClass.LoginMethod result = viam.app.v1.AppOuterClass.LoginMethod.forNumber(from);
+                return result == null ? viam.app.v1.AppOuterClass.LoginMethod.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @return A list containing the methods.
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.AppOuterClass.LoginMethod> getMethodsList() {
+      return new com.google.protobuf.Internal.IntListAdapter<
+          viam.app.v1.AppOuterClass.LoginMethod>(methods_, methods_converter_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @return The count of methods.
+     */
+    @java.lang.Override
+    public int getMethodsCount() {
+      return methods_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @param index The index of the element to return.
+     * @return The methods at the given index.
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.LoginMethod getMethods(int index) {
+      viam.app.v1.AppOuterClass.LoginMethod result = viam.app.v1.AppOuterClass.LoginMethod.forNumber(methods_.getInt(index));
+      return result == null ? viam.app.v1.AppOuterClass.LoginMethod.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @return A list containing the enum numeric values on the wire for methods.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getMethodsValueList() {
+      return methods_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of methods at the given index.
+     */
+    @java.lang.Override
+    public int getMethodsValue(int index) {
+      return methods_.getInt(index);
+    }
+    private int methodsMemoizedSerializedSize;
+    private void ensureMethodsIsMutable() {
+      com.google.protobuf.Internal.IntList tmp = methods_;
+      if (!tmp.isModifiable()) {
+        methods_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+      }
+    }
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @param index The index to set the value at.
+     * @param value The methods to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMethods(
+        int index, viam.app.v1.AppOuterClass.LoginMethod value) {
+      value.getClass();  // minimal bytecode null check
+      ensureMethodsIsMutable();
+      methods_.setInt(index, value.getNumber());
+    }
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @param value The methods to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addMethods(viam.app.v1.AppOuterClass.LoginMethod value) {
+      value.getClass();  // minimal bytecode null check
+      ensureMethodsIsMutable();
+      methods_.addInt(value.getNumber());
+    }
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @param values The methods to add.
+     */
+    private void addAllMethods(
+        java.lang.Iterable<? extends viam.app.v1.AppOuterClass.LoginMethod> values) {
+      ensureMethodsIsMutable();
+      for (viam.app.v1.AppOuterClass.LoginMethod value : values) {
+        methods_.addInt(value.getNumber());
+      }
+    }
+    /**
+     * `repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];`
+     */
+    private void clearMethods() {
+      methods_ = emptyIntList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @param value The enum numeric value on the wire for methods to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setMethodsValue(
+        int index, int value) {
+      ensureMethodsIsMutable();
+      methods_.setInt(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @param value The enum numeric value on the wire for methods to add.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void addMethodsValue(int value) {
+      ensureMethodsIsMutable();
+      methods_.addInt(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+     * @param values The enum numeric values on the wire for methods to add.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void addAllMethodsValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureMethodsIsMutable();
+      for (int value : values) {
+        methods_.addInt(value);
+      }
+    }
+
+    public static viam.app.v1.AppOuterClass.AllowedLoginMethods parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.AllowedLoginMethods parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.AllowedLoginMethods parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.AllowedLoginMethods parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.AllowedLoginMethods parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.AllowedLoginMethods parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.AllowedLoginMethods parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.AllowedLoginMethods parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.AllowedLoginMethods parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.AllowedLoginMethods parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.AllowedLoginMethods parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.AllowedLoginMethods parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.AllowedLoginMethods prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * An empty list means that all methods are allowed.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.v1.AllowedLoginMethods}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.AllowedLoginMethods, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.AllowedLoginMethods)
+        viam.app.v1.AppOuterClass.AllowedLoginMethodsOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.AllowedLoginMethods.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+       * @return A list containing the methods.
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.AppOuterClass.LoginMethod> getMethodsList() {
+        return instance.getMethodsList();
+      }
+      /**
+       * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+       * @return The count of methods.
+       */
+      @java.lang.Override
+      public int getMethodsCount() {
+        return instance.getMethodsCount();
+      }
+      /**
+       * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+       * @param index The index of the element to return.
+       * @return The methods at the given index.
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.LoginMethod getMethods(int index) {
+        return instance.getMethods(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+       * @param index The index to set the value at.
+       * @param value The methods to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethods(
+          int index, viam.app.v1.AppOuterClass.LoginMethod value) {
+        copyOnWrite();
+        instance.setMethods(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+       * @param value The methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMethods(viam.app.v1.AppOuterClass.LoginMethod value) {
+        copyOnWrite();
+        instance.addMethods(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+       * @param values The methods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMethods(
+          java.lang.Iterable<? extends viam.app.v1.AppOuterClass.LoginMethod> values) {
+        copyOnWrite();
+        instance.addAllMethods(values);  return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethods() {
+        copyOnWrite();
+        instance.clearMethods();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+       * @return A list containing the enum numeric values on the wire for methods.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.Integer>
+      getMethodsValueList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getMethodsValueList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of methods at the given index.
+       */
+      @java.lang.Override
+      public int getMethodsValue(int index) {
+        return instance.getMethodsValue(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for methods to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodsValue(
+          int index, int value) {
+        copyOnWrite();
+        instance.setMethodsValue(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+       * @param value The enum numeric value on the wire for methods to add.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder addMethodsValue(int value) {
+        copyOnWrite();
+        instance.addMethodsValue(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.LoginMethod methods = 1 [json_name = "methods"];</code>
+       * @param values The enum numeric values on the wire for methods to add.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMethodsValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        copyOnWrite();
+        instance.addAllMethodsValue(values);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.AllowedLoginMethods)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.AllowedLoginMethods();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "methods_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001,";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.AllowedLoginMethods> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.AllowedLoginMethods.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.AllowedLoginMethods>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.AllowedLoginMethods)
+    private static final viam.app.v1.AppOuterClass.AllowedLoginMethods DEFAULT_INSTANCE;
+    static {
+      AllowedLoginMethods defaultInstance = new AllowedLoginMethods();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AllowedLoginMethods.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.AllowedLoginMethods getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<AllowedLoginMethods> PARSER;
+
+    public static com.google.protobuf.Parser<AllowedLoginMethods> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface OrganizationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.Organization)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -6332,6 +6933,17 @@ public final class AppOuterClass {
      * @return The defaultFragments.
      */
     viam.app.v1.AppOuterClass.FragmentImportList getDefaultFragments();
+
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 8 [json_name = "allowedLoginMethods"];</code>
+     * @return Whether the allowedLoginMethods field is set.
+     */
+    boolean hasAllowedLoginMethods();
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 8 [json_name = "allowedLoginMethods"];</code>
+     * @return The allowedLoginMethods.
+     */
+    viam.app.v1.AppOuterClass.AllowedLoginMethods getAllowedLoginMethods();
   }
   /**
    * Protobuf type {@code viam.app.v1.Organization}
@@ -6716,6 +7328,54 @@ public final class AppOuterClass {
     private void clearDefaultFragments() {
       defaultFragments_ = null;
       bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static final int ALLOWED_LOGIN_METHODS_FIELD_NUMBER = 8;
+    private viam.app.v1.AppOuterClass.AllowedLoginMethods allowedLoginMethods_;
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 8 [json_name = "allowedLoginMethods"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAllowedLoginMethods() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 8 [json_name = "allowedLoginMethods"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.AllowedLoginMethods getAllowedLoginMethods() {
+      return allowedLoginMethods_ == null ? viam.app.v1.AppOuterClass.AllowedLoginMethods.getDefaultInstance() : allowedLoginMethods_;
+    }
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 8 [json_name = "allowedLoginMethods"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setAllowedLoginMethods(viam.app.v1.AppOuterClass.AllowedLoginMethods value) {
+      value.getClass();  // minimal bytecode null check
+      allowedLoginMethods_ = value;
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 8 [json_name = "allowedLoginMethods"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeAllowedLoginMethods(viam.app.v1.AppOuterClass.AllowedLoginMethods value) {
+      value.getClass();  // minimal bytecode null check
+      if (allowedLoginMethods_ != null &&
+          allowedLoginMethods_ != viam.app.v1.AppOuterClass.AllowedLoginMethods.getDefaultInstance()) {
+        allowedLoginMethods_ =
+          viam.app.v1.AppOuterClass.AllowedLoginMethods.newBuilder(allowedLoginMethods_).mergeFrom(value).buildPartial();
+      } else {
+        allowedLoginMethods_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 8 [json_name = "allowedLoginMethods"];</code>
+     */
+    private void clearAllowedLoginMethods() {
+      allowedLoginMethods_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
     }
 
     public static viam.app.v1.AppOuterClass.Organization parseFrom(
@@ -7187,6 +7847,53 @@ public final class AppOuterClass {
         return this;
       }
 
+      /**
+       * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 8 [json_name = "allowedLoginMethods"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAllowedLoginMethods() {
+        return instance.hasAllowedLoginMethods();
+      }
+      /**
+       * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 8 [json_name = "allowedLoginMethods"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.AllowedLoginMethods getAllowedLoginMethods() {
+        return instance.getAllowedLoginMethods();
+      }
+      /**
+       * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 8 [json_name = "allowedLoginMethods"];</code>
+       */
+      public Builder setAllowedLoginMethods(viam.app.v1.AppOuterClass.AllowedLoginMethods value) {
+        copyOnWrite();
+        instance.setAllowedLoginMethods(value);
+        return this;
+        }
+      /**
+       * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 8 [json_name = "allowedLoginMethods"];</code>
+       */
+      public Builder setAllowedLoginMethods(
+          viam.app.v1.AppOuterClass.AllowedLoginMethods.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAllowedLoginMethods(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 8 [json_name = "allowedLoginMethods"];</code>
+       */
+      public Builder mergeAllowedLoginMethods(viam.app.v1.AppOuterClass.AllowedLoginMethods value) {
+        copyOnWrite();
+        instance.mergeAllowedLoginMethods(value);
+        return this;
+      }
+      /**
+       * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 8 [json_name = "allowedLoginMethods"];</code>
+       */
+      public Builder clearAllowedLoginMethods() {  copyOnWrite();
+        instance.clearAllowedLoginMethods();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.Organization)
     }
     @java.lang.Override
@@ -7211,10 +7918,12 @@ public final class AppOuterClass {
               "defaultRegion_",
               "cid_",
               "defaultFragments_",
+              "allowedLoginMethods_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u1009\u0000\u0004\u0208\u0005\u0208\u0006\u1208\u0001\u0007\u1009\u0002";
+                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u1009" +
+                "\u0000\u0004\u0208\u0005\u0208\u0006\u1208\u0001\u0007\u1009\u0002\b\u1009\u0003" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -11568,6 +12277,17 @@ public final class AppOuterClass {
      * @return The defaultFragments.
      */
     viam.app.v1.AppOuterClass.FragmentImportList getDefaultFragments();
+
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 7 [json_name = "allowedLoginMethods"];</code>
+     * @return Whether the allowedLoginMethods field is set.
+     */
+    boolean hasAllowedLoginMethods();
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 7 [json_name = "allowedLoginMethods"];</code>
+     * @return The allowedLoginMethods.
+     */
+    viam.app.v1.AppOuterClass.AllowedLoginMethods getAllowedLoginMethods();
   }
   /**
    * Protobuf type {@code viam.app.v1.UpdateOrganizationRequest}
@@ -11927,6 +12647,54 @@ public final class AppOuterClass {
     private void clearDefaultFragments() {
       defaultFragments_ = null;
       bitField0_ = (bitField0_ & ~0x00000010);
+    }
+
+    public static final int ALLOWED_LOGIN_METHODS_FIELD_NUMBER = 7;
+    private viam.app.v1.AppOuterClass.AllowedLoginMethods allowedLoginMethods_;
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 7 [json_name = "allowedLoginMethods"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAllowedLoginMethods() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 7 [json_name = "allowedLoginMethods"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.AllowedLoginMethods getAllowedLoginMethods() {
+      return allowedLoginMethods_ == null ? viam.app.v1.AppOuterClass.AllowedLoginMethods.getDefaultInstance() : allowedLoginMethods_;
+    }
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 7 [json_name = "allowedLoginMethods"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setAllowedLoginMethods(viam.app.v1.AppOuterClass.AllowedLoginMethods value) {
+      value.getClass();  // minimal bytecode null check
+      allowedLoginMethods_ = value;
+      bitField0_ |= 0x00000020;
+    }
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 7 [json_name = "allowedLoginMethods"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeAllowedLoginMethods(viam.app.v1.AppOuterClass.AllowedLoginMethods value) {
+      value.getClass();  // minimal bytecode null check
+      if (allowedLoginMethods_ != null &&
+          allowedLoginMethods_ != viam.app.v1.AppOuterClass.AllowedLoginMethods.getDefaultInstance()) {
+        allowedLoginMethods_ =
+          viam.app.v1.AppOuterClass.AllowedLoginMethods.newBuilder(allowedLoginMethods_).mergeFrom(value).buildPartial();
+      } else {
+        allowedLoginMethods_ = value;
+      }
+      bitField0_ |= 0x00000020;
+    }
+    /**
+     * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 7 [json_name = "allowedLoginMethods"];</code>
+     */
+    private void clearAllowedLoginMethods() {
+      allowedLoginMethods_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
     }
 
     public static viam.app.v1.AppOuterClass.UpdateOrganizationRequest parseFrom(
@@ -12374,6 +13142,53 @@ public final class AppOuterClass {
         return this;
       }
 
+      /**
+       * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 7 [json_name = "allowedLoginMethods"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAllowedLoginMethods() {
+        return instance.hasAllowedLoginMethods();
+      }
+      /**
+       * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 7 [json_name = "allowedLoginMethods"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.AllowedLoginMethods getAllowedLoginMethods() {
+        return instance.getAllowedLoginMethods();
+      }
+      /**
+       * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 7 [json_name = "allowedLoginMethods"];</code>
+       */
+      public Builder setAllowedLoginMethods(viam.app.v1.AppOuterClass.AllowedLoginMethods value) {
+        copyOnWrite();
+        instance.setAllowedLoginMethods(value);
+        return this;
+        }
+      /**
+       * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 7 [json_name = "allowedLoginMethods"];</code>
+       */
+      public Builder setAllowedLoginMethods(
+          viam.app.v1.AppOuterClass.AllowedLoginMethods.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAllowedLoginMethods(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 7 [json_name = "allowedLoginMethods"];</code>
+       */
+      public Builder mergeAllowedLoginMethods(viam.app.v1.AppOuterClass.AllowedLoginMethods value) {
+        copyOnWrite();
+        instance.mergeAllowedLoginMethods(value);
+        return this;
+      }
+      /**
+       * <code>optional .viam.app.v1.AllowedLoginMethods allowed_login_methods = 7 [json_name = "allowedLoginMethods"];</code>
+       */
+      public Builder clearAllowedLoginMethods() {  copyOnWrite();
+        instance.clearAllowedLoginMethods();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateOrganizationRequest)
     }
     @java.lang.Override
@@ -12397,10 +13212,12 @@ public final class AppOuterClass {
               "region_",
               "cid_",
               "defaultFragments_",
+              "allowedLoginMethods_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u1208" +
-                "\u0000\u0003\u1208\u0001\u0004\u1208\u0002\u0005\u1208\u0003\u0006\u1009\u0004";
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u1208" +
+                "\u0000\u0003\u1208\u0001\u0004\u1208\u0002\u0005\u1208\u0003\u0006\u1009\u0004\u0007" +
+                "\u1009\u0005";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -25908,7 +26725,7 @@ public final class AppOuterClass {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=653
+     *     See app/v1/app.proto;l=669
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -25919,7 +26736,7 @@ public final class AppOuterClass {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=653
+     *     See app/v1/app.proto;l=669
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -25993,7 +26810,7 @@ public final class AppOuterClass {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=653
+     *     See app/v1/app.proto;l=669
      * @return The secret.
      */
     @java.lang.Override
@@ -26007,7 +26824,7 @@ public final class AppOuterClass {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=653
+     *     See app/v1/app.proto;l=669
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -26369,7 +27186,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=653
+       *     See app/v1/app.proto;l=669
        * @return The secret.
        */
       @java.lang.Override
@@ -26383,7 +27200,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=653
+       *     See app/v1/app.proto;l=669
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -26398,7 +27215,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=653
+       *     See app/v1/app.proto;l=669
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -26415,7 +27232,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=653
+       *     See app/v1/app.proto;l=669
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -26430,7 +27247,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=653
+       *     See app/v1/app.proto;l=669
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -43090,7 +43907,7 @@ public final class AppOuterClass {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=884
+     *     See app/v1/app.proto;l=900
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -43304,7 +44121,7 @@ public final class AppOuterClass {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=884
+     *     See app/v1/app.proto;l=900
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -43951,7 +44768,7 @@ public final class AppOuterClass {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=884
+       *     See app/v1/app.proto;l=900
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -43965,7 +44782,7 @@ public final class AppOuterClass {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=884
+       *     See app/v1/app.proto;l=900
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -43981,7 +44798,7 @@ public final class AppOuterClass {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=884
+       *     See app/v1/app.proto;l=900
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
@@ -52142,6 +52959,23 @@ public final class AppOuterClass {
      */
     com.google.protobuf.ByteString
         getRevisionBytes();
+
+    /**
+     * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+     * @return Whether the publicNamespace field is set.
+     */
+    boolean hasPublicNamespace();
+    /**
+     * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+     * @return The publicNamespace.
+     */
+    java.lang.String getPublicNamespace();
+    /**
+     * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+     * @return The bytes for publicNamespace.
+     */
+    com.google.protobuf.ByteString
+        getPublicNamespaceBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.Fragment}
@@ -52157,6 +52991,7 @@ public final class AppOuterClass {
       organizationOwner_ = "";
       organizationName_ = "";
       revision_ = "";
+      publicNamespace_ = "";
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
@@ -52764,6 +53599,62 @@ public final class AppOuterClass {
       checkByteStringIsUtf8(value);
       revision_ = value.toStringUtf8();
 
+    }
+
+    public static final int PUBLIC_NAMESPACE_FIELD_NUMBER = 15;
+    private java.lang.String publicNamespace_;
+    /**
+     * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+     * @return Whether the publicNamespace field is set.
+     */
+    @java.lang.Override
+    public boolean hasPublicNamespace() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+     * @return The publicNamespace.
+     */
+    @java.lang.Override
+    public java.lang.String getPublicNamespace() {
+      return publicNamespace_;
+    }
+    /**
+     * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+     * @return The bytes for publicNamespace.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublicNamespaceBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(publicNamespace_);
+    }
+    /**
+     * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+     * @param value The publicNamespace to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPublicNamespace(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      bitField0_ |= 0x00000008;
+      publicNamespace_ = value;
+    }
+    /**
+     * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+     */
+    private void clearPublicNamespace() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      publicNamespace_ = getDefaultInstance().getPublicNamespace();
+    }
+    /**
+     * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+     * @param value The bytes for publicNamespace to set.
+     */
+    private void setPublicNamespaceBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      publicNamespace_ = value.toStringUtf8();
+      bitField0_ |= 0x00000008;
     }
 
     public static viam.app.v1.AppOuterClass.Fragment parseFrom(
@@ -53488,6 +54379,63 @@ public final class AppOuterClass {
         return this;
       }
 
+      /**
+       * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+       * @return Whether the publicNamespace field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublicNamespace() {
+        return instance.hasPublicNamespace();
+      }
+      /**
+       * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+       * @return The publicNamespace.
+       */
+      @java.lang.Override
+      public java.lang.String getPublicNamespace() {
+        return instance.getPublicNamespace();
+      }
+      /**
+       * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+       * @return The bytes for publicNamespace.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPublicNamespaceBytes() {
+        return instance.getPublicNamespaceBytes();
+      }
+      /**
+       * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+       * @param value The publicNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicNamespace(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPublicNamespace(value);
+        return this;
+      }
+      /**
+       * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublicNamespace() {
+        copyOnWrite();
+        instance.clearPublicNamespace();
+        return this;
+      }
+      /**
+       * <code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code>
+       * @param value The bytes for publicNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublicNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPublicNamespaceBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.Fragment)
     }
     @java.lang.Override
@@ -53518,11 +54466,12 @@ public final class AppOuterClass {
               "visibility_",
               "lastUpdated_",
               "revision_",
+              "publicNamespace_",
             };
             java.lang.String info =
-                "\u0000\r\u0000\u0001\u0001\u000e\r\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003" +
-                "\u1009\u0000\u0004\u0208\u0005\u0007\u0006\u1009\u0001\u0007\u0208\t\u0004\n\u0004" +
-                "\u000b\u0007\f\f\r\u1009\u0002\u000e\u0208";
+                "\u0000\u000e\u0000\u0001\u0001\u000f\u000e\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u1009\u0000\u0004\u0208\u0005\u0007\u0006\u1009\u0001\u0007\u0208\t\u0004" +
+                "\n\u0004\u000b\u0007\f\f\r\u1009\u0002\u000e\u0208\u000f\u1208\u0003";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -92963,7 +93912,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1446
+     *     See app/v1/app.proto;l=1463
      * @return A list containing the versions.
      */
     @java.lang.Deprecated java.util.List<java.lang.String>
@@ -92975,7 +93924,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1446
+     *     See app/v1/app.proto;l=1463
      * @return The count of versions.
      */
     @java.lang.Deprecated int getVersionsCount();
@@ -92986,7 +93935,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1446
+     *     See app/v1/app.proto;l=1463
      * @param index The index of the element to return.
      * @return The versions at the given index.
      */
@@ -92998,7 +93947,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1446
+     *     See app/v1/app.proto;l=1463
      * @param index The index of the element to return.
      * @return The versions at the given index.
      */
@@ -93062,7 +94011,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1446
+     *     See app/v1/app.proto;l=1463
      * @return A list containing the versions.
      */
     @java.lang.Override
@@ -93076,7 +94025,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1446
+     *     See app/v1/app.proto;l=1463
      * @return The count of versions.
      */
     @java.lang.Override
@@ -93090,7 +94039,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1446
+     *     See app/v1/app.proto;l=1463
      * @param index The index of the element to return.
      * @return The versions at the given index.
      */
@@ -93105,7 +94054,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1446
+     *     See app/v1/app.proto;l=1463
      * @param index The index of the value to return.
      * @return The bytes of the versions at the given index.
      */
@@ -93479,7 +94428,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1446
+       *     See app/v1/app.proto;l=1463
        * @return A list containing the versions.
        */
       @java.lang.Override
@@ -93495,7 +94444,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1446
+       *     See app/v1/app.proto;l=1463
        * @return The count of versions.
        */
       @java.lang.Override
@@ -93509,7 +94458,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1446
+       *     See app/v1/app.proto;l=1463
        * @param index The index of the element to return.
        * @return The versions at the given index.
        */
@@ -93524,7 +94473,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1446
+       *     See app/v1/app.proto;l=1463
        * @param index The index of the value to return.
        * @return The bytes of the versions at the given index.
        */
@@ -93540,7 +94489,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1446
+       *     See app/v1/app.proto;l=1463
        * @param index The index to set the value at.
        * @param value The versions to set.
        * @return This builder for chaining.
@@ -93558,7 +94507,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1446
+       *     See app/v1/app.proto;l=1463
        * @param value The versions to add.
        * @return This builder for chaining.
        */
@@ -93575,7 +94524,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1446
+       *     See app/v1/app.proto;l=1463
        * @param values The versions to add.
        * @return This builder for chaining.
        */
@@ -93592,7 +94541,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1446
+       *     See app/v1/app.proto;l=1463
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearVersions() {
@@ -93607,7 +94556,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1446
+       *     See app/v1/app.proto;l=1463
        * @param value The bytes of the versions to add.
        * @return This builder for chaining.
        */
@@ -95583,6 +96532,876 @@ java.lang.String defaultValue) {
     }
   }
 
+  public interface RegistryItemBillingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.RegistryItemBilling)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The recurring monthly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_month = 1 [json_name = "costPerMonth"];</code>
+     * @return Whether the costPerMonth field is set.
+     */
+    boolean hasCostPerMonth();
+    /**
+     * <pre>
+     * The recurring monthly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_month = 1 [json_name = "costPerMonth"];</code>
+     * @return The costPerMonth.
+     */
+    viam.app.v1.AppOuterClass.RegistryItemCostByResource getCostPerMonth();
+
+    /**
+     * <pre>
+     * The recurring yearly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_year = 2 [json_name = "costPerYear"];</code>
+     * @return Whether the costPerYear field is set.
+     */
+    boolean hasCostPerYear();
+    /**
+     * <pre>
+     * The recurring yearly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_year = 2 [json_name = "costPerYear"];</code>
+     * @return The costPerYear.
+     */
+    viam.app.v1.AppOuterClass.RegistryItemCostByResource getCostPerYear();
+
+    public viam.app.v1.AppOuterClass.RegistryItemBilling.FrequencyCase getFrequencyCase();
+  }
+  /**
+   * <pre>
+   * RegistryItemBilling stores usage cost information for a registry item. Its shape mirrors the
+   * billing block used by fragments so that billing jobs can consume registry item costs the same
+   * way. For now only cost_per_month.per_machine is supported; the additional fields that fragment
+   * billing supports (cost_per_year, tier_name, in_arrears, etc.) are intentionally omitted.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.v1.RegistryItemBilling}
+   */
+  public  static final class RegistryItemBilling extends
+      com.google.protobuf.GeneratedMessageLite<
+          RegistryItemBilling, RegistryItemBilling.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.RegistryItemBilling)
+      RegistryItemBillingOrBuilder {
+    private RegistryItemBilling() {
+    }
+    private int frequencyCase_ = 0;
+    private java.lang.Object frequency_;
+    public enum FrequencyCase
+        implements com.google.protobuf.AbstractMessageLite.InternalOneOfEnum {
+      COST_PER_MONTH(1),
+      COST_PER_YEAR(2),
+      FREQUENCY_NOT_SET(0);
+      private final int value;
+      private FrequencyCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static FrequencyCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static FrequencyCase forNumber(int value) {
+        switch (value) {
+          case 1: return COST_PER_MONTH;
+          case 2: return COST_PER_YEAR;
+          case 0: return FREQUENCY_NOT_SET;
+          default: return null;
+        }
+      }
+      @java.lang.Override public int getNumber() {
+        return this.value;
+      }
+    };
+
+    @java.lang.Override
+    public FrequencyCase
+    getFrequencyCase() {
+      return FrequencyCase.forNumber(
+          frequencyCase_);
+    }
+
+    private void clearFrequency() {
+      frequencyCase_ = 0;
+      frequency_ = null;
+    }
+
+    public static final int COST_PER_MONTH_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * The recurring monthly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_month = 1 [json_name = "costPerMonth"];</code>
+     */
+    @java.lang.Override
+    public boolean hasCostPerMonth() {
+      return frequencyCase_ == 1;
+    }
+    /**
+     * <pre>
+     * The recurring monthly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_month = 1 [json_name = "costPerMonth"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.RegistryItemCostByResource getCostPerMonth() {
+      if (frequencyCase_ == 1) {
+         return (viam.app.v1.AppOuterClass.RegistryItemCostByResource) frequency_;
+      }
+      return viam.app.v1.AppOuterClass.RegistryItemCostByResource.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * The recurring monthly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_month = 1 [json_name = "costPerMonth"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setCostPerMonth(viam.app.v1.AppOuterClass.RegistryItemCostByResource value) {
+      value.getClass();  // minimal bytecode null check
+      frequency_ = value;
+      frequencyCase_ = 1;
+    }
+    /**
+     * <pre>
+     * The recurring monthly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_month = 1 [json_name = "costPerMonth"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void mergeCostPerMonth(viam.app.v1.AppOuterClass.RegistryItemCostByResource value) {
+      value.getClass();  // minimal bytecode null check
+      if (frequencyCase_ == 1 &&
+          frequency_ != viam.app.v1.AppOuterClass.RegistryItemCostByResource.getDefaultInstance()) {
+        frequency_ = viam.app.v1.AppOuterClass.RegistryItemCostByResource.newBuilder((viam.app.v1.AppOuterClass.RegistryItemCostByResource) frequency_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        frequency_ = value;
+      }
+      frequencyCase_ = 1;
+    }
+    /**
+     * <pre>
+     * The recurring monthly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_month = 1 [json_name = "costPerMonth"];</code>
+     */
+    private void clearCostPerMonth() {
+      if (frequencyCase_ == 1) {
+        frequencyCase_ = 0;
+        frequency_ = null;
+      }
+    }
+
+    public static final int COST_PER_YEAR_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * The recurring yearly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_year = 2 [json_name = "costPerYear"];</code>
+     */
+    @java.lang.Override
+    public boolean hasCostPerYear() {
+      return frequencyCase_ == 2;
+    }
+    /**
+     * <pre>
+     * The recurring yearly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_year = 2 [json_name = "costPerYear"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.RegistryItemCostByResource getCostPerYear() {
+      if (frequencyCase_ == 2) {
+         return (viam.app.v1.AppOuterClass.RegistryItemCostByResource) frequency_;
+      }
+      return viam.app.v1.AppOuterClass.RegistryItemCostByResource.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * The recurring yearly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_year = 2 [json_name = "costPerYear"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setCostPerYear(viam.app.v1.AppOuterClass.RegistryItemCostByResource value) {
+      value.getClass();  // minimal bytecode null check
+      frequency_ = value;
+      frequencyCase_ = 2;
+    }
+    /**
+     * <pre>
+     * The recurring yearly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_year = 2 [json_name = "costPerYear"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void mergeCostPerYear(viam.app.v1.AppOuterClass.RegistryItemCostByResource value) {
+      value.getClass();  // minimal bytecode null check
+      if (frequencyCase_ == 2 &&
+          frequency_ != viam.app.v1.AppOuterClass.RegistryItemCostByResource.getDefaultInstance()) {
+        frequency_ = viam.app.v1.AppOuterClass.RegistryItemCostByResource.newBuilder((viam.app.v1.AppOuterClass.RegistryItemCostByResource) frequency_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        frequency_ = value;
+      }
+      frequencyCase_ = 2;
+    }
+    /**
+     * <pre>
+     * The recurring yearly cost of the item, broken down by billable resource.
+     * </pre>
+     *
+     * <code>.viam.app.v1.RegistryItemCostByResource cost_per_year = 2 [json_name = "costPerYear"];</code>
+     */
+    private void clearCostPerYear() {
+      if (frequencyCase_ == 2) {
+        frequencyCase_ = 0;
+        frequency_ = null;
+      }
+    }
+
+    public static viam.app.v1.AppOuterClass.RegistryItemBilling parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemBilling parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemBilling parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemBilling parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemBilling parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemBilling parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemBilling parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemBilling parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.RegistryItemBilling parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.RegistryItemBilling parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemBilling parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemBilling parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.RegistryItemBilling prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * RegistryItemBilling stores usage cost information for a registry item. Its shape mirrors the
+     * billing block used by fragments so that billing jobs can consume registry item costs the same
+     * way. For now only cost_per_month.per_machine is supported; the additional fields that fragment
+     * billing supports (cost_per_year, tier_name, in_arrears, etc.) are intentionally omitted.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.v1.RegistryItemBilling}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.RegistryItemBilling, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.RegistryItemBilling)
+        viam.app.v1.AppOuterClass.RegistryItemBillingOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.RegistryItemBilling.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+      @java.lang.Override
+      public FrequencyCase
+          getFrequencyCase() {
+        return instance.getFrequencyCase();
+      }
+
+      public Builder clearFrequency() {
+        copyOnWrite();
+        instance.clearFrequency();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * The recurring monthly cost of the item, broken down by billable resource.
+       * </pre>
+       *
+       * <code>.viam.app.v1.RegistryItemCostByResource cost_per_month = 1 [json_name = "costPerMonth"];</code>
+       */
+      @java.lang.Override
+      public boolean hasCostPerMonth() {
+        return instance.hasCostPerMonth();
+      }
+      /**
+       * <pre>
+       * The recurring monthly cost of the item, broken down by billable resource.
+       * </pre>
+       *
+       * <code>.viam.app.v1.RegistryItemCostByResource cost_per_month = 1 [json_name = "costPerMonth"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.RegistryItemCostByResource getCostPerMonth() {
+        return instance.getCostPerMonth();
+      }
+      /**
+       * <pre>
+       * The recurring monthly cost of the item, broken down by billable resource.
+       * </pre>
+       *
+       * <code>.viam.app.v1.RegistryItemCostByResource cost_per_month = 1 [json_name = "costPerMonth"];</code>
+       */
+      public Builder setCostPerMonth(viam.app.v1.AppOuterClass.RegistryItemCostByResource value) {
+        copyOnWrite();
+        instance.setCostPerMonth(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The recurring monthly cost of the item, broken down by billable resource.
+       * </pre>
+       *
+       * <code>.viam.app.v1.RegistryItemCostByResource cost_per_month = 1 [json_name = "costPerMonth"];</code>
+       */
+      public Builder setCostPerMonth(
+          viam.app.v1.AppOuterClass.RegistryItemCostByResource.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCostPerMonth(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The recurring monthly cost of the item, broken down by billable resource.
+       * </pre>
+       *
+       * <code>.viam.app.v1.RegistryItemCostByResource cost_per_month = 1 [json_name = "costPerMonth"];</code>
+       */
+      public Builder mergeCostPerMonth(viam.app.v1.AppOuterClass.RegistryItemCostByResource value) {
+        copyOnWrite();
+        instance.mergeCostPerMonth(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The recurring monthly cost of the item, broken down by billable resource.
+       * </pre>
+       *
+       * <code>.viam.app.v1.RegistryItemCostByResource cost_per_month = 1 [json_name = "costPerMonth"];</code>
+       */
+      public Builder clearCostPerMonth() {
+        copyOnWrite();
+        instance.clearCostPerMonth();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The recurring yearly cost of the item, broken down by billable resource.
+       * </pre>
+       *
+       * <code>.viam.app.v1.RegistryItemCostByResource cost_per_year = 2 [json_name = "costPerYear"];</code>
+       */
+      @java.lang.Override
+      public boolean hasCostPerYear() {
+        return instance.hasCostPerYear();
+      }
+      /**
+       * <pre>
+       * The recurring yearly cost of the item, broken down by billable resource.
+       * </pre>
+       *
+       * <code>.viam.app.v1.RegistryItemCostByResource cost_per_year = 2 [json_name = "costPerYear"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.RegistryItemCostByResource getCostPerYear() {
+        return instance.getCostPerYear();
+      }
+      /**
+       * <pre>
+       * The recurring yearly cost of the item, broken down by billable resource.
+       * </pre>
+       *
+       * <code>.viam.app.v1.RegistryItemCostByResource cost_per_year = 2 [json_name = "costPerYear"];</code>
+       */
+      public Builder setCostPerYear(viam.app.v1.AppOuterClass.RegistryItemCostByResource value) {
+        copyOnWrite();
+        instance.setCostPerYear(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The recurring yearly cost of the item, broken down by billable resource.
+       * </pre>
+       *
+       * <code>.viam.app.v1.RegistryItemCostByResource cost_per_year = 2 [json_name = "costPerYear"];</code>
+       */
+      public Builder setCostPerYear(
+          viam.app.v1.AppOuterClass.RegistryItemCostByResource.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCostPerYear(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The recurring yearly cost of the item, broken down by billable resource.
+       * </pre>
+       *
+       * <code>.viam.app.v1.RegistryItemCostByResource cost_per_year = 2 [json_name = "costPerYear"];</code>
+       */
+      public Builder mergeCostPerYear(viam.app.v1.AppOuterClass.RegistryItemCostByResource value) {
+        copyOnWrite();
+        instance.mergeCostPerYear(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The recurring yearly cost of the item, broken down by billable resource.
+       * </pre>
+       *
+       * <code>.viam.app.v1.RegistryItemCostByResource cost_per_year = 2 [json_name = "costPerYear"];</code>
+       */
+      public Builder clearCostPerYear() {
+        copyOnWrite();
+        instance.clearCostPerYear();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.RegistryItemBilling)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.RegistryItemBilling();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "frequency_",
+              "frequencyCase_",
+              viam.app.v1.AppOuterClass.RegistryItemCostByResource.class,
+              viam.app.v1.AppOuterClass.RegistryItemCostByResource.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0001\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001<\u0000\u0002<" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.RegistryItemBilling> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.RegistryItemBilling.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.RegistryItemBilling>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.RegistryItemBilling)
+    private static final viam.app.v1.AppOuterClass.RegistryItemBilling DEFAULT_INSTANCE;
+    static {
+      RegistryItemBilling defaultInstance = new RegistryItemBilling();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RegistryItemBilling.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.RegistryItemBilling getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<RegistryItemBilling> PARSER;
+
+    public static com.google.protobuf.Parser<RegistryItemBilling> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface RegistryItemCostByResourceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.RegistryItemCostByResource)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The cost charged per machine using the item, in USD.
+     * </pre>
+     *
+     * <code>double per_machine = 1 [json_name = "perMachine"];</code>
+     * @return The perMachine.
+     */
+    double getPerMachine();
+  }
+  /**
+   * <pre>
+   * RegistryItemCostByResource holds the cost of a registry item broken down by billable resource.
+   * Only the per_machine resource is currently supported.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.v1.RegistryItemCostByResource}
+   */
+  public  static final class RegistryItemCostByResource extends
+      com.google.protobuf.GeneratedMessageLite<
+          RegistryItemCostByResource, RegistryItemCostByResource.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.RegistryItemCostByResource)
+      RegistryItemCostByResourceOrBuilder {
+    private RegistryItemCostByResource() {
+    }
+    public static final int PER_MACHINE_FIELD_NUMBER = 1;
+    private double perMachine_;
+    /**
+     * <pre>
+     * The cost charged per machine using the item, in USD.
+     * </pre>
+     *
+     * <code>double per_machine = 1 [json_name = "perMachine"];</code>
+     * @return The perMachine.
+     */
+    @java.lang.Override
+    public double getPerMachine() {
+      return perMachine_;
+    }
+    /**
+     * <pre>
+     * The cost charged per machine using the item, in USD.
+     * </pre>
+     *
+     * <code>double per_machine = 1 [json_name = "perMachine"];</code>
+     * @param value The perMachine to set.
+     */
+    private void setPerMachine(double value) {
+      
+      perMachine_ = value;
+    }
+    /**
+     * <pre>
+     * The cost charged per machine using the item, in USD.
+     * </pre>
+     *
+     * <code>double per_machine = 1 [json_name = "perMachine"];</code>
+     */
+    private void clearPerMachine() {
+
+      perMachine_ = 0D;
+    }
+
+    public static viam.app.v1.AppOuterClass.RegistryItemCostByResource parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemCostByResource parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemCostByResource parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemCostByResource parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemCostByResource parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemCostByResource parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemCostByResource parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemCostByResource parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.RegistryItemCostByResource parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.RegistryItemCostByResource parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemCostByResource parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.RegistryItemCostByResource parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.RegistryItemCostByResource prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * RegistryItemCostByResource holds the cost of a registry item broken down by billable resource.
+     * Only the per_machine resource is currently supported.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.v1.RegistryItemCostByResource}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.RegistryItemCostByResource, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.RegistryItemCostByResource)
+        viam.app.v1.AppOuterClass.RegistryItemCostByResourceOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.RegistryItemCostByResource.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * The cost charged per machine using the item, in USD.
+       * </pre>
+       *
+       * <code>double per_machine = 1 [json_name = "perMachine"];</code>
+       * @return The perMachine.
+       */
+      @java.lang.Override
+      public double getPerMachine() {
+        return instance.getPerMachine();
+      }
+      /**
+       * <pre>
+       * The cost charged per machine using the item, in USD.
+       * </pre>
+       *
+       * <code>double per_machine = 1 [json_name = "perMachine"];</code>
+       * @param value The perMachine to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPerMachine(double value) {
+        copyOnWrite();
+        instance.setPerMachine(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The cost charged per machine using the item, in USD.
+       * </pre>
+       *
+       * <code>double per_machine = 1 [json_name = "perMachine"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPerMachine() {
+        copyOnWrite();
+        instance.clearPerMachine();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.RegistryItemCostByResource)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.RegistryItemCostByResource();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "perMachine_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.RegistryItemCostByResource> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.RegistryItemCostByResource.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.RegistryItemCostByResource>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.RegistryItemCostByResource)
+    private static final viam.app.v1.AppOuterClass.RegistryItemCostByResource DEFAULT_INSTANCE;
+    static {
+      RegistryItemCostByResource defaultInstance = new RegistryItemCostByResource();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RegistryItemCostByResource.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.RegistryItemCostByResource getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<RegistryItemCostByResource> PARSER;
+
+    public static com.google.protobuf.Parser<RegistryItemCostByResource> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface RegistryItemOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.RegistryItem)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -95880,6 +97699,27 @@ java.lang.String defaultValue) {
      * @return The deprecatedStatus.
      */
     viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus();
+
+    /**
+     * <pre>
+     * Usage cost information used by billing jobs to bill for monthly usage of the item.
+     * This is unset when no cost has been configured for the item.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 19 [json_name = "billing"];</code>
+     * @return Whether the billing field is set.
+     */
+    boolean hasBilling();
+    /**
+     * <pre>
+     * Usage cost information used by billing jobs to bill for monthly usage of the item.
+     * This is unset when no cost has been configured for the item.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 19 [json_name = "billing"];</code>
+     * @return The billing.
+     */
+    viam.app.v1.AppOuterClass.RegistryItemBilling getBilling();
 
     public viam.app.v1.AppOuterClass.RegistryItem.MetadataCase getMetadataCase();
   }
@@ -97005,6 +98845,79 @@ java.lang.String defaultValue) {
     private void clearDeprecatedStatus() {
       deprecatedStatus_ = null;
       bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static final int BILLING_FIELD_NUMBER = 19;
+    private viam.app.v1.AppOuterClass.RegistryItemBilling billing_;
+    /**
+     * <pre>
+     * Usage cost information used by billing jobs to bill for monthly usage of the item.
+     * This is unset when no cost has been configured for the item.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 19 [json_name = "billing"];</code>
+     */
+    @java.lang.Override
+    public boolean hasBilling() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Usage cost information used by billing jobs to bill for monthly usage of the item.
+     * This is unset when no cost has been configured for the item.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 19 [json_name = "billing"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.RegistryItemBilling getBilling() {
+      return billing_ == null ? viam.app.v1.AppOuterClass.RegistryItemBilling.getDefaultInstance() : billing_;
+    }
+    /**
+     * <pre>
+     * Usage cost information used by billing jobs to bill for monthly usage of the item.
+     * This is unset when no cost has been configured for the item.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 19 [json_name = "billing"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setBilling(viam.app.v1.AppOuterClass.RegistryItemBilling value) {
+      value.getClass();  // minimal bytecode null check
+      billing_ = value;
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * Usage cost information used by billing jobs to bill for monthly usage of the item.
+     * This is unset when no cost has been configured for the item.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 19 [json_name = "billing"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeBilling(viam.app.v1.AppOuterClass.RegistryItemBilling value) {
+      value.getClass();  // minimal bytecode null check
+      if (billing_ != null &&
+          billing_ != viam.app.v1.AppOuterClass.RegistryItemBilling.getDefaultInstance()) {
+        billing_ =
+          viam.app.v1.AppOuterClass.RegistryItemBilling.newBuilder(billing_).mergeFrom(value).buildPartial();
+      } else {
+        billing_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * Usage cost information used by billing jobs to bill for monthly usage of the item.
+     * This is unset when no cost has been configured for the item.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 19 [json_name = "billing"];</code>
+     */
+    private void clearBilling() {
+      billing_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
     }
 
     public static viam.app.v1.AppOuterClass.RegistryItem parseFrom(
@@ -98196,6 +100109,83 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * Usage cost information used by billing jobs to bill for monthly usage of the item.
+       * This is unset when no cost has been configured for the item.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.RegistryItemBilling billing = 19 [json_name = "billing"];</code>
+       */
+      @java.lang.Override
+      public boolean hasBilling() {
+        return instance.hasBilling();
+      }
+      /**
+       * <pre>
+       * Usage cost information used by billing jobs to bill for monthly usage of the item.
+       * This is unset when no cost has been configured for the item.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.RegistryItemBilling billing = 19 [json_name = "billing"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.RegistryItemBilling getBilling() {
+        return instance.getBilling();
+      }
+      /**
+       * <pre>
+       * Usage cost information used by billing jobs to bill for monthly usage of the item.
+       * This is unset when no cost has been configured for the item.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.RegistryItemBilling billing = 19 [json_name = "billing"];</code>
+       */
+      public Builder setBilling(viam.app.v1.AppOuterClass.RegistryItemBilling value) {
+        copyOnWrite();
+        instance.setBilling(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Usage cost information used by billing jobs to bill for monthly usage of the item.
+       * This is unset when no cost has been configured for the item.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.RegistryItemBilling billing = 19 [json_name = "billing"];</code>
+       */
+      public Builder setBilling(
+          viam.app.v1.AppOuterClass.RegistryItemBilling.Builder builderForValue) {
+        copyOnWrite();
+        instance.setBilling(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Usage cost information used by billing jobs to bill for monthly usage of the item.
+       * This is unset when no cost has been configured for the item.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.RegistryItemBilling billing = 19 [json_name = "billing"];</code>
+       */
+      public Builder mergeBilling(viam.app.v1.AppOuterClass.RegistryItemBilling value) {
+        copyOnWrite();
+        instance.mergeBilling(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Usage cost information used by billing jobs to bill for monthly usage of the item.
+       * This is unset when no cost has been configured for the item.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.RegistryItemBilling billing = 19 [json_name = "billing"];</code>
+       */
+      public Builder clearBilling() {  copyOnWrite();
+        instance.clearBilling();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RegistryItem)
     }
     @java.lang.Override
@@ -98233,12 +100223,13 @@ java.lang.String defaultValue) {
               "updatedAt_",
               "deprecatedStatus_",
               viam.app.v1.AppOuterClass.MLTrainingMetadata.class,
+              "billing_",
             };
             java.lang.String info =
-                "\u0000\u0012\u0001\u0001\u0001\u0012\u0012\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0000\u0013\u0001\u0001\u0001\u0013\u0013\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
                 "\u0003\u0208\u0004\u0208\u0005\f\u0006\f\u0007\u0208\b\u0208\t\u0002\n\u0002\u000b" +
                 "<\u0000\f<\u0000\r\u0002\u000e\u0002\u000f\u1009\u0000\u0010\u1009\u0001\u0011\u1009" +
-                "\u0002\u0012<\u0000";
+                "\u0002\u0012<\u0000\u0013\u1009\u0003";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -99919,6 +101910,27 @@ java.lang.String defaultValue) {
     com.google.protobuf.ByteString
         getMarkdownDescriptionBytes();
 
+    /**
+     * <pre>
+     * The usage cost information to store on the item. When unset, the existing billing
+     * configuration is left unchanged.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 10 [json_name = "billing"];</code>
+     * @return Whether the billing field is set.
+     */
+    boolean hasBilling();
+    /**
+     * <pre>
+     * The usage cost information to store on the item. When unset, the existing billing
+     * configuration is left unchanged.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 10 [json_name = "billing"];</code>
+     * @return The billing.
+     */
+    viam.app.v1.AppOuterClass.RegistryItemBilling getBilling();
+
     public viam.app.v1.AppOuterClass.UpdateRegistryItemRequest.MetadataCase getMetadataCase();
   }
   /**
@@ -100430,6 +102442,79 @@ java.lang.String defaultValue) {
       checkByteStringIsUtf8(value);
       markdownDescription_ = value.toStringUtf8();
       bitField0_ |= 0x00000002;
+    }
+
+    public static final int BILLING_FIELD_NUMBER = 10;
+    private viam.app.v1.AppOuterClass.RegistryItemBilling billing_;
+    /**
+     * <pre>
+     * The usage cost information to store on the item. When unset, the existing billing
+     * configuration is left unchanged.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 10 [json_name = "billing"];</code>
+     */
+    @java.lang.Override
+    public boolean hasBilling() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The usage cost information to store on the item. When unset, the existing billing
+     * configuration is left unchanged.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 10 [json_name = "billing"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.RegistryItemBilling getBilling() {
+      return billing_ == null ? viam.app.v1.AppOuterClass.RegistryItemBilling.getDefaultInstance() : billing_;
+    }
+    /**
+     * <pre>
+     * The usage cost information to store on the item. When unset, the existing billing
+     * configuration is left unchanged.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 10 [json_name = "billing"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setBilling(viam.app.v1.AppOuterClass.RegistryItemBilling value) {
+      value.getClass();  // minimal bytecode null check
+      billing_ = value;
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * The usage cost information to store on the item. When unset, the existing billing
+     * configuration is left unchanged.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 10 [json_name = "billing"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeBilling(viam.app.v1.AppOuterClass.RegistryItemBilling value) {
+      value.getClass();  // minimal bytecode null check
+      if (billing_ != null &&
+          billing_ != viam.app.v1.AppOuterClass.RegistryItemBilling.getDefaultInstance()) {
+        billing_ =
+          viam.app.v1.AppOuterClass.RegistryItemBilling.newBuilder(billing_).mergeFrom(value).buildPartial();
+      } else {
+        billing_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <pre>
+     * The usage cost information to store on the item. When unset, the existing billing
+     * configuration is left unchanged.
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.RegistryItemBilling billing = 10 [json_name = "billing"];</code>
+     */
+    private void clearBilling() {
+      billing_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static viam.app.v1.AppOuterClass.UpdateRegistryItemRequest parseFrom(
@@ -100991,6 +103076,83 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * The usage cost information to store on the item. When unset, the existing billing
+       * configuration is left unchanged.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.RegistryItemBilling billing = 10 [json_name = "billing"];</code>
+       */
+      @java.lang.Override
+      public boolean hasBilling() {
+        return instance.hasBilling();
+      }
+      /**
+       * <pre>
+       * The usage cost information to store on the item. When unset, the existing billing
+       * configuration is left unchanged.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.RegistryItemBilling billing = 10 [json_name = "billing"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.RegistryItemBilling getBilling() {
+        return instance.getBilling();
+      }
+      /**
+       * <pre>
+       * The usage cost information to store on the item. When unset, the existing billing
+       * configuration is left unchanged.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.RegistryItemBilling billing = 10 [json_name = "billing"];</code>
+       */
+      public Builder setBilling(viam.app.v1.AppOuterClass.RegistryItemBilling value) {
+        copyOnWrite();
+        instance.setBilling(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * The usage cost information to store on the item. When unset, the existing billing
+       * configuration is left unchanged.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.RegistryItemBilling billing = 10 [json_name = "billing"];</code>
+       */
+      public Builder setBilling(
+          viam.app.v1.AppOuterClass.RegistryItemBilling.Builder builderForValue) {
+        copyOnWrite();
+        instance.setBilling(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The usage cost information to store on the item. When unset, the existing billing
+       * configuration is left unchanged.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.RegistryItemBilling billing = 10 [json_name = "billing"];</code>
+       */
+      public Builder mergeBilling(viam.app.v1.AppOuterClass.RegistryItemBilling value) {
+        copyOnWrite();
+        instance.mergeBilling(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The usage cost information to store on the item. When unset, the existing billing
+       * configuration is left unchanged.
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.RegistryItemBilling billing = 10 [json_name = "billing"];</code>
+       */
+      public Builder clearBilling() {  copyOnWrite();
+        instance.clearBilling();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateRegistryItemRequest)
     }
     @java.lang.Override
@@ -101019,10 +103181,12 @@ java.lang.String defaultValue) {
               viam.app.v1.AppOuterClass.UpdateMLModelMetadata.class,
               viam.app.v1.AppOuterClass.UpdateMLTrainingMetadata.class,
               "markdownDescription_",
+              "billing_",
             };
             java.lang.String info =
-                "\u0000\t\u0001\u0001\u0001\t\t\u0000\u0000\u0000\u0001\u0208\u0002\f\u0003\u0208" +
-                "\u0004\f\u0005\u1208\u0000\u0006<\u0000\u0007<\u0000\b<\u0000\t\u1208\u0001";
+                "\u0000\n\u0001\u0001\u0001\n\n\u0000\u0000\u0000\u0001\u0208\u0002\f\u0003\u0208" +
+                "\u0004\f\u0005\u1208\u0000\u0006<\u0000\u0007<\u0000\b<\u0000\t\u1208\u0001\n\u1009" +
+                "\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {

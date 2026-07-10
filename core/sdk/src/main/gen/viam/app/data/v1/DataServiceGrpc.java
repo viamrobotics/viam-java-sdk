@@ -1215,6 +1215,36 @@ public final class DataServiceGrpc {
     return getSequencesByDatasetIDMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetSequenceBinaryDataRequest,
+      viam.app.data.v1.Data.GetSequenceBinaryDataResponse> getGetSequenceBinaryDataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSequenceBinaryData",
+      requestType = viam.app.data.v1.Data.GetSequenceBinaryDataRequest.class,
+      responseType = viam.app.data.v1.Data.GetSequenceBinaryDataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetSequenceBinaryDataRequest,
+      viam.app.data.v1.Data.GetSequenceBinaryDataResponse> getGetSequenceBinaryDataMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetSequenceBinaryDataRequest, viam.app.data.v1.Data.GetSequenceBinaryDataResponse> getGetSequenceBinaryDataMethod;
+    if ((getGetSequenceBinaryDataMethod = DataServiceGrpc.getGetSequenceBinaryDataMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getGetSequenceBinaryDataMethod = DataServiceGrpc.getGetSequenceBinaryDataMethod) == null) {
+          DataServiceGrpc.getGetSequenceBinaryDataMethod = getGetSequenceBinaryDataMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.GetSequenceBinaryDataRequest, viam.app.data.v1.Data.GetSequenceBinaryDataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSequenceBinaryData"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.GetSequenceBinaryDataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.data.v1.Data.GetSequenceBinaryDataResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetSequenceBinaryDataMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1686,6 +1716,17 @@ public final class DataServiceGrpc {
     default void sequencesByDatasetID(viam.app.data.v1.Data.SequencesByDatasetIDRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.SequencesByDatasetIDResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSequencesByDatasetIDMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetSequenceBinaryData returns paginated binary data records matching the
+     * sequence's time range and binary resources.
+     * </pre>
+     */
+    default void getSequenceBinaryData(viam.app.data.v1.Data.GetSequenceBinaryDataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetSequenceBinaryDataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSequenceBinaryDataMethod(), responseObserver);
     }
   }
 
@@ -2168,6 +2209,18 @@ public final class DataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSequencesByDatasetIDMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetSequenceBinaryData returns paginated binary data records matching the
+     * sequence's time range and binary resources.
+     * </pre>
+     */
+    public void getSequenceBinaryData(viam.app.data.v1.Data.GetSequenceBinaryDataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetSequenceBinaryDataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetSequenceBinaryDataMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -2597,6 +2650,17 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getSequencesByDatasetIDMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * GetSequenceBinaryData returns paginated binary data records matching the
+     * sequence's time range and binary resources.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.GetSequenceBinaryDataResponse getSequenceBinaryData(viam.app.data.v1.Data.GetSequenceBinaryDataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetSequenceBinaryDataMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -3024,6 +3088,17 @@ public final class DataServiceGrpc {
     public viam.app.data.v1.Data.SequencesByDatasetIDResponse sequencesByDatasetID(viam.app.data.v1.Data.SequencesByDatasetIDRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSequencesByDatasetIDMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetSequenceBinaryData returns paginated binary data records matching the
+     * sequence's time range and binary resources.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.GetSequenceBinaryDataResponse getSequenceBinaryData(viam.app.data.v1.Data.GetSequenceBinaryDataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetSequenceBinaryDataMethod(), getCallOptions(), request);
     }
   }
 
@@ -3481,6 +3556,18 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSequencesByDatasetIDMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GetSequenceBinaryData returns paginated binary data records matching the
+     * sequence's time range and binary resources.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.GetSequenceBinaryDataResponse> getSequenceBinaryData(
+        viam.app.data.v1.Data.GetSequenceBinaryDataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetSequenceBinaryDataMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TABULAR_DATA_BY_FILTER = 0;
@@ -3523,6 +3610,7 @@ public final class DataServiceGrpc {
   private static final int METHODID_DELETE_SEQUENCE = 37;
   private static final int METHODID_LIST_SEQUENCES = 38;
   private static final int METHODID_SEQUENCES_BY_DATASET_ID = 39;
+  private static final int METHODID_GET_SEQUENCE_BINARY_DATA = 40;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3700,6 +3788,10 @@ public final class DataServiceGrpc {
         case METHODID_SEQUENCES_BY_DATASET_ID:
           serviceImpl.sequencesByDatasetID((viam.app.data.v1.Data.SequencesByDatasetIDRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.SequencesByDatasetIDResponse>) responseObserver);
+          break;
+        case METHODID_GET_SEQUENCE_BINARY_DATA:
+          serviceImpl.getSequenceBinaryData((viam.app.data.v1.Data.GetSequenceBinaryDataRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetSequenceBinaryDataResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -3999,6 +4091,13 @@ public final class DataServiceGrpc {
               viam.app.data.v1.Data.SequencesByDatasetIDRequest,
               viam.app.data.v1.Data.SequencesByDatasetIDResponse>(
                 service, METHODID_SEQUENCES_BY_DATASET_ID)))
+        .addMethod(
+          getGetSequenceBinaryDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.GetSequenceBinaryDataRequest,
+              viam.app.data.v1.Data.GetSequenceBinaryDataResponse>(
+                service, METHODID_GET_SEQUENCE_BINARY_DATA)))
         .build();
   }
 
@@ -4051,6 +4150,7 @@ public final class DataServiceGrpc {
               .addMethod(getDeleteSequenceMethod())
               .addMethod(getListSequencesMethod())
               .addMethod(getSequencesByDatasetIDMethod())
+              .addMethod(getGetSequenceBinaryDataMethod())
               .build();
         }
       }
