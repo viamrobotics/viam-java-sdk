@@ -281,111 +281,119 @@ loadScripts(document, 'script');</script>
  GetSequence retrieves a sequence by ID.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#listIndexes(viam.app.data.v1.Data.ListIndexesRequest,io.grpc.stub.StreamObserver)" class="member-name-link">listIndexes</a><wbr>(<a href="Data.ListIndexesRequest.html" title="class in viam.app.data.v1">Data.ListIndexesRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Data.ListIndexesResponse.html" title="class in viam.app.data.v1">Data.ListIndexesResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getSequenceBinaryData(viam.app.data.v1.Data.GetSequenceBinaryDataRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getSequenceBinaryData</a><wbr>(<a href="Data.GetSequenceBinaryDataRequest.html" title="class in viam.app.data.v1">Data.GetSequenceBinaryDataRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Data.GetSequenceBinaryDataResponse.html" title="class in viam.app.data.v1">Data.GetSequenceBinaryDataResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">
+ GetSequenceBinaryData returns paginated binary data records matching the
+ sequence's time range and binary resources.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#listIndexes(viam.app.data.v1.Data.ListIndexesRequest,io.grpc.stub.StreamObserver)" class="member-name-link">listIndexes</a><wbr>(<a href="Data.ListIndexesRequest.html" title="class in viam.app.data.v1">Data.ListIndexesRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Data.ListIndexesResponse.html" title="class in viam.app.data.v1">Data.ListIndexesResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  ListIndexes returns all the indexes for a given collection</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#listSavedQueries(viam.app.data.v1.Data.ListSavedQueriesRequest,io.grpc.stub.StreamObserver)" class="member-name-link">listSavedQueries</a><wbr>(<a href="Data.ListSavedQueriesRequest.html" title="class in viam.app.data.v1">Data.ListSavedQueriesRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#listSavedQueries(viam.app.data.v1.Data.ListSavedQueriesRequest,io.grpc.stub.StreamObserver)" class="member-name-link">listSavedQueries</a><wbr>(<a href="Data.ListSavedQueriesRequest.html" title="class in viam.app.data.v1">Data.ListSavedQueriesRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Data.ListSavedQueriesResponse.html" title="class in viam.app.data.v1">Data.ListSavedQueriesResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  ListSavedQueries lists saved queries for a given organization.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#listSequences(viam.app.data.v1.Data.ListSequencesRequest,io.grpc.stub.StreamObserver)" class="member-name-link">listSequences</a><wbr>(<a href="Data.ListSequencesRequest.html" title="class in viam.app.data.v1">Data.ListSequencesRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#listSequences(viam.app.data.v1.Data.ListSequencesRequest,io.grpc.stub.StreamObserver)" class="member-name-link">listSequences</a><wbr>(<a href="Data.ListSequencesRequest.html" title="class in viam.app.data.v1">Data.ListSequencesRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Data.ListSequencesResponse.html" title="class in viam.app.data.v1">Data.ListSequencesResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  ListSequences lists sequences for a given organization.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#removeBinaryDataFromDatasetByIDs(viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">removeBinaryDataFromDatasetByIDs</a><wbr>(<a href="Data.RemoveBinaryDataFromDatasetByIDsRequest.html" title="class in viam.app.data.v1">Data.RemoveBinaryDataFromDatasetByIDsRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#removeBinaryDataFromDatasetByIDs(viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">removeBinaryDataFromDatasetByIDs</a><wbr>(<a href="Data.RemoveBinaryDataFromDatasetByIDsRequest.html" title="class in viam.app.data.v1">Data.RemoveBinaryDataFromDatasetByIDsRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Data.RemoveBinaryDataFromDatasetByIDsResponse.html" title="class in viam.app.data.v1">Data.RemoveBinaryDataFromDatasetByIDsResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  RemoveBinaryDataFromDatasetByIDs removes the binary data with the given binary IDs from the dataset.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#removeBoundingBoxFromImageByID(viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest,io.grpc.stub.StreamObserver)" class="member-name-link">removeBoundingBoxFromImageByID</a><wbr>(<a href="Data.RemoveBoundingBoxFromImageByIDRequest.html" title="class in viam.app.data.v1">Data.RemoveBoundingBoxFromImageByIDRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#removeBoundingBoxFromImageByID(viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest,io.grpc.stub.StreamObserver)" class="member-name-link">removeBoundingBoxFromImageByID</a><wbr>(<a href="Data.RemoveBoundingBoxFromImageByIDRequest.html" title="class in viam.app.data.v1">Data.RemoveBoundingBoxFromImageByIDRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Data.RemoveBoundingBoxFromImageByIDResponse.html" title="class in viam.app.data.v1">Data.RemoveBoundingBoxFromImageByIDResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  RemoveBoundingBoxFromImageByID removes a bounding box from an image with the given ID.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#removeSequencesFromDataset(viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest,io.grpc.stub.StreamObserver)" class="member-name-link">removeSequencesFromDataset</a><wbr>(<a href="Data.RemoveSequencesFromDatasetRequest.html" title="class in viam.app.data.v1">Data.RemoveSequencesFromDatasetRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#removeSequencesFromDataset(viam.app.data.v1.Data.RemoveSequencesFromDatasetRequest,io.grpc.stub.StreamObserver)" class="member-name-link">removeSequencesFromDataset</a><wbr>(<a href="Data.RemoveSequencesFromDatasetRequest.html" title="class in viam.app.data.v1">Data.RemoveSequencesFromDatasetRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Data.RemoveSequencesFromDatasetResponse.html" title="class in viam.app.data.v1">Data.RemoveSequencesFromDatasetResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  RemoveSequencesFromDataset removes the sequences with the given IDs from the dataset.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code><a href="#removeTagsFromBinaryDataByFilter(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest,io.grpc.stub.StreamObserver)" class="member-name-link">removeTagsFromBinaryDataByFilter</a><wbr>(<a href="Data.RemoveTagsFromBinaryDataByFilterRequest.html" title="class in viam.app.data.v1">Data.RemoveTagsFromBinaryDataByFilterRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Data.RemoveTagsFromBinaryDataByFilterResponse.html" title="class in viam.app.data.v1">Data.RemoveTagsFromBinaryDataByFilterResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#removeTagsFromBinaryDataByIDs(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">removeTagsFromBinaryDataByIDs</a><wbr>(<a href="Data.RemoveTagsFromBinaryDataByIDsRequest.html" title="class in viam.app.data.v1">Data.RemoveTagsFromBinaryDataByIDsRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Data.RemoveTagsFromBinaryDataByIDsResponse.html" title="class in viam.app.data.v1">Data.RemoveTagsFromBinaryDataByIDsResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
-<div class="block">
- RemoveTagsToBinaryDataByIDs removes string tags from binary data based on given IDs.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#sequencesByDatasetID(viam.app.data.v1.Data.SequencesByDatasetIDRequest,io.grpc.stub.StreamObserver)" class="member-name-link">sequencesByDatasetID</a><wbr>(<a href="Data.SequencesByDatasetIDRequest.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Data.SequencesByDatasetIDResponse.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
-<div class="block">
- SequencesByDatasetID lists sequences that belong to the given dataset.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code><a href="#tabularDataByFilter(viam.app.data.v1.Data.TabularDataByFilterRequest,io.grpc.stub.StreamObserver)" class="member-name-link">tabularDataByFilter</a><wbr>(<a href="Data.TabularDataByFilterRequest.html" title="class in viam.app.data.v1">Data.TabularDataByFilterRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Data.TabularDataByFilterResponse.html" title="class in viam.app.data.v1">Data.TabularDataByFilterResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code><a href="#removeTagsFromBinaryDataByFilter(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest,io.grpc.stub.StreamObserver)" class="member-name-link">removeTagsFromBinaryDataByFilter</a><wbr>(<a href="Data.RemoveTagsFromBinaryDataByFilterRequest.html" title="class in viam.app.data.v1">Data.RemoveTagsFromBinaryDataByFilterRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Data.RemoveTagsFromBinaryDataByFilterResponse.html" title="class in viam.app.data.v1">Data.RemoveTagsFromBinaryDataByFilterResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#tabularDataByMQL(viam.app.data.v1.Data.TabularDataByMQLRequest,io.grpc.stub.StreamObserver)" class="member-name-link">tabularDataByMQL</a><wbr>(<a href="Data.TabularDataByMQLRequest.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Data.TabularDataByMQLResponse.html" title="class in viam.app.data.v1">Data.TabularDataByMQLResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#removeTagsFromBinaryDataByIDs(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">removeTagsFromBinaryDataByIDs</a><wbr>(<a href="Data.RemoveTagsFromBinaryDataByIDsRequest.html" title="class in viam.app.data.v1">Data.RemoveTagsFromBinaryDataByIDsRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Data.RemoveTagsFromBinaryDataByIDsResponse.html" title="class in viam.app.data.v1">Data.RemoveTagsFromBinaryDataByIDsResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
- TabularDataByMQL queries tabular data with an MQL (MongoDB Query Language) query.</div>
+ RemoveTagsToBinaryDataByIDs removes string tags from binary data based on given IDs.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#tabularDataBySQL(viam.app.data.v1.Data.TabularDataBySQLRequest,io.grpc.stub.StreamObserver)" class="member-name-link">tabularDataBySQL</a><wbr>(<a href="Data.TabularDataBySQLRequest.html" title="class in viam.app.data.v1">Data.TabularDataBySQLRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Data.TabularDataBySQLResponse.html" title="class in viam.app.data.v1">Data.TabularDataBySQLResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#sequencesByDatasetID(viam.app.data.v1.Data.SequencesByDatasetIDRequest,io.grpc.stub.StreamObserver)" class="member-name-link">sequencesByDatasetID</a><wbr>(<a href="Data.SequencesByDatasetIDRequest.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Data.SequencesByDatasetIDResponse.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
- TabularDataBySQL queries tabular data with a SQL query.</div>
+ SequencesByDatasetID lists sequences that belong to the given dataset.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code><a href="#tagsByFilter(viam.app.data.v1.Data.TagsByFilterRequest,io.grpc.stub.StreamObserver)" class="member-name-link">tagsByFilter</a><wbr>(<a href="Data.TagsByFilterRequest.html" title="class in viam.app.data.v1">Data.TagsByFilterRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Data.TagsByFilterResponse.html" title="class in viam.app.data.v1">Data.TagsByFilterResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code><a href="#tabularDataByFilter(viam.app.data.v1.Data.TabularDataByFilterRequest,io.grpc.stub.StreamObserver)" class="member-name-link">tabularDataByFilter</a><wbr>(<a href="Data.TabularDataByFilterRequest.html" title="class in viam.app.data.v1">Data.TabularDataByFilterRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Data.TabularDataByFilterResponse.html" title="class in viam.app.data.v1">Data.TabularDataByFilterResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#updateBoundingBox(viam.app.data.v1.Data.UpdateBoundingBoxRequest,io.grpc.stub.StreamObserver)" class="member-name-link">updateBoundingBox</a><wbr>(<a href="Data.UpdateBoundingBoxRequest.html" title="class in viam.app.data.v1">Data.UpdateBoundingBoxRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Data.UpdateBoundingBoxResponse.html" title="class in viam.app.data.v1">Data.UpdateBoundingBoxResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#tabularDataByMQL(viam.app.data.v1.Data.TabularDataByMQLRequest,io.grpc.stub.StreamObserver)" class="member-name-link">tabularDataByMQL</a><wbr>(<a href="Data.TabularDataByMQLRequest.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Data.TabularDataByMQLResponse.html" title="class in viam.app.data.v1">Data.TabularDataByMQLResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">
+ TabularDataByMQL queries tabular data with an MQL (MongoDB Query Language) query.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#tabularDataBySQL(viam.app.data.v1.Data.TabularDataBySQLRequest,io.grpc.stub.StreamObserver)" class="member-name-link">tabularDataBySQL</a><wbr>(<a href="Data.TabularDataBySQLRequest.html" title="class in viam.app.data.v1">Data.TabularDataBySQLRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Data.TabularDataBySQLResponse.html" title="class in viam.app.data.v1">Data.TabularDataBySQLResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">
+ TabularDataBySQL queries tabular data with a SQL query.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code><a href="#tagsByFilter(viam.app.data.v1.Data.TagsByFilterRequest,io.grpc.stub.StreamObserver)" class="member-name-link">tagsByFilter</a><wbr>(<a href="Data.TagsByFilterRequest.html" title="class in viam.app.data.v1">Data.TagsByFilterRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Data.TagsByFilterResponse.html" title="class in viam.app.data.v1">Data.TagsByFilterResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#updateBoundingBox(viam.app.data.v1.Data.UpdateBoundingBoxRequest,io.grpc.stub.StreamObserver)" class="member-name-link">updateBoundingBox</a><wbr>(<a href="Data.UpdateBoundingBoxRequest.html" title="class in viam.app.data.v1">Data.UpdateBoundingBoxRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Data.UpdateBoundingBoxResponse.html" title="class in viam.app.data.v1">Data.UpdateBoundingBoxResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  UpdateBoundingBox updates the bounding box associated with a given binary ID and bounding box ID.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#updateSavedQuery(viam.app.data.v1.Data.UpdateSavedQueryRequest,io.grpc.stub.StreamObserver)" class="member-name-link">updateSavedQuery</a><wbr>(<a href="Data.UpdateSavedQueryRequest.html" title="class in viam.app.data.v1">Data.UpdateSavedQueryRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#updateSavedQuery(viam.app.data.v1.Data.UpdateSavedQueryRequest,io.grpc.stub.StreamObserver)" class="member-name-link">updateSavedQuery</a><wbr>(<a href="Data.UpdateSavedQueryRequest.html" title="class in viam.app.data.v1">Data.UpdateSavedQueryRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Data.UpdateSavedQueryResponse.html" title="class in viam.app.data.v1">Data.UpdateSavedQueryResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  UpdateSavedQuery updates the saved query with the given id.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#updateSequence(viam.app.data.v1.Data.UpdateSequenceRequest,io.grpc.stub.StreamObserver)" class="member-name-link">updateSequence</a><wbr>(<a href="Data.UpdateSequenceRequest.html" title="class in viam.app.data.v1">Data.UpdateSequenceRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#updateSequence(viam.app.data.v1.Data.UpdateSequenceRequest,io.grpc.stub.StreamObserver)" class="member-name-link">updateSequence</a><wbr>(<a href="Data.UpdateSequenceRequest.html" title="class in viam.app.data.v1">Data.UpdateSequenceRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Data.UpdateSequenceResponse.html" title="class in viam.app.data.v1">Data.UpdateSequenceResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  UpdateSequence updates the mutable fields of a sequence.</div>
 </div>
@@ -812,6 +820,17 @@ loadScripts(document, 'script');</script>
  io.grpc.stub.StreamObserver&lt;<a href="Data.SequencesByDatasetIDResponse.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDResponse</a>&gt;&nbsp;responseObserver)</span></div>
 <div class="block"><pre>
  SequencesByDatasetID lists sequences that belong to the given dataset.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getSequenceBinaryData(viam.app.data.v1.Data.GetSequenceBinaryDataRequest,io.grpc.stub.StreamObserver)">
+<h3>getSequenceBinaryData</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getSequenceBinaryData</span><wbr><span class="parameters">(<a href="Data.GetSequenceBinaryDataRequest.html" title="class in viam.app.data.v1">Data.GetSequenceBinaryDataRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Data.GetSequenceBinaryDataResponse.html" title="class in viam.app.data.v1">Data.GetSequenceBinaryDataResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ GetSequenceBinaryData returns paginated binary data records matching the
+ sequence's time range and binary resources.
  </pre></div>
 </section>
 </li>
