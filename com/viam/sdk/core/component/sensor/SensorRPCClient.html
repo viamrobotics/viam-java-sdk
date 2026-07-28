@@ -149,18 +149,20 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Send/Receive arbitrary commands to the Resource</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../common/v1/Common.GetReadingsResponse.html" title="class in com.viam.common.v1">Common.GetReadingsResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReadings(java.util.Optional)" class="member-name-link">getReadings</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;com.google.protobuf.Struct&gt;&nbsp;extra)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../../../common/v1/Common.Geometry.html" title="class in com.viam.common.v1">Common.Geometry</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getGeometries(java.util.Optional)" class="member-name-link">getGeometries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;com.google.protobuf.Struct&gt;&nbsp;extra)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get all geometries associated with the Component, in their current configuration, in the frame of the Component.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../../common/v1/Common.GetReadingsResponse.html" title="class in com.viam.common.v1">Common.GetReadingsResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReadings(java.util.Optional)" class="member-name-link">getReadings</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;com.google.protobuf.Struct&gt;&nbsp;extra)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.viam.sdk.core.component.sensor.Sensor">Methods inherited from class&nbsp;com.viam.sdk.core.component.sensor.<a href="Sensor.html" title="class in com.viam.sdk.core.component.sensor">Sensor</a></h3>
 <code><a href="Sensor.html#fromRobot(com.viam.sdk.core.robot.RobotClient,java.lang.String)">fromRobot</a>, <a href="Sensor.html#named(java.lang.String)">named</a></code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.viam.sdk.core.component.Component">Methods inherited from class&nbsp;com.viam.sdk.core.component.<a href="../Component.html" title="class in com.viam.sdk.core.component">Component</a></h3>
-<code><a href="../Component.html#getGeometries(java.util.Optional)">getGeometries</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.viam.sdk.core.resource.Resource">Methods inherited from class&nbsp;com.viam.sdk.core.resource.<a href="../../resource/Resource.html" title="class in com.viam.sdk.core.resource">Resource</a></h3>
 <code><a href="../../resource/Resource.html#close()">close</a>, <a href="../../resource/Resource.html#createStatus()">createStatus</a>, <a href="../../resource/Resource.html#getName()">getName</a>, <a href="../../resource/Resource.html#getSubtype()">getSubtype</a>, <a href="../../resource/Resource.html#named(com.viam.sdk.core.resource.Subtype,java.lang.String)">named</a></code></div>
@@ -216,6 +218,20 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Sensor.html#getReadings(java.util.Optional)">getReadings</a></code>&nbsp;in class&nbsp;<code><a href="Sensor.html" title="class in com.viam.sdk.core.component.sensor">Sensor</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getGeometries(java.util.Optional)">
+<h3>getGeometries</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../common/v1/Common.Geometry.html" title="class in com.viam.common.v1">Common.Geometry</a>&gt;</span>&nbsp;<span class="element-name">getGeometries</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;com.google.protobuf.Struct&gt;&nbsp;extra)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="../Component.html#getGeometries(java.util.Optional)">Component</a></code></span></div>
+<div class="block">Get all geometries associated with the Component, in their current configuration, in the frame of the Component.</div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code><a href="../Component.html#getGeometries(java.util.Optional)">getGeometries</a></code>&nbsp;in class&nbsp;<code><a href="../Component.html" title="class in com.viam.sdk.core.component">Component</a></code></dd>
+<dt>Returns:</dt>
+<dd>the geometries associated with the Component</dd>
 </dl>
 </section>
 </li>
