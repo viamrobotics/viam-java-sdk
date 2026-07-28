@@ -2652,7 +2652,8 @@ public final class Vision {
 
     /**
      * <pre>
-     * the four corners of the box, in proportion to the respective image dimension
+     * the four corners of the box, in proportion to the respective image
+     * dimension
      * </pre>
      *
      * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
@@ -2661,7 +2662,8 @@ public final class Vision {
     boolean hasXMinNormalized();
     /**
      * <pre>
-     * the four corners of the box, in proportion to the respective image dimension
+     * the four corners of the box, in proportion to the respective image
+     * dimension
      * </pre>
      *
      * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
@@ -2976,7 +2978,8 @@ public final class Vision {
     private double xMinNormalized_;
     /**
      * <pre>
-     * the four corners of the box, in proportion to the respective image dimension
+     * the four corners of the box, in proportion to the respective image
+     * dimension
      * </pre>
      *
      * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
@@ -2988,7 +2991,8 @@ public final class Vision {
     }
     /**
      * <pre>
-     * the four corners of the box, in proportion to the respective image dimension
+     * the four corners of the box, in proportion to the respective image
+     * dimension
      * </pre>
      *
      * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
@@ -3000,7 +3004,8 @@ public final class Vision {
     }
     /**
      * <pre>
-     * the four corners of the box, in proportion to the respective image dimension
+     * the four corners of the box, in proportion to the respective image
+     * dimension
      * </pre>
      *
      * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
@@ -3012,7 +3017,8 @@ public final class Vision {
     }
     /**
      * <pre>
-     * the four corners of the box, in proportion to the respective image dimension
+     * the four corners of the box, in proportion to the respective image
+     * dimension
      * </pre>
      *
      * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
@@ -3492,7 +3498,8 @@ public final class Vision {
 
       /**
        * <pre>
-       * the four corners of the box, in proportion to the respective image dimension
+       * the four corners of the box, in proportion to the respective image
+       * dimension
        * </pre>
        *
        * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
@@ -3504,7 +3511,8 @@ public final class Vision {
       }
       /**
        * <pre>
-       * the four corners of the box, in proportion to the respective image dimension
+       * the four corners of the box, in proportion to the respective image
+       * dimension
        * </pre>
        *
        * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
@@ -3516,7 +3524,8 @@ public final class Vision {
       }
       /**
        * <pre>
-       * the four corners of the box, in proportion to the respective image dimension
+       * the four corners of the box, in proportion to the respective image
+       * dimension
        * </pre>
        *
        * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
@@ -3530,7 +3539,8 @@ public final class Vision {
       }
       /**
        * <pre>
-       * the four corners of the box, in proportion to the respective image dimension
+       * the four corners of the box, in proportion to the respective image
+       * dimension
        * </pre>
        *
        * <code>optional double x_min_normalized = 7 [json_name = "xMinNormalized"];</code>
@@ -10746,6 +10756,35 @@ public final class Vision {
      * @return The objectPointCloudsSupported.
      */
     boolean getObjectPointCloudsSupported();
+
+    /**
+     * <pre>
+     * the default camera used for *FromCamera and GetObjectPointClouds calls
+     * </pre>
+     *
+     * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+     * @return Whether the defaultCamera field is set.
+     */
+    boolean hasDefaultCamera();
+    /**
+     * <pre>
+     * the default camera used for *FromCamera and GetObjectPointClouds calls
+     * </pre>
+     *
+     * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+     * @return The defaultCamera.
+     */
+    java.lang.String getDefaultCamera();
+    /**
+     * <pre>
+     * the default camera used for *FromCamera and GetObjectPointClouds calls
+     * </pre>
+     *
+     * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+     * @return The bytes for defaultCamera.
+     */
+    com.google.protobuf.ByteString
+        getDefaultCameraBytes();
   }
   /**
    * Protobuf type {@code viam.service.vision.v1.GetPropertiesResponse}
@@ -10756,7 +10795,9 @@ public final class Vision {
       // @@protoc_insertion_point(message_implements:viam.service.vision.v1.GetPropertiesResponse)
       GetPropertiesResponseOrBuilder {
     private GetPropertiesResponse() {
+      defaultCamera_ = "";
     }
+    private int bitField0_;
     public static final int CLASSIFICATIONS_SUPPORTED_FIELD_NUMBER = 1;
     private boolean classificationsSupported_;
     /**
@@ -10869,6 +10910,86 @@ public final class Vision {
     private void clearObjectPointCloudsSupported() {
 
       objectPointCloudsSupported_ = false;
+    }
+
+    public static final int DEFAULT_CAMERA_FIELD_NUMBER = 4;
+    private java.lang.String defaultCamera_;
+    /**
+     * <pre>
+     * the default camera used for *FromCamera and GetObjectPointClouds calls
+     * </pre>
+     *
+     * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+     * @return Whether the defaultCamera field is set.
+     */
+    @java.lang.Override
+    public boolean hasDefaultCamera() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * the default camera used for *FromCamera and GetObjectPointClouds calls
+     * </pre>
+     *
+     * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+     * @return The defaultCamera.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultCamera() {
+      return defaultCamera_;
+    }
+    /**
+     * <pre>
+     * the default camera used for *FromCamera and GetObjectPointClouds calls
+     * </pre>
+     *
+     * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+     * @return The bytes for defaultCamera.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultCameraBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(defaultCamera_);
+    }
+    /**
+     * <pre>
+     * the default camera used for *FromCamera and GetObjectPointClouds calls
+     * </pre>
+     *
+     * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+     * @param value The defaultCamera to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDefaultCamera(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      bitField0_ |= 0x00000001;
+      defaultCamera_ = value;
+    }
+    /**
+     * <pre>
+     * the default camera used for *FromCamera and GetObjectPointClouds calls
+     * </pre>
+     *
+     * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+     */
+    private void clearDefaultCamera() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      defaultCamera_ = getDefaultInstance().getDefaultCamera();
+    }
+    /**
+     * <pre>
+     * the default camera used for *FromCamera and GetObjectPointClouds calls
+     * </pre>
+     *
+     * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+     * @param value The bytes for defaultCamera to set.
+     */
+    private void setDefaultCameraBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      defaultCamera_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static com.viam.service.vision.v1.Vision.GetPropertiesResponse parseFrom(
@@ -11088,6 +11209,87 @@ public final class Vision {
         return this;
       }
 
+      /**
+       * <pre>
+       * the default camera used for *FromCamera and GetObjectPointClouds calls
+       * </pre>
+       *
+       * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+       * @return Whether the defaultCamera field is set.
+       */
+      @java.lang.Override
+      public boolean hasDefaultCamera() {
+        return instance.hasDefaultCamera();
+      }
+      /**
+       * <pre>
+       * the default camera used for *FromCamera and GetObjectPointClouds calls
+       * </pre>
+       *
+       * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+       * @return The defaultCamera.
+       */
+      @java.lang.Override
+      public java.lang.String getDefaultCamera() {
+        return instance.getDefaultCamera();
+      }
+      /**
+       * <pre>
+       * the default camera used for *FromCamera and GetObjectPointClouds calls
+       * </pre>
+       *
+       * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+       * @return The bytes for defaultCamera.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDefaultCameraBytes() {
+        return instance.getDefaultCameraBytes();
+      }
+      /**
+       * <pre>
+       * the default camera used for *FromCamera and GetObjectPointClouds calls
+       * </pre>
+       *
+       * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+       * @param value The defaultCamera to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCamera(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDefaultCamera(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * the default camera used for *FromCamera and GetObjectPointClouds calls
+       * </pre>
+       *
+       * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultCamera() {
+        copyOnWrite();
+        instance.clearDefaultCamera();
+        return this;
+      }
+      /**
+       * <pre>
+       * the default camera used for *FromCamera and GetObjectPointClouds calls
+       * </pre>
+       *
+       * <code>optional string default_camera = 4 [json_name = "defaultCamera"];</code>
+       * @param value The bytes for defaultCamera to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultCameraBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDefaultCameraBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.service.vision.v1.GetPropertiesResponse)
     }
     @java.lang.Override
@@ -11104,13 +11306,15 @@ public final class Vision {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "classificationsSupported_",
               "detectionsSupported_",
               "objectPointCloudsSupported_",
+              "defaultCamera_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0007\u0002\u0007" +
-                "\u0003\u0007";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0007\u0002\u0007" +
+                "\u0003\u0007\u0004\u1208\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {

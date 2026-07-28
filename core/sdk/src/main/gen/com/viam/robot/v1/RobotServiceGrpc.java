@@ -765,6 +765,36 @@ public final class RobotServiceGrpc {
     return getSendTracesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.UploadDataFromPathRequest,
+      com.viam.robot.v1.Robot.UploadDataFromPathResponse> getUploadDataFromPathMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UploadDataFromPath",
+      requestType = com.viam.robot.v1.Robot.UploadDataFromPathRequest.class,
+      responseType = com.viam.robot.v1.Robot.UploadDataFromPathResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.UploadDataFromPathRequest,
+      com.viam.robot.v1.Robot.UploadDataFromPathResponse> getUploadDataFromPathMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.UploadDataFromPathRequest, com.viam.robot.v1.Robot.UploadDataFromPathResponse> getUploadDataFromPathMethod;
+    if ((getUploadDataFromPathMethod = RobotServiceGrpc.getUploadDataFromPathMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getUploadDataFromPathMethod = RobotServiceGrpc.getUploadDataFromPathMethod) == null) {
+          RobotServiceGrpc.getUploadDataFromPathMethod = getUploadDataFromPathMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.UploadDataFromPathRequest, com.viam.robot.v1.Robot.UploadDataFromPathResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadDataFromPath"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.UploadDataFromPathRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.robot.v1.Robot.UploadDataFromPathResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getUploadDataFromPathMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1067,6 +1097,17 @@ public final class RobotServiceGrpc {
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.SendTracesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendTracesMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * UploadDataFromPath uploads a file or directory from the robot to the cloud
+     * via the configured data manager service.
+     * </pre>
+     */
+    default void uploadDataFromPath(com.viam.robot.v1.Robot.UploadDataFromPathRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.UploadDataFromPathResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadDataFromPathMethod(), responseObserver);
+    }
   }
 
   /**
@@ -1363,6 +1404,18 @@ public final class RobotServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSendTracesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * UploadDataFromPath uploads a file or directory from the robot to the cloud
+     * via the configured data manager service.
+     * </pre>
+     */
+    public void uploadDataFromPath(com.viam.robot.v1.Robot.UploadDataFromPathRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.UploadDataFromPathResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUploadDataFromPathMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1624,6 +1677,17 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getSendTracesMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * UploadDataFromPath uploads a file or directory from the robot to the cloud
+     * via the configured data manager service.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.UploadDataFromPathResponse uploadDataFromPath(com.viam.robot.v1.Robot.UploadDataFromPathRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getUploadDataFromPathMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1871,6 +1935,17 @@ public final class RobotServiceGrpc {
     public com.viam.robot.v1.Robot.SendTracesResponse sendTraces(com.viam.robot.v1.Robot.SendTracesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSendTracesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UploadDataFromPath uploads a file or directory from the robot to the cloud
+     * via the configured data manager service.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.UploadDataFromPathResponse uploadDataFromPath(com.viam.robot.v1.Robot.UploadDataFromPathRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUploadDataFromPathMethod(), getCallOptions(), request);
     }
   }
 
@@ -2131,6 +2206,18 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSendTracesMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * UploadDataFromPath uploads a file or directory from the robot to the cloud
+     * via the configured data manager service.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.UploadDataFromPathResponse> uploadDataFromPath(
+        com.viam.robot.v1.Robot.UploadDataFromPathRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUploadDataFromPathMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_OPERATIONS = 0;
@@ -2157,7 +2244,8 @@ public final class RobotServiceGrpc {
   private static final int METHODID_TRANSFORM_POSE = 21;
   private static final int METHODID_TRANSFORM_PCD = 22;
   private static final int METHODID_SEND_TRACES = 23;
-  private static final int METHODID_TUNNEL = 24;
+  private static final int METHODID_UPLOAD_DATA_FROM_PATH = 24;
+  private static final int METHODID_TUNNEL = 25;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2271,6 +2359,10 @@ public final class RobotServiceGrpc {
         case METHODID_SEND_TRACES:
           serviceImpl.sendTraces((com.viam.robot.v1.Robot.SendTracesRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.SendTracesResponse>) responseObserver);
+          break;
+        case METHODID_UPLOAD_DATA_FROM_PATH:
+          serviceImpl.uploadDataFromPath((com.viam.robot.v1.Robot.UploadDataFromPathRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.UploadDataFromPathResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2468,6 +2560,13 @@ public final class RobotServiceGrpc {
               com.viam.robot.v1.Robot.SendTracesRequest,
               com.viam.robot.v1.Robot.SendTracesResponse>(
                 service, METHODID_SEND_TRACES)))
+        .addMethod(
+          getUploadDataFromPathMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.UploadDataFromPathRequest,
+              com.viam.robot.v1.Robot.UploadDataFromPathResponse>(
+                service, METHODID_UPLOAD_DATA_FROM_PATH)))
         .build();
   }
 
@@ -2505,6 +2604,7 @@ public final class RobotServiceGrpc {
               .addMethod(getTransformPoseMethod())
               .addMethod(getTransformPCDMethod())
               .addMethod(getSendTracesMethod())
+              .addMethod(getUploadDataFromPathMethod())
               .build();
         }
       }
