@@ -3,12 +3,14 @@ package com.viam.sdk.core.component.sensor;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import com.viam.common.v1.Common;
+import com.viam.common.v1.Common.GetGeometriesRequest;
 import com.viam.common.v1.Common.GetReadingsRequest;
 import com.viam.common.v1.Common.GetReadingsResponse;
 import com.viam.component.sensor.v1.SensorServiceGrpc;
 
 import com.viam.sdk.core.rpc.Channel;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -39,5 +41,13 @@ public class SensorRPCClient extends Sensor {
                 setName(getName().getName());
         extra.ifPresent(builder::setExtra);
         return client.getReadings(builder.build());
+    }
+
+    @Override
+    public List<Common.Geometry> getGeometries(final Optional<Struct> extra) {
+        final GetGeometriesRequest.Builder builder = Common.GetGeometriesRequest.newBuilder().
+                setName(getName().getName());
+        extra.ifPresent(builder::setExtra);
+        return client.getGeometries(builder.build()).getGeometriesList();
     }
 }
