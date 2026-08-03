@@ -8468,6 +8468,27 @@ public final class DataPipelines {
      */
     com.google.protobuf.ByteString
         getErrorMessageBytes();
+
+    /**
+     * <pre>
+     * The data source type the run executed against. Runs that predate this field
+     * report the pipeline's configured data source type.
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code>
+     * @return The enum numeric value on the wire for dataSourceType.
+     */
+    int getDataSourceTypeValue();
+    /**
+     * <pre>
+     * The data source type the run executed against. Runs that predate this field
+     * report the pipeline's configured data source type.
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code>
+     * @return The dataSourceType.
+     */
+    viam.app.data.v1.Data.TabularDataSourceType getDataSourceType();
   }
   /**
    * Protobuf type {@code viam.app.datapipelines.v1.DataPipelineRun}
@@ -8951,6 +8972,74 @@ public final class DataPipelines {
       checkByteStringIsUtf8(value);
       errorMessage_ = value.toStringUtf8();
 
+    }
+
+    public static final int DATA_SOURCE_TYPE_FIELD_NUMBER = 8;
+    private int dataSourceType_;
+    /**
+     * <pre>
+     * The data source type the run executed against. Runs that predate this field
+     * report the pipeline's configured data source type.
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code>
+     * @return The enum numeric value on the wire for dataSourceType.
+     */
+    @java.lang.Override
+    public int getDataSourceTypeValue() {
+      return dataSourceType_;
+    }
+    /**
+     * <pre>
+     * The data source type the run executed against. Runs that predate this field
+     * report the pipeline's configured data source type.
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code>
+     * @return The dataSourceType.
+     */
+    @java.lang.Override
+    public viam.app.data.v1.Data.TabularDataSourceType getDataSourceType() {
+      viam.app.data.v1.Data.TabularDataSourceType result = viam.app.data.v1.Data.TabularDataSourceType.forNumber(dataSourceType_);
+      return result == null ? viam.app.data.v1.Data.TabularDataSourceType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The data source type the run executed against. Runs that predate this field
+     * report the pipeline's configured data source type.
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code>
+     * @param value The enum numeric value on the wire for dataSourceType to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setDataSourceTypeValue(int value) {
+        dataSourceType_ = value;
+    }
+    /**
+     * <pre>
+     * The data source type the run executed against. Runs that predate this field
+     * report the pipeline's configured data source type.
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code>
+     * @param value The dataSourceType to set.
+     */
+    private void setDataSourceType(viam.app.data.v1.Data.TabularDataSourceType value) {
+      dataSourceType_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * The data source type the run executed against. Runs that predate this field
+     * report the pipeline's configured data source type.
+     * </pre>
+     *
+     * <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code>
+     */
+    private void clearDataSourceType() {
+
+      dataSourceType_ = 0;
     }
 
     public static viam.app.datapipelines.v1.DataPipelines.DataPipelineRun parseFrom(
@@ -9539,6 +9628,78 @@ public final class DataPipelines {
         return this;
       }
 
+      /**
+       * <pre>
+       * The data source type the run executed against. Runs that predate this field
+       * report the pipeline's configured data source type.
+       * </pre>
+       *
+       * <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code>
+       * @return The enum numeric value on the wire for dataSourceType.
+       */
+      @java.lang.Override
+      public int getDataSourceTypeValue() {
+        return instance.getDataSourceTypeValue();
+      }
+      /**
+       * <pre>
+       * The data source type the run executed against. Runs that predate this field
+       * report the pipeline's configured data source type.
+       * </pre>
+       *
+       * <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code>
+       * @param value The dataSourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSourceTypeValue(int value) {
+        copyOnWrite();
+        instance.setDataSourceTypeValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The data source type the run executed against. Runs that predate this field
+       * report the pipeline's configured data source type.
+       * </pre>
+       *
+       * <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code>
+       * @return The dataSourceType.
+       */
+      @java.lang.Override
+      public viam.app.data.v1.Data.TabularDataSourceType getDataSourceType() {
+        return instance.getDataSourceType();
+      }
+      /**
+       * <pre>
+       * The data source type the run executed against. Runs that predate this field
+       * report the pipeline's configured data source type.
+       * </pre>
+       *
+       * <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code>
+       * @param value The enum numeric value on the wire for dataSourceType to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSourceType(viam.app.data.v1.Data.TabularDataSourceType value) {
+        copyOnWrite();
+        instance.setDataSourceType(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The data source type the run executed against. Runs that predate this field
+       * report the pipeline's configured data source type.
+       * </pre>
+       *
+       * <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataSourceType() {
+        copyOnWrite();
+        instance.clearDataSourceType();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.datapipelines.v1.DataPipelineRun)
     }
     @java.lang.Override
@@ -9563,11 +9724,11 @@ public final class DataPipelines {
               "dataEndTime_",
               "status_",
               "errorMessage_",
+              "dataSourceType_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u1009\u0001\u0004\u1009\u0002\u0005\u1009\u0003\u0006\f\u0007\u0208" +
-                "";
+                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000\u0003" +
+                "\u1009\u0001\u0004\u1009\u0002\u0005\u1009\u0003\u0006\f\u0007\u0208\b\f";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {

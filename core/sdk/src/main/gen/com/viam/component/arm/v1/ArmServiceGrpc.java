@@ -165,6 +165,36 @@ public final class ArmServiceGrpc {
     return getMoveThroughJointPositionsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedRequest,
+      com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedResponse> getMoveThroughJointPositionsStreamedMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MoveThroughJointPositionsStreamed",
+      requestType = com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedRequest.class,
+      responseType = com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedRequest,
+      com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedResponse> getMoveThroughJointPositionsStreamedMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedRequest, com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedResponse> getMoveThroughJointPositionsStreamedMethod;
+    if ((getMoveThroughJointPositionsStreamedMethod = ArmServiceGrpc.getMoveThroughJointPositionsStreamedMethod) == null) {
+      synchronized (ArmServiceGrpc.class) {
+        if ((getMoveThroughJointPositionsStreamedMethod = ArmServiceGrpc.getMoveThroughJointPositionsStreamedMethod) == null) {
+          ArmServiceGrpc.getMoveThroughJointPositionsStreamedMethod = getMoveThroughJointPositionsStreamedMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedRequest, com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MoveThroughJointPositionsStreamed"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getMoveThroughJointPositionsStreamedMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.StopRequest,
       com.viam.component.arm.v1.Arm.StopResponse> getStopMethod;
 
@@ -496,6 +526,13 @@ public final class ArmServiceGrpc {
     }
 
     /**
+     */
+    default io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedRequest> moveThroughJointPositionsStreamed(
+        io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getMoveThroughJointPositionsStreamedMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * Stop stops a robot's arm
      * </pre>
@@ -659,6 +696,14 @@ public final class ArmServiceGrpc {
     }
 
     /**
+     */
+    public io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedRequest> moveThroughJointPositionsStreamed(
+        io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
+          getChannel().newCall(getMoveThroughJointPositionsStreamedMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
      * <pre>
      * Stop stops a robot's arm
      * </pre>
@@ -807,6 +852,15 @@ public final class ArmServiceGrpc {
     public com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse moveThroughJointPositions(com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getMoveThroughJointPositionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedRequest, com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedResponse>
+        moveThroughJointPositionsStreamed() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getMoveThroughJointPositionsStreamedMethod(), getCallOptions());
     }
 
     /**
@@ -1192,6 +1246,7 @@ public final class ArmServiceGrpc {
   private static final int METHODID_GET_KINEMATICS = 9;
   private static final int METHODID_GET_GEOMETRIES = 10;
   private static final int METHODID_GET3DMODELS = 11;
+  private static final int METHODID_MOVE_THROUGH_JOINT_POSITIONS_STREAMED = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1268,6 +1323,9 @@ public final class ArmServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_MOVE_THROUGH_JOINT_POSITIONS_STREAMED:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.moveThroughJointPositionsStreamed(
+              (io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -1311,6 +1369,13 @@ public final class ArmServiceGrpc {
               com.viam.component.arm.v1.Arm.MoveThroughJointPositionsRequest,
               com.viam.component.arm.v1.Arm.MoveThroughJointPositionsResponse>(
                 service, METHODID_MOVE_THROUGH_JOINT_POSITIONS)))
+        .addMethod(
+          getMoveThroughJointPositionsStreamedMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedRequest,
+              com.viam.component.arm.v1.Arm.MoveThroughJointPositionsStreamedResponse>(
+                service, METHODID_MOVE_THROUGH_JOINT_POSITIONS_STREAMED)))
         .addMethod(
           getStopMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1377,6 +1442,7 @@ public final class ArmServiceGrpc {
               .addMethod(getGetJointPositionsMethod())
               .addMethod(getMoveToJointPositionsMethod())
               .addMethod(getMoveThroughJointPositionsMethod())
+              .addMethod(getMoveThroughJointPositionsStreamedMethod())
               .addMethod(getStopMethod())
               .addMethod(getIsMovingMethod())
               .addMethod(getDoCommandMethod())
