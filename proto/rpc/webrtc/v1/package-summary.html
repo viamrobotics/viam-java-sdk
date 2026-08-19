@@ -454,18 +454,45 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Signaling.CallUpdateResponseOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.CallUpdateResponseOrBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Signaling.ICECandidate.html" title="class in proto.rpc.webrtc.v1">Signaling.ICECandidate</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Signaling.ConnectionCandidate.html" title="class in proto.rpc.webrtc.v1">Signaling.ConnectionCandidate</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">
- ICECandidate represents an ICE candidate.</div>
+ ConnectionCandidate describes the selected ICE candidate for one side of a WebRTC connection.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Signaling.ICECandidate.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.ICECandidate.Builder</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Signaling.ConnectionCandidate.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.ConnectionCandidate.Builder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ ConnectionCandidate describes the selected ICE candidate for one side of a WebRTC connection.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="Signaling.ConnectionCandidateOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.ConnectionCandidateOrBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab3"><a href="Signaling.ConnectionSignalingPath.html" title="enum class in proto.rpc.webrtc.v1">Signaling.ConnectionSignalingPath</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab3">
+<div class="block">
+ ConnectionSignalingPath is how a WebRTC dial was signaled, derived from the signaling address.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab3"><a href="Signaling.DialStage.html" title="enum class in proto.rpc.webrtc.v1">Signaling.DialStage</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab3">
+<div class="block">
+ DialStage is the furthest checkpoint a WebRTC dial reached.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Signaling.ICECandidate.html" title="class in proto.rpc.webrtc.v1">Signaling.ICECandidate</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">
  ICECandidate represents an ICE candidate.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="Signaling.ICECandidateOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.ICECandidateOrBuilder</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Signaling.ICECandidate.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.ICECandidate.Builder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ ICECandidate represents an ICE candidate.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Signaling.ICECandidateOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.ICECandidateOrBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab3"><a href="Signaling.ICECandidateType.html" title="enum class in proto.rpc.webrtc.v1">Signaling.ICECandidateType</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab3">
+<div class="block">
+ ICECandidateType represents the type of ICE candidate selected for a WebRTC connection.</div>
+</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Signaling.ICEServer.html" title="class in proto.rpc.webrtc.v1">Signaling.ICEServer</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">
@@ -505,6 +532,32 @@ loadScripts(document, 'script');</script>
  to use for the peer connection.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Signaling.OptionalWebRTCConfigResponseOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.OptionalWebRTCConfigResponseOrBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Signaling.ReportConnectionMetadataRequest.html" title="class in proto.rpc.webrtc.v1">Signaling.ReportConnectionMetadataRequest</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ ReportConnectionMetadataRequest reports metadata about a WebRTC dial, per side: local is the
+ dialing SDK and remote is the robot.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Signaling.ReportConnectionMetadataRequest.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.ReportConnectionMetadataRequest.Builder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ ReportConnectionMetadataRequest reports metadata about a WebRTC dial, per side: local is the
+ dialing SDK and remote is the robot.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="Signaling.ReportConnectionMetadataRequestOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.ReportConnectionMetadataRequestOrBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Signaling.ReportConnectionMetadataResponse.html" title="class in proto.rpc.webrtc.v1">Signaling.ReportConnectionMetadataResponse</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ ReportConnectionMetadataResponse is empty.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Signaling.ReportConnectionMetadataResponse.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.ReportConnectionMetadataResponse.Builder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ ReportConnectionMetadataResponse is empty.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="Signaling.ReportConnectionMetadataResponseOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.ReportConnectionMetadataResponseOrBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="Signaling.WebRTCConfig.html" title="class in proto.rpc.webrtc.v1">Signaling.WebRTCConfig</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">

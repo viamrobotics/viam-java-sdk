@@ -160,7 +160,13 @@ implements <a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="
 <div class="col-second odd-row-color"><code><a href="#LIMIT_FIELD_NUMBER" class="member-name-link">LIMIT_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#PAGE_TOKEN_FIELD_NUMBER" class="member-name-link">PAGE_TOKEN_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ORDER_FIELD_NUMBER" class="member-name-link">ORDER_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#PAGE_TOKEN_FIELD_NUMBER" class="member-name-link">PAGE_TOKEN_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#RANGE_FIELD_NUMBER" class="member-name-link">RANGE_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#SOURCE_FIELD_NUMBER" class="member-name-link">SOURCE_FIELD_NUMBER</a></code></div>
@@ -260,6 +266,18 @@ implements <a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional int64 limit = 8 [json_name = "limit"];</code></div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AppOuterClass.LogOrder.html" title="enum class in viam.app.v1">AppOuterClass.LogOrder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrder()" class="member-name-link">getOrder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ logs are returned newest first when the order field is empty</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrderValue()" class="member-name-link">getOrderValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ logs are returned newest first when the order field is empty</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPageToken()" class="member-name-link">getPageToken</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -269,6 +287,18 @@ implements <a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPageTokenBytes()" class="member-name-link">getPageTokenBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string page_token = 4 [json_name = "pageToken"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRange()" class="member-name-link">getRange</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ range is a duration string in minutes, hours, or days (e.g.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRangeBytes()" class="member-name-link">getRangeBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ range is a duration string in minutes, hours, or days (e.g.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSource()" class="member-name-link">getSource</a>()</code></div>
@@ -306,9 +336,21 @@ implements <a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="
 <div class="block"><code>optional int64 limit = 8 [json_name = "limit"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPageToken()" class="member-name-link">hasPageToken</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasOrder()" class="member-name-link">hasOrder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ logs are returned newest first when the order field is empty</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPageToken()" class="member-name-link">hasPageToken</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional string page_token = 4 [json_name = "pageToken"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasRange()" class="member-name-link">hasRange</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ range is a duration string in minutes, hours, or days (e.g.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSource()" class="member-name-link">hasSource</a>()</code></div>
@@ -542,6 +584,34 @@ implements <a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="ORDER_FIELD_NUMBER">
+<h3>ORDER_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ORDER_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../constant-values.html#viam.app.v1.AppOuterClass.GetRobotPartLogsRequest.ORDER_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="RANGE_FIELD_NUMBER">
+<h3>RANGE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">RANGE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../constant-values.html#viam.app.v1.AppOuterClass.GetRobotPartLogsRequest.RANGE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -583,7 +653,7 @@ implements <a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getErrorsOnly</span>()</div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     See app/v1/app.proto;l=900</div>
+     See app/v1/app.proto;l=910</div>
 </div>
 <div class="block"><pre>
  TODO(https://viam.atlassian.net/browse/APP-3877): Remove this field
@@ -888,6 +958,123 @@ implements <a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="
 <dd><code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html#getUserFacingOnly()">getUserFacingOnly</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetRobotPartLogsRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The userFacingOnly.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasOrder()">
+<h3>hasOrder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasOrder</span>()</div>
+<div class="block"><pre>
+ logs are returned newest first when the order field is empty
+ </pre>
+
+ <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html#hasOrder()">hasOrder</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetRobotPartLogsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the order field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getOrderValue()">
+<h3>getOrderValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getOrderValue</span>()</div>
+<div class="block"><pre>
+ logs are returned newest first when the order field is empty
+ </pre>
+
+ <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html#getOrderValue()">getOrderValue</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetRobotPartLogsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire for order.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getOrder()">
+<h3>getOrder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AppOuterClass.LogOrder.html" title="enum class in viam.app.v1">AppOuterClass.LogOrder</a></span>&nbsp;<span class="element-name">getOrder</span>()</div>
+<div class="block"><pre>
+ logs are returned newest first when the order field is empty
+ </pre>
+
+ <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html#getOrder()">getOrder</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetRobotPartLogsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The order.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasRange()">
+<h3>hasRange</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasRange</span>()</div>
+<div class="block"><pre>
+ range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+ that is resolved against whichever of start and end is present:
+ end only:     [end - range, end]
+ start only:   [start, start + range]
+ neither:      [now - range, now]
+ Specifying range together with both start and end is an error.
+ </pre>
+
+ <code>optional string range = 12 [json_name = "range"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html#hasRange()">hasRange</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetRobotPartLogsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the range field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRange()">
+<h3>getRange</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getRange</span>()</div>
+<div class="block"><pre>
+ range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+ that is resolved against whichever of start and end is present:
+ end only:     [end - range, end]
+ start only:   [start, start + range]
+ neither:      [now - range, now]
+ Specifying range together with both start and end is an error.
+ </pre>
+
+ <code>optional string range = 12 [json_name = "range"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html#getRange()">getRange</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetRobotPartLogsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The range.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRangeBytes()">
+<h3>getRangeBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getRangeBytes</span>()</div>
+<div class="block"><pre>
+ range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+ that is resolved against whichever of start and end is present:
+ end only:     [end - range, end]
+ start only:   [start, start + range]
+ neither:      [now - range, now]
+ Specifying range together with both start and end is an error.
+ </pre>
+
+ <code>optional string range = 12 [json_name = "range"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html#getRangeBytes()">getRangeBytes</a></code>&nbsp;in interface&nbsp;<code><a href="AppOuterClass.GetRobotPartLogsRequestOrBuilder.html" title="interface in viam.app.v1">AppOuterClass.GetRobotPartLogsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for range.</dd>
 </dl>
 </section>
 </li>

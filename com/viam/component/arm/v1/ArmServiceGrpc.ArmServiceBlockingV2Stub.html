@@ -186,22 +186,25 @@ loadScripts(document, 'script');</script>
  MoveThroughJointPositions moves every joint on a robot's arm to the specified JointPositions in the order they are specified,
  obeying the specified velocity and acceleration limits.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveToJointPositionsResponse.html" title="class in com.viam.component.arm.v1">Arm.MoveToJointPositionsResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveToJointPositions(com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest)" class="member-name-link">moveToJointPositions</a><wbr>(<a href="Arm.MoveToJointPositionsRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveToJointPositionsRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>io.grpc.stub.BlockingClientCall<wbr>&lt;<a href="Arm.MoveThroughJointPositionsStreamedRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveThroughJointPositionsStreamedRequest</a>,<wbr><a href="Arm.MoveThroughJointPositionsStreamedResponse.html" title="class in com.viam.component.arm.v1">Arm.MoveThroughJointPositionsStreamedResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveThroughJointPositionsStreamed()" class="member-name-link">moveThroughJointPositionsStreamed</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveToJointPositionsResponse.html" title="class in com.viam.component.arm.v1">Arm.MoveToJointPositionsResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveToJointPositions(com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest)" class="member-name-link">moveToJointPositions</a><wbr>(<a href="Arm.MoveToJointPositionsRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveToJointPositionsRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  MoveToJointPositions moves every joint on a robot's arm to specified angles which are expressed in degrees
  This will block until done or a new operation cancels this one</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveToPositionResponse.html" title="class in com.viam.component.arm.v1">Arm.MoveToPositionResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveToPosition(com.viam.component.arm.v1.Arm.MoveToPositionRequest)" class="member-name-link">moveToPosition</a><wbr>(<a href="Arm.MoveToPositionRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveToPositionRequest</a>&nbsp;request)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.MoveToPositionResponse.html" title="class in com.viam.component.arm.v1">Arm.MoveToPositionResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#moveToPosition(com.viam.component.arm.v1.Arm.MoveToPositionRequest)" class="member-name-link">moveToPosition</a><wbr>(<a href="Arm.MoveToPositionRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveToPositionRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  MoveToPosition moves the mount point of the robot's end effector to the requested position.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.StopResponse.html" title="class in com.viam.component.arm.v1">Arm.StopResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.arm.v1.Arm.StopRequest)" class="member-name-link">stop</a><wbr>(<a href="Arm.StopRequest.html" title="class in com.viam.component.arm.v1">Arm.StopRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Arm.StopResponse.html" title="class in com.viam.component.arm.v1">Arm.StopResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.arm.v1.Arm.StopRequest)" class="member-name-link">stop</a><wbr>(<a href="Arm.StopRequest.html" title="class in com.viam.component.arm.v1">Arm.StopRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Stop stops a robot's arm</div>
 </div>
@@ -311,6 +314,13 @@ loadScripts(document, 'script');</script>
 <dt>Throws:</dt>
 <dd><code>io.grpc.StatusException</code></dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="moveThroughJointPositionsStreamed()">
+<h3>moveThroughJointPositionsStreamed</h3>
+<div class="member-signature"><span class="annotations">@ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">io.grpc.stub.BlockingClientCall&lt;<a href="Arm.MoveThroughJointPositionsStreamedRequest.html" title="class in com.viam.component.arm.v1">Arm.MoveThroughJointPositionsStreamedRequest</a>,<wbr><a href="Arm.MoveThroughJointPositionsStreamedResponse.html" title="class in com.viam.component.arm.v1">Arm.MoveThroughJointPositionsStreamedResponse</a>&gt;</span>&nbsp;<span class="element-name">moveThroughJointPositionsStreamed</span>()</div>
 </section>
 </li>
 <li>

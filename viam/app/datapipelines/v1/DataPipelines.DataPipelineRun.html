@@ -145,23 +145,26 @@ implements <a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interfac
 <div class="col-second even-row-color"><code><a href="#DATA_END_TIME_FIELD_NUMBER" class="member-name-link">DATA_END_TIME_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#DATA_START_TIME_FIELD_NUMBER" class="member-name-link">DATA_START_TIME_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#DATA_SOURCE_TYPE_FIELD_NUMBER" class="member-name-link">DATA_SOURCE_TYPE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#END_TIME_FIELD_NUMBER" class="member-name-link">END_TIME_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#DATA_START_TIME_FIELD_NUMBER" class="member-name-link">DATA_START_TIME_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ERROR_MESSAGE_FIELD_NUMBER" class="member-name-link">ERROR_MESSAGE_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#END_TIME_FIELD_NUMBER" class="member-name-link">END_TIME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ERROR_MESSAGE_FIELD_NUMBER" class="member-name-link">ERROR_MESSAGE_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#START_TIME_FIELD_NUMBER" class="member-name-link">START_TIME_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#STATUS_FIELD_NUMBER" class="member-name-link">STATUS_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#START_TIME_FIELD_NUMBER" class="member-name-link">START_TIME_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#STATUS_FIELD_NUMBER" class="member-name-link">STATUS_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -192,6 +195,18 @@ implements <a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interfac
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  The end time of the data that was processed in the run.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../data/v1/Data.TabularDataSourceType.html" title="enum class in viam.app.data.v1">Data.TabularDataSourceType</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDataSourceType()" class="member-name-link">getDataSourceType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The data source type the run executed against.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDataSourceTypeValue()" class="member-name-link">getDataSourceTypeValue</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ The data source type the run executed against.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDataStartTime()" class="member-name-link">getDataStartTime</a>()</code></div>
@@ -449,6 +464,20 @@ implements <a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interfac
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="DATA_SOURCE_TYPE_FIELD_NUMBER">
+<h3>DATA_SOURCE_TYPE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">DATA_SOURCE_TYPE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../constant-values.html#viam.app.datapipelines.v1.DataPipelines.DataPipelineRun.DATA_SOURCE_TYPE_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -692,6 +721,42 @@ implements <a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interfac
 <dd><code><a href="DataPipelines.DataPipelineRunOrBuilder.html#getErrorMessageBytes()">getErrorMessageBytes</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.DataPipelineRunOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for errorMessage.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDataSourceTypeValue()">
+<h3>getDataSourceTypeValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getDataSourceTypeValue</span>()</div>
+<div class="block"><pre>
+ The data source type the run executed against. Runs that predate this field
+ report the pipeline's configured data source type.
+ </pre>
+
+ <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.DataPipelineRunOrBuilder.html#getDataSourceTypeValue()">getDataSourceTypeValue</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.DataPipelineRunOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire for dataSourceType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDataSourceType()">
+<h3>getDataSourceType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../data/v1/Data.TabularDataSourceType.html" title="enum class in viam.app.data.v1">Data.TabularDataSourceType</a></span>&nbsp;<span class="element-name">getDataSourceType</span>()</div>
+<div class="block"><pre>
+ The data source type the run executed against. Runs that predate this field
+ report the pipeline's configured data source type.
+ </pre>
+
+ <code>.viam.app.data.v1.TabularDataSourceType data_source_type = 8 [json_name = "dataSourceType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="DataPipelines.DataPipelineRunOrBuilder.html#getDataSourceType()">getDataSourceType</a></code>&nbsp;in interface&nbsp;<code><a href="DataPipelines.DataPipelineRunOrBuilder.html" title="interface in viam.app.datapipelines.v1">DataPipelines.DataPipelineRunOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The dataSourceType.</dd>
 </dl>
 </section>
 </li>

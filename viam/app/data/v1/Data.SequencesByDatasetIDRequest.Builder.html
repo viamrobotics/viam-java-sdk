@@ -130,19 +130,29 @@ implements <a href="Data.SequencesByDatasetIDRequestOrBuilder.html" title="inter
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearDatasetId()" class="member-name-link">clearDatasetId</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearCountOnly()" class="member-name-link">clearCountOnly</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string dataset_id = 1 [json_name = "datasetId"];</code></div>
+<div class="block"><code>bool count_only = 4 [json_name = "countOnly"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPageSize()" class="member-name-link">clearPageSize</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearDatasetId()" class="member-name-link">clearDatasetId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>uint32 page_size = 3 [json_name = "pageSize"];</code></div>
+<div class="block"><code>string dataset_id = 1 [json_name = "datasetId"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPageToken()" class="member-name-link">clearPageToken</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPageSize()" class="member-name-link">clearPageSize</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>uint32 page_size = 3 [json_name = "pageSize"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearPageToken()" class="member-name-link">clearPageToken</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string page_token = 2 [json_name = "pageToken"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCountOnly()" class="member-name-link">getCountOnly</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>bool count_only = 4 [json_name = "countOnly"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDatasetId()" class="member-name-link">getDatasetId</a>()</code></div>
@@ -170,28 +180,33 @@ implements <a href="Data.SequencesByDatasetIDRequestOrBuilder.html" title="inter
 <div class="block"><code>string page_token = 2 [json_name = "pageToken"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDatasetId(java.lang.String)" class="member-name-link">setDatasetId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCountOnly(boolean)" class="member-name-link">setCountOnly</a><wbr>(boolean&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string dataset_id = 1 [json_name = "datasetId"];</code></div>
+<div class="block"><code>bool count_only = 4 [json_name = "countOnly"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDatasetIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setDatasetIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDatasetId(java.lang.String)" class="member-name-link">setDatasetId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string dataset_id = 1 [json_name = "datasetId"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPageSize(int)" class="member-name-link">setPageSize</a><wbr>(int&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDatasetIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setDatasetIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string dataset_id = 1 [json_name = "datasetId"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPageSize(int)" class="member-name-link">setPageSize</a><wbr>(int&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>uint32 page_size = 3 [json_name = "pageSize"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPageToken(java.lang.String)" class="member-name-link">setPageToken</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPageToken(java.lang.String)" class="member-name-link">setPageToken</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string page_token = 2 [json_name = "pageToken"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPageTokenBytes(com.google.protobuf.ByteString)" class="member-name-link">setPageTokenBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPageTokenBytes(com.google.protobuf.ByteString)" class="member-name-link">setPageTokenBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string page_token = 2 [json_name = "pageToken"];</code></div>
 </div>
 </div>
@@ -377,6 +392,43 @@ implements <a href="Data.SequencesByDatasetIDRequestOrBuilder.html" title="inter
 <h3>clearPageSize</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></span>&nbsp;<span class="element-name">clearPageSize</span>()</div>
 <div class="block"><code>uint32 page_size = 3 [json_name = "pageSize"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCountOnly()">
+<h3>getCountOnly</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getCountOnly</span>()</div>
+<div class="block"><code>bool count_only = 4 [json_name = "countOnly"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Data.SequencesByDatasetIDRequestOrBuilder.html#getCountOnly()">getCountOnly</a></code>&nbsp;in interface&nbsp;<code><a href="Data.SequencesByDatasetIDRequestOrBuilder.html" title="interface in viam.app.data.v1">Data.SequencesByDatasetIDRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The countOnly.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCountOnly(boolean)">
+<h3>setCountOnly</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></span>&nbsp;<span class="element-name">setCountOnly</span><wbr><span class="parameters">(boolean&nbsp;value)</span></div>
+<div class="block"><code>bool count_only = 4 [json_name = "countOnly"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The countOnly to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearCountOnly()">
+<h3>clearCountOnly</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Data.SequencesByDatasetIDRequest.Builder.html" title="class in viam.app.data.v1">Data.SequencesByDatasetIDRequest.Builder</a></span>&nbsp;<span class="element-name">clearCountOnly</span>()</div>
+<div class="block"><code>bool count_only = 4 [json_name = "countOnly"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
