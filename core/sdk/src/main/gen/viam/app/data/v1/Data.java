@@ -52992,6 +52992,12 @@ com.google.protobuf.Any defaultValue) {
      * @return The pageSize.
      */
     int getPageSize();
+
+    /**
+     * <code>bool count_only = 4 [json_name = "countOnly"];</code>
+     * @return The countOnly.
+     */
+    boolean getCountOnly();
   }
   /**
    * Protobuf type {@code viam.app.data.v1.SequencesByDatasetIDRequest}
@@ -53125,6 +53131,32 @@ com.google.protobuf.Any defaultValue) {
     private void clearPageSize() {
 
       pageSize_ = 0;
+    }
+
+    public static final int COUNT_ONLY_FIELD_NUMBER = 4;
+    private boolean countOnly_;
+    /**
+     * <code>bool count_only = 4 [json_name = "countOnly"];</code>
+     * @return The countOnly.
+     */
+    @java.lang.Override
+    public boolean getCountOnly() {
+      return countOnly_;
+    }
+    /**
+     * <code>bool count_only = 4 [json_name = "countOnly"];</code>
+     * @param value The countOnly to set.
+     */
+    private void setCountOnly(boolean value) {
+      
+      countOnly_ = value;
+    }
+    /**
+     * <code>bool count_only = 4 [json_name = "countOnly"];</code>
+     */
+    private void clearCountOnly() {
+
+      countOnly_ = false;
     }
 
     public static viam.app.data.v1.Data.SequencesByDatasetIDRequest parseFrom(
@@ -53350,6 +53382,34 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>bool count_only = 4 [json_name = "countOnly"];</code>
+       * @return The countOnly.
+       */
+      @java.lang.Override
+      public boolean getCountOnly() {
+        return instance.getCountOnly();
+      }
+      /**
+       * <code>bool count_only = 4 [json_name = "countOnly"];</code>
+       * @param value The countOnly to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountOnly(boolean value) {
+        copyOnWrite();
+        instance.setCountOnly(value);
+        return this;
+      }
+      /**
+       * <code>bool count_only = 4 [json_name = "countOnly"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCountOnly() {
+        copyOnWrite();
+        instance.clearCountOnly();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.SequencesByDatasetIDRequest)
     }
     @java.lang.Override
@@ -53369,10 +53429,11 @@ com.google.protobuf.Any defaultValue) {
               "datasetId_",
               "pageToken_",
               "pageSize_",
+              "countOnly_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u000b";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u000b\u0004\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -53456,6 +53517,12 @@ com.google.protobuf.Any defaultValue) {
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
+
+    /**
+     * <code>uint64 count = 3 [json_name = "count"];</code>
+     * @return The count.
+     */
+    long getCount();
   }
   /**
    * Protobuf type {@code viam.app.data.v1.SequencesByDatasetIDResponse}
@@ -53612,6 +53679,32 @@ com.google.protobuf.Any defaultValue) {
       checkByteStringIsUtf8(value);
       nextPageToken_ = value.toStringUtf8();
 
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 3;
+    private long count_;
+    /**
+     * <code>uint64 count = 3 [json_name = "count"];</code>
+     * @return The count.
+     */
+    @java.lang.Override
+    public long getCount() {
+      return count_;
+    }
+    /**
+     * <code>uint64 count = 3 [json_name = "count"];</code>
+     * @param value The count to set.
+     */
+    private void setCount(long value) {
+      
+      count_ = value;
+    }
+    /**
+     * <code>uint64 count = 3 [json_name = "count"];</code>
+     */
+    private void clearCount() {
+
+      count_ = 0L;
     }
 
     public static viam.app.data.v1.Data.SequencesByDatasetIDResponse parseFrom(
@@ -53862,6 +53955,34 @@ com.google.protobuf.Any defaultValue) {
         return this;
       }
 
+      /**
+       * <code>uint64 count = 3 [json_name = "count"];</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public long getCount() {
+        return instance.getCount();
+      }
+      /**
+       * <code>uint64 count = 3 [json_name = "count"];</code>
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(long value) {
+        copyOnWrite();
+        instance.setCount(value);
+        return this;
+      }
+      /**
+       * <code>uint64 count = 3 [json_name = "count"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        copyOnWrite();
+        instance.clearCount();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.data.v1.SequencesByDatasetIDResponse)
     }
     @java.lang.Override
@@ -53881,10 +54002,11 @@ com.google.protobuf.Any defaultValue) {
               "sequences_",
               viam.app.data.v1.Data.Sequence.class,
               "nextPageToken_",
+              "count_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u0208" +
-                "";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u001b\u0002\u0208" +
+                "\u0003\u0003";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {

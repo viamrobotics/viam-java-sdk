@@ -358,6 +358,133 @@ public final class AppOuterClass {
   }
 
   /**
+   * <pre>
+   * LogOrder is the order in which logs are returned, by time.
+   * </pre>
+   *
+   * Protobuf enum {@code viam.app.v1.LogOrder}
+   */
+  public enum LogOrder
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <pre>
+     * LOG_ORDER_UNSPECIFIED is treated as LOG_ORDER_DESCENDING.
+     * </pre>
+     *
+     * <code>LOG_ORDER_UNSPECIFIED = 0;</code>
+     */
+    LOG_ORDER_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * oldest logs first
+     * </pre>
+     *
+     * <code>LOG_ORDER_ASCENDING = 1;</code>
+     */
+    LOG_ORDER_ASCENDING(1),
+    /**
+     * <pre>
+     * newest logs first
+     * </pre>
+     *
+     * <code>LOG_ORDER_DESCENDING = 2;</code>
+     */
+    LOG_ORDER_DESCENDING(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * LOG_ORDER_UNSPECIFIED is treated as LOG_ORDER_DESCENDING.
+     * </pre>
+     *
+     * <code>LOG_ORDER_UNSPECIFIED = 0;</code>
+     */
+    public static final int LOG_ORDER_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * oldest logs first
+     * </pre>
+     *
+     * <code>LOG_ORDER_ASCENDING = 1;</code>
+     */
+    public static final int LOG_ORDER_ASCENDING_VALUE = 1;
+    /**
+     * <pre>
+     * newest logs first
+     * </pre>
+     *
+     * <code>LOG_ORDER_DESCENDING = 2;</code>
+     */
+    public static final int LOG_ORDER_DESCENDING_VALUE = 2;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static LogOrder valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static LogOrder forNumber(int value) {
+      switch (value) {
+        case 0: return LOG_ORDER_UNSPECIFIED;
+        case 1: return LOG_ORDER_ASCENDING;
+        case 2: return LOG_ORDER_DESCENDING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LogOrder>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        LogOrder> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LogOrder>() {
+            @java.lang.Override
+            public LogOrder findValueByNumber(int number) {
+              return LogOrder.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return LogOrderVerifier.INSTANCE;
+    }
+
+    private static final class LogOrderVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier
+                INSTANCE = new LogOrderVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return LogOrder.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private LogOrder(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.v1.LogOrder)
+  }
+
+  /**
    * Protobuf enum {@code viam.app.v1.FragmentVisibility}
    */
   public enum FragmentVisibility
@@ -43907,7 +44034,7 @@ public final class AppOuterClass {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=900
+     *     See app/v1/app.proto;l=910
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -44047,6 +44174,78 @@ public final class AppOuterClass {
      * @return The userFacingOnly.
      */
     boolean getUserFacingOnly();
+
+    /**
+     * <pre>
+     * logs are returned newest first when the order field is empty
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+     * @return Whether the order field is set.
+     */
+    boolean hasOrder();
+    /**
+     * <pre>
+     * logs are returned newest first when the order field is empty
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+     * @return The enum numeric value on the wire for order.
+     */
+    int getOrderValue();
+    /**
+     * <pre>
+     * logs are returned newest first when the order field is empty
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+     * @return The order.
+     */
+    viam.app.v1.AppOuterClass.LogOrder getOrder();
+
+    /**
+     * <pre>
+     * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+     * that is resolved against whichever of start and end is present:
+     * end only:     [end - range, end]
+     * start only:   [start, start + range]
+     * neither:      [now - range, now]
+     * Specifying range together with both start and end is an error.
+     * </pre>
+     *
+     * <code>optional string range = 12 [json_name = "range"];</code>
+     * @return Whether the range field is set.
+     */
+    boolean hasRange();
+    /**
+     * <pre>
+     * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+     * that is resolved against whichever of start and end is present:
+     * end only:     [end - range, end]
+     * start only:   [start, start + range]
+     * neither:      [now - range, now]
+     * Specifying range together with both start and end is an error.
+     * </pre>
+     *
+     * <code>optional string range = 12 [json_name = "range"];</code>
+     * @return The range.
+     */
+    java.lang.String getRange();
+    /**
+     * <pre>
+     * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+     * that is resolved against whichever of start and end is present:
+     * end only:     [end - range, end]
+     * start only:   [start, start + range]
+     * neither:      [now - range, now]
+     * Specifying range together with both start and end is an error.
+     * </pre>
+     *
+     * <code>optional string range = 12 [json_name = "range"];</code>
+     * @return The bytes for range.
+     */
+    com.google.protobuf.ByteString
+        getRangeBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.GetRobotPartLogsRequest}
@@ -44062,6 +44261,7 @@ public final class AppOuterClass {
       pageToken_ = "";
       levels_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       source_ = "";
+      range_ = "";
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
@@ -44121,7 +44321,7 @@ public final class AppOuterClass {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=900
+     *     See app/v1/app.proto;l=910
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -44615,6 +44815,191 @@ public final class AppOuterClass {
       userFacingOnly_ = false;
     }
 
+    public static final int ORDER_FIELD_NUMBER = 11;
+    private int order_;
+    /**
+     * <pre>
+     * logs are returned newest first when the order field is empty
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+     * @return Whether the order field is set.
+     */
+    @java.lang.Override
+    public boolean hasOrder() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * logs are returned newest first when the order field is empty
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+     * @return The enum numeric value on the wire for order.
+     */
+    @java.lang.Override
+    public int getOrderValue() {
+      return order_;
+    }
+    /**
+     * <pre>
+     * logs are returned newest first when the order field is empty
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+     * @return The order.
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.LogOrder getOrder() {
+      viam.app.v1.AppOuterClass.LogOrder result = viam.app.v1.AppOuterClass.LogOrder.forNumber(order_);
+      return result == null ? viam.app.v1.AppOuterClass.LogOrder.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * logs are returned newest first when the order field is empty
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+     * @param value The enum numeric value on the wire for order to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setOrderValue(int value) {
+      bitField0_ |= 0x00000080;  order_ = value;
+    }
+    /**
+     * <pre>
+     * logs are returned newest first when the order field is empty
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+     * @param value The order to set.
+     */
+    private void setOrder(viam.app.v1.AppOuterClass.LogOrder value) {
+      order_ = value.getNumber();
+      bitField0_ |= 0x00000080;
+    }
+    /**
+     * <pre>
+     * logs are returned newest first when the order field is empty
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+     */
+    private void clearOrder() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      order_ = 0;
+    }
+
+    public static final int RANGE_FIELD_NUMBER = 12;
+    private java.lang.String range_;
+    /**
+     * <pre>
+     * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+     * that is resolved against whichever of start and end is present:
+     * end only:     [end - range, end]
+     * start only:   [start, start + range]
+     * neither:      [now - range, now]
+     * Specifying range together with both start and end is an error.
+     * </pre>
+     *
+     * <code>optional string range = 12 [json_name = "range"];</code>
+     * @return Whether the range field is set.
+     */
+    @java.lang.Override
+    public boolean hasRange() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+     * that is resolved against whichever of start and end is present:
+     * end only:     [end - range, end]
+     * start only:   [start, start + range]
+     * neither:      [now - range, now]
+     * Specifying range together with both start and end is an error.
+     * </pre>
+     *
+     * <code>optional string range = 12 [json_name = "range"];</code>
+     * @return The range.
+     */
+    @java.lang.Override
+    public java.lang.String getRange() {
+      return range_;
+    }
+    /**
+     * <pre>
+     * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+     * that is resolved against whichever of start and end is present:
+     * end only:     [end - range, end]
+     * start only:   [start, start + range]
+     * neither:      [now - range, now]
+     * Specifying range together with both start and end is an error.
+     * </pre>
+     *
+     * <code>optional string range = 12 [json_name = "range"];</code>
+     * @return The bytes for range.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRangeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(range_);
+    }
+    /**
+     * <pre>
+     * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+     * that is resolved against whichever of start and end is present:
+     * end only:     [end - range, end]
+     * start only:   [start, start + range]
+     * neither:      [now - range, now]
+     * Specifying range together with both start and end is an error.
+     * </pre>
+     *
+     * <code>optional string range = 12 [json_name = "range"];</code>
+     * @param value The range to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setRange(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      bitField0_ |= 0x00000100;
+      range_ = value;
+    }
+    /**
+     * <pre>
+     * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+     * that is resolved against whichever of start and end is present:
+     * end only:     [end - range, end]
+     * start only:   [start, start + range]
+     * neither:      [now - range, now]
+     * Specifying range together with both start and end is an error.
+     * </pre>
+     *
+     * <code>optional string range = 12 [json_name = "range"];</code>
+     */
+    private void clearRange() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      range_ = getDefaultInstance().getRange();
+    }
+    /**
+     * <pre>
+     * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+     * that is resolved against whichever of start and end is present:
+     * end only:     [end - range, end]
+     * start only:   [start, start + range]
+     * neither:      [now - range, now]
+     * Specifying range together with both start and end is an error.
+     * </pre>
+     *
+     * <code>optional string range = 12 [json_name = "range"];</code>
+     * @param value The bytes for range to set.
+     */
+    private void setRangeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      range_ = value.toStringUtf8();
+      bitField0_ |= 0x00000100;
+    }
+
     public static viam.app.v1.AppOuterClass.GetRobotPartLogsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -44768,7 +45153,7 @@ public final class AppOuterClass {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=900
+       *     See app/v1/app.proto;l=910
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -44782,7 +45167,7 @@ public final class AppOuterClass {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=900
+       *     See app/v1/app.proto;l=910
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -44798,7 +45183,7 @@ public final class AppOuterClass {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=900
+       *     See app/v1/app.proto;l=910
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
@@ -45272,6 +45657,196 @@ public final class AppOuterClass {
         return this;
       }
 
+      /**
+       * <pre>
+       * logs are returned newest first when the order field is empty
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+       * @return Whether the order field is set.
+       */
+      @java.lang.Override
+      public boolean hasOrder() {
+        return instance.hasOrder();
+      }
+      /**
+       * <pre>
+       * logs are returned newest first when the order field is empty
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+       * @return The enum numeric value on the wire for order.
+       */
+      @java.lang.Override
+      public int getOrderValue() {
+        return instance.getOrderValue();
+      }
+      /**
+       * <pre>
+       * logs are returned newest first when the order field is empty
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+       * @param value The order to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderValue(int value) {
+        copyOnWrite();
+        instance.setOrderValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * logs are returned newest first when the order field is empty
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+       * @return The order.
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.LogOrder getOrder() {
+        return instance.getOrder();
+      }
+      /**
+       * <pre>
+       * logs are returned newest first when the order field is empty
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+       * @param value The enum numeric value on the wire for order to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setOrder(viam.app.v1.AppOuterClass.LogOrder value) {
+        copyOnWrite();
+        instance.setOrder(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * logs are returned newest first when the order field is empty
+       * </pre>
+       *
+       * <code>optional .viam.app.v1.LogOrder order = 11 [json_name = "order"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrder() {
+        copyOnWrite();
+        instance.clearOrder();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+       * that is resolved against whichever of start and end is present:
+       * end only:     [end - range, end]
+       * start only:   [start, start + range]
+       * neither:      [now - range, now]
+       * Specifying range together with both start and end is an error.
+       * </pre>
+       *
+       * <code>optional string range = 12 [json_name = "range"];</code>
+       * @return Whether the range field is set.
+       */
+      @java.lang.Override
+      public boolean hasRange() {
+        return instance.hasRange();
+      }
+      /**
+       * <pre>
+       * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+       * that is resolved against whichever of start and end is present:
+       * end only:     [end - range, end]
+       * start only:   [start, start + range]
+       * neither:      [now - range, now]
+       * Specifying range together with both start and end is an error.
+       * </pre>
+       *
+       * <code>optional string range = 12 [json_name = "range"];</code>
+       * @return The range.
+       */
+      @java.lang.Override
+      public java.lang.String getRange() {
+        return instance.getRange();
+      }
+      /**
+       * <pre>
+       * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+       * that is resolved against whichever of start and end is present:
+       * end only:     [end - range, end]
+       * start only:   [start, start + range]
+       * neither:      [now - range, now]
+       * Specifying range together with both start and end is an error.
+       * </pre>
+       *
+       * <code>optional string range = 12 [json_name = "range"];</code>
+       * @return The bytes for range.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRangeBytes() {
+        return instance.getRangeBytes();
+      }
+      /**
+       * <pre>
+       * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+       * that is resolved against whichever of start and end is present:
+       * end only:     [end - range, end]
+       * start only:   [start, start + range]
+       * neither:      [now - range, now]
+       * Specifying range together with both start and end is an error.
+       * </pre>
+       *
+       * <code>optional string range = 12 [json_name = "range"];</code>
+       * @param value The range to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRange(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRange(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+       * that is resolved against whichever of start and end is present:
+       * end only:     [end - range, end]
+       * start only:   [start, start + range]
+       * neither:      [now - range, now]
+       * Specifying range together with both start and end is an error.
+       * </pre>
+       *
+       * <code>optional string range = 12 [json_name = "range"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRange() {
+        copyOnWrite();
+        instance.clearRange();
+        return this;
+      }
+      /**
+       * <pre>
+       * range is a duration string in minutes, hours, or days (e.g. "10m", "10h", "10d")
+       * that is resolved against whichever of start and end is present:
+       * end only:     [end - range, end]
+       * start only:   [start, start + range]
+       * neither:      [now - range, now]
+       * Specifying range together with both start and end is an error.
+       * </pre>
+       *
+       * <code>optional string range = 12 [json_name = "range"];</code>
+       * @param value The bytes for range to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRangeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRangeBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetRobotPartLogsRequest)
     }
     @java.lang.Override
@@ -45299,11 +45874,13 @@ public final class AppOuterClass {
               "limit_",
               "source_",
               "userFacingOnly_",
+              "order_",
+              "range_",
             };
             java.lang.String info =
-                "\u0000\n\u0000\u0001\u0001\n\n\u0000\u0001\u0000\u0001\u0208\u0002\u0007\u0003\u1208" +
+                "\u0000\f\u0000\u0001\u0001\f\f\u0000\u0001\u0000\u0001\u0208\u0002\u0007\u0003\u1208" +
                 "\u0000\u0004\u1208\u0001\u0005\u021a\u0006\u1009\u0002\u0007\u1009\u0003\b\u1002" +
-                "\u0004\t\u1208\u0005\n\u1007\u0006";
+                "\u0004\t\u1208\u0005\n\u1007\u0006\u000b\u100c\u0007\f\u1208\b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -89603,6 +90180,35 @@ java.lang.String defaultValue) {
      * @return The deprecatedStatus.
      */
     viam.app.v1.AppOuterClass.DeprecatedStatus getDeprecatedStatus();
+
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run this version of the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @return Whether the minViamServerVersion field is set.
+     */
+    boolean hasMinViamServerVersion();
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run this version of the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @return The minViamServerVersion.
+     */
+    java.lang.String getMinViamServerVersion();
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run this version of the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @return The bytes for minViamServerVersion.
+     */
+    com.google.protobuf.ByteString
+        getMinViamServerVersionBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.ModuleVersion}
@@ -89620,6 +90226,7 @@ java.lang.String defaultValue) {
       firstRun_ = "";
       markdownDescription_ = "";
       apps_ = emptyProtobufList();
+      minViamServerVersion_ = "";
     }
     private int bitField0_;
     public static final int VERSION_FIELD_NUMBER = 1;
@@ -90407,6 +91014,86 @@ java.lang.String defaultValue) {
     private void clearDeprecatedStatus() {
       deprecatedStatus_ = null;
       bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static final int MIN_VIAM_SERVER_VERSION_FIELD_NUMBER = 9;
+    private java.lang.String minViamServerVersion_;
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run this version of the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @return Whether the minViamServerVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinViamServerVersion() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run this version of the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @return The minViamServerVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getMinViamServerVersion() {
+      return minViamServerVersion_;
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run this version of the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @return The bytes for minViamServerVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinViamServerVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(minViamServerVersion_);
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run this version of the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @param value The minViamServerVersion to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMinViamServerVersion(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      bitField0_ |= 0x00000008;
+      minViamServerVersion_ = value;
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run this version of the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     */
+    private void clearMinViamServerVersion() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      minViamServerVersion_ = getDefaultInstance().getMinViamServerVersion();
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run this version of the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @param value The bytes for minViamServerVersion to set.
+     */
+    private void setMinViamServerVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      minViamServerVersion_ = value.toStringUtf8();
+      bitField0_ |= 0x00000008;
     }
 
     public static viam.app.v1.AppOuterClass.ModuleVersion parseFrom(
@@ -91327,6 +92014,87 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run this version of the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+       * @return Whether the minViamServerVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasMinViamServerVersion() {
+        return instance.hasMinViamServerVersion();
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run this version of the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+       * @return The minViamServerVersion.
+       */
+      @java.lang.Override
+      public java.lang.String getMinViamServerVersion() {
+        return instance.getMinViamServerVersion();
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run this version of the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+       * @return The bytes for minViamServerVersion.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMinViamServerVersionBytes() {
+        return instance.getMinViamServerVersionBytes();
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run this version of the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+       * @param value The minViamServerVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinViamServerVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMinViamServerVersion(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run this version of the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinViamServerVersion() {
+        copyOnWrite();
+        instance.clearMinViamServerVersion();
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run this version of the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+       * @param value The bytes for minViamServerVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinViamServerVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMinViamServerVersionBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ModuleVersion)
     }
     @java.lang.Override
@@ -91355,10 +92123,12 @@ java.lang.String defaultValue) {
               "apps_",
               viam.app.v1.AppOuterClass.App.class,
               "deprecatedStatus_",
+              "minViamServerVersion_",
             };
             java.lang.String info =
-                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0003\u0000\u0001\u0208\u0002\u001b\u0003\u001b" +
-                "\u0004\u0208\u0005\u1208\u0000\u0006\u1208\u0001\u0007\u001b\b\u1009\u0002";
+                "\u0000\t\u0000\u0001\u0001\t\t\u0000\u0003\u0000\u0001\u0208\u0002\u001b\u0003\u001b" +
+                "\u0004\u0208\u0005\u1208\u0000\u0006\u1208\u0001\u0007\u001b\b\u1009\u0002\t\u1208" +
+                "\u0003";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -91631,6 +92401,35 @@ java.lang.String defaultValue) {
      * @return The language.
      */
     viam.app.v1.AppOuterClass.ModuleLanguage getLanguage();
+
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @return Whether the minViamServerVersion field is set.
+     */
+    boolean hasMinViamServerVersion();
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @return The minViamServerVersion.
+     */
+    java.lang.String getMinViamServerVersion();
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @return The bytes for minViamServerVersion.
+     */
+    com.google.protobuf.ByteString
+        getMinViamServerVersionBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.ModuleMetadata}
@@ -91647,6 +92446,7 @@ java.lang.String defaultValue) {
       firstRun_ = "";
       markdownDescription_ = "";
       apps_ = emptyProtobufList();
+      minViamServerVersion_ = "";
     }
     private int bitField0_;
     public static final int MODELS_FIELD_NUMBER = 1;
@@ -92459,6 +93259,86 @@ java.lang.String defaultValue) {
     private void clearLanguage() {
       bitField0_ = (bitField0_ & ~0x00000008);
       language_ = 0;
+    }
+
+    public static final int MIN_VIAM_SERVER_VERSION_FIELD_NUMBER = 9;
+    private java.lang.String minViamServerVersion_;
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @return Whether the minViamServerVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinViamServerVersion() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @return The minViamServerVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getMinViamServerVersion() {
+      return minViamServerVersion_;
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @return The bytes for minViamServerVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinViamServerVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(minViamServerVersion_);
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @param value The minViamServerVersion to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMinViamServerVersion(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      bitField0_ |= 0x00000010;
+      minViamServerVersion_ = value;
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     */
+    private void clearMinViamServerVersion() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      minViamServerVersion_ = getDefaultInstance().getMinViamServerVersion();
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+     * @param value The bytes for minViamServerVersion to set.
+     */
+    private void setMinViamServerVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      minViamServerVersion_ = value.toStringUtf8();
+      bitField0_ |= 0x00000010;
     }
 
     public static viam.app.v1.AppOuterClass.ModuleMetadata parseFrom(
@@ -93409,6 +94289,87 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+       * @return Whether the minViamServerVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasMinViamServerVersion() {
+        return instance.hasMinViamServerVersion();
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+       * @return The minViamServerVersion.
+       */
+      @java.lang.Override
+      public java.lang.String getMinViamServerVersion() {
+        return instance.getMinViamServerVersion();
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+       * @return The bytes for minViamServerVersion.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMinViamServerVersionBytes() {
+        return instance.getMinViamServerVersionBytes();
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+       * @param value The minViamServerVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinViamServerVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMinViamServerVersion(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinViamServerVersion() {
+        copyOnWrite();
+        instance.clearMinViamServerVersion();
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 9 [json_name = "minViamServerVersion"];</code>
+       * @param value The bytes for minViamServerVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinViamServerVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMinViamServerVersionBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.ModuleMetadata)
     }
     @java.lang.Override
@@ -93437,11 +94398,12 @@ java.lang.String defaultValue) {
               viam.app.v1.AppOuterClass.App.class,
               "sourceType_",
               "language_",
+              "minViamServerVersion_",
             };
             java.lang.String info =
-                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0003\u0000\u0001\u001b\u0002\u001b\u0003\u0208" +
+                "\u0000\t\u0000\u0001\u0001\t\t\u0000\u0003\u0000\u0001\u001b\u0002\u001b\u0003\u0208" +
                 "\u0004\u1208\u0000\u0005\u1208\u0001\u0006\u001b\u0007\u100c\u0002\b\u100c\u0003" +
-                "";
+                "\t\u1208\u0004";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -93912,7 +94874,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1463
+     *     See app/v1/app.proto;l=1486
      * @return A list containing the versions.
      */
     @java.lang.Deprecated java.util.List<java.lang.String>
@@ -93924,7 +94886,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1463
+     *     See app/v1/app.proto;l=1486
      * @return The count of versions.
      */
     @java.lang.Deprecated int getVersionsCount();
@@ -93935,7 +94897,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1463
+     *     See app/v1/app.proto;l=1486
      * @param index The index of the element to return.
      * @return The versions at the given index.
      */
@@ -93947,7 +94909,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1463
+     *     See app/v1/app.proto;l=1486
      * @param index The index of the element to return.
      * @return The versions at the given index.
      */
@@ -94011,7 +94973,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1463
+     *     See app/v1/app.proto;l=1486
      * @return A list containing the versions.
      */
     @java.lang.Override
@@ -94025,7 +94987,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1463
+     *     See app/v1/app.proto;l=1486
      * @return The count of versions.
      */
     @java.lang.Override
@@ -94039,7 +95001,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1463
+     *     See app/v1/app.proto;l=1486
      * @param index The index of the element to return.
      * @return The versions at the given index.
      */
@@ -94054,7 +95016,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1463
+     *     See app/v1/app.proto;l=1486
      * @param index The index of the value to return.
      * @return The bytes of the versions at the given index.
      */
@@ -94428,7 +95390,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1463
+       *     See app/v1/app.proto;l=1486
        * @return A list containing the versions.
        */
       @java.lang.Override
@@ -94444,7 +95406,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1463
+       *     See app/v1/app.proto;l=1486
        * @return The count of versions.
        */
       @java.lang.Override
@@ -94458,7 +95420,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1463
+       *     See app/v1/app.proto;l=1486
        * @param index The index of the element to return.
        * @return The versions at the given index.
        */
@@ -94473,7 +95435,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1463
+       *     See app/v1/app.proto;l=1486
        * @param index The index of the value to return.
        * @return The bytes of the versions at the given index.
        */
@@ -94489,7 +95451,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1463
+       *     See app/v1/app.proto;l=1486
        * @param index The index to set the value at.
        * @param value The versions to set.
        * @return This builder for chaining.
@@ -94507,7 +95469,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1463
+       *     See app/v1/app.proto;l=1486
        * @param value The versions to add.
        * @return This builder for chaining.
        */
@@ -94524,7 +95486,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1463
+       *     See app/v1/app.proto;l=1486
        * @param values The versions to add.
        * @return This builder for chaining.
        */
@@ -94541,7 +95503,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1463
+       *     See app/v1/app.proto;l=1486
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearVersions() {
@@ -94556,7 +95518,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1463
+       *     See app/v1/app.proto;l=1486
        * @param value The bytes of the versions to add.
        * @return This builder for chaining.
        */
@@ -114831,6 +115793,35 @@ java.lang.String defaultValue) {
      * @return The language.
      */
     viam.app.v1.AppOuterClass.ModuleLanguage getLanguage();
+
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+     * @return Whether the minViamServerVersion field is set.
+     */
+    boolean hasMinViamServerVersion();
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+     * @return The minViamServerVersion.
+     */
+    java.lang.String getMinViamServerVersion();
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+     * @return The bytes for minViamServerVersion.
+     */
+    com.google.protobuf.ByteString
+        getMinViamServerVersionBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.UpdateModuleMetadata}
@@ -114844,6 +115835,7 @@ java.lang.String defaultValue) {
       models_ = emptyProtobufList();
       entrypoint_ = "";
       apps_ = emptyProtobufList();
+      minViamServerVersion_ = "";
     }
     private int bitField0_;
     public static final int MODELS_FIELD_NUMBER = 1;
@@ -115344,6 +116336,86 @@ java.lang.String defaultValue) {
     private void clearLanguage() {
       bitField0_ = (bitField0_ & ~0x00000002);
       language_ = 0;
+    }
+
+    public static final int MIN_VIAM_SERVER_VERSION_FIELD_NUMBER = 6;
+    private java.lang.String minViamServerVersion_;
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+     * @return Whether the minViamServerVersion field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinViamServerVersion() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+     * @return The minViamServerVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getMinViamServerVersion() {
+      return minViamServerVersion_;
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+     * @return The bytes for minViamServerVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinViamServerVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(minViamServerVersion_);
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+     * @param value The minViamServerVersion to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMinViamServerVersion(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      bitField0_ |= 0x00000004;
+      minViamServerVersion_ = value;
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+     */
+    private void clearMinViamServerVersion() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      minViamServerVersion_ = getDefaultInstance().getMinViamServerVersion();
+    }
+    /**
+     * <pre>
+     * The minimum version of viam-server required to run the module.
+     * </pre>
+     *
+     * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+     * @param value The bytes for minViamServerVersion to set.
+     */
+    private void setMinViamServerVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      minViamServerVersion_ = value.toStringUtf8();
+      bitField0_ |= 0x00000004;
     }
 
     public static viam.app.v1.AppOuterClass.UpdateModuleMetadata parseFrom(
@@ -115970,6 +117042,87 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+       * @return Whether the minViamServerVersion field is set.
+       */
+      @java.lang.Override
+      public boolean hasMinViamServerVersion() {
+        return instance.hasMinViamServerVersion();
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+       * @return The minViamServerVersion.
+       */
+      @java.lang.Override
+      public java.lang.String getMinViamServerVersion() {
+        return instance.getMinViamServerVersion();
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+       * @return The bytes for minViamServerVersion.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMinViamServerVersionBytes() {
+        return instance.getMinViamServerVersionBytes();
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+       * @param value The minViamServerVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinViamServerVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMinViamServerVersion(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinViamServerVersion() {
+        copyOnWrite();
+        instance.clearMinViamServerVersion();
+        return this;
+      }
+      /**
+       * <pre>
+       * The minimum version of viam-server required to run the module.
+       * </pre>
+       *
+       * <code>optional string min_viam_server_version = 6 [json_name = "minViamServerVersion"];</code>
+       * @param value The bytes for minViamServerVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinViamServerVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMinViamServerVersionBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateModuleMetadata)
     }
     @java.lang.Override
@@ -115994,10 +117147,11 @@ java.lang.String defaultValue) {
               viam.app.v1.AppOuterClass.App.class,
               "sourceType_",
               "language_",
+              "minViamServerVersion_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0002\u0000\u0001\u001b\u0002\u0208" +
-                "\u0003\u001b\u0004\u100c\u0000\u0005\u100c\u0001";
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0002\u0000\u0001\u001b\u0002\u0208" +
+                "\u0003\u001b\u0004\u100c\u0000\u0005\u100c\u0001\u0006\u1208\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {

@@ -136,6 +136,36 @@ public final class SignalingServiceGrpc {
     return getOptionalWebRTCConfigMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest,
+      proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse> getReportConnectionMetadataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ReportConnectionMetadata",
+      requestType = proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest.class,
+      responseType = proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest,
+      proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse> getReportConnectionMetadataMethod() {
+    io.grpc.MethodDescriptor<proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest, proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse> getReportConnectionMetadataMethod;
+    if ((getReportConnectionMetadataMethod = SignalingServiceGrpc.getReportConnectionMetadataMethod) == null) {
+      synchronized (SignalingServiceGrpc.class) {
+        if ((getReportConnectionMetadataMethod = SignalingServiceGrpc.getReportConnectionMetadataMethod) == null) {
+          SignalingServiceGrpc.getReportConnectionMetadataMethod = getReportConnectionMetadataMethod =
+              io.grpc.MethodDescriptor.<proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest, proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReportConnectionMetadata"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getReportConnectionMetadataMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -256,6 +286,17 @@ public final class SignalingServiceGrpc {
         io.grpc.stub.StreamObserver<proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getOptionalWebRTCConfigMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * ReportConnectionMetadata reports metadata about a WebRTC connection attempt.
+     * The host must be in the rpc-host metadata field.
+     * </pre>
+     */
+    default void reportConnectionMetadata(proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest request,
+        io.grpc.stub.StreamObserver<proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReportConnectionMetadataMethod(), responseObserver);
+    }
   }
 
   /**
@@ -350,6 +391,18 @@ public final class SignalingServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getOptionalWebRTCConfigMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * ReportConnectionMetadata reports metadata about a WebRTC connection attempt.
+     * The host must be in the rpc-host metadata field.
+     * </pre>
+     */
+    public void reportConnectionMetadata(proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest request,
+        io.grpc.stub.StreamObserver<proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getReportConnectionMetadataMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -429,6 +482,17 @@ public final class SignalingServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getOptionalWebRTCConfigMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * ReportConnectionMetadata reports metadata about a WebRTC connection attempt.
+     * The host must be in the rpc-host metadata field.
+     * </pre>
+     */
+    public proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse reportConnectionMetadata(proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getReportConnectionMetadataMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -493,6 +557,17 @@ public final class SignalingServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getOptionalWebRTCConfigMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * ReportConnectionMetadata reports metadata about a WebRTC connection attempt.
+     * The host must be in the rpc-host metadata field.
+     * </pre>
+     */
+    public proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse reportConnectionMetadata(proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getReportConnectionMetadataMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -541,12 +616,25 @@ public final class SignalingServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getOptionalWebRTCConfigMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ReportConnectionMetadata reports metadata about a WebRTC connection attempt.
+     * The host must be in the rpc-host metadata field.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse> reportConnectionMetadata(
+        proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getReportConnectionMetadataMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CALL = 0;
   private static final int METHODID_CALL_UPDATE = 1;
   private static final int METHODID_OPTIONAL_WEB_RTCCONFIG = 2;
-  private static final int METHODID_ANSWER = 3;
+  private static final int METHODID_REPORT_CONNECTION_METADATA = 3;
+  private static final int METHODID_ANSWER = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -576,6 +664,10 @@ public final class SignalingServiceGrpc {
         case METHODID_OPTIONAL_WEB_RTCCONFIG:
           serviceImpl.optionalWebRTCConfig((proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest) request,
               (io.grpc.stub.StreamObserver<proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse>) responseObserver);
+          break;
+        case METHODID_REPORT_CONNECTION_METADATA:
+          serviceImpl.reportConnectionMetadata((proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest) request,
+              (io.grpc.stub.StreamObserver<proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -626,6 +718,13 @@ public final class SignalingServiceGrpc {
               proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest,
               proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse>(
                 service, METHODID_OPTIONAL_WEB_RTCCONFIG)))
+        .addMethod(
+          getReportConnectionMetadataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest,
+              proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse>(
+                service, METHODID_REPORT_CONNECTION_METADATA)))
         .build();
   }
 
@@ -642,6 +741,7 @@ public final class SignalingServiceGrpc {
               .addMethod(getCallUpdateMethod())
               .addMethod(getAnswerMethod())
               .addMethod(getOptionalWebRTCConfigMethod())
+              .addMethod(getReportConnectionMetadataMethod())
               .build();
         }
       }

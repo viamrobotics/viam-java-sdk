@@ -11,6 +11,488 @@ public final class Signaling {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
+  /**
+   * <pre>
+   * ICECandidateType represents the type of ICE candidate selected for a WebRTC connection.
+   * The signaling server further classifies RELAY by relay server specific provider from the address.
+   * </pre>
+   *
+   * Protobuf enum {@code proto.rpc.webrtc.v1.ICECandidateType}
+   */
+  public enum ICECandidateType
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>ICE_CANDIDATE_TYPE_UNSPECIFIED = 0;</code>
+     */
+    ICE_CANDIDATE_TYPE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * ICE_CANDIDATE_TYPE_HOST indicates a direct connection was established.
+     * </pre>
+     *
+     * <code>ICE_CANDIDATE_TYPE_HOST = 1;</code>
+     */
+    ICE_CANDIDATE_TYPE_HOST(1),
+    /**
+     * <pre>
+     * ICE_CANDIDATE_TYPE_STUN indicates a STUN-assisted connection was established.
+     * </pre>
+     *
+     * <code>ICE_CANDIDATE_TYPE_STUN = 2;</code>
+     */
+    ICE_CANDIDATE_TYPE_STUN(2),
+    /**
+     * <pre>
+     * ICE_CANDIDATE_TYPE_RELAY indicates a TURN relay candidate was selected.
+     * </pre>
+     *
+     * <code>ICE_CANDIDATE_TYPE_RELAY = 3;</code>
+     */
+    ICE_CANDIDATE_TYPE_RELAY(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>ICE_CANDIDATE_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int ICE_CANDIDATE_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * ICE_CANDIDATE_TYPE_HOST indicates a direct connection was established.
+     * </pre>
+     *
+     * <code>ICE_CANDIDATE_TYPE_HOST = 1;</code>
+     */
+    public static final int ICE_CANDIDATE_TYPE_HOST_VALUE = 1;
+    /**
+     * <pre>
+     * ICE_CANDIDATE_TYPE_STUN indicates a STUN-assisted connection was established.
+     * </pre>
+     *
+     * <code>ICE_CANDIDATE_TYPE_STUN = 2;</code>
+     */
+    public static final int ICE_CANDIDATE_TYPE_STUN_VALUE = 2;
+    /**
+     * <pre>
+     * ICE_CANDIDATE_TYPE_RELAY indicates a TURN relay candidate was selected.
+     * </pre>
+     *
+     * <code>ICE_CANDIDATE_TYPE_RELAY = 3;</code>
+     */
+    public static final int ICE_CANDIDATE_TYPE_RELAY_VALUE = 3;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ICECandidateType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ICECandidateType forNumber(int value) {
+      switch (value) {
+        case 0: return ICE_CANDIDATE_TYPE_UNSPECIFIED;
+        case 1: return ICE_CANDIDATE_TYPE_HOST;
+        case 2: return ICE_CANDIDATE_TYPE_STUN;
+        case 3: return ICE_CANDIDATE_TYPE_RELAY;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ICECandidateType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ICECandidateType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ICECandidateType>() {
+            @java.lang.Override
+            public ICECandidateType findValueByNumber(int number) {
+              return ICECandidateType.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return ICECandidateTypeVerifier.INSTANCE;
+    }
+
+    private static final class ICECandidateTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier
+                INSTANCE = new ICECandidateTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return ICECandidateType.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private ICECandidateType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:proto.rpc.webrtc.v1.ICECandidateType)
+  }
+
+  /**
+   * <pre>
+   * DialStage is the furthest checkpoint a WebRTC dial reached. READY means the dial succeeded; any
+   * earlier value is the stage at which a failed dial stopped.
+   * </pre>
+   *
+   * Protobuf enum {@code proto.rpc.webrtc.v1.DialStage}
+   */
+  public enum DialStage
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>DIAL_STAGE_UNSPECIFIED = 0;</code>
+     */
+    DIAL_STAGE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * DIAL_STAGE_SIGNALING_CONNECTED: the signaling channel was established.
+     * </pre>
+     *
+     * <code>DIAL_STAGE_SIGNALING_CONNECTED = 1;</code>
+     */
+    DIAL_STAGE_SIGNALING_CONNECTED(1),
+    /**
+     * <pre>
+     * DIAL_STAGE_CONFIG_FETCHED: ICE/TURN configuration was fetched from the signaling server.
+     * </pre>
+     *
+     * <code>DIAL_STAGE_CONFIG_FETCHED = 2;</code>
+     */
+    DIAL_STAGE_CONFIG_FETCHED(2),
+    /**
+     * <pre>
+     * DIAL_STAGE_OFFER_SENT: the SDP offer was sent to the signaling server (the Call was accepted).
+     * </pre>
+     *
+     * <code>DIAL_STAGE_OFFER_SENT = 3;</code>
+     */
+    DIAL_STAGE_OFFER_SENT(3),
+    /**
+     * <pre>
+     * DIAL_STAGE_ANSWER_RECEIVED: the answerer's SDP answer was received and applied.
+     * </pre>
+     *
+     * <code>DIAL_STAGE_ANSWER_RECEIVED = 4;</code>
+     */
+    DIAL_STAGE_ANSWER_RECEIVED(4),
+    /**
+     * <pre>
+     * DIAL_STAGE_ICE_CONNECTED: ICE connectivity was established (a candidate pair connected).
+     * </pre>
+     *
+     * <code>DIAL_STAGE_ICE_CONNECTED = 5;</code>
+     */
+    DIAL_STAGE_ICE_CONNECTED(5),
+    /**
+     * <pre>
+     * DIAL_STAGE_DTLS_CONNECTED: the DTLS handshake completed (peer connection connected) but the
+     * data channel is not yet open.
+     * </pre>
+     *
+     * <code>DIAL_STAGE_DTLS_CONNECTED = 6;</code>
+     */
+    DIAL_STAGE_DTLS_CONNECTED(6),
+    /**
+     * <pre>
+     * DIAL_STAGE_READY: the connection is fully ready (data channel open). This is success.
+     * </pre>
+     *
+     * <code>DIAL_STAGE_READY = 7;</code>
+     */
+    DIAL_STAGE_READY(7),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>DIAL_STAGE_UNSPECIFIED = 0;</code>
+     */
+    public static final int DIAL_STAGE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * DIAL_STAGE_SIGNALING_CONNECTED: the signaling channel was established.
+     * </pre>
+     *
+     * <code>DIAL_STAGE_SIGNALING_CONNECTED = 1;</code>
+     */
+    public static final int DIAL_STAGE_SIGNALING_CONNECTED_VALUE = 1;
+    /**
+     * <pre>
+     * DIAL_STAGE_CONFIG_FETCHED: ICE/TURN configuration was fetched from the signaling server.
+     * </pre>
+     *
+     * <code>DIAL_STAGE_CONFIG_FETCHED = 2;</code>
+     */
+    public static final int DIAL_STAGE_CONFIG_FETCHED_VALUE = 2;
+    /**
+     * <pre>
+     * DIAL_STAGE_OFFER_SENT: the SDP offer was sent to the signaling server (the Call was accepted).
+     * </pre>
+     *
+     * <code>DIAL_STAGE_OFFER_SENT = 3;</code>
+     */
+    public static final int DIAL_STAGE_OFFER_SENT_VALUE = 3;
+    /**
+     * <pre>
+     * DIAL_STAGE_ANSWER_RECEIVED: the answerer's SDP answer was received and applied.
+     * </pre>
+     *
+     * <code>DIAL_STAGE_ANSWER_RECEIVED = 4;</code>
+     */
+    public static final int DIAL_STAGE_ANSWER_RECEIVED_VALUE = 4;
+    /**
+     * <pre>
+     * DIAL_STAGE_ICE_CONNECTED: ICE connectivity was established (a candidate pair connected).
+     * </pre>
+     *
+     * <code>DIAL_STAGE_ICE_CONNECTED = 5;</code>
+     */
+    public static final int DIAL_STAGE_ICE_CONNECTED_VALUE = 5;
+    /**
+     * <pre>
+     * DIAL_STAGE_DTLS_CONNECTED: the DTLS handshake completed (peer connection connected) but the
+     * data channel is not yet open.
+     * </pre>
+     *
+     * <code>DIAL_STAGE_DTLS_CONNECTED = 6;</code>
+     */
+    public static final int DIAL_STAGE_DTLS_CONNECTED_VALUE = 6;
+    /**
+     * <pre>
+     * DIAL_STAGE_READY: the connection is fully ready (data channel open). This is success.
+     * </pre>
+     *
+     * <code>DIAL_STAGE_READY = 7;</code>
+     */
+    public static final int DIAL_STAGE_READY_VALUE = 7;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static DialStage valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static DialStage forNumber(int value) {
+      switch (value) {
+        case 0: return DIAL_STAGE_UNSPECIFIED;
+        case 1: return DIAL_STAGE_SIGNALING_CONNECTED;
+        case 2: return DIAL_STAGE_CONFIG_FETCHED;
+        case 3: return DIAL_STAGE_OFFER_SENT;
+        case 4: return DIAL_STAGE_ANSWER_RECEIVED;
+        case 5: return DIAL_STAGE_ICE_CONNECTED;
+        case 6: return DIAL_STAGE_DTLS_CONNECTED;
+        case 7: return DIAL_STAGE_READY;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DialStage>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DialStage> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DialStage>() {
+            @java.lang.Override
+            public DialStage findValueByNumber(int number) {
+              return DialStage.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return DialStageVerifier.INSTANCE;
+    }
+
+    private static final class DialStageVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier
+                INSTANCE = new DialStageVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return DialStage.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private DialStage(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:proto.rpc.webrtc.v1.DialStage)
+  }
+
+  /**
+   * <pre>
+   * ConnectionSignalingPath is how a WebRTC dial was signaled, derived from the signaling address.
+   * </pre>
+   *
+   * Protobuf enum {@code proto.rpc.webrtc.v1.ConnectionSignalingPath}
+   */
+  public enum ConnectionSignalingPath
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>CONNECTION_SIGNALING_PATH_UNSPECIFIED = 0;</code>
+     */
+    CONNECTION_SIGNALING_PATH_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * CONNECTION_SIGNALING_PATH_CLOUD_SIGNALED: signaled through app's signaling server.
+     * </pre>
+     *
+     * <code>CONNECTION_SIGNALING_PATH_CLOUD_SIGNALED = 1;</code>
+     */
+    CONNECTION_SIGNALING_PATH_CLOUD_SIGNALED(1),
+    /**
+     * <pre>
+     * CONNECTION_SIGNALING_PATH_MDNS_LOCAL: signaled over an mDNS-discovered local-network path.
+     * </pre>
+     *
+     * <code>CONNECTION_SIGNALING_PATH_MDNS_LOCAL = 2;</code>
+     */
+    CONNECTION_SIGNALING_PATH_MDNS_LOCAL(2),
+    /**
+     * <pre>
+     * CONNECTION_SIGNALING_PATH_LOCAL: signaled through a loopback/private-address signaling server
+     * (e.g. a machine's own signaling server) without mDNS discovery.
+     * </pre>
+     *
+     * <code>CONNECTION_SIGNALING_PATH_LOCAL = 3;</code>
+     */
+    CONNECTION_SIGNALING_PATH_LOCAL(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>CONNECTION_SIGNALING_PATH_UNSPECIFIED = 0;</code>
+     */
+    public static final int CONNECTION_SIGNALING_PATH_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * CONNECTION_SIGNALING_PATH_CLOUD_SIGNALED: signaled through app's signaling server.
+     * </pre>
+     *
+     * <code>CONNECTION_SIGNALING_PATH_CLOUD_SIGNALED = 1;</code>
+     */
+    public static final int CONNECTION_SIGNALING_PATH_CLOUD_SIGNALED_VALUE = 1;
+    /**
+     * <pre>
+     * CONNECTION_SIGNALING_PATH_MDNS_LOCAL: signaled over an mDNS-discovered local-network path.
+     * </pre>
+     *
+     * <code>CONNECTION_SIGNALING_PATH_MDNS_LOCAL = 2;</code>
+     */
+    public static final int CONNECTION_SIGNALING_PATH_MDNS_LOCAL_VALUE = 2;
+    /**
+     * <pre>
+     * CONNECTION_SIGNALING_PATH_LOCAL: signaled through a loopback/private-address signaling server
+     * (e.g. a machine's own signaling server) without mDNS discovery.
+     * </pre>
+     *
+     * <code>CONNECTION_SIGNALING_PATH_LOCAL = 3;</code>
+     */
+    public static final int CONNECTION_SIGNALING_PATH_LOCAL_VALUE = 3;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ConnectionSignalingPath valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ConnectionSignalingPath forNumber(int value) {
+      switch (value) {
+        case 0: return CONNECTION_SIGNALING_PATH_UNSPECIFIED;
+        case 1: return CONNECTION_SIGNALING_PATH_CLOUD_SIGNALED;
+        case 2: return CONNECTION_SIGNALING_PATH_MDNS_LOCAL;
+        case 3: return CONNECTION_SIGNALING_PATH_LOCAL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ConnectionSignalingPath>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ConnectionSignalingPath> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ConnectionSignalingPath>() {
+            @java.lang.Override
+            public ConnectionSignalingPath findValueByNumber(int number) {
+              return ConnectionSignalingPath.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return ConnectionSignalingPathVerifier.INSTANCE;
+    }
+
+    private static final class ConnectionSignalingPathVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier
+                INSTANCE = new ConnectionSignalingPathVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return ConnectionSignalingPath.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private ConnectionSignalingPath(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:proto.rpc.webrtc.v1.ConnectionSignalingPath)
+  }
+
   public interface ICECandidateOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.ICECandidate)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -9376,6 +9858,1576 @@ public final class Signaling {
     private static volatile com.google.protobuf.Parser<OptionalWebRTCConfigResponse> PARSER;
 
     public static com.google.protobuf.Parser<OptionalWebRTCConfigResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ConnectionCandidateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.ConnectionCandidate)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidateType type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidateType type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    proto.rpc.webrtc.v1.Signaling.ICECandidateType getType();
+
+    /**
+     * <pre>
+     * relay_address is the relay server address of this candidate; set only when type is
+     * RELAY, so the signaling server can classify the provider by matching against known
+     * coturn addresses.
+     * </pre>
+     *
+     * <code>string relay_address = 2 [json_name = "relayAddress"];</code>
+     * @return The relayAddress.
+     */
+    java.lang.String getRelayAddress();
+    /**
+     * <pre>
+     * relay_address is the relay server address of this candidate; set only when type is
+     * RELAY, so the signaling server can classify the provider by matching against known
+     * coturn addresses.
+     * </pre>
+     *
+     * <code>string relay_address = 2 [json_name = "relayAddress"];</code>
+     * @return The bytes for relayAddress.
+     */
+    com.google.protobuf.ByteString
+        getRelayAddressBytes();
+  }
+  /**
+   * <pre>
+   * ConnectionCandidate describes the selected ICE candidate for one side of a WebRTC connection.
+   * </pre>
+   *
+   * Protobuf type {@code proto.rpc.webrtc.v1.ConnectionCandidate}
+   */
+  public  static final class ConnectionCandidate extends
+      com.google.protobuf.GeneratedMessageLite<
+          ConnectionCandidate, ConnectionCandidate.Builder> implements
+      // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.ConnectionCandidate)
+      ConnectionCandidateOrBuilder {
+    private ConnectionCandidate() {
+      relayAddress_ = "";
+    }
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidateType type = 1 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidateType type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public proto.rpc.webrtc.v1.Signaling.ICECandidateType getType() {
+      proto.rpc.webrtc.v1.Signaling.ICECandidateType result = proto.rpc.webrtc.v1.Signaling.ICECandidateType.forNumber(type_);
+      return result == null ? proto.rpc.webrtc.v1.Signaling.ICECandidateType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidateType type = 1 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setTypeValue(int value) {
+        type_ = value;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidateType type = 1 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(proto.rpc.webrtc.v1.Signaling.ICECandidateType value) {
+      type_ = value.getNumber();
+
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidateType type = 1 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = 0;
+    }
+
+    public static final int RELAY_ADDRESS_FIELD_NUMBER = 2;
+    private java.lang.String relayAddress_;
+    /**
+     * <pre>
+     * relay_address is the relay server address of this candidate; set only when type is
+     * RELAY, so the signaling server can classify the provider by matching against known
+     * coturn addresses.
+     * </pre>
+     *
+     * <code>string relay_address = 2 [json_name = "relayAddress"];</code>
+     * @return The relayAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getRelayAddress() {
+      return relayAddress_;
+    }
+    /**
+     * <pre>
+     * relay_address is the relay server address of this candidate; set only when type is
+     * RELAY, so the signaling server can classify the provider by matching against known
+     * coturn addresses.
+     * </pre>
+     *
+     * <code>string relay_address = 2 [json_name = "relayAddress"];</code>
+     * @return The bytes for relayAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRelayAddressBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(relayAddress_);
+    }
+    /**
+     * <pre>
+     * relay_address is the relay server address of this candidate; set only when type is
+     * RELAY, so the signaling server can classify the provider by matching against known
+     * coturn addresses.
+     * </pre>
+     *
+     * <code>string relay_address = 2 [json_name = "relayAddress"];</code>
+     * @param value The relayAddress to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setRelayAddress(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      relayAddress_ = value;
+    }
+    /**
+     * <pre>
+     * relay_address is the relay server address of this candidate; set only when type is
+     * RELAY, so the signaling server can classify the provider by matching against known
+     * coturn addresses.
+     * </pre>
+     *
+     * <code>string relay_address = 2 [json_name = "relayAddress"];</code>
+     */
+    private void clearRelayAddress() {
+
+      relayAddress_ = getDefaultInstance().getRelayAddress();
+    }
+    /**
+     * <pre>
+     * relay_address is the relay server address of this candidate; set only when type is
+     * RELAY, so the signaling server can classify the provider by matching against known
+     * coturn addresses.
+     * </pre>
+     *
+     * <code>string relay_address = 2 [json_name = "relayAddress"];</code>
+     * @param value The bytes for relayAddress to set.
+     */
+    private void setRelayAddressBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      relayAddress_ = value.toStringUtf8();
+
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.ConnectionCandidate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ConnectionCandidate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ConnectionCandidate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ConnectionCandidate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ConnectionCandidate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ConnectionCandidate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ConnectionCandidate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ConnectionCandidate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.ConnectionCandidate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.ConnectionCandidate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ConnectionCandidate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ConnectionCandidate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.ConnectionCandidate prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * ConnectionCandidate describes the selected ICE candidate for one side of a WebRTC connection.
+     * </pre>
+     *
+     * Protobuf type {@code proto.rpc.webrtc.v1.ConnectionCandidate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.ConnectionCandidate, Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.ConnectionCandidate)
+        proto.rpc.webrtc.v1.Signaling.ConnectionCandidateOrBuilder {
+      // Construct using proto.rpc.webrtc.v1.Signaling.ConnectionCandidate.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.proto.rpc.webrtc.v1.ICECandidateType type = 1 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
+      }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ICECandidateType type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        copyOnWrite();
+        instance.setTypeValue(value);
+        return this;
+      }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ICECandidateType type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public proto.rpc.webrtc.v1.Signaling.ICECandidateType getType() {
+        return instance.getType();
+      }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ICECandidateType type = 1 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setType(proto.rpc.webrtc.v1.Signaling.ICECandidateType value) {
+        copyOnWrite();
+        instance.setType(value);
+        return this;
+      }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ICECandidateType type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        copyOnWrite();
+        instance.clearType();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * relay_address is the relay server address of this candidate; set only when type is
+       * RELAY, so the signaling server can classify the provider by matching against known
+       * coturn addresses.
+       * </pre>
+       *
+       * <code>string relay_address = 2 [json_name = "relayAddress"];</code>
+       * @return The relayAddress.
+       */
+      @java.lang.Override
+      public java.lang.String getRelayAddress() {
+        return instance.getRelayAddress();
+      }
+      /**
+       * <pre>
+       * relay_address is the relay server address of this candidate; set only when type is
+       * RELAY, so the signaling server can classify the provider by matching against known
+       * coturn addresses.
+       * </pre>
+       *
+       * <code>string relay_address = 2 [json_name = "relayAddress"];</code>
+       * @return The bytes for relayAddress.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRelayAddressBytes() {
+        return instance.getRelayAddressBytes();
+      }
+      /**
+       * <pre>
+       * relay_address is the relay server address of this candidate; set only when type is
+       * RELAY, so the signaling server can classify the provider by matching against known
+       * coturn addresses.
+       * </pre>
+       *
+       * <code>string relay_address = 2 [json_name = "relayAddress"];</code>
+       * @param value The relayAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelayAddress(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRelayAddress(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * relay_address is the relay server address of this candidate; set only when type is
+       * RELAY, so the signaling server can classify the provider by matching against known
+       * coturn addresses.
+       * </pre>
+       *
+       * <code>string relay_address = 2 [json_name = "relayAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRelayAddress() {
+        copyOnWrite();
+        instance.clearRelayAddress();
+        return this;
+      }
+      /**
+       * <pre>
+       * relay_address is the relay server address of this candidate; set only when type is
+       * RELAY, so the signaling server can classify the provider by matching against known
+       * coturn addresses.
+       * </pre>
+       *
+       * <code>string relay_address = 2 [json_name = "relayAddress"];</code>
+       * @param value The bytes for relayAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRelayAddressBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRelayAddressBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.ConnectionCandidate)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.ConnectionCandidate();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "type_",
+              "relayAddress_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\f\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.ConnectionCandidate> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.ConnectionCandidate.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.ConnectionCandidate>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.ConnectionCandidate)
+    private static final proto.rpc.webrtc.v1.Signaling.ConnectionCandidate DEFAULT_INSTANCE;
+    static {
+      ConnectionCandidate defaultInstance = new ConnectionCandidate();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ConnectionCandidate.class, defaultInstance);
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.ConnectionCandidate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ConnectionCandidate> PARSER;
+
+    public static com.google.protobuf.Parser<ConnectionCandidate> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ReportConnectionMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.ReportConnectionMetadataRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate local = 1 [json_name = "local"];</code>
+     * @return Whether the local field is set.
+     */
+    boolean hasLocal();
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate local = 1 [json_name = "local"];</code>
+     * @return The local.
+     */
+    proto.rpc.webrtc.v1.Signaling.ConnectionCandidate getLocal();
+
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate remote = 2 [json_name = "remote"];</code>
+     * @return Whether the remote field is set.
+     */
+    boolean hasRemote();
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate remote = 2 [json_name = "remote"];</code>
+     * @return The remote.
+     */
+    proto.rpc.webrtc.v1.Signaling.ConnectionCandidate getRemote();
+
+    /**
+     * <pre>
+     * reached_stage is the furthest dial checkpoint reached. READY indicates success; any earlier
+     * value is where a failed dial stopped.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.DialStage reached_stage = 3 [json_name = "reachedStage"];</code>
+     * @return The enum numeric value on the wire for reachedStage.
+     */
+    int getReachedStageValue();
+    /**
+     * <pre>
+     * reached_stage is the furthest dial checkpoint reached. READY indicates success; any earlier
+     * value is where a failed dial stopped.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.DialStage reached_stage = 3 [json_name = "reachedStage"];</code>
+     * @return The reachedStage.
+     */
+    proto.rpc.webrtc.v1.Signaling.DialStage getReachedStage();
+
+    /**
+     * <pre>
+     * duration_ms is the wall-clock time from dial start to connection ready or to the failure.
+     * </pre>
+     *
+     * <code>uint32 duration_ms = 4 [json_name = "durationMs"];</code>
+     * @return The durationMs.
+     */
+    int getDurationMs();
+
+    /**
+     * <pre>
+     * signaling_path is how the dial was signaled (cloud / local / mDNS); reported regardless of outcome.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.ConnectionSignalingPath signaling_path = 5 [json_name = "signalingPath"];</code>
+     * @return The enum numeric value on the wire for signalingPath.
+     */
+    int getSignalingPathValue();
+    /**
+     * <pre>
+     * signaling_path is how the dial was signaled (cloud / local / mDNS); reported regardless of outcome.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.ConnectionSignalingPath signaling_path = 5 [json_name = "signalingPath"];</code>
+     * @return The signalingPath.
+     */
+    proto.rpc.webrtc.v1.Signaling.ConnectionSignalingPath getSignalingPath();
+
+    /**
+     * <pre>
+     * failure_code is the gRPC status code of a failed dial
+     * </pre>
+     *
+     * <code>int32 failure_code = 6 [json_name = "failureCode"];</code>
+     * @return The failureCode.
+     */
+    int getFailureCode();
+  }
+  /**
+   * <pre>
+   * ReportConnectionMetadataRequest reports metadata about a WebRTC dial, per side: local is the
+   * dialing SDK and remote is the robot.
+   * </pre>
+   *
+   * Protobuf type {@code proto.rpc.webrtc.v1.ReportConnectionMetadataRequest}
+   */
+  public  static final class ReportConnectionMetadataRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ReportConnectionMetadataRequest, ReportConnectionMetadataRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.ReportConnectionMetadataRequest)
+      ReportConnectionMetadataRequestOrBuilder {
+    private ReportConnectionMetadataRequest() {
+    }
+    private int bitField0_;
+    public static final int LOCAL_FIELD_NUMBER = 1;
+    private proto.rpc.webrtc.v1.Signaling.ConnectionCandidate local_;
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate local = 1 [json_name = "local"];</code>
+     */
+    @java.lang.Override
+    public boolean hasLocal() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate local = 1 [json_name = "local"];</code>
+     */
+    @java.lang.Override
+    public proto.rpc.webrtc.v1.Signaling.ConnectionCandidate getLocal() {
+      return local_ == null ? proto.rpc.webrtc.v1.Signaling.ConnectionCandidate.getDefaultInstance() : local_;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate local = 1 [json_name = "local"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setLocal(proto.rpc.webrtc.v1.Signaling.ConnectionCandidate value) {
+      value.getClass();  // minimal bytecode null check
+      local_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate local = 1 [json_name = "local"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeLocal(proto.rpc.webrtc.v1.Signaling.ConnectionCandidate value) {
+      value.getClass();  // minimal bytecode null check
+      if (local_ != null &&
+          local_ != proto.rpc.webrtc.v1.Signaling.ConnectionCandidate.getDefaultInstance()) {
+        local_ =
+          proto.rpc.webrtc.v1.Signaling.ConnectionCandidate.newBuilder(local_).mergeFrom(value).buildPartial();
+      } else {
+        local_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate local = 1 [json_name = "local"];</code>
+     */
+    private void clearLocal() {
+      local_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int REMOTE_FIELD_NUMBER = 2;
+    private proto.rpc.webrtc.v1.Signaling.ConnectionCandidate remote_;
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate remote = 2 [json_name = "remote"];</code>
+     */
+    @java.lang.Override
+    public boolean hasRemote() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate remote = 2 [json_name = "remote"];</code>
+     */
+    @java.lang.Override
+    public proto.rpc.webrtc.v1.Signaling.ConnectionCandidate getRemote() {
+      return remote_ == null ? proto.rpc.webrtc.v1.Signaling.ConnectionCandidate.getDefaultInstance() : remote_;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate remote = 2 [json_name = "remote"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setRemote(proto.rpc.webrtc.v1.Signaling.ConnectionCandidate value) {
+      value.getClass();  // minimal bytecode null check
+      remote_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate remote = 2 [json_name = "remote"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeRemote(proto.rpc.webrtc.v1.Signaling.ConnectionCandidate value) {
+      value.getClass();  // minimal bytecode null check
+      if (remote_ != null &&
+          remote_ != proto.rpc.webrtc.v1.Signaling.ConnectionCandidate.getDefaultInstance()) {
+        remote_ =
+          proto.rpc.webrtc.v1.Signaling.ConnectionCandidate.newBuilder(remote_).mergeFrom(value).buildPartial();
+      } else {
+        remote_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ConnectionCandidate remote = 2 [json_name = "remote"];</code>
+     */
+    private void clearRemote() {
+      remote_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int REACHED_STAGE_FIELD_NUMBER = 3;
+    private int reachedStage_;
+    /**
+     * <pre>
+     * reached_stage is the furthest dial checkpoint reached. READY indicates success; any earlier
+     * value is where a failed dial stopped.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.DialStage reached_stage = 3 [json_name = "reachedStage"];</code>
+     * @return The enum numeric value on the wire for reachedStage.
+     */
+    @java.lang.Override
+    public int getReachedStageValue() {
+      return reachedStage_;
+    }
+    /**
+     * <pre>
+     * reached_stage is the furthest dial checkpoint reached. READY indicates success; any earlier
+     * value is where a failed dial stopped.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.DialStage reached_stage = 3 [json_name = "reachedStage"];</code>
+     * @return The reachedStage.
+     */
+    @java.lang.Override
+    public proto.rpc.webrtc.v1.Signaling.DialStage getReachedStage() {
+      proto.rpc.webrtc.v1.Signaling.DialStage result = proto.rpc.webrtc.v1.Signaling.DialStage.forNumber(reachedStage_);
+      return result == null ? proto.rpc.webrtc.v1.Signaling.DialStage.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * reached_stage is the furthest dial checkpoint reached. READY indicates success; any earlier
+     * value is where a failed dial stopped.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.DialStage reached_stage = 3 [json_name = "reachedStage"];</code>
+     * @param value The enum numeric value on the wire for reachedStage to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setReachedStageValue(int value) {
+        reachedStage_ = value;
+    }
+    /**
+     * <pre>
+     * reached_stage is the furthest dial checkpoint reached. READY indicates success; any earlier
+     * value is where a failed dial stopped.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.DialStage reached_stage = 3 [json_name = "reachedStage"];</code>
+     * @param value The reachedStage to set.
+     */
+    private void setReachedStage(proto.rpc.webrtc.v1.Signaling.DialStage value) {
+      reachedStage_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * reached_stage is the furthest dial checkpoint reached. READY indicates success; any earlier
+     * value is where a failed dial stopped.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.DialStage reached_stage = 3 [json_name = "reachedStage"];</code>
+     */
+    private void clearReachedStage() {
+
+      reachedStage_ = 0;
+    }
+
+    public static final int DURATION_MS_FIELD_NUMBER = 4;
+    private int durationMs_;
+    /**
+     * <pre>
+     * duration_ms is the wall-clock time from dial start to connection ready or to the failure.
+     * </pre>
+     *
+     * <code>uint32 duration_ms = 4 [json_name = "durationMs"];</code>
+     * @return The durationMs.
+     */
+    @java.lang.Override
+    public int getDurationMs() {
+      return durationMs_;
+    }
+    /**
+     * <pre>
+     * duration_ms is the wall-clock time from dial start to connection ready or to the failure.
+     * </pre>
+     *
+     * <code>uint32 duration_ms = 4 [json_name = "durationMs"];</code>
+     * @param value The durationMs to set.
+     */
+    private void setDurationMs(int value) {
+      
+      durationMs_ = value;
+    }
+    /**
+     * <pre>
+     * duration_ms is the wall-clock time from dial start to connection ready or to the failure.
+     * </pre>
+     *
+     * <code>uint32 duration_ms = 4 [json_name = "durationMs"];</code>
+     */
+    private void clearDurationMs() {
+
+      durationMs_ = 0;
+    }
+
+    public static final int SIGNALING_PATH_FIELD_NUMBER = 5;
+    private int signalingPath_;
+    /**
+     * <pre>
+     * signaling_path is how the dial was signaled (cloud / local / mDNS); reported regardless of outcome.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.ConnectionSignalingPath signaling_path = 5 [json_name = "signalingPath"];</code>
+     * @return The enum numeric value on the wire for signalingPath.
+     */
+    @java.lang.Override
+    public int getSignalingPathValue() {
+      return signalingPath_;
+    }
+    /**
+     * <pre>
+     * signaling_path is how the dial was signaled (cloud / local / mDNS); reported regardless of outcome.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.ConnectionSignalingPath signaling_path = 5 [json_name = "signalingPath"];</code>
+     * @return The signalingPath.
+     */
+    @java.lang.Override
+    public proto.rpc.webrtc.v1.Signaling.ConnectionSignalingPath getSignalingPath() {
+      proto.rpc.webrtc.v1.Signaling.ConnectionSignalingPath result = proto.rpc.webrtc.v1.Signaling.ConnectionSignalingPath.forNumber(signalingPath_);
+      return result == null ? proto.rpc.webrtc.v1.Signaling.ConnectionSignalingPath.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * signaling_path is how the dial was signaled (cloud / local / mDNS); reported regardless of outcome.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.ConnectionSignalingPath signaling_path = 5 [json_name = "signalingPath"];</code>
+     * @param value The enum numeric value on the wire for signalingPath to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setSignalingPathValue(int value) {
+        signalingPath_ = value;
+    }
+    /**
+     * <pre>
+     * signaling_path is how the dial was signaled (cloud / local / mDNS); reported regardless of outcome.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.ConnectionSignalingPath signaling_path = 5 [json_name = "signalingPath"];</code>
+     * @param value The signalingPath to set.
+     */
+    private void setSignalingPath(proto.rpc.webrtc.v1.Signaling.ConnectionSignalingPath value) {
+      signalingPath_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * signaling_path is how the dial was signaled (cloud / local / mDNS); reported regardless of outcome.
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.ConnectionSignalingPath signaling_path = 5 [json_name = "signalingPath"];</code>
+     */
+    private void clearSignalingPath() {
+
+      signalingPath_ = 0;
+    }
+
+    public static final int FAILURE_CODE_FIELD_NUMBER = 6;
+    private int failureCode_;
+    /**
+     * <pre>
+     * failure_code is the gRPC status code of a failed dial
+     * </pre>
+     *
+     * <code>int32 failure_code = 6 [json_name = "failureCode"];</code>
+     * @return The failureCode.
+     */
+    @java.lang.Override
+    public int getFailureCode() {
+      return failureCode_;
+    }
+    /**
+     * <pre>
+     * failure_code is the gRPC status code of a failed dial
+     * </pre>
+     *
+     * <code>int32 failure_code = 6 [json_name = "failureCode"];</code>
+     * @param value The failureCode to set.
+     */
+    private void setFailureCode(int value) {
+      
+      failureCode_ = value;
+    }
+    /**
+     * <pre>
+     * failure_code is the gRPC status code of a failed dial
+     * </pre>
+     *
+     * <code>int32 failure_code = 6 [json_name = "failureCode"];</code>
+     */
+    private void clearFailureCode() {
+
+      failureCode_ = 0;
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * ReportConnectionMetadataRequest reports metadata about a WebRTC dial, per side: local is the
+     * dialing SDK and remote is the robot.
+     * </pre>
+     *
+     * Protobuf type {@code proto.rpc.webrtc.v1.ReportConnectionMetadataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.ReportConnectionMetadataRequest)
+        proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequestOrBuilder {
+      // Construct using proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.proto.rpc.webrtc.v1.ConnectionCandidate local = 1 [json_name = "local"];</code>
+       */
+      @java.lang.Override
+      public boolean hasLocal() {
+        return instance.hasLocal();
+      }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ConnectionCandidate local = 1 [json_name = "local"];</code>
+       */
+      @java.lang.Override
+      public proto.rpc.webrtc.v1.Signaling.ConnectionCandidate getLocal() {
+        return instance.getLocal();
+      }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ConnectionCandidate local = 1 [json_name = "local"];</code>
+       */
+      public Builder setLocal(proto.rpc.webrtc.v1.Signaling.ConnectionCandidate value) {
+        copyOnWrite();
+        instance.setLocal(value);
+        return this;
+        }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ConnectionCandidate local = 1 [json_name = "local"];</code>
+       */
+      public Builder setLocal(
+          proto.rpc.webrtc.v1.Signaling.ConnectionCandidate.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLocal(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ConnectionCandidate local = 1 [json_name = "local"];</code>
+       */
+      public Builder mergeLocal(proto.rpc.webrtc.v1.Signaling.ConnectionCandidate value) {
+        copyOnWrite();
+        instance.mergeLocal(value);
+        return this;
+      }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ConnectionCandidate local = 1 [json_name = "local"];</code>
+       */
+      public Builder clearLocal() {  copyOnWrite();
+        instance.clearLocal();
+        return this;
+      }
+
+      /**
+       * <code>.proto.rpc.webrtc.v1.ConnectionCandidate remote = 2 [json_name = "remote"];</code>
+       */
+      @java.lang.Override
+      public boolean hasRemote() {
+        return instance.hasRemote();
+      }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ConnectionCandidate remote = 2 [json_name = "remote"];</code>
+       */
+      @java.lang.Override
+      public proto.rpc.webrtc.v1.Signaling.ConnectionCandidate getRemote() {
+        return instance.getRemote();
+      }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ConnectionCandidate remote = 2 [json_name = "remote"];</code>
+       */
+      public Builder setRemote(proto.rpc.webrtc.v1.Signaling.ConnectionCandidate value) {
+        copyOnWrite();
+        instance.setRemote(value);
+        return this;
+        }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ConnectionCandidate remote = 2 [json_name = "remote"];</code>
+       */
+      public Builder setRemote(
+          proto.rpc.webrtc.v1.Signaling.ConnectionCandidate.Builder builderForValue) {
+        copyOnWrite();
+        instance.setRemote(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ConnectionCandidate remote = 2 [json_name = "remote"];</code>
+       */
+      public Builder mergeRemote(proto.rpc.webrtc.v1.Signaling.ConnectionCandidate value) {
+        copyOnWrite();
+        instance.mergeRemote(value);
+        return this;
+      }
+      /**
+       * <code>.proto.rpc.webrtc.v1.ConnectionCandidate remote = 2 [json_name = "remote"];</code>
+       */
+      public Builder clearRemote() {  copyOnWrite();
+        instance.clearRemote();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * reached_stage is the furthest dial checkpoint reached. READY indicates success; any earlier
+       * value is where a failed dial stopped.
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.DialStage reached_stage = 3 [json_name = "reachedStage"];</code>
+       * @return The enum numeric value on the wire for reachedStage.
+       */
+      @java.lang.Override
+      public int getReachedStageValue() {
+        return instance.getReachedStageValue();
+      }
+      /**
+       * <pre>
+       * reached_stage is the furthest dial checkpoint reached. READY indicates success; any earlier
+       * value is where a failed dial stopped.
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.DialStage reached_stage = 3 [json_name = "reachedStage"];</code>
+       * @param value The reachedStage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReachedStageValue(int value) {
+        copyOnWrite();
+        instance.setReachedStageValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * reached_stage is the furthest dial checkpoint reached. READY indicates success; any earlier
+       * value is where a failed dial stopped.
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.DialStage reached_stage = 3 [json_name = "reachedStage"];</code>
+       * @return The reachedStage.
+       */
+      @java.lang.Override
+      public proto.rpc.webrtc.v1.Signaling.DialStage getReachedStage() {
+        return instance.getReachedStage();
+      }
+      /**
+       * <pre>
+       * reached_stage is the furthest dial checkpoint reached. READY indicates success; any earlier
+       * value is where a failed dial stopped.
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.DialStage reached_stage = 3 [json_name = "reachedStage"];</code>
+       * @param value The enum numeric value on the wire for reachedStage to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setReachedStage(proto.rpc.webrtc.v1.Signaling.DialStage value) {
+        copyOnWrite();
+        instance.setReachedStage(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * reached_stage is the furthest dial checkpoint reached. READY indicates success; any earlier
+       * value is where a failed dial stopped.
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.DialStage reached_stage = 3 [json_name = "reachedStage"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReachedStage() {
+        copyOnWrite();
+        instance.clearReachedStage();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * duration_ms is the wall-clock time from dial start to connection ready or to the failure.
+       * </pre>
+       *
+       * <code>uint32 duration_ms = 4 [json_name = "durationMs"];</code>
+       * @return The durationMs.
+       */
+      @java.lang.Override
+      public int getDurationMs() {
+        return instance.getDurationMs();
+      }
+      /**
+       * <pre>
+       * duration_ms is the wall-clock time from dial start to connection ready or to the failure.
+       * </pre>
+       *
+       * <code>uint32 duration_ms = 4 [json_name = "durationMs"];</code>
+       * @param value The durationMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDurationMs(int value) {
+        copyOnWrite();
+        instance.setDurationMs(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * duration_ms is the wall-clock time from dial start to connection ready or to the failure.
+       * </pre>
+       *
+       * <code>uint32 duration_ms = 4 [json_name = "durationMs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDurationMs() {
+        copyOnWrite();
+        instance.clearDurationMs();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * signaling_path is how the dial was signaled (cloud / local / mDNS); reported regardless of outcome.
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.ConnectionSignalingPath signaling_path = 5 [json_name = "signalingPath"];</code>
+       * @return The enum numeric value on the wire for signalingPath.
+       */
+      @java.lang.Override
+      public int getSignalingPathValue() {
+        return instance.getSignalingPathValue();
+      }
+      /**
+       * <pre>
+       * signaling_path is how the dial was signaled (cloud / local / mDNS); reported regardless of outcome.
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.ConnectionSignalingPath signaling_path = 5 [json_name = "signalingPath"];</code>
+       * @param value The signalingPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignalingPathValue(int value) {
+        copyOnWrite();
+        instance.setSignalingPathValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * signaling_path is how the dial was signaled (cloud / local / mDNS); reported regardless of outcome.
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.ConnectionSignalingPath signaling_path = 5 [json_name = "signalingPath"];</code>
+       * @return The signalingPath.
+       */
+      @java.lang.Override
+      public proto.rpc.webrtc.v1.Signaling.ConnectionSignalingPath getSignalingPath() {
+        return instance.getSignalingPath();
+      }
+      /**
+       * <pre>
+       * signaling_path is how the dial was signaled (cloud / local / mDNS); reported regardless of outcome.
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.ConnectionSignalingPath signaling_path = 5 [json_name = "signalingPath"];</code>
+       * @param value The enum numeric value on the wire for signalingPath to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setSignalingPath(proto.rpc.webrtc.v1.Signaling.ConnectionSignalingPath value) {
+        copyOnWrite();
+        instance.setSignalingPath(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * signaling_path is how the dial was signaled (cloud / local / mDNS); reported regardless of outcome.
+       * </pre>
+       *
+       * <code>.proto.rpc.webrtc.v1.ConnectionSignalingPath signaling_path = 5 [json_name = "signalingPath"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignalingPath() {
+        copyOnWrite();
+        instance.clearSignalingPath();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * failure_code is the gRPC status code of a failed dial
+       * </pre>
+       *
+       * <code>int32 failure_code = 6 [json_name = "failureCode"];</code>
+       * @return The failureCode.
+       */
+      @java.lang.Override
+      public int getFailureCode() {
+        return instance.getFailureCode();
+      }
+      /**
+       * <pre>
+       * failure_code is the gRPC status code of a failed dial
+       * </pre>
+       *
+       * <code>int32 failure_code = 6 [json_name = "failureCode"];</code>
+       * @param value The failureCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFailureCode(int value) {
+        copyOnWrite();
+        instance.setFailureCode(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * failure_code is the gRPC status code of a failed dial
+       * </pre>
+       *
+       * <code>int32 failure_code = 6 [json_name = "failureCode"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFailureCode() {
+        copyOnWrite();
+        instance.clearFailureCode();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.ReportConnectionMetadataRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "local_",
+              "remote_",
+              "reachedStage_",
+              "durationMs_",
+              "signalingPath_",
+              "failureCode_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001\u0003\f\u0004\u000b\u0005\f\u0006\u0004";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.ReportConnectionMetadataRequest)
+    private static final proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest DEFAULT_INSTANCE;
+    static {
+      ReportConnectionMetadataRequest defaultInstance = new ReportConnectionMetadataRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ReportConnectionMetadataRequest.class, defaultInstance);
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ReportConnectionMetadataRequest> PARSER;
+
+    public static com.google.protobuf.Parser<ReportConnectionMetadataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ReportConnectionMetadataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.ReportConnectionMetadataResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * <pre>
+   * ReportConnectionMetadataResponse is empty.
+   * </pre>
+   *
+   * Protobuf type {@code proto.rpc.webrtc.v1.ReportConnectionMetadataResponse}
+   */
+  public  static final class ReportConnectionMetadataResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ReportConnectionMetadataResponse, ReportConnectionMetadataResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.ReportConnectionMetadataResponse)
+      ReportConnectionMetadataResponseOrBuilder {
+    private ReportConnectionMetadataResponse() {
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * ReportConnectionMetadataResponse is empty.
+     * </pre>
+     *
+     * Protobuf type {@code proto.rpc.webrtc.v1.ReportConnectionMetadataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.ReportConnectionMetadataResponse)
+        proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponseOrBuilder {
+      // Construct using proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.ReportConnectionMetadataResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.ReportConnectionMetadataResponse)
+    private static final proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse DEFAULT_INSTANCE;
+    static {
+      ReportConnectionMetadataResponse defaultInstance = new ReportConnectionMetadataResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ReportConnectionMetadataResponse.class, defaultInstance);
+    }
+
+    public static proto.rpc.webrtc.v1.Signaling.ReportConnectionMetadataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ReportConnectionMetadataResponse> PARSER;
+
+    public static com.google.protobuf.Parser<ReportConnectionMetadataResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
