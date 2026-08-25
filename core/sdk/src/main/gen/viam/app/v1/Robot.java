@@ -14845,6 +14845,35 @@ java.lang.String defaultValue) {
      * @return The externalAuthConfig.
      */
     viam.app.v1.Robot.ExternalAuthConfig getExternalAuthConfig();
+
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    java.util.List<viam.app.v1.Robot.UserPermission> 
+        getUserPermissionsList();
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    viam.app.v1.Robot.UserPermission getUserPermissions(int index);
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    int getUserPermissionsCount();
   }
   /**
    * Protobuf type {@code viam.app.v1.AuthConfig}
@@ -14857,6 +14886,7 @@ java.lang.String defaultValue) {
     private AuthConfig() {
       handlers_ = emptyProtobufList();
       tlsAuthEntities_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      userPermissions_ = emptyProtobufList();
     }
     private int bitField0_;
     public static final int HANDLERS_FIELD_NUMBER = 1;
@@ -15097,6 +15127,158 @@ java.lang.String defaultValue) {
     private void clearExternalAuthConfig() {
       externalAuthConfig_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int USER_PERMISSIONS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.UserPermission> userPermissions_;
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.Robot.UserPermission> getUserPermissionsList() {
+      return userPermissions_;
+    }
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.Robot.UserPermissionOrBuilder> 
+        getUserPermissionsOrBuilderList() {
+      return userPermissions_;
+    }
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    @java.lang.Override
+    public int getUserPermissionsCount() {
+      return userPermissions_.size();
+    }
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.UserPermission getUserPermissions(int index) {
+      return userPermissions_.get(index);
+    }
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    public viam.app.v1.Robot.UserPermissionOrBuilder getUserPermissionsOrBuilder(
+        int index) {
+      return userPermissions_.get(index);
+    }
+    private void ensureUserPermissionsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.UserPermission> tmp = userPermissions_;
+      if (!tmp.isModifiable()) {
+        userPermissions_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setUserPermissions(
+        int index, viam.app.v1.Robot.UserPermission value) {
+      value.getClass();  // minimal bytecode null check
+      ensureUserPermissionsIsMutable();
+      userPermissions_.set(index, value);
+    }
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addUserPermissions(viam.app.v1.Robot.UserPermission value) {
+      value.getClass();  // minimal bytecode null check
+      ensureUserPermissionsIsMutable();
+      userPermissions_.add(value);
+    }
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addUserPermissions(
+        int index, viam.app.v1.Robot.UserPermission value) {
+      value.getClass();  // minimal bytecode null check
+      ensureUserPermissionsIsMutable();
+      userPermissions_.add(index, value);
+    }
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    private void addAllUserPermissions(
+        java.lang.Iterable<? extends viam.app.v1.Robot.UserPermission> values) {
+      ensureUserPermissionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, userPermissions_);
+    }
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    private void clearUserPermissions() {
+      userPermissions_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * user_permissions represents the map of Users to Permissions for
+     * this machine.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+     */
+    private void removeUserPermissions(int index) {
+      ensureUserPermissionsIsMutable();
+      userPermissions_.remove(index);
     }
 
     public static viam.app.v1.Robot.AuthConfig parseFrom(
@@ -15437,6 +15619,168 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * user_permissions represents the map of Users to Permissions for
+       * this machine.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.Robot.UserPermission> getUserPermissionsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getUserPermissionsList());
+      }
+      /**
+       * <pre>
+       * user_permissions represents the map of Users to Permissions for
+       * this machine.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+       */
+      @java.lang.Override
+      public int getUserPermissionsCount() {
+        return instance.getUserPermissionsCount();
+      }/**
+       * <pre>
+       * user_permissions represents the map of Users to Permissions for
+       * this machine.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.UserPermission getUserPermissions(int index) {
+        return instance.getUserPermissions(index);
+      }
+      /**
+       * <pre>
+       * user_permissions represents the map of Users to Permissions for
+       * this machine.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+       */
+      public Builder setUserPermissions(
+          int index, viam.app.v1.Robot.UserPermission value) {
+        copyOnWrite();
+        instance.setUserPermissions(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * user_permissions represents the map of Users to Permissions for
+       * this machine.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+       */
+      public Builder setUserPermissions(
+          int index, viam.app.v1.Robot.UserPermission.Builder builderForValue) {
+        copyOnWrite();
+        instance.setUserPermissions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * user_permissions represents the map of Users to Permissions for
+       * this machine.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+       */
+      public Builder addUserPermissions(viam.app.v1.Robot.UserPermission value) {
+        copyOnWrite();
+        instance.addUserPermissions(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * user_permissions represents the map of Users to Permissions for
+       * this machine.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+       */
+      public Builder addUserPermissions(
+          int index, viam.app.v1.Robot.UserPermission value) {
+        copyOnWrite();
+        instance.addUserPermissions(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * user_permissions represents the map of Users to Permissions for
+       * this machine.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+       */
+      public Builder addUserPermissions(
+          viam.app.v1.Robot.UserPermission.Builder builderForValue) {
+        copyOnWrite();
+        instance.addUserPermissions(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * user_permissions represents the map of Users to Permissions for
+       * this machine.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+       */
+      public Builder addUserPermissions(
+          int index, viam.app.v1.Robot.UserPermission.Builder builderForValue) {
+        copyOnWrite();
+        instance.addUserPermissions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * user_permissions represents the map of Users to Permissions for
+       * this machine.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+       */
+      public Builder addAllUserPermissions(
+          java.lang.Iterable<? extends viam.app.v1.Robot.UserPermission> values) {
+        copyOnWrite();
+        instance.addAllUserPermissions(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * user_permissions represents the map of Users to Permissions for
+       * this machine.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+       */
+      public Builder clearUserPermissions() {
+        copyOnWrite();
+        instance.clearUserPermissions();
+        return this;
+      }
+      /**
+       * <pre>
+       * user_permissions represents the map of Users to Permissions for
+       * this machine.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code>
+       */
+      public Builder removeUserPermissions(int index) {
+        copyOnWrite();
+        instance.removeUserPermissions(index);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.AuthConfig)
     }
     @java.lang.Override
@@ -15458,10 +15802,12 @@ java.lang.String defaultValue) {
               viam.app.v1.Robot.AuthHandlerConfig.class,
               "tlsAuthEntities_",
               "externalAuthConfig_",
+              "userPermissions_",
+              viam.app.v1.Robot.UserPermission.class,
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0002\u0000\u0001\u001b\u0002\u021a" +
-                "\u0003\u1009\u0000";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0003\u0000\u0001\u001b\u0002\u021a" +
+                "\u0003\u1009\u0000\u0004\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -15512,6 +15858,1999 @@ java.lang.String defaultValue) {
     private static volatile com.google.protobuf.Parser<AuthConfig> PARSER;
 
     public static com.google.protobuf.Parser<AuthConfig> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UserPermissionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UserPermission)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * user is the User this UserPermission applies to. A User can only be
+     * listed in a single UserPermission for a set of UserPermissions.
+     * </pre>
+     *
+     * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
+     * @return Whether the user field is set.
+     */
+    boolean hasUser();
+    /**
+     * <pre>
+     * user is the User this UserPermission applies to. A User can only be
+     * listed in a single UserPermission for a set of UserPermissions.
+     * </pre>
+     *
+     * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
+     * @return The user.
+     */
+    viam.app.v1.Robot.User getUser();
+
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    java.util.List<viam.app.v1.Robot.Permission> 
+        getPermissionsList();
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    viam.app.v1.Robot.Permission getPermissions(int index);
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    int getPermissionsCount();
+  }
+  /**
+   * <pre>
+   * A UserPermission describes a User and the permissions granted to
+   * that user.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.v1.UserPermission}
+   */
+  public  static final class UserPermission extends
+      com.google.protobuf.GeneratedMessageLite<
+          UserPermission, UserPermission.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UserPermission)
+      UserPermissionOrBuilder {
+    private UserPermission() {
+      permissions_ = emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int USER_FIELD_NUMBER = 1;
+    private viam.app.v1.Robot.User user_;
+    /**
+     * <pre>
+     * user is the User this UserPermission applies to. A User can only be
+     * listed in a single UserPermission for a set of UserPermissions.
+     * </pre>
+     *
+     * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
+     */
+    @java.lang.Override
+    public boolean hasUser() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * user is the User this UserPermission applies to. A User can only be
+     * listed in a single UserPermission for a set of UserPermissions.
+     * </pre>
+     *
+     * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.User getUser() {
+      return user_ == null ? viam.app.v1.Robot.User.getDefaultInstance() : user_;
+    }
+    /**
+     * <pre>
+     * user is the User this UserPermission applies to. A User can only be
+     * listed in a single UserPermission for a set of UserPermissions.
+     * </pre>
+     *
+     * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setUser(viam.app.v1.Robot.User value) {
+      value.getClass();  // minimal bytecode null check
+      user_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * user is the User this UserPermission applies to. A User can only be
+     * listed in a single UserPermission for a set of UserPermissions.
+     * </pre>
+     *
+     * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeUser(viam.app.v1.Robot.User value) {
+      value.getClass();  // minimal bytecode null check
+      if (user_ != null &&
+          user_ != viam.app.v1.Robot.User.getDefaultInstance()) {
+        user_ =
+          viam.app.v1.Robot.User.newBuilder(user_).mergeFrom(value).buildPartial();
+      } else {
+        user_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * user is the User this UserPermission applies to. A User can only be
+     * listed in a single UserPermission for a set of UserPermissions.
+     * </pre>
+     *
+     * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
+     */
+    private void clearUser() {
+      user_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int PERMISSIONS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.Permission> permissions_;
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.Robot.Permission> getPermissionsList() {
+      return permissions_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.Robot.PermissionOrBuilder> 
+        getPermissionsOrBuilderList() {
+      return permissions_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    @java.lang.Override
+    public int getPermissionsCount() {
+      return permissions_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.Permission getPermissions(int index) {
+      return permissions_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    public viam.app.v1.Robot.PermissionOrBuilder getPermissionsOrBuilder(
+        int index) {
+      return permissions_.get(index);
+    }
+    private void ensurePermissionsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.Permission> tmp = permissions_;
+      if (!tmp.isModifiable()) {
+        permissions_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPermissions(
+        int index, viam.app.v1.Robot.Permission value) {
+      value.getClass();  // minimal bytecode null check
+      ensurePermissionsIsMutable();
+      permissions_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addPermissions(viam.app.v1.Robot.Permission value) {
+      value.getClass();  // minimal bytecode null check
+      ensurePermissionsIsMutable();
+      permissions_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addPermissions(
+        int index, viam.app.v1.Robot.Permission value) {
+      value.getClass();  // minimal bytecode null check
+      ensurePermissionsIsMutable();
+      permissions_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    private void addAllPermissions(
+        java.lang.Iterable<? extends viam.app.v1.Robot.Permission> values) {
+      ensurePermissionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, permissions_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    private void clearPermissions() {
+      permissions_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    private void removePermissions(int index) {
+      ensurePermissionsIsMutable();
+      permissions_.remove(index);
+    }
+
+    public static viam.app.v1.Robot.UserPermission parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.UserPermission parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.UserPermission parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.UserPermission parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.UserPermission parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.UserPermission parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.UserPermission parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.UserPermission parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Robot.UserPermission parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Robot.UserPermission parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.UserPermission parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.UserPermission parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Robot.UserPermission prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * A UserPermission describes a User and the permissions granted to
+     * that user.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.v1.UserPermission}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Robot.UserPermission, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UserPermission)
+        viam.app.v1.Robot.UserPermissionOrBuilder {
+      // Construct using viam.app.v1.Robot.UserPermission.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * user is the User this UserPermission applies to. A User can only be
+       * listed in a single UserPermission for a set of UserPermissions.
+       * </pre>
+       *
+       * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
+       */
+      @java.lang.Override
+      public boolean hasUser() {
+        return instance.hasUser();
+      }
+      /**
+       * <pre>
+       * user is the User this UserPermission applies to. A User can only be
+       * listed in a single UserPermission for a set of UserPermissions.
+       * </pre>
+       *
+       * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.User getUser() {
+        return instance.getUser();
+      }
+      /**
+       * <pre>
+       * user is the User this UserPermission applies to. A User can only be
+       * listed in a single UserPermission for a set of UserPermissions.
+       * </pre>
+       *
+       * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
+       */
+      public Builder setUser(viam.app.v1.Robot.User value) {
+        copyOnWrite();
+        instance.setUser(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * user is the User this UserPermission applies to. A User can only be
+       * listed in a single UserPermission for a set of UserPermissions.
+       * </pre>
+       *
+       * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
+       */
+      public Builder setUser(
+          viam.app.v1.Robot.User.Builder builderForValue) {
+        copyOnWrite();
+        instance.setUser(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * user is the User this UserPermission applies to. A User can only be
+       * listed in a single UserPermission for a set of UserPermissions.
+       * </pre>
+       *
+       * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
+       */
+      public Builder mergeUser(viam.app.v1.Robot.User value) {
+        copyOnWrite();
+        instance.mergeUser(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * user is the User this UserPermission applies to. A User can only be
+       * listed in a single UserPermission for a set of UserPermissions.
+       * </pre>
+       *
+       * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
+       */
+      public Builder clearUser() {  copyOnWrite();
+        instance.clearUser();
+        return this;
+      }
+
+      /**
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.Robot.Permission> getPermissionsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getPermissionsList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      @java.lang.Override
+      public int getPermissionsCount() {
+        return instance.getPermissionsCount();
+      }/**
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.Permission getPermissions(int index) {
+        return instance.getPermissions(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder setPermissions(
+          int index, viam.app.v1.Robot.Permission value) {
+        copyOnWrite();
+        instance.setPermissions(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder setPermissions(
+          int index, viam.app.v1.Robot.Permission.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPermissions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder addPermissions(viam.app.v1.Robot.Permission value) {
+        copyOnWrite();
+        instance.addPermissions(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder addPermissions(
+          int index, viam.app.v1.Robot.Permission value) {
+        copyOnWrite();
+        instance.addPermissions(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder addPermissions(
+          viam.app.v1.Robot.Permission.Builder builderForValue) {
+        copyOnWrite();
+        instance.addPermissions(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder addPermissions(
+          int index, viam.app.v1.Robot.Permission.Builder builderForValue) {
+        copyOnWrite();
+        instance.addPermissions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder addAllPermissions(
+          java.lang.Iterable<? extends viam.app.v1.Robot.Permission> values) {
+        copyOnWrite();
+        instance.addAllPermissions(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder clearPermissions() {
+        copyOnWrite();
+        instance.clearPermissions();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder removePermissions(int index) {
+        copyOnWrite();
+        instance.removePermissions(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UserPermission)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Robot.UserPermission();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "user_",
+              "permissions_",
+              viam.app.v1.Robot.Permission.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u1009\u0000\u0002" +
+                "\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Robot.UserPermission> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Robot.UserPermission.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Robot.UserPermission>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UserPermission)
+    private static final viam.app.v1.Robot.UserPermission DEFAULT_INSTANCE;
+    static {
+      UserPermission defaultInstance = new UserPermission();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UserPermission.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Robot.UserPermission getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<UserPermission> PARSER;
+
+    public static com.google.protobuf.Parser<UserPermission> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface UserOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.User)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * type is the type of user. Can be "api-key-id", "app-user-id", or "default".
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <pre>
+     * type is the type of user. Can be "api-key-id", "app-user-id", or "default".
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <pre>
+     * id is the API Key ID if type is "api-key-id", the Viam app user ID if
+     * type is "app-user-id", and empty if type is "default".
+     * </pre>
+     *
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * id is the API Key ID if type is "api-key-id", the Viam app user ID if
+     * type is "app-user-id", and empty if type is "default".
+     * </pre>
+     *
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * <pre>
+   * A User describes a single user that a set of Permissions applies to.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.v1.User}
+   */
+  public  static final class User extends
+      com.google.protobuf.GeneratedMessageLite<
+          User, User.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.User)
+      UserOrBuilder {
+    private User() {
+      type_ = "";
+      id_ = "";
+    }
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private java.lang.String type_;
+    /**
+     * <pre>
+     * type is the type of user. Can be "api-key-id", "app-user-id", or "default".
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * type is the type of user. Can be "api-key-id", "app-user-id", or "default".
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(type_);
+    }
+    /**
+     * <pre>
+     * type is the type of user. Can be "api-key-id", "app-user-id", or "default".
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setType(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      type_ = value;
+    }
+    /**
+     * <pre>
+     * type is the type of user. Can be "api-key-id", "app-user-id", or "default".
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = getDefaultInstance().getType();
+    }
+    /**
+     * <pre>
+     * type is the type of user. Can be "api-key-id", "app-user-id", or "default".
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @param value The bytes for type to set.
+     */
+    private void setTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      type_ = value.toStringUtf8();
+
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private java.lang.String id_;
+    /**
+     * <pre>
+     * id is the API Key ID if type is "api-key-id", the Viam app user ID if
+     * type is "app-user-id", and empty if type is "default".
+     * </pre>
+     *
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <pre>
+     * id is the API Key ID if type is "api-key-id", the Viam app user ID if
+     * type is "app-user-id", and empty if type is "default".
+     * </pre>
+     *
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <pre>
+     * id is the API Key ID if type is "api-key-id", the Viam app user ID if
+     * type is "app-user-id", and empty if type is "default".
+     * </pre>
+     *
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      id_ = value;
+    }
+    /**
+     * <pre>
+     * id is the API Key ID if type is "api-key-id", the Viam app user ID if
+     * type is "app-user-id", and empty if type is "default".
+     * </pre>
+     *
+     * <code>string id = 2 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <pre>
+     * id is the API Key ID if type is "api-key-id", the Viam app user ID if
+     * type is "app-user-id", and empty if type is "default".
+     * </pre>
+     *
+     * <code>string id = 2 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.Robot.User parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.User parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.User parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.User parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.User parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.User parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.User parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.User parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Robot.User parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Robot.User parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.User parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.User parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Robot.User prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * A User describes a single user that a set of Permissions applies to.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.v1.User}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Robot.User, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.User)
+        viam.app.v1.Robot.UserOrBuilder {
+      // Construct using viam.app.v1.Robot.User.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * type is the type of user. Can be "api-key-id", "app-user-id", or "default".
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public java.lang.String getType() {
+        return instance.getType();
+      }
+      /**
+       * <pre>
+       * type is the type of user. Can be "api-key-id", "app-user-id", or "default".
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        return instance.getTypeBytes();
+      }
+      /**
+       * <pre>
+       * type is the type of user. Can be "api-key-id", "app-user-id", or "default".
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setType(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * type is the type of user. Can be "api-key-id", "app-user-id", or "default".
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        copyOnWrite();
+        instance.clearType();
+        return this;
+      }
+      /**
+       * <pre>
+       * type is the type of user. Can be "api-key-id", "app-user-id", or "default".
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setTypeBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * id is the API Key ID if type is "api-key-id", the Viam app user ID if
+       * type is "app-user-id", and empty if type is "default".
+       * </pre>
+       *
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <pre>
+       * id is the API Key ID if type is "api-key-id", the Viam app user ID if
+       * type is "app-user-id", and empty if type is "default".
+       * </pre>
+       *
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <pre>
+       * id is the API Key ID if type is "api-key-id", the Viam app user ID if
+       * type is "app-user-id", and empty if type is "default".
+       * </pre>
+       *
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * id is the API Key ID if type is "api-key-id", the Viam app user ID if
+       * type is "app-user-id", and empty if type is "default".
+       * </pre>
+       *
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <pre>
+       * id is the API Key ID if type is "api-key-id", the Viam app user ID if
+       * type is "app-user-id", and empty if type is "default".
+       * </pre>
+       *
+       * <code>string id = 2 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.User)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Robot.User();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "type_",
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Robot.User> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Robot.User.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Robot.User>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.User)
+    private static final viam.app.v1.Robot.User DEFAULT_INSTANCE;
+    static {
+      User defaultInstance = new User();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        User.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Robot.User getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<User> PARSER;
+
+    public static com.google.protobuf.Parser<User> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface PermissionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.Permission)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * resources are the names of the resources this permission applies to,
+     * e.g. ["cam1", "cam2", "cam3"].
+     * </pre>
+     *
+     * <code>repeated string resources = 1 [json_name = "resources"];</code>
+     * @return A list containing the resources.
+     */
+    java.util.List<java.lang.String>
+        getResourcesList();
+    /**
+     * <pre>
+     * resources are the names of the resources this permission applies to,
+     * e.g. ["cam1", "cam2", "cam3"].
+     * </pre>
+     *
+     * <code>repeated string resources = 1 [json_name = "resources"];</code>
+     * @return The count of resources.
+     */
+    int getResourcesCount();
+    /**
+     * <pre>
+     * resources are the names of the resources this permission applies to,
+     * e.g. ["cam1", "cam2", "cam3"].
+     * </pre>
+     *
+     * <code>repeated string resources = 1 [json_name = "resources"];</code>
+     * @param index The index of the element to return.
+     * @return The resources at the given index.
+     */
+    java.lang.String getResources(int index);
+    /**
+     * <pre>
+     * resources are the names of the resources this permission applies to,
+     * e.g. ["cam1", "cam2", "cam3"].
+     * </pre>
+     *
+     * <code>repeated string resources = 1 [json_name = "resources"];</code>
+     * @param index The index of the element to return.
+     * @return The resources at the given index.
+     */
+    com.google.protobuf.ByteString
+        getResourcesBytes(int index);
+
+    /**
+     * <pre>
+     * allowed_methods is a list of fully qualified gRPC methods the user
+     * may invoke on the listed resources, e.g.
+     * ["/viam.component.camera.v1.CameraService/GetImages",
+     * "/viam.component.camera.v1.CameraService/GetProperties"].
+     * </pre>
+     *
+     * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+     * @return A list containing the allowedMethods.
+     */
+    java.util.List<java.lang.String>
+        getAllowedMethodsList();
+    /**
+     * <pre>
+     * allowed_methods is a list of fully qualified gRPC methods the user
+     * may invoke on the listed resources, e.g.
+     * ["/viam.component.camera.v1.CameraService/GetImages",
+     * "/viam.component.camera.v1.CameraService/GetProperties"].
+     * </pre>
+     *
+     * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+     * @return The count of allowedMethods.
+     */
+    int getAllowedMethodsCount();
+    /**
+     * <pre>
+     * allowed_methods is a list of fully qualified gRPC methods the user
+     * may invoke on the listed resources, e.g.
+     * ["/viam.component.camera.v1.CameraService/GetImages",
+     * "/viam.component.camera.v1.CameraService/GetProperties"].
+     * </pre>
+     *
+     * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedMethods at the given index.
+     */
+    java.lang.String getAllowedMethods(int index);
+    /**
+     * <pre>
+     * allowed_methods is a list of fully qualified gRPC methods the user
+     * may invoke on the listed resources, e.g.
+     * ["/viam.component.camera.v1.CameraService/GetImages",
+     * "/viam.component.camera.v1.CameraService/GetProperties"].
+     * </pre>
+     *
+     * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedMethods at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAllowedMethodsBytes(int index);
+  }
+  /**
+   * <pre>
+   * A Permission describes a User's ability to invoke methods on resources.
+   * </pre>
+   *
+   * Protobuf type {@code viam.app.v1.Permission}
+   */
+  public  static final class Permission extends
+      com.google.protobuf.GeneratedMessageLite<
+          Permission, Permission.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.Permission)
+      PermissionOrBuilder {
+    private Permission() {
+      resources_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      allowedMethods_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    public static final int RESOURCES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> resources_;
+    /**
+     * <pre>
+     * resources are the names of the resources this permission applies to,
+     * e.g. ["cam1", "cam2", "cam3"].
+     * </pre>
+     *
+     * <code>repeated string resources = 1 [json_name = "resources"];</code>
+     * @return A list containing the resources.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getResourcesList() {
+      return resources_;
+    }
+    /**
+     * <pre>
+     * resources are the names of the resources this permission applies to,
+     * e.g. ["cam1", "cam2", "cam3"].
+     * </pre>
+     *
+     * <code>repeated string resources = 1 [json_name = "resources"];</code>
+     * @return The count of resources.
+     */
+    @java.lang.Override
+    public int getResourcesCount() {
+      return resources_.size();
+    }
+    /**
+     * <pre>
+     * resources are the names of the resources this permission applies to,
+     * e.g. ["cam1", "cam2", "cam3"].
+     * </pre>
+     *
+     * <code>repeated string resources = 1 [json_name = "resources"];</code>
+     * @param index The index of the element to return.
+     * @return The resources at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getResources(int index) {
+      return resources_.get(index);
+    }
+    /**
+     * <pre>
+     * resources are the names of the resources this permission applies to,
+     * e.g. ["cam1", "cam2", "cam3"].
+     * </pre>
+     *
+     * <code>repeated string resources = 1 [json_name = "resources"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the resources at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourcesBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          resources_.get(index));
+    }
+    private void ensureResourcesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          resources_;  if (!tmp.isModifiable()) {
+        resources_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * resources are the names of the resources this permission applies to,
+     * e.g. ["cam1", "cam2", "cam3"].
+     * </pre>
+     *
+     * <code>repeated string resources = 1 [json_name = "resources"];</code>
+     * @param index The index to set the value at.
+     * @param value The resources to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setResources(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureResourcesIsMutable();
+      resources_.set(index, value);
+    }
+    /**
+     * <pre>
+     * resources are the names of the resources this permission applies to,
+     * e.g. ["cam1", "cam2", "cam3"].
+     * </pre>
+     *
+     * <code>repeated string resources = 1 [json_name = "resources"];</code>
+     * @param value The resources to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addResources(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureResourcesIsMutable();
+      resources_.add(value);
+    }
+    /**
+     * <pre>
+     * resources are the names of the resources this permission applies to,
+     * e.g. ["cam1", "cam2", "cam3"].
+     * </pre>
+     *
+     * <code>repeated string resources = 1 [json_name = "resources"];</code>
+     * @param values The resources to add.
+     */
+    private void addAllResources(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureResourcesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, resources_);
+    }
+    /**
+     * <pre>
+     * resources are the names of the resources this permission applies to,
+     * e.g. ["cam1", "cam2", "cam3"].
+     * </pre>
+     *
+     * <code>repeated string resources = 1 [json_name = "resources"];</code>
+     */
+    private void clearResources() {
+      resources_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * resources are the names of the resources this permission applies to,
+     * e.g. ["cam1", "cam2", "cam3"].
+     * </pre>
+     *
+     * <code>repeated string resources = 1 [json_name = "resources"];</code>
+     * @param value The bytes of the resources to add.
+     */
+    private void addResourcesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureResourcesIsMutable();
+      resources_.add(value.toStringUtf8());
+    }
+
+    public static final int ALLOWED_METHODS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> allowedMethods_;
+    /**
+     * <pre>
+     * allowed_methods is a list of fully qualified gRPC methods the user
+     * may invoke on the listed resources, e.g.
+     * ["/viam.component.camera.v1.CameraService/GetImages",
+     * "/viam.component.camera.v1.CameraService/GetProperties"].
+     * </pre>
+     *
+     * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+     * @return A list containing the allowedMethods.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getAllowedMethodsList() {
+      return allowedMethods_;
+    }
+    /**
+     * <pre>
+     * allowed_methods is a list of fully qualified gRPC methods the user
+     * may invoke on the listed resources, e.g.
+     * ["/viam.component.camera.v1.CameraService/GetImages",
+     * "/viam.component.camera.v1.CameraService/GetProperties"].
+     * </pre>
+     *
+     * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+     * @return The count of allowedMethods.
+     */
+    @java.lang.Override
+    public int getAllowedMethodsCount() {
+      return allowedMethods_.size();
+    }
+    /**
+     * <pre>
+     * allowed_methods is a list of fully qualified gRPC methods the user
+     * may invoke on the listed resources, e.g.
+     * ["/viam.component.camera.v1.CameraService/GetImages",
+     * "/viam.component.camera.v1.CameraService/GetProperties"].
+     * </pre>
+     *
+     * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedMethods at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getAllowedMethods(int index) {
+      return allowedMethods_.get(index);
+    }
+    /**
+     * <pre>
+     * allowed_methods is a list of fully qualified gRPC methods the user
+     * may invoke on the listed resources, e.g.
+     * ["/viam.component.camera.v1.CameraService/GetImages",
+     * "/viam.component.camera.v1.CameraService/GetProperties"].
+     * </pre>
+     *
+     * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowedMethods at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAllowedMethodsBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          allowedMethods_.get(index));
+    }
+    private void ensureAllowedMethodsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          allowedMethods_;  if (!tmp.isModifiable()) {
+        allowedMethods_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * allowed_methods is a list of fully qualified gRPC methods the user
+     * may invoke on the listed resources, e.g.
+     * ["/viam.component.camera.v1.CameraService/GetImages",
+     * "/viam.component.camera.v1.CameraService/GetProperties"].
+     * </pre>
+     *
+     * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+     * @param index The index to set the value at.
+     * @param value The allowedMethods to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setAllowedMethods(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureAllowedMethodsIsMutable();
+      allowedMethods_.set(index, value);
+    }
+    /**
+     * <pre>
+     * allowed_methods is a list of fully qualified gRPC methods the user
+     * may invoke on the listed resources, e.g.
+     * ["/viam.component.camera.v1.CameraService/GetImages",
+     * "/viam.component.camera.v1.CameraService/GetProperties"].
+     * </pre>
+     *
+     * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+     * @param value The allowedMethods to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addAllowedMethods(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureAllowedMethodsIsMutable();
+      allowedMethods_.add(value);
+    }
+    /**
+     * <pre>
+     * allowed_methods is a list of fully qualified gRPC methods the user
+     * may invoke on the listed resources, e.g.
+     * ["/viam.component.camera.v1.CameraService/GetImages",
+     * "/viam.component.camera.v1.CameraService/GetProperties"].
+     * </pre>
+     *
+     * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+     * @param values The allowedMethods to add.
+     */
+    private void addAllAllowedMethods(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureAllowedMethodsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, allowedMethods_);
+    }
+    /**
+     * <pre>
+     * allowed_methods is a list of fully qualified gRPC methods the user
+     * may invoke on the listed resources, e.g.
+     * ["/viam.component.camera.v1.CameraService/GetImages",
+     * "/viam.component.camera.v1.CameraService/GetProperties"].
+     * </pre>
+     *
+     * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+     */
+    private void clearAllowedMethods() {
+      allowedMethods_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * allowed_methods is a list of fully qualified gRPC methods the user
+     * may invoke on the listed resources, e.g.
+     * ["/viam.component.camera.v1.CameraService/GetImages",
+     * "/viam.component.camera.v1.CameraService/GetProperties"].
+     * </pre>
+     *
+     * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+     * @param value The bytes of the allowedMethods to add.
+     */
+    private void addAllowedMethodsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureAllowedMethodsIsMutable();
+      allowedMethods_.add(value.toStringUtf8());
+    }
+
+    public static viam.app.v1.Robot.Permission parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.Permission parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.Permission parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.Permission parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.Permission parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.Permission parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.Permission parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.Permission parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Robot.Permission parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Robot.Permission parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.Permission parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.Permission parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Robot.Permission prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * A Permission describes a User's ability to invoke methods on resources.
+     * </pre>
+     *
+     * Protobuf type {@code viam.app.v1.Permission}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Robot.Permission, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.Permission)
+        viam.app.v1.Robot.PermissionOrBuilder {
+      // Construct using viam.app.v1.Robot.Permission.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * resources are the names of the resources this permission applies to,
+       * e.g. ["cam1", "cam2", "cam3"].
+       * </pre>
+       *
+       * <code>repeated string resources = 1 [json_name = "resources"];</code>
+       * @return A list containing the resources.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getResourcesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getResourcesList());
+      }
+      /**
+       * <pre>
+       * resources are the names of the resources this permission applies to,
+       * e.g. ["cam1", "cam2", "cam3"].
+       * </pre>
+       *
+       * <code>repeated string resources = 1 [json_name = "resources"];</code>
+       * @return The count of resources.
+       */
+      @java.lang.Override
+      public int getResourcesCount() {
+        return instance.getResourcesCount();
+      }
+      /**
+       * <pre>
+       * resources are the names of the resources this permission applies to,
+       * e.g. ["cam1", "cam2", "cam3"].
+       * </pre>
+       *
+       * <code>repeated string resources = 1 [json_name = "resources"];</code>
+       * @param index The index of the element to return.
+       * @return The resources at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getResources(int index) {
+        return instance.getResources(index);
+      }
+      /**
+       * <pre>
+       * resources are the names of the resources this permission applies to,
+       * e.g. ["cam1", "cam2", "cam3"].
+       * </pre>
+       *
+       * <code>repeated string resources = 1 [json_name = "resources"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the resources at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getResourcesBytes(int index) {
+        return instance.getResourcesBytes(index);
+      }
+      /**
+       * <pre>
+       * resources are the names of the resources this permission applies to,
+       * e.g. ["cam1", "cam2", "cam3"].
+       * </pre>
+       *
+       * <code>repeated string resources = 1 [json_name = "resources"];</code>
+       * @param index The index to set the value at.
+       * @param value The resources to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResources(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setResources(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * resources are the names of the resources this permission applies to,
+       * e.g. ["cam1", "cam2", "cam3"].
+       * </pre>
+       *
+       * <code>repeated string resources = 1 [json_name = "resources"];</code>
+       * @param value The resources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addResources(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addResources(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * resources are the names of the resources this permission applies to,
+       * e.g. ["cam1", "cam2", "cam3"].
+       * </pre>
+       *
+       * <code>repeated string resources = 1 [json_name = "resources"];</code>
+       * @param values The resources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllResources(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllResources(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * resources are the names of the resources this permission applies to,
+       * e.g. ["cam1", "cam2", "cam3"].
+       * </pre>
+       *
+       * <code>repeated string resources = 1 [json_name = "resources"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResources() {
+        copyOnWrite();
+        instance.clearResources();
+        return this;
+      }
+      /**
+       * <pre>
+       * resources are the names of the resources this permission applies to,
+       * e.g. ["cam1", "cam2", "cam3"].
+       * </pre>
+       *
+       * <code>repeated string resources = 1 [json_name = "resources"];</code>
+       * @param value The bytes of the resources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addResourcesBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addResourcesBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * allowed_methods is a list of fully qualified gRPC methods the user
+       * may invoke on the listed resources, e.g.
+       * ["/viam.component.camera.v1.CameraService/GetImages",
+       * "/viam.component.camera.v1.CameraService/GetProperties"].
+       * </pre>
+       *
+       * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+       * @return A list containing the allowedMethods.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getAllowedMethodsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getAllowedMethodsList());
+      }
+      /**
+       * <pre>
+       * allowed_methods is a list of fully qualified gRPC methods the user
+       * may invoke on the listed resources, e.g.
+       * ["/viam.component.camera.v1.CameraService/GetImages",
+       * "/viam.component.camera.v1.CameraService/GetProperties"].
+       * </pre>
+       *
+       * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+       * @return The count of allowedMethods.
+       */
+      @java.lang.Override
+      public int getAllowedMethodsCount() {
+        return instance.getAllowedMethodsCount();
+      }
+      /**
+       * <pre>
+       * allowed_methods is a list of fully qualified gRPC methods the user
+       * may invoke on the listed resources, e.g.
+       * ["/viam.component.camera.v1.CameraService/GetImages",
+       * "/viam.component.camera.v1.CameraService/GetProperties"].
+       * </pre>
+       *
+       * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+       * @param index The index of the element to return.
+       * @return The allowedMethods at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getAllowedMethods(int index) {
+        return instance.getAllowedMethods(index);
+      }
+      /**
+       * <pre>
+       * allowed_methods is a list of fully qualified gRPC methods the user
+       * may invoke on the listed resources, e.g.
+       * ["/viam.component.camera.v1.CameraService/GetImages",
+       * "/viam.component.camera.v1.CameraService/GetProperties"].
+       * </pre>
+       *
+       * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the allowedMethods at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAllowedMethodsBytes(int index) {
+        return instance.getAllowedMethodsBytes(index);
+      }
+      /**
+       * <pre>
+       * allowed_methods is a list of fully qualified gRPC methods the user
+       * may invoke on the listed resources, e.g.
+       * ["/viam.component.camera.v1.CameraService/GetImages",
+       * "/viam.component.camera.v1.CameraService/GetProperties"].
+       * </pre>
+       *
+       * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+       * @param index The index to set the value at.
+       * @param value The allowedMethods to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowedMethods(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setAllowedMethods(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * allowed_methods is a list of fully qualified gRPC methods the user
+       * may invoke on the listed resources, e.g.
+       * ["/viam.component.camera.v1.CameraService/GetImages",
+       * "/viam.component.camera.v1.CameraService/GetProperties"].
+       * </pre>
+       *
+       * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+       * @param value The allowedMethods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedMethods(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addAllowedMethods(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * allowed_methods is a list of fully qualified gRPC methods the user
+       * may invoke on the listed resources, e.g.
+       * ["/viam.component.camera.v1.CameraService/GetImages",
+       * "/viam.component.camera.v1.CameraService/GetProperties"].
+       * </pre>
+       *
+       * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+       * @param values The allowedMethods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAllowedMethods(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllAllowedMethods(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * allowed_methods is a list of fully qualified gRPC methods the user
+       * may invoke on the listed resources, e.g.
+       * ["/viam.component.camera.v1.CameraService/GetImages",
+       * "/viam.component.camera.v1.CameraService/GetProperties"].
+       * </pre>
+       *
+       * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowedMethods() {
+        copyOnWrite();
+        instance.clearAllowedMethods();
+        return this;
+      }
+      /**
+       * <pre>
+       * allowed_methods is a list of fully qualified gRPC methods the user
+       * may invoke on the listed resources, e.g.
+       * ["/viam.component.camera.v1.CameraService/GetImages",
+       * "/viam.component.camera.v1.CameraService/GetProperties"].
+       * </pre>
+       *
+       * <code>repeated string allowed_methods = 2 [json_name = "allowedMethods"];</code>
+       * @param value The bytes of the allowedMethods to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedMethodsBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addAllowedMethodsBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.Permission)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Robot.Permission();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "resources_",
+              "allowedMethods_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0002\u0000\u0001\u021a\u0002\u021a" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Robot.Permission> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Robot.Permission.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Robot.Permission>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.Permission)
+    private static final viam.app.v1.Robot.Permission DEFAULT_INSTANCE;
+    static {
+      Permission defaultInstance = new Permission();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Permission.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Robot.Permission getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<Permission> PARSER;
+
+    public static com.google.protobuf.Parser<Permission> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
