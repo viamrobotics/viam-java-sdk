@@ -140,51 +140,95 @@ implements <a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app
 <div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addHandlers(int,viam.app.v1.Robot.AuthHandlerConfig)" class="member-name-link">addHandlers</a><wbr>(int&nbsp;index,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllUserPermissions(java.lang.Iterable)" class="member-name-link">addAllUserPermissions</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&gt;&nbsp;values)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addHandlers(int,viam.app.v1.Robot.AuthHandlerConfig)" class="member-name-link">addHandlers</a><wbr>(int&nbsp;index,
  <a href="Robot.AuthHandlerConfig.html" title="class in viam.app.v1">Robot.AuthHandlerConfig</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addHandlers(int,viam.app.v1.Robot.AuthHandlerConfig.Builder)" class="member-name-link">addHandlers</a><wbr>(int&nbsp;index,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addHandlers(int,viam.app.v1.Robot.AuthHandlerConfig.Builder)" class="member-name-link">addHandlers</a><wbr>(int&nbsp;index,
  <a href="Robot.AuthHandlerConfig.Builder.html" title="class in viam.app.v1">Robot.AuthHandlerConfig.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addHandlers(viam.app.v1.Robot.AuthHandlerConfig)" class="member-name-link">addHandlers</a><wbr>(<a href="Robot.AuthHandlerConfig.html" title="class in viam.app.v1">Robot.AuthHandlerConfig</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addHandlers(viam.app.v1.Robot.AuthHandlerConfig.Builder)" class="member-name-link">addHandlers</a><wbr>(<a href="Robot.AuthHandlerConfig.Builder.html" title="class in viam.app.v1">Robot.AuthHandlerConfig.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addHandlers(viam.app.v1.Robot.AuthHandlerConfig)" class="member-name-link">addHandlers</a><wbr>(<a href="Robot.AuthHandlerConfig.html" title="class in viam.app.v1">Robot.AuthHandlerConfig</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTlsAuthEntities(java.lang.String)" class="member-name-link">addTlsAuthEntities</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addHandlers(viam.app.v1.Robot.AuthHandlerConfig.Builder)" class="member-name-link">addHandlers</a><wbr>(<a href="Robot.AuthHandlerConfig.Builder.html" title="class in viam.app.v1">Robot.AuthHandlerConfig.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTlsAuthEntitiesBytes(com.google.protobuf.ByteString)" class="member-name-link">addTlsAuthEntitiesBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTlsAuthEntities(java.lang.String)" class="member-name-link">addTlsAuthEntities</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearExternalAuthConfig()" class="member-name-link">clearExternalAuthConfig</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTlsAuthEntitiesBytes(com.google.protobuf.ByteString)" class="member-name-link">addTlsAuthEntitiesBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addUserPermissions(int,viam.app.v1.Robot.UserPermission)" class="member-name-link">addUserPermissions</a><wbr>(int&nbsp;index,
+ <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addUserPermissions(int,viam.app.v1.Robot.UserPermission.Builder)" class="member-name-link">addUserPermissions</a><wbr>(int&nbsp;index,
+ <a href="Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addUserPermissions(viam.app.v1.Robot.UserPermission)" class="member-name-link">addUserPermissions</a><wbr>(<a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addUserPermissions(viam.app.v1.Robot.UserPermission.Builder)" class="member-name-link">addUserPermissions</a><wbr>(<a href="Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearExternalAuthConfig()" class="member-name-link">clearExternalAuthConfig</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.ExternalAuthConfig external_auth_config = 3 [json_name = "externalAuthConfig"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearHandlers()" class="member-name-link">clearHandlers</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearHandlers()" class="member-name-link">clearHandlers</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearTlsAuthEntities()" class="member-name-link">clearTlsAuthEntities</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearTlsAuthEntities()" class="member-name-link">clearTlsAuthEntities</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearUserPermissions()" class="member-name-link">clearUserPermissions</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.ExternalAuthConfig.html" title="class in viam.app.v1">Robot.ExternalAuthConfig</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExternalAuthConfig()" class="member-name-link">getExternalAuthConfig</a>()</code></div>
@@ -226,20 +270,48 @@ implements <a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasExternalAuthConfig()" class="member-name-link">hasExternalAuthConfig</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserPermissions(int)" class="member-name-link">getUserPermissions</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>optional .viam.app.v1.ExternalAuthConfig external_auth_config = 3 [json_name = "externalAuthConfig"];</code></div>
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeExternalAuthConfig(viam.app.v1.Robot.ExternalAuthConfig)" class="member-name-link">mergeExternalAuthConfig</a><wbr>(<a href="Robot.ExternalAuthConfig.html" title="class in viam.app.v1">Robot.ExternalAuthConfig</a>&nbsp;value)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserPermissionsCount()" class="member-name-link">getUserPermissionsCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserPermissionsList()" class="member-name-link">getUserPermissionsList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasExternalAuthConfig()" class="member-name-link">hasExternalAuthConfig</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.ExternalAuthConfig external_auth_config = 3 [json_name = "externalAuthConfig"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeHandlers(int)" class="member-name-link">removeHandlers</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeExternalAuthConfig(viam.app.v1.Robot.ExternalAuthConfig)" class="member-name-link">mergeExternalAuthConfig</a><wbr>(<a href="Robot.ExternalAuthConfig.html" title="class in viam.app.v1">Robot.ExternalAuthConfig</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional .viam.app.v1.ExternalAuthConfig external_auth_config = 3 [json_name = "externalAuthConfig"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeHandlers(int)" class="member-name-link">removeHandlers</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeUserPermissions(int)" class="member-name-link">removeUserPermissions</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setExternalAuthConfig(viam.app.v1.Robot.ExternalAuthConfig)" class="member-name-link">setExternalAuthConfig</a><wbr>(<a href="Robot.ExternalAuthConfig.html" title="class in viam.app.v1">Robot.ExternalAuthConfig</a>&nbsp;value)</code></div>
@@ -268,6 +340,22 @@ implements <a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserPermissions(int,viam.app.v1.Robot.UserPermission)" class="member-name-link">setUserPermissions</a><wbr>(int&nbsp;index,
+ <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserPermissions(int,viam.app.v1.Robot.UserPermission.Builder)" class="member-name-link">setUserPermissions</a><wbr>(int&nbsp;index,
+ <a href="Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
 </div>
 </div>
 </div>
@@ -568,6 +656,166 @@ implements <a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app
 <h3>clearExternalAuthConfig</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></span>&nbsp;<span class="element-name">clearExternalAuthConfig</span>()</div>
 <div class="block"><code>optional .viam.app.v1.ExternalAuthConfig external_auth_config = 3 [json_name = "externalAuthConfig"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getUserPermissionsList()">
+<h3>getUserPermissionsList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&gt;</span>&nbsp;<span class="element-name">getUserPermissionsList</span>()</div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.AuthConfigOrBuilder.html#getUserPermissionsList()">getUserPermissionsList</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app.v1">Robot.AuthConfigOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUserPermissionsCount()">
+<h3>getUserPermissionsCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getUserPermissionsCount</span>()</div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.AuthConfigOrBuilder.html#getUserPermissionsCount()">getUserPermissionsCount</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app.v1">Robot.AuthConfigOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUserPermissions(int)">
+<h3>getUserPermissions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></span>&nbsp;<span class="element-name">getUserPermissions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.AuthConfigOrBuilder.html#getUserPermissions(int)">getUserPermissions</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app.v1">Robot.AuthConfigOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setUserPermissions(int,viam.app.v1.Robot.UserPermission)">
+<h3>setUserPermissions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></span>&nbsp;<span class="element-name">setUserPermissions</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setUserPermissions(int,viam.app.v1.Robot.UserPermission.Builder)">
+<h3>setUserPermissions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></span>&nbsp;<span class="element-name">setUserPermissions</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addUserPermissions(viam.app.v1.Robot.UserPermission)">
+<h3>addUserPermissions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></span>&nbsp;<span class="element-name">addUserPermissions</span><wbr><span class="parameters">(<a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addUserPermissions(int,viam.app.v1.Robot.UserPermission)">
+<h3>addUserPermissions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></span>&nbsp;<span class="element-name">addUserPermissions</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addUserPermissions(viam.app.v1.Robot.UserPermission.Builder)">
+<h3>addUserPermissions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></span>&nbsp;<span class="element-name">addUserPermissions</span><wbr><span class="parameters">(<a href="Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addUserPermissions(int,viam.app.v1.Robot.UserPermission.Builder)">
+<h3>addUserPermissions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></span>&nbsp;<span class="element-name">addUserPermissions</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addAllUserPermissions(java.lang.Iterable)">
+<h3>addAllUserPermissions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></span>&nbsp;<span class="element-name">addAllUserPermissions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&gt;&nbsp;values)</span></div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearUserPermissions()">
+<h3>clearUserPermissions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></span>&nbsp;<span class="element-name">clearUserPermissions</span>()</div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="removeUserPermissions(int)">
+<h3>removeUserPermissions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></span>&nbsp;<span class="element-name">removeUserPermissions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
 </section>
 </li>
 </ul>

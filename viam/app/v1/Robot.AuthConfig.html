@@ -150,6 +150,9 @@ implements <a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#TLS_AUTH_ENTITIES_FIELD_NUMBER" class="member-name-link">TLS_AUTH_ENTITIES_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#USER_PERMISSIONS_FIELD_NUMBER" class="member-name-link">USER_PERMISSIONS_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -228,62 +231,97 @@ implements <a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasExternalAuthConfig()" class="member-name-link">hasExternalAuthConfig</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserPermissions(int)" class="member-name-link">getUserPermissions</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserPermissionsCount()" class="member-name-link">getUserPermissionsCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserPermissionsList()" class="member-name-link">getUserPermissionsList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserPermissionsOrBuilder(int)" class="member-name-link">getUserPermissionsOrBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;? extends <a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUserPermissionsOrBuilderList()" class="member-name-link">getUserPermissionsOrBuilderList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasExternalAuthConfig()" class="member-name-link">hasExternalAuthConfig</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .viam.app.v1.ExternalAuthConfig external_auth_config = 3 [json_name = "externalAuthConfig"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.v1.Robot.AuthConfig)" class="member-name-link">newBuilder</a><wbr>(<a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a>&nbsp;prototype)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.Builder.html" title="class in viam.app.v1">Robot.AuthConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.v1.Robot.AuthConfig)" class="member-name-link">newBuilder</a><wbr>(<a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a>&nbsp;prototype)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser<wbr>&lt;<a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser<wbr>&lt;<a href="Robot.AuthConfig.html" title="class in viam.app.v1">Robot.AuthConfig</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -347,6 +385,20 @@ implements <a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app
 <dd>
 <ul class="tag-list">
 <li><a href="../../../constant-values.html#viam.app.v1.Robot.AuthConfig.EXTERNAL_AUTH_CONFIG_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="USER_PERMISSIONS_FIELD_NUMBER">
+<h3>USER_PERMISSIONS_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">USER_PERMISSIONS_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../constant-values.html#viam.app.v1.Robot.AuthConfig.USER_PERMISSIONS_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -487,6 +539,78 @@ implements <a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app
 <dt>Returns:</dt>
 <dd>The externalAuthConfig.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUserPermissionsList()">
+<h3>getUserPermissionsList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&gt;</span>&nbsp;<span class="element-name">getUserPermissionsList</span>()</div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.AuthConfigOrBuilder.html#getUserPermissionsList()">getUserPermissionsList</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app.v1">Robot.AuthConfigOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUserPermissionsOrBuilderList()">
+<h3>getUserPermissionsOrBuilderList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a>&gt;</span>&nbsp;<span class="element-name">getUserPermissionsOrBuilderList</span>()</div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getUserPermissionsCount()">
+<h3>getUserPermissionsCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getUserPermissionsCount</span>()</div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.AuthConfigOrBuilder.html#getUserPermissionsCount()">getUserPermissionsCount</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app.v1">Robot.AuthConfigOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUserPermissions(int)">
+<h3>getUserPermissions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></span>&nbsp;<span class="element-name">getUserPermissions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.AuthConfigOrBuilder.html#getUserPermissions(int)">getUserPermissions</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.AuthConfigOrBuilder.html" title="interface in viam.app.v1">Robot.AuthConfigOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUserPermissionsOrBuilder(int)">
+<h3>getUserPermissionsOrBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></span>&nbsp;<span class="element-name">getUserPermissionsOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
 </section>
 </li>
 <li>

@@ -155,9 +155,30 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasExternalAuthConfig()" class="member-name-link">hasExternalAuthConfig</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUserPermissions(int)" class="member-name-link">getUserPermissions</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUserPermissionsCount()" class="member-name-link">getUserPermissionsCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUserPermissionsList()" class="member-name-link">getUserPermissionsList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ user_permissions represents the map of Users to Permissions for
+ this machine.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasExternalAuthConfig()" class="member-name-link">hasExternalAuthConfig</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>optional .viam.app.v1.ExternalAuthConfig external_auth_config = 3 [json_name = "externalAuthConfig"];</code></div>
 </div>
 </div>
@@ -266,6 +287,42 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The externalAuthConfig.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUserPermissionsList()">
+<h3>getUserPermissionsList</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&gt;</span>&nbsp;<span class="element-name">getUserPermissionsList</span>()</div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getUserPermissions(int)">
+<h3>getUserPermissions</h3>
+<div class="member-signature"><span class="return-type"><a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></span>&nbsp;<span class="element-name">getUserPermissions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getUserPermissionsCount()">
+<h3>getUserPermissionsCount</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getUserPermissionsCount</span>()</div>
+<div class="block"><pre>
+ user_permissions represents the map of Users to Permissions for
+ this machine.
+ </pre>
+
+ <code>repeated .viam.app.v1.UserPermission user_permissions = 4 [json_name = "userPermissions"];</code></div>
 </section>
 </li>
 </ul>
