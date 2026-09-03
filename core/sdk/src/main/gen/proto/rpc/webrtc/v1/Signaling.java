@@ -4787,6 +4787,93 @@ public final class Signaling {
      * @return The deadline.
      */
     com.google.protobuf.Timestamp getDeadline();
+
+    /**
+     * <pre>
+     * caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+     * from the caller's auth token by the signaling server. Only the caller's identity is
+     * forwarded to the answerer, not its bearer token. Empty when the caller was
+     * unauthenticated.
+     * </pre>
+     *
+     * <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code>
+     * @return The callerAuthEntity.
+     */
+    java.lang.String getCallerAuthEntity();
+    /**
+     * <pre>
+     * caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+     * from the caller's auth token by the signaling server. Only the caller's identity is
+     * forwarded to the answerer, not its bearer token. Empty when the caller was
+     * unauthenticated.
+     * </pre>
+     *
+     * <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code>
+     * @return The bytes for callerAuthEntity.
+     */
+    com.google.protobuf.ByteString
+        getCallerAuthEntityBytes();
+
+    /**
+     * <pre>
+     * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+     * from the caller's auth token by the signaling server.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+     */
+    int getCallerAuthMetadataCount();
+    /**
+     * <pre>
+     * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+     * from the caller's auth token by the signaling server.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+     */
+    boolean containsCallerAuthMetadata(
+        java.lang.String key);
+    /**
+     * Use {@link #getCallerAuthMetadataMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getCallerAuthMetadata();
+    /**
+     * <pre>
+     * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+     * from the caller's auth token by the signaling server.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getCallerAuthMetadataMap();
+    /**
+     * <pre>
+     * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+     * from the caller's auth token by the signaling server.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+     */
+
+    /* nullable */
+java.lang.String getCallerAuthMetadataOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue);
+    /**
+     * <pre>
+     * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+     * from the caller's auth token by the signaling server.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+     */
+
+    java.lang.String getCallerAuthMetadataOrThrow(
+        java.lang.String key);
   }
   /**
    * <pre>
@@ -4803,6 +4890,7 @@ public final class Signaling {
       AnswerRequestInitStageOrBuilder {
     private AnswerRequestInitStage() {
       sdp_ = "";
+      callerAuthEntity_ = "";
     }
     private int bitField0_;
     public static final int SDP_FIELD_NUMBER = 1;
@@ -4947,6 +5035,211 @@ public final class Signaling {
     private void clearDeadline() {
       deadline_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int CALLER_AUTH_ENTITY_FIELD_NUMBER = 4;
+    private java.lang.String callerAuthEntity_;
+    /**
+     * <pre>
+     * caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+     * from the caller's auth token by the signaling server. Only the caller's identity is
+     * forwarded to the answerer, not its bearer token. Empty when the caller was
+     * unauthenticated.
+     * </pre>
+     *
+     * <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code>
+     * @return The callerAuthEntity.
+     */
+    @java.lang.Override
+    public java.lang.String getCallerAuthEntity() {
+      return callerAuthEntity_;
+    }
+    /**
+     * <pre>
+     * caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+     * from the caller's auth token by the signaling server. Only the caller's identity is
+     * forwarded to the answerer, not its bearer token. Empty when the caller was
+     * unauthenticated.
+     * </pre>
+     *
+     * <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code>
+     * @return The bytes for callerAuthEntity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCallerAuthEntityBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(callerAuthEntity_);
+    }
+    /**
+     * <pre>
+     * caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+     * from the caller's auth token by the signaling server. Only the caller's identity is
+     * forwarded to the answerer, not its bearer token. Empty when the caller was
+     * unauthenticated.
+     * </pre>
+     *
+     * <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code>
+     * @param value The callerAuthEntity to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setCallerAuthEntity(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      callerAuthEntity_ = value;
+    }
+    /**
+     * <pre>
+     * caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+     * from the caller's auth token by the signaling server. Only the caller's identity is
+     * forwarded to the answerer, not its bearer token. Empty when the caller was
+     * unauthenticated.
+     * </pre>
+     *
+     * <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code>
+     */
+    private void clearCallerAuthEntity() {
+
+      callerAuthEntity_ = getDefaultInstance().getCallerAuthEntity();
+    }
+    /**
+     * <pre>
+     * caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+     * from the caller's auth token by the signaling server. Only the caller's identity is
+     * forwarded to the answerer, not its bearer token. Empty when the caller was
+     * unauthenticated.
+     * </pre>
+     *
+     * <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code>
+     * @param value The bytes for callerAuthEntity to set.
+     */
+    private void setCallerAuthEntityBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      callerAuthEntity_ = value.toStringUtf8();
+
+    }
+
+    public static final int CALLER_AUTH_METADATA_FIELD_NUMBER = 5;
+    private static final class CallerAuthMetadataDefaultEntryHolder {
+      static final com.google.protobuf.MapEntryLite<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntryLite
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, java.lang.String> callerAuthMetadata_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    internalGetCallerAuthMetadata() {
+      return callerAuthMetadata_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.String>
+    internalGetMutableCallerAuthMetadata() {
+      if (!callerAuthMetadata_.isMutable()) {
+        callerAuthMetadata_ = callerAuthMetadata_.mutableCopy();
+      }
+      return callerAuthMetadata_;
+    }
+    @java.lang.Override
+
+    public int getCallerAuthMetadataCount() {
+      return internalGetCallerAuthMetadata().size();
+    }
+    /**
+     * <pre>
+     * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+     * from the caller's auth token by the signaling server.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+     */
+    @java.lang.Override
+
+    public boolean containsCallerAuthMetadata(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetCallerAuthMetadata().containsKey(key);
+    }
+    /**
+     * Use {@link #getCallerAuthMetadataMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getCallerAuthMetadata() {
+      return getCallerAuthMetadataMap();
+    }
+    /**
+     * <pre>
+     * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+     * from the caller's auth token by the signaling server.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getCallerAuthMetadataMap() {
+      return java.util.Collections.unmodifiableMap(
+          internalGetCallerAuthMetadata());
+    }
+    /**
+     * <pre>
+     * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+     * from the caller's auth token by the signaling server.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+     */
+    @java.lang.Override
+
+    public /* nullable */
+java.lang.String getCallerAuthMetadataOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetCallerAuthMetadata();
+      java.lang.String v = map.get(key);
+      return v != null ? v : defaultValue;
+    }
+    /**
+     * <pre>
+     * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+     * from the caller's auth token by the signaling server.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getCallerAuthMetadataOrThrow(
+        java.lang.String key) {
+      java.lang.Class<?> keyClass = key.getClass();
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetCallerAuthMetadata();
+      java.lang.String v = map.get(key);
+      if (v == null) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return v;
+    }
+    /**
+     * <pre>
+     * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+     * from the caller's auth token by the signaling server.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+     */
+    private java.util.Map<java.lang.String, java.lang.String>
+    getMutableCallerAuthMetadataMap() {
+      return internalGetMutableCallerAuthMetadata();
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseFrom(
@@ -5194,6 +5487,225 @@ public final class Signaling {
         return this;
       }
 
+      /**
+       * <pre>
+       * caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+       * from the caller's auth token by the signaling server. Only the caller's identity is
+       * forwarded to the answerer, not its bearer token. Empty when the caller was
+       * unauthenticated.
+       * </pre>
+       *
+       * <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code>
+       * @return The callerAuthEntity.
+       */
+      @java.lang.Override
+      public java.lang.String getCallerAuthEntity() {
+        return instance.getCallerAuthEntity();
+      }
+      /**
+       * <pre>
+       * caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+       * from the caller's auth token by the signaling server. Only the caller's identity is
+       * forwarded to the answerer, not its bearer token. Empty when the caller was
+       * unauthenticated.
+       * </pre>
+       *
+       * <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code>
+       * @return The bytes for callerAuthEntity.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCallerAuthEntityBytes() {
+        return instance.getCallerAuthEntityBytes();
+      }
+      /**
+       * <pre>
+       * caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+       * from the caller's auth token by the signaling server. Only the caller's identity is
+       * forwarded to the answerer, not its bearer token. Empty when the caller was
+       * unauthenticated.
+       * </pre>
+       *
+       * <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code>
+       * @param value The callerAuthEntity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallerAuthEntity(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setCallerAuthEntity(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+       * from the caller's auth token by the signaling server. Only the caller's identity is
+       * forwarded to the answerer, not its bearer token. Empty when the caller was
+       * unauthenticated.
+       * </pre>
+       *
+       * <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCallerAuthEntity() {
+        copyOnWrite();
+        instance.clearCallerAuthEntity();
+        return this;
+      }
+      /**
+       * <pre>
+       * caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+       * from the caller's auth token by the signaling server. Only the caller's identity is
+       * forwarded to the answerer, not its bearer token. Empty when the caller was
+       * unauthenticated.
+       * </pre>
+       *
+       * <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code>
+       * @param value The bytes for callerAuthEntity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallerAuthEntityBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setCallerAuthEntityBytes(value);
+        return this;
+      }
+
+      @java.lang.Override
+
+      public int getCallerAuthMetadataCount() {
+        return instance.getCallerAuthMetadataMap().size();
+      }
+      /**
+       * <pre>
+       * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+       * from the caller's auth token by the signaling server.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+       */
+      @java.lang.Override
+
+      public boolean containsCallerAuthMetadata(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getCallerAuthMetadataMap().containsKey(key);
+      }
+
+      public Builder clearCallerAuthMetadata() {
+        copyOnWrite();
+        instance.getMutableCallerAuthMetadataMap().clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+       * from the caller's auth token by the signaling server.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+       */
+
+      public Builder removeCallerAuthMetadata(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableCallerAuthMetadataMap().remove(key);
+        return this;
+      }
+      /**
+       * Use {@link #getCallerAuthMetadataMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getCallerAuthMetadata() {
+        return getCallerAuthMetadataMap();
+      }
+      /**
+       * <pre>
+       * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+       * from the caller's auth token by the signaling server.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, java.lang.String> getCallerAuthMetadataMap() {
+        return java.util.Collections.unmodifiableMap(
+            instance.getCallerAuthMetadataMap());
+      }
+      /**
+       * <pre>
+       * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+       * from the caller's auth token by the signaling server.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+       */
+      @java.lang.Override
+
+      public /* nullable */
+java.lang.String getCallerAuthMetadataOrDefault(
+          java.lang.String key,
+          /* nullable */
+java.lang.String defaultValue) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, java.lang.String> map =
+            instance.getCallerAuthMetadataMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+       * from the caller's auth token by the signaling server.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getCallerAuthMetadataOrThrow(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, java.lang.String> map =
+            instance.getCallerAuthMetadataMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      /**
+       * <pre>
+       * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+       * from the caller's auth token by the signaling server.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+       */
+      public Builder putCallerAuthMetadata(
+          java.lang.String key,
+          java.lang.String value) {
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableCallerAuthMetadataMap().put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+       * from the caller's auth token by the signaling server.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code>
+       */
+      public Builder putAllCallerAuthMetadata(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        copyOnWrite();
+        instance.getMutableCallerAuthMetadataMap().putAll(values);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerRequestInitStage)
     }
     @java.lang.Override
@@ -5214,10 +5726,13 @@ public final class Signaling {
               "sdp_",
               "optionalConfig_",
               "deadline_",
+              "callerAuthEntity_",
+              "callerAuthMetadata_",
+              CallerAuthMetadataDefaultEntryHolder.defaultEntry,
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u1009\u0001";
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0001\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001\u0004\u0208\u00052";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
