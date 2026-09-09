@@ -405,6 +405,96 @@ public final class ArmServiceGrpc {
     return getGet3DModelsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.SetManualModeRequest,
+      com.viam.component.arm.v1.Arm.SetManualModeResponse> getSetManualModeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetManualMode",
+      requestType = com.viam.component.arm.v1.Arm.SetManualModeRequest.class,
+      responseType = com.viam.component.arm.v1.Arm.SetManualModeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.SetManualModeRequest,
+      com.viam.component.arm.v1.Arm.SetManualModeResponse> getSetManualModeMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.SetManualModeRequest, com.viam.component.arm.v1.Arm.SetManualModeResponse> getSetManualModeMethod;
+    if ((getSetManualModeMethod = ArmServiceGrpc.getSetManualModeMethod) == null) {
+      synchronized (ArmServiceGrpc.class) {
+        if ((getSetManualModeMethod = ArmServiceGrpc.getSetManualModeMethod) == null) {
+          ArmServiceGrpc.getSetManualModeMethod = getSetManualModeMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.arm.v1.Arm.SetManualModeRequest, com.viam.component.arm.v1.Arm.SetManualModeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetManualMode"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.arm.v1.Arm.SetManualModeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.arm.v1.Arm.SetManualModeResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getSetManualModeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.GetManualModeRequest,
+      com.viam.component.arm.v1.Arm.GetManualModeResponse> getGetManualModeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetManualMode",
+      requestType = com.viam.component.arm.v1.Arm.GetManualModeRequest.class,
+      responseType = com.viam.component.arm.v1.Arm.GetManualModeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.GetManualModeRequest,
+      com.viam.component.arm.v1.Arm.GetManualModeResponse> getGetManualModeMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.GetManualModeRequest, com.viam.component.arm.v1.Arm.GetManualModeResponse> getGetManualModeMethod;
+    if ((getGetManualModeMethod = ArmServiceGrpc.getGetManualModeMethod) == null) {
+      synchronized (ArmServiceGrpc.class) {
+        if ((getGetManualModeMethod = ArmServiceGrpc.getGetManualModeMethod) == null) {
+          ArmServiceGrpc.getGetManualModeMethod = getGetManualModeMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.arm.v1.Arm.GetManualModeRequest, com.viam.component.arm.v1.Arm.GetManualModeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetManualMode"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.arm.v1.Arm.GetManualModeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.arm.v1.Arm.GetManualModeResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetManualModeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.GetPropertiesRequest,
+      com.viam.component.arm.v1.Arm.GetPropertiesResponse> getGetPropertiesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetProperties",
+      requestType = com.viam.component.arm.v1.Arm.GetPropertiesRequest.class,
+      responseType = com.viam.component.arm.v1.Arm.GetPropertiesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.GetPropertiesRequest,
+      com.viam.component.arm.v1.Arm.GetPropertiesResponse> getGetPropertiesMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.GetPropertiesRequest, com.viam.component.arm.v1.Arm.GetPropertiesResponse> getGetPropertiesMethod;
+    if ((getGetPropertiesMethod = ArmServiceGrpc.getGetPropertiesMethod) == null) {
+      synchronized (ArmServiceGrpc.class) {
+        if ((getGetPropertiesMethod = ArmServiceGrpc.getGetPropertiesMethod) == null) {
+          ArmServiceGrpc.getGetPropertiesMethod = getGetPropertiesMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.arm.v1.Arm.GetPropertiesRequest, com.viam.component.arm.v1.Arm.GetPropertiesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProperties"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.arm.v1.Arm.GetPropertiesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.arm.v1.Arm.GetPropertiesResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetPropertiesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -601,6 +691,36 @@ public final class ArmServiceGrpc {
         io.grpc.stub.StreamObserver<com.viam.common.v1.Common.Get3DModelsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGet3DModelsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * SetManualMode enters or exits manual mode for an arm that supports it
+     * </pre>
+     */
+    default void setManualMode(com.viam.component.arm.v1.Arm.SetManualModeRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.SetManualModeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetManualModeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetManualMode returns whether the arm is currently in manual mode
+     * </pre>
+     */
+    default void getManualMode(com.viam.component.arm.v1.Arm.GetManualModeRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.GetManualModeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetManualModeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns a message indicating which features the arm supports
+     * </pre>
+     */
+    default void getProperties(com.viam.component.arm.v1.Arm.GetPropertiesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.GetPropertiesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPropertiesMethod(), responseObserver);
+    }
   }
 
   /**
@@ -779,6 +899,39 @@ public final class ArmServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGet3DModelsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * SetManualMode enters or exits manual mode for an arm that supports it
+     * </pre>
+     */
+    public void setManualMode(com.viam.component.arm.v1.Arm.SetManualModeRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.SetManualModeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetManualModeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetManualMode returns whether the arm is currently in manual mode
+     * </pre>
+     */
+    public void getManualMode(com.viam.component.arm.v1.Arm.GetManualModeRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.GetManualModeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetManualModeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns a message indicating which features the arm supports
+     * </pre>
+     */
+    public void getProperties(com.viam.component.arm.v1.Arm.GetPropertiesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.GetPropertiesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPropertiesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -932,6 +1085,36 @@ public final class ArmServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGet3DModelsMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * SetManualMode enters or exits manual mode for an arm that supports it
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.SetManualModeResponse setManualMode(com.viam.component.arm.v1.Arm.SetManualModeRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetManualModeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetManualMode returns whether the arm is currently in manual mode
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.GetManualModeResponse getManualMode(com.viam.component.arm.v1.Arm.GetManualModeRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetManualModeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns a message indicating which features the arm supports
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.GetPropertiesResponse getProperties(com.viam.component.arm.v1.Arm.GetPropertiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1075,6 +1258,36 @@ public final class ArmServiceGrpc {
     public com.viam.common.v1.Common.Get3DModelsResponse get3DModels(com.viam.common.v1.Common.Get3DModelsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGet3DModelsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetManualMode enters or exits manual mode for an arm that supports it
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.SetManualModeResponse setManualMode(com.viam.component.arm.v1.Arm.SetManualModeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetManualModeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetManualMode returns whether the arm is currently in manual mode
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.GetManualModeResponse getManualMode(com.viam.component.arm.v1.Arm.GetManualModeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetManualModeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns a message indicating which features the arm supports
+     * </pre>
+     */
+    public com.viam.component.arm.v1.Arm.GetPropertiesResponse getProperties(com.viam.component.arm.v1.Arm.GetPropertiesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
     }
   }
 
@@ -1232,6 +1445,39 @@ public final class ArmServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGet3DModelsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * SetManualMode enters or exits manual mode for an arm that supports it
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.arm.v1.Arm.SetManualModeResponse> setManualMode(
+        com.viam.component.arm.v1.Arm.SetManualModeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetManualModeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetManualMode returns whether the arm is currently in manual mode
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.arm.v1.Arm.GetManualModeResponse> getManualMode(
+        com.viam.component.arm.v1.Arm.GetManualModeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetManualModeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns a message indicating which features the arm supports
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.arm.v1.Arm.GetPropertiesResponse> getProperties(
+        com.viam.component.arm.v1.Arm.GetPropertiesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPropertiesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_END_POSITION = 0;
@@ -1246,7 +1492,10 @@ public final class ArmServiceGrpc {
   private static final int METHODID_GET_KINEMATICS = 9;
   private static final int METHODID_GET_GEOMETRIES = 10;
   private static final int METHODID_GET3DMODELS = 11;
-  private static final int METHODID_MOVE_THROUGH_JOINT_POSITIONS_STREAMED = 12;
+  private static final int METHODID_SET_MANUAL_MODE = 12;
+  private static final int METHODID_GET_MANUAL_MODE = 13;
+  private static final int METHODID_GET_PROPERTIES = 14;
+  private static final int METHODID_MOVE_THROUGH_JOINT_POSITIONS_STREAMED = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1312,6 +1561,18 @@ public final class ArmServiceGrpc {
         case METHODID_GET3DMODELS:
           serviceImpl.get3DModels((com.viam.common.v1.Common.Get3DModelsRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.Get3DModelsResponse>) responseObserver);
+          break;
+        case METHODID_SET_MANUAL_MODE:
+          serviceImpl.setManualMode((com.viam.component.arm.v1.Arm.SetManualModeRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.SetManualModeResponse>) responseObserver);
+          break;
+        case METHODID_GET_MANUAL_MODE:
+          serviceImpl.getManualMode((com.viam.component.arm.v1.Arm.GetManualModeRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.GetManualModeResponse>) responseObserver);
+          break;
+        case METHODID_GET_PROPERTIES:
+          serviceImpl.getProperties((com.viam.component.arm.v1.Arm.GetPropertiesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.GetPropertiesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1425,6 +1686,27 @@ public final class ArmServiceGrpc {
               com.viam.common.v1.Common.Get3DModelsRequest,
               com.viam.common.v1.Common.Get3DModelsResponse>(
                 service, METHODID_GET3DMODELS)))
+        .addMethod(
+          getSetManualModeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.arm.v1.Arm.SetManualModeRequest,
+              com.viam.component.arm.v1.Arm.SetManualModeResponse>(
+                service, METHODID_SET_MANUAL_MODE)))
+        .addMethod(
+          getGetManualModeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.arm.v1.Arm.GetManualModeRequest,
+              com.viam.component.arm.v1.Arm.GetManualModeResponse>(
+                service, METHODID_GET_MANUAL_MODE)))
+        .addMethod(
+          getGetPropertiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.arm.v1.Arm.GetPropertiesRequest,
+              com.viam.component.arm.v1.Arm.GetPropertiesResponse>(
+                service, METHODID_GET_PROPERTIES)))
         .build();
   }
 
@@ -1450,6 +1732,9 @@ public final class ArmServiceGrpc {
               .addMethod(getGetKinematicsMethod())
               .addMethod(getGetGeometriesMethod())
               .addMethod(getGet3DModelsMethod())
+              .addMethod(getSetManualModeMethod())
+              .addMethod(getGetManualModeMethod())
+              .addMethod(getGetPropertiesMethod())
               .build();
         }
       }
