@@ -174,6 +174,20 @@ loadScripts(document, 'script');</script>
  GetKinematics returns the kinematics file for the component</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getManualMode(com.viam.component.arm.v1.Arm.GetManualModeRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getManualMode</a><wbr>(<a href="Arm.GetManualModeRequest.html" title="class in com.viam.component.arm.v1">Arm.GetManualModeRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Arm.GetManualModeResponse.html" title="class in com.viam.component.arm.v1">Arm.GetManualModeResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetManualMode returns whether the arm is currently in manual mode</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProperties(com.viam.component.arm.v1.Arm.GetPropertiesRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getProperties</a><wbr>(<a href="Arm.GetPropertiesRequest.html" title="class in com.viam.component.arm.v1">Arm.GetPropertiesRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Arm.GetPropertiesResponse.html" title="class in com.viam.component.arm.v1">Arm.GetPropertiesResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetProperties returns a message indicating which features the arm supports</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus(com.viam.common.v1.Common.GetStatusRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getStatus</a><wbr>(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -214,9 +228,16 @@ loadScripts(document, 'script');</script>
  MoveToPosition moves the mount point of the robot's end effector to the requested position.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.arm.v1.Arm.StopRequest,io.grpc.stub.StreamObserver)" class="member-name-link">stop</a><wbr>(<a href="Arm.StopRequest.html" title="class in com.viam.component.arm.v1">Arm.StopRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Arm.StopResponse.html" title="class in com.viam.component.arm.v1">Arm.StopResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setManualMode(com.viam.component.arm.v1.Arm.SetManualModeRequest,io.grpc.stub.StreamObserver)" class="member-name-link">setManualMode</a><wbr>(<a href="Arm.SetManualModeRequest.html" title="class in com.viam.component.arm.v1">Arm.SetManualModeRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Arm.SetManualModeResponse.html" title="class in com.viam.component.arm.v1">Arm.SetManualModeResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ SetManualMode enters or exits manual mode for an arm that supports it</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stop(com.viam.component.arm.v1.Arm.StopRequest,io.grpc.stub.StreamObserver)" class="member-name-link">stop</a><wbr>(<a href="Arm.StopRequest.html" title="class in com.viam.component.arm.v1">Arm.StopRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Arm.StopResponse.html" title="class in com.viam.component.arm.v1">Arm.StopResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Stop stops a robot's arm</div>
 </div>
@@ -381,6 +402,36 @@ loadScripts(document, 'script');</script>
  io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.Get3DModelsResponse.html" title="class in com.viam.common.v1">Common.Get3DModelsResponse</a>&gt;&nbsp;responseObserver)</span></div>
 <div class="block"><pre>
  Get3DModels returns the 3D models of the component
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setManualMode(com.viam.component.arm.v1.Arm.SetManualModeRequest,io.grpc.stub.StreamObserver)">
+<h3>setManualMode</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setManualMode</span><wbr><span class="parameters">(<a href="Arm.SetManualModeRequest.html" title="class in com.viam.component.arm.v1">Arm.SetManualModeRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Arm.SetManualModeResponse.html" title="class in com.viam.component.arm.v1">Arm.SetManualModeResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ SetManualMode enters or exits manual mode for an arm that supports it
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getManualMode(com.viam.component.arm.v1.Arm.GetManualModeRequest,io.grpc.stub.StreamObserver)">
+<h3>getManualMode</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getManualMode</span><wbr><span class="parameters">(<a href="Arm.GetManualModeRequest.html" title="class in com.viam.component.arm.v1">Arm.GetManualModeRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Arm.GetManualModeResponse.html" title="class in com.viam.component.arm.v1">Arm.GetManualModeResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ GetManualMode returns whether the arm is currently in manual mode
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getProperties(com.viam.component.arm.v1.Arm.GetPropertiesRequest,io.grpc.stub.StreamObserver)">
+<h3>getProperties</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getProperties</span><wbr><span class="parameters">(<a href="Arm.GetPropertiesRequest.html" title="class in com.viam.component.arm.v1">Arm.GetPropertiesRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Arm.GetPropertiesResponse.html" title="class in com.viam.component.arm.v1">Arm.GetPropertiesResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ GetProperties returns a message indicating which features the arm supports
  </pre></div>
 </section>
 </li>

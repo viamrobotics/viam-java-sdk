@@ -109,12 +109,67 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#containsCallerAuthMetadata(java.lang.String)" class="member-name-link">containsCallerAuthMetadata</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+ from the caller's auth token by the signaling server.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCallerAuthEntity()" class="member-name-link">getCallerAuthEntity</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+ from the caller's auth token by the signaling server.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCallerAuthEntityBytes()" class="member-name-link">getCallerAuthEntityBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+ from the caller's auth token by the signaling server.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getCallerAuthMetadata()" class="member-name-link">getCallerAuthMetadata</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCallerAuthMetadataCount()" class="member-name-link">getCallerAuthMetadataCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+ from the caller's auth token by the signaling server.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCallerAuthMetadataMap()" class="member-name-link">getCallerAuthMetadataMap</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+ from the caller's auth token by the signaling server.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCallerAuthMetadataOrDefault(java.lang.String,java.lang.String)" class="member-name-link">getCallerAuthMetadataOrDefault</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defaultValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+ from the caller's auth token by the signaling server.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCallerAuthMetadataOrThrow(java.lang.String)" class="member-name-link">getCallerAuthMetadataOrThrow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+ from the caller's auth token by the signaling server.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Timestamp</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDeadline()" class="member-name-link">getDeadline</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -226,6 +281,112 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The deadline.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCallerAuthEntity()">
+<h3>getCallerAuthEntity</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCallerAuthEntity</span>()</div>
+<div class="block"><pre>
+ caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+ from the caller's auth token by the signaling server. Only the caller's identity is
+ forwarded to the answerer, not its bearer token. Empty when the caller was
+ unauthenticated.
+ </pre>
+
+ <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The callerAuthEntity.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCallerAuthEntityBytes()">
+<h3>getCallerAuthEntityBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getCallerAuthEntityBytes</span>()</div>
+<div class="block"><pre>
+ caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+ from the caller's auth token by the signaling server. Only the caller's identity is
+ forwarded to the answerer, not its bearer token. Empty when the caller was
+ unauthenticated.
+ </pre>
+
+ <code>string caller_auth_entity = 4 [json_name = "callerAuthEntity"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for callerAuthEntity.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCallerAuthMetadataCount()">
+<h3>getCallerAuthMetadataCount</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getCallerAuthMetadataCount</span>()</div>
+<div class="block"><pre>
+ caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+ from the caller's auth token by the signaling server.
+ </pre>
+
+ <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="containsCallerAuthMetadata(java.lang.String)">
+<h3>containsCallerAuthMetadata</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">containsCallerAuthMetadata</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block"><pre>
+ caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+ from the caller's auth token by the signaling server.
+ </pre>
+
+ <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getCallerAuthMetadata()">
+<h3>getCallerAuthMetadata</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getCallerAuthMetadata</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">Use <a href="#getCallerAuthMetadataMap()"><code>getCallerAuthMetadataMap()</code></a> instead.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getCallerAuthMetadataMap()">
+<h3>getCallerAuthMetadataMap</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getCallerAuthMetadataMap</span>()</div>
+<div class="block"><pre>
+ caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+ from the caller's auth token by the signaling server.
+ </pre>
+
+ <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getCallerAuthMetadataOrDefault(java.lang.String,java.lang.String)">
+<h3>getCallerAuthMetadataOrDefault</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCallerAuthMetadataOrDefault</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defaultValue)</span></div>
+<div class="block"><pre>
+ caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+ from the caller's auth token by the signaling server.
+ </pre>
+
+ <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getCallerAuthMetadataOrThrow(java.lang.String)">
+<h3>getCallerAuthMetadataOrThrow</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCallerAuthMetadataOrThrow</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block"><pre>
+ caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+ from the caller's auth token by the signaling server.
+ </pre>
+
+ <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code></div>
 </section>
 </li>
 </ul>
