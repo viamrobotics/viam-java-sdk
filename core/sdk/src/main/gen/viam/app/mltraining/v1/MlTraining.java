@@ -371,6 +371,105 @@ public final class MlTraining {
     // @@protoc_insertion_point(enum_scope:viam.app.mltraining.v1.TrainingStatus)
   }
 
+  /**
+   * Protobuf enum {@code viam.app.mltraining.v1.Visibility}
+   */
+  public enum Visibility
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>VISIBILITY_UNSPECIFIED = 0;</code>
+     */
+    VISIBILITY_UNSPECIFIED(0),
+    /**
+     * <code>VISIBILITY_PRIVATE = 1;</code>
+     */
+    VISIBILITY_PRIVATE(1),
+    /**
+     * <code>VISIBILITY_PUBLIC = 2;</code>
+     */
+    VISIBILITY_PUBLIC(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>VISIBILITY_UNSPECIFIED = 0;</code>
+     */
+    public static final int VISIBILITY_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>VISIBILITY_PRIVATE = 1;</code>
+     */
+    public static final int VISIBILITY_PRIVATE_VALUE = 1;
+    /**
+     * <code>VISIBILITY_PUBLIC = 2;</code>
+     */
+    public static final int VISIBILITY_PUBLIC_VALUE = 2;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Visibility valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static Visibility forNumber(int value) {
+      switch (value) {
+        case 0: return VISIBILITY_UNSPECIFIED;
+        case 1: return VISIBILITY_PRIVATE;
+        case 2: return VISIBILITY_PUBLIC;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Visibility>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Visibility> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Visibility>() {
+            @java.lang.Override
+            public Visibility findValueByNumber(int number) {
+              return Visibility.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return VisibilityVerifier.INSTANCE;
+    }
+
+    private static final class VisibilityVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier
+                INSTANCE = new VisibilityVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return Visibility.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private Visibility(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.mltraining.v1.Visibility)
+  }
+
   public interface SubmitTrainingJobRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.SubmitTrainingJobRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -9547,6 +9646,32 @@ java.lang.String defaultValue) {
   public interface ListSupportedContainersRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.ListSupportedContainersRequest)
       com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Optional. Scopes the response to the containers available to this
+     * organization: the Viam-managed catalog plus the org's registered
+     * custom training containers. If unset, only the Viam-managed catalog
+     * is returned.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <pre>
+     * Optional. Scopes the response to the containers available to this
+     * organization: the Viam-managed catalog plus the org's registered
+     * custom training containers. If unset, only the Viam-managed catalog
+     * is returned.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
   }
   /**
    * Protobuf type {@code viam.app.mltraining.v1.ListSupportedContainersRequest}
@@ -9557,7 +9682,91 @@ java.lang.String defaultValue) {
       // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.ListSupportedContainersRequest)
       ListSupportedContainersRequestOrBuilder {
     private ListSupportedContainersRequest() {
+      organizationId_ = "";
     }
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String organizationId_;
+    /**
+     * <pre>
+     * Optional. Scopes the response to the containers available to this
+     * organization: the Viam-managed catalog plus the org's registered
+     * custom training containers. If unset, only the Viam-managed catalog
+     * is returned.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <pre>
+     * Optional. Scopes the response to the containers available to this
+     * organization: the Viam-managed catalog plus the org's registered
+     * custom training containers. If unset, only the Viam-managed catalog
+     * is returned.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <pre>
+     * Optional. Scopes the response to the containers available to this
+     * organization: the Viam-managed catalog plus the org's registered
+     * custom training containers. If unset, only the Viam-managed catalog
+     * is returned.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setOrganizationId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      organizationId_ = value;
+    }
+    /**
+     * <pre>
+     * Optional. Scopes the response to the containers available to this
+     * organization: the Viam-managed catalog plus the org's registered
+     * custom training containers. If unset, only the Viam-managed catalog
+     * is returned.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <pre>
+     * Optional. Scopes the response to the containers available to this
+     * organization: the Viam-managed catalog plus the org's registered
+     * custom training containers. If unset, only the Viam-managed catalog
+     * is returned.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
     public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -9655,6 +9864,90 @@ java.lang.String defaultValue) {
       }
 
 
+      /**
+       * <pre>
+       * Optional. Scopes the response to the containers available to this
+       * organization: the Viam-managed catalog plus the org's registered
+       * custom training containers. If unset, only the Viam-managed catalog
+       * is returned.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <pre>
+       * Optional. Scopes the response to the containers available to this
+       * organization: the Viam-managed catalog plus the org's registered
+       * custom training containers. If unset, only the Viam-managed catalog
+       * is returned.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <pre>
+       * Optional. Scopes the response to the containers available to this
+       * organization: the Viam-managed catalog plus the org's registered
+       * custom training containers. If unset, only the Viam-managed catalog
+       * is returned.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Scopes the response to the containers available to this
+       * organization: the Viam-managed catalog plus the org's registered
+       * custom training containers. If unset, only the Viam-managed catalog
+       * is returned.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Scopes the response to the containers available to this
+       * organization: the Viam-managed catalog plus the org's registered
+       * custom training containers. If unset, only the Viam-managed catalog
+       * is returned.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.ListSupportedContainersRequest)
     }
     @java.lang.Override
@@ -9670,9 +9963,11 @@ java.lang.String defaultValue) {
           return new Builder();
         }
         case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = null;
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "organizationId_",
+            };
             java.lang.String info =
-                "\u0000\u0000";
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -9738,8 +10033,12 @@ java.lang.String defaultValue) {
      * "tf:2.15": Container {
      * key: "tf:2.15"
      * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * framework: Tensorflow
      * description: "Tensorflow 2.15"
      * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * created_on: 2026-01-15T01:30:15.01Z
+     * organization_id: "xyz"
+     * visibility: VISIBILITY_PUBLIC
      * }
      * }
      * </pre>
@@ -9754,8 +10053,12 @@ java.lang.String defaultValue) {
      * "tf:2.15": Container {
      * key: "tf:2.15"
      * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * framework: Tensorflow
      * description: "Tensorflow 2.15"
      * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * created_on: 2026-01-15T01:30:15.01Z
+     * organization_id: "xyz"
+     * visibility: VISIBILITY_PUBLIC
      * }
      * }
      * </pre>
@@ -9777,8 +10080,12 @@ java.lang.String defaultValue) {
      * "tf:2.15": Container {
      * key: "tf:2.15"
      * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * framework: Tensorflow
      * description: "Tensorflow 2.15"
      * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * created_on: 2026-01-15T01:30:15.01Z
+     * organization_id: "xyz"
+     * visibility: VISIBILITY_PUBLIC
      * }
      * }
      * </pre>
@@ -9794,8 +10101,12 @@ java.lang.String defaultValue) {
      * "tf:2.15": Container {
      * key: "tf:2.15"
      * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * framework: Tensorflow
      * description: "Tensorflow 2.15"
      * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * created_on: 2026-01-15T01:30:15.01Z
+     * organization_id: "xyz"
+     * visibility: VISIBILITY_PUBLIC
      * }
      * }
      * </pre>
@@ -9815,8 +10126,12 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue);
      * "tf:2.15": Container {
      * key: "tf:2.15"
      * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * framework: Tensorflow
      * description: "Tensorflow 2.15"
      * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * created_on: 2026-01-15T01:30:15.01Z
+     * organization_id: "xyz"
+     * visibility: VISIBILITY_PUBLIC
      * }
      * }
      * </pre>
@@ -9874,8 +10189,12 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue);
      * "tf:2.15": Container {
      * key: "tf:2.15"
      * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * framework: Tensorflow
      * description: "Tensorflow 2.15"
      * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * created_on: 2026-01-15T01:30:15.01Z
+     * organization_id: "xyz"
+     * visibility: VISIBILITY_PUBLIC
      * }
      * }
      * </pre>
@@ -9904,8 +10223,12 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue);
      * "tf:2.15": Container {
      * key: "tf:2.15"
      * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * framework: Tensorflow
      * description: "Tensorflow 2.15"
      * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * created_on: 2026-01-15T01:30:15.01Z
+     * organization_id: "xyz"
+     * visibility: VISIBILITY_PUBLIC
      * }
      * }
      * </pre>
@@ -9925,8 +10248,12 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue);
      * "tf:2.15": Container {
      * key: "tf:2.15"
      * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * framework: Tensorflow
      * description: "Tensorflow 2.15"
      * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * created_on: 2026-01-15T01:30:15.01Z
+     * organization_id: "xyz"
+     * visibility: VISIBILITY_PUBLIC
      * }
      * }
      * </pre>
@@ -9953,8 +10280,12 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
      * "tf:2.15": Container {
      * key: "tf:2.15"
      * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * framework: Tensorflow
      * description: "Tensorflow 2.15"
      * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * created_on: 2026-01-15T01:30:15.01Z
+     * organization_id: "xyz"
+     * visibility: VISIBILITY_PUBLIC
      * }
      * }
      * </pre>
@@ -9981,8 +10312,12 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
      * "tf:2.15": Container {
      * key: "tf:2.15"
      * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+     * framework: Tensorflow
      * description: "Tensorflow 2.15"
      * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+     * created_on: 2026-01-15T01:30:15.01Z
+     * organization_id: "xyz"
+     * visibility: VISIBILITY_PUBLIC
      * }
      * }
      * </pre>
@@ -10103,8 +10438,12 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
        * "tf:2.15": Container {
        * key: "tf:2.15"
        * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * framework: Tensorflow
        * description: "Tensorflow 2.15"
        * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * created_on: 2026-01-15T01:30:15.01Z
+       * organization_id: "xyz"
+       * visibility: VISIBILITY_PUBLIC
        * }
        * }
        * </pre>
@@ -10131,8 +10470,12 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
        * "tf:2.15": Container {
        * key: "tf:2.15"
        * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * framework: Tensorflow
        * description: "Tensorflow 2.15"
        * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * created_on: 2026-01-15T01:30:15.01Z
+       * organization_id: "xyz"
+       * visibility: VISIBILITY_PUBLIC
        * }
        * }
        * </pre>
@@ -10162,8 +10505,12 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
        * "tf:2.15": Container {
        * key: "tf:2.15"
        * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * framework: Tensorflow
        * description: "Tensorflow 2.15"
        * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * created_on: 2026-01-15T01:30:15.01Z
+       * organization_id: "xyz"
+       * visibility: VISIBILITY_PUBLIC
        * }
        * }
        * </pre>
@@ -10182,8 +10529,12 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
        * "tf:2.15": Container {
        * key: "tf:2.15"
        * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * framework: Tensorflow
        * description: "Tensorflow 2.15"
        * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * created_on: 2026-01-15T01:30:15.01Z
+       * organization_id: "xyz"
+       * visibility: VISIBILITY_PUBLIC
        * }
        * }
        * </pre>
@@ -10209,8 +10560,12 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
        * "tf:2.15": Container {
        * key: "tf:2.15"
        * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * framework: Tensorflow
        * description: "Tensorflow 2.15"
        * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * created_on: 2026-01-15T01:30:15.01Z
+       * organization_id: "xyz"
+       * visibility: VISIBILITY_PUBLIC
        * }
        * }
        * </pre>
@@ -10236,8 +10591,12 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
        * "tf:2.15": Container {
        * key: "tf:2.15"
        * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * framework: Tensorflow
        * description: "Tensorflow 2.15"
        * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * created_on: 2026-01-15T01:30:15.01Z
+       * organization_id: "xyz"
+       * visibility: VISIBILITY_PUBLIC
        * }
        * }
        * </pre>
@@ -10260,8 +10619,12 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
        * "tf:2.15": Container {
        * key: "tf:2.15"
        * uri: "us-docker.pkg.dev/vertex-ai/training/tf-gpu.2-15.py310:latest"
+       * framework: Tensorflow
        * description: "Tensorflow 2.15"
        * eol: { seconds: 1772630400, nanos: 0 } // 2026-03-03T00:00:00Z
+       * created_on: 2026-01-15T01:30:15.01Z
+       * organization_id: "xyz"
+       * visibility: VISIBILITY_PUBLIC
        * }
        * }
        * </pre>
@@ -10355,11 +10718,19 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       com.google.protobuf.MessageLiteOrBuilder {
 
     /**
+     * <pre>
+     * custom container keys are derived from the Docker URI (image:tag)
+     * </pre>
+     *
      * <code>string key = 1 [json_name = "key"];</code>
      * @return The key.
      */
     java.lang.String getKey();
     /**
+     * <pre>
+     * custom container keys are derived from the Docker URI (image:tag)
+     * </pre>
+     *
      * <code>string key = 1 [json_name = "key"];</code>
      * @return The bytes for key.
      */
@@ -10379,11 +10750,19 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         getUriBytes();
 
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>string framework = 3 [json_name = "framework"];</code>
      * @return The framework.
      */
     java.lang.String getFramework();
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>string framework = 3 [json_name = "framework"];</code>
      * @return The bytes for framework.
      */
@@ -10391,11 +10770,19 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         getFrameworkBytes();
 
     /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @return The bytes for description.
      */
@@ -10403,15 +10790,85 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
      * @return Whether the eol field is set.
      */
     boolean hasEol();
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
      * @return The eol.
      */
     com.google.protobuf.Timestamp getEol();
+
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
+     * @return Whether the createdOn field is set.
+     */
+    boolean hasCreatedOn();
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
+     * @return The createdOn.
+     */
+    com.google.protobuf.Timestamp getCreatedOn();
+
+    /**
+     * <pre>
+     * unique id of the container
+     * </pre>
+     *
+     * <code>string id = 8 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * unique id of the container
+     * </pre>
+     *
+     * <code>string id = 8 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * public or private
+     * </pre>
+     *
+     * <code>.viam.app.mltraining.v1.Visibility visibility = 9 [json_name = "visibility"];</code>
+     * @return The enum numeric value on the wire for visibility.
+     */
+    int getVisibilityValue();
+    /**
+     * <pre>
+     * public or private
+     * </pre>
+     *
+     * <code>.viam.app.mltraining.v1.Visibility visibility = 9 [json_name = "visibility"];</code>
+     * @return The visibility.
+     */
+    viam.app.mltraining.v1.MlTraining.Visibility getVisibility();
   }
   /**
    * Protobuf type {@code viam.app.mltraining.v1.Container}
@@ -10426,11 +10883,17 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       uri_ = "";
       framework_ = "";
       description_ = "";
+      organizationId_ = "";
+      id_ = "";
     }
     private int bitField0_;
     public static final int KEY_FIELD_NUMBER = 1;
     private java.lang.String key_;
     /**
+     * <pre>
+     * custom container keys are derived from the Docker URI (image:tag)
+     * </pre>
+     *
      * <code>string key = 1 [json_name = "key"];</code>
      * @return The key.
      */
@@ -10439,6 +10902,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       return key_;
     }
     /**
+     * <pre>
+     * custom container keys are derived from the Docker URI (image:tag)
+     * </pre>
+     *
      * <code>string key = 1 [json_name = "key"];</code>
      * @return The bytes for key.
      */
@@ -10448,6 +10915,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       return com.google.protobuf.ByteString.copyFromUtf8(key_);
     }
     /**
+     * <pre>
+     * custom container keys are derived from the Docker URI (image:tag)
+     * </pre>
+     *
      * <code>string key = 1 [json_name = "key"];</code>
      * @param value The key to set.
      */
@@ -10459,6 +10930,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       key_ = value;
     }
     /**
+     * <pre>
+     * custom container keys are derived from the Docker URI (image:tag)
+     * </pre>
+     *
      * <code>string key = 1 [json_name = "key"];</code>
      */
     private void clearKey() {
@@ -10466,6 +10941,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       key_ = getDefaultInstance().getKey();
     }
     /**
+     * <pre>
+     * custom container keys are derived from the Docker URI (image:tag)
+     * </pre>
+     *
      * <code>string key = 1 [json_name = "key"];</code>
      * @param value The bytes for key to set.
      */
@@ -10527,6 +11006,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
     public static final int FRAMEWORK_FIELD_NUMBER = 3;
     private java.lang.String framework_;
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>string framework = 3 [json_name = "framework"];</code>
      * @return The framework.
      */
@@ -10535,6 +11018,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       return framework_;
     }
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>string framework = 3 [json_name = "framework"];</code>
      * @return The bytes for framework.
      */
@@ -10544,6 +11031,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       return com.google.protobuf.ByteString.copyFromUtf8(framework_);
     }
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>string framework = 3 [json_name = "framework"];</code>
      * @param value The framework to set.
      */
@@ -10555,6 +11046,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       framework_ = value;
     }
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>string framework = 3 [json_name = "framework"];</code>
      */
     private void clearFramework() {
@@ -10562,6 +11057,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       framework_ = getDefaultInstance().getFramework();
     }
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>string framework = 3 [json_name = "framework"];</code>
      * @param value The bytes for framework to set.
      */
@@ -10575,6 +11074,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private java.lang.String description_;
     /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @return The description.
      */
@@ -10583,6 +11086,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       return description_;
     }
     /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @return The bytes for description.
      */
@@ -10592,6 +11099,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       return com.google.protobuf.ByteString.copyFromUtf8(description_);
     }
     /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @param value The description to set.
      */
@@ -10603,6 +11114,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       description_ = value;
     }
     /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      */
     private void clearDescription() {
@@ -10610,6 +11125,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       description_ = getDefaultInstance().getDescription();
     }
     /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
      * <code>string description = 4 [json_name = "description"];</code>
      * @param value The bytes for description to set.
      */
@@ -10623,6 +11142,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
     public static final int EOL_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp eol_;
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
      */
     @java.lang.Override
@@ -10630,6 +11153,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
      */
     @java.lang.Override
@@ -10637,6 +11164,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       return eol_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : eol_;
     }
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
      */
     @java.lang.SuppressWarnings("ReturnValueIgnored")
@@ -10646,6 +11177,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       bitField0_ |= 0x00000001;
     }
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
@@ -10661,11 +11196,242 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       bitField0_ |= 0x00000001;
     }
     /**
+     * <pre>
+     * unset for custom containers
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
      */
     private void clearEol() {
       eol_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 6;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setOrganizationId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int CREATED_ON_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp createdOn_;
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
+     */
+    @java.lang.Override
+    public boolean hasCreatedOn() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedOn() {
+      return createdOn_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setCreatedOn(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      createdOn_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeCreatedOn(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (createdOn_ != null &&
+          createdOn_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        createdOn_ =
+          com.google.protobuf.Timestamp.newBuilder(createdOn_).mergeFrom(value).buildPartial();
+      } else {
+        createdOn_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
+     */
+    private void clearCreatedOn() {
+      createdOn_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int ID_FIELD_NUMBER = 8;
+    private java.lang.String id_;
+    /**
+     * <pre>
+     * unique id of the container
+     * </pre>
+     *
+     * <code>string id = 8 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <pre>
+     * unique id of the container
+     * </pre>
+     *
+     * <code>string id = 8 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <pre>
+     * unique id of the container
+     * </pre>
+     *
+     * <code>string id = 8 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      id_ = value;
+    }
+    /**
+     * <pre>
+     * unique id of the container
+     * </pre>
+     *
+     * <code>string id = 8 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <pre>
+     * unique id of the container
+     * </pre>
+     *
+     * <code>string id = 8 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static final int VISIBILITY_FIELD_NUMBER = 9;
+    private int visibility_;
+    /**
+     * <pre>
+     * public or private
+     * </pre>
+     *
+     * <code>.viam.app.mltraining.v1.Visibility visibility = 9 [json_name = "visibility"];</code>
+     * @return The enum numeric value on the wire for visibility.
+     */
+    @java.lang.Override
+    public int getVisibilityValue() {
+      return visibility_;
+    }
+    /**
+     * <pre>
+     * public or private
+     * </pre>
+     *
+     * <code>.viam.app.mltraining.v1.Visibility visibility = 9 [json_name = "visibility"];</code>
+     * @return The visibility.
+     */
+    @java.lang.Override
+    public viam.app.mltraining.v1.MlTraining.Visibility getVisibility() {
+      viam.app.mltraining.v1.MlTraining.Visibility result = viam.app.mltraining.v1.MlTraining.Visibility.forNumber(visibility_);
+      return result == null ? viam.app.mltraining.v1.MlTraining.Visibility.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * public or private
+     * </pre>
+     *
+     * <code>.viam.app.mltraining.v1.Visibility visibility = 9 [json_name = "visibility"];</code>
+     * @param value The enum numeric value on the wire for visibility to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setVisibilityValue(int value) {
+        visibility_ = value;
+    }
+    /**
+     * <pre>
+     * public or private
+     * </pre>
+     *
+     * <code>.viam.app.mltraining.v1.Visibility visibility = 9 [json_name = "visibility"];</code>
+     * @param value The visibility to set.
+     */
+    private void setVisibility(viam.app.mltraining.v1.MlTraining.Visibility value) {
+      visibility_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * public or private
+     * </pre>
+     *
+     * <code>.viam.app.mltraining.v1.Visibility visibility = 9 [json_name = "visibility"];</code>
+     */
+    private void clearVisibility() {
+
+      visibility_ = 0;
     }
 
     public static viam.app.mltraining.v1.MlTraining.Container parseFrom(
@@ -10766,6 +11532,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
 
 
       /**
+       * <pre>
+       * custom container keys are derived from the Docker URI (image:tag)
+       * </pre>
+       *
        * <code>string key = 1 [json_name = "key"];</code>
        * @return The key.
        */
@@ -10774,6 +11544,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return instance.getKey();
       }
       /**
+       * <pre>
+       * custom container keys are derived from the Docker URI (image:tag)
+       * </pre>
+       *
        * <code>string key = 1 [json_name = "key"];</code>
        * @return The bytes for key.
        */
@@ -10783,6 +11557,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return instance.getKeyBytes();
       }
       /**
+       * <pre>
+       * custom container keys are derived from the Docker URI (image:tag)
+       * </pre>
+       *
        * <code>string key = 1 [json_name = "key"];</code>
        * @param value The key to set.
        * @return This builder for chaining.
@@ -10794,6 +11572,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * custom container keys are derived from the Docker URI (image:tag)
+       * </pre>
+       *
        * <code>string key = 1 [json_name = "key"];</code>
        * @return This builder for chaining.
        */
@@ -10803,6 +11585,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * custom container keys are derived from the Docker URI (image:tag)
+       * </pre>
+       *
        * <code>string key = 1 [json_name = "key"];</code>
        * @param value The bytes for key to set.
        * @return This builder for chaining.
@@ -10864,6 +11650,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       }
 
       /**
+       * <pre>
+       * unset for custom containers
+       * </pre>
+       *
        * <code>string framework = 3 [json_name = "framework"];</code>
        * @return The framework.
        */
@@ -10872,6 +11662,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return instance.getFramework();
       }
       /**
+       * <pre>
+       * unset for custom containers
+       * </pre>
+       *
        * <code>string framework = 3 [json_name = "framework"];</code>
        * @return The bytes for framework.
        */
@@ -10881,6 +11675,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return instance.getFrameworkBytes();
       }
       /**
+       * <pre>
+       * unset for custom containers
+       * </pre>
+       *
        * <code>string framework = 3 [json_name = "framework"];</code>
        * @param value The framework to set.
        * @return This builder for chaining.
@@ -10892,6 +11690,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * unset for custom containers
+       * </pre>
+       *
        * <code>string framework = 3 [json_name = "framework"];</code>
        * @return This builder for chaining.
        */
@@ -10901,6 +11703,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * unset for custom containers
+       * </pre>
+       *
        * <code>string framework = 3 [json_name = "framework"];</code>
        * @param value The bytes for framework to set.
        * @return This builder for chaining.
@@ -10913,6 +11719,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       }
 
       /**
+       * <pre>
+       * will serve as display name
+       * </pre>
+       *
        * <code>string description = 4 [json_name = "description"];</code>
        * @return The description.
        */
@@ -10921,6 +11731,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return instance.getDescription();
       }
       /**
+       * <pre>
+       * will serve as display name
+       * </pre>
+       *
        * <code>string description = 4 [json_name = "description"];</code>
        * @return The bytes for description.
        */
@@ -10930,6 +11744,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return instance.getDescriptionBytes();
       }
       /**
+       * <pre>
+       * will serve as display name
+       * </pre>
+       *
        * <code>string description = 4 [json_name = "description"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -10941,6 +11759,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * will serve as display name
+       * </pre>
+       *
        * <code>string description = 4 [json_name = "description"];</code>
        * @return This builder for chaining.
        */
@@ -10950,6 +11772,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * will serve as display name
+       * </pre>
+       *
        * <code>string description = 4 [json_name = "description"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -10962,6 +11788,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
       }
 
       /**
+       * <pre>
+       * unset for custom containers
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
        */
       @java.lang.Override
@@ -10969,6 +11799,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return instance.hasEol();
       }
       /**
+       * <pre>
+       * unset for custom containers
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
        */
       @java.lang.Override
@@ -10976,6 +11810,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return instance.getEol();
       }
       /**
+       * <pre>
+       * unset for custom containers
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
        */
       public Builder setEol(com.google.protobuf.Timestamp value) {
@@ -10984,6 +11822,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return this;
         }
       /**
+       * <pre>
+       * unset for custom containers
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
        */
       public Builder setEol(
@@ -10993,6 +11835,10 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * unset for custom containers
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
        */
       public Builder mergeEol(com.google.protobuf.Timestamp value) {
@@ -11001,10 +11847,246 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * unset for custom containers
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp eol = 5 [json_name = "eol"];</code>
        */
       public Builder clearEol() {  copyOnWrite();
         instance.clearEol();
+        return this;
+      }
+
+      /**
+       * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 6 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
+       */
+      @java.lang.Override
+      public boolean hasCreatedOn() {
+        return instance.hasCreatedOn();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getCreatedOn() {
+        return instance.getCreatedOn();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
+       */
+      public Builder setCreatedOn(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setCreatedOn(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
+       */
+      public Builder setCreatedOn(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCreatedOn(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
+       */
+      public Builder mergeCreatedOn(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeCreatedOn(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 7 [json_name = "createdOn"];</code>
+       */
+      public Builder clearCreatedOn() {  copyOnWrite();
+        instance.clearCreatedOn();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * unique id of the container
+       * </pre>
+       *
+       * <code>string id = 8 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <pre>
+       * unique id of the container
+       * </pre>
+       *
+       * <code>string id = 8 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <pre>
+       * unique id of the container
+       * </pre>
+       *
+       * <code>string id = 8 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * unique id of the container
+       * </pre>
+       *
+       * <code>string id = 8 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique id of the container
+       * </pre>
+       *
+       * <code>string id = 8 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * public or private
+       * </pre>
+       *
+       * <code>.viam.app.mltraining.v1.Visibility visibility = 9 [json_name = "visibility"];</code>
+       * @return The enum numeric value on the wire for visibility.
+       */
+      @java.lang.Override
+      public int getVisibilityValue() {
+        return instance.getVisibilityValue();
+      }
+      /**
+       * <pre>
+       * public or private
+       * </pre>
+       *
+       * <code>.viam.app.mltraining.v1.Visibility visibility = 9 [json_name = "visibility"];</code>
+       * @param value The visibility to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVisibilityValue(int value) {
+        copyOnWrite();
+        instance.setVisibilityValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * public or private
+       * </pre>
+       *
+       * <code>.viam.app.mltraining.v1.Visibility visibility = 9 [json_name = "visibility"];</code>
+       * @return The visibility.
+       */
+      @java.lang.Override
+      public viam.app.mltraining.v1.MlTraining.Visibility getVisibility() {
+        return instance.getVisibility();
+      }
+      /**
+       * <pre>
+       * public or private
+       * </pre>
+       *
+       * <code>.viam.app.mltraining.v1.Visibility visibility = 9 [json_name = "visibility"];</code>
+       * @param value The enum numeric value on the wire for visibility to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setVisibility(viam.app.mltraining.v1.MlTraining.Visibility value) {
+        copyOnWrite();
+        instance.setVisibility(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * public or private
+       * </pre>
+       *
+       * <code>.viam.app.mltraining.v1.Visibility visibility = 9 [json_name = "visibility"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVisibility() {
+        copyOnWrite();
+        instance.clearVisibility();
         return this;
       }
 
@@ -11030,10 +12112,14 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
               "framework_",
               "description_",
               "eol_",
+              "organizationId_",
+              "createdOn_",
+              "id_",
+              "visibility_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u0208\u0004\u0208\u0005\u1009\u0000";
+                "\u0000\t\u0000\u0001\u0001\t\t\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u0208" +
+                "\u0004\u0208\u0005\u1009\u0000\u0006\u0208\u0007\u1009\u0001\b\u0208\t\f";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
