@@ -3843,6 +3843,28 @@ public final class Camera {
      * @return The extrinsicParameters.
      */
     com.viam.component.camera.v1.Camera.ExtrinsicParameters getExtrinsicParameters();
+
+    /**
+     * <pre>
+     * Name of the reference frame that points returned by GetPointCloud are expressed in
+     * An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+     * </pre>
+     *
+     * <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code>
+     * @return The defaultReferenceFrame.
+     */
+    java.lang.String getDefaultReferenceFrame();
+    /**
+     * <pre>
+     * Name of the reference frame that points returned by GetPointCloud are expressed in
+     * An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+     * </pre>
+     *
+     * <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code>
+     * @return The bytes for defaultReferenceFrame.
+     */
+    com.google.protobuf.ByteString
+        getDefaultReferenceFrameBytes();
   }
   /**
    * Protobuf type {@code viam.component.camera.v1.GetPropertiesResponse}
@@ -3854,6 +3876,7 @@ public final class Camera {
       GetPropertiesResponseOrBuilder {
     private GetPropertiesResponse() {
       mimeTypes_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      defaultReferenceFrame_ = "";
     }
     private int bitField0_;
     public static final int SUPPORTS_PCD_FIELD_NUMBER = 1;
@@ -4302,6 +4325,79 @@ public final class Camera {
     private void clearExtrinsicParameters() {
       extrinsicParameters_ = null;
       bitField0_ = (bitField0_ & ~0x00000008);
+    }
+
+    public static final int DEFAULT_REFERENCE_FRAME_FIELD_NUMBER = 7;
+    private java.lang.String defaultReferenceFrame_;
+    /**
+     * <pre>
+     * Name of the reference frame that points returned by GetPointCloud are expressed in
+     * An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+     * </pre>
+     *
+     * <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code>
+     * @return The defaultReferenceFrame.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultReferenceFrame() {
+      return defaultReferenceFrame_;
+    }
+    /**
+     * <pre>
+     * Name of the reference frame that points returned by GetPointCloud are expressed in
+     * An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+     * </pre>
+     *
+     * <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code>
+     * @return The bytes for defaultReferenceFrame.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultReferenceFrameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(defaultReferenceFrame_);
+    }
+    /**
+     * <pre>
+     * Name of the reference frame that points returned by GetPointCloud are expressed in
+     * An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+     * </pre>
+     *
+     * <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code>
+     * @param value The defaultReferenceFrame to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDefaultReferenceFrame(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      defaultReferenceFrame_ = value;
+    }
+    /**
+     * <pre>
+     * Name of the reference frame that points returned by GetPointCloud are expressed in
+     * An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+     * </pre>
+     *
+     * <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code>
+     */
+    private void clearDefaultReferenceFrame() {
+
+      defaultReferenceFrame_ = getDefaultInstance().getDefaultReferenceFrame();
+    }
+    /**
+     * <pre>
+     * Name of the reference frame that points returned by GetPointCloud are expressed in
+     * An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+     * </pre>
+     *
+     * <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code>
+     * @param value The bytes for defaultReferenceFrame to set.
+     */
+    private void setDefaultReferenceFrameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      defaultReferenceFrame_ = value.toStringUtf8();
+
     }
 
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(
@@ -4864,6 +4960,80 @@ public final class Camera {
         return this;
       }
 
+      /**
+       * <pre>
+       * Name of the reference frame that points returned by GetPointCloud are expressed in
+       * An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+       * </pre>
+       *
+       * <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code>
+       * @return The defaultReferenceFrame.
+       */
+      @java.lang.Override
+      public java.lang.String getDefaultReferenceFrame() {
+        return instance.getDefaultReferenceFrame();
+      }
+      /**
+       * <pre>
+       * Name of the reference frame that points returned by GetPointCloud are expressed in
+       * An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+       * </pre>
+       *
+       * <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code>
+       * @return The bytes for defaultReferenceFrame.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDefaultReferenceFrameBytes() {
+        return instance.getDefaultReferenceFrameBytes();
+      }
+      /**
+       * <pre>
+       * Name of the reference frame that points returned by GetPointCloud are expressed in
+       * An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+       * </pre>
+       *
+       * <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code>
+       * @param value The defaultReferenceFrame to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultReferenceFrame(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDefaultReferenceFrame(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the reference frame that points returned by GetPointCloud are expressed in
+       * An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+       * </pre>
+       *
+       * <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultReferenceFrame() {
+        copyOnWrite();
+        instance.clearDefaultReferenceFrame();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the reference frame that points returned by GetPointCloud are expressed in
+       * An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+       * </pre>
+       *
+       * <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code>
+       * @param value The bytes for defaultReferenceFrame to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultReferenceFrameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDefaultReferenceFrameBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetPropertiesResponse)
     }
     @java.lang.Override
@@ -4887,10 +5057,12 @@ public final class Camera {
               "mimeTypes_",
               "frameRate_",
               "extrinsicParameters_",
+              "defaultReferenceFrame_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0001\u0000\u0001\u0007\u0002\u1009" +
-                "\u0000\u0003\u1009\u0001\u0004\u021a\u0005\u1001\u0002\u0006\u1009\u0003";
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0001\u0000\u0001\u0007\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001\u0004\u021a\u0005\u1001\u0002\u0006\u1009\u0003\u0007\u0208" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {

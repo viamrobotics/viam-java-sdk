@@ -186,7 +186,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=80
+     *     See service/motion/v1/motion.proto;l=90
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -197,7 +197,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=80
+     *     See service/motion/v1/motion.proto;l=90
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -1756,7 +1756,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnMapRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=102
+     *     See service/motion/v1/motion.proto;l=112
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -1767,7 +1767,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 3 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnMapRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=102
+     *     See service/motion/v1/motion.proto;l=112
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -1779,7 +1779,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnMapRequest.slam_service_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=104
+     *     See service/motion/v1/motion.proto;l=114
      * @return Whether the slamServiceNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasSlamServiceNameDeprecated();
@@ -1790,7 +1790,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName slam_service_name_deprecated = 4 [json_name = "slamServiceNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnMapRequest.slam_service_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=104
+     *     See service/motion/v1/motion.proto;l=114
      * @return The slamServiceNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getSlamServiceNameDeprecated();
@@ -3868,14 +3868,14 @@ public final class Motion {
     /**
      * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.ObstacleDetector.vision_service_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=126
+     *     See service/motion/v1/motion.proto;l=136
      * @return Whether the visionServiceDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasVisionServiceDeprecated();
     /**
      * <code>.viam.common.v1.ResourceName vision_service_deprecated = 1 [json_name = "visionServiceDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.ObstacleDetector.vision_service_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=126
+     *     See service/motion/v1/motion.proto;l=136
      * @return The visionServiceDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getVisionServiceDeprecated();
@@ -3883,14 +3883,14 @@ public final class Motion {
     /**
      * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.ObstacleDetector.camera_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=127
+     *     See service/motion/v1/motion.proto;l=137
      * @return Whether the cameraDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasCameraDeprecated();
     /**
      * <code>.viam.common.v1.ResourceName camera_deprecated = 2 [json_name = "cameraDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.ObstacleDetector.camera_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=127
+     *     See service/motion/v1/motion.proto;l=137
      * @return The cameraDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getCameraDeprecated();
@@ -5686,7 +5686,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnGlobeRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=155
+     *     See service/motion/v1/motion.proto;l=165
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -5697,7 +5697,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 4 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnGlobeRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=155
+     *     See service/motion/v1/motion.proto;l=165
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -5709,7 +5709,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnGlobeRequest.movement_sensor_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=157
+     *     See service/motion/v1/motion.proto;l=167
      * @return Whether the movementSensorNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasMovementSensorNameDeprecated();
@@ -5720,7 +5720,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName movement_sensor_name_deprecated = 5 [json_name = "movementSensorNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.MoveOnGlobeRequest.movement_sensor_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=157
+     *     See service/motion/v1/motion.proto;l=167
      * @return The movementSensorNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getMovementSensorNameDeprecated();
@@ -8237,7 +8237,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.GetPoseRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=183
+     *     See service/motion/v1/motion.proto;l=193
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -8248,7 +8248,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.GetPoseRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=183
+     *     See service/motion/v1/motion.proto;l=193
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -9846,7 +9846,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.StopPlanRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=207
+     *     See service/motion/v1/motion.proto;l=217
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -9857,7 +9857,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.StopPlanRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=207
+     *     See service/motion/v1/motion.proto;l=217
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -11995,7 +11995,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.GetPlanRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=241
+     *     See service/motion/v1/motion.proto;l=251
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -12006,7 +12006,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.GetPlanRequest.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=241
+     *     See service/motion/v1/motion.proto;l=251
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -15916,6 +15916,31 @@ public final class Motion {
      * @return The orientationToleranceDegs.
      */
     float getOrientationToleranceDegs();
+
+    /**
+     * <pre>
+     * When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+     * component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+     * container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+     * matter. Defaults to false, measuring the full orientation.
+     * </pre>
+     *
+     * <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code>
+     * @return Whether the ignoreTheta field is set.
+     */
+    boolean hasIgnoreTheta();
+    /**
+     * <pre>
+     * When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+     * component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+     * container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+     * matter. Defaults to false, measuring the full orientation.
+     * </pre>
+     *
+     * <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code>
+     * @return The ignoreTheta.
+     */
+    boolean getIgnoreTheta();
   }
   /**
    * <pre>
@@ -15981,6 +16006,68 @@ public final class Motion {
     private void clearOrientationToleranceDegs() {
       bitField0_ = (bitField0_ & ~0x00000001);
       orientationToleranceDegs_ = 0F;
+    }
+
+    public static final int IGNORE_THETA_FIELD_NUMBER = 2;
+    private boolean ignoreTheta_;
+    /**
+     * <pre>
+     * When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+     * component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+     * container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+     * matter. Defaults to false, measuring the full orientation.
+     * </pre>
+     *
+     * <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code>
+     * @return Whether the ignoreTheta field is set.
+     */
+    @java.lang.Override
+    public boolean hasIgnoreTheta() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+     * component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+     * container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+     * matter. Defaults to false, measuring the full orientation.
+     * </pre>
+     *
+     * <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code>
+     * @return The ignoreTheta.
+     */
+    @java.lang.Override
+    public boolean getIgnoreTheta() {
+      return ignoreTheta_;
+    }
+    /**
+     * <pre>
+     * When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+     * component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+     * container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+     * matter. Defaults to false, measuring the full orientation.
+     * </pre>
+     *
+     * <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code>
+     * @param value The ignoreTheta to set.
+     */
+    private void setIgnoreTheta(boolean value) {
+      bitField0_ |= 0x00000002;
+      ignoreTheta_ = value;
+    }
+    /**
+     * <pre>
+     * When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+     * component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+     * container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+     * matter. Defaults to false, measuring the full orientation.
+     * </pre>
+     *
+     * <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code>
+     */
+    private void clearIgnoreTheta() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      ignoreTheta_ = false;
     }
 
     public static com.viam.service.motion.v1.Motion.OrientationConstraint parseFrom(
@@ -16137,6 +16224,70 @@ public final class Motion {
         return this;
       }
 
+      /**
+       * <pre>
+       * When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+       * component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+       * container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+       * matter. Defaults to false, measuring the full orientation.
+       * </pre>
+       *
+       * <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code>
+       * @return Whether the ignoreTheta field is set.
+       */
+      @java.lang.Override
+      public boolean hasIgnoreTheta() {
+        return instance.hasIgnoreTheta();
+      }
+      /**
+       * <pre>
+       * When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+       * component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+       * container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+       * matter. Defaults to false, measuring the full orientation.
+       * </pre>
+       *
+       * <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code>
+       * @return The ignoreTheta.
+       */
+      @java.lang.Override
+      public boolean getIgnoreTheta() {
+        return instance.getIgnoreTheta();
+      }
+      /**
+       * <pre>
+       * When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+       * component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+       * container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+       * matter. Defaults to false, measuring the full orientation.
+       * </pre>
+       *
+       * <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code>
+       * @param value The ignoreTheta to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIgnoreTheta(boolean value) {
+        copyOnWrite();
+        instance.setIgnoreTheta(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+       * component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+       * container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+       * matter. Defaults to false, measuring the full orientation.
+       * </pre>
+       *
+       * <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIgnoreTheta() {
+        copyOnWrite();
+        instance.clearIgnoreTheta();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.service.motion.v1.OrientationConstraint)
     }
     @java.lang.Override
@@ -16155,9 +16306,11 @@ public final class Motion {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
               "orientationToleranceDegs_",
+              "ignoreTheta_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1001\u0000";
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1001\u0000\u0002" +
+                "\u1007\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -17997,7 +18150,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.PlanStatusWithID.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=333
+     *     See service/motion/v1/motion.proto;l=348
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -18008,7 +18161,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.PlanStatusWithID.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=333
+     *     See service/motion/v1/motion.proto;l=348
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -19746,7 +19899,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.Plan.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=384
+     *     See service/motion/v1/motion.proto;l=399
      * @return Whether the componentNameDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasComponentNameDeprecated();
@@ -19757,7 +19910,7 @@ public final class Motion {
      *
      * <code>.viam.common.v1.ResourceName component_name_deprecated = 2 [json_name = "componentNameDeprecated", deprecated = true];</code>
      * @deprecated viam.service.motion.v1.Plan.component_name_deprecated is deprecated.
-     *     See service/motion/v1/motion.proto;l=384
+     *     See service/motion/v1/motion.proto;l=399
      * @return The componentNameDeprecated.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.ResourceName getComponentNameDeprecated();
@@ -21765,6 +21918,2801 @@ com.viam.service.motion.v1.Motion.ComponentState defaultValue) {
     private static volatile com.google.protobuf.Parser<ComponentState> PARSER;
 
     public static com.google.protobuf.Parser<ComponentState> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface TempStreamOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.motion.v1.TempStreamOptions)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * How much trajectory the motion service tries to keep buffered on the arm's side.
+     * </pre>
+     *
+     * <code>optional int32 arm_side_target_runway_ms = 1 [json_name = "armSideTargetRunwayMs"];</code>
+     * @return Whether the armSideTargetRunwayMs field is set.
+     */
+    boolean hasArmSideTargetRunwayMs();
+    /**
+     * <pre>
+     * How much trajectory the motion service tries to keep buffered on the arm's side.
+     * </pre>
+     *
+     * <code>optional int32 arm_side_target_runway_ms = 1 [json_name = "armSideTargetRunwayMs"];</code>
+     * @return The armSideTargetRunwayMs.
+     */
+    int getArmSideTargetRunwayMs();
+
+    /**
+     * <pre>
+     * How often the motion service aims to top up the arm's buffered runway.
+     * </pre>
+     *
+     * <code>optional int32 send_to_arm_interval_ms = 2 [json_name = "sendToArmIntervalMs"];</code>
+     * @return Whether the sendToArmIntervalMs field is set.
+     */
+    boolean hasSendToArmIntervalMs();
+    /**
+     * <pre>
+     * How often the motion service aims to top up the arm's buffered runway.
+     * </pre>
+     *
+     * <code>optional int32 send_to_arm_interval_ms = 2 [json_name = "sendToArmIntervalMs"];</code>
+     * @return The sendToArmIntervalMs.
+     */
+    int getSendToArmIntervalMs();
+
+    /**
+     * <pre>
+     * Size of the detailed diagnostics window.
+     * </pre>
+     *
+     * <code>optional int32 diagnostics_window_secs = 3 [json_name = "diagnosticsWindowSecs"];</code>
+     * @return Whether the diagnosticsWindowSecs field is set.
+     */
+    boolean hasDiagnosticsWindowSecs();
+    /**
+     * <pre>
+     * Size of the detailed diagnostics window.
+     * </pre>
+     *
+     * <code>optional int32 diagnostics_window_secs = 3 [json_name = "diagnosticsWindowSecs"];</code>
+     * @return The diagnosticsWindowSecs.
+     */
+    int getDiagnosticsWindowSecs();
+
+    /**
+     * <pre>
+     * Kinematic limits for the session's trajectory.
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions move_options = 4 [json_name = "moveOptions"];</code>
+     * @return Whether the moveOptions field is set.
+     */
+    boolean hasMoveOptions();
+    /**
+     * <pre>
+     * Kinematic limits for the session's trajectory.
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions move_options = 4 [json_name = "moveOptions"];</code>
+     * @return The moveOptions.
+     */
+    com.viam.component.arm.v1.Arm.MoveOptions getMoveOptions();
+  }
+  /**
+   * Protobuf type {@code viam.service.motion.v1.TempStreamOptions}
+   */
+  public  static final class TempStreamOptions extends
+      com.google.protobuf.GeneratedMessageLite<
+          TempStreamOptions, TempStreamOptions.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.motion.v1.TempStreamOptions)
+      TempStreamOptionsOrBuilder {
+    private TempStreamOptions() {
+    }
+    private int bitField0_;
+    public static final int ARM_SIDE_TARGET_RUNWAY_MS_FIELD_NUMBER = 1;
+    private int armSideTargetRunwayMs_;
+    /**
+     * <pre>
+     * How much trajectory the motion service tries to keep buffered on the arm's side.
+     * </pre>
+     *
+     * <code>optional int32 arm_side_target_runway_ms = 1 [json_name = "armSideTargetRunwayMs"];</code>
+     * @return Whether the armSideTargetRunwayMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasArmSideTargetRunwayMs() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * How much trajectory the motion service tries to keep buffered on the arm's side.
+     * </pre>
+     *
+     * <code>optional int32 arm_side_target_runway_ms = 1 [json_name = "armSideTargetRunwayMs"];</code>
+     * @return The armSideTargetRunwayMs.
+     */
+    @java.lang.Override
+    public int getArmSideTargetRunwayMs() {
+      return armSideTargetRunwayMs_;
+    }
+    /**
+     * <pre>
+     * How much trajectory the motion service tries to keep buffered on the arm's side.
+     * </pre>
+     *
+     * <code>optional int32 arm_side_target_runway_ms = 1 [json_name = "armSideTargetRunwayMs"];</code>
+     * @param value The armSideTargetRunwayMs to set.
+     */
+    private void setArmSideTargetRunwayMs(int value) {
+      bitField0_ |= 0x00000001;
+      armSideTargetRunwayMs_ = value;
+    }
+    /**
+     * <pre>
+     * How much trajectory the motion service tries to keep buffered on the arm's side.
+     * </pre>
+     *
+     * <code>optional int32 arm_side_target_runway_ms = 1 [json_name = "armSideTargetRunwayMs"];</code>
+     */
+    private void clearArmSideTargetRunwayMs() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      armSideTargetRunwayMs_ = 0;
+    }
+
+    public static final int SEND_TO_ARM_INTERVAL_MS_FIELD_NUMBER = 2;
+    private int sendToArmIntervalMs_;
+    /**
+     * <pre>
+     * How often the motion service aims to top up the arm's buffered runway.
+     * </pre>
+     *
+     * <code>optional int32 send_to_arm_interval_ms = 2 [json_name = "sendToArmIntervalMs"];</code>
+     * @return Whether the sendToArmIntervalMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasSendToArmIntervalMs() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * How often the motion service aims to top up the arm's buffered runway.
+     * </pre>
+     *
+     * <code>optional int32 send_to_arm_interval_ms = 2 [json_name = "sendToArmIntervalMs"];</code>
+     * @return The sendToArmIntervalMs.
+     */
+    @java.lang.Override
+    public int getSendToArmIntervalMs() {
+      return sendToArmIntervalMs_;
+    }
+    /**
+     * <pre>
+     * How often the motion service aims to top up the arm's buffered runway.
+     * </pre>
+     *
+     * <code>optional int32 send_to_arm_interval_ms = 2 [json_name = "sendToArmIntervalMs"];</code>
+     * @param value The sendToArmIntervalMs to set.
+     */
+    private void setSendToArmIntervalMs(int value) {
+      bitField0_ |= 0x00000002;
+      sendToArmIntervalMs_ = value;
+    }
+    /**
+     * <pre>
+     * How often the motion service aims to top up the arm's buffered runway.
+     * </pre>
+     *
+     * <code>optional int32 send_to_arm_interval_ms = 2 [json_name = "sendToArmIntervalMs"];</code>
+     */
+    private void clearSendToArmIntervalMs() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      sendToArmIntervalMs_ = 0;
+    }
+
+    public static final int DIAGNOSTICS_WINDOW_SECS_FIELD_NUMBER = 3;
+    private int diagnosticsWindowSecs_;
+    /**
+     * <pre>
+     * Size of the detailed diagnostics window.
+     * </pre>
+     *
+     * <code>optional int32 diagnostics_window_secs = 3 [json_name = "diagnosticsWindowSecs"];</code>
+     * @return Whether the diagnosticsWindowSecs field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiagnosticsWindowSecs() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Size of the detailed diagnostics window.
+     * </pre>
+     *
+     * <code>optional int32 diagnostics_window_secs = 3 [json_name = "diagnosticsWindowSecs"];</code>
+     * @return The diagnosticsWindowSecs.
+     */
+    @java.lang.Override
+    public int getDiagnosticsWindowSecs() {
+      return diagnosticsWindowSecs_;
+    }
+    /**
+     * <pre>
+     * Size of the detailed diagnostics window.
+     * </pre>
+     *
+     * <code>optional int32 diagnostics_window_secs = 3 [json_name = "diagnosticsWindowSecs"];</code>
+     * @param value The diagnosticsWindowSecs to set.
+     */
+    private void setDiagnosticsWindowSecs(int value) {
+      bitField0_ |= 0x00000004;
+      diagnosticsWindowSecs_ = value;
+    }
+    /**
+     * <pre>
+     * Size of the detailed diagnostics window.
+     * </pre>
+     *
+     * <code>optional int32 diagnostics_window_secs = 3 [json_name = "diagnosticsWindowSecs"];</code>
+     */
+    private void clearDiagnosticsWindowSecs() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      diagnosticsWindowSecs_ = 0;
+    }
+
+    public static final int MOVE_OPTIONS_FIELD_NUMBER = 4;
+    private com.viam.component.arm.v1.Arm.MoveOptions moveOptions_;
+    /**
+     * <pre>
+     * Kinematic limits for the session's trajectory.
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions move_options = 4 [json_name = "moveOptions"];</code>
+     */
+    @java.lang.Override
+    public boolean hasMoveOptions() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Kinematic limits for the session's trajectory.
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions move_options = 4 [json_name = "moveOptions"];</code>
+     */
+    @java.lang.Override
+    public com.viam.component.arm.v1.Arm.MoveOptions getMoveOptions() {
+      return moveOptions_ == null ? com.viam.component.arm.v1.Arm.MoveOptions.getDefaultInstance() : moveOptions_;
+    }
+    /**
+     * <pre>
+     * Kinematic limits for the session's trajectory.
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions move_options = 4 [json_name = "moveOptions"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMoveOptions(com.viam.component.arm.v1.Arm.MoveOptions value) {
+      value.getClass();  // minimal bytecode null check
+      moveOptions_ = value;
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * Kinematic limits for the session's trajectory.
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions move_options = 4 [json_name = "moveOptions"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeMoveOptions(com.viam.component.arm.v1.Arm.MoveOptions value) {
+      value.getClass();  // minimal bytecode null check
+      if (moveOptions_ != null &&
+          moveOptions_ != com.viam.component.arm.v1.Arm.MoveOptions.getDefaultInstance()) {
+        moveOptions_ =
+          com.viam.component.arm.v1.Arm.MoveOptions.newBuilder(moveOptions_).mergeFrom(value).buildPartial();
+      } else {
+        moveOptions_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * Kinematic limits for the session's trajectory.
+     * </pre>
+     *
+     * <code>optional .viam.component.arm.v1.MoveOptions move_options = 4 [json_name = "moveOptions"];</code>
+     */
+    private void clearMoveOptions() {
+      moveOptions_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+    }
+
+    public static com.viam.service.motion.v1.Motion.TempStreamOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.motion.v1.Motion.TempStreamOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.motion.v1.Motion.TempStreamOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.motion.v1.Motion.TempStreamOptions prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.motion.v1.TempStreamOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.motion.v1.Motion.TempStreamOptions, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.motion.v1.TempStreamOptions)
+        com.viam.service.motion.v1.Motion.TempStreamOptionsOrBuilder {
+      // Construct using com.viam.service.motion.v1.Motion.TempStreamOptions.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * How much trajectory the motion service tries to keep buffered on the arm's side.
+       * </pre>
+       *
+       * <code>optional int32 arm_side_target_runway_ms = 1 [json_name = "armSideTargetRunwayMs"];</code>
+       * @return Whether the armSideTargetRunwayMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasArmSideTargetRunwayMs() {
+        return instance.hasArmSideTargetRunwayMs();
+      }
+      /**
+       * <pre>
+       * How much trajectory the motion service tries to keep buffered on the arm's side.
+       * </pre>
+       *
+       * <code>optional int32 arm_side_target_runway_ms = 1 [json_name = "armSideTargetRunwayMs"];</code>
+       * @return The armSideTargetRunwayMs.
+       */
+      @java.lang.Override
+      public int getArmSideTargetRunwayMs() {
+        return instance.getArmSideTargetRunwayMs();
+      }
+      /**
+       * <pre>
+       * How much trajectory the motion service tries to keep buffered on the arm's side.
+       * </pre>
+       *
+       * <code>optional int32 arm_side_target_runway_ms = 1 [json_name = "armSideTargetRunwayMs"];</code>
+       * @param value The armSideTargetRunwayMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setArmSideTargetRunwayMs(int value) {
+        copyOnWrite();
+        instance.setArmSideTargetRunwayMs(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * How much trajectory the motion service tries to keep buffered on the arm's side.
+       * </pre>
+       *
+       * <code>optional int32 arm_side_target_runway_ms = 1 [json_name = "armSideTargetRunwayMs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearArmSideTargetRunwayMs() {
+        copyOnWrite();
+        instance.clearArmSideTargetRunwayMs();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * How often the motion service aims to top up the arm's buffered runway.
+       * </pre>
+       *
+       * <code>optional int32 send_to_arm_interval_ms = 2 [json_name = "sendToArmIntervalMs"];</code>
+       * @return Whether the sendToArmIntervalMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasSendToArmIntervalMs() {
+        return instance.hasSendToArmIntervalMs();
+      }
+      /**
+       * <pre>
+       * How often the motion service aims to top up the arm's buffered runway.
+       * </pre>
+       *
+       * <code>optional int32 send_to_arm_interval_ms = 2 [json_name = "sendToArmIntervalMs"];</code>
+       * @return The sendToArmIntervalMs.
+       */
+      @java.lang.Override
+      public int getSendToArmIntervalMs() {
+        return instance.getSendToArmIntervalMs();
+      }
+      /**
+       * <pre>
+       * How often the motion service aims to top up the arm's buffered runway.
+       * </pre>
+       *
+       * <code>optional int32 send_to_arm_interval_ms = 2 [json_name = "sendToArmIntervalMs"];</code>
+       * @param value The sendToArmIntervalMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSendToArmIntervalMs(int value) {
+        copyOnWrite();
+        instance.setSendToArmIntervalMs(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * How often the motion service aims to top up the arm's buffered runway.
+       * </pre>
+       *
+       * <code>optional int32 send_to_arm_interval_ms = 2 [json_name = "sendToArmIntervalMs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSendToArmIntervalMs() {
+        copyOnWrite();
+        instance.clearSendToArmIntervalMs();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Size of the detailed diagnostics window.
+       * </pre>
+       *
+       * <code>optional int32 diagnostics_window_secs = 3 [json_name = "diagnosticsWindowSecs"];</code>
+       * @return Whether the diagnosticsWindowSecs field is set.
+       */
+      @java.lang.Override
+      public boolean hasDiagnosticsWindowSecs() {
+        return instance.hasDiagnosticsWindowSecs();
+      }
+      /**
+       * <pre>
+       * Size of the detailed diagnostics window.
+       * </pre>
+       *
+       * <code>optional int32 diagnostics_window_secs = 3 [json_name = "diagnosticsWindowSecs"];</code>
+       * @return The diagnosticsWindowSecs.
+       */
+      @java.lang.Override
+      public int getDiagnosticsWindowSecs() {
+        return instance.getDiagnosticsWindowSecs();
+      }
+      /**
+       * <pre>
+       * Size of the detailed diagnostics window.
+       * </pre>
+       *
+       * <code>optional int32 diagnostics_window_secs = 3 [json_name = "diagnosticsWindowSecs"];</code>
+       * @param value The diagnosticsWindowSecs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiagnosticsWindowSecs(int value) {
+        copyOnWrite();
+        instance.setDiagnosticsWindowSecs(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of the detailed diagnostics window.
+       * </pre>
+       *
+       * <code>optional int32 diagnostics_window_secs = 3 [json_name = "diagnosticsWindowSecs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiagnosticsWindowSecs() {
+        copyOnWrite();
+        instance.clearDiagnosticsWindowSecs();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Kinematic limits for the session's trajectory.
+       * </pre>
+       *
+       * <code>optional .viam.component.arm.v1.MoveOptions move_options = 4 [json_name = "moveOptions"];</code>
+       */
+      @java.lang.Override
+      public boolean hasMoveOptions() {
+        return instance.hasMoveOptions();
+      }
+      /**
+       * <pre>
+       * Kinematic limits for the session's trajectory.
+       * </pre>
+       *
+       * <code>optional .viam.component.arm.v1.MoveOptions move_options = 4 [json_name = "moveOptions"];</code>
+       */
+      @java.lang.Override
+      public com.viam.component.arm.v1.Arm.MoveOptions getMoveOptions() {
+        return instance.getMoveOptions();
+      }
+      /**
+       * <pre>
+       * Kinematic limits for the session's trajectory.
+       * </pre>
+       *
+       * <code>optional .viam.component.arm.v1.MoveOptions move_options = 4 [json_name = "moveOptions"];</code>
+       */
+      public Builder setMoveOptions(com.viam.component.arm.v1.Arm.MoveOptions value) {
+        copyOnWrite();
+        instance.setMoveOptions(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Kinematic limits for the session's trajectory.
+       * </pre>
+       *
+       * <code>optional .viam.component.arm.v1.MoveOptions move_options = 4 [json_name = "moveOptions"];</code>
+       */
+      public Builder setMoveOptions(
+          com.viam.component.arm.v1.Arm.MoveOptions.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMoveOptions(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Kinematic limits for the session's trajectory.
+       * </pre>
+       *
+       * <code>optional .viam.component.arm.v1.MoveOptions move_options = 4 [json_name = "moveOptions"];</code>
+       */
+      public Builder mergeMoveOptions(com.viam.component.arm.v1.Arm.MoveOptions value) {
+        copyOnWrite();
+        instance.mergeMoveOptions(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Kinematic limits for the session's trajectory.
+       * </pre>
+       *
+       * <code>optional .viam.component.arm.v1.MoveOptions move_options = 4 [json_name = "moveOptions"];</code>
+       */
+      public Builder clearMoveOptions() {  copyOnWrite();
+        instance.clearMoveOptions();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.motion.v1.TempStreamOptions)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.motion.v1.Motion.TempStreamOptions();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "armSideTargetRunwayMs_",
+              "sendToArmIntervalMs_",
+              "diagnosticsWindowSecs_",
+              "moveOptions_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u1004\u0000\u0002" +
+                "\u1004\u0001\u0003\u1004\u0002\u0004\u1009\u0003";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.motion.v1.Motion.TempStreamOptions> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.motion.v1.Motion.TempStreamOptions.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.motion.v1.Motion.TempStreamOptions>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.motion.v1.TempStreamOptions)
+    private static final com.viam.service.motion.v1.Motion.TempStreamOptions DEFAULT_INSTANCE;
+    static {
+      TempStreamOptions defaultInstance = new TempStreamOptions();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        TempStreamOptions.class, defaultInstance);
+    }
+
+    public static com.viam.service.motion.v1.Motion.TempStreamOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<TempStreamOptions> PARSER;
+
+    public static com.google.protobuf.Parser<TempStreamOptions> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface TempStreamArmJointPositionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.motion.v1.TempStreamArmJointPositionsRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the motion service.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the motion service.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Session initiation. Sent exactly once and must be the first message on the stream.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init init = 2 [json_name = "init"];</code>
+     * @return Whether the init field is set.
+     */
+    boolean hasInit();
+    /**
+     * <pre>
+     * Session initiation. Sent exactly once and must be the first message on the stream.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init init = 2 [json_name = "init"];</code>
+     * @return The init.
+     */
+    com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init getInit();
+
+    /**
+     * <pre>
+     * A batch of targets to append to the running session. Sent N times after init.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets targets = 3 [json_name = "targets"];</code>
+     * @return Whether the targets field is set.
+     */
+    boolean hasTargets();
+    /**
+     * <pre>
+     * A batch of targets to append to the running session. Sent N times after init.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets targets = 3 [json_name = "targets"];</code>
+     * @return The targets.
+     */
+    com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets getTargets();
+
+    public com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.MessageCase getMessageCase();
+  }
+  /**
+   * Protobuf type {@code viam.service.motion.v1.TempStreamArmJointPositionsRequest}
+   */
+  public  static final class TempStreamArmJointPositionsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          TempStreamArmJointPositionsRequest, TempStreamArmJointPositionsRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.motion.v1.TempStreamArmJointPositionsRequest)
+      TempStreamArmJointPositionsRequestOrBuilder {
+    private TempStreamArmJointPositionsRequest() {
+      name_ = "";
+    }
+    public interface InitOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init)
+        com.google.protobuf.MessageLiteOrBuilder {
+
+      /**
+       * <pre>
+       * Name of the arm to stream joint positions to.
+       * </pre>
+       *
+       * <code>string component_name = 1 [json_name = "componentName"];</code>
+       * @return The componentName.
+       */
+      java.lang.String getComponentName();
+      /**
+       * <pre>
+       * Name of the arm to stream joint positions to.
+       * </pre>
+       *
+       * <code>string component_name = 1 [json_name = "componentName"];</code>
+       * @return The bytes for componentName.
+       */
+      com.google.protobuf.ByteString
+          getComponentNameBytes();
+
+      /**
+       * <pre>
+       * Configuration for this streaming session.
+       * </pre>
+       *
+       * <code>optional .viam.service.motion.v1.TempStreamOptions options = 2 [json_name = "options"];</code>
+       * @return Whether the options field is set.
+       */
+      boolean hasOptions();
+      /**
+       * <pre>
+       * Configuration for this streaming session.
+       * </pre>
+       *
+       * <code>optional .viam.service.motion.v1.TempStreamOptions options = 2 [json_name = "options"];</code>
+       * @return The options.
+       */
+      com.viam.service.motion.v1.Motion.TempStreamOptions getOptions();
+
+      /**
+       * <pre>
+       * Additional arguments.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       * @return Whether the extra field is set.
+       */
+      boolean hasExtra();
+      /**
+       * <pre>
+       * Additional arguments.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       * @return The extra.
+       */
+      com.google.protobuf.Struct getExtra();
+    }
+    /**
+     * Protobuf type {@code viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init}
+     */
+    public  static final class Init extends
+        com.google.protobuf.GeneratedMessageLite<
+            Init, Init.Builder> implements
+        // @@protoc_insertion_point(message_implements:viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init)
+        InitOrBuilder {
+      private Init() {
+        componentName_ = "";
+      }
+      private int bitField0_;
+      public static final int COMPONENT_NAME_FIELD_NUMBER = 1;
+      private java.lang.String componentName_;
+      /**
+       * <pre>
+       * Name of the arm to stream joint positions to.
+       * </pre>
+       *
+       * <code>string component_name = 1 [json_name = "componentName"];</code>
+       * @return The componentName.
+       */
+      @java.lang.Override
+      public java.lang.String getComponentName() {
+        return componentName_;
+      }
+      /**
+       * <pre>
+       * Name of the arm to stream joint positions to.
+       * </pre>
+       *
+       * <code>string component_name = 1 [json_name = "componentName"];</code>
+       * @return The bytes for componentName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getComponentNameBytes() {
+        return com.google.protobuf.ByteString.copyFromUtf8(componentName_);
+      }
+      /**
+       * <pre>
+       * Name of the arm to stream joint positions to.
+       * </pre>
+       *
+       * <code>string component_name = 1 [json_name = "componentName"];</code>
+       * @param value The componentName to set.
+       */
+      @java.lang.SuppressWarnings("ReturnValueIgnored")
+      private void setComponentName(
+          java.lang.String value) {
+        value.getClass();  // minimal bytecode null check
+
+        componentName_ = value;
+      }
+      /**
+       * <pre>
+       * Name of the arm to stream joint positions to.
+       * </pre>
+       *
+       * <code>string component_name = 1 [json_name = "componentName"];</code>
+       */
+      private void clearComponentName() {
+
+        componentName_ = getDefaultInstance().getComponentName();
+      }
+      /**
+       * <pre>
+       * Name of the arm to stream joint positions to.
+       * </pre>
+       *
+       * <code>string component_name = 1 [json_name = "componentName"];</code>
+       * @param value The bytes for componentName to set.
+       */
+      private void setComponentNameBytes(
+          com.google.protobuf.ByteString value) {
+        checkByteStringIsUtf8(value);
+        componentName_ = value.toStringUtf8();
+
+      }
+
+      public static final int OPTIONS_FIELD_NUMBER = 2;
+      private com.viam.service.motion.v1.Motion.TempStreamOptions options_;
+      /**
+       * <pre>
+       * Configuration for this streaming session.
+       * </pre>
+       *
+       * <code>optional .viam.service.motion.v1.TempStreamOptions options = 2 [json_name = "options"];</code>
+       */
+      @java.lang.Override
+      public boolean hasOptions() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Configuration for this streaming session.
+       * </pre>
+       *
+       * <code>optional .viam.service.motion.v1.TempStreamOptions options = 2 [json_name = "options"];</code>
+       */
+      @java.lang.Override
+      public com.viam.service.motion.v1.Motion.TempStreamOptions getOptions() {
+        return options_ == null ? com.viam.service.motion.v1.Motion.TempStreamOptions.getDefaultInstance() : options_;
+      }
+      /**
+       * <pre>
+       * Configuration for this streaming session.
+       * </pre>
+       *
+       * <code>optional .viam.service.motion.v1.TempStreamOptions options = 2 [json_name = "options"];</code>
+       */
+      @java.lang.SuppressWarnings("ReturnValueIgnored")
+      private void setOptions(com.viam.service.motion.v1.Motion.TempStreamOptions value) {
+        value.getClass();  // minimal bytecode null check
+        options_ = value;
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * Configuration for this streaming session.
+       * </pre>
+       *
+       * <code>optional .viam.service.motion.v1.TempStreamOptions options = 2 [json_name = "options"];</code>
+       */
+      @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+      private void mergeOptions(com.viam.service.motion.v1.Motion.TempStreamOptions value) {
+        value.getClass();  // minimal bytecode null check
+        if (options_ != null &&
+            options_ != com.viam.service.motion.v1.Motion.TempStreamOptions.getDefaultInstance()) {
+          options_ =
+            com.viam.service.motion.v1.Motion.TempStreamOptions.newBuilder(options_).mergeFrom(value).buildPartial();
+        } else {
+          options_ = value;
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * Configuration for this streaming session.
+       * </pre>
+       *
+       * <code>optional .viam.service.motion.v1.TempStreamOptions options = 2 [json_name = "options"];</code>
+       */
+      private void clearOptions() {
+        options_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+
+      public static final int EXTRA_FIELD_NUMBER = 99;
+      private com.google.protobuf.Struct extra_;
+      /**
+       * <pre>
+       * Additional arguments.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public boolean hasExtra() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Additional arguments.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getExtra() {
+        return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+      }
+      /**
+       * <pre>
+       * Additional arguments.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.SuppressWarnings("ReturnValueIgnored")
+      private void setExtra(com.google.protobuf.Struct value) {
+        value.getClass();  // minimal bytecode null check
+        extra_ = value;
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <pre>
+       * Additional arguments.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+      private void mergeExtra(com.google.protobuf.Struct value) {
+        value.getClass();  // minimal bytecode null check
+        if (extra_ != null &&
+            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+          extra_ =
+            com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+        } else {
+          extra_ = value;
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <pre>
+       * Additional arguments.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      private void clearExtra() {
+        extra_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data, extensionRegistry);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data, extensionRegistry);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data, extensionRegistry);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, input);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, input, extensionRegistry);
+      }
+
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+      }
+
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, input);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() {
+        return (Builder) DEFAULT_INSTANCE.createBuilder();
+      }
+      public static Builder newBuilder(com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init prototype) {
+        return DEFAULT_INSTANCE.createBuilder(prototype);
+      }
+
+      /**
+       * Protobuf type {@code viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageLite.Builder<
+            com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init, Builder> implements
+          // @@protoc_insertion_point(builder_implements:viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init)
+          com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.InitOrBuilder {
+        // Construct using com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init.newBuilder()
+        private Builder() {
+          super(DEFAULT_INSTANCE);
+        }
+
+
+        /**
+         * <pre>
+         * Name of the arm to stream joint positions to.
+         * </pre>
+         *
+         * <code>string component_name = 1 [json_name = "componentName"];</code>
+         * @return The componentName.
+         */
+        @java.lang.Override
+        public java.lang.String getComponentName() {
+          return instance.getComponentName();
+        }
+        /**
+         * <pre>
+         * Name of the arm to stream joint positions to.
+         * </pre>
+         *
+         * <code>string component_name = 1 [json_name = "componentName"];</code>
+         * @return The bytes for componentName.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getComponentNameBytes() {
+          return instance.getComponentNameBytes();
+        }
+        /**
+         * <pre>
+         * Name of the arm to stream joint positions to.
+         * </pre>
+         *
+         * <code>string component_name = 1 [json_name = "componentName"];</code>
+         * @param value The componentName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setComponentName(
+            java.lang.String value) {
+          copyOnWrite();
+          instance.setComponentName(value);
+          return this;
+        }
+        /**
+         * <pre>
+         * Name of the arm to stream joint positions to.
+         * </pre>
+         *
+         * <code>string component_name = 1 [json_name = "componentName"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearComponentName() {
+          copyOnWrite();
+          instance.clearComponentName();
+          return this;
+        }
+        /**
+         * <pre>
+         * Name of the arm to stream joint positions to.
+         * </pre>
+         *
+         * <code>string component_name = 1 [json_name = "componentName"];</code>
+         * @param value The bytes for componentName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setComponentNameBytes(
+            com.google.protobuf.ByteString value) {
+          copyOnWrite();
+          instance.setComponentNameBytes(value);
+          return this;
+        }
+
+        /**
+         * <pre>
+         * Configuration for this streaming session.
+         * </pre>
+         *
+         * <code>optional .viam.service.motion.v1.TempStreamOptions options = 2 [json_name = "options"];</code>
+         */
+        @java.lang.Override
+        public boolean hasOptions() {
+          return instance.hasOptions();
+        }
+        /**
+         * <pre>
+         * Configuration for this streaming session.
+         * </pre>
+         *
+         * <code>optional .viam.service.motion.v1.TempStreamOptions options = 2 [json_name = "options"];</code>
+         */
+        @java.lang.Override
+        public com.viam.service.motion.v1.Motion.TempStreamOptions getOptions() {
+          return instance.getOptions();
+        }
+        /**
+         * <pre>
+         * Configuration for this streaming session.
+         * </pre>
+         *
+         * <code>optional .viam.service.motion.v1.TempStreamOptions options = 2 [json_name = "options"];</code>
+         */
+        public Builder setOptions(com.viam.service.motion.v1.Motion.TempStreamOptions value) {
+          copyOnWrite();
+          instance.setOptions(value);
+          return this;
+          }
+        /**
+         * <pre>
+         * Configuration for this streaming session.
+         * </pre>
+         *
+         * <code>optional .viam.service.motion.v1.TempStreamOptions options = 2 [json_name = "options"];</code>
+         */
+        public Builder setOptions(
+            com.viam.service.motion.v1.Motion.TempStreamOptions.Builder builderForValue) {
+          copyOnWrite();
+          instance.setOptions(builderForValue.build());
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for this streaming session.
+         * </pre>
+         *
+         * <code>optional .viam.service.motion.v1.TempStreamOptions options = 2 [json_name = "options"];</code>
+         */
+        public Builder mergeOptions(com.viam.service.motion.v1.Motion.TempStreamOptions value) {
+          copyOnWrite();
+          instance.mergeOptions(value);
+          return this;
+        }
+        /**
+         * <pre>
+         * Configuration for this streaming session.
+         * </pre>
+         *
+         * <code>optional .viam.service.motion.v1.TempStreamOptions options = 2 [json_name = "options"];</code>
+         */
+        public Builder clearOptions() {  copyOnWrite();
+          instance.clearOptions();
+          return this;
+        }
+
+        /**
+         * <pre>
+         * Additional arguments.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+         */
+        @java.lang.Override
+        public boolean hasExtra() {
+          return instance.hasExtra();
+        }
+        /**
+         * <pre>
+         * Additional arguments.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+         */
+        @java.lang.Override
+        public com.google.protobuf.Struct getExtra() {
+          return instance.getExtra();
+        }
+        /**
+         * <pre>
+         * Additional arguments.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+         */
+        public Builder setExtra(com.google.protobuf.Struct value) {
+          copyOnWrite();
+          instance.setExtra(value);
+          return this;
+          }
+        /**
+         * <pre>
+         * Additional arguments.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+         */
+        public Builder setExtra(
+            com.google.protobuf.Struct.Builder builderForValue) {
+          copyOnWrite();
+          instance.setExtra(builderForValue.build());
+          return this;
+        }
+        /**
+         * <pre>
+         * Additional arguments.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+         */
+        public Builder mergeExtra(com.google.protobuf.Struct value) {
+          copyOnWrite();
+          instance.mergeExtra(value);
+          return this;
+        }
+        /**
+         * <pre>
+         * Additional arguments.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+         */
+        public Builder clearExtra() {  copyOnWrite();
+          instance.clearExtra();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init)
+      }
+      @java.lang.Override
+      @java.lang.SuppressWarnings({"ThrowNull"})
+      protected final java.lang.Object dynamicMethod(
+          com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+          java.lang.Object arg0, java.lang.Object arg1) {
+        switch (method) {
+          case NEW_MUTABLE_INSTANCE: {
+            return new com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init();
+          }
+          case NEW_BUILDER: {
+            return new Builder();
+          }
+          case BUILD_MESSAGE_INFO: {
+              java.lang.Object[] objects = new java.lang.Object[] {
+                "bitField0_",
+                "componentName_",
+                "options_",
+                "extra_",
+              };
+              java.lang.String info =
+                  "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000" +
+                  "c\u1009\u0001";
+              return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+          }
+          case GET_DEFAULT_INSTANCE: {
+            return DEFAULT_INSTANCE;
+          }
+          case GET_PARSER: {
+            com.google.protobuf.Parser<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init> parser = PARSER;
+            if (parser == null) {
+              synchronized (com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init.class) {
+                parser = PARSER;
+                if (parser == null) {
+                  parser =
+                      new DefaultInstanceBasedParser<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init>(
+                          DEFAULT_INSTANCE);
+                  PARSER = parser;
+                }
+              }
+            }
+            return parser;
+          }
+          case GET_MEMOIZED_IS_INITIALIZED: {
+            return (byte) 1;
+          }
+          // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+          // So it can do anything. Combine with default case for smaller codegen.
+          case SET_MEMOIZED_IS_INITIALIZED:
+        }
+        // Should never happen. Generates tight code to throw an exception.
+        throw null;
+      }
+
+
+      // @@protoc_insertion_point(class_scope:viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init)
+      private static final com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init DEFAULT_INSTANCE;
+      static {
+        Init defaultInstance = new Init();
+        // New instances are implicitly immutable so no need to make
+        // immutable.
+        DEFAULT_INSTANCE = defaultInstance;
+        com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+          Init.class, defaultInstance);
+      }
+
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static volatile com.google.protobuf.Parser<Init> PARSER;
+
+      public static com.google.protobuf.Parser<Init> parser() {
+        return DEFAULT_INSTANCE.getParserForType();
+      }
+    }
+
+    public interface TargetsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets)
+        com.google.protobuf.MessageLiteOrBuilder {
+
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      java.util.List<com.viam.component.arm.v1.Arm.JointPositions> 
+          getPositionsList();
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      com.viam.component.arm.v1.Arm.JointPositions getPositions(int index);
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      int getPositionsCount();
+    }
+    /**
+     * Protobuf type {@code viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets}
+     */
+    public  static final class Targets extends
+        com.google.protobuf.GeneratedMessageLite<
+            Targets, Targets.Builder> implements
+        // @@protoc_insertion_point(message_implements:viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets)
+        TargetsOrBuilder {
+      private Targets() {
+        positions_ = emptyProtobufList();
+      }
+      public static final int POSITIONS_FIELD_NUMBER = 1;
+      private com.google.protobuf.Internal.ProtobufList<com.viam.component.arm.v1.Arm.JointPositions> positions_;
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.component.arm.v1.Arm.JointPositions> getPositionsList() {
+        return positions_;
+      }
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      public java.util.List<? extends com.viam.component.arm.v1.Arm.JointPositionsOrBuilder> 
+          getPositionsOrBuilderList() {
+        return positions_;
+      }
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      @java.lang.Override
+      public int getPositionsCount() {
+        return positions_.size();
+      }
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      @java.lang.Override
+      public com.viam.component.arm.v1.Arm.JointPositions getPositions(int index) {
+        return positions_.get(index);
+      }
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      public com.viam.component.arm.v1.Arm.JointPositionsOrBuilder getPositionsOrBuilder(
+          int index) {
+        return positions_.get(index);
+      }
+      private void ensurePositionsIsMutable() {
+        com.google.protobuf.Internal.ProtobufList<com.viam.component.arm.v1.Arm.JointPositions> tmp = positions_;
+        if (!tmp.isModifiable()) {
+          positions_ =
+              com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+         }
+      }
+
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      @java.lang.SuppressWarnings("ReturnValueIgnored")
+      private void setPositions(
+          int index, com.viam.component.arm.v1.Arm.JointPositions value) {
+        value.getClass();  // minimal bytecode null check
+        ensurePositionsIsMutable();
+        positions_.set(index, value);
+      }
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      @java.lang.SuppressWarnings("ReturnValueIgnored")
+      private void addPositions(com.viam.component.arm.v1.Arm.JointPositions value) {
+        value.getClass();  // minimal bytecode null check
+        ensurePositionsIsMutable();
+        positions_.add(value);
+      }
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      @java.lang.SuppressWarnings("ReturnValueIgnored")
+      private void addPositions(
+          int index, com.viam.component.arm.v1.Arm.JointPositions value) {
+        value.getClass();  // minimal bytecode null check
+        ensurePositionsIsMutable();
+        positions_.add(index, value);
+      }
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      private void addAllPositions(
+          java.lang.Iterable<? extends com.viam.component.arm.v1.Arm.JointPositions> values) {
+        ensurePositionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.addAll(
+            values, positions_);
+      }
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      private void clearPositions() {
+        positions_ = emptyProtobufList();
+      }
+      /**
+       * <pre>
+       * Target joint positions to append to the session, in order.
+       * </pre>
+       *
+       * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+       */
+      private void removePositions(int index) {
+        ensurePositionsIsMutable();
+        positions_.remove(index);
+      }
+
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data, extensionRegistry);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data, extensionRegistry);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data, extensionRegistry);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, input);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, input, extensionRegistry);
+      }
+
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+      }
+
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, input);
+      }
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() {
+        return (Builder) DEFAULT_INSTANCE.createBuilder();
+      }
+      public static Builder newBuilder(com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets prototype) {
+        return DEFAULT_INSTANCE.createBuilder(prototype);
+      }
+
+      /**
+       * Protobuf type {@code viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageLite.Builder<
+            com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets, Builder> implements
+          // @@protoc_insertion_point(builder_implements:viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets)
+          com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.TargetsOrBuilder {
+        // Construct using com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets.newBuilder()
+        private Builder() {
+          super(DEFAULT_INSTANCE);
+        }
+
+
+        /**
+         * <pre>
+         * Target joint positions to append to the session, in order.
+         * </pre>
+         *
+         * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+         */
+        @java.lang.Override
+        public java.util.List<com.viam.component.arm.v1.Arm.JointPositions> getPositionsList() {
+          return java.util.Collections.unmodifiableList(
+              instance.getPositionsList());
+        }
+        /**
+         * <pre>
+         * Target joint positions to append to the session, in order.
+         * </pre>
+         *
+         * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+         */
+        @java.lang.Override
+        public int getPositionsCount() {
+          return instance.getPositionsCount();
+        }/**
+         * <pre>
+         * Target joint positions to append to the session, in order.
+         * </pre>
+         *
+         * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+         */
+        @java.lang.Override
+        public com.viam.component.arm.v1.Arm.JointPositions getPositions(int index) {
+          return instance.getPositions(index);
+        }
+        /**
+         * <pre>
+         * Target joint positions to append to the session, in order.
+         * </pre>
+         *
+         * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+         */
+        public Builder setPositions(
+            int index, com.viam.component.arm.v1.Arm.JointPositions value) {
+          copyOnWrite();
+          instance.setPositions(index, value);
+          return this;
+        }
+        /**
+         * <pre>
+         * Target joint positions to append to the session, in order.
+         * </pre>
+         *
+         * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+         */
+        public Builder setPositions(
+            int index, com.viam.component.arm.v1.Arm.JointPositions.Builder builderForValue) {
+          copyOnWrite();
+          instance.setPositions(index,
+              builderForValue.build());
+          return this;
+        }
+        /**
+         * <pre>
+         * Target joint positions to append to the session, in order.
+         * </pre>
+         *
+         * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+         */
+        public Builder addPositions(com.viam.component.arm.v1.Arm.JointPositions value) {
+          copyOnWrite();
+          instance.addPositions(value);
+          return this;
+        }
+        /**
+         * <pre>
+         * Target joint positions to append to the session, in order.
+         * </pre>
+         *
+         * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+         */
+        public Builder addPositions(
+            int index, com.viam.component.arm.v1.Arm.JointPositions value) {
+          copyOnWrite();
+          instance.addPositions(index, value);
+          return this;
+        }
+        /**
+         * <pre>
+         * Target joint positions to append to the session, in order.
+         * </pre>
+         *
+         * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+         */
+        public Builder addPositions(
+            com.viam.component.arm.v1.Arm.JointPositions.Builder builderForValue) {
+          copyOnWrite();
+          instance.addPositions(builderForValue.build());
+          return this;
+        }
+        /**
+         * <pre>
+         * Target joint positions to append to the session, in order.
+         * </pre>
+         *
+         * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+         */
+        public Builder addPositions(
+            int index, com.viam.component.arm.v1.Arm.JointPositions.Builder builderForValue) {
+          copyOnWrite();
+          instance.addPositions(index,
+              builderForValue.build());
+          return this;
+        }
+        /**
+         * <pre>
+         * Target joint positions to append to the session, in order.
+         * </pre>
+         *
+         * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+         */
+        public Builder addAllPositions(
+            java.lang.Iterable<? extends com.viam.component.arm.v1.Arm.JointPositions> values) {
+          copyOnWrite();
+          instance.addAllPositions(values);
+          return this;
+        }
+        /**
+         * <pre>
+         * Target joint positions to append to the session, in order.
+         * </pre>
+         *
+         * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+         */
+        public Builder clearPositions() {
+          copyOnWrite();
+          instance.clearPositions();
+          return this;
+        }
+        /**
+         * <pre>
+         * Target joint positions to append to the session, in order.
+         * </pre>
+         *
+         * <code>repeated .viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+         */
+        public Builder removePositions(int index) {
+          copyOnWrite();
+          instance.removePositions(index);
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets)
+      }
+      @java.lang.Override
+      @java.lang.SuppressWarnings({"ThrowNull"})
+      protected final java.lang.Object dynamicMethod(
+          com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+          java.lang.Object arg0, java.lang.Object arg1) {
+        switch (method) {
+          case NEW_MUTABLE_INSTANCE: {
+            return new com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets();
+          }
+          case NEW_BUILDER: {
+            return new Builder();
+          }
+          case BUILD_MESSAGE_INFO: {
+              java.lang.Object[] objects = new java.lang.Object[] {
+                "positions_",
+                com.viam.component.arm.v1.Arm.JointPositions.class,
+              };
+              java.lang.String info =
+                  "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+              return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+          }
+          case GET_DEFAULT_INSTANCE: {
+            return DEFAULT_INSTANCE;
+          }
+          case GET_PARSER: {
+            com.google.protobuf.Parser<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets> parser = PARSER;
+            if (parser == null) {
+              synchronized (com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets.class) {
+                parser = PARSER;
+                if (parser == null) {
+                  parser =
+                      new DefaultInstanceBasedParser<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets>(
+                          DEFAULT_INSTANCE);
+                  PARSER = parser;
+                }
+              }
+            }
+            return parser;
+          }
+          case GET_MEMOIZED_IS_INITIALIZED: {
+            return (byte) 1;
+          }
+          // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+          // So it can do anything. Combine with default case for smaller codegen.
+          case SET_MEMOIZED_IS_INITIALIZED:
+        }
+        // Should never happen. Generates tight code to throw an exception.
+        throw null;
+      }
+
+
+      // @@protoc_insertion_point(class_scope:viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets)
+      private static final com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets DEFAULT_INSTANCE;
+      static {
+        Targets defaultInstance = new Targets();
+        // New instances are implicitly immutable so no need to make
+        // immutable.
+        DEFAULT_INSTANCE = defaultInstance;
+        com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+          Targets.class, defaultInstance);
+      }
+
+      public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static volatile com.google.protobuf.Parser<Targets> PARSER;
+
+      public static com.google.protobuf.Parser<Targets> parser() {
+        return DEFAULT_INSTANCE.getParserForType();
+      }
+    }
+
+    private int messageCase_ = 0;
+    private java.lang.Object message_;
+    public enum MessageCase
+        implements com.google.protobuf.AbstractMessageLite.InternalOneOfEnum {
+      INIT(2),
+      TARGETS(3),
+      MESSAGE_NOT_SET(0);
+      private final int value;
+      private MessageCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MessageCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static MessageCase forNumber(int value) {
+        switch (value) {
+          case 2: return INIT;
+          case 3: return TARGETS;
+          case 0: return MESSAGE_NOT_SET;
+          default: return null;
+        }
+      }
+      @java.lang.Override public int getNumber() {
+        return this.value;
+      }
+    };
+
+    @java.lang.Override
+    public MessageCase
+    getMessageCase() {
+      return MessageCase.forNumber(
+          messageCase_);
+    }
+
+    private void clearMessage() {
+      messageCase_ = 0;
+      message_ = null;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <pre>
+     * Name of the motion service.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <pre>
+     * Name of the motion service.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of the motion service.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setName(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of the motion service.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of the motion service.
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int INIT_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Session initiation. Sent exactly once and must be the first message on the stream.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init init = 2 [json_name = "init"];</code>
+     */
+    @java.lang.Override
+    public boolean hasInit() {
+      return messageCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Session initiation. Sent exactly once and must be the first message on the stream.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init init = 2 [json_name = "init"];</code>
+     */
+    @java.lang.Override
+    public com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init getInit() {
+      if (messageCase_ == 2) {
+         return (com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init) message_;
+      }
+      return com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Session initiation. Sent exactly once and must be the first message on the stream.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init init = 2 [json_name = "init"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setInit(com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init value) {
+      value.getClass();  // minimal bytecode null check
+      message_ = value;
+      messageCase_ = 2;
+    }
+    /**
+     * <pre>
+     * Session initiation. Sent exactly once and must be the first message on the stream.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init init = 2 [json_name = "init"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void mergeInit(com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init value) {
+      value.getClass();  // minimal bytecode null check
+      if (messageCase_ == 2 &&
+          message_ != com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init.getDefaultInstance()) {
+        message_ = com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init.newBuilder((com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init) message_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        message_ = value;
+      }
+      messageCase_ = 2;
+    }
+    /**
+     * <pre>
+     * Session initiation. Sent exactly once and must be the first message on the stream.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init init = 2 [json_name = "init"];</code>
+     */
+    private void clearInit() {
+      if (messageCase_ == 2) {
+        messageCase_ = 0;
+        message_ = null;
+      }
+    }
+
+    public static final int TARGETS_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * A batch of targets to append to the running session. Sent N times after init.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets targets = 3 [json_name = "targets"];</code>
+     */
+    @java.lang.Override
+    public boolean hasTargets() {
+      return messageCase_ == 3;
+    }
+    /**
+     * <pre>
+     * A batch of targets to append to the running session. Sent N times after init.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets targets = 3 [json_name = "targets"];</code>
+     */
+    @java.lang.Override
+    public com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets getTargets() {
+      if (messageCase_ == 3) {
+         return (com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets) message_;
+      }
+      return com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * A batch of targets to append to the running session. Sent N times after init.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets targets = 3 [json_name = "targets"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setTargets(com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets value) {
+      value.getClass();  // minimal bytecode null check
+      message_ = value;
+      messageCase_ = 3;
+    }
+    /**
+     * <pre>
+     * A batch of targets to append to the running session. Sent N times after init.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets targets = 3 [json_name = "targets"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void mergeTargets(com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets value) {
+      value.getClass();  // minimal bytecode null check
+      if (messageCase_ == 3 &&
+          message_ != com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets.getDefaultInstance()) {
+        message_ = com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets.newBuilder((com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets) message_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        message_ = value;
+      }
+      messageCase_ = 3;
+    }
+    /**
+     * <pre>
+     * A batch of targets to append to the running session. Sent N times after init.
+     * </pre>
+     *
+     * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets targets = 3 [json_name = "targets"];</code>
+     */
+    private void clearTargets() {
+      if (messageCase_ == 3) {
+        messageCase_ = 0;
+        message_ = null;
+      }
+    }
+
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.motion.v1.TempStreamArmJointPositionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.motion.v1.TempStreamArmJointPositionsRequest)
+        com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequestOrBuilder {
+      // Construct using com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+      @java.lang.Override
+      public MessageCase
+          getMessageCase() {
+        return instance.getMessageCase();
+      }
+
+      public Builder clearMessage() {
+        copyOnWrite();
+        instance.clearMessage();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * Name of the motion service.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <pre>
+       * Name of the motion service.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <pre>
+       * Name of the motion service.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the motion service.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the motion service.
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Session initiation. Sent exactly once and must be the first message on the stream.
+       * </pre>
+       *
+       * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init init = 2 [json_name = "init"];</code>
+       */
+      @java.lang.Override
+      public boolean hasInit() {
+        return instance.hasInit();
+      }
+      /**
+       * <pre>
+       * Session initiation. Sent exactly once and must be the first message on the stream.
+       * </pre>
+       *
+       * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init init = 2 [json_name = "init"];</code>
+       */
+      @java.lang.Override
+      public com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init getInit() {
+        return instance.getInit();
+      }
+      /**
+       * <pre>
+       * Session initiation. Sent exactly once and must be the first message on the stream.
+       * </pre>
+       *
+       * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init init = 2 [json_name = "init"];</code>
+       */
+      public Builder setInit(com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init value) {
+        copyOnWrite();
+        instance.setInit(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Session initiation. Sent exactly once and must be the first message on the stream.
+       * </pre>
+       *
+       * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init init = 2 [json_name = "init"];</code>
+       */
+      public Builder setInit(
+          com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init.Builder builderForValue) {
+        copyOnWrite();
+        instance.setInit(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Session initiation. Sent exactly once and must be the first message on the stream.
+       * </pre>
+       *
+       * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init init = 2 [json_name = "init"];</code>
+       */
+      public Builder mergeInit(com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init value) {
+        copyOnWrite();
+        instance.mergeInit(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Session initiation. Sent exactly once and must be the first message on the stream.
+       * </pre>
+       *
+       * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Init init = 2 [json_name = "init"];</code>
+       */
+      public Builder clearInit() {
+        copyOnWrite();
+        instance.clearInit();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * A batch of targets to append to the running session. Sent N times after init.
+       * </pre>
+       *
+       * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets targets = 3 [json_name = "targets"];</code>
+       */
+      @java.lang.Override
+      public boolean hasTargets() {
+        return instance.hasTargets();
+      }
+      /**
+       * <pre>
+       * A batch of targets to append to the running session. Sent N times after init.
+       * </pre>
+       *
+       * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets targets = 3 [json_name = "targets"];</code>
+       */
+      @java.lang.Override
+      public com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets getTargets() {
+        return instance.getTargets();
+      }
+      /**
+       * <pre>
+       * A batch of targets to append to the running session. Sent N times after init.
+       * </pre>
+       *
+       * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets targets = 3 [json_name = "targets"];</code>
+       */
+      public Builder setTargets(com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets value) {
+        copyOnWrite();
+        instance.setTargets(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A batch of targets to append to the running session. Sent N times after init.
+       * </pre>
+       *
+       * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets targets = 3 [json_name = "targets"];</code>
+       */
+      public Builder setTargets(
+          com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTargets(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * A batch of targets to append to the running session. Sent N times after init.
+       * </pre>
+       *
+       * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets targets = 3 [json_name = "targets"];</code>
+       */
+      public Builder mergeTargets(com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets value) {
+        copyOnWrite();
+        instance.mergeTargets(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A batch of targets to append to the running session. Sent N times after init.
+       * </pre>
+       *
+       * <code>.viam.service.motion.v1.TempStreamArmJointPositionsRequest.Targets targets = 3 [json_name = "targets"];</code>
+       */
+      public Builder clearTargets() {
+        copyOnWrite();
+        instance.clearTargets();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.service.motion.v1.TempStreamArmJointPositionsRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "message_",
+              "messageCase_",
+              "name_",
+              com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Init.class,
+              com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.Targets.class,
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002<\u0000" +
+                "\u0003<\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.motion.v1.TempStreamArmJointPositionsRequest)
+    private static final com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest DEFAULT_INSTANCE;
+    static {
+      TempStreamArmJointPositionsRequest defaultInstance = new TempStreamArmJointPositionsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        TempStreamArmJointPositionsRequest.class, defaultInstance);
+    }
+
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<TempStreamArmJointPositionsRequest> PARSER;
+
+    public static com.google.protobuf.Parser<TempStreamArmJointPositionsRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface TempStreamArmJointPositionsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.motion.v1.TempStreamArmJointPositionsResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.service.motion.v1.TempStreamArmJointPositionsResponse}
+   */
+  public  static final class TempStreamArmJointPositionsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          TempStreamArmJointPositionsResponse, TempStreamArmJointPositionsResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.service.motion.v1.TempStreamArmJointPositionsResponse)
+      TempStreamArmJointPositionsResponseOrBuilder {
+    private TempStreamArmJointPositionsResponse() {
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.service.motion.v1.TempStreamArmJointPositionsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.motion.v1.TempStreamArmJointPositionsResponse)
+        com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponseOrBuilder {
+      // Construct using com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.service.motion.v1.TempStreamArmJointPositionsResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.service.motion.v1.TempStreamArmJointPositionsResponse)
+    private static final com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse DEFAULT_INSTANCE;
+    static {
+      TempStreamArmJointPositionsResponse defaultInstance = new TempStreamArmJointPositionsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        TempStreamArmJointPositionsResponse.class, defaultInstance);
+    }
+
+    public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<TempStreamArmJointPositionsResponse> PARSER;
+
+    public static com.google.protobuf.Parser<TempStreamArmJointPositionsResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
