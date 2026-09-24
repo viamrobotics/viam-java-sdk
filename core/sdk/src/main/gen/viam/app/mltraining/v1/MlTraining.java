@@ -9646,32 +9646,6 @@ java.lang.String defaultValue) {
   public interface ListSupportedContainersRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.ListSupportedContainersRequest)
       com.google.protobuf.MessageLiteOrBuilder {
-
-    /**
-     * <pre>
-     * Optional. Scopes the response to the containers available to this
-     * organization: the Viam-managed catalog plus the org's registered
-     * custom training containers. If unset, only the Viam-managed catalog
-     * is returned.
-     * </pre>
-     *
-     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-     * @return The organizationId.
-     */
-    java.lang.String getOrganizationId();
-    /**
-     * <pre>
-     * Optional. Scopes the response to the containers available to this
-     * organization: the Viam-managed catalog plus the org's registered
-     * custom training containers. If unset, only the Viam-managed catalog
-     * is returned.
-     * </pre>
-     *
-     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-     * @return The bytes for organizationId.
-     */
-    com.google.protobuf.ByteString
-        getOrganizationIdBytes();
   }
   /**
    * Protobuf type {@code viam.app.mltraining.v1.ListSupportedContainersRequest}
@@ -9682,91 +9656,7 @@ java.lang.String defaultValue) {
       // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.ListSupportedContainersRequest)
       ListSupportedContainersRequestOrBuilder {
     private ListSupportedContainersRequest() {
-      organizationId_ = "";
     }
-    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
-    private java.lang.String organizationId_;
-    /**
-     * <pre>
-     * Optional. Scopes the response to the containers available to this
-     * organization: the Viam-managed catalog plus the org's registered
-     * custom training containers. If unset, only the Viam-managed catalog
-     * is returned.
-     * </pre>
-     *
-     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-     * @return The organizationId.
-     */
-    @java.lang.Override
-    public java.lang.String getOrganizationId() {
-      return organizationId_;
-    }
-    /**
-     * <pre>
-     * Optional. Scopes the response to the containers available to this
-     * organization: the Viam-managed catalog plus the org's registered
-     * custom training containers. If unset, only the Viam-managed catalog
-     * is returned.
-     * </pre>
-     *
-     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-     * @return The bytes for organizationId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getOrganizationIdBytes() {
-      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
-    }
-    /**
-     * <pre>
-     * Optional. Scopes the response to the containers available to this
-     * organization: the Viam-managed catalog plus the org's registered
-     * custom training containers. If unset, only the Viam-managed catalog
-     * is returned.
-     * </pre>
-     *
-     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-     * @param value The organizationId to set.
-     */
-    @java.lang.SuppressWarnings("ReturnValueIgnored")
-    private void setOrganizationId(
-        java.lang.String value) {
-      value.getClass();  // minimal bytecode null check
-
-      organizationId_ = value;
-    }
-    /**
-     * <pre>
-     * Optional. Scopes the response to the containers available to this
-     * organization: the Viam-managed catalog plus the org's registered
-     * custom training containers. If unset, only the Viam-managed catalog
-     * is returned.
-     * </pre>
-     *
-     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-     */
-    private void clearOrganizationId() {
-
-      organizationId_ = getDefaultInstance().getOrganizationId();
-    }
-    /**
-     * <pre>
-     * Optional. Scopes the response to the containers available to this
-     * organization: the Viam-managed catalog plus the org's registered
-     * custom training containers. If unset, only the Viam-managed catalog
-     * is returned.
-     * </pre>
-     *
-     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-     * @param value The bytes for organizationId to set.
-     */
-    private void setOrganizationIdBytes(
-        com.google.protobuf.ByteString value) {
-      checkByteStringIsUtf8(value);
-      organizationId_ = value.toStringUtf8();
-
-    }
-
     public static viam.app.mltraining.v1.MlTraining.ListSupportedContainersRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -9864,90 +9754,6 @@ java.lang.String defaultValue) {
       }
 
 
-      /**
-       * <pre>
-       * Optional. Scopes the response to the containers available to this
-       * organization: the Viam-managed catalog plus the org's registered
-       * custom training containers. If unset, only the Viam-managed catalog
-       * is returned.
-       * </pre>
-       *
-       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-       * @return The organizationId.
-       */
-      @java.lang.Override
-      public java.lang.String getOrganizationId() {
-        return instance.getOrganizationId();
-      }
-      /**
-       * <pre>
-       * Optional. Scopes the response to the containers available to this
-       * organization: the Viam-managed catalog plus the org's registered
-       * custom training containers. If unset, only the Viam-managed catalog
-       * is returned.
-       * </pre>
-       *
-       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-       * @return The bytes for organizationId.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getOrganizationIdBytes() {
-        return instance.getOrganizationIdBytes();
-      }
-      /**
-       * <pre>
-       * Optional. Scopes the response to the containers available to this
-       * organization: the Viam-managed catalog plus the org's registered
-       * custom training containers. If unset, only the Viam-managed catalog
-       * is returned.
-       * </pre>
-       *
-       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-       * @param value The organizationId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOrganizationId(
-          java.lang.String value) {
-        copyOnWrite();
-        instance.setOrganizationId(value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional. Scopes the response to the containers available to this
-       * organization: the Viam-managed catalog plus the org's registered
-       * custom training containers. If unset, only the Viam-managed catalog
-       * is returned.
-       * </pre>
-       *
-       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOrganizationId() {
-        copyOnWrite();
-        instance.clearOrganizationId();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional. Scopes the response to the containers available to this
-       * organization: the Viam-managed catalog plus the org's registered
-       * custom training containers. If unset, only the Viam-managed catalog
-       * is returned.
-       * </pre>
-       *
-       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
-       * @param value The bytes for organizationId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOrganizationIdBytes(
-          com.google.protobuf.ByteString value) {
-        copyOnWrite();
-        instance.setOrganizationIdBytes(value);
-        return this;
-      }
-
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.ListSupportedContainersRequest)
     }
     @java.lang.Override
@@ -9963,11 +9769,9 @@ java.lang.String defaultValue) {
           return new Builder();
         }
         case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = new java.lang.Object[] {
-              "organizationId_",
-            };
+            java.lang.Object[] objects = null;
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+                "\u0000\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -10709,6 +10513,2136 @@ viam.app.mltraining.v1.MlTraining.Container defaultValue) {
     private static volatile com.google.protobuf.Parser<ListSupportedContainersResponse> PARSER;
 
     public static com.google.protobuf.Parser<ListSupportedContainersResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListContainersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.ListContainersRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.ListContainersRequest}
+   */
+  public  static final class ListContainersRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListContainersRequest, ListContainersRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.ListContainersRequest)
+      ListContainersRequestOrBuilder {
+    private ListContainersRequest() {
+      organizationId_ = "";
+    }
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String organizationId_;
+    /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setOrganizationId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      organizationId_ = value;
+    }
+    /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <pre>
+     * The associated Viam organization ID.
+     * </pre>
+     *
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListContainersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListContainersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListContainersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.ListContainersRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.ListContainersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.ListContainersRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.ListContainersRequest)
+        viam.app.mltraining.v1.MlTraining.ListContainersRequestOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.ListContainersRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <pre>
+       * The associated Viam organization ID.
+       * </pre>
+       *
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.ListContainersRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.ListContainersRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "organizationId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.ListContainersRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.ListContainersRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.ListContainersRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.ListContainersRequest)
+    private static final viam.app.mltraining.v1.MlTraining.ListContainersRequest DEFAULT_INSTANCE;
+    static {
+      ListContainersRequest defaultInstance = new ListContainersRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListContainersRequest.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListContainersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListContainersRequest> PARSER;
+
+    public static com.google.protobuf.Parser<ListContainersRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListContainersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.ListContainersResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    java.util.List<viam.app.mltraining.v1.MlTraining.Container> 
+        getContainersList();
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    viam.app.mltraining.v1.MlTraining.Container getContainers(int index);
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    int getContainersCount();
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.ListContainersResponse}
+   */
+  public  static final class ListContainersResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListContainersResponse, ListContainersResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.ListContainersResponse)
+      ListContainersResponseOrBuilder {
+    private ListContainersResponse() {
+      containers_ = emptyProtobufList();
+    }
+    public static final int CONTAINERS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.mltraining.v1.MlTraining.Container> containers_;
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.mltraining.v1.MlTraining.Container> getContainersList() {
+      return containers_;
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    public java.util.List<? extends viam.app.mltraining.v1.MlTraining.ContainerOrBuilder> 
+        getContainersOrBuilderList() {
+      return containers_;
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    @java.lang.Override
+    public int getContainersCount() {
+      return containers_.size();
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    @java.lang.Override
+    public viam.app.mltraining.v1.MlTraining.Container getContainers(int index) {
+      return containers_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    public viam.app.mltraining.v1.MlTraining.ContainerOrBuilder getContainersOrBuilder(
+        int index) {
+      return containers_.get(index);
+    }
+    private void ensureContainersIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.mltraining.v1.MlTraining.Container> tmp = containers_;
+      if (!tmp.isModifiable()) {
+        containers_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setContainers(
+        int index, viam.app.mltraining.v1.MlTraining.Container value) {
+      value.getClass();  // minimal bytecode null check
+      ensureContainersIsMutable();
+      containers_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addContainers(viam.app.mltraining.v1.MlTraining.Container value) {
+      value.getClass();  // minimal bytecode null check
+      ensureContainersIsMutable();
+      containers_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addContainers(
+        int index, viam.app.mltraining.v1.MlTraining.Container value) {
+      value.getClass();  // minimal bytecode null check
+      ensureContainersIsMutable();
+      containers_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    private void addAllContainers(
+        java.lang.Iterable<? extends viam.app.mltraining.v1.MlTraining.Container> values) {
+      ensureContainersIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, containers_);
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    private void clearContainers() {
+      containers_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+     */
+    private void removeContainers(int index) {
+      ensureContainersIsMutable();
+      containers_.remove(index);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListContainersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListContainersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListContainersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.ListContainersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.ListContainersResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.ListContainersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.ListContainersResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.ListContainersResponse)
+        viam.app.mltraining.v1.MlTraining.ListContainersResponseOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.ListContainersResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.mltraining.v1.MlTraining.Container> getContainersList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getContainersList());
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+       */
+      @java.lang.Override
+      public int getContainersCount() {
+        return instance.getContainersCount();
+      }/**
+       * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+       */
+      @java.lang.Override
+      public viam.app.mltraining.v1.MlTraining.Container getContainers(int index) {
+        return instance.getContainers(index);
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+       */
+      public Builder setContainers(
+          int index, viam.app.mltraining.v1.MlTraining.Container value) {
+        copyOnWrite();
+        instance.setContainers(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+       */
+      public Builder setContainers(
+          int index, viam.app.mltraining.v1.MlTraining.Container.Builder builderForValue) {
+        copyOnWrite();
+        instance.setContainers(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+       */
+      public Builder addContainers(viam.app.mltraining.v1.MlTraining.Container value) {
+        copyOnWrite();
+        instance.addContainers(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+       */
+      public Builder addContainers(
+          int index, viam.app.mltraining.v1.MlTraining.Container value) {
+        copyOnWrite();
+        instance.addContainers(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+       */
+      public Builder addContainers(
+          viam.app.mltraining.v1.MlTraining.Container.Builder builderForValue) {
+        copyOnWrite();
+        instance.addContainers(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+       */
+      public Builder addContainers(
+          int index, viam.app.mltraining.v1.MlTraining.Container.Builder builderForValue) {
+        copyOnWrite();
+        instance.addContainers(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+       */
+      public Builder addAllContainers(
+          java.lang.Iterable<? extends viam.app.mltraining.v1.MlTraining.Container> values) {
+        copyOnWrite();
+        instance.addAllContainers(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+       */
+      public Builder clearContainers() {
+        copyOnWrite();
+        instance.clearContainers();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.mltraining.v1.Container containers = 1 [json_name = "containers"];</code>
+       */
+      public Builder removeContainers(int index) {
+        copyOnWrite();
+        instance.removeContainers(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.ListContainersResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.ListContainersResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "containers_",
+              viam.app.mltraining.v1.MlTraining.Container.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.ListContainersResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.ListContainersResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.ListContainersResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.ListContainersResponse)
+    private static final viam.app.mltraining.v1.MlTraining.ListContainersResponse DEFAULT_INSTANCE;
+    static {
+      ListContainersResponse defaultInstance = new ListContainersResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListContainersResponse.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.ListContainersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListContainersResponse> PARSER;
+
+    public static com.google.protobuf.Parser<ListContainersResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface RegisterCustomTrainingContainerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.RegisterCustomTrainingContainerRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <pre>
+     * Docker Hub reference, official images normalize to docker.io/library/&lt;image&gt;:&lt;tag&gt;.
+     * </pre>
+     *
+     * <code>string image_uri = 2 [json_name = "imageUri"];</code>
+     * @return The imageUri.
+     */
+    java.lang.String getImageUri();
+    /**
+     * <pre>
+     * Docker Hub reference, official images normalize to docker.io/library/&lt;image&gt;:&lt;tag&gt;.
+     * </pre>
+     *
+     * <code>string image_uri = 2 [json_name = "imageUri"];</code>
+     * @return The bytes for imageUri.
+     */
+    com.google.protobuf.ByteString
+        getImageUriBytes();
+
+    /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.RegisterCustomTrainingContainerRequest}
+   */
+  public  static final class RegisterCustomTrainingContainerRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          RegisterCustomTrainingContainerRequest, RegisterCustomTrainingContainerRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.RegisterCustomTrainingContainerRequest)
+      RegisterCustomTrainingContainerRequestOrBuilder {
+    private RegisterCustomTrainingContainerRequest() {
+      organizationId_ = "";
+      imageUri_ = "";
+      description_ = "";
+    }
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 1;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setOrganizationId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int IMAGE_URI_FIELD_NUMBER = 2;
+    private java.lang.String imageUri_;
+    /**
+     * <pre>
+     * Docker Hub reference, official images normalize to docker.io/library/&lt;image&gt;:&lt;tag&gt;.
+     * </pre>
+     *
+     * <code>string image_uri = 2 [json_name = "imageUri"];</code>
+     * @return The imageUri.
+     */
+    @java.lang.Override
+    public java.lang.String getImageUri() {
+      return imageUri_;
+    }
+    /**
+     * <pre>
+     * Docker Hub reference, official images normalize to docker.io/library/&lt;image&gt;:&lt;tag&gt;.
+     * </pre>
+     *
+     * <code>string image_uri = 2 [json_name = "imageUri"];</code>
+     * @return The bytes for imageUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getImageUriBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(imageUri_);
+    }
+    /**
+     * <pre>
+     * Docker Hub reference, official images normalize to docker.io/library/&lt;image&gt;:&lt;tag&gt;.
+     * </pre>
+     *
+     * <code>string image_uri = 2 [json_name = "imageUri"];</code>
+     * @param value The imageUri to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setImageUri(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      imageUri_ = value;
+    }
+    /**
+     * <pre>
+     * Docker Hub reference, official images normalize to docker.io/library/&lt;image&gt;:&lt;tag&gt;.
+     * </pre>
+     *
+     * <code>string image_uri = 2 [json_name = "imageUri"];</code>
+     */
+    private void clearImageUri() {
+
+      imageUri_ = getDefaultInstance().getImageUri();
+    }
+    /**
+     * <pre>
+     * Docker Hub reference, official images normalize to docker.io/library/&lt;image&gt;:&lt;tag&gt;.
+     * </pre>
+     *
+     * <code>string image_uri = 2 [json_name = "imageUri"];</code>
+     * @param value The bytes for imageUri to set.
+     */
+    private void setImageUriBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      imageUri_ = value.toStringUtf8();
+
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private java.lang.String description_;
+    /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      return description_;
+    }
+    /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(description_);
+    }
+    /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @param value The description to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDescription(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      description_ = value;
+    }
+    /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     */
+    private void clearDescription() {
+
+      description_ = getDefaultInstance().getDescription();
+    }
+    /**
+     * <pre>
+     * will serve as display name
+     * </pre>
+     *
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @param value The bytes for description to set.
+     */
+    private void setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      description_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.RegisterCustomTrainingContainerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.RegisterCustomTrainingContainerRequest)
+        viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequestOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 1 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Docker Hub reference, official images normalize to docker.io/library/&lt;image&gt;:&lt;tag&gt;.
+       * </pre>
+       *
+       * <code>string image_uri = 2 [json_name = "imageUri"];</code>
+       * @return The imageUri.
+       */
+      @java.lang.Override
+      public java.lang.String getImageUri() {
+        return instance.getImageUri();
+      }
+      /**
+       * <pre>
+       * Docker Hub reference, official images normalize to docker.io/library/&lt;image&gt;:&lt;tag&gt;.
+       * </pre>
+       *
+       * <code>string image_uri = 2 [json_name = "imageUri"];</code>
+       * @return The bytes for imageUri.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getImageUriBytes() {
+        return instance.getImageUriBytes();
+      }
+      /**
+       * <pre>
+       * Docker Hub reference, official images normalize to docker.io/library/&lt;image&gt;:&lt;tag&gt;.
+       * </pre>
+       *
+       * <code>string image_uri = 2 [json_name = "imageUri"];</code>
+       * @param value The imageUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImageUri(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setImageUri(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Docker Hub reference, official images normalize to docker.io/library/&lt;image&gt;:&lt;tag&gt;.
+       * </pre>
+       *
+       * <code>string image_uri = 2 [json_name = "imageUri"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearImageUri() {
+        copyOnWrite();
+        instance.clearImageUri();
+        return this;
+      }
+      /**
+       * <pre>
+       * Docker Hub reference, official images normalize to docker.io/library/&lt;image&gt;:&lt;tag&gt;.
+       * </pre>
+       *
+       * <code>string image_uri = 2 [json_name = "imageUri"];</code>
+       * @param value The bytes for imageUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setImageUriBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setImageUriBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * will serve as display name
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      @java.lang.Override
+      public java.lang.String getDescription() {
+        return instance.getDescription();
+      }
+      /**
+       * <pre>
+       * will serve as display name
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        return instance.getDescriptionBytes();
+      }
+      /**
+       * <pre>
+       * will serve as display name
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setDescription(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * will serve as display name
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        copyOnWrite();
+        instance.clearDescription();
+        return this;
+      }
+      /**
+       * <pre>
+       * will serve as display name
+       * </pre>
+       *
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setDescriptionBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.RegisterCustomTrainingContainerRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "organizationId_",
+              "imageUri_",
+              "description_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.RegisterCustomTrainingContainerRequest)
+    private static final viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest DEFAULT_INSTANCE;
+    static {
+      RegisterCustomTrainingContainerRequest defaultInstance = new RegisterCustomTrainingContainerRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RegisterCustomTrainingContainerRequest.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<RegisterCustomTrainingContainerRequest> PARSER;
+
+    public static com.google.protobuf.Parser<RegisterCustomTrainingContainerRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface RegisterCustomTrainingContainerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.RegisterCustomTrainingContainerResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.RegisterCustomTrainingContainerResponse}
+   */
+  public  static final class RegisterCustomTrainingContainerResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          RegisterCustomTrainingContainerResponse, RegisterCustomTrainingContainerResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.RegisterCustomTrainingContainerResponse)
+      RegisterCustomTrainingContainerResponseOrBuilder {
+    private RegisterCustomTrainingContainerResponse() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.RegisterCustomTrainingContainerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.RegisterCustomTrainingContainerResponse)
+        viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponseOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.RegisterCustomTrainingContainerResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.RegisterCustomTrainingContainerResponse)
+    private static final viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse DEFAULT_INSTANCE;
+    static {
+      RegisterCustomTrainingContainerResponse defaultInstance = new RegisterCustomTrainingContainerResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RegisterCustomTrainingContainerResponse.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.RegisterCustomTrainingContainerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<RegisterCustomTrainingContainerResponse> PARSER;
+
+    public static com.google.protobuf.Parser<RegisterCustomTrainingContainerResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeleteCustomTrainingContainerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.DeleteCustomTrainingContainerRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.DeleteCustomTrainingContainerRequest}
+   */
+  public  static final class DeleteCustomTrainingContainerRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteCustomTrainingContainerRequest, DeleteCustomTrainingContainerRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.DeleteCustomTrainingContainerRequest)
+      DeleteCustomTrainingContainerRequestOrBuilder {
+    private DeleteCustomTrainingContainerRequest() {
+      id_ = "";
+    }
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.DeleteCustomTrainingContainerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.DeleteCustomTrainingContainerRequest)
+        viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequestOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.DeleteCustomTrainingContainerRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.DeleteCustomTrainingContainerRequest)
+    private static final viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest DEFAULT_INSTANCE;
+    static {
+      DeleteCustomTrainingContainerRequest defaultInstance = new DeleteCustomTrainingContainerRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteCustomTrainingContainerRequest.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeleteCustomTrainingContainerRequest> PARSER;
+
+    public static com.google.protobuf.Parser<DeleteCustomTrainingContainerRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface DeleteCustomTrainingContainerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.mltraining.v1.DeleteCustomTrainingContainerResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.mltraining.v1.DeleteCustomTrainingContainerResponse}
+   */
+  public  static final class DeleteCustomTrainingContainerResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          DeleteCustomTrainingContainerResponse, DeleteCustomTrainingContainerResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.mltraining.v1.DeleteCustomTrainingContainerResponse)
+      DeleteCustomTrainingContainerResponseOrBuilder {
+    private DeleteCustomTrainingContainerResponse() {
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.mltraining.v1.DeleteCustomTrainingContainerResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.mltraining.v1.DeleteCustomTrainingContainerResponse)
+        viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponseOrBuilder {
+      // Construct using viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.DeleteCustomTrainingContainerResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.mltraining.v1.DeleteCustomTrainingContainerResponse)
+    private static final viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse DEFAULT_INSTANCE;
+    static {
+      DeleteCustomTrainingContainerResponse defaultInstance = new DeleteCustomTrainingContainerResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DeleteCustomTrainingContainerResponse.class, defaultInstance);
+    }
+
+    public static viam.app.mltraining.v1.MlTraining.DeleteCustomTrainingContainerResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<DeleteCustomTrainingContainerResponse> PARSER;
+
+    public static com.google.protobuf.Parser<DeleteCustomTrainingContainerResponse> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
