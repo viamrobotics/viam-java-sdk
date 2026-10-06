@@ -13,7 +13,7 @@ typealias AudioStream = Iterator<AudioResponse>
 typealias Properties = GetPropertiesResponse
 
 /**
- * AudioInput represents a component that can capture audio.
+ * AudioIn represents a component that can capture audio.
  */
 abstract class AudioIn(name: String) : Component(SUBTYPE, named(name)) {
 
