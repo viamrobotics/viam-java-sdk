@@ -225,6 +225,36 @@ public final class MotionServiceGrpc {
     return getGetPlanMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest,
+      com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse> getTempStreamArmJointPositionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TempStreamArmJointPositions",
+      requestType = com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.class,
+      responseType = com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest,
+      com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse> getTempStreamArmJointPositionsMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest, com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse> getTempStreamArmJointPositionsMethod;
+    if ((getTempStreamArmJointPositionsMethod = MotionServiceGrpc.getTempStreamArmJointPositionsMethod) == null) {
+      synchronized (MotionServiceGrpc.class) {
+        if ((getTempStreamArmJointPositionsMethod = MotionServiceGrpc.getTempStreamArmJointPositionsMethod) == null) {
+          MotionServiceGrpc.getTempStreamArmJointPositionsMethod = getTempStreamArmJointPositionsMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest, com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TempStreamArmJointPositions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getTempStreamArmJointPositionsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
       com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
 
@@ -432,6 +462,21 @@ public final class MotionServiceGrpc {
 
     /**
      * <pre>
+     * Streams joint-space waypoints to an arm. The first message on the stream must
+     * be an Init; every subsequent message must be a Targets batch. Closing the
+     * request stream drains any buffered trajectory to the arm before ending the
+     * call; canceling the call's context aborts the session immediately.
+     * This method and its associated types are named as Temp because this API is
+     * under active development, and its current shape should not be depended on.
+     * </pre>
+     */
+    default io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest> tempStreamArmJointPositions(
+        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getTempStreamArmJointPositionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -572,6 +617,22 @@ public final class MotionServiceGrpc {
 
     /**
      * <pre>
+     * Streams joint-space waypoints to an arm. The first message on the stream must
+     * be an Init; every subsequent message must be a Targets batch. Closing the
+     * request stream drains any buffered trajectory to the arm before ending the
+     * call; canceling the call's context aborts the session immediately.
+     * This method and its associated types are named as Temp because this API is
+     * under active development, and its current shape should not be depended on.
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest> tempStreamArmJointPositions(
+        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
+          getChannel().newCall(getTempStreamArmJointPositionsMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -689,6 +750,23 @@ public final class MotionServiceGrpc {
     public com.viam.service.motion.v1.Motion.GetPlanResponse getPlan(com.viam.service.motion.v1.Motion.GetPlanRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetPlanMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Streams joint-space waypoints to an arm. The first message on the stream must
+     * be an Init; every subsequent message must be a Targets batch. Closing the
+     * request stream drains any buffered trajectory to the arm before ending the
+     * call; canceling the call's context aborts the session immediately.
+     * This method and its associated types are named as Temp because this API is
+     * under active development, and its current shape should not be depended on.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest, com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse>
+        tempStreamArmJointPositions() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getTempStreamArmJointPositionsMethod(), getCallOptions());
     }
 
     /**
@@ -968,6 +1046,7 @@ public final class MotionServiceGrpc {
   private static final int METHODID_GET_PLAN = 6;
   private static final int METHODID_DO_COMMAND = 7;
   private static final int METHODID_GET_STATUS = 8;
+  private static final int METHODID_TEMP_STREAM_ARM_JOINT_POSITIONS = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1032,6 +1111,9 @@ public final class MotionServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_TEMP_STREAM_ARM_JOINT_POSITIONS:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.tempStreamArmJointPositions(
+              (io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -1090,6 +1172,13 @@ public final class MotionServiceGrpc {
               com.viam.service.motion.v1.Motion.GetPlanResponse>(
                 service, METHODID_GET_PLAN)))
         .addMethod(
+          getTempStreamArmJointPositionsMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsRequest,
+              com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse>(
+                service, METHODID_TEMP_STREAM_ARM_JOINT_POSITIONS)))
+        .addMethod(
           getDoCommandMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1122,6 +1211,7 @@ public final class MotionServiceGrpc {
               .addMethod(getStopPlanMethod())
               .addMethod(getListPlanStatusesMethod())
               .addMethod(getGetPlanMethod())
+              .addMethod(getTempStreamArmJointPositionsMethod())
               .addMethod(getDoCommandMethod())
               .addMethod(getGetStatusMethod())
               .build();

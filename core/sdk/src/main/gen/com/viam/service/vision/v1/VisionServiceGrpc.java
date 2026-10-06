@@ -135,6 +135,36 @@ public final class VisionServiceGrpc {
     return getGetClassificationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetDetections3DRequest,
+      com.viam.service.vision.v1.Vision.GetDetections3DResponse> getGetDetections3DMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDetections3D",
+      requestType = com.viam.service.vision.v1.Vision.GetDetections3DRequest.class,
+      responseType = com.viam.service.vision.v1.Vision.GetDetections3DResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetDetections3DRequest,
+      com.viam.service.vision.v1.Vision.GetDetections3DResponse> getGetDetections3DMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetDetections3DRequest, com.viam.service.vision.v1.Vision.GetDetections3DResponse> getGetDetections3DMethod;
+    if ((getGetDetections3DMethod = VisionServiceGrpc.getGetDetections3DMethod) == null) {
+      synchronized (VisionServiceGrpc.class) {
+        if ((getGetDetections3DMethod = VisionServiceGrpc.getGetDetections3DMethod) == null) {
+          VisionServiceGrpc.getGetDetections3DMethod = getGetDetections3DMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.vision.v1.Vision.GetDetections3DRequest, com.viam.service.vision.v1.Vision.GetDetections3DResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDetections3D"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.vision.v1.Vision.GetDetections3DRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.service.vision.v1.Vision.GetDetections3DResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetDetections3DMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest,
       com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse> getGetObjectPointCloudsMethod;
 
@@ -397,6 +427,19 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
+     * GetDetections3D returns the objects the service perceives through a camera.
+     * Each detection is a tree of named transforms carrying the object's shapes,
+     * plus class hypotheses. The transforms can be passed unchanged into a frame
+     * system or a motion WorldState.
+     * </pre>
+     */
+    default void getDetections3D(com.viam.service.vision.v1.Vision.GetDetections3DRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetDetections3DResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDetections3DMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetObjectPointClouds returns all the found objects in a pointcloud from a
      * camera of the underlying robot, as well as the 3-vector center of each of
      * the found objects. A specific MIME type can be requested but may not
@@ -530,6 +573,20 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
+     * GetDetections3D returns the objects the service perceives through a camera.
+     * Each detection is a tree of named transforms carrying the object's shapes,
+     * plus class hypotheses. The transforms can be passed unchanged into a frame
+     * system or a motion WorldState.
+     * </pre>
+     */
+    public void getDetections3D(com.viam.service.vision.v1.Vision.GetDetections3DRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetDetections3DResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDetections3DMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetObjectPointClouds returns all the found objects in a pointcloud from a
      * camera of the underlying robot, as well as the 3-vector center of each of
      * the found objects. A specific MIME type can be requested but may not
@@ -650,6 +707,19 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
+     * GetDetections3D returns the objects the service perceives through a camera.
+     * Each detection is a tree of named transforms carrying the object's shapes,
+     * plus class hypotheses. The transforms can be passed unchanged into a frame
+     * system or a motion WorldState.
+     * </pre>
+     */
+    public com.viam.service.vision.v1.Vision.GetDetections3DResponse getDetections3D(com.viam.service.vision.v1.Vision.GetDetections3DRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetDetections3DMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * GetObjectPointClouds returns all the found objects in a pointcloud from a
      * camera of the underlying robot, as well as the 3-vector center of each of
      * the found objects. A specific MIME type can be requested but may not
@@ -761,6 +831,19 @@ public final class VisionServiceGrpc {
     public com.viam.service.vision.v1.Vision.GetClassificationsResponse getClassifications(com.viam.service.vision.v1.Vision.GetClassificationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetClassificationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetDetections3D returns the objects the service perceives through a camera.
+     * Each detection is a tree of named transforms carrying the object's shapes,
+     * plus class hypotheses. The transforms can be passed unchanged into a frame
+     * system or a motion WorldState.
+     * </pre>
+     */
+    public com.viam.service.vision.v1.Vision.GetDetections3DResponse getDetections3D(com.viam.service.vision.v1.Vision.GetDetections3DRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDetections3DMethod(), getCallOptions(), request);
     }
 
     /**
@@ -884,6 +967,20 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
+     * GetDetections3D returns the objects the service perceives through a camera.
+     * Each detection is a tree of named transforms carrying the object's shapes,
+     * plus class hypotheses. The transforms can be passed unchanged into a frame
+     * system or a motion WorldState.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.GetDetections3DResponse> getDetections3D(
+        com.viam.service.vision.v1.Vision.GetDetections3DRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDetections3DMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetObjectPointClouds returns all the found objects in a pointcloud from a
      * camera of the underlying robot, as well as the 3-vector center of each of
      * the found objects. A specific MIME type can be requested but may not
@@ -943,11 +1040,12 @@ public final class VisionServiceGrpc {
   private static final int METHODID_GET_DETECTIONS = 1;
   private static final int METHODID_GET_CLASSIFICATIONS_FROM_CAMERA = 2;
   private static final int METHODID_GET_CLASSIFICATIONS = 3;
-  private static final int METHODID_GET_OBJECT_POINT_CLOUDS = 4;
-  private static final int METHODID_GET_PROPERTIES = 5;
-  private static final int METHODID_CAPTURE_ALL_FROM_CAMERA = 6;
-  private static final int METHODID_DO_COMMAND = 7;
-  private static final int METHODID_GET_STATUS = 8;
+  private static final int METHODID_GET_DETECTIONS3D = 4;
+  private static final int METHODID_GET_OBJECT_POINT_CLOUDS = 5;
+  private static final int METHODID_GET_PROPERTIES = 6;
+  private static final int METHODID_CAPTURE_ALL_FROM_CAMERA = 7;
+  private static final int METHODID_DO_COMMAND = 8;
+  private static final int METHODID_GET_STATUS = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -981,6 +1079,10 @@ public final class VisionServiceGrpc {
         case METHODID_GET_CLASSIFICATIONS:
           serviceImpl.getClassifications((com.viam.service.vision.v1.Vision.GetClassificationsRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetClassificationsResponse>) responseObserver);
+          break;
+        case METHODID_GET_DETECTIONS3D:
+          serviceImpl.getDetections3D((com.viam.service.vision.v1.Vision.GetDetections3DRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetDetections3DResponse>) responseObserver);
           break;
         case METHODID_GET_OBJECT_POINT_CLOUDS:
           serviceImpl.getObjectPointClouds((com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest) request,
@@ -1049,6 +1151,13 @@ public final class VisionServiceGrpc {
               com.viam.service.vision.v1.Vision.GetClassificationsResponse>(
                 service, METHODID_GET_CLASSIFICATIONS)))
         .addMethod(
+          getGetDetections3DMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.vision.v1.Vision.GetDetections3DRequest,
+              com.viam.service.vision.v1.Vision.GetDetections3DResponse>(
+                service, METHODID_GET_DETECTIONS3D)))
+        .addMethod(
           getGetObjectPointCloudsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1099,6 +1208,7 @@ public final class VisionServiceGrpc {
               .addMethod(getGetDetectionsMethod())
               .addMethod(getGetClassificationsFromCameraMethod())
               .addMethod(getGetClassificationsMethod())
+              .addMethod(getGetDetections3DMethod())
               .addMethod(getGetObjectPointCloudsMethod())
               .addMethod(getGetPropertiesMethod())
               .addMethod(getCaptureAllFromCameraMethod())
