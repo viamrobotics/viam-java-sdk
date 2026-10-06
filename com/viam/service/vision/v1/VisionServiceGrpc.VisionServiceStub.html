@@ -167,34 +167,41 @@ loadScripts(document, 'script');</script>
  image bytes and a detector</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDetectionsFromCamera(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getDetectionsFromCamera</a><wbr>(<a href="Vision.GetDetectionsFromCameraRequest.html" title="class in com.viam.service.vision.v1">Vision.GetDetectionsFromCameraRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Vision.GetDetectionsFromCameraResponse.html" title="class in com.viam.service.vision.v1">Vision.GetDetectionsFromCameraResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDetections3D(com.viam.service.vision.v1.Vision.GetDetections3DRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getDetections3D</a><wbr>(<a href="Vision.GetDetections3DRequest.html" title="class in com.viam.service.vision.v1">Vision.GetDetections3DRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Vision.GetDetections3DResponse.html" title="class in com.viam.service.vision.v1">Vision.GetDetections3DResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetDetections3D returns the objects the service perceives through a camera.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDetectionsFromCamera(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getDetectionsFromCamera</a><wbr>(<a href="Vision.GetDetectionsFromCameraRequest.html" title="class in com.viam.service.vision.v1">Vision.GetDetectionsFromCameraRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Vision.GetDetectionsFromCameraResponse.html" title="class in com.viam.service.vision.v1">Vision.GetDetectionsFromCameraResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  GetDetectionsFromCamera will return a list of detections in the next image
  given a camera and a detector</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getObjectPointClouds(com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getObjectPointClouds</a><wbr>(<a href="Vision.GetObjectPointCloudsRequest.html" title="class in com.viam.service.vision.v1">Vision.GetObjectPointCloudsRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getObjectPointClouds(com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getObjectPointClouds</a><wbr>(<a href="Vision.GetObjectPointCloudsRequest.html" title="class in com.viam.service.vision.v1">Vision.GetObjectPointCloudsRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Vision.GetObjectPointCloudsResponse.html" title="class in com.viam.service.vision.v1">Vision.GetObjectPointCloudsResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  GetObjectPointClouds returns all the found objects in a pointcloud from a
  camera of the underlying robot, as well as the 3-vector center of each of
  the found objects.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProperties(com.viam.service.vision.v1.Vision.GetPropertiesRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getProperties</a><wbr>(<a href="Vision.GetPropertiesRequest.html" title="class in com.viam.service.vision.v1">Vision.GetPropertiesRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProperties(com.viam.service.vision.v1.Vision.GetPropertiesRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getProperties</a><wbr>(<a href="Vision.GetPropertiesRequest.html" title="class in com.viam.service.vision.v1">Vision.GetPropertiesRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Vision.GetPropertiesResponse.html" title="class in com.viam.service.vision.v1">Vision.GetPropertiesResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  GetProperties will return the properties as booleans given the name of the
  vision service</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus(com.viam.common.v1.Common.GetStatusRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getStatus</a><wbr>(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus(com.viam.common.v1.Common.GetStatusRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getStatus</a><wbr>(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  GetStatus returns the status of the resource</div>
 </div>
@@ -273,6 +280,19 @@ loadScripts(document, 'script');</script>
 <div class="block"><pre>
  GetClassifications will return a list of classifications in the next image
  given the image bytes and a classifier
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getDetections3D(com.viam.service.vision.v1.Vision.GetDetections3DRequest,io.grpc.stub.StreamObserver)">
+<h3>getDetections3D</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getDetections3D</span><wbr><span class="parameters">(<a href="Vision.GetDetections3DRequest.html" title="class in com.viam.service.vision.v1">Vision.GetDetections3DRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Vision.GetDetections3DResponse.html" title="class in com.viam.service.vision.v1">Vision.GetDetections3DResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ GetDetections3D returns the objects the service perceives through a camera.
+ Each detection is a tree of named transforms carrying the object's shapes,
+ plus class hypotheses. The transforms can be passed unchanged into a frame
+ system or a motion WorldState.
  </pre></div>
 </section>
 </li>

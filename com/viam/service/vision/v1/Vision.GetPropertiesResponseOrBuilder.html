@@ -134,20 +134,26 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  the default camera used for *FromCamera and GetObjectPointClouds calls</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDetectionsSupported()" class="member-name-link">getDetectionsSupported</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDetections3DSupported()" class="member-name-link">getDetections3DSupported</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ whether or not GetDetections3D is supported by the vision service</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDetectionsSupported()" class="member-name-link">getDetectionsSupported</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  whether or not detections are supported by the vision service</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getObjectPointCloudsSupported()" class="member-name-link">getObjectPointCloudsSupported</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getObjectPointCloudsSupported()" class="member-name-link">getObjectPointCloudsSupported</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  whether or not 3d segmentation is supported by the vision service</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasDefaultCamera()" class="member-name-link">hasDefaultCamera</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasDefaultCamera()" class="member-name-link">hasDefaultCamera</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  the default camera used for *FromCamera and GetObjectPointClouds calls</div>
 </div>
@@ -255,6 +261,21 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The bytes for defaultCamera.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDetections3DSupported()">
+<h3>getDetections3DSupported</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getDetections3DSupported</span>()</div>
+<div class="block"><pre>
+ whether or not GetDetections3D is supported by the vision service
+ </pre>
+
+ <code>bool detections_3d_supported = 5 [json_name = "detections3dSupported"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The detections3dSupported.</dd>
 </dl>
 </section>
 </li>

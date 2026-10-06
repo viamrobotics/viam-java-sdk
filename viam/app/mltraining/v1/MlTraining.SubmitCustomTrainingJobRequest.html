@@ -145,26 +145,29 @@ implements <a href="MlTraining.SubmitCustomTrainingJobRequestOrBuilder.html" tit
 <div class="col-second even-row-color"><code><a href="#ARGUMENTS_FIELD_NUMBER" class="member-name-link">ARGUMENTS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CONTAINER_VERSION_FIELD_NUMBER" class="member-name-link">CONTAINER_VERSION_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#CONTAINER_ID_FIELD_NUMBER" class="member-name-link">CONTAINER_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#DATASET_ID_FIELD_NUMBER" class="member-name-link">DATASET_ID_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CONTAINER_VERSION_FIELD_NUMBER" class="member-name-link">CONTAINER_VERSION_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#MODEL_NAME_FIELD_NUMBER" class="member-name-link">MODEL_NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#DATASET_ID_FIELD_NUMBER" class="member-name-link">DATASET_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#MODEL_VERSION_FIELD_NUMBER" class="member-name-link">MODEL_VERSION_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MODEL_NAME_FIELD_NUMBER" class="member-name-link">MODEL_NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ORGANIZATION_ID_FIELD_NUMBER" class="member-name-link">ORGANIZATION_ID_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MODEL_VERSION_FIELD_NUMBER" class="member-name-link">MODEL_VERSION_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#REGISTRY_ITEM_ID_FIELD_NUMBER" class="member-name-link">REGISTRY_ITEM_ID_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ORGANIZATION_ID_FIELD_NUMBER" class="member-name-link">ORGANIZATION_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#REGISTRY_ITEM_VERSION_FIELD_NUMBER" class="member-name-link">REGISTRY_ITEM_VERSION_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#REGISTRY_ITEM_ID_FIELD_NUMBER" class="member-name-link">REGISTRY_ITEM_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#REGISTRY_ITEM_VERSION_FIELD_NUMBER" class="member-name-link">REGISTRY_ITEM_VERSION_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -220,6 +223,16 @@ implements <a href="MlTraining.SubmitCustomTrainingJobRequestOrBuilder.html" tit
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getArgumentsOrThrow(java.lang.String)" class="member-name-link">getArgumentsOrThrow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>map&lt;string, string&gt; arguments = 7 [json_name = "arguments"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContainerId()" class="member-name-link">getContainerId</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string container_id = 9 [json_name = "containerId"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContainerIdBytes()" class="member-name-link">getContainerIdBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string container_id = 9 [json_name = "containerId"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContainerVersion()" class="member-name-link">getContainerVersion</a>()</code></div>
@@ -483,6 +496,20 @@ implements <a href="MlTraining.SubmitCustomTrainingJobRequestOrBuilder.html" tit
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="CONTAINER_ID_FIELD_NUMBER">
+<h3>CONTAINER_ID_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CONTAINER_ID_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../constant-values.html#viam.app.mltraining.v1.MlTraining.SubmitCustomTrainingJobRequest.CONTAINER_ID_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -740,6 +767,32 @@ implements <a href="MlTraining.SubmitCustomTrainingJobRequestOrBuilder.html" tit
 <dd><code><a href="MlTraining.SubmitCustomTrainingJobRequestOrBuilder.html#getContainerVersionBytes()">getContainerVersionBytes</a></code>&nbsp;in interface&nbsp;<code><a href="MlTraining.SubmitCustomTrainingJobRequestOrBuilder.html" title="interface in viam.app.mltraining.v1">MlTraining.SubmitCustomTrainingJobRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for containerVersion.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContainerId()">
+<h3>getContainerId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getContainerId</span>()</div>
+<div class="block"><code>string container_id = 9 [json_name = "containerId"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MlTraining.SubmitCustomTrainingJobRequestOrBuilder.html#getContainerId()">getContainerId</a></code>&nbsp;in interface&nbsp;<code><a href="MlTraining.SubmitCustomTrainingJobRequestOrBuilder.html" title="interface in viam.app.mltraining.v1">MlTraining.SubmitCustomTrainingJobRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The containerId.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContainerIdBytes()">
+<h3>getContainerIdBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getContainerIdBytes</span>()</div>
+<div class="block"><code>string container_id = 9 [json_name = "containerId"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MlTraining.SubmitCustomTrainingJobRequestOrBuilder.html#getContainerIdBytes()">getContainerIdBytes</a></code>&nbsp;in interface&nbsp;<code><a href="MlTraining.SubmitCustomTrainingJobRequestOrBuilder.html" title="interface in viam.app.mltraining.v1">MlTraining.SubmitCustomTrainingJobRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for containerId.</dd>
 </dl>
 </section>
 </li>

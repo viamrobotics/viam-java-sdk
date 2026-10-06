@@ -157,20 +157,26 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  whether or not including detections in the response</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReturnImage()" class="member-name-link">getReturnImage</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReturnDetections3D()" class="member-name-link">getReturnDetections3D</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ whether or not including 3D detections in the response</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReturnImage()" class="member-name-link">getReturnImage</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  whether or not including the image in the response</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReturnObjectPointClouds()" class="member-name-link">getReturnObjectPointClouds</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReturnObjectPointClouds()" class="member-name-link">getReturnObjectPointClouds</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  whether or not including pcd in the response</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasExtra()" class="member-name-link">hasExtra</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasExtra()" class="member-name-link">hasExtra</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
 </div>
 </div>
@@ -307,6 +313,21 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The returnObjectPointClouds.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getReturnDetections3D()">
+<h3>getReturnDetections3D</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getReturnDetections3D</span>()</div>
+<div class="block"><pre>
+ whether or not including 3D detections in the response
+ </pre>
+
+ <code>bool return_detections_3d = 7 [json_name = "returnDetections3d"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The returnDetections3d.</dd>
 </dl>
 </section>
 </li>

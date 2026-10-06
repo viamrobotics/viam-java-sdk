@@ -177,6 +177,12 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Stops a Plan</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default io.grpc.stub.StreamObserver<wbr>&lt;<a href="Motion.TempStreamArmJointPositionsRequest.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsRequest</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#tempStreamArmJointPositions(io.grpc.stub.StreamObserver)" class="member-name-link">tempStreamArmJointPositions</a><wbr>(io.grpc.stub.StreamObserver&lt;<a href="Motion.TempStreamArmJointPositionsResponse.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">
+ Streams joint-space waypoints to an arm.</div>
+</div>
 </div>
 </div>
 </div>
@@ -268,6 +274,20 @@ loadScripts(document, 'script');</script>
  Replans always create new plans.
  Replans share the execution_id of the previously executing plan.
  This currently only returns plans for MoveOnGlobe and MoveOnMap.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="tempStreamArmJointPositions(io.grpc.stub.StreamObserver)">
+<h3>tempStreamArmJointPositions</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">io.grpc.stub.StreamObserver&lt;<a href="Motion.TempStreamArmJointPositionsRequest.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsRequest</a>&gt;</span>&nbsp;<span class="element-name">tempStreamArmJointPositions</span><wbr><span class="parameters">(io.grpc.stub.StreamObserver&lt;<a href="Motion.TempStreamArmJointPositionsResponse.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ Streams joint-space waypoints to an arm. The first message on the stream must
+ be an Init; every subsequent message must be a Targets batch. Closing the
+ request stream drains any buffered trajectory to the arm before ending the
+ call; canceling the call's context aborts the session immediately.
+ This method and its associated types are named as Temp because this API is
+ under active development, and its current shape should not be depended on.
  </pre></div>
 </section>
 </li>

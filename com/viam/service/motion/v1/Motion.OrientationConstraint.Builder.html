@@ -135,10 +135,24 @@ implements <a href="Motion.OrientationConstraintOrBuilder.html" title="interface
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.OrientationConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearOrientationToleranceDegs()" class="member-name-link">clearOrientationToleranceDegs</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearIgnoreTheta()" class="member-name-link">clearIgnoreTheta</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
+ When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+ component's own pointing axis.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.OrientationConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearOrientationToleranceDegs()" class="member-name-link">clearOrientationToleranceDegs</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
  Max allowable orientation deviation, in degrees, while on the shortest path between start / goal states</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIgnoreTheta()" class="member-name-link">getIgnoreTheta</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+ component's own pointing axis.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrientationToleranceDegs()" class="member-name-link">getOrientationToleranceDegs</a>()</code></div>
@@ -147,10 +161,24 @@ implements <a href="Motion.OrientationConstraintOrBuilder.html" title="interface
  Max allowable orientation deviation, in degrees, while on the shortest path between start / goal states</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasOrientationToleranceDegs()" class="member-name-link">hasOrientationToleranceDegs</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasIgnoreTheta()" class="member-name-link">hasIgnoreTheta</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
+ When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+ component's own pointing axis.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasOrientationToleranceDegs()" class="member-name-link">hasOrientationToleranceDegs</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
  Max allowable orientation deviation, in degrees, while on the shortest path between start / goal states</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.OrientationConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIgnoreTheta(boolean)" class="member-name-link">setIgnoreTheta</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+ component's own pointing axis.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Motion.OrientationConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrientationToleranceDegs(float)" class="member-name-link">setOrientationToleranceDegs</a><wbr>(float&nbsp;value)</code></div>
@@ -244,6 +272,84 @@ implements <a href="Motion.OrientationConstraintOrBuilder.html" title="interface
  </pre>
 
  <code>optional float orientation_tolerance_degs = 1 [json_name = "orientationToleranceDegs"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasIgnoreTheta()">
+<h3>hasIgnoreTheta</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasIgnoreTheta</span>()</div>
+<div class="block"><pre>
+ When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+ component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+ container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+ matter. Defaults to false, measuring the full orientation.
+ </pre>
+
+ <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Motion.OrientationConstraintOrBuilder.html#hasIgnoreTheta()">hasIgnoreTheta</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.OrientationConstraintOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.OrientationConstraintOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the ignoreTheta field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getIgnoreTheta()">
+<h3>getIgnoreTheta</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getIgnoreTheta</span>()</div>
+<div class="block"><pre>
+ When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+ component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+ container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+ matter. Defaults to false, measuring the full orientation.
+ </pre>
+
+ <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Motion.OrientationConstraintOrBuilder.html#getIgnoreTheta()">getIgnoreTheta</a></code>&nbsp;in interface&nbsp;<code><a href="Motion.OrientationConstraintOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.OrientationConstraintOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The ignoreTheta.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setIgnoreTheta(boolean)">
+<h3>setIgnoreTheta</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.OrientationConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint.Builder</a></span>&nbsp;<span class="element-name">setIgnoreTheta</span><wbr><span class="parameters">(boolean&nbsp;value)</span></div>
+<div class="block"><pre>
+ When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+ component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+ container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+ matter. Defaults to false, measuring the full orientation.
+ </pre>
+
+ <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The ignoreTheta to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearIgnoreTheta()">
+<h3>clearIgnoreTheta</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Motion.OrientationConstraint.Builder.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint.Builder</a></span>&nbsp;<span class="element-name">clearIgnoreTheta</span>()</div>
+<div class="block"><pre>
+ When true, deviation is measured between orientation vectors alone, disregarding rotation about the
+ component's own pointing axis. Set this for payloads that are symmetric about that axis - an open
+ container spills when tipped, not when spun - so the tolerance does not pin a rotation that cannot
+ matter. Defaults to false, measuring the full orientation.
+ </pre>
+
+ <code>optional bool ignore_theta = 2 [json_name = "ignoreTheta"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>

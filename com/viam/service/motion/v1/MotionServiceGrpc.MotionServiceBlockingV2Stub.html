@@ -186,6 +186,12 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Stops a Plan</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>io.grpc.stub.BlockingClientCall<wbr>&lt;<a href="Motion.TempStreamArmJointPositionsRequest.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsRequest</a>,<wbr><a href="Motion.TempStreamArmJointPositionsResponse.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tempStreamArmJointPositions()" class="member-name-link">tempStreamArmJointPositions</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Streams joint-space waypoints to an arm.</div>
+</div>
 </div>
 </div>
 </div>
@@ -326,6 +332,21 @@ loadScripts(document, 'script');</script>
 <dt>Throws:</dt>
 <dd><code>io.grpc.StatusException</code></dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="tempStreamArmJointPositions()">
+<h3>tempStreamArmJointPositions</h3>
+<div class="member-signature"><span class="annotations">@ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">io.grpc.stub.BlockingClientCall&lt;<a href="Motion.TempStreamArmJointPositionsRequest.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsRequest</a>,<wbr><a href="Motion.TempStreamArmJointPositionsResponse.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsResponse</a>&gt;</span>&nbsp;<span class="element-name">tempStreamArmJointPositions</span>()</div>
+<div class="block"><pre>
+ Streams joint-space waypoints to an arm. The first message on the stream must
+ be an Init; every subsequent message must be a Targets batch. Closing the
+ request stream drains any buffered trajectory to the arm before ending the
+ call; canceling the call's context aborts the session immediately.
+ This method and its associated types are named as Temp because this API is
+ under active development, and its current shape should not be depended on.
+ </pre></div>
 </section>
 </li>
 <li>

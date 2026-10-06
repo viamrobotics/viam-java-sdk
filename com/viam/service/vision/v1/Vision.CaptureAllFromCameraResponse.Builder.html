@@ -140,85 +140,117 @@ implements <a href="Vision.CaptureAllFromCameraResponseOrBuilder.html" title="in
 <div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllObjects(java.lang.Iterable)" class="member-name-link">addAllObjects</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="../../../common/v1/Common.PointCloudObject.html" title="class in com.viam.common.v1">Common.PointCloudObject</a>&gt;&nbsp;values)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllDetections3D(java.lang.Iterable)" class="member-name-link">addAllDetections3D</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="Vision.Detection3D.html" title="class in com.viam.service.vision.v1">Vision.Detection3D</a>&gt;&nbsp;values)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addClassifications(int,com.viam.service.vision.v1.Vision.Classification)" class="member-name-link">addClassifications</a><wbr>(int&nbsp;index,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllObjects(java.lang.Iterable)" class="member-name-link">addAllObjects</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="../../../common/v1/Common.PointCloudObject.html" title="class in com.viam.common.v1">Common.PointCloudObject</a>&gt;&nbsp;values)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addClassifications(int,com.viam.service.vision.v1.Vision.Classification)" class="member-name-link">addClassifications</a><wbr>(int&nbsp;index,
  <a href="Vision.Classification.html" title="class in com.viam.service.vision.v1">Vision.Classification</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addClassifications(int,com.viam.service.vision.v1.Vision.Classification.Builder)" class="member-name-link">addClassifications</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addClassifications(int,com.viam.service.vision.v1.Vision.Classification.Builder)" class="member-name-link">addClassifications</a><wbr>(int&nbsp;index,
  <a href="Vision.Classification.Builder.html" title="class in com.viam.service.vision.v1">Vision.Classification.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addClassifications(com.viam.service.vision.v1.Vision.Classification)" class="member-name-link">addClassifications</a><wbr>(<a href="Vision.Classification.html" title="class in com.viam.service.vision.v1">Vision.Classification</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addClassifications(com.viam.service.vision.v1.Vision.Classification.Builder)" class="member-name-link">addClassifications</a><wbr>(<a href="Vision.Classification.Builder.html" title="class in com.viam.service.vision.v1">Vision.Classification.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addClassifications(com.viam.service.vision.v1.Vision.Classification)" class="member-name-link">addClassifications</a><wbr>(<a href="Vision.Classification.html" title="class in com.viam.service.vision.v1">Vision.Classification</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetections(int,com.viam.service.vision.v1.Vision.Detection)" class="member-name-link">addDetections</a><wbr>(int&nbsp;index,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addClassifications(com.viam.service.vision.v1.Vision.Classification.Builder)" class="member-name-link">addClassifications</a><wbr>(<a href="Vision.Classification.Builder.html" title="class in com.viam.service.vision.v1">Vision.Classification.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetections(int,com.viam.service.vision.v1.Vision.Detection)" class="member-name-link">addDetections</a><wbr>(int&nbsp;index,
  <a href="Vision.Detection.html" title="class in com.viam.service.vision.v1">Vision.Detection</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetections(int,com.viam.service.vision.v1.Vision.Detection.Builder)" class="member-name-link">addDetections</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetections(int,com.viam.service.vision.v1.Vision.Detection.Builder)" class="member-name-link">addDetections</a><wbr>(int&nbsp;index,
  <a href="Vision.Detection.Builder.html" title="class in com.viam.service.vision.v1">Vision.Detection.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetections(com.viam.service.vision.v1.Vision.Detection)" class="member-name-link">addDetections</a><wbr>(<a href="Vision.Detection.html" title="class in com.viam.service.vision.v1">Vision.Detection</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetections(com.viam.service.vision.v1.Vision.Detection.Builder)" class="member-name-link">addDetections</a><wbr>(<a href="Vision.Detection.Builder.html" title="class in com.viam.service.vision.v1">Vision.Detection.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetections(com.viam.service.vision.v1.Vision.Detection)" class="member-name-link">addDetections</a><wbr>(<a href="Vision.Detection.html" title="class in com.viam.service.vision.v1">Vision.Detection</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addObjects(int,com.viam.common.v1.Common.PointCloudObject)" class="member-name-link">addObjects</a><wbr>(int&nbsp;index,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetections(com.viam.service.vision.v1.Vision.Detection.Builder)" class="member-name-link">addDetections</a><wbr>(<a href="Vision.Detection.Builder.html" title="class in com.viam.service.vision.v1">Vision.Detection.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetections3D(int,com.viam.service.vision.v1.Vision.Detection3D)" class="member-name-link">addDetections3D</a><wbr>(int&nbsp;index,
+ <a href="Vision.Detection3D.html" title="class in com.viam.service.vision.v1">Vision.Detection3D</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetections3D(int,com.viam.service.vision.v1.Vision.Detection3D.Builder)" class="member-name-link">addDetections3D</a><wbr>(int&nbsp;index,
+ <a href="Vision.Detection3D.Builder.html" title="class in com.viam.service.vision.v1">Vision.Detection3D.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetections3D(com.viam.service.vision.v1.Vision.Detection3D)" class="member-name-link">addDetections3D</a><wbr>(<a href="Vision.Detection3D.html" title="class in com.viam.service.vision.v1">Vision.Detection3D</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDetections3D(com.viam.service.vision.v1.Vision.Detection3D.Builder)" class="member-name-link">addDetections3D</a><wbr>(<a href="Vision.Detection3D.Builder.html" title="class in com.viam.service.vision.v1">Vision.Detection3D.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addObjects(int,com.viam.common.v1.Common.PointCloudObject)" class="member-name-link">addObjects</a><wbr>(int&nbsp;index,
  <a href="../../../common/v1/Common.PointCloudObject.html" title="class in com.viam.common.v1">Common.PointCloudObject</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addObjects(int,com.viam.common.v1.Common.PointCloudObject.Builder)" class="member-name-link">addObjects</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addObjects(int,com.viam.common.v1.Common.PointCloudObject.Builder)" class="member-name-link">addObjects</a><wbr>(int&nbsp;index,
  <a href="../../../common/v1/Common.PointCloudObject.Builder.html" title="class in com.viam.common.v1">Common.PointCloudObject.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addObjects(com.viam.common.v1.Common.PointCloudObject)" class="member-name-link">addObjects</a><wbr>(<a href="../../../common/v1/Common.PointCloudObject.html" title="class in com.viam.common.v1">Common.PointCloudObject</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addObjects(com.viam.common.v1.Common.PointCloudObject.Builder)" class="member-name-link">addObjects</a><wbr>(<a href="../../../common/v1/Common.PointCloudObject.Builder.html" title="class in com.viam.common.v1">Common.PointCloudObject.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addObjects(com.viam.common.v1.Common.PointCloudObject)" class="member-name-link">addObjects</a><wbr>(<a href="../../../common/v1/Common.PointCloudObject.html" title="class in com.viam.common.v1">Common.PointCloudObject</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearClassifications()" class="member-name-link">clearClassifications</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addObjects(com.viam.common.v1.Common.PointCloudObject.Builder)" class="member-name-link">addObjects</a><wbr>(<a href="../../../common/v1/Common.PointCloudObject.Builder.html" title="class in com.viam.common.v1">Common.PointCloudObject.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearClassifications()" class="member-name-link">clearClassifications</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearDetections()" class="member-name-link">clearDetections</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearDetections()" class="member-name-link">clearDetections</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearDetections3D()" class="member-name-link">clearDetections3D</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearExtra()" class="member-name-link">clearExtra</a>()</code></div>
@@ -255,70 +287,90 @@ implements <a href="Vision.CaptureAllFromCameraResponseOrBuilder.html" title="in
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDetectionsCount()" class="member-name-link">getDetectionsCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.Detection3D.html" title="class in com.viam.service.vision.v1">Vision.Detection3D</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDetections3D(int)" class="member-name-link">getDetections3D</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Vision.Detection.html" title="class in com.viam.service.vision.v1">Vision.Detection</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDetectionsList()" class="member-name-link">getDetectionsList</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExtra()" class="member-name-link">getExtra</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../component/camera/v1/Camera.Image.html" title="class in com.viam.component.camera.v1">Camera.Image</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getImage()" class="member-name-link">getImage</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../common/v1/Common.PointCloudObject.html" title="class in com.viam.common.v1">Common.PointCloudObject</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getObjects(int)" class="member-name-link">getObjects</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getObjectsCount()" class="member-name-link">getObjectsCount</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDetections3DCount()" class="member-name-link">getDetections3DCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../../common/v1/Common.PointCloudObject.html" title="class in com.viam.common.v1">Common.PointCloudObject</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getObjectsList()" class="member-name-link">getObjectsList</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Vision.Detection3D.html" title="class in com.viam.service.vision.v1">Vision.Detection3D</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDetections3DList()" class="member-name-link">getDetections3DList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasExtra()" class="member-name-link">hasExtra</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDetectionsCount()" class="member-name-link">getDetectionsCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasImage()" class="member-name-link">hasImage</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeExtra(com.google.protobuf.Struct)" class="member-name-link">mergeExtra</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeImage(com.viam.component.camera.v1.Camera.Image)" class="member-name-link">mergeImage</a><wbr>(<a href="../../../component/camera/v1/Camera.Image.html" title="class in com.viam.component.camera.v1">Camera.Image</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeClassifications(int)" class="member-name-link">removeClassifications</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeDetections(int)" class="member-name-link">removeDetections</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Vision.Detection.html" title="class in com.viam.service.vision.v1">Vision.Detection</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDetectionsList()" class="member-name-link">getDetectionsList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExtra()" class="member-name-link">getExtra</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../component/camera/v1/Camera.Image.html" title="class in com.viam.component.camera.v1">Camera.Image</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getImage()" class="member-name-link">getImage</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../common/v1/Common.PointCloudObject.html" title="class in com.viam.common.v1">Common.PointCloudObject</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getObjects(int)" class="member-name-link">getObjects</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getObjectsCount()" class="member-name-link">getObjectsCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../../common/v1/Common.PointCloudObject.html" title="class in com.viam.common.v1">Common.PointCloudObject</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getObjectsList()" class="member-name-link">getObjectsList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasExtra()" class="member-name-link">hasExtra</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasImage()" class="member-name-link">hasImage</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeExtra(com.google.protobuf.Struct)" class="member-name-link">mergeExtra</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeImage(com.viam.component.camera.v1.Camera.Image)" class="member-name-link">mergeImage</a><wbr>(<a href="../../../component/camera/v1/Camera.Image.html" title="class in com.viam.component.camera.v1">Camera.Image</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.component.camera.v1.Image image = 1 [json_name = "image"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeClassifications(int)" class="member-name-link">removeClassifications</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.vision.v1.Classification classifications = 3 [json_name = "classifications"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeDetections(int)" class="member-name-link">removeDetections</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeDetections3D(int)" class="member-name-link">removeDetections3D</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeObjects(int)" class="member-name-link">removeObjects</a><wbr>(int&nbsp;index)</code></div>
@@ -348,6 +400,18 @@ implements <a href="Vision.CaptureAllFromCameraResponseOrBuilder.html" title="in
  <a href="Vision.Detection.Builder.html" title="class in com.viam.service.vision.v1">Vision.Detection.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.service.vision.v1.Detection detections = 2 [json_name = "detections"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDetections3D(int,com.viam.service.vision.v1.Vision.Detection3D)" class="member-name-link">setDetections3D</a><wbr>(int&nbsp;index,
+ <a href="Vision.Detection3D.html" title="class in com.viam.service.vision.v1">Vision.Detection3D</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDetections3D(int,com.viam.service.vision.v1.Vision.Detection3D.Builder)" class="member-name-link">setDetections3D</a><wbr>(int&nbsp;index,
+ <a href="Vision.Detection3D.Builder.html" title="class in com.viam.service.vision.v1">Vision.Detection3D.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setExtra(com.google.protobuf.Struct)" class="member-name-link">setExtra</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
@@ -759,6 +823,106 @@ implements <a href="Vision.CaptureAllFromCameraResponseOrBuilder.html" title="in
 <h3>removeObjects</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></span>&nbsp;<span class="element-name">removeObjects</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><code>repeated .viam.common.v1.PointCloudObject objects = 4 [json_name = "objects"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getDetections3DList()">
+<h3>getDetections3DList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Vision.Detection3D.html" title="class in com.viam.service.vision.v1">Vision.Detection3D</a>&gt;</span>&nbsp;<span class="element-name">getDetections3DList</span>()</div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Vision.CaptureAllFromCameraResponseOrBuilder.html#getDetections3DList()">getDetections3DList</a></code>&nbsp;in interface&nbsp;<code><a href="Vision.CaptureAllFromCameraResponseOrBuilder.html" title="interface in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponseOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDetections3DCount()">
+<h3>getDetections3DCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getDetections3DCount</span>()</div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Vision.CaptureAllFromCameraResponseOrBuilder.html#getDetections3DCount()">getDetections3DCount</a></code>&nbsp;in interface&nbsp;<code><a href="Vision.CaptureAllFromCameraResponseOrBuilder.html" title="interface in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponseOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDetections3D(int)">
+<h3>getDetections3D</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vision.Detection3D.html" title="class in com.viam.service.vision.v1">Vision.Detection3D</a></span>&nbsp;<span class="element-name">getDetections3D</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Vision.CaptureAllFromCameraResponseOrBuilder.html#getDetections3D(int)">getDetections3D</a></code>&nbsp;in interface&nbsp;<code><a href="Vision.CaptureAllFromCameraResponseOrBuilder.html" title="interface in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponseOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setDetections3D(int,com.viam.service.vision.v1.Vision.Detection3D)">
+<h3>setDetections3D</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></span>&nbsp;<span class="element-name">setDetections3D</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Vision.Detection3D.html" title="class in com.viam.service.vision.v1">Vision.Detection3D</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setDetections3D(int,com.viam.service.vision.v1.Vision.Detection3D.Builder)">
+<h3>setDetections3D</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></span>&nbsp;<span class="element-name">setDetections3D</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Vision.Detection3D.Builder.html" title="class in com.viam.service.vision.v1">Vision.Detection3D.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addDetections3D(com.viam.service.vision.v1.Vision.Detection3D)">
+<h3>addDetections3D</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></span>&nbsp;<span class="element-name">addDetections3D</span><wbr><span class="parameters">(<a href="Vision.Detection3D.html" title="class in com.viam.service.vision.v1">Vision.Detection3D</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addDetections3D(int,com.viam.service.vision.v1.Vision.Detection3D)">
+<h3>addDetections3D</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></span>&nbsp;<span class="element-name">addDetections3D</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Vision.Detection3D.html" title="class in com.viam.service.vision.v1">Vision.Detection3D</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addDetections3D(com.viam.service.vision.v1.Vision.Detection3D.Builder)">
+<h3>addDetections3D</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></span>&nbsp;<span class="element-name">addDetections3D</span><wbr><span class="parameters">(<a href="Vision.Detection3D.Builder.html" title="class in com.viam.service.vision.v1">Vision.Detection3D.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addDetections3D(int,com.viam.service.vision.v1.Vision.Detection3D.Builder)">
+<h3>addDetections3D</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></span>&nbsp;<span class="element-name">addDetections3D</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Vision.Detection3D.Builder.html" title="class in com.viam.service.vision.v1">Vision.Detection3D.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addAllDetections3D(java.lang.Iterable)">
+<h3>addAllDetections3D</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></span>&nbsp;<span class="element-name">addAllDetections3D</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="Vision.Detection3D.html" title="class in com.viam.service.vision.v1">Vision.Detection3D</a>&gt;&nbsp;values)</span></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearDetections3D()">
+<h3>clearDetections3D</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></span>&nbsp;<span class="element-name">clearDetections3D</span>()</div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="removeDetections3D(int)">
+<h3>removeDetections3D</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Vision.CaptureAllFromCameraResponse.Builder.html" title="class in com.viam.service.vision.v1">Vision.CaptureAllFromCameraResponse.Builder</a></span>&nbsp;<span class="element-name">removeDetections3D</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.service.vision.v1.Detection3D detections_3d = 5 [json_name = "detections3d"];</code></div>
 </section>
 </li>
 <li>

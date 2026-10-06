@@ -142,23 +142,26 @@ implements <a href="Camera.GetPropertiesResponseOrBuilder.html" title="interface
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#DISTORTION_PARAMETERS_FIELD_NUMBER" class="member-name-link">DISTORTION_PARAMETERS_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#DEFAULT_REFERENCE_FRAME_FIELD_NUMBER" class="member-name-link">DEFAULT_REFERENCE_FRAME_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#EXTRINSIC_PARAMETERS_FIELD_NUMBER" class="member-name-link">EXTRINSIC_PARAMETERS_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#DISTORTION_PARAMETERS_FIELD_NUMBER" class="member-name-link">DISTORTION_PARAMETERS_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#FRAME_RATE_FIELD_NUMBER" class="member-name-link">FRAME_RATE_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#EXTRINSIC_PARAMETERS_FIELD_NUMBER" class="member-name-link">EXTRINSIC_PARAMETERS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#INTRINSIC_PARAMETERS_FIELD_NUMBER" class="member-name-link">INTRINSIC_PARAMETERS_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#FRAME_RATE_FIELD_NUMBER" class="member-name-link">FRAME_RATE_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#MIME_TYPES_FIELD_NUMBER" class="member-name-link">MIME_TYPES_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#INTRINSIC_PARAMETERS_FIELD_NUMBER" class="member-name-link">INTRINSIC_PARAMETERS_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#SUPPORTS_PCD_FIELD_NUMBER" class="member-name-link">SUPPORTS_PCD_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MIME_TYPES_FIELD_NUMBER" class="member-name-link">MIME_TYPES_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#SUPPORTS_PCD_FIELD_NUMBER" class="member-name-link">SUPPORTS_PCD_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -187,6 +190,20 @@ implements <a href="Camera.GetPropertiesResponseOrBuilder.html" title="interface
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Camera.GetPropertiesResponse.html" title="class in com.viam.component.camera.v1">Camera.GetPropertiesResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDefaultReferenceFrame()" class="member-name-link">getDefaultReferenceFrame</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Name of the reference frame that points returned by GetPointCloud are expressed in
+ An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDefaultReferenceFrameBytes()" class="member-name-link">getDefaultReferenceFrameBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Name of the reference frame that points returned by GetPointCloud are expressed in
+ An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Camera.DistortionParameters.html" title="class in com.viam.component.camera.v1">Camera.DistortionParameters</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDistortionParameters()" class="member-name-link">getDistortionParameters</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -436,6 +453,20 @@ implements <a href="Camera.GetPropertiesResponseOrBuilder.html" title="interface
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="DEFAULT_REFERENCE_FRAME_FIELD_NUMBER">
+<h3>DEFAULT_REFERENCE_FRAME_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">DEFAULT_REFERENCE_FRAME_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../../constant-values.html#com.viam.component.camera.v1.Camera.GetPropertiesResponse.DEFAULT_REFERENCE_FRAME_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -676,6 +707,42 @@ implements <a href="Camera.GetPropertiesResponseOrBuilder.html" title="interface
 <dd><code><a href="Camera.GetPropertiesResponseOrBuilder.html#getExtrinsicParameters()">getExtrinsicParameters</a></code>&nbsp;in interface&nbsp;<code><a href="Camera.GetPropertiesResponseOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.GetPropertiesResponseOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The extrinsicParameters.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDefaultReferenceFrame()">
+<h3>getDefaultReferenceFrame</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDefaultReferenceFrame</span>()</div>
+<div class="block"><pre>
+ Name of the reference frame that points returned by GetPointCloud are expressed in
+ An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+ </pre>
+
+ <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Camera.GetPropertiesResponseOrBuilder.html#getDefaultReferenceFrame()">getDefaultReferenceFrame</a></code>&nbsp;in interface&nbsp;<code><a href="Camera.GetPropertiesResponseOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.GetPropertiesResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The defaultReferenceFrame.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDefaultReferenceFrameBytes()">
+<h3>getDefaultReferenceFrameBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getDefaultReferenceFrameBytes</span>()</div>
+<div class="block"><pre>
+ Name of the reference frame that points returned by GetPointCloud are expressed in
+ An empty string means the frame is unknown; the frame is not guaranteed to exist in the frame system
+ </pre>
+
+ <code>string default_reference_frame = 7 [json_name = "defaultReferenceFrame"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Camera.GetPropertiesResponseOrBuilder.html#getDefaultReferenceFrameBytes()">getDefaultReferenceFrameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Camera.GetPropertiesResponseOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.GetPropertiesResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for defaultReferenceFrame.</dd>
 </dl>
 </section>
 </li>
