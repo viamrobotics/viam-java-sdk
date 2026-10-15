@@ -26852,7 +26852,7 @@ public final class AppOuterClass {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=669
+     *     See app/v1/app.proto;l=681
      * @return The secret.
      */
     @java.lang.Deprecated java.lang.String getSecret();
@@ -26863,7 +26863,7 @@ public final class AppOuterClass {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=669
+     *     See app/v1/app.proto;l=681
      * @return The bytes for secret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -26937,7 +26937,7 @@ public final class AppOuterClass {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=669
+     *     See app/v1/app.proto;l=681
      * @return The secret.
      */
     @java.lang.Override
@@ -26951,7 +26951,7 @@ public final class AppOuterClass {
      *
      * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
      * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-     *     See app/v1/app.proto;l=669
+     *     See app/v1/app.proto;l=681
      * @return The bytes for secret.
      */
     @java.lang.Override
@@ -27313,7 +27313,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=669
+       *     See app/v1/app.proto;l=681
        * @return The secret.
        */
       @java.lang.Override
@@ -27327,7 +27327,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=669
+       *     See app/v1/app.proto;l=681
        * @return The bytes for secret.
        */
       @java.lang.Override
@@ -27342,7 +27342,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=669
+       *     See app/v1/app.proto;l=681
        * @param value The secret to set.
        * @return This builder for chaining.
        */
@@ -27359,7 +27359,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=669
+       *     See app/v1/app.proto;l=681
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSecret() {
@@ -27374,7 +27374,7 @@ public final class AppOuterClass {
        *
        * <code>string secret = 1 [json_name = "secret", deprecated = true];</code>
        * @deprecated viam.app.v1.LocationAuth.secret is deprecated.
-       *     See app/v1/app.proto;l=669
+       *     See app/v1/app.proto;l=681
        * @param value The bytes for secret to set.
        * @return This builder for chaining.
        */
@@ -44034,7 +44034,7 @@ public final class AppOuterClass {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=910
+     *     See app/v1/app.proto;l=922
      * @return The errorsOnly.
      */
     @java.lang.Deprecated boolean getErrorsOnly();
@@ -44321,7 +44321,7 @@ public final class AppOuterClass {
      *
      * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
      * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-     *     See app/v1/app.proto;l=910
+     *     See app/v1/app.proto;l=922
      * @return The errorsOnly.
      */
     @java.lang.Override
@@ -45153,7 +45153,7 @@ public final class AppOuterClass {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=910
+       *     See app/v1/app.proto;l=922
        * @return The errorsOnly.
        */
       @java.lang.Override
@@ -45167,7 +45167,7 @@ public final class AppOuterClass {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=910
+       *     See app/v1/app.proto;l=922
        * @param value The errorsOnly to set.
        * @return This builder for chaining.
        */
@@ -45183,7 +45183,7 @@ public final class AppOuterClass {
        *
        * <code>bool errors_only = 2 [json_name = "errorsOnly", deprecated = true];</code>
        * @deprecated viam.app.v1.GetRobotPartLogsRequest.errors_only is deprecated.
-       *     See app/v1/app.proto;l=910
+       *     See app/v1/app.proto;l=922
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearErrorsOnly() {
@@ -49699,6 +49699,1900 @@ public final class AppOuterClass {
     }
   }
 
+  public interface ConfigPropertyChangeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.ConfigPropertyChange)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @return The path.
+     */
+    java.lang.String getPath();
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @return The bytes for path.
+     */
+    com.google.protobuf.ByteString
+        getPathBytes();
+
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     * @return The value.
+     */
+    com.google.protobuf.Value getValue();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.ConfigPropertyChange}
+   */
+  public  static final class ConfigPropertyChange extends
+      com.google.protobuf.GeneratedMessageLite<
+          ConfigPropertyChange, ConfigPropertyChange.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.ConfigPropertyChange)
+      ConfigPropertyChangeOrBuilder {
+    private ConfigPropertyChange() {
+      path_ = "";
+    }
+    private int bitField0_;
+    public static final int PATH_FIELD_NUMBER = 1;
+    private java.lang.String path_;
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @return The path.
+     */
+    @java.lang.Override
+    public java.lang.String getPath() {
+      return path_;
+    }
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @return The bytes for path.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPathBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(path_);
+    }
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @param value The path to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPath(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      path_ = value;
+    }
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     */
+    private void clearPath() {
+
+      path_ = getDefaultInstance().getPath();
+    }
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @param value The bytes for path to set.
+     */
+    private void setPathBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      path_ = value.toStringUtf8();
+
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private com.google.protobuf.Value value_;
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Value getValue() {
+      return value_ == null ? com.google.protobuf.Value.getDefaultInstance() : value_;
+    }
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setValue(com.google.protobuf.Value value) {
+      value.getClass();  // minimal bytecode null check
+      value_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeValue(com.google.protobuf.Value value) {
+      value.getClass();  // minimal bytecode null check
+      if (value_ != null &&
+          value_ != com.google.protobuf.Value.getDefaultInstance()) {
+        value_ =
+          com.google.protobuf.Value.newBuilder(value_).mergeFrom(value).buildPartial();
+      } else {
+        value_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     */
+    private void clearValue() {
+      value_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChange parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChange parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChange parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChange parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChange parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChange parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChange parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChange parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChange parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChange parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChange parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChange parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.ConfigPropertyChange prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.ConfigPropertyChange}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.ConfigPropertyChange, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.ConfigPropertyChange)
+        viam.app.v1.AppOuterClass.ConfigPropertyChangeOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.ConfigPropertyChange.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @return The path.
+       */
+      @java.lang.Override
+      public java.lang.String getPath() {
+        return instance.getPath();
+      }
+      /**
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @return The bytes for path.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPathBytes() {
+        return instance.getPathBytes();
+      }
+      /**
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @param value The path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPath(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPath(value);
+        return this;
+      }
+      /**
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPath() {
+        copyOnWrite();
+        instance.clearPath();
+        return this;
+      }
+      /**
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @param value The bytes for path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPathBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPathBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+       */
+      @java.lang.Override
+      public boolean hasValue() {
+        return instance.hasValue();
+      }
+      /**
+       * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Value getValue() {
+        return instance.getValue();
+      }
+      /**
+       * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+       */
+      public Builder setValue(com.google.protobuf.Value value) {
+        copyOnWrite();
+        instance.setValue(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+       */
+      public Builder setValue(
+          com.google.protobuf.Value.Builder builderForValue) {
+        copyOnWrite();
+        instance.setValue(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+       */
+      public Builder mergeValue(com.google.protobuf.Value value) {
+        copyOnWrite();
+        instance.mergeValue(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+       */
+      public Builder clearValue() {  copyOnWrite();
+        instance.clearValue();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.ConfigPropertyChange)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.ConfigPropertyChange();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "path_",
+              "value_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.ConfigPropertyChange> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.ConfigPropertyChange.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.ConfigPropertyChange>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.ConfigPropertyChange)
+    private static final viam.app.v1.AppOuterClass.ConfigPropertyChange DEFAULT_INSTANCE;
+    static {
+      ConfigPropertyChange defaultInstance = new ConfigPropertyChange();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ConfigPropertyChange.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChange getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ConfigPropertyChange> PARSER;
+
+    public static com.google.protobuf.Parser<ConfigPropertyChange> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface SetConfigPropertyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.SetConfigPropertyRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * @return The robotPartId.
+     */
+    java.lang.String getRobotPartId();
+    /**
+     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * @return The bytes for robotPartId.
+     */
+    com.google.protobuf.ByteString
+        getRobotPartIdBytes();
+
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    java.util.List<viam.app.v1.AppOuterClass.ConfigPropertyChange> 
+        getPropertyChangesList();
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    viam.app.v1.AppOuterClass.ConfigPropertyChange getPropertyChanges(int index);
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    int getPropertyChangesCount();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.SetConfigPropertyRequest}
+   */
+  public  static final class SetConfigPropertyRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          SetConfigPropertyRequest, SetConfigPropertyRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.SetConfigPropertyRequest)
+      SetConfigPropertyRequestOrBuilder {
+    private SetConfigPropertyRequest() {
+      robotPartId_ = "";
+      propertyChanges_ = emptyProtobufList();
+    }
+    public static final int ROBOT_PART_ID_FIELD_NUMBER = 1;
+    private java.lang.String robotPartId_;
+    /**
+     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * @return The robotPartId.
+     */
+    @java.lang.Override
+    public java.lang.String getRobotPartId() {
+      return robotPartId_;
+    }
+    /**
+     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * @return The bytes for robotPartId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRobotPartIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(robotPartId_);
+    }
+    /**
+     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * @param value The robotPartId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setRobotPartId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      robotPartId_ = value;
+    }
+    /**
+     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     */
+    private void clearRobotPartId() {
+
+      robotPartId_ = getDefaultInstance().getRobotPartId();
+    }
+    /**
+     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * @param value The bytes for robotPartId to set.
+     */
+    private void setRobotPartIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      robotPartId_ = value.toStringUtf8();
+
+    }
+
+    public static final int PROPERTY_CHANGES_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.AppOuterClass.ConfigPropertyChange> propertyChanges_;
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.AppOuterClass.ConfigPropertyChange> getPropertyChangesList() {
+      return propertyChanges_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.AppOuterClass.ConfigPropertyChangeOrBuilder> 
+        getPropertyChangesOrBuilderList() {
+      return propertyChanges_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    @java.lang.Override
+    public int getPropertyChangesCount() {
+      return propertyChanges_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.ConfigPropertyChange getPropertyChanges(int index) {
+      return propertyChanges_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    public viam.app.v1.AppOuterClass.ConfigPropertyChangeOrBuilder getPropertyChangesOrBuilder(
+        int index) {
+      return propertyChanges_.get(index);
+    }
+    private void ensurePropertyChangesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.AppOuterClass.ConfigPropertyChange> tmp = propertyChanges_;
+      if (!tmp.isModifiable()) {
+        propertyChanges_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPropertyChanges(
+        int index, viam.app.v1.AppOuterClass.ConfigPropertyChange value) {
+      value.getClass();  // minimal bytecode null check
+      ensurePropertyChangesIsMutable();
+      propertyChanges_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addPropertyChanges(viam.app.v1.AppOuterClass.ConfigPropertyChange value) {
+      value.getClass();  // minimal bytecode null check
+      ensurePropertyChangesIsMutable();
+      propertyChanges_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addPropertyChanges(
+        int index, viam.app.v1.AppOuterClass.ConfigPropertyChange value) {
+      value.getClass();  // minimal bytecode null check
+      ensurePropertyChangesIsMutable();
+      propertyChanges_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    private void addAllPropertyChanges(
+        java.lang.Iterable<? extends viam.app.v1.AppOuterClass.ConfigPropertyChange> values) {
+      ensurePropertyChangesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, propertyChanges_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    private void clearPropertyChanges() {
+      propertyChanges_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+     */
+    private void removePropertyChanges(int index) {
+      ensurePropertyChangesIsMutable();
+      propertyChanges_.remove(index);
+    }
+
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.SetConfigPropertyRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.SetConfigPropertyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.SetConfigPropertyRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.SetConfigPropertyRequest)
+        viam.app.v1.AppOuterClass.SetConfigPropertyRequestOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.SetConfigPropertyRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * @return The robotPartId.
+       */
+      @java.lang.Override
+      public java.lang.String getRobotPartId() {
+        return instance.getRobotPartId();
+      }
+      /**
+       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * @return The bytes for robotPartId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRobotPartIdBytes() {
+        return instance.getRobotPartIdBytes();
+      }
+      /**
+       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * @param value The robotPartId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRobotPartId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRobotPartId(value);
+        return this;
+      }
+      /**
+       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRobotPartId() {
+        copyOnWrite();
+        instance.clearRobotPartId();
+        return this;
+      }
+      /**
+       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * @param value The bytes for robotPartId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRobotPartIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRobotPartIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.AppOuterClass.ConfigPropertyChange> getPropertyChangesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getPropertyChangesList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+       */
+      @java.lang.Override
+      public int getPropertyChangesCount() {
+        return instance.getPropertyChangesCount();
+      }/**
+       * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.ConfigPropertyChange getPropertyChanges(int index) {
+        return instance.getPropertyChanges(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+       */
+      public Builder setPropertyChanges(
+          int index, viam.app.v1.AppOuterClass.ConfigPropertyChange value) {
+        copyOnWrite();
+        instance.setPropertyChanges(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+       */
+      public Builder setPropertyChanges(
+          int index, viam.app.v1.AppOuterClass.ConfigPropertyChange.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPropertyChanges(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+       */
+      public Builder addPropertyChanges(viam.app.v1.AppOuterClass.ConfigPropertyChange value) {
+        copyOnWrite();
+        instance.addPropertyChanges(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+       */
+      public Builder addPropertyChanges(
+          int index, viam.app.v1.AppOuterClass.ConfigPropertyChange value) {
+        copyOnWrite();
+        instance.addPropertyChanges(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+       */
+      public Builder addPropertyChanges(
+          viam.app.v1.AppOuterClass.ConfigPropertyChange.Builder builderForValue) {
+        copyOnWrite();
+        instance.addPropertyChanges(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+       */
+      public Builder addPropertyChanges(
+          int index, viam.app.v1.AppOuterClass.ConfigPropertyChange.Builder builderForValue) {
+        copyOnWrite();
+        instance.addPropertyChanges(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+       */
+      public Builder addAllPropertyChanges(
+          java.lang.Iterable<? extends viam.app.v1.AppOuterClass.ConfigPropertyChange> values) {
+        copyOnWrite();
+        instance.addAllPropertyChanges(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+       */
+      public Builder clearPropertyChanges() {
+        copyOnWrite();
+        instance.clearPropertyChanges();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChange property_changes = 2 [json_name = "propertyChanges"];</code>
+       */
+      public Builder removePropertyChanges(int index) {
+        copyOnWrite();
+        instance.removePropertyChanges(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.SetConfigPropertyRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.SetConfigPropertyRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "robotPartId_",
+              "propertyChanges_",
+              viam.app.v1.AppOuterClass.ConfigPropertyChange.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u0208\u0002\u001b" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.SetConfigPropertyRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.SetConfigPropertyRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.SetConfigPropertyRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.SetConfigPropertyRequest)
+    private static final viam.app.v1.AppOuterClass.SetConfigPropertyRequest DEFAULT_INSTANCE;
+    static {
+      SetConfigPropertyRequest defaultInstance = new SetConfigPropertyRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SetConfigPropertyRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SetConfigPropertyRequest> PARSER;
+
+    public static com.google.protobuf.Parser<SetConfigPropertyRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ConfigPropertyChangeResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.ConfigPropertyChangeResult)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @return The path.
+     */
+    java.lang.String getPath();
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @return The bytes for path.
+     */
+    com.google.protobuf.ByteString
+        getPathBytes();
+
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     * @return The value.
+     */
+    com.google.protobuf.Value getValue();
+
+    /**
+     * <code>bool success = 3 [json_name = "success"];</code>
+     * @return The success.
+     */
+    boolean getSuccess();
+
+    /**
+     * <code>string error = 4 [json_name = "error"];</code>
+     * @return The error.
+     */
+    java.lang.String getError();
+    /**
+     * <code>string error = 4 [json_name = "error"];</code>
+     * @return The bytes for error.
+     */
+    com.google.protobuf.ByteString
+        getErrorBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.ConfigPropertyChangeResult}
+   */
+  public  static final class ConfigPropertyChangeResult extends
+      com.google.protobuf.GeneratedMessageLite<
+          ConfigPropertyChangeResult, ConfigPropertyChangeResult.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.ConfigPropertyChangeResult)
+      ConfigPropertyChangeResultOrBuilder {
+    private ConfigPropertyChangeResult() {
+      path_ = "";
+      error_ = "";
+    }
+    private int bitField0_;
+    public static final int PATH_FIELD_NUMBER = 1;
+    private java.lang.String path_;
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @return The path.
+     */
+    @java.lang.Override
+    public java.lang.String getPath() {
+      return path_;
+    }
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @return The bytes for path.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPathBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(path_);
+    }
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @param value The path to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPath(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      path_ = value;
+    }
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     */
+    private void clearPath() {
+
+      path_ = getDefaultInstance().getPath();
+    }
+    /**
+     * <code>string path = 1 [json_name = "path"];</code>
+     * @param value The bytes for path to set.
+     */
+    private void setPathBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      path_ = value.toStringUtf8();
+
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private com.google.protobuf.Value value_;
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Value getValue() {
+      return value_ == null ? com.google.protobuf.Value.getDefaultInstance() : value_;
+    }
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setValue(com.google.protobuf.Value value) {
+      value.getClass();  // minimal bytecode null check
+      value_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeValue(com.google.protobuf.Value value) {
+      value.getClass();  // minimal bytecode null check
+      if (value_ != null &&
+          value_ != com.google.protobuf.Value.getDefaultInstance()) {
+        value_ =
+          com.google.protobuf.Value.newBuilder(value_).mergeFrom(value).buildPartial();
+      } else {
+        value_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+     */
+    private void clearValue() {
+      value_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int SUCCESS_FIELD_NUMBER = 3;
+    private boolean success_;
+    /**
+     * <code>bool success = 3 [json_name = "success"];</code>
+     * @return The success.
+     */
+    @java.lang.Override
+    public boolean getSuccess() {
+      return success_;
+    }
+    /**
+     * <code>bool success = 3 [json_name = "success"];</code>
+     * @param value The success to set.
+     */
+    private void setSuccess(boolean value) {
+      
+      success_ = value;
+    }
+    /**
+     * <code>bool success = 3 [json_name = "success"];</code>
+     */
+    private void clearSuccess() {
+
+      success_ = false;
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 4;
+    private java.lang.String error_;
+    /**
+     * <code>string error = 4 [json_name = "error"];</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public java.lang.String getError() {
+      return error_;
+    }
+    /**
+     * <code>string error = 4 [json_name = "error"];</code>
+     * @return The bytes for error.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(error_);
+    }
+    /**
+     * <code>string error = 4 [json_name = "error"];</code>
+     * @param value The error to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setError(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      error_ = value;
+    }
+    /**
+     * <code>string error = 4 [json_name = "error"];</code>
+     */
+    private void clearError() {
+
+      error_ = getDefaultInstance().getError();
+    }
+    /**
+     * <code>string error = 4 [json_name = "error"];</code>
+     * @param value The bytes for error to set.
+     */
+    private void setErrorBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      error_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChangeResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChangeResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChangeResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChangeResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChangeResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChangeResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChangeResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChangeResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChangeResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChangeResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChangeResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChangeResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.ConfigPropertyChangeResult prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.ConfigPropertyChangeResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.ConfigPropertyChangeResult, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.ConfigPropertyChangeResult)
+        viam.app.v1.AppOuterClass.ConfigPropertyChangeResultOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.ConfigPropertyChangeResult.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @return The path.
+       */
+      @java.lang.Override
+      public java.lang.String getPath() {
+        return instance.getPath();
+      }
+      /**
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @return The bytes for path.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPathBytes() {
+        return instance.getPathBytes();
+      }
+      /**
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @param value The path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPath(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setPath(value);
+        return this;
+      }
+      /**
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPath() {
+        copyOnWrite();
+        instance.clearPath();
+        return this;
+      }
+      /**
+       * <code>string path = 1 [json_name = "path"];</code>
+       * @param value The bytes for path to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPathBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPathBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+       */
+      @java.lang.Override
+      public boolean hasValue() {
+        return instance.hasValue();
+      }
+      /**
+       * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Value getValue() {
+        return instance.getValue();
+      }
+      /**
+       * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+       */
+      public Builder setValue(com.google.protobuf.Value value) {
+        copyOnWrite();
+        instance.setValue(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+       */
+      public Builder setValue(
+          com.google.protobuf.Value.Builder builderForValue) {
+        copyOnWrite();
+        instance.setValue(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+       */
+      public Builder mergeValue(com.google.protobuf.Value value) {
+        copyOnWrite();
+        instance.mergeValue(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Value value = 2 [json_name = "value"];</code>
+       */
+      public Builder clearValue() {  copyOnWrite();
+        instance.clearValue();
+        return this;
+      }
+
+      /**
+       * <code>bool success = 3 [json_name = "success"];</code>
+       * @return The success.
+       */
+      @java.lang.Override
+      public boolean getSuccess() {
+        return instance.getSuccess();
+      }
+      /**
+       * <code>bool success = 3 [json_name = "success"];</code>
+       * @param value The success to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuccess(boolean value) {
+        copyOnWrite();
+        instance.setSuccess(value);
+        return this;
+      }
+      /**
+       * <code>bool success = 3 [json_name = "success"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuccess() {
+        copyOnWrite();
+        instance.clearSuccess();
+        return this;
+      }
+
+      /**
+       * <code>string error = 4 [json_name = "error"];</code>
+       * @return The error.
+       */
+      @java.lang.Override
+      public java.lang.String getError() {
+        return instance.getError();
+      }
+      /**
+       * <code>string error = 4 [json_name = "error"];</code>
+       * @return The bytes for error.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getErrorBytes() {
+        return instance.getErrorBytes();
+      }
+      /**
+       * <code>string error = 4 [json_name = "error"];</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setError(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setError(value);
+        return this;
+      }
+      /**
+       * <code>string error = 4 [json_name = "error"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearError() {
+        copyOnWrite();
+        instance.clearError();
+        return this;
+      }
+      /**
+       * <code>string error = 4 [json_name = "error"];</code>
+       * @param value The bytes for error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setErrorBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.ConfigPropertyChangeResult)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.ConfigPropertyChangeResult();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "path_",
+              "value_",
+              "success_",
+              "error_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u0007\u0004\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.ConfigPropertyChangeResult> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.ConfigPropertyChangeResult.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.ConfigPropertyChangeResult>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.ConfigPropertyChangeResult)
+    private static final viam.app.v1.AppOuterClass.ConfigPropertyChangeResult DEFAULT_INSTANCE;
+    static {
+      ConfigPropertyChangeResult defaultInstance = new ConfigPropertyChangeResult();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ConfigPropertyChangeResult.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.ConfigPropertyChangeResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ConfigPropertyChangeResult> PARSER;
+
+    public static com.google.protobuf.Parser<ConfigPropertyChangeResult> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface SetConfigPropertyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.SetConfigPropertyResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    java.util.List<viam.app.v1.AppOuterClass.ConfigPropertyChangeResult> 
+        getPropertyChangesList();
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    viam.app.v1.AppOuterClass.ConfigPropertyChangeResult getPropertyChanges(int index);
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    int getPropertyChangesCount();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.SetConfigPropertyResponse}
+   */
+  public  static final class SetConfigPropertyResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          SetConfigPropertyResponse, SetConfigPropertyResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.SetConfigPropertyResponse)
+      SetConfigPropertyResponseOrBuilder {
+    private SetConfigPropertyResponse() {
+      propertyChanges_ = emptyProtobufList();
+    }
+    public static final int PROPERTY_CHANGES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.AppOuterClass.ConfigPropertyChangeResult> propertyChanges_;
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.AppOuterClass.ConfigPropertyChangeResult> getPropertyChangesList() {
+      return propertyChanges_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.AppOuterClass.ConfigPropertyChangeResultOrBuilder> 
+        getPropertyChangesOrBuilderList() {
+      return propertyChanges_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    @java.lang.Override
+    public int getPropertyChangesCount() {
+      return propertyChanges_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.ConfigPropertyChangeResult getPropertyChanges(int index) {
+      return propertyChanges_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    public viam.app.v1.AppOuterClass.ConfigPropertyChangeResultOrBuilder getPropertyChangesOrBuilder(
+        int index) {
+      return propertyChanges_.get(index);
+    }
+    private void ensurePropertyChangesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.AppOuterClass.ConfigPropertyChangeResult> tmp = propertyChanges_;
+      if (!tmp.isModifiable()) {
+        propertyChanges_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPropertyChanges(
+        int index, viam.app.v1.AppOuterClass.ConfigPropertyChangeResult value) {
+      value.getClass();  // minimal bytecode null check
+      ensurePropertyChangesIsMutable();
+      propertyChanges_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addPropertyChanges(viam.app.v1.AppOuterClass.ConfigPropertyChangeResult value) {
+      value.getClass();  // minimal bytecode null check
+      ensurePropertyChangesIsMutable();
+      propertyChanges_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addPropertyChanges(
+        int index, viam.app.v1.AppOuterClass.ConfigPropertyChangeResult value) {
+      value.getClass();  // minimal bytecode null check
+      ensurePropertyChangesIsMutable();
+      propertyChanges_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    private void addAllPropertyChanges(
+        java.lang.Iterable<? extends viam.app.v1.AppOuterClass.ConfigPropertyChangeResult> values) {
+      ensurePropertyChangesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, propertyChanges_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    private void clearPropertyChanges() {
+      propertyChanges_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+     */
+    private void removePropertyChanges(int index) {
+      ensurePropertyChangesIsMutable();
+      propertyChanges_.remove(index);
+    }
+
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.SetConfigPropertyResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.SetConfigPropertyResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.SetConfigPropertyResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.SetConfigPropertyResponse)
+        viam.app.v1.AppOuterClass.SetConfigPropertyResponseOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.SetConfigPropertyResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.AppOuterClass.ConfigPropertyChangeResult> getPropertyChangesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getPropertyChangesList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+       */
+      @java.lang.Override
+      public int getPropertyChangesCount() {
+        return instance.getPropertyChangesCount();
+      }/**
+       * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.ConfigPropertyChangeResult getPropertyChanges(int index) {
+        return instance.getPropertyChanges(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+       */
+      public Builder setPropertyChanges(
+          int index, viam.app.v1.AppOuterClass.ConfigPropertyChangeResult value) {
+        copyOnWrite();
+        instance.setPropertyChanges(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+       */
+      public Builder setPropertyChanges(
+          int index, viam.app.v1.AppOuterClass.ConfigPropertyChangeResult.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPropertyChanges(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+       */
+      public Builder addPropertyChanges(viam.app.v1.AppOuterClass.ConfigPropertyChangeResult value) {
+        copyOnWrite();
+        instance.addPropertyChanges(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+       */
+      public Builder addPropertyChanges(
+          int index, viam.app.v1.AppOuterClass.ConfigPropertyChangeResult value) {
+        copyOnWrite();
+        instance.addPropertyChanges(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+       */
+      public Builder addPropertyChanges(
+          viam.app.v1.AppOuterClass.ConfigPropertyChangeResult.Builder builderForValue) {
+        copyOnWrite();
+        instance.addPropertyChanges(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+       */
+      public Builder addPropertyChanges(
+          int index, viam.app.v1.AppOuterClass.ConfigPropertyChangeResult.Builder builderForValue) {
+        copyOnWrite();
+        instance.addPropertyChanges(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+       */
+      public Builder addAllPropertyChanges(
+          java.lang.Iterable<? extends viam.app.v1.AppOuterClass.ConfigPropertyChangeResult> values) {
+        copyOnWrite();
+        instance.addAllPropertyChanges(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+       */
+      public Builder clearPropertyChanges() {
+        copyOnWrite();
+        instance.clearPropertyChanges();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.ConfigPropertyChangeResult property_changes = 1 [json_name = "propertyChanges"];</code>
+       */
+      public Builder removePropertyChanges(int index) {
+        copyOnWrite();
+        instance.removePropertyChanges(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.SetConfigPropertyResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.SetConfigPropertyResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "propertyChanges_",
+              viam.app.v1.AppOuterClass.ConfigPropertyChangeResult.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.SetConfigPropertyResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.SetConfigPropertyResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.SetConfigPropertyResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.SetConfigPropertyResponse)
+    private static final viam.app.v1.AppOuterClass.SetConfigPropertyResponse DEFAULT_INSTANCE;
+    static {
+      SetConfigPropertyResponse defaultInstance = new SetConfigPropertyResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SetConfigPropertyResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.SetConfigPropertyResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<SetConfigPropertyResponse> PARSER;
+
+    public static com.google.protobuf.Parser<SetConfigPropertyResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface NewRobotPartRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.NewRobotPartRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -53553,6 +55447,35 @@ public final class AppOuterClass {
      */
     com.google.protobuf.ByteString
         getPublicNamespaceBytes();
+
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+     * @return Whether the fragmentConfigJson field is set.
+     */
+    boolean hasFragmentConfigJson();
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+     * @return The fragmentConfigJson.
+     */
+    java.lang.String getFragmentConfigJson();
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+     * @return The bytes for fragmentConfigJson.
+     */
+    com.google.protobuf.ByteString
+        getFragmentConfigJsonBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.Fragment}
@@ -53569,6 +55492,7 @@ public final class AppOuterClass {
       organizationName_ = "";
       revision_ = "";
       publicNamespace_ = "";
+      fragmentConfigJson_ = "";
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
@@ -54232,6 +56156,86 @@ public final class AppOuterClass {
       checkByteStringIsUtf8(value);
       publicNamespace_ = value.toStringUtf8();
       bitField0_ |= 0x00000008;
+    }
+
+    public static final int FRAGMENT_CONFIG_JSON_FIELD_NUMBER = 16;
+    private java.lang.String fragmentConfigJson_;
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+     * @return Whether the fragmentConfigJson field is set.
+     */
+    @java.lang.Override
+    public boolean hasFragmentConfigJson() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+     * @return The fragmentConfigJson.
+     */
+    @java.lang.Override
+    public java.lang.String getFragmentConfigJson() {
+      return fragmentConfigJson_;
+    }
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+     * @return The bytes for fragmentConfigJson.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFragmentConfigJsonBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(fragmentConfigJson_);
+    }
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+     * @param value The fragmentConfigJson to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setFragmentConfigJson(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      bitField0_ |= 0x00000010;
+      fragmentConfigJson_ = value;
+    }
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+     */
+    private void clearFragmentConfigJson() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      fragmentConfigJson_ = getDefaultInstance().getFragmentConfigJson();
+    }
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+     * @param value The bytes for fragmentConfigJson to set.
+     */
+    private void setFragmentConfigJsonBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fragmentConfigJson_ = value.toStringUtf8();
+      bitField0_ |= 0x00000010;
     }
 
     public static viam.app.v1.AppOuterClass.Fragment parseFrom(
@@ -55013,6 +57017,87 @@ public final class AppOuterClass {
         return this;
       }
 
+      /**
+       * <pre>
+       * Fragment config JSON, preserving key order.
+       * </pre>
+       *
+       * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+       * @return Whether the fragmentConfigJson field is set.
+       */
+      @java.lang.Override
+      public boolean hasFragmentConfigJson() {
+        return instance.hasFragmentConfigJson();
+      }
+      /**
+       * <pre>
+       * Fragment config JSON, preserving key order.
+       * </pre>
+       *
+       * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+       * @return The fragmentConfigJson.
+       */
+      @java.lang.Override
+      public java.lang.String getFragmentConfigJson() {
+        return instance.getFragmentConfigJson();
+      }
+      /**
+       * <pre>
+       * Fragment config JSON, preserving key order.
+       * </pre>
+       *
+       * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+       * @return The bytes for fragmentConfigJson.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFragmentConfigJsonBytes() {
+        return instance.getFragmentConfigJsonBytes();
+      }
+      /**
+       * <pre>
+       * Fragment config JSON, preserving key order.
+       * </pre>
+       *
+       * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+       * @param value The fragmentConfigJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentConfigJson(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFragmentConfigJson(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Fragment config JSON, preserving key order.
+       * </pre>
+       *
+       * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFragmentConfigJson() {
+        copyOnWrite();
+        instance.clearFragmentConfigJson();
+        return this;
+      }
+      /**
+       * <pre>
+       * Fragment config JSON, preserving key order.
+       * </pre>
+       *
+       * <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code>
+       * @param value The bytes for fragmentConfigJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentConfigJsonBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFragmentConfigJsonBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.Fragment)
     }
     @java.lang.Override
@@ -55044,11 +57129,13 @@ public final class AppOuterClass {
               "lastUpdated_",
               "revision_",
               "publicNamespace_",
+              "fragmentConfigJson_",
             };
             java.lang.String info =
-                "\u0000\u000e\u0000\u0001\u0001\u000f\u000e\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0000\u000f\u0000\u0001\u0001\u0010\u000f\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
                 "\u0003\u1009\u0000\u0004\u0208\u0005\u0007\u0006\u1009\u0001\u0007\u0208\t\u0004" +
-                "\n\u0004\u000b\u0007\f\f\r\u1009\u0002\u000e\u0208\u000f\u1208\u0003";
+                "\n\u0004\u000b\u0007\f\f\r\u1009\u0002\u000e\u0208\u000f\u1208\u0003\u0010\u1208" +
+                "\u0004";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -63328,6 +65415,35 @@ java.lang.String defaultValue) {
      * @return The lastKnownUpdate.
      */
     com.google.protobuf.Timestamp getLastKnownUpdate();
+
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order. Takes precedence over config.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+     * @return Whether the fragmentConfigJson field is set.
+     */
+    boolean hasFragmentConfigJson();
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order. Takes precedence over config.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+     * @return The fragmentConfigJson.
+     */
+    java.lang.String getFragmentConfigJson();
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order. Takes precedence over config.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+     * @return The bytes for fragmentConfigJson.
+     */
+    com.google.protobuf.ByteString
+        getFragmentConfigJsonBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.UpdateFragmentRequest}
@@ -63340,6 +65456,7 @@ java.lang.String defaultValue) {
     private UpdateFragmentRequest() {
       id_ = "";
       name_ = "";
+      fragmentConfigJson_ = "";
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
@@ -63617,6 +65734,86 @@ java.lang.String defaultValue) {
     private void clearLastKnownUpdate() {
       lastKnownUpdate_ = null;
       bitField0_ = (bitField0_ & ~0x00000008);
+    }
+
+    public static final int FRAGMENT_CONFIG_JSON_FIELD_NUMBER = 7;
+    private java.lang.String fragmentConfigJson_;
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order. Takes precedence over config.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+     * @return Whether the fragmentConfigJson field is set.
+     */
+    @java.lang.Override
+    public boolean hasFragmentConfigJson() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order. Takes precedence over config.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+     * @return The fragmentConfigJson.
+     */
+    @java.lang.Override
+    public java.lang.String getFragmentConfigJson() {
+      return fragmentConfigJson_;
+    }
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order. Takes precedence over config.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+     * @return The bytes for fragmentConfigJson.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFragmentConfigJsonBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(fragmentConfigJson_);
+    }
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order. Takes precedence over config.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+     * @param value The fragmentConfigJson to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setFragmentConfigJson(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      bitField0_ |= 0x00000010;
+      fragmentConfigJson_ = value;
+    }
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order. Takes precedence over config.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+     */
+    private void clearFragmentConfigJson() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      fragmentConfigJson_ = getDefaultInstance().getFragmentConfigJson();
+    }
+    /**
+     * <pre>
+     * Fragment config JSON, preserving key order. Takes precedence over config.
+     * </pre>
+     *
+     * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+     * @param value The bytes for fragmentConfigJson to set.
+     */
+    private void setFragmentConfigJsonBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      fragmentConfigJson_ = value.toStringUtf8();
+      bitField0_ |= 0x00000010;
     }
 
     public static viam.app.v1.AppOuterClass.UpdateFragmentRequest parseFrom(
@@ -63999,6 +66196,87 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * Fragment config JSON, preserving key order. Takes precedence over config.
+       * </pre>
+       *
+       * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+       * @return Whether the fragmentConfigJson field is set.
+       */
+      @java.lang.Override
+      public boolean hasFragmentConfigJson() {
+        return instance.hasFragmentConfigJson();
+      }
+      /**
+       * <pre>
+       * Fragment config JSON, preserving key order. Takes precedence over config.
+       * </pre>
+       *
+       * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+       * @return The fragmentConfigJson.
+       */
+      @java.lang.Override
+      public java.lang.String getFragmentConfigJson() {
+        return instance.getFragmentConfigJson();
+      }
+      /**
+       * <pre>
+       * Fragment config JSON, preserving key order. Takes precedence over config.
+       * </pre>
+       *
+       * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+       * @return The bytes for fragmentConfigJson.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFragmentConfigJsonBytes() {
+        return instance.getFragmentConfigJsonBytes();
+      }
+      /**
+       * <pre>
+       * Fragment config JSON, preserving key order. Takes precedence over config.
+       * </pre>
+       *
+       * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+       * @param value The fragmentConfigJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentConfigJson(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setFragmentConfigJson(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Fragment config JSON, preserving key order. Takes precedence over config.
+       * </pre>
+       *
+       * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFragmentConfigJson() {
+        copyOnWrite();
+        instance.clearFragmentConfigJson();
+        return this;
+      }
+      /**
+       * <pre>
+       * Fragment config JSON, preserving key order. Takes precedence over config.
+       * </pre>
+       *
+       * <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code>
+       * @param value The bytes for fragmentConfigJson to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFragmentConfigJsonBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setFragmentConfigJsonBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateFragmentRequest)
     }
     @java.lang.Override
@@ -64022,10 +66300,12 @@ java.lang.String defaultValue) {
               "public_",
               "visibility_",
               "lastKnownUpdate_",
+              "fragmentConfigJson_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u1009\u0000\u0004\u1007\u0001\u0005\u100c\u0002\u0006\u1009\u0003";
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u1009\u0000\u0004\u1007\u0001\u0005\u100c\u0002\u0006\u1009\u0003\u0007\u1208" +
+                "\u0004";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -81655,6 +83935,2057 @@ java.lang.String defaultValue) {
     }
   }
 
+  public interface FavoriteMachineOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.FavoriteMachine)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.app.v1.Robot machine = 1 [json_name = "machine"];</code>
+     * @return Whether the machine field is set.
+     */
+    boolean hasMachine();
+    /**
+     * <code>.viam.app.v1.Robot machine = 1 [json_name = "machine"];</code>
+     * @return The machine.
+     */
+    viam.app.v1.AppOuterClass.Robot getMachine();
+
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+     * @return Whether the createdOn field is set.
+     */
+    boolean hasCreatedOn();
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+     * @return The createdOn.
+     */
+    com.google.protobuf.Timestamp getCreatedOn();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.FavoriteMachine}
+   */
+  public  static final class FavoriteMachine extends
+      com.google.protobuf.GeneratedMessageLite<
+          FavoriteMachine, FavoriteMachine.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.FavoriteMachine)
+      FavoriteMachineOrBuilder {
+    private FavoriteMachine() {
+      organizationId_ = "";
+    }
+    private int bitField0_;
+    public static final int MACHINE_FIELD_NUMBER = 1;
+    private viam.app.v1.AppOuterClass.Robot machine_;
+    /**
+     * <code>.viam.app.v1.Robot machine = 1 [json_name = "machine"];</code>
+     */
+    @java.lang.Override
+    public boolean hasMachine() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.app.v1.Robot machine = 1 [json_name = "machine"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.Robot getMachine() {
+      return machine_ == null ? viam.app.v1.AppOuterClass.Robot.getDefaultInstance() : machine_;
+    }
+    /**
+     * <code>.viam.app.v1.Robot machine = 1 [json_name = "machine"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMachine(viam.app.v1.AppOuterClass.Robot value) {
+      value.getClass();  // minimal bytecode null check
+      machine_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.v1.Robot machine = 1 [json_name = "machine"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeMachine(viam.app.v1.AppOuterClass.Robot value) {
+      value.getClass();  // minimal bytecode null check
+      if (machine_ != null &&
+          machine_ != viam.app.v1.AppOuterClass.Robot.getDefaultInstance()) {
+        machine_ =
+          viam.app.v1.AppOuterClass.Robot.newBuilder(machine_).mergeFrom(value).buildPartial();
+      } else {
+        machine_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.v1.Robot machine = 1 [json_name = "machine"];</code>
+     */
+    private void clearMachine() {
+      machine_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 2;
+    private java.lang.String organizationId_;
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      return organizationId_;
+    }
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(organizationId_);
+    }
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @param value The organizationId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setOrganizationId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      organizationId_ = value;
+    }
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     */
+    private void clearOrganizationId() {
+
+      organizationId_ = getDefaultInstance().getOrganizationId();
+    }
+    /**
+     * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+     * @param value The bytes for organizationId to set.
+     */
+    private void setOrganizationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      organizationId_ = value.toStringUtf8();
+
+    }
+
+    public static final int CREATED_ON_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp createdOn_;
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+     */
+    @java.lang.Override
+    public boolean hasCreatedOn() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedOn() {
+      return createdOn_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setCreatedOn(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      createdOn_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeCreatedOn(com.google.protobuf.Timestamp value) {
+      value.getClass();  // minimal bytecode null check
+      if (createdOn_ != null &&
+          createdOn_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        createdOn_ =
+          com.google.protobuf.Timestamp.newBuilder(createdOn_).mergeFrom(value).buildPartial();
+      } else {
+        createdOn_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+     */
+    private void clearCreatedOn() {
+      createdOn_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static viam.app.v1.AppOuterClass.FavoriteMachine parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.FavoriteMachine parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.FavoriteMachine parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.FavoriteMachine parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.FavoriteMachine parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.FavoriteMachine parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.FavoriteMachine parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.FavoriteMachine parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.FavoriteMachine parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.FavoriteMachine parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.FavoriteMachine parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.FavoriteMachine parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.FavoriteMachine prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.FavoriteMachine}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.FavoriteMachine, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.FavoriteMachine)
+        viam.app.v1.AppOuterClass.FavoriteMachineOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.FavoriteMachine.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>.viam.app.v1.Robot machine = 1 [json_name = "machine"];</code>
+       */
+      @java.lang.Override
+      public boolean hasMachine() {
+        return instance.hasMachine();
+      }
+      /**
+       * <code>.viam.app.v1.Robot machine = 1 [json_name = "machine"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.Robot getMachine() {
+        return instance.getMachine();
+      }
+      /**
+       * <code>.viam.app.v1.Robot machine = 1 [json_name = "machine"];</code>
+       */
+      public Builder setMachine(viam.app.v1.AppOuterClass.Robot value) {
+        copyOnWrite();
+        instance.setMachine(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.v1.Robot machine = 1 [json_name = "machine"];</code>
+       */
+      public Builder setMachine(
+          viam.app.v1.AppOuterClass.Robot.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMachine(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.Robot machine = 1 [json_name = "machine"];</code>
+       */
+      public Builder mergeMachine(viam.app.v1.AppOuterClass.Robot value) {
+        copyOnWrite();
+        instance.mergeMachine(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.Robot machine = 1 [json_name = "machine"];</code>
+       */
+      public Builder clearMachine() {  copyOnWrite();
+        instance.clearMachine();
+        return this;
+      }
+
+      /**
+       * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+       * @return The organizationId.
+       */
+      @java.lang.Override
+      public java.lang.String getOrganizationId() {
+        return instance.getOrganizationId();
+      }
+      /**
+       * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+       * @return The bytes for organizationId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        return instance.getOrganizationIdBytes();
+      }
+      /**
+       * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOrganizationId(value);
+        return this;
+      }
+      /**
+       * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        copyOnWrite();
+        instance.clearOrganizationId();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 2 [json_name = "organizationId"];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOrganizationIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+       */
+      @java.lang.Override
+      public boolean hasCreatedOn() {
+        return instance.hasCreatedOn();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Timestamp getCreatedOn() {
+        return instance.getCreatedOn();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+       */
+      public Builder setCreatedOn(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.setCreatedOn(value);
+        return this;
+        }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+       */
+      public Builder setCreatedOn(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCreatedOn(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+       */
+      public Builder mergeCreatedOn(com.google.protobuf.Timestamp value) {
+        copyOnWrite();
+        instance.mergeCreatedOn(value);
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn"];</code>
+       */
+      public Builder clearCreatedOn() {  copyOnWrite();
+        instance.clearCreatedOn();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.FavoriteMachine)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.FavoriteMachine();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "machine_",
+              "organizationId_",
+              "createdOn_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u0208\u0003\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.FavoriteMachine> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.FavoriteMachine.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.FavoriteMachine>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.FavoriteMachine)
+    private static final viam.app.v1.AppOuterClass.FavoriteMachine DEFAULT_INSTANCE;
+    static {
+      FavoriteMachine defaultInstance = new FavoriteMachine();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FavoriteMachine.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.FavoriteMachine getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<FavoriteMachine> PARSER;
+
+    public static com.google.protobuf.Parser<FavoriteMachine> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface AddFavoriteMachineRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.AddFavoriteMachineRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @return The machineId.
+     */
+    java.lang.String getMachineId();
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @return The bytes for machineId.
+     */
+    com.google.protobuf.ByteString
+        getMachineIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.AddFavoriteMachineRequest}
+   */
+  public  static final class AddFavoriteMachineRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          AddFavoriteMachineRequest, AddFavoriteMachineRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.AddFavoriteMachineRequest)
+      AddFavoriteMachineRequestOrBuilder {
+    private AddFavoriteMachineRequest() {
+      machineId_ = "";
+    }
+    public static final int MACHINE_ID_FIELD_NUMBER = 1;
+    private java.lang.String machineId_;
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @return The machineId.
+     */
+    @java.lang.Override
+    public java.lang.String getMachineId() {
+      return machineId_;
+    }
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @return The bytes for machineId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMachineIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(machineId_);
+    }
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @param value The machineId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMachineId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      machineId_ = value;
+    }
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     */
+    private void clearMachineId() {
+
+      machineId_ = getDefaultInstance().getMachineId();
+    }
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @param value The bytes for machineId to set.
+     */
+    private void setMachineIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      machineId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.AddFavoriteMachineRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.AddFavoriteMachineRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.AddFavoriteMachineRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.AddFavoriteMachineRequest)
+        viam.app.v1.AppOuterClass.AddFavoriteMachineRequestOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.AddFavoriteMachineRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @return The machineId.
+       */
+      @java.lang.Override
+      public java.lang.String getMachineId() {
+        return instance.getMachineId();
+      }
+      /**
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @return The bytes for machineId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMachineIdBytes() {
+        return instance.getMachineIdBytes();
+      }
+      /**
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @param value The machineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachineId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMachineId(value);
+        return this;
+      }
+      /**
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMachineId() {
+        copyOnWrite();
+        instance.clearMachineId();
+        return this;
+      }
+      /**
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @param value The bytes for machineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachineIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMachineIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.AddFavoriteMachineRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.AddFavoriteMachineRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "machineId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.AddFavoriteMachineRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.AddFavoriteMachineRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.AddFavoriteMachineRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.AddFavoriteMachineRequest)
+    private static final viam.app.v1.AppOuterClass.AddFavoriteMachineRequest DEFAULT_INSTANCE;
+    static {
+      AddFavoriteMachineRequest defaultInstance = new AddFavoriteMachineRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AddFavoriteMachineRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<AddFavoriteMachineRequest> PARSER;
+
+    public static com.google.protobuf.Parser<AddFavoriteMachineRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface AddFavoriteMachineResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.AddFavoriteMachineResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.AddFavoriteMachineResponse}
+   */
+  public  static final class AddFavoriteMachineResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          AddFavoriteMachineResponse, AddFavoriteMachineResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.AddFavoriteMachineResponse)
+      AddFavoriteMachineResponseOrBuilder {
+    private AddFavoriteMachineResponse() {
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.AddFavoriteMachineResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.AddFavoriteMachineResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.AddFavoriteMachineResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.AddFavoriteMachineResponse)
+        viam.app.v1.AppOuterClass.AddFavoriteMachineResponseOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.AddFavoriteMachineResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.AddFavoriteMachineResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.AddFavoriteMachineResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.AddFavoriteMachineResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.AddFavoriteMachineResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.AddFavoriteMachineResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.AddFavoriteMachineResponse)
+    private static final viam.app.v1.AppOuterClass.AddFavoriteMachineResponse DEFAULT_INSTANCE;
+    static {
+      AddFavoriteMachineResponse defaultInstance = new AddFavoriteMachineResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AddFavoriteMachineResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.AddFavoriteMachineResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<AddFavoriteMachineResponse> PARSER;
+
+    public static com.google.protobuf.Parser<AddFavoriteMachineResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface RemoveFavoriteMachineRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.RemoveFavoriteMachineRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @return The machineId.
+     */
+    java.lang.String getMachineId();
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @return The bytes for machineId.
+     */
+    com.google.protobuf.ByteString
+        getMachineIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.RemoveFavoriteMachineRequest}
+   */
+  public  static final class RemoveFavoriteMachineRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          RemoveFavoriteMachineRequest, RemoveFavoriteMachineRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.RemoveFavoriteMachineRequest)
+      RemoveFavoriteMachineRequestOrBuilder {
+    private RemoveFavoriteMachineRequest() {
+      machineId_ = "";
+    }
+    public static final int MACHINE_ID_FIELD_NUMBER = 1;
+    private java.lang.String machineId_;
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @return The machineId.
+     */
+    @java.lang.Override
+    public java.lang.String getMachineId() {
+      return machineId_;
+    }
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @return The bytes for machineId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMachineIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(machineId_);
+    }
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @param value The machineId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMachineId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      machineId_ = value;
+    }
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     */
+    private void clearMachineId() {
+
+      machineId_ = getDefaultInstance().getMachineId();
+    }
+    /**
+     * <code>string machine_id = 1 [json_name = "machineId"];</code>
+     * @param value The bytes for machineId to set.
+     */
+    private void setMachineIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      machineId_ = value.toStringUtf8();
+
+    }
+
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.RemoveFavoriteMachineRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.RemoveFavoriteMachineRequest)
+        viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequestOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @return The machineId.
+       */
+      @java.lang.Override
+      public java.lang.String getMachineId() {
+        return instance.getMachineId();
+      }
+      /**
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @return The bytes for machineId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getMachineIdBytes() {
+        return instance.getMachineIdBytes();
+      }
+      /**
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @param value The machineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachineId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setMachineId(value);
+        return this;
+      }
+      /**
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMachineId() {
+        copyOnWrite();
+        instance.clearMachineId();
+        return this;
+      }
+      /**
+       * <code>string machine_id = 1 [json_name = "machineId"];</code>
+       * @param value The bytes for machineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachineIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setMachineIdBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.RemoveFavoriteMachineRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "machineId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.RemoveFavoriteMachineRequest)
+    private static final viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest DEFAULT_INSTANCE;
+    static {
+      RemoveFavoriteMachineRequest defaultInstance = new RemoveFavoriteMachineRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RemoveFavoriteMachineRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<RemoveFavoriteMachineRequest> PARSER;
+
+    public static com.google.protobuf.Parser<RemoveFavoriteMachineRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface RemoveFavoriteMachineResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.RemoveFavoriteMachineResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.RemoveFavoriteMachineResponse}
+   */
+  public  static final class RemoveFavoriteMachineResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          RemoveFavoriteMachineResponse, RemoveFavoriteMachineResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.RemoveFavoriteMachineResponse)
+      RemoveFavoriteMachineResponseOrBuilder {
+    private RemoveFavoriteMachineResponse() {
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.RemoveFavoriteMachineResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.RemoveFavoriteMachineResponse)
+        viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponseOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.RemoveFavoriteMachineResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.RemoveFavoriteMachineResponse)
+    private static final viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse DEFAULT_INSTANCE;
+    static {
+      RemoveFavoriteMachineResponse defaultInstance = new RemoveFavoriteMachineResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RemoveFavoriteMachineResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<RemoveFavoriteMachineResponse> PARSER;
+
+    public static com.google.protobuf.Parser<RemoveFavoriteMachineResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListFavoriteMachinesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.ListFavoriteMachinesRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.ListFavoriteMachinesRequest}
+   */
+  public  static final class ListFavoriteMachinesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListFavoriteMachinesRequest, ListFavoriteMachinesRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.ListFavoriteMachinesRequest)
+      ListFavoriteMachinesRequestOrBuilder {
+    private ListFavoriteMachinesRequest() {
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.ListFavoriteMachinesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.ListFavoriteMachinesRequest)
+        viam.app.v1.AppOuterClass.ListFavoriteMachinesRequestOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.ListFavoriteMachinesRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;
+            java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.ListFavoriteMachinesRequest)
+    private static final viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest DEFAULT_INSTANCE;
+    static {
+      ListFavoriteMachinesRequest defaultInstance = new ListFavoriteMachinesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListFavoriteMachinesRequest.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListFavoriteMachinesRequest> PARSER;
+
+    public static com.google.protobuf.Parser<ListFavoriteMachinesRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ListFavoriteMachinesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.ListFavoriteMachinesResponse)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    java.util.List<viam.app.v1.AppOuterClass.FavoriteMachine> 
+        getFavoritesList();
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    viam.app.v1.AppOuterClass.FavoriteMachine getFavorites(int index);
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    int getFavoritesCount();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.ListFavoriteMachinesResponse}
+   */
+  public  static final class ListFavoriteMachinesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ListFavoriteMachinesResponse, ListFavoriteMachinesResponse.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.ListFavoriteMachinesResponse)
+      ListFavoriteMachinesResponseOrBuilder {
+    private ListFavoriteMachinesResponse() {
+      favorites_ = emptyProtobufList();
+    }
+    public static final int FAVORITES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.AppOuterClass.FavoriteMachine> favorites_;
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.AppOuterClass.FavoriteMachine> getFavoritesList() {
+      return favorites_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.AppOuterClass.FavoriteMachineOrBuilder> 
+        getFavoritesOrBuilderList() {
+      return favorites_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    @java.lang.Override
+    public int getFavoritesCount() {
+      return favorites_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.AppOuterClass.FavoriteMachine getFavorites(int index) {
+      return favorites_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    public viam.app.v1.AppOuterClass.FavoriteMachineOrBuilder getFavoritesOrBuilder(
+        int index) {
+      return favorites_.get(index);
+    }
+    private void ensureFavoritesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.AppOuterClass.FavoriteMachine> tmp = favorites_;
+      if (!tmp.isModifiable()) {
+        favorites_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setFavorites(
+        int index, viam.app.v1.AppOuterClass.FavoriteMachine value) {
+      value.getClass();  // minimal bytecode null check
+      ensureFavoritesIsMutable();
+      favorites_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addFavorites(viam.app.v1.AppOuterClass.FavoriteMachine value) {
+      value.getClass();  // minimal bytecode null check
+      ensureFavoritesIsMutable();
+      favorites_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addFavorites(
+        int index, viam.app.v1.AppOuterClass.FavoriteMachine value) {
+      value.getClass();  // minimal bytecode null check
+      ensureFavoritesIsMutable();
+      favorites_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    private void addAllFavorites(
+        java.lang.Iterable<? extends viam.app.v1.AppOuterClass.FavoriteMachine> values) {
+      ensureFavoritesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, favorites_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    private void clearFavorites() {
+      favorites_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+     */
+    private void removeFavorites(int index) {
+      ensureFavoritesIsMutable();
+      favorites_.remove(index);
+    }
+
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.ListFavoriteMachinesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.ListFavoriteMachinesResponse)
+        viam.app.v1.AppOuterClass.ListFavoriteMachinesResponseOrBuilder {
+      // Construct using viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.AppOuterClass.FavoriteMachine> getFavoritesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getFavoritesList());
+      }
+      /**
+       * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+       */
+      @java.lang.Override
+      public int getFavoritesCount() {
+        return instance.getFavoritesCount();
+      }/**
+       * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.AppOuterClass.FavoriteMachine getFavorites(int index) {
+        return instance.getFavorites(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+       */
+      public Builder setFavorites(
+          int index, viam.app.v1.AppOuterClass.FavoriteMachine value) {
+        copyOnWrite();
+        instance.setFavorites(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+       */
+      public Builder setFavorites(
+          int index, viam.app.v1.AppOuterClass.FavoriteMachine.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFavorites(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+       */
+      public Builder addFavorites(viam.app.v1.AppOuterClass.FavoriteMachine value) {
+        copyOnWrite();
+        instance.addFavorites(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+       */
+      public Builder addFavorites(
+          int index, viam.app.v1.AppOuterClass.FavoriteMachine value) {
+        copyOnWrite();
+        instance.addFavorites(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+       */
+      public Builder addFavorites(
+          viam.app.v1.AppOuterClass.FavoriteMachine.Builder builderForValue) {
+        copyOnWrite();
+        instance.addFavorites(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+       */
+      public Builder addFavorites(
+          int index, viam.app.v1.AppOuterClass.FavoriteMachine.Builder builderForValue) {
+        copyOnWrite();
+        instance.addFavorites(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+       */
+      public Builder addAllFavorites(
+          java.lang.Iterable<? extends viam.app.v1.AppOuterClass.FavoriteMachine> values) {
+        copyOnWrite();
+        instance.addAllFavorites(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+       */
+      public Builder clearFavorites() {
+        copyOnWrite();
+        instance.clearFavorites();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.FavoriteMachine favorites = 1 [json_name = "favorites"];</code>
+       */
+      public Builder removeFavorites(int index) {
+        copyOnWrite();
+        instance.removeFavorites(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.ListFavoriteMachinesResponse)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "favorites_",
+              viam.app.v1.AppOuterClass.FavoriteMachine.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.ListFavoriteMachinesResponse)
+    private static final viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse DEFAULT_INSTANCE;
+    static {
+      ListFavoriteMachinesResponse defaultInstance = new ListFavoriteMachinesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ListFavoriteMachinesResponse.class, defaultInstance);
+    }
+
+    public static viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ListFavoriteMachinesResponse> PARSER;
+
+    public static com.google.protobuf.Parser<ListFavoriteMachinesResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface GetRobotMetadataRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.GetRobotMetadataRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -94874,7 +99205,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1486
+     *     See app/v1/app.proto;l=1547
      * @return A list containing the versions.
      */
     @java.lang.Deprecated java.util.List<java.lang.String>
@@ -94886,7 +99217,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1486
+     *     See app/v1/app.proto;l=1547
      * @return The count of versions.
      */
     @java.lang.Deprecated int getVersionsCount();
@@ -94897,7 +99228,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1486
+     *     See app/v1/app.proto;l=1547
      * @param index The index of the element to return.
      * @return The versions at the given index.
      */
@@ -94909,7 +99240,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1486
+     *     See app/v1/app.proto;l=1547
      * @param index The index of the element to return.
      * @return The versions at the given index.
      */
@@ -94951,6 +99282,59 @@ java.lang.String defaultValue) {
      * <code>repeated .viam.app.v1.MLModelVersion detailed_versions = 4 [json_name = "detailedVersions"];</code>
      */
     int getDetailedVersionsCount();
+
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+     * @return A list containing the deploymentModularResources.
+     */
+    java.util.List<java.lang.String>
+        getDeploymentModularResourcesList();
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+     * @return The count of deploymentModularResources.
+     */
+    int getDeploymentModularResourcesCount();
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    java.lang.String getDeploymentModularResources(int index);
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDeploymentModularResourcesBytes(int index);
   }
   /**
    * Protobuf type {@code viam.app.v1.MLModelMetadata}
@@ -94963,6 +99347,7 @@ java.lang.String defaultValue) {
     private MLModelMetadata() {
       versions_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       detailedVersions_ = emptyProtobufList();
+      deploymentModularResources_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     public static final int VERSIONS_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.ProtobufList<java.lang.String> versions_;
@@ -94973,7 +99358,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1486
+     *     See app/v1/app.proto;l=1547
      * @return A list containing the versions.
      */
     @java.lang.Override
@@ -94987,7 +99372,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1486
+     *     See app/v1/app.proto;l=1547
      * @return The count of versions.
      */
     @java.lang.Override
@@ -95001,7 +99386,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1486
+     *     See app/v1/app.proto;l=1547
      * @param index The index of the element to return.
      * @return The versions at the given index.
      */
@@ -95016,7 +99401,7 @@ java.lang.String defaultValue) {
      *
      * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
      * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-     *     See app/v1/app.proto;l=1486
+     *     See app/v1/app.proto;l=1547
      * @param index The index of the value to return.
      * @return The bytes of the versions at the given index.
      */
@@ -95286,6 +99671,164 @@ java.lang.String defaultValue) {
       detailedVersions_.remove(index);
     }
 
+    public static final int DEPLOYMENT_MODULAR_RESOURCES_FIELD_NUMBER = 5;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> deploymentModularResources_;
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+     * @return A list containing the deploymentModularResources.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getDeploymentModularResourcesList() {
+      return deploymentModularResources_;
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+     * @return The count of deploymentModularResources.
+     */
+    @java.lang.Override
+    public int getDeploymentModularResourcesCount() {
+      return deploymentModularResources_.size();
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getDeploymentModularResources(int index) {
+      return deploymentModularResources_.get(index);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the deploymentModularResources at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeploymentModularResourcesBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          deploymentModularResources_.get(index));
+    }
+    private void ensureDeploymentModularResourcesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          deploymentModularResources_;  if (!tmp.isModifiable()) {
+        deploymentModularResources_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+     * @param index The index to set the value at.
+     * @param value The deploymentModularResources to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDeploymentModularResources(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+     * @param value The deploymentModularResources to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addDeploymentModularResources(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.add(value);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+     * @param values The deploymentModularResources to add.
+     */
+    private void addAllDeploymentModularResources(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDeploymentModularResourcesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, deploymentModularResources_);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+     */
+    private void clearDeploymentModularResources() {
+      deploymentModularResources_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+     * @param value The bytes of the deploymentModularResources to add.
+     */
+    private void addDeploymentModularResourcesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.add(value.toStringUtf8());
+    }
+
     public static viam.app.v1.AppOuterClass.MLModelMetadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -95390,7 +99933,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1486
+       *     See app/v1/app.proto;l=1547
        * @return A list containing the versions.
        */
       @java.lang.Override
@@ -95406,7 +99949,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1486
+       *     See app/v1/app.proto;l=1547
        * @return The count of versions.
        */
       @java.lang.Override
@@ -95420,7 +99963,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1486
+       *     See app/v1/app.proto;l=1547
        * @param index The index of the element to return.
        * @return The versions at the given index.
        */
@@ -95435,7 +99978,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1486
+       *     See app/v1/app.proto;l=1547
        * @param index The index of the value to return.
        * @return The bytes of the versions at the given index.
        */
@@ -95451,7 +99994,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1486
+       *     See app/v1/app.proto;l=1547
        * @param index The index to set the value at.
        * @param value The versions to set.
        * @return This builder for chaining.
@@ -95469,7 +100012,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1486
+       *     See app/v1/app.proto;l=1547
        * @param value The versions to add.
        * @return This builder for chaining.
        */
@@ -95486,7 +100029,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1486
+       *     See app/v1/app.proto;l=1547
        * @param values The versions to add.
        * @return This builder for chaining.
        */
@@ -95503,7 +100046,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1486
+       *     See app/v1/app.proto;l=1547
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearVersions() {
@@ -95518,7 +100061,7 @@ java.lang.String defaultValue) {
        *
        * <code>repeated string versions = 1 [json_name = "versions", deprecated = true];</code>
        * @deprecated viam.app.v1.MLModelMetadata.versions is deprecated.
-       *     See app/v1/app.proto;l=1486
+       *     See app/v1/app.proto;l=1547
        * @param value The bytes of the versions to add.
        * @return This builder for chaining.
        */
@@ -95725,6 +100268,161 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+       * @return A list containing the deploymentModularResources.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getDeploymentModularResourcesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getDeploymentModularResourcesList());
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+       * @return The count of deploymentModularResources.
+       */
+      @java.lang.Override
+      public int getDeploymentModularResourcesCount() {
+        return instance.getDeploymentModularResourcesCount();
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+       * @param index The index of the element to return.
+       * @return The deploymentModularResources at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getDeploymentModularResources(int index) {
+        return instance.getDeploymentModularResources(index);
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the deploymentModularResources at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDeploymentModularResourcesBytes(int index) {
+        return instance.getDeploymentModularResourcesBytes(index);
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+       * @param index The index to set the value at.
+       * @param value The deploymentModularResources to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeploymentModularResources(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setDeploymentModularResources(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+       * @param value The deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeploymentModularResources(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addDeploymentModularResources(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+       * @param values The deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDeploymentModularResources(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllDeploymentModularResources(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeploymentModularResources() {
+        copyOnWrite();
+        instance.clearDeploymentModularResources();
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 5 [json_name = "deploymentModularResources"];</code>
+       * @param value The bytes of the deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeploymentModularResourcesBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addDeploymentModularResourcesBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.MLModelMetadata)
     }
     @java.lang.Override
@@ -95746,10 +100444,11 @@ java.lang.String defaultValue) {
               "modelFramework_",
               "detailedVersions_",
               viam.app.v1.AppOuterClass.MLModelVersion.class,
+              "deploymentModularResources_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0002\u0000\u0001\u021a\u0002\f" +
-                "\u0003\f\u0004\u001b";
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0003\u0000\u0001\u021a\u0002\f" +
+                "\u0003\f\u0004\u001b\u0005\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -96266,6 +100965,63 @@ java.lang.String defaultValue) {
      * @return The draft.
      */
     boolean getDraft();
+
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * Copied onto packages published by this training script.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+     * @return A list containing the deploymentModularResources.
+     */
+    java.util.List<java.lang.String>
+        getDeploymentModularResourcesList();
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * Copied onto packages published by this training script.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+     * @return The count of deploymentModularResources.
+     */
+    int getDeploymentModularResourcesCount();
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * Copied onto packages published by this training script.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    java.lang.String getDeploymentModularResources(int index);
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * Copied onto packages published by this training script.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDeploymentModularResourcesBytes(int index);
   }
   /**
    * Protobuf type {@code viam.app.v1.MLTrainingMetadata}
@@ -96277,6 +101033,7 @@ java.lang.String defaultValue) {
       MLTrainingMetadataOrBuilder {
     private MLTrainingMetadata() {
       versions_ = emptyProtobufList();
+      deploymentModularResources_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     public static final int VERSIONS_FIELD_NUMBER = 5;
     private com.google.protobuf.Internal.ProtobufList<viam.app.v1.AppOuterClass.MLTrainingVersion> versions_;
@@ -96529,6 +101286,173 @@ java.lang.String defaultValue) {
     private void clearDraft() {
 
       draft_ = false;
+    }
+
+    public static final int DEPLOYMENT_MODULAR_RESOURCES_FIELD_NUMBER = 6;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> deploymentModularResources_;
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * Copied onto packages published by this training script.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+     * @return A list containing the deploymentModularResources.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getDeploymentModularResourcesList() {
+      return deploymentModularResources_;
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * Copied onto packages published by this training script.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+     * @return The count of deploymentModularResources.
+     */
+    @java.lang.Override
+    public int getDeploymentModularResourcesCount() {
+      return deploymentModularResources_.size();
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * Copied onto packages published by this training script.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getDeploymentModularResources(int index) {
+      return deploymentModularResources_.get(index);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * Copied onto packages published by this training script.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the deploymentModularResources at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeploymentModularResourcesBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          deploymentModularResources_.get(index));
+    }
+    private void ensureDeploymentModularResourcesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          deploymentModularResources_;  if (!tmp.isModifiable()) {
+        deploymentModularResources_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * Copied onto packages published by this training script.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+     * @param index The index to set the value at.
+     * @param value The deploymentModularResources to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDeploymentModularResources(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * Copied onto packages published by this training script.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+     * @param value The deploymentModularResources to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addDeploymentModularResources(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.add(value);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * Copied onto packages published by this training script.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+     * @param values The deploymentModularResources to add.
+     */
+    private void addAllDeploymentModularResources(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDeploymentModularResourcesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, deploymentModularResources_);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * Copied onto packages published by this training script.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+     */
+    private void clearDeploymentModularResources() {
+      deploymentModularResources_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * Copied onto packages published by this training script.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+     * @param value The bytes of the deploymentModularResources to add.
+     */
+    private void addDeploymentModularResourcesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.add(value.toStringUtf8());
     }
 
     public static viam.app.v1.AppOuterClass.MLTrainingMetadata parseFrom(
@@ -96900,6 +101824,170 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * Copied onto packages published by this training script.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+       * @return A list containing the deploymentModularResources.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getDeploymentModularResourcesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getDeploymentModularResourcesList());
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * Copied onto packages published by this training script.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+       * @return The count of deploymentModularResources.
+       */
+      @java.lang.Override
+      public int getDeploymentModularResourcesCount() {
+        return instance.getDeploymentModularResourcesCount();
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * Copied onto packages published by this training script.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+       * @param index The index of the element to return.
+       * @return The deploymentModularResources at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getDeploymentModularResources(int index) {
+        return instance.getDeploymentModularResources(index);
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * Copied onto packages published by this training script.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the deploymentModularResources at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDeploymentModularResourcesBytes(int index) {
+        return instance.getDeploymentModularResourcesBytes(index);
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * Copied onto packages published by this training script.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+       * @param index The index to set the value at.
+       * @param value The deploymentModularResources to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeploymentModularResources(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setDeploymentModularResources(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * Copied onto packages published by this training script.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+       * @param value The deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeploymentModularResources(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addDeploymentModularResources(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * Copied onto packages published by this training script.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+       * @param values The deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDeploymentModularResources(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllDeploymentModularResources(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * Copied onto packages published by this training script.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeploymentModularResources() {
+        copyOnWrite();
+        instance.clearDeploymentModularResources();
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * Copied onto packages published by this training script.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 6 [json_name = "deploymentModularResources"];</code>
+       * @param value The bytes of the deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeploymentModularResourcesBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addDeploymentModularResourcesBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.MLTrainingMetadata)
     }
     @java.lang.Override
@@ -96921,10 +102009,11 @@ java.lang.String defaultValue) {
               "draft_",
               "versions_",
               viam.app.v1.AppOuterClass.MLTrainingVersion.class,
+              "deploymentModularResources_",
             };
             java.lang.String info =
-                "\u0000\u0004\u0000\u0000\u0002\u0005\u0004\u0000\u0001\u0000\u0002\f\u0003\f\u0004" +
-                "\u0007\u0005\u001b";
+                "\u0000\u0005\u0000\u0000\u0002\u0006\u0005\u0000\u0002\u0000\u0002\f\u0003\f\u0004" +
+                "\u0007\u0005\u001b\u0006\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -117231,6 +122320,59 @@ java.lang.String defaultValue) {
      * @return The modelFramework.
      */
     viam.app.mltraining.v1.MlTraining.ModelFramework getModelFramework();
+
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+     * @return A list containing the deploymentModularResources.
+     */
+    java.util.List<java.lang.String>
+        getDeploymentModularResourcesList();
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+     * @return The count of deploymentModularResources.
+     */
+    int getDeploymentModularResourcesCount();
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    java.lang.String getDeploymentModularResources(int index);
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDeploymentModularResourcesBytes(int index);
   }
   /**
    * Protobuf type {@code viam.app.v1.UpdateMLModelMetadata}
@@ -117241,6 +122383,7 @@ java.lang.String defaultValue) {
       // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateMLModelMetadata)
       UpdateMLModelMetadataOrBuilder {
     private UpdateMLModelMetadata() {
+      deploymentModularResources_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     public static final int MODEL_TYPE_FIELD_NUMBER = 1;
     private int modelType_;
@@ -117326,6 +122469,164 @@ java.lang.String defaultValue) {
     private void clearModelFramework() {
 
       modelFramework_ = 0;
+    }
+
+    public static final int DEPLOYMENT_MODULAR_RESOURCES_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> deploymentModularResources_;
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+     * @return A list containing the deploymentModularResources.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getDeploymentModularResourcesList() {
+      return deploymentModularResources_;
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+     * @return The count of deploymentModularResources.
+     */
+    @java.lang.Override
+    public int getDeploymentModularResourcesCount() {
+      return deploymentModularResources_.size();
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getDeploymentModularResources(int index) {
+      return deploymentModularResources_.get(index);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the deploymentModularResources at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeploymentModularResourcesBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          deploymentModularResources_.get(index));
+    }
+    private void ensureDeploymentModularResourcesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          deploymentModularResources_;  if (!tmp.isModifiable()) {
+        deploymentModularResources_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+     * @param index The index to set the value at.
+     * @param value The deploymentModularResources to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDeploymentModularResources(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+     * @param value The deploymentModularResources to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addDeploymentModularResources(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.add(value);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+     * @param values The deploymentModularResources to add.
+     */
+    private void addAllDeploymentModularResources(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDeploymentModularResourcesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, deploymentModularResources_);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+     */
+    private void clearDeploymentModularResources() {
+      deploymentModularResources_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+     * @param value The bytes of the deploymentModularResources to add.
+     */
+    private void addDeploymentModularResourcesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.add(value.toStringUtf8());
     }
 
     public static viam.app.v1.AppOuterClass.UpdateMLModelMetadata parseFrom(
@@ -117519,6 +122820,161 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+       * @return A list containing the deploymentModularResources.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getDeploymentModularResourcesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getDeploymentModularResourcesList());
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+       * @return The count of deploymentModularResources.
+       */
+      @java.lang.Override
+      public int getDeploymentModularResourcesCount() {
+        return instance.getDeploymentModularResourcesCount();
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+       * @param index The index of the element to return.
+       * @return The deploymentModularResources at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getDeploymentModularResources(int index) {
+        return instance.getDeploymentModularResources(index);
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the deploymentModularResources at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDeploymentModularResourcesBytes(int index) {
+        return instance.getDeploymentModularResourcesBytes(index);
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+       * @param index The index to set the value at.
+       * @param value The deploymentModularResources to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeploymentModularResources(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setDeploymentModularResources(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+       * @param value The deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeploymentModularResources(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addDeploymentModularResources(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+       * @param values The deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDeploymentModularResources(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllDeploymentModularResources(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeploymentModularResources() {
+        copyOnWrite();
+        instance.clearDeploymentModularResources();
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 3 [json_name = "deploymentModularResources"];</code>
+       * @param value The bytes of the deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeploymentModularResourcesBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addDeploymentModularResourcesBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateMLModelMetadata)
     }
     @java.lang.Override
@@ -117537,9 +122993,11 @@ java.lang.String defaultValue) {
             java.lang.Object[] objects = new java.lang.Object[] {
               "modelType_",
               "modelFramework_",
+              "deploymentModularResources_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\f\u0002\f";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0001\u0000\u0001\f\u0002\f\u0003" +
+                "\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -117625,6 +123083,59 @@ java.lang.String defaultValue) {
      * @return The draft.
      */
     boolean getDraft();
+
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+     * @return A list containing the deploymentModularResources.
+     */
+    java.util.List<java.lang.String>
+        getDeploymentModularResourcesList();
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+     * @return The count of deploymentModularResources.
+     */
+    int getDeploymentModularResourcesCount();
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    java.lang.String getDeploymentModularResources(int index);
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDeploymentModularResourcesBytes(int index);
   }
   /**
    * Protobuf type {@code viam.app.v1.UpdateMLTrainingMetadata}
@@ -117635,6 +123146,7 @@ java.lang.String defaultValue) {
       // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateMLTrainingMetadata)
       UpdateMLTrainingMetadataOrBuilder {
     private UpdateMLTrainingMetadata() {
+      deploymentModularResources_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     public static final int MODEL_TYPE_FIELD_NUMBER = 1;
     private int modelType_;
@@ -117746,6 +123258,164 @@ java.lang.String defaultValue) {
     private void clearDraft() {
 
       draft_ = false;
+    }
+
+    public static final int DEPLOYMENT_MODULAR_RESOURCES_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> deploymentModularResources_;
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+     * @return A list containing the deploymentModularResources.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getDeploymentModularResourcesList() {
+      return deploymentModularResources_;
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+     * @return The count of deploymentModularResources.
+     */
+    @java.lang.Override
+    public int getDeploymentModularResourcesCount() {
+      return deploymentModularResources_.size();
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getDeploymentModularResources(int index) {
+      return deploymentModularResources_.get(index);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the deploymentModularResources at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeploymentModularResourcesBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          deploymentModularResources_.get(index));
+    }
+    private void ensureDeploymentModularResourcesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          deploymentModularResources_;  if (!tmp.isModifiable()) {
+        deploymentModularResources_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+     * @param index The index to set the value at.
+     * @param value The deploymentModularResources to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDeploymentModularResources(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+     * @param value The deploymentModularResources to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addDeploymentModularResources(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.add(value);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+     * @param values The deploymentModularResources to add.
+     */
+    private void addAllDeploymentModularResources(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDeploymentModularResourcesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, deploymentModularResources_);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+     */
+    private void clearDeploymentModularResources() {
+      deploymentModularResources_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+     * @param value The bytes of the deploymentModularResources to add.
+     */
+    private void addDeploymentModularResourcesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.add(value.toStringUtf8());
     }
 
     public static viam.app.v1.AppOuterClass.UpdateMLTrainingMetadata parseFrom(
@@ -117967,6 +123637,161 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+       * @return A list containing the deploymentModularResources.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getDeploymentModularResourcesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getDeploymentModularResourcesList());
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+       * @return The count of deploymentModularResources.
+       */
+      @java.lang.Override
+      public int getDeploymentModularResourcesCount() {
+        return instance.getDeploymentModularResourcesCount();
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+       * @param index The index of the element to return.
+       * @return The deploymentModularResources at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getDeploymentModularResources(int index) {
+        return instance.getDeploymentModularResources(index);
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the deploymentModularResources at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDeploymentModularResourcesBytes(int index) {
+        return instance.getDeploymentModularResourcesBytes(index);
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+       * @param index The index to set the value at.
+       * @param value The deploymentModularResources to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeploymentModularResources(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setDeploymentModularResources(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+       * @param value The deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeploymentModularResources(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addDeploymentModularResources(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+       * @param values The deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDeploymentModularResources(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllDeploymentModularResources(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeploymentModularResources() {
+        copyOnWrite();
+        instance.clearDeploymentModularResources();
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 4 [json_name = "deploymentModularResources"];</code>
+       * @param value The bytes of the deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeploymentModularResourcesBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addDeploymentModularResourcesBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateMLTrainingMetadata)
     }
     @java.lang.Override
@@ -117986,10 +123811,11 @@ java.lang.String defaultValue) {
               "modelType_",
               "modelFramework_",
               "draft_",
+              "deploymentModularResources_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\f\u0002\f\u0003" +
-                "\u0007";
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0001\u0000\u0001\f\u0002\f\u0003" +
+                "\u0007\u0004\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
