@@ -3718,15 +3718,38 @@ public final class Robot {
     com.viam.common.v1.Common.Transform getFrame();
 
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
+     * @deprecated viam.robot.v1.FrameSystemConfig.kinematics is deprecated.
+     *     See robot/v1/robot.proto;l=201
      * @return Whether the kinematics field is set.
      */
-    boolean hasKinematics();
+    @java.lang.Deprecated boolean hasKinematics();
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
+     * @deprecated viam.robot.v1.FrameSystemConfig.kinematics is deprecated.
+     *     See robot/v1/robot.proto;l=201
      * @return The kinematics.
      */
-    com.google.protobuf.Struct getKinematics();
+    @java.lang.Deprecated com.google.protobuf.Struct getKinematics();
+
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     * @return Whether the model field is set.
+     */
+    boolean hasModel();
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     * @return The model.
+     */
+    com.viam.common.v1.Common.KinematicModel getModel();
   }
   /**
    * Protobuf type {@code viam.robot.v1.FrameSystemConfig}
@@ -3810,21 +3833,33 @@ public final class Robot {
     public static final int KINEMATICS_FIELD_NUMBER = 2;
     private com.google.protobuf.Struct kinematics_;
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasKinematics() {
+    @java.lang.Deprecated public boolean hasKinematics() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.protobuf.Struct getKinematics() {
+    @java.lang.Deprecated public com.google.protobuf.Struct getKinematics() {
       return kinematics_ == null ? com.google.protobuf.Struct.getDefaultInstance() : kinematics_;
     }
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings("ReturnValueIgnored")
     private void setKinematics(com.google.protobuf.Struct value) {
@@ -3833,7 +3868,11 @@ public final class Robot {
       bitField0_ |= 0x00000002;
     }
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
     private void mergeKinematics(com.google.protobuf.Struct value) {
@@ -3848,11 +3887,63 @@ public final class Robot {
       bitField0_ |= 0x00000002;
     }
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
      */
     private void clearKinematics() {
       kinematics_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int MODEL_FIELD_NUMBER = 3;
+    private com.viam.common.v1.Common.KinematicModel model_;
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     */
+    @java.lang.Override
+    public boolean hasModel() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.KinematicModel getModel() {
+      return model_ == null ? com.viam.common.v1.Common.KinematicModel.getDefaultInstance() : model_;
+    }
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setModel(com.viam.common.v1.Common.KinematicModel value) {
+      value.getClass();  // minimal bytecode null check
+      model_ = value;
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeModel(com.viam.common.v1.Common.KinematicModel value) {
+      value.getClass();  // minimal bytecode null check
+      if (model_ != null &&
+          model_ != com.viam.common.v1.Common.KinematicModel.getDefaultInstance()) {
+        model_ =
+          com.viam.common.v1.Common.KinematicModel.newBuilder(model_).mergeFrom(value).buildPartial();
+      } else {
+        model_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     */
+    private void clearModel() {
+      model_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static com.viam.robot.v1.Robot.FrameSystemConfig parseFrom(
@@ -4024,49 +4115,120 @@ public final class Robot {
       }
 
       /**
-       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+       * <pre>
+       * Deprecated: use model
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasKinematics() {
+      @java.lang.Deprecated public boolean hasKinematics() {
         return instance.hasKinematics();
       }
       /**
-       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+       * <pre>
+       * Deprecated: use model
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
        */
       @java.lang.Override
-      public com.google.protobuf.Struct getKinematics() {
+      @java.lang.Deprecated public com.google.protobuf.Struct getKinematics() {
         return instance.getKinematics();
       }
       /**
-       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+       * <pre>
+       * Deprecated: use model
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
        */
-      public Builder setKinematics(com.google.protobuf.Struct value) {
+      @java.lang.Deprecated public Builder setKinematics(com.google.protobuf.Struct value) {
         copyOnWrite();
         instance.setKinematics(value);
         return this;
         }
       /**
-       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+       * <pre>
+       * Deprecated: use model
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
        */
-      public Builder setKinematics(
+      @java.lang.Deprecated public Builder setKinematics(
           com.google.protobuf.Struct.Builder builderForValue) {
         copyOnWrite();
         instance.setKinematics(builderForValue.build());
         return this;
       }
       /**
-       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+       * <pre>
+       * Deprecated: use model
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
        */
-      public Builder mergeKinematics(com.google.protobuf.Struct value) {
+      @java.lang.Deprecated public Builder mergeKinematics(com.google.protobuf.Struct value) {
         copyOnWrite();
         instance.mergeKinematics(value);
         return this;
       }
       /**
-       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+       * <pre>
+       * Deprecated: use model
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
        */
-      public Builder clearKinematics() {  copyOnWrite();
+      @java.lang.Deprecated public Builder clearKinematics() {  copyOnWrite();
         instance.clearKinematics();
+        return this;
+      }
+
+      /**
+       * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+       */
+      @java.lang.Override
+      public boolean hasModel() {
+        return instance.hasModel();
+      }
+      /**
+       * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.KinematicModel getModel() {
+        return instance.getModel();
+      }
+      /**
+       * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+       */
+      public Builder setModel(com.viam.common.v1.Common.KinematicModel value) {
+        copyOnWrite();
+        instance.setModel(value);
+        return this;
+        }
+      /**
+       * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+       */
+      public Builder setModel(
+          com.viam.common.v1.Common.KinematicModel.Builder builderForValue) {
+        copyOnWrite();
+        instance.setModel(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+       */
+      public Builder mergeModel(com.viam.common.v1.Common.KinematicModel value) {
+        copyOnWrite();
+        instance.mergeModel(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+       */
+      public Builder clearModel() {  copyOnWrite();
+        instance.clearModel();
         return this;
       }
 
@@ -4089,10 +4251,11 @@ public final class Robot {
               "bitField0_",
               "frame_",
               "kinematics_",
+              "model_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "\u1009\u0001";
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001\u0003\u1009\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {

@@ -41,7 +41,7 @@ public final class FieldBehaviorProto {
         com.google.api.FieldBehavior.internalGetValueMap(),
         1052,
         com.google.protobuf.WireFormat.FieldType.ENUM,
-        false,
+        true,
         com.google.api.FieldBehavior.class);
 
   static {

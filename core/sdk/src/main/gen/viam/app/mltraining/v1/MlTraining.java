@@ -144,6 +144,16 @@ public final class MlTraining {
      * <code>MODEL_FRAMEWORK_ONNX = 4;</code>
      */
     MODEL_FRAMEWORK_ONNX(4),
+    /**
+     * <pre>
+     * Modular components or services in the registry, identified by
+     * deployment_modular_resources.
+     * This is a deploy target, not a managed-training backend.
+     * </pre>
+     *
+     * <code>MODEL_FRAMEWORK_REGISTRY = 5;</code>
+     */
+    MODEL_FRAMEWORK_REGISTRY(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -167,6 +177,16 @@ public final class MlTraining {
      * <code>MODEL_FRAMEWORK_ONNX = 4;</code>
      */
     public static final int MODEL_FRAMEWORK_ONNX_VALUE = 4;
+    /**
+     * <pre>
+     * Modular components or services in the registry, identified by
+     * deployment_modular_resources.
+     * This is a deploy target, not a managed-training backend.
+     * </pre>
+     *
+     * <code>MODEL_FRAMEWORK_REGISTRY = 5;</code>
+     */
+    public static final int MODEL_FRAMEWORK_REGISTRY_VALUE = 5;
 
 
     @java.lang.Override
@@ -195,6 +215,7 @@ public final class MlTraining {
         case 2: return MODEL_FRAMEWORK_TENSORFLOW;
         case 3: return MODEL_FRAMEWORK_PYTORCH;
         case 4: return MODEL_FRAMEWORK_ONNX;
+        case 5: return MODEL_FRAMEWORK_REGISTRY;
         default: return null;
       }
     }
@@ -5079,6 +5100,59 @@ java.lang.String defaultValue);
      */
     com.google.protobuf.ByteString
         getContainerIdBytes();
+
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+     * @return A list containing the deploymentModularResources.
+     */
+    java.util.List<java.lang.String>
+        getDeploymentModularResourcesList();
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+     * @return The count of deploymentModularResources.
+     */
+    int getDeploymentModularResourcesCount();
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    java.lang.String getDeploymentModularResources(int index);
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDeploymentModularResourcesBytes(int index);
   }
   /**
    * Protobuf type {@code viam.app.mltraining.v1.TrainingJobMetadata}
@@ -5100,6 +5174,7 @@ java.lang.String defaultValue);
       tags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       containerVersion_ = "";
       containerId_ = "";
+      deploymentModularResources_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 7;
@@ -6167,6 +6242,164 @@ java.lang.String defaultValue) {
       checkByteStringIsUtf8(value);
       containerId_ = value.toStringUtf8();
 
+    }
+
+    public static final int DEPLOYMENT_MODULAR_RESOURCES_FIELD_NUMBER = 24;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> deploymentModularResources_;
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+     * @return A list containing the deploymentModularResources.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getDeploymentModularResourcesList() {
+      return deploymentModularResources_;
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+     * @return The count of deploymentModularResources.
+     */
+    @java.lang.Override
+    public int getDeploymentModularResourcesCount() {
+      return deploymentModularResources_.size();
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The deploymentModularResources at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getDeploymentModularResources(int index) {
+      return deploymentModularResources_.get(index);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the deploymentModularResources at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeploymentModularResourcesBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          deploymentModularResources_.get(index));
+    }
+    private void ensureDeploymentModularResourcesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          deploymentModularResources_;  if (!tmp.isModifiable()) {
+        deploymentModularResources_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+     * @param index The index to set the value at.
+     * @param value The deploymentModularResources to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setDeploymentModularResources(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+     * @param value The deploymentModularResources to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addDeploymentModularResources(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.add(value);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+     * @param values The deploymentModularResources to add.
+     */
+    private void addAllDeploymentModularResources(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDeploymentModularResourcesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, deploymentModularResources_);
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+     */
+    private void clearDeploymentModularResources() {
+      deploymentModularResources_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Colon-delimited triplets of components or services from the registry used when
+     * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+     * associated component or service that consumes the files and should be deployed
+     * along with the model.
+     * </pre>
+     *
+     * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+     * @param value The bytes of the deploymentModularResources to add.
+     */
+    private void addDeploymentModularResourcesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureDeploymentModularResourcesIsMutable();
+      deploymentModularResources_.add(value.toStringUtf8());
     }
 
     public static viam.app.mltraining.v1.MlTraining.TrainingJobMetadata parseFrom(
@@ -7352,6 +7585,161 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+       * @return A list containing the deploymentModularResources.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getDeploymentModularResourcesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getDeploymentModularResourcesList());
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+       * @return The count of deploymentModularResources.
+       */
+      @java.lang.Override
+      public int getDeploymentModularResourcesCount() {
+        return instance.getDeploymentModularResourcesCount();
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The deploymentModularResources at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getDeploymentModularResources(int index) {
+        return instance.getDeploymentModularResources(index);
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the deploymentModularResources at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDeploymentModularResourcesBytes(int index) {
+        return instance.getDeploymentModularResourcesBytes(index);
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The deploymentModularResources to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeploymentModularResources(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setDeploymentModularResources(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+       * @param value The deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeploymentModularResources(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addDeploymentModularResources(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+       * @param values The deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDeploymentModularResources(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllDeploymentModularResources(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeploymentModularResources() {
+        copyOnWrite();
+        instance.clearDeploymentModularResources();
+        return this;
+      }
+      /**
+       * <pre>
+       * Colon-delimited triplets of components or services from the registry used when
+       * model_framework is MODEL_FRAMEWORK_REGISTRY. This ties the ML model file to the
+       * associated component or service that consumes the files and should be deployed
+       * along with the model.
+       * </pre>
+       *
+       * <code>repeated string deployment_modular_resources = 24 [json_name = "deploymentModularResources", (.tagger.v1.tags) = "bson:&#92;"deployment_modular_resources&#92;" json:&#92;"deployment_modular_resources&#92;""];</code>
+       * @param value The bytes of the deploymentModularResources to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDeploymentModularResourcesBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addDeploymentModularResourcesBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.mltraining.v1.TrainingJobMetadata)
     }
     @java.lang.Override
@@ -7391,12 +7779,13 @@ java.lang.String defaultValue) {
               ArgumentsDefaultEntryHolder.defaultEntry,
               "containerVersion_",
               "containerId_",
+              "deploymentModularResources_",
             };
             java.lang.String info =
-                "\u0000\u0015\u0000\u0001\u0002\u0017\u0015\u0001\u0001\u0000\u0002\f\u0003\u1009" +
+                "\u0000\u0016\u0000\u0001\u0002\u0018\u0016\u0001\u0002\u0000\u0002\f\u0003\u1009" +
                 "\u0001\u0004\u1009\u0002\u0005\u0208\u0007\u0208\b\u1009\u0000\t\u1009\u0003\n\u1009" +
                 "\u0004\u000b\u0208\f\u0208\r\u0208\u000e\u0208\u000f\f\u0010\u021a\u0011\f\u0012" +
-                "\u0007\u0013\u0208\u0014\u0208\u00152\u0016\u0208\u0017\u0208";
+                "\u0007\u0013\u0208\u0014\u0208\u00152\u0016\u0208\u0017\u0208\u0018\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
