@@ -111,6 +111,122 @@ public final class Common {
     // @@protoc_insertion_point(enum_scope:viam.common.v1.KinematicsFileFormat)
   }
 
+  /**
+   * Protobuf enum {@code viam.common.v1.JointType}
+   */
+  public enum JointType
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>JOINT_TYPE_UNSPECIFIED = 0;</code>
+     */
+    JOINT_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>JOINT_TYPE_REVOLUTE = 1;</code>
+     */
+    JOINT_TYPE_REVOLUTE(1),
+    /**
+     * <code>JOINT_TYPE_PRISMATIC = 2;</code>
+     */
+    JOINT_TYPE_PRISMATIC(2),
+    /**
+     * <pre>
+     * Revolute joint with no position bound
+     * </pre>
+     *
+     * <code>JOINT_TYPE_CONTINUOUS = 3;</code>
+     */
+    JOINT_TYPE_CONTINUOUS(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>JOINT_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int JOINT_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>JOINT_TYPE_REVOLUTE = 1;</code>
+     */
+    public static final int JOINT_TYPE_REVOLUTE_VALUE = 1;
+    /**
+     * <code>JOINT_TYPE_PRISMATIC = 2;</code>
+     */
+    public static final int JOINT_TYPE_PRISMATIC_VALUE = 2;
+    /**
+     * <pre>
+     * Revolute joint with no position bound
+     * </pre>
+     *
+     * <code>JOINT_TYPE_CONTINUOUS = 3;</code>
+     */
+    public static final int JOINT_TYPE_CONTINUOUS_VALUE = 3;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static JointType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static JointType forNumber(int value) {
+      switch (value) {
+        case 0: return JOINT_TYPE_UNSPECIFIED;
+        case 1: return JOINT_TYPE_REVOLUTE;
+        case 2: return JOINT_TYPE_PRISMATIC;
+        case 3: return JOINT_TYPE_CONTINUOUS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<JointType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        JointType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<JointType>() {
+            @java.lang.Override
+            public JointType findValueByNumber(int number) {
+              return JointType.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return JointTypeVerifier.INSTANCE;
+    }
+
+    private static final class JointTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier
+                INSTANCE = new JointTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return JointType.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private JointType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.common.v1.JointType)
+  }
+
   public interface ResourceNameOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.common.v1.ResourceName)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -4499,6 +4615,35 @@ public final class Common {
      * @return The mesh.
      */
     com.google.protobuf.ByteString getMesh();
+
+    /**
+     * <pre>
+     * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+     * </pre>
+     *
+     * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+     * @return Whether the originalFileSourcePathDiagnostic field is set.
+     */
+    boolean hasOriginalFileSourcePathDiagnostic();
+    /**
+     * <pre>
+     * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+     * </pre>
+     *
+     * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+     * @return The originalFileSourcePathDiagnostic.
+     */
+    java.lang.String getOriginalFileSourcePathDiagnostic();
+    /**
+     * <pre>
+     * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+     * </pre>
+     *
+     * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+     * @return The bytes for originalFileSourcePathDiagnostic.
+     */
+    com.google.protobuf.ByteString
+        getOriginalFileSourcePathDiagnosticBytes();
   }
   /**
    * Protobuf type {@code viam.common.v1.Mesh}
@@ -4511,7 +4656,9 @@ public final class Common {
     private Mesh() {
       contentType_ = "";
       mesh_ = com.google.protobuf.ByteString.EMPTY;
+      originalFileSourcePathDiagnostic_ = "";
     }
+    private int bitField0_;
     public static final int CONTENT_TYPE_FIELD_NUMBER = 1;
     private java.lang.String contentType_;
     /**
@@ -4617,6 +4764,86 @@ public final class Common {
     private void clearMesh() {
 
       mesh_ = getDefaultInstance().getMesh();
+    }
+
+    public static final int ORIGINAL_FILE_SOURCE_PATH_DIAGNOSTIC_FIELD_NUMBER = 3;
+    private java.lang.String originalFileSourcePathDiagnostic_;
+    /**
+     * <pre>
+     * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+     * </pre>
+     *
+     * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+     * @return Whether the originalFileSourcePathDiagnostic field is set.
+     */
+    @java.lang.Override
+    public boolean hasOriginalFileSourcePathDiagnostic() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+     * </pre>
+     *
+     * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+     * @return The originalFileSourcePathDiagnostic.
+     */
+    @java.lang.Override
+    public java.lang.String getOriginalFileSourcePathDiagnostic() {
+      return originalFileSourcePathDiagnostic_;
+    }
+    /**
+     * <pre>
+     * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+     * </pre>
+     *
+     * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+     * @return The bytes for originalFileSourcePathDiagnostic.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOriginalFileSourcePathDiagnosticBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(originalFileSourcePathDiagnostic_);
+    }
+    /**
+     * <pre>
+     * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+     * </pre>
+     *
+     * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+     * @param value The originalFileSourcePathDiagnostic to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setOriginalFileSourcePathDiagnostic(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      bitField0_ |= 0x00000001;
+      originalFileSourcePathDiagnostic_ = value;
+    }
+    /**
+     * <pre>
+     * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+     * </pre>
+     *
+     * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+     */
+    private void clearOriginalFileSourcePathDiagnostic() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      originalFileSourcePathDiagnostic_ = getDefaultInstance().getOriginalFileSourcePathDiagnostic();
+    }
+    /**
+     * <pre>
+     * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+     * </pre>
+     *
+     * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+     * @param value The bytes for originalFileSourcePathDiagnostic to set.
+     */
+    private void setOriginalFileSourcePathDiagnosticBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      originalFileSourcePathDiagnostic_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static com.viam.common.v1.Common.Mesh parseFrom(
@@ -4825,6 +5052,87 @@ public final class Common {
         return this;
       }
 
+      /**
+       * <pre>
+       * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+       * </pre>
+       *
+       * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+       * @return Whether the originalFileSourcePathDiagnostic field is set.
+       */
+      @java.lang.Override
+      public boolean hasOriginalFileSourcePathDiagnostic() {
+        return instance.hasOriginalFileSourcePathDiagnostic();
+      }
+      /**
+       * <pre>
+       * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+       * </pre>
+       *
+       * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+       * @return The originalFileSourcePathDiagnostic.
+       */
+      @java.lang.Override
+      public java.lang.String getOriginalFileSourcePathDiagnostic() {
+        return instance.getOriginalFileSourcePathDiagnostic();
+      }
+      /**
+       * <pre>
+       * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+       * </pre>
+       *
+       * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+       * @return The bytes for originalFileSourcePathDiagnostic.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOriginalFileSourcePathDiagnosticBytes() {
+        return instance.getOriginalFileSourcePathDiagnosticBytes();
+      }
+      /**
+       * <pre>
+       * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+       * </pre>
+       *
+       * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+       * @param value The originalFileSourcePathDiagnostic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginalFileSourcePathDiagnostic(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setOriginalFileSourcePathDiagnostic(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+       * </pre>
+       *
+       * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOriginalFileSourcePathDiagnostic() {
+        copyOnWrite();
+        instance.clearOriginalFileSourcePathDiagnostic();
+        return this;
+      }
+      /**
+       * <pre>
+       * Path the mesh was loaded from, relative to the kinematics file. Informational on the wire.
+       * </pre>
+       *
+       * <code>optional string original_file_source_path_diagnostic = 3 [json_name = "originalFileSourcePathDiagnostic"];</code>
+       * @param value The bytes for originalFileSourcePathDiagnostic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginalFileSourcePathDiagnosticBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setOriginalFileSourcePathDiagnosticBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.common.v1.Mesh)
     }
     @java.lang.Override
@@ -4841,12 +5149,14 @@ public final class Common {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "contentType_",
               "mesh_",
+              "originalFileSourcePathDiagnostic_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\n" +
-                "";
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\n" +
+                "\u0003\u1208\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -7711,6 +8021,882 @@ public final class Common {
     private static volatile com.google.protobuf.Parser<GeoPoint> PARSER;
 
     public static com.google.protobuf.Parser<GeoPoint> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GeoPoseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.GeoPose)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Latitude and longitude in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+     * @return Whether the location field is set.
+     */
+    boolean hasLocation();
+    /**
+     * <pre>
+     * Latitude and longitude in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+     * @return The location.
+     */
+    com.viam.common.v1.Common.GeoPoint getLocation();
+
+    /**
+     * <pre>
+     * Optional altitude in meters
+     * </pre>
+     *
+     * <code>optional double altitude = 3 [json_name = "altitude"];</code>
+     * @return Whether the altitude field is set.
+     */
+    boolean hasAltitude();
+    /**
+     * <pre>
+     * Optional altitude in meters
+     * </pre>
+     *
+     * <code>optional double altitude = 3 [json_name = "altitude"];</code>
+     * @return The altitude.
+     */
+    double getAltitude();
+
+    /**
+     * <pre>
+     * Compass heading in degrees, clockwise from north. Level pose: pitch 0, roll 0.
+     * </pre>
+     *
+     * <code>double heading = 2 [json_name = "heading"];</code>
+     * @return Whether the heading field is set.
+     */
+    boolean hasHeading();
+    /**
+     * <pre>
+     * Compass heading in degrees, clockwise from north. Level pose: pitch 0, roll 0.
+     * </pre>
+     *
+     * <code>double heading = 2 [json_name = "heading"];</code>
+     * @return The heading.
+     */
+    double getHeading();
+
+    /**
+     * <pre>
+     * Full orientation in the east-north-up tangent frame at location.
+     * o_x, o_y, o_z, theta in degrees, same orientation vector as Pose.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 4 [json_name = "orientationVector"];</code>
+     * @return Whether the orientationVector field is set.
+     */
+    boolean hasOrientationVector();
+    /**
+     * <pre>
+     * Full orientation in the east-north-up tangent frame at location.
+     * o_x, o_y, o_z, theta in degrees, same orientation vector as Pose.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 4 [json_name = "orientationVector"];</code>
+     * @return The orientationVector.
+     */
+    com.viam.common.v1.Common.Orientation getOrientationVector();
+
+    public com.viam.common.v1.Common.GeoPose.OrientationCase getOrientationCase();
+  }
+  /**
+   * <pre>
+   * GeoPose is a GPS position and orientation, optionally with altitude.
+   *
+   * Orientation is expressed in the east-north-up tangent frame at location:
+   * +X east, +Y north, +Z up. Viam base axes are +X right, +Y forward, and +Z up,
+   * so the identity orientation (o_x, o_y, o_z, theta) = (0, 0, 1, 0) is level and
+   * faces north: forward is north and right is east.
+   *
+   * The same rotation as an orientation vector is Viam's Tait-Bryan Euler sequence,
+   * intrinsic z-y'-x'' (yaw, then pitch, then roll), in degrees:
+   * - yaw: right-handed rotation about local up (+Z). Zero faces north. Positive
+   * yaw is counterclockwise viewed from above, so a compass heading in degrees
+   * clockwise from north is the negation of yaw.
+   * - pitch: right-handed rotation about the base's forward axis (+Y).
+   * - roll: right-handed rotation about the base's right axis (+X). With pitch 0,
+   * positive roll raises the forward axis; that angle is the elevation of
+   * forward above the local horizon.
+   *
+   * Exactly one of heading or orientation_vector is set. heading is only the
+   * compass yaw of a level pose (pitch 0, roll 0). It is not added to
+   * orientation_vector.
+   * </pre>
+   *
+   * Protobuf type {@code viam.common.v1.GeoPose}
+   */
+  public  static final class GeoPose extends
+      com.google.protobuf.GeneratedMessageLite<
+          GeoPose, GeoPose.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.GeoPose)
+      GeoPoseOrBuilder {
+    private GeoPose() {
+    }
+    private int bitField0_;
+    private int orientationCase_ = 0;
+    private java.lang.Object orientation_;
+    public enum OrientationCase
+        implements com.google.protobuf.AbstractMessageLite.InternalOneOfEnum {
+      HEADING(2),
+      ORIENTATION_VECTOR(4),
+      ORIENTATION_NOT_SET(0);
+      private final int value;
+      private OrientationCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static OrientationCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static OrientationCase forNumber(int value) {
+        switch (value) {
+          case 2: return HEADING;
+          case 4: return ORIENTATION_VECTOR;
+          case 0: return ORIENTATION_NOT_SET;
+          default: return null;
+        }
+      }
+      @java.lang.Override public int getNumber() {
+        return this.value;
+      }
+    };
+
+    @java.lang.Override
+    public OrientationCase
+    getOrientationCase() {
+      return OrientationCase.forNumber(
+          orientationCase_);
+    }
+
+    private void clearOrientation() {
+      orientationCase_ = 0;
+      orientation_ = null;
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 1;
+    private com.viam.common.v1.Common.GeoPoint location_;
+    /**
+     * <pre>
+     * Latitude and longitude in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+     */
+    @java.lang.Override
+    public boolean hasLocation() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Latitude and longitude in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.GeoPoint getLocation() {
+      return location_ == null ? com.viam.common.v1.Common.GeoPoint.getDefaultInstance() : location_;
+    }
+    /**
+     * <pre>
+     * Latitude and longitude in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setLocation(com.viam.common.v1.Common.GeoPoint value) {
+      value.getClass();  // minimal bytecode null check
+      location_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Latitude and longitude in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeLocation(com.viam.common.v1.Common.GeoPoint value) {
+      value.getClass();  // minimal bytecode null check
+      if (location_ != null &&
+          location_ != com.viam.common.v1.Common.GeoPoint.getDefaultInstance()) {
+        location_ =
+          com.viam.common.v1.Common.GeoPoint.newBuilder(location_).mergeFrom(value).buildPartial();
+      } else {
+        location_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Latitude and longitude in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+     */
+    private void clearLocation() {
+      location_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int ALTITUDE_FIELD_NUMBER = 3;
+    private double altitude_;
+    /**
+     * <pre>
+     * Optional altitude in meters
+     * </pre>
+     *
+     * <code>optional double altitude = 3 [json_name = "altitude"];</code>
+     * @return Whether the altitude field is set.
+     */
+    @java.lang.Override
+    public boolean hasAltitude() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Optional altitude in meters
+     * </pre>
+     *
+     * <code>optional double altitude = 3 [json_name = "altitude"];</code>
+     * @return The altitude.
+     */
+    @java.lang.Override
+    public double getAltitude() {
+      return altitude_;
+    }
+    /**
+     * <pre>
+     * Optional altitude in meters
+     * </pre>
+     *
+     * <code>optional double altitude = 3 [json_name = "altitude"];</code>
+     * @param value The altitude to set.
+     */
+    private void setAltitude(double value) {
+      bitField0_ |= 0x00000002;
+      altitude_ = value;
+    }
+    /**
+     * <pre>
+     * Optional altitude in meters
+     * </pre>
+     *
+     * <code>optional double altitude = 3 [json_name = "altitude"];</code>
+     */
+    private void clearAltitude() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      altitude_ = 0D;
+    }
+
+    public static final int HEADING_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Compass heading in degrees, clockwise from north. Level pose: pitch 0, roll 0.
+     * </pre>
+     *
+     * <code>double heading = 2 [json_name = "heading"];</code>
+     * @return Whether the heading field is set.
+     */
+    @java.lang.Override
+    public boolean hasHeading() {
+      return orientationCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Compass heading in degrees, clockwise from north. Level pose: pitch 0, roll 0.
+     * </pre>
+     *
+     * <code>double heading = 2 [json_name = "heading"];</code>
+     * @return The heading.
+     */
+    @java.lang.Override
+    public double getHeading() {
+      if (orientationCase_ == 2) {
+        return (java.lang.Double) orientation_;
+      }
+      return 0D;
+    }
+    /**
+     * <pre>
+     * Compass heading in degrees, clockwise from north. Level pose: pitch 0, roll 0.
+     * </pre>
+     *
+     * <code>double heading = 2 [json_name = "heading"];</code>
+     * @param value The heading to set.
+     */
+    private void setHeading(double value) {
+      orientationCase_ = 2;
+      orientation_ = value;
+    }
+    /**
+     * <pre>
+     * Compass heading in degrees, clockwise from north. Level pose: pitch 0, roll 0.
+     * </pre>
+     *
+     * <code>double heading = 2 [json_name = "heading"];</code>
+     */
+    private void clearHeading() {
+      if (orientationCase_ == 2) {
+        orientationCase_ = 0;
+        orientation_ = null;
+      }
+    }
+
+    public static final int ORIENTATION_VECTOR_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * Full orientation in the east-north-up tangent frame at location.
+     * o_x, o_y, o_z, theta in degrees, same orientation vector as Pose.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 4 [json_name = "orientationVector"];</code>
+     */
+    @java.lang.Override
+    public boolean hasOrientationVector() {
+      return orientationCase_ == 4;
+    }
+    /**
+     * <pre>
+     * Full orientation in the east-north-up tangent frame at location.
+     * o_x, o_y, o_z, theta in degrees, same orientation vector as Pose.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 4 [json_name = "orientationVector"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Orientation getOrientationVector() {
+      if (orientationCase_ == 4) {
+         return (com.viam.common.v1.Common.Orientation) orientation_;
+      }
+      return com.viam.common.v1.Common.Orientation.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Full orientation in the east-north-up tangent frame at location.
+     * o_x, o_y, o_z, theta in degrees, same orientation vector as Pose.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 4 [json_name = "orientationVector"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setOrientationVector(com.viam.common.v1.Common.Orientation value) {
+      value.getClass();  // minimal bytecode null check
+      orientation_ = value;
+      orientationCase_ = 4;
+    }
+    /**
+     * <pre>
+     * Full orientation in the east-north-up tangent frame at location.
+     * o_x, o_y, o_z, theta in degrees, same orientation vector as Pose.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 4 [json_name = "orientationVector"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void mergeOrientationVector(com.viam.common.v1.Common.Orientation value) {
+      value.getClass();  // minimal bytecode null check
+      if (orientationCase_ == 4 &&
+          orientation_ != com.viam.common.v1.Common.Orientation.getDefaultInstance()) {
+        orientation_ = com.viam.common.v1.Common.Orientation.newBuilder((com.viam.common.v1.Common.Orientation) orientation_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        orientation_ = value;
+      }
+      orientationCase_ = 4;
+    }
+    /**
+     * <pre>
+     * Full orientation in the east-north-up tangent frame at location.
+     * o_x, o_y, o_z, theta in degrees, same orientation vector as Pose.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 4 [json_name = "orientationVector"];</code>
+     */
+    private void clearOrientationVector() {
+      if (orientationCase_ == 4) {
+        orientationCase_ = 0;
+        orientation_ = null;
+      }
+    }
+
+    public static com.viam.common.v1.Common.GeoPose parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.GeoPose parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.GeoPose parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.GeoPose parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.GeoPose parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.GeoPose parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.GeoPose parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.GeoPose parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.GeoPose parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.GeoPose parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.GeoPose parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.GeoPose parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.GeoPose prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * GeoPose is a GPS position and orientation, optionally with altitude.
+     *
+     * Orientation is expressed in the east-north-up tangent frame at location:
+     * +X east, +Y north, +Z up. Viam base axes are +X right, +Y forward, and +Z up,
+     * so the identity orientation (o_x, o_y, o_z, theta) = (0, 0, 1, 0) is level and
+     * faces north: forward is north and right is east.
+     *
+     * The same rotation as an orientation vector is Viam's Tait-Bryan Euler sequence,
+     * intrinsic z-y'-x'' (yaw, then pitch, then roll), in degrees:
+     * - yaw: right-handed rotation about local up (+Z). Zero faces north. Positive
+     * yaw is counterclockwise viewed from above, so a compass heading in degrees
+     * clockwise from north is the negation of yaw.
+     * - pitch: right-handed rotation about the base's forward axis (+Y).
+     * - roll: right-handed rotation about the base's right axis (+X). With pitch 0,
+     * positive roll raises the forward axis; that angle is the elevation of
+     * forward above the local horizon.
+     *
+     * Exactly one of heading or orientation_vector is set. heading is only the
+     * compass yaw of a level pose (pitch 0, roll 0). It is not added to
+     * orientation_vector.
+     * </pre>
+     *
+     * Protobuf type {@code viam.common.v1.GeoPose}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.GeoPose, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.GeoPose)
+        com.viam.common.v1.Common.GeoPoseOrBuilder {
+      // Construct using com.viam.common.v1.Common.GeoPose.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+      @java.lang.Override
+      public OrientationCase
+          getOrientationCase() {
+        return instance.getOrientationCase();
+      }
+
+      public Builder clearOrientation() {
+        copyOnWrite();
+        instance.clearOrientation();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * Latitude and longitude in degrees
+       * </pre>
+       *
+       * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+       */
+      @java.lang.Override
+      public boolean hasLocation() {
+        return instance.hasLocation();
+      }
+      /**
+       * <pre>
+       * Latitude and longitude in degrees
+       * </pre>
+       *
+       * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.GeoPoint getLocation() {
+        return instance.getLocation();
+      }
+      /**
+       * <pre>
+       * Latitude and longitude in degrees
+       * </pre>
+       *
+       * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(com.viam.common.v1.Common.GeoPoint value) {
+        copyOnWrite();
+        instance.setLocation(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Latitude and longitude in degrees
+       * </pre>
+       *
+       * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+       */
+      public Builder setLocation(
+          com.viam.common.v1.Common.GeoPoint.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLocation(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Latitude and longitude in degrees
+       * </pre>
+       *
+       * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+       */
+      public Builder mergeLocation(com.viam.common.v1.Common.GeoPoint value) {
+        copyOnWrite();
+        instance.mergeLocation(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Latitude and longitude in degrees
+       * </pre>
+       *
+       * <code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code>
+       */
+      public Builder clearLocation() {  copyOnWrite();
+        instance.clearLocation();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Optional altitude in meters
+       * </pre>
+       *
+       * <code>optional double altitude = 3 [json_name = "altitude"];</code>
+       * @return Whether the altitude field is set.
+       */
+      @java.lang.Override
+      public boolean hasAltitude() {
+        return instance.hasAltitude();
+      }
+      /**
+       * <pre>
+       * Optional altitude in meters
+       * </pre>
+       *
+       * <code>optional double altitude = 3 [json_name = "altitude"];</code>
+       * @return The altitude.
+       */
+      @java.lang.Override
+      public double getAltitude() {
+        return instance.getAltitude();
+      }
+      /**
+       * <pre>
+       * Optional altitude in meters
+       * </pre>
+       *
+       * <code>optional double altitude = 3 [json_name = "altitude"];</code>
+       * @param value The altitude to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAltitude(double value) {
+        copyOnWrite();
+        instance.setAltitude(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional altitude in meters
+       * </pre>
+       *
+       * <code>optional double altitude = 3 [json_name = "altitude"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAltitude() {
+        copyOnWrite();
+        instance.clearAltitude();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Compass heading in degrees, clockwise from north. Level pose: pitch 0, roll 0.
+       * </pre>
+       *
+       * <code>double heading = 2 [json_name = "heading"];</code>
+       * @return Whether the heading field is set.
+       */
+      @java.lang.Override
+      public boolean hasHeading() {
+        return instance.hasHeading();
+      }
+      /**
+       * <pre>
+       * Compass heading in degrees, clockwise from north. Level pose: pitch 0, roll 0.
+       * </pre>
+       *
+       * <code>double heading = 2 [json_name = "heading"];</code>
+       * @return The heading.
+       */
+      @java.lang.Override
+      public double getHeading() {
+        return instance.getHeading();
+      }
+      /**
+       * <pre>
+       * Compass heading in degrees, clockwise from north. Level pose: pitch 0, roll 0.
+       * </pre>
+       *
+       * <code>double heading = 2 [json_name = "heading"];</code>
+       * @param value The heading to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeading(double value) {
+        copyOnWrite();
+        instance.setHeading(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Compass heading in degrees, clockwise from north. Level pose: pitch 0, roll 0.
+       * </pre>
+       *
+       * <code>double heading = 2 [json_name = "heading"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeading() {
+        copyOnWrite();
+        instance.clearHeading();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Full orientation in the east-north-up tangent frame at location.
+       * o_x, o_y, o_z, theta in degrees, same orientation vector as Pose.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation_vector = 4 [json_name = "orientationVector"];</code>
+       */
+      @java.lang.Override
+      public boolean hasOrientationVector() {
+        return instance.hasOrientationVector();
+      }
+      /**
+       * <pre>
+       * Full orientation in the east-north-up tangent frame at location.
+       * o_x, o_y, o_z, theta in degrees, same orientation vector as Pose.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation_vector = 4 [json_name = "orientationVector"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Orientation getOrientationVector() {
+        return instance.getOrientationVector();
+      }
+      /**
+       * <pre>
+       * Full orientation in the east-north-up tangent frame at location.
+       * o_x, o_y, o_z, theta in degrees, same orientation vector as Pose.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation_vector = 4 [json_name = "orientationVector"];</code>
+       */
+      public Builder setOrientationVector(com.viam.common.v1.Common.Orientation value) {
+        copyOnWrite();
+        instance.setOrientationVector(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Full orientation in the east-north-up tangent frame at location.
+       * o_x, o_y, o_z, theta in degrees, same orientation vector as Pose.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation_vector = 4 [json_name = "orientationVector"];</code>
+       */
+      public Builder setOrientationVector(
+          com.viam.common.v1.Common.Orientation.Builder builderForValue) {
+        copyOnWrite();
+        instance.setOrientationVector(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Full orientation in the east-north-up tangent frame at location.
+       * o_x, o_y, o_z, theta in degrees, same orientation vector as Pose.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation_vector = 4 [json_name = "orientationVector"];</code>
+       */
+      public Builder mergeOrientationVector(com.viam.common.v1.Common.Orientation value) {
+        copyOnWrite();
+        instance.mergeOrientationVector(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Full orientation in the east-north-up tangent frame at location.
+       * o_x, o_y, o_z, theta in degrees, same orientation vector as Pose.
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation_vector = 4 [json_name = "orientationVector"];</code>
+       */
+      public Builder clearOrientationVector() {
+        copyOnWrite();
+        instance.clearOrientationVector();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.GeoPose)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.GeoPose();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "orientation_",
+              "orientationCase_",
+              "bitField0_",
+              "location_",
+              "altitude_",
+              com.viam.common.v1.Common.Orientation.class,
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0001\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "3\u0000\u0003\u1000\u0001\u0004<\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.GeoPose> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.GeoPose.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.GeoPose>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.GeoPose)
+    private static final com.viam.common.v1.Common.GeoPose DEFAULT_INSTANCE;
+    static {
+      GeoPose defaultInstance = new GeoPose();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GeoPose.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.GeoPose getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GeoPose> PARSER;
+
+    public static com.google.protobuf.Parser<GeoPose> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
@@ -12107,6 +13293,26 @@ public final class Common {
 
     /**
      * <pre>
+     * Include collision mesh bytes in the response. Otherwise meshes carry only their path.
+     * </pre>
+     *
+     * <code>bool include_collision_meshes = 2 [json_name = "includeCollisionMeshes"];</code>
+     * @return The includeCollisionMeshes.
+     */
+    boolean getIncludeCollisionMeshes();
+
+    /**
+     * <pre>
+     * Include visual mesh bytes in the response
+     * </pre>
+     *
+     * <code>bool include_visual_meshes = 3 [json_name = "includeVisualMeshes"];</code>
+     * @return The includeVisualMeshes.
+     */
+    boolean getIncludeVisualMeshes();
+
+    /**
+     * <pre>
      * Additional arguments to the method
      * </pre>
      *
@@ -12202,6 +13408,82 @@ public final class Common {
       checkByteStringIsUtf8(value);
       name_ = value.toStringUtf8();
 
+    }
+
+    public static final int INCLUDE_COLLISION_MESHES_FIELD_NUMBER = 2;
+    private boolean includeCollisionMeshes_;
+    /**
+     * <pre>
+     * Include collision mesh bytes in the response. Otherwise meshes carry only their path.
+     * </pre>
+     *
+     * <code>bool include_collision_meshes = 2 [json_name = "includeCollisionMeshes"];</code>
+     * @return The includeCollisionMeshes.
+     */
+    @java.lang.Override
+    public boolean getIncludeCollisionMeshes() {
+      return includeCollisionMeshes_;
+    }
+    /**
+     * <pre>
+     * Include collision mesh bytes in the response. Otherwise meshes carry only their path.
+     * </pre>
+     *
+     * <code>bool include_collision_meshes = 2 [json_name = "includeCollisionMeshes"];</code>
+     * @param value The includeCollisionMeshes to set.
+     */
+    private void setIncludeCollisionMeshes(boolean value) {
+      
+      includeCollisionMeshes_ = value;
+    }
+    /**
+     * <pre>
+     * Include collision mesh bytes in the response. Otherwise meshes carry only their path.
+     * </pre>
+     *
+     * <code>bool include_collision_meshes = 2 [json_name = "includeCollisionMeshes"];</code>
+     */
+    private void clearIncludeCollisionMeshes() {
+
+      includeCollisionMeshes_ = false;
+    }
+
+    public static final int INCLUDE_VISUAL_MESHES_FIELD_NUMBER = 3;
+    private boolean includeVisualMeshes_;
+    /**
+     * <pre>
+     * Include visual mesh bytes in the response
+     * </pre>
+     *
+     * <code>bool include_visual_meshes = 3 [json_name = "includeVisualMeshes"];</code>
+     * @return The includeVisualMeshes.
+     */
+    @java.lang.Override
+    public boolean getIncludeVisualMeshes() {
+      return includeVisualMeshes_;
+    }
+    /**
+     * <pre>
+     * Include visual mesh bytes in the response
+     * </pre>
+     *
+     * <code>bool include_visual_meshes = 3 [json_name = "includeVisualMeshes"];</code>
+     * @param value The includeVisualMeshes to set.
+     */
+    private void setIncludeVisualMeshes(boolean value) {
+      
+      includeVisualMeshes_ = value;
+    }
+    /**
+     * <pre>
+     * Include visual mesh bytes in the response
+     * </pre>
+     *
+     * <code>bool include_visual_meshes = 3 [json_name = "includeVisualMeshes"];</code>
+     */
+    private void clearIncludeVisualMeshes() {
+
+      includeVisualMeshes_ = false;
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -12440,6 +13722,86 @@ public final class Common {
 
       /**
        * <pre>
+       * Include collision mesh bytes in the response. Otherwise meshes carry only their path.
+       * </pre>
+       *
+       * <code>bool include_collision_meshes = 2 [json_name = "includeCollisionMeshes"];</code>
+       * @return The includeCollisionMeshes.
+       */
+      @java.lang.Override
+      public boolean getIncludeCollisionMeshes() {
+        return instance.getIncludeCollisionMeshes();
+      }
+      /**
+       * <pre>
+       * Include collision mesh bytes in the response. Otherwise meshes carry only their path.
+       * </pre>
+       *
+       * <code>bool include_collision_meshes = 2 [json_name = "includeCollisionMeshes"];</code>
+       * @param value The includeCollisionMeshes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncludeCollisionMeshes(boolean value) {
+        copyOnWrite();
+        instance.setIncludeCollisionMeshes(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Include collision mesh bytes in the response. Otherwise meshes carry only their path.
+       * </pre>
+       *
+       * <code>bool include_collision_meshes = 2 [json_name = "includeCollisionMeshes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncludeCollisionMeshes() {
+        copyOnWrite();
+        instance.clearIncludeCollisionMeshes();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Include visual mesh bytes in the response
+       * </pre>
+       *
+       * <code>bool include_visual_meshes = 3 [json_name = "includeVisualMeshes"];</code>
+       * @return The includeVisualMeshes.
+       */
+      @java.lang.Override
+      public boolean getIncludeVisualMeshes() {
+        return instance.getIncludeVisualMeshes();
+      }
+      /**
+       * <pre>
+       * Include visual mesh bytes in the response
+       * </pre>
+       *
+       * <code>bool include_visual_meshes = 3 [json_name = "includeVisualMeshes"];</code>
+       * @param value The includeVisualMeshes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncludeVisualMeshes(boolean value) {
+        copyOnWrite();
+        instance.setIncludeVisualMeshes(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Include visual mesh bytes in the response
+       * </pre>
+       *
+       * <code>bool include_visual_meshes = 3 [json_name = "includeVisualMeshes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncludeVisualMeshes() {
+        copyOnWrite();
+        instance.clearIncludeVisualMeshes();
+        return this;
+      }
+
+      /**
+       * <pre>
        * Additional arguments to the method
        * </pre>
        *
@@ -12527,11 +13889,13 @@ public final class Common {
             java.lang.Object[] objects = new java.lang.Object[] {
               "bitField0_",
               "name_",
+              "includeCollisionMeshes_",
+              "includeVisualMeshes_",
               "extra_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
-                "";
+                "\u0000\u0004\u0000\u0001\u0001c\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u0007\u0003" +
+                "\u0007c\u1009\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -12592,51 +13956,57 @@ public final class Common {
 
     /**
      * <pre>
-     * The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
+     * Deprecated: use model. The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
      * https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters
      * </pre>
      *
-     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format"];</code>
+     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
+     * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
+     *     See common/v1/common.proto;l=274
      * @return The enum numeric value on the wire for format.
      */
-    int getFormatValue();
+    @java.lang.Deprecated int getFormatValue();
     /**
      * <pre>
-     * The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
+     * Deprecated: use model. The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
      * https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters
      * </pre>
      *
-     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format"];</code>
+     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
+     * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
+     *     See common/v1/common.proto;l=274
      * @return The format.
      */
-    com.viam.common.v1.Common.KinematicsFileFormat getFormat();
+    @java.lang.Deprecated com.viam.common.v1.Common.KinematicsFileFormat getFormat();
 
     /**
      * <pre>
-     * The byte contents of the file
+     * Deprecated: use model. The byte contents of the file
      * </pre>
      *
-     * <code>bytes kinematics_data = 2 [json_name = "kinematicsData"];</code>
+     * <code>bytes kinematics_data = 2 [json_name = "kinematicsData", deprecated = true];</code>
+     * @deprecated viam.common.v1.GetKinematicsResponse.kinematics_data is deprecated.
+     *     See common/v1/common.proto;l=276
      * @return The kinematicsData.
      */
-    com.google.protobuf.ByteString getKinematicsData();
+    @java.lang.Deprecated com.google.protobuf.ByteString getKinematicsData();
 
     /**
      * <pre>
-     * Map of URDF mesh file paths to mesh data
+     * Deprecated: use model. Map of URDF mesh file paths to mesh data
      * </pre>
      *
-     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
      */
-    int getMeshesByUrdfFilepathCount();
+    @java.lang.Deprecated int getMeshesByUrdfFilepathCount();
     /**
      * <pre>
-     * Map of URDF mesh file paths to mesh data
+     * Deprecated: use model. Map of URDF mesh file paths to mesh data
      * </pre>
      *
-     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
      */
-    boolean containsMeshesByUrdfFilepath(
+    @java.lang.Deprecated boolean containsMeshesByUrdfFilepath(
         java.lang.String key);
     /**
      * Use {@link #getMeshesByUrdfFilepathMap()} instead.
@@ -12646,21 +14016,21 @@ public final class Common {
     getMeshesByUrdfFilepath();
     /**
      * <pre>
-     * Map of URDF mesh file paths to mesh data
+     * Deprecated: use model. Map of URDF mesh file paths to mesh data
      * </pre>
      *
-     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
      */
-    java.util.Map<java.lang.String, com.viam.common.v1.Common.Mesh>
+    @java.lang.Deprecated java.util.Map<java.lang.String, com.viam.common.v1.Common.Mesh>
     getMeshesByUrdfFilepathMap();
     /**
      * <pre>
-     * Map of URDF mesh file paths to mesh data
+     * Deprecated: use model. Map of URDF mesh file paths to mesh data
      * </pre>
      *
-     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
      */
-
+    @java.lang.Deprecated 
     /* nullable */
 com.viam.common.v1.Common.Mesh getMeshesByUrdfFilepathOrDefault(
         java.lang.String key,
@@ -12668,14 +14038,33 @@ com.viam.common.v1.Common.Mesh getMeshesByUrdfFilepathOrDefault(
 com.viam.common.v1.Common.Mesh defaultValue);
     /**
      * <pre>
-     * Map of URDF mesh file paths to mesh data
+     * Deprecated: use model. Map of URDF mesh file paths to mesh data
      * </pre>
      *
-     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
      */
-
+    @java.lang.Deprecated 
     com.viam.common.v1.Common.Mesh getMeshesByUrdfFilepathOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * The kinematic model of the component
+     * </pre>
+     *
+     * <code>.viam.common.v1.KinematicModel model = 4 [json_name = "model"];</code>
+     * @return Whether the model field is set.
+     */
+    boolean hasModel();
+    /**
+     * <pre>
+     * The kinematic model of the component
+     * </pre>
+     *
+     * <code>.viam.common.v1.KinematicModel model = 4 [json_name = "model"];</code>
+     * @return The model.
+     */
+    com.viam.common.v1.Common.KinematicModel getModel();
   }
   /**
    * Protobuf type {@code viam.common.v1.GetKinematicsResponse}
@@ -12688,42 +14077,47 @@ com.viam.common.v1.Common.Mesh defaultValue);
     private GetKinematicsResponse() {
       kinematicsData_ = com.google.protobuf.ByteString.EMPTY;
     }
+    private int bitField0_;
     public static final int FORMAT_FIELD_NUMBER = 1;
     private int format_;
     /**
      * <pre>
-     * The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
+     * Deprecated: use model. The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
      * https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters
      * </pre>
      *
-     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format"];</code>
+     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
+     * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
+     *     See common/v1/common.proto;l=274
      * @return The enum numeric value on the wire for format.
      */
     @java.lang.Override
-    public int getFormatValue() {
+    @java.lang.Deprecated public int getFormatValue() {
       return format_;
     }
     /**
      * <pre>
-     * The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
+     * Deprecated: use model. The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
      * https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters
      * </pre>
      *
-     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format"];</code>
+     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
+     * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
+     *     See common/v1/common.proto;l=274
      * @return The format.
      */
     @java.lang.Override
-    public com.viam.common.v1.Common.KinematicsFileFormat getFormat() {
+    @java.lang.Deprecated public com.viam.common.v1.Common.KinematicsFileFormat getFormat() {
       com.viam.common.v1.Common.KinematicsFileFormat result = com.viam.common.v1.Common.KinematicsFileFormat.forNumber(format_);
       return result == null ? com.viam.common.v1.Common.KinematicsFileFormat.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
+     * Deprecated: use model. The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
      * https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters
      * </pre>
      *
-     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format"];</code>
+     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
      * @param value The enum numeric value on the wire for format to set.
      * @throws IllegalArgumentException if UNRECOGNIZED is provided.
      */
@@ -12732,11 +14126,11 @@ com.viam.common.v1.Common.Mesh defaultValue);
     }
     /**
      * <pre>
-     * The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
+     * Deprecated: use model. The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
      * https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters
      * </pre>
      *
-     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format"];</code>
+     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
      * @param value The format to set.
      */
     private void setFormat(com.viam.common.v1.Common.KinematicsFileFormat value) {
@@ -12745,11 +14139,11 @@ com.viam.common.v1.Common.Mesh defaultValue);
     }
     /**
      * <pre>
-     * The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
+     * Deprecated: use model. The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
      * https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters
      * </pre>
      *
-     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format"];</code>
+     * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
      */
     private void clearFormat() {
 
@@ -12760,22 +14154,24 @@ com.viam.common.v1.Common.Mesh defaultValue);
     private com.google.protobuf.ByteString kinematicsData_;
     /**
      * <pre>
-     * The byte contents of the file
+     * Deprecated: use model. The byte contents of the file
      * </pre>
      *
-     * <code>bytes kinematics_data = 2 [json_name = "kinematicsData"];</code>
+     * <code>bytes kinematics_data = 2 [json_name = "kinematicsData", deprecated = true];</code>
+     * @deprecated viam.common.v1.GetKinematicsResponse.kinematics_data is deprecated.
+     *     See common/v1/common.proto;l=276
      * @return The kinematicsData.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString getKinematicsData() {
+    @java.lang.Deprecated public com.google.protobuf.ByteString getKinematicsData() {
       return kinematicsData_;
     }
     /**
      * <pre>
-     * The byte contents of the file
+     * Deprecated: use model. The byte contents of the file
      * </pre>
      *
-     * <code>bytes kinematics_data = 2 [json_name = "kinematicsData"];</code>
+     * <code>bytes kinematics_data = 2 [json_name = "kinematicsData", deprecated = true];</code>
      * @param value The kinematicsData to set.
      */
     private void setKinematicsData(com.google.protobuf.ByteString value) {
@@ -12785,10 +14181,10 @@ com.viam.common.v1.Common.Mesh defaultValue);
     }
     /**
      * <pre>
-     * The byte contents of the file
+     * Deprecated: use model. The byte contents of the file
      * </pre>
      *
-     * <code>bytes kinematics_data = 2 [json_name = "kinematicsData"];</code>
+     * <code>bytes kinematics_data = 2 [json_name = "kinematicsData", deprecated = true];</code>
      */
     private void clearKinematicsData() {
 
@@ -12821,19 +14217,19 @@ com.viam.common.v1.Common.Mesh defaultValue);
       return meshesByUrdfFilepath_;
     }
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public int getMeshesByUrdfFilepathCount() {
       return internalGetMeshesByUrdfFilepath().size();
     }
     /**
      * <pre>
-     * Map of URDF mesh file paths to mesh data
+     * Deprecated: use model. Map of URDF mesh file paths to mesh data
      * </pre>
      *
-     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public boolean containsMeshesByUrdfFilepath(
         java.lang.String key) {
       java.lang.Class<?> keyClass = key.getClass();
@@ -12849,26 +14245,26 @@ com.viam.common.v1.Common.Mesh defaultValue);
     }
     /**
      * <pre>
-     * Map of URDF mesh file paths to mesh data
+     * Deprecated: use model. Map of URDF mesh file paths to mesh data
      * </pre>
      *
-     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public java.util.Map<java.lang.String, com.viam.common.v1.Common.Mesh> getMeshesByUrdfFilepathMap() {
       return java.util.Collections.unmodifiableMap(
           internalGetMeshesByUrdfFilepath());
     }
     /**
      * <pre>
-     * Map of URDF mesh file paths to mesh data
+     * Deprecated: use model. Map of URDF mesh file paths to mesh data
      * </pre>
      *
-     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public /* nullable */
 com.viam.common.v1.Common.Mesh getMeshesByUrdfFilepathOrDefault(
         java.lang.String key,
@@ -12882,13 +14278,13 @@ com.viam.common.v1.Common.Mesh defaultValue) {
     }
     /**
      * <pre>
-     * Map of URDF mesh file paths to mesh data
+     * Deprecated: use model. Map of URDF mesh file paths to mesh data
      * </pre>
      *
-     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
      */
     @java.lang.Override
-
+    @java.lang.Deprecated 
     public com.viam.common.v1.Common.Mesh getMeshesByUrdfFilepathOrThrow(
         java.lang.String key) {
       java.lang.Class<?> keyClass = key.getClass();
@@ -12902,14 +14298,82 @@ com.viam.common.v1.Common.Mesh defaultValue) {
     }
     /**
      * <pre>
-     * Map of URDF mesh file paths to mesh data
+     * Deprecated: use model. Map of URDF mesh file paths to mesh data
      * </pre>
      *
-     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+     * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
      */
     private java.util.Map<java.lang.String, com.viam.common.v1.Common.Mesh>
     getMutableMeshesByUrdfFilepathMap() {
       return internalGetMutableMeshesByUrdfFilepath();
+    }
+
+    public static final int MODEL_FIELD_NUMBER = 4;
+    private com.viam.common.v1.Common.KinematicModel model_;
+    /**
+     * <pre>
+     * The kinematic model of the component
+     * </pre>
+     *
+     * <code>.viam.common.v1.KinematicModel model = 4 [json_name = "model"];</code>
+     */
+    @java.lang.Override
+    public boolean hasModel() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The kinematic model of the component
+     * </pre>
+     *
+     * <code>.viam.common.v1.KinematicModel model = 4 [json_name = "model"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.KinematicModel getModel() {
+      return model_ == null ? com.viam.common.v1.Common.KinematicModel.getDefaultInstance() : model_;
+    }
+    /**
+     * <pre>
+     * The kinematic model of the component
+     * </pre>
+     *
+     * <code>.viam.common.v1.KinematicModel model = 4 [json_name = "model"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setModel(com.viam.common.v1.Common.KinematicModel value) {
+      value.getClass();  // minimal bytecode null check
+      model_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * The kinematic model of the component
+     * </pre>
+     *
+     * <code>.viam.common.v1.KinematicModel model = 4 [json_name = "model"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeModel(com.viam.common.v1.Common.KinematicModel value) {
+      value.getClass();  // minimal bytecode null check
+      if (model_ != null &&
+          model_ != com.viam.common.v1.Common.KinematicModel.getDefaultInstance()) {
+        model_ =
+          com.viam.common.v1.Common.KinematicModel.newBuilder(model_).mergeFrom(value).buildPartial();
+      } else {
+        model_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * The kinematic model of the component
+     * </pre>
+     *
+     * <code>.viam.common.v1.KinematicModel model = 4 [json_name = "model"];</code>
+     */
+    private void clearModel() {
+      model_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.common.v1.Common.GetKinematicsResponse parseFrom(
@@ -13011,71 +14475,81 @@ com.viam.common.v1.Common.Mesh defaultValue) {
 
       /**
        * <pre>
-       * The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
+       * Deprecated: use model. The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
        * https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters
        * </pre>
        *
-       * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format"];</code>
+       * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
+       * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
+       *     See common/v1/common.proto;l=274
        * @return The enum numeric value on the wire for format.
        */
       @java.lang.Override
-      public int getFormatValue() {
+      @java.lang.Deprecated public int getFormatValue() {
         return instance.getFormatValue();
       }
       /**
        * <pre>
-       * The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
+       * Deprecated: use model. The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
        * https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters
        * </pre>
        *
-       * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format"];</code>
+       * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
+       * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
+       *     See common/v1/common.proto;l=274
        * @param value The format to set.
        * @return This builder for chaining.
        */
-      public Builder setFormatValue(int value) {
+      @java.lang.Deprecated public Builder setFormatValue(int value) {
         copyOnWrite();
         instance.setFormatValue(value);
         return this;
       }
       /**
        * <pre>
-       * The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
+       * Deprecated: use model. The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
        * https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters
        * </pre>
        *
-       * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format"];</code>
+       * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
+       * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
+       *     See common/v1/common.proto;l=274
        * @return The format.
        */
       @java.lang.Override
-      public com.viam.common.v1.Common.KinematicsFileFormat getFormat() {
+      @java.lang.Deprecated public com.viam.common.v1.Common.KinematicsFileFormat getFormat() {
         return instance.getFormat();
       }
       /**
        * <pre>
-       * The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
+       * Deprecated: use model. The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
        * https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters
        * </pre>
        *
-       * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format"];</code>
+       * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
+       * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
+       *     See common/v1/common.proto;l=274
        * @param value The enum numeric value on the wire for format to set.
        * @throws IllegalArgumentException if UNRECOGNIZED is provided.
        * @return This builder for chaining.
        */
-      public Builder setFormat(com.viam.common.v1.Common.KinematicsFileFormat value) {
+      @java.lang.Deprecated public Builder setFormat(com.viam.common.v1.Common.KinematicsFileFormat value) {
         copyOnWrite();
         instance.setFormat(value);
         return this;
       }
       /**
        * <pre>
-       * The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
+       * Deprecated: use model. The kinematics of the component, in either URDF format or in Viam’s kinematic parameter format (spatial vector algebra)
        * https://docs.viam.com/internals/kinematic-chain-config/#kinematic-parameters
        * </pre>
        *
-       * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format"];</code>
+       * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
+       * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
+       *     See common/v1/common.proto;l=274
        * @return This builder for chaining.
        */
-      public Builder clearFormat() {
+      @java.lang.Deprecated public Builder clearFormat() {
         copyOnWrite();
         instance.clearFormat();
         return this;
@@ -13083,64 +14557,70 @@ com.viam.common.v1.Common.Mesh defaultValue) {
 
       /**
        * <pre>
-       * The byte contents of the file
+       * Deprecated: use model. The byte contents of the file
        * </pre>
        *
-       * <code>bytes kinematics_data = 2 [json_name = "kinematicsData"];</code>
+       * <code>bytes kinematics_data = 2 [json_name = "kinematicsData", deprecated = true];</code>
+       * @deprecated viam.common.v1.GetKinematicsResponse.kinematics_data is deprecated.
+       *     See common/v1/common.proto;l=276
        * @return The kinematicsData.
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString getKinematicsData() {
+      @java.lang.Deprecated public com.google.protobuf.ByteString getKinematicsData() {
         return instance.getKinematicsData();
       }
       /**
        * <pre>
-       * The byte contents of the file
+       * Deprecated: use model. The byte contents of the file
        * </pre>
        *
-       * <code>bytes kinematics_data = 2 [json_name = "kinematicsData"];</code>
+       * <code>bytes kinematics_data = 2 [json_name = "kinematicsData", deprecated = true];</code>
+       * @deprecated viam.common.v1.GetKinematicsResponse.kinematics_data is deprecated.
+       *     See common/v1/common.proto;l=276
        * @param value The kinematicsData to set.
        * @return This builder for chaining.
        */
-      public Builder setKinematicsData(com.google.protobuf.ByteString value) {
+      @java.lang.Deprecated public Builder setKinematicsData(com.google.protobuf.ByteString value) {
         copyOnWrite();
         instance.setKinematicsData(value);
         return this;
       }
       /**
        * <pre>
-       * The byte contents of the file
+       * Deprecated: use model. The byte contents of the file
        * </pre>
        *
-       * <code>bytes kinematics_data = 2 [json_name = "kinematicsData"];</code>
+       * <code>bytes kinematics_data = 2 [json_name = "kinematicsData", deprecated = true];</code>
+       * @deprecated viam.common.v1.GetKinematicsResponse.kinematics_data is deprecated.
+       *     See common/v1/common.proto;l=276
        * @return This builder for chaining.
        */
-      public Builder clearKinematicsData() {
+      @java.lang.Deprecated public Builder clearKinematicsData() {
         copyOnWrite();
         instance.clearKinematicsData();
         return this;
       }
 
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public int getMeshesByUrdfFilepathCount() {
         return instance.getMeshesByUrdfFilepathMap().size();
       }
       /**
        * <pre>
-       * Map of URDF mesh file paths to mesh data
+       * Deprecated: use model. Map of URDF mesh file paths to mesh data
        * </pre>
        *
-       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
        */
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public boolean containsMeshesByUrdfFilepath(
           java.lang.String key) {
         java.lang.Class<?> keyClass = key.getClass();
         return instance.getMeshesByUrdfFilepathMap().containsKey(key);
       }
-
+      @java.lang.Deprecated 
       public Builder clearMeshesByUrdfFilepath() {
         copyOnWrite();
         instance.getMutableMeshesByUrdfFilepathMap().clear();
@@ -13148,12 +14628,12 @@ com.viam.common.v1.Common.Mesh defaultValue) {
       }
       /**
        * <pre>
-       * Map of URDF mesh file paths to mesh data
+       * Deprecated: use model. Map of URDF mesh file paths to mesh data
        * </pre>
        *
-       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
        */
-
+      @java.lang.Deprecated 
       public Builder removeMeshesByUrdfFilepath(
           java.lang.String key) {
         java.lang.Class<?> keyClass = key.getClass();
@@ -13171,25 +14651,25 @@ com.viam.common.v1.Common.Mesh defaultValue) {
       }
       /**
        * <pre>
-       * Map of URDF mesh file paths to mesh data
+       * Deprecated: use model. Map of URDF mesh file paths to mesh data
        * </pre>
        *
-       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
        */
       @java.lang.Override
-      public java.util.Map<java.lang.String, com.viam.common.v1.Common.Mesh> getMeshesByUrdfFilepathMap() {
+      @java.lang.Deprecated public java.util.Map<java.lang.String, com.viam.common.v1.Common.Mesh> getMeshesByUrdfFilepathMap() {
         return java.util.Collections.unmodifiableMap(
             instance.getMeshesByUrdfFilepathMap());
       }
       /**
        * <pre>
-       * Map of URDF mesh file paths to mesh data
+       * Deprecated: use model. Map of URDF mesh file paths to mesh data
        * </pre>
        *
-       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
        */
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public /* nullable */
 com.viam.common.v1.Common.Mesh getMeshesByUrdfFilepathOrDefault(
           java.lang.String key,
@@ -13202,13 +14682,13 @@ com.viam.common.v1.Common.Mesh defaultValue) {
       }
       /**
        * <pre>
-       * Map of URDF mesh file paths to mesh data
+       * Deprecated: use model. Map of URDF mesh file paths to mesh data
        * </pre>
        *
-       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
        */
       @java.lang.Override
-
+      @java.lang.Deprecated 
       public com.viam.common.v1.Common.Mesh getMeshesByUrdfFilepathOrThrow(
           java.lang.String key) {
         java.lang.Class<?> keyClass = key.getClass();
@@ -13221,12 +14701,12 @@ com.viam.common.v1.Common.Mesh defaultValue) {
       }
       /**
        * <pre>
-       * Map of URDF mesh file paths to mesh data
+       * Deprecated: use model. Map of URDF mesh file paths to mesh data
        * </pre>
        *
-       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
        */
-      public Builder putMeshesByUrdfFilepath(
+      @java.lang.Deprecated public Builder putMeshesByUrdfFilepath(
           java.lang.String key,
           com.viam.common.v1.Common.Mesh value) {
         java.lang.Class<?> keyClass = key.getClass();
@@ -13237,15 +14717,86 @@ com.viam.common.v1.Common.Mesh defaultValue) {
       }
       /**
        * <pre>
-       * Map of URDF mesh file paths to mesh data
+       * Deprecated: use model. Map of URDF mesh file paths to mesh data
        * </pre>
        *
-       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath"];</code>
+       * <code>map&lt;string, .viam.common.v1.Mesh&gt; meshes_by_urdf_filepath = 3 [json_name = "meshesByUrdfFilepath", deprecated = true];</code>
        */
-      public Builder putAllMeshesByUrdfFilepath(
+      @java.lang.Deprecated public Builder putAllMeshesByUrdfFilepath(
           java.util.Map<java.lang.String, com.viam.common.v1.Common.Mesh> values) {
         copyOnWrite();
         instance.getMutableMeshesByUrdfFilepathMap().putAll(values);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * The kinematic model of the component
+       * </pre>
+       *
+       * <code>.viam.common.v1.KinematicModel model = 4 [json_name = "model"];</code>
+       */
+      @java.lang.Override
+      public boolean hasModel() {
+        return instance.hasModel();
+      }
+      /**
+       * <pre>
+       * The kinematic model of the component
+       * </pre>
+       *
+       * <code>.viam.common.v1.KinematicModel model = 4 [json_name = "model"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.KinematicModel getModel() {
+        return instance.getModel();
+      }
+      /**
+       * <pre>
+       * The kinematic model of the component
+       * </pre>
+       *
+       * <code>.viam.common.v1.KinematicModel model = 4 [json_name = "model"];</code>
+       */
+      public Builder setModel(com.viam.common.v1.Common.KinematicModel value) {
+        copyOnWrite();
+        instance.setModel(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * The kinematic model of the component
+       * </pre>
+       *
+       * <code>.viam.common.v1.KinematicModel model = 4 [json_name = "model"];</code>
+       */
+      public Builder setModel(
+          com.viam.common.v1.Common.KinematicModel.Builder builderForValue) {
+        copyOnWrite();
+        instance.setModel(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * The kinematic model of the component
+       * </pre>
+       *
+       * <code>.viam.common.v1.KinematicModel model = 4 [json_name = "model"];</code>
+       */
+      public Builder mergeModel(com.viam.common.v1.Common.KinematicModel value) {
+        copyOnWrite();
+        instance.mergeModel(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The kinematic model of the component
+       * </pre>
+       *
+       * <code>.viam.common.v1.KinematicModel model = 4 [json_name = "model"];</code>
+       */
+      public Builder clearModel() {  copyOnWrite();
+        instance.clearModel();
         return this;
       }
 
@@ -13265,14 +14816,16 @@ com.viam.common.v1.Common.Mesh defaultValue) {
         }
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
               "format_",
               "kinematicsData_",
               "meshesByUrdfFilepath_",
               MeshesByUrdfFilepathDefaultEntryHolder.defaultEntry,
+              "model_",
             };
             java.lang.String info =
-                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0001\u0000\u0000\u0001\f\u0002\n\u0003" +
-                "2";
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0001\u0000\u0000\u0001\f\u0002\n\u0003" +
+                "2\u0004\u1009\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -13323,6 +14876,7047 @@ com.viam.common.v1.Common.Mesh defaultValue) {
     private static volatile com.google.protobuf.Parser<GetKinematicsResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetKinematicsResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface KinematicModelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.KinematicModel)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Set to the resource name by the SDK when served
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Set to the resource name by the SDK when served
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    java.util.List<com.viam.common.v1.Common.KinematicLink> 
+        getLinksList();
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    com.viam.common.v1.Common.KinematicLink getLinks(int index);
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    int getLinksCount();
+
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    java.util.List<com.viam.common.v1.Common.KinematicJoint> 
+        getJointsList();
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    com.viam.common.v1.Common.KinematicJoint getJoints(int index);
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    int getJointsCount();
+
+    /**
+     * <pre>
+     * Frames whose poses the model reports
+     * </pre>
+     *
+     * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+     * @return A list containing the outputFrames.
+     */
+    java.util.List<java.lang.String>
+        getOutputFramesList();
+    /**
+     * <pre>
+     * Frames whose poses the model reports
+     * </pre>
+     *
+     * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+     * @return The count of outputFrames.
+     */
+    int getOutputFramesCount();
+    /**
+     * <pre>
+     * Frames whose poses the model reports
+     * </pre>
+     *
+     * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+     * @param index The index of the element to return.
+     * @return The outputFrames at the given index.
+     */
+    java.lang.String getOutputFrames(int index);
+    /**
+     * <pre>
+     * Frames whose poses the model reports
+     * </pre>
+     *
+     * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+     * @param index The index of the element to return.
+     * @return The outputFrames at the given index.
+     */
+    com.google.protobuf.ByteString
+        getOutputFramesBytes(int index);
+
+    /**
+     * <code>.viam.common.v1.KinematicProperties properties = 5 [json_name = "properties"];</code>
+     * @return Whether the properties field is set.
+     */
+    boolean hasProperties();
+    /**
+     * <code>.viam.common.v1.KinematicProperties properties = 5 [json_name = "properties"];</code>
+     * @return The properties.
+     */
+    com.viam.common.v1.Common.KinematicProperties getProperties();
+  }
+  /**
+   * <pre>
+   * KinematicModel describes a component's kinematics as a tree of links and joints.
+   * Its proto JSON encoding is also the on-disk kinematics file format.
+   * </pre>
+   *
+   * Protobuf type {@code viam.common.v1.KinematicModel}
+   */
+  public  static final class KinematicModel extends
+      com.google.protobuf.GeneratedMessageLite<
+          KinematicModel, KinematicModel.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.KinematicModel)
+      KinematicModelOrBuilder {
+    private KinematicModel() {
+      name_ = "";
+      links_ = emptyProtobufList();
+      joints_ = emptyProtobufList();
+      outputFrames_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private java.lang.String name_;
+    /**
+     * <pre>
+     * Set to the resource name by the SDK when served
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      return name_;
+    }
+    /**
+     * <pre>
+     * Set to the resource name by the SDK when served
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Set to the resource name by the SDK when served
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setName(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Set to the resource name by the SDK when served
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Set to the resource name by the SDK when served
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
+    }
+
+    public static final int LINKS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.KinematicLink> links_;
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.common.v1.Common.KinematicLink> getLinksList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    public java.util.List<? extends com.viam.common.v1.Common.KinematicLinkOrBuilder> 
+        getLinksOrBuilderList() {
+      return links_;
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public int getLinksCount() {
+      return links_.size();
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.KinematicLink getLinks(int index) {
+      return links_.get(index);
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    public com.viam.common.v1.Common.KinematicLinkOrBuilder getLinksOrBuilder(
+        int index) {
+      return links_.get(index);
+    }
+    private void ensureLinksIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.KinematicLink> tmp = links_;
+      if (!tmp.isModifiable()) {
+        links_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setLinks(
+        int index, com.viam.common.v1.Common.KinematicLink value) {
+      value.getClass();  // minimal bytecode null check
+      ensureLinksIsMutable();
+      links_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addLinks(com.viam.common.v1.Common.KinematicLink value) {
+      value.getClass();  // minimal bytecode null check
+      ensureLinksIsMutable();
+      links_.add(value);
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addLinks(
+        int index, com.viam.common.v1.Common.KinematicLink value) {
+      value.getClass();  // minimal bytecode null check
+      ensureLinksIsMutable();
+      links_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    private void addAllLinks(
+        java.lang.Iterable<? extends com.viam.common.v1.Common.KinematicLink> values) {
+      ensureLinksIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, links_);
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    private void clearLinks() {
+      links_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+     */
+    private void removeLinks(int index) {
+      ensureLinksIsMutable();
+      links_.remove(index);
+    }
+
+    public static final int JOINTS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.KinematicJoint> joints_;
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.common.v1.Common.KinematicJoint> getJointsList() {
+      return joints_;
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    public java.util.List<? extends com.viam.common.v1.Common.KinematicJointOrBuilder> 
+        getJointsOrBuilderList() {
+      return joints_;
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    @java.lang.Override
+    public int getJointsCount() {
+      return joints_.size();
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.KinematicJoint getJoints(int index) {
+      return joints_.get(index);
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    public com.viam.common.v1.Common.KinematicJointOrBuilder getJointsOrBuilder(
+        int index) {
+      return joints_.get(index);
+    }
+    private void ensureJointsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.KinematicJoint> tmp = joints_;
+      if (!tmp.isModifiable()) {
+        joints_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setJoints(
+        int index, com.viam.common.v1.Common.KinematicJoint value) {
+      value.getClass();  // minimal bytecode null check
+      ensureJointsIsMutable();
+      joints_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addJoints(com.viam.common.v1.Common.KinematicJoint value) {
+      value.getClass();  // minimal bytecode null check
+      ensureJointsIsMutable();
+      joints_.add(value);
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addJoints(
+        int index, com.viam.common.v1.Common.KinematicJoint value) {
+      value.getClass();  // minimal bytecode null check
+      ensureJointsIsMutable();
+      joints_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    private void addAllJoints(
+        java.lang.Iterable<? extends com.viam.common.v1.Common.KinematicJoint> values) {
+      ensureJointsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, joints_);
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    private void clearJoints() {
+      joints_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+     */
+    private void removeJoints(int index) {
+      ensureJointsIsMutable();
+      joints_.remove(index);
+    }
+
+    public static final int OUTPUT_FRAMES_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> outputFrames_;
+    /**
+     * <pre>
+     * Frames whose poses the model reports
+     * </pre>
+     *
+     * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+     * @return A list containing the outputFrames.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getOutputFramesList() {
+      return outputFrames_;
+    }
+    /**
+     * <pre>
+     * Frames whose poses the model reports
+     * </pre>
+     *
+     * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+     * @return The count of outputFrames.
+     */
+    @java.lang.Override
+    public int getOutputFramesCount() {
+      return outputFrames_.size();
+    }
+    /**
+     * <pre>
+     * Frames whose poses the model reports
+     * </pre>
+     *
+     * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+     * @param index The index of the element to return.
+     * @return The outputFrames at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getOutputFrames(int index) {
+      return outputFrames_.get(index);
+    }
+    /**
+     * <pre>
+     * Frames whose poses the model reports
+     * </pre>
+     *
+     * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the outputFrames at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOutputFramesBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          outputFrames_.get(index));
+    }
+    private void ensureOutputFramesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          outputFrames_;  if (!tmp.isModifiable()) {
+        outputFrames_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * Frames whose poses the model reports
+     * </pre>
+     *
+     * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+     * @param index The index to set the value at.
+     * @param value The outputFrames to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setOutputFrames(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureOutputFramesIsMutable();
+      outputFrames_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Frames whose poses the model reports
+     * </pre>
+     *
+     * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+     * @param value The outputFrames to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addOutputFrames(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureOutputFramesIsMutable();
+      outputFrames_.add(value);
+    }
+    /**
+     * <pre>
+     * Frames whose poses the model reports
+     * </pre>
+     *
+     * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+     * @param values The outputFrames to add.
+     */
+    private void addAllOutputFrames(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureOutputFramesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, outputFrames_);
+    }
+    /**
+     * <pre>
+     * Frames whose poses the model reports
+     * </pre>
+     *
+     * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+     */
+    private void clearOutputFrames() {
+      outputFrames_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Frames whose poses the model reports
+     * </pre>
+     *
+     * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+     * @param value The bytes of the outputFrames to add.
+     */
+    private void addOutputFramesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureOutputFramesIsMutable();
+      outputFrames_.add(value.toStringUtf8());
+    }
+
+    public static final int PROPERTIES_FIELD_NUMBER = 5;
+    private com.viam.common.v1.Common.KinematicProperties properties_;
+    /**
+     * <code>.viam.common.v1.KinematicProperties properties = 5 [json_name = "properties"];</code>
+     */
+    @java.lang.Override
+    public boolean hasProperties() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.common.v1.KinematicProperties properties = 5 [json_name = "properties"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.KinematicProperties getProperties() {
+      return properties_ == null ? com.viam.common.v1.Common.KinematicProperties.getDefaultInstance() : properties_;
+    }
+    /**
+     * <code>.viam.common.v1.KinematicProperties properties = 5 [json_name = "properties"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setProperties(com.viam.common.v1.Common.KinematicProperties value) {
+      value.getClass();  // minimal bytecode null check
+      properties_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.KinematicProperties properties = 5 [json_name = "properties"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeProperties(com.viam.common.v1.Common.KinematicProperties value) {
+      value.getClass();  // minimal bytecode null check
+      if (properties_ != null &&
+          properties_ != com.viam.common.v1.Common.KinematicProperties.getDefaultInstance()) {
+        properties_ =
+          com.viam.common.v1.Common.KinematicProperties.newBuilder(properties_).mergeFrom(value).buildPartial();
+      } else {
+        properties_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.KinematicProperties properties = 5 [json_name = "properties"];</code>
+     */
+    private void clearProperties() {
+      properties_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static com.viam.common.v1.Common.KinematicModel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.KinematicModel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicModel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.KinematicModel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicModel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.KinematicModel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicModel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.KinematicModel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.KinematicModel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.KinematicModel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicModel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.KinematicModel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.KinematicModel prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * KinematicModel describes a component's kinematics as a tree of links and joints.
+     * Its proto JSON encoding is also the on-disk kinematics file format.
+     * </pre>
+     *
+     * Protobuf type {@code viam.common.v1.KinematicModel}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.KinematicModel, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.KinematicModel)
+        com.viam.common.v1.Common.KinematicModelOrBuilder {
+      // Construct using com.viam.common.v1.Common.KinematicModel.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * Set to the resource name by the SDK when served
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        return instance.getName();
+      }
+      /**
+       * <pre>
+       * Set to the resource name by the SDK when served
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        return instance.getNameBytes();
+      }
+      /**
+       * <pre>
+       * Set to the resource name by the SDK when served
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Set to the resource name by the SDK when served
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        copyOnWrite();
+        instance.clearName();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set to the resource name by the SDK when served
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.common.v1.Common.KinematicLink> getLinksList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getLinksList());
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+       */
+      @java.lang.Override
+      public int getLinksCount() {
+        return instance.getLinksCount();
+      }/**
+       * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.KinematicLink getLinks(int index) {
+        return instance.getLinks(index);
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, com.viam.common.v1.Common.KinematicLink value) {
+        copyOnWrite();
+        instance.setLinks(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+       */
+      public Builder setLinks(
+          int index, com.viam.common.v1.Common.KinematicLink.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLinks(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+       */
+      public Builder addLinks(com.viam.common.v1.Common.KinematicLink value) {
+        copyOnWrite();
+        instance.addLinks(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, com.viam.common.v1.Common.KinematicLink value) {
+        copyOnWrite();
+        instance.addLinks(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          com.viam.common.v1.Common.KinematicLink.Builder builderForValue) {
+        copyOnWrite();
+        instance.addLinks(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+       */
+      public Builder addLinks(
+          int index, com.viam.common.v1.Common.KinematicLink.Builder builderForValue) {
+        copyOnWrite();
+        instance.addLinks(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+       */
+      public Builder addAllLinks(
+          java.lang.Iterable<? extends com.viam.common.v1.Common.KinematicLink> values) {
+        copyOnWrite();
+        instance.addAllLinks(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+       */
+      public Builder clearLinks() {
+        copyOnWrite();
+        instance.clearLinks();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicLink links = 2 [json_name = "links"];</code>
+       */
+      public Builder removeLinks(int index) {
+        copyOnWrite();
+        instance.removeLinks(index);
+        return this;
+      }
+
+      /**
+       * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.common.v1.Common.KinematicJoint> getJointsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getJointsList());
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+       */
+      @java.lang.Override
+      public int getJointsCount() {
+        return instance.getJointsCount();
+      }/**
+       * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.KinematicJoint getJoints(int index) {
+        return instance.getJoints(index);
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+       */
+      public Builder setJoints(
+          int index, com.viam.common.v1.Common.KinematicJoint value) {
+        copyOnWrite();
+        instance.setJoints(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+       */
+      public Builder setJoints(
+          int index, com.viam.common.v1.Common.KinematicJoint.Builder builderForValue) {
+        copyOnWrite();
+        instance.setJoints(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+       */
+      public Builder addJoints(com.viam.common.v1.Common.KinematicJoint value) {
+        copyOnWrite();
+        instance.addJoints(value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+       */
+      public Builder addJoints(
+          int index, com.viam.common.v1.Common.KinematicJoint value) {
+        copyOnWrite();
+        instance.addJoints(index, value);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+       */
+      public Builder addJoints(
+          com.viam.common.v1.Common.KinematicJoint.Builder builderForValue) {
+        copyOnWrite();
+        instance.addJoints(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+       */
+      public Builder addJoints(
+          int index, com.viam.common.v1.Common.KinematicJoint.Builder builderForValue) {
+        copyOnWrite();
+        instance.addJoints(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+       */
+      public Builder addAllJoints(
+          java.lang.Iterable<? extends com.viam.common.v1.Common.KinematicJoint> values) {
+        copyOnWrite();
+        instance.addAllJoints(values);
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+       */
+      public Builder clearJoints() {
+        copyOnWrite();
+        instance.clearJoints();
+        return this;
+      }
+      /**
+       * <code>repeated .viam.common.v1.KinematicJoint joints = 3 [json_name = "joints"];</code>
+       */
+      public Builder removeJoints(int index) {
+        copyOnWrite();
+        instance.removeJoints(index);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Frames whose poses the model reports
+       * </pre>
+       *
+       * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+       * @return A list containing the outputFrames.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getOutputFramesList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getOutputFramesList());
+      }
+      /**
+       * <pre>
+       * Frames whose poses the model reports
+       * </pre>
+       *
+       * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+       * @return The count of outputFrames.
+       */
+      @java.lang.Override
+      public int getOutputFramesCount() {
+        return instance.getOutputFramesCount();
+      }
+      /**
+       * <pre>
+       * Frames whose poses the model reports
+       * </pre>
+       *
+       * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+       * @param index The index of the element to return.
+       * @return The outputFrames at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getOutputFrames(int index) {
+        return instance.getOutputFrames(index);
+      }
+      /**
+       * <pre>
+       * Frames whose poses the model reports
+       * </pre>
+       *
+       * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the outputFrames at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getOutputFramesBytes(int index) {
+        return instance.getOutputFramesBytes(index);
+      }
+      /**
+       * <pre>
+       * Frames whose poses the model reports
+       * </pre>
+       *
+       * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+       * @param index The index to set the value at.
+       * @param value The outputFrames to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOutputFrames(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setOutputFrames(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Frames whose poses the model reports
+       * </pre>
+       *
+       * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+       * @param value The outputFrames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOutputFrames(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addOutputFrames(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Frames whose poses the model reports
+       * </pre>
+       *
+       * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+       * @param values The outputFrames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOutputFrames(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllOutputFrames(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Frames whose poses the model reports
+       * </pre>
+       *
+       * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOutputFrames() {
+        copyOnWrite();
+        instance.clearOutputFrames();
+        return this;
+      }
+      /**
+       * <pre>
+       * Frames whose poses the model reports
+       * </pre>
+       *
+       * <code>repeated string output_frames = 4 [json_name = "outputFrames"];</code>
+       * @param value The bytes of the outputFrames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOutputFramesBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addOutputFramesBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.common.v1.KinematicProperties properties = 5 [json_name = "properties"];</code>
+       */
+      @java.lang.Override
+      public boolean hasProperties() {
+        return instance.hasProperties();
+      }
+      /**
+       * <code>.viam.common.v1.KinematicProperties properties = 5 [json_name = "properties"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.KinematicProperties getProperties() {
+        return instance.getProperties();
+      }
+      /**
+       * <code>.viam.common.v1.KinematicProperties properties = 5 [json_name = "properties"];</code>
+       */
+      public Builder setProperties(com.viam.common.v1.Common.KinematicProperties value) {
+        copyOnWrite();
+        instance.setProperties(value);
+        return this;
+        }
+      /**
+       * <code>.viam.common.v1.KinematicProperties properties = 5 [json_name = "properties"];</code>
+       */
+      public Builder setProperties(
+          com.viam.common.v1.Common.KinematicProperties.Builder builderForValue) {
+        copyOnWrite();
+        instance.setProperties(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.KinematicProperties properties = 5 [json_name = "properties"];</code>
+       */
+      public Builder mergeProperties(com.viam.common.v1.Common.KinematicProperties value) {
+        copyOnWrite();
+        instance.mergeProperties(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.KinematicProperties properties = 5 [json_name = "properties"];</code>
+       */
+      public Builder clearProperties() {  copyOnWrite();
+        instance.clearProperties();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.KinematicModel)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.KinematicModel();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "links_",
+              com.viam.common.v1.Common.KinematicLink.class,
+              "joints_",
+              com.viam.common.v1.Common.KinematicJoint.class,
+              "outputFrames_",
+              "properties_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0003\u0000\u0001\u0208\u0002\u001b" +
+                "\u0003\u001b\u0004\u021a\u0005\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.KinematicModel> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.KinematicModel.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.KinematicModel>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.KinematicModel)
+    private static final com.viam.common.v1.Common.KinematicModel DEFAULT_INSTANCE;
+    static {
+      KinematicModel defaultInstance = new KinematicModel();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        KinematicModel.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.KinematicModel getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<KinematicModel> PARSER;
+
+    public static com.google.protobuf.Parser<KinematicModel> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface KinematicLinkOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.KinematicLink)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Parent link or joint id, empty for the root
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     * @return The parent.
+     */
+    java.lang.String getParent();
+    /**
+     * <pre>
+     * Parent link or joint id, empty for the root
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     * @return The bytes for parent.
+     */
+    com.google.protobuf.ByteString
+        getParentBytes();
+
+    /**
+     * <pre>
+     * Pose relative to the parent
+     * </pre>
+     *
+     * <code>.viam.common.v1.LinkPose pose = 3 [json_name = "pose"];</code>
+     * @return Whether the pose field is set.
+     */
+    boolean hasPose();
+    /**
+     * <pre>
+     * Pose relative to the parent
+     * </pre>
+     *
+     * <code>.viam.common.v1.LinkPose pose = 3 [json_name = "pose"];</code>
+     * @return The pose.
+     */
+    com.viam.common.v1.Common.LinkPose getPose();
+
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    java.util.List<com.viam.common.v1.Common.Geometry> 
+        getCollisionList();
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    com.viam.common.v1.Common.Geometry getCollision(int index);
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    int getCollisionCount();
+
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    java.util.List<com.viam.common.v1.Common.Geometry> 
+        getVisualList();
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    com.viam.common.v1.Common.Geometry getVisual(int index);
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    int getVisualCount();
+  }
+  /**
+   * Protobuf type {@code viam.common.v1.KinematicLink}
+   */
+  public  static final class KinematicLink extends
+      com.google.protobuf.GeneratedMessageLite<
+          KinematicLink, KinematicLink.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.KinematicLink)
+      KinematicLinkOrBuilder {
+    private KinematicLink() {
+      id_ = "";
+      parent_ = "";
+      collision_ = emptyProtobufList();
+      visual_ = emptyProtobufList();
+    }
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static final int PARENT_FIELD_NUMBER = 2;
+    private java.lang.String parent_;
+    /**
+     * <pre>
+     * Parent link or joint id, empty for the root
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     * @return The parent.
+     */
+    @java.lang.Override
+    public java.lang.String getParent() {
+      return parent_;
+    }
+    /**
+     * <pre>
+     * Parent link or joint id, empty for the root
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     * @return The bytes for parent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getParentBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(parent_);
+    }
+    /**
+     * <pre>
+     * Parent link or joint id, empty for the root
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     * @param value The parent to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setParent(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      parent_ = value;
+    }
+    /**
+     * <pre>
+     * Parent link or joint id, empty for the root
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     */
+    private void clearParent() {
+
+      parent_ = getDefaultInstance().getParent();
+    }
+    /**
+     * <pre>
+     * Parent link or joint id, empty for the root
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     * @param value The bytes for parent to set.
+     */
+    private void setParentBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      parent_ = value.toStringUtf8();
+
+    }
+
+    public static final int POSE_FIELD_NUMBER = 3;
+    private com.viam.common.v1.Common.LinkPose pose_;
+    /**
+     * <pre>
+     * Pose relative to the parent
+     * </pre>
+     *
+     * <code>.viam.common.v1.LinkPose pose = 3 [json_name = "pose"];</code>
+     */
+    @java.lang.Override
+    public boolean hasPose() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Pose relative to the parent
+     * </pre>
+     *
+     * <code>.viam.common.v1.LinkPose pose = 3 [json_name = "pose"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.LinkPose getPose() {
+      return pose_ == null ? com.viam.common.v1.Common.LinkPose.getDefaultInstance() : pose_;
+    }
+    /**
+     * <pre>
+     * Pose relative to the parent
+     * </pre>
+     *
+     * <code>.viam.common.v1.LinkPose pose = 3 [json_name = "pose"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPose(com.viam.common.v1.Common.LinkPose value) {
+      value.getClass();  // minimal bytecode null check
+      pose_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Pose relative to the parent
+     * </pre>
+     *
+     * <code>.viam.common.v1.LinkPose pose = 3 [json_name = "pose"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergePose(com.viam.common.v1.Common.LinkPose value) {
+      value.getClass();  // minimal bytecode null check
+      if (pose_ != null &&
+          pose_ != com.viam.common.v1.Common.LinkPose.getDefaultInstance()) {
+        pose_ =
+          com.viam.common.v1.Common.LinkPose.newBuilder(pose_).mergeFrom(value).buildPartial();
+      } else {
+        pose_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Pose relative to the parent
+     * </pre>
+     *
+     * <code>.viam.common.v1.LinkPose pose = 3 [json_name = "pose"];</code>
+     */
+    private void clearPose() {
+      pose_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int COLLISION_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.Geometry> collision_;
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.common.v1.Common.Geometry> getCollisionList() {
+      return collision_;
+    }
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    public java.util.List<? extends com.viam.common.v1.Common.GeometryOrBuilder> 
+        getCollisionOrBuilderList() {
+      return collision_;
+    }
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    @java.lang.Override
+    public int getCollisionCount() {
+      return collision_.size();
+    }
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Geometry getCollision(int index) {
+      return collision_.get(index);
+    }
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    public com.viam.common.v1.Common.GeometryOrBuilder getCollisionOrBuilder(
+        int index) {
+      return collision_.get(index);
+    }
+    private void ensureCollisionIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.Geometry> tmp = collision_;
+      if (!tmp.isModifiable()) {
+        collision_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setCollision(
+        int index, com.viam.common.v1.Common.Geometry value) {
+      value.getClass();  // minimal bytecode null check
+      ensureCollisionIsMutable();
+      collision_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addCollision(com.viam.common.v1.Common.Geometry value) {
+      value.getClass();  // minimal bytecode null check
+      ensureCollisionIsMutable();
+      collision_.add(value);
+    }
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addCollision(
+        int index, com.viam.common.v1.Common.Geometry value) {
+      value.getClass();  // minimal bytecode null check
+      ensureCollisionIsMutable();
+      collision_.add(index, value);
+    }
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    private void addAllCollision(
+        java.lang.Iterable<? extends com.viam.common.v1.Common.Geometry> values) {
+      ensureCollisionIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, collision_);
+    }
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    private void clearCollision() {
+      collision_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Collision geometries, meshes must be stl or ply
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+     */
+    private void removeCollision(int index) {
+      ensureCollisionIsMutable();
+      collision_.remove(index);
+    }
+
+    public static final int VISUAL_FIELD_NUMBER = 5;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.Geometry> visual_;
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.common.v1.Common.Geometry> getVisualList() {
+      return visual_;
+    }
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    public java.util.List<? extends com.viam.common.v1.Common.GeometryOrBuilder> 
+        getVisualOrBuilderList() {
+      return visual_;
+    }
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    @java.lang.Override
+    public int getVisualCount() {
+      return visual_.size();
+    }
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Geometry getVisual(int index) {
+      return visual_.get(index);
+    }
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    public com.viam.common.v1.Common.GeometryOrBuilder getVisualOrBuilder(
+        int index) {
+      return visual_.get(index);
+    }
+    private void ensureVisualIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.common.v1.Common.Geometry> tmp = visual_;
+      if (!tmp.isModifiable()) {
+        visual_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setVisual(
+        int index, com.viam.common.v1.Common.Geometry value) {
+      value.getClass();  // minimal bytecode null check
+      ensureVisualIsMutable();
+      visual_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addVisual(com.viam.common.v1.Common.Geometry value) {
+      value.getClass();  // minimal bytecode null check
+      ensureVisualIsMutable();
+      visual_.add(value);
+    }
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addVisual(
+        int index, com.viam.common.v1.Common.Geometry value) {
+      value.getClass();  // minimal bytecode null check
+      ensureVisualIsMutable();
+      visual_.add(index, value);
+    }
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    private void addAllVisual(
+        java.lang.Iterable<? extends com.viam.common.v1.Common.Geometry> values) {
+      ensureVisualIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, visual_);
+    }
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    private void clearVisual() {
+      visual_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Display geometries, not used for collision checking
+     * </pre>
+     *
+     * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+     */
+    private void removeVisual(int index) {
+      ensureVisualIsMutable();
+      visual_.remove(index);
+    }
+
+    public static com.viam.common.v1.Common.KinematicLink parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.KinematicLink parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicLink parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.KinematicLink parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicLink parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.KinematicLink parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicLink parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.KinematicLink parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.KinematicLink parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.KinematicLink parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicLink parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.KinematicLink parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.KinematicLink prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.common.v1.KinematicLink}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.KinematicLink, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.KinematicLink)
+        com.viam.common.v1.Common.KinematicLinkOrBuilder {
+      // Construct using com.viam.common.v1.Common.KinematicLink.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Parent link or joint id, empty for the root
+       * </pre>
+       *
+       * <code>string parent = 2 [json_name = "parent"];</code>
+       * @return The parent.
+       */
+      @java.lang.Override
+      public java.lang.String getParent() {
+        return instance.getParent();
+      }
+      /**
+       * <pre>
+       * Parent link or joint id, empty for the root
+       * </pre>
+       *
+       * <code>string parent = 2 [json_name = "parent"];</code>
+       * @return The bytes for parent.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getParentBytes() {
+        return instance.getParentBytes();
+      }
+      /**
+       * <pre>
+       * Parent link or joint id, empty for the root
+       * </pre>
+       *
+       * <code>string parent = 2 [json_name = "parent"];</code>
+       * @param value The parent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParent(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setParent(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Parent link or joint id, empty for the root
+       * </pre>
+       *
+       * <code>string parent = 2 [json_name = "parent"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParent() {
+        copyOnWrite();
+        instance.clearParent();
+        return this;
+      }
+      /**
+       * <pre>
+       * Parent link or joint id, empty for the root
+       * </pre>
+       *
+       * <code>string parent = 2 [json_name = "parent"];</code>
+       * @param value The bytes for parent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setParentBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Pose relative to the parent
+       * </pre>
+       *
+       * <code>.viam.common.v1.LinkPose pose = 3 [json_name = "pose"];</code>
+       */
+      @java.lang.Override
+      public boolean hasPose() {
+        return instance.hasPose();
+      }
+      /**
+       * <pre>
+       * Pose relative to the parent
+       * </pre>
+       *
+       * <code>.viam.common.v1.LinkPose pose = 3 [json_name = "pose"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.LinkPose getPose() {
+        return instance.getPose();
+      }
+      /**
+       * <pre>
+       * Pose relative to the parent
+       * </pre>
+       *
+       * <code>.viam.common.v1.LinkPose pose = 3 [json_name = "pose"];</code>
+       */
+      public Builder setPose(com.viam.common.v1.Common.LinkPose value) {
+        copyOnWrite();
+        instance.setPose(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Pose relative to the parent
+       * </pre>
+       *
+       * <code>.viam.common.v1.LinkPose pose = 3 [json_name = "pose"];</code>
+       */
+      public Builder setPose(
+          com.viam.common.v1.Common.LinkPose.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPose(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Pose relative to the parent
+       * </pre>
+       *
+       * <code>.viam.common.v1.LinkPose pose = 3 [json_name = "pose"];</code>
+       */
+      public Builder mergePose(com.viam.common.v1.Common.LinkPose value) {
+        copyOnWrite();
+        instance.mergePose(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Pose relative to the parent
+       * </pre>
+       *
+       * <code>.viam.common.v1.LinkPose pose = 3 [json_name = "pose"];</code>
+       */
+      public Builder clearPose() {  copyOnWrite();
+        instance.clearPose();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Collision geometries, meshes must be stl or ply
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.common.v1.Common.Geometry> getCollisionList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getCollisionList());
+      }
+      /**
+       * <pre>
+       * Collision geometries, meshes must be stl or ply
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+       */
+      @java.lang.Override
+      public int getCollisionCount() {
+        return instance.getCollisionCount();
+      }/**
+       * <pre>
+       * Collision geometries, meshes must be stl or ply
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Geometry getCollision(int index) {
+        return instance.getCollision(index);
+      }
+      /**
+       * <pre>
+       * Collision geometries, meshes must be stl or ply
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+       */
+      public Builder setCollision(
+          int index, com.viam.common.v1.Common.Geometry value) {
+        copyOnWrite();
+        instance.setCollision(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Collision geometries, meshes must be stl or ply
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+       */
+      public Builder setCollision(
+          int index, com.viam.common.v1.Common.Geometry.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCollision(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Collision geometries, meshes must be stl or ply
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+       */
+      public Builder addCollision(com.viam.common.v1.Common.Geometry value) {
+        copyOnWrite();
+        instance.addCollision(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Collision geometries, meshes must be stl or ply
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+       */
+      public Builder addCollision(
+          int index, com.viam.common.v1.Common.Geometry value) {
+        copyOnWrite();
+        instance.addCollision(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Collision geometries, meshes must be stl or ply
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+       */
+      public Builder addCollision(
+          com.viam.common.v1.Common.Geometry.Builder builderForValue) {
+        copyOnWrite();
+        instance.addCollision(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Collision geometries, meshes must be stl or ply
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+       */
+      public Builder addCollision(
+          int index, com.viam.common.v1.Common.Geometry.Builder builderForValue) {
+        copyOnWrite();
+        instance.addCollision(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Collision geometries, meshes must be stl or ply
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+       */
+      public Builder addAllCollision(
+          java.lang.Iterable<? extends com.viam.common.v1.Common.Geometry> values) {
+        copyOnWrite();
+        instance.addAllCollision(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Collision geometries, meshes must be stl or ply
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+       */
+      public Builder clearCollision() {
+        copyOnWrite();
+        instance.clearCollision();
+        return this;
+      }
+      /**
+       * <pre>
+       * Collision geometries, meshes must be stl or ply
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry collision = 4 [json_name = "collision"];</code>
+       */
+      public Builder removeCollision(int index) {
+        copyOnWrite();
+        instance.removeCollision(index);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Display geometries, not used for collision checking
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<com.viam.common.v1.Common.Geometry> getVisualList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getVisualList());
+      }
+      /**
+       * <pre>
+       * Display geometries, not used for collision checking
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+       */
+      @java.lang.Override
+      public int getVisualCount() {
+        return instance.getVisualCount();
+      }/**
+       * <pre>
+       * Display geometries, not used for collision checking
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Geometry getVisual(int index) {
+        return instance.getVisual(index);
+      }
+      /**
+       * <pre>
+       * Display geometries, not used for collision checking
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+       */
+      public Builder setVisual(
+          int index, com.viam.common.v1.Common.Geometry value) {
+        copyOnWrite();
+        instance.setVisual(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Display geometries, not used for collision checking
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+       */
+      public Builder setVisual(
+          int index, com.viam.common.v1.Common.Geometry.Builder builderForValue) {
+        copyOnWrite();
+        instance.setVisual(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Display geometries, not used for collision checking
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+       */
+      public Builder addVisual(com.viam.common.v1.Common.Geometry value) {
+        copyOnWrite();
+        instance.addVisual(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Display geometries, not used for collision checking
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+       */
+      public Builder addVisual(
+          int index, com.viam.common.v1.Common.Geometry value) {
+        copyOnWrite();
+        instance.addVisual(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Display geometries, not used for collision checking
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+       */
+      public Builder addVisual(
+          com.viam.common.v1.Common.Geometry.Builder builderForValue) {
+        copyOnWrite();
+        instance.addVisual(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Display geometries, not used for collision checking
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+       */
+      public Builder addVisual(
+          int index, com.viam.common.v1.Common.Geometry.Builder builderForValue) {
+        copyOnWrite();
+        instance.addVisual(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Display geometries, not used for collision checking
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+       */
+      public Builder addAllVisual(
+          java.lang.Iterable<? extends com.viam.common.v1.Common.Geometry> values) {
+        copyOnWrite();
+        instance.addAllVisual(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * Display geometries, not used for collision checking
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+       */
+      public Builder clearVisual() {
+        copyOnWrite();
+        instance.clearVisual();
+        return this;
+      }
+      /**
+       * <pre>
+       * Display geometries, not used for collision checking
+       * </pre>
+       *
+       * <code>repeated .viam.common.v1.Geometry visual = 5 [json_name = "visual"];</code>
+       */
+      public Builder removeVisual(int index) {
+        copyOnWrite();
+        instance.removeVisual(index);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.KinematicLink)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.KinematicLink();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "id_",
+              "parent_",
+              "pose_",
+              "collision_",
+              com.viam.common.v1.Common.Geometry.class,
+              "visual_",
+              com.viam.common.v1.Common.Geometry.class,
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0002\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u1009\u0000\u0004\u001b\u0005\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.KinematicLink> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.KinematicLink.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.KinematicLink>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.KinematicLink)
+    private static final com.viam.common.v1.Common.KinematicLink DEFAULT_INSTANCE;
+    static {
+      KinematicLink defaultInstance = new KinematicLink();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        KinematicLink.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.KinematicLink getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<KinematicLink> PARSER;
+
+    public static com.google.protobuf.Parser<KinematicLink> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface LinkPoseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.LinkPose)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     * @return Whether the translation field is set.
+     */
+    boolean hasTranslation();
+    /**
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     * @return The translation.
+     */
+    com.viam.common.v1.Common.Vector3 getTranslation();
+
+    /**
+     * <code>.viam.common.v1.Quaternion quaternion = 2 [json_name = "quaternion"];</code>
+     * @return Whether the quaternion field is set.
+     */
+    boolean hasQuaternion();
+    /**
+     * <code>.viam.common.v1.Quaternion quaternion = 2 [json_name = "quaternion"];</code>
+     * @return The quaternion.
+     */
+    com.viam.common.v1.Common.Quaternion getQuaternion();
+
+    /**
+     * <pre>
+     * theta in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 3 [json_name = "orientationVector"];</code>
+     * @return Whether the orientationVector field is set.
+     */
+    boolean hasOrientationVector();
+    /**
+     * <pre>
+     * theta in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 3 [json_name = "orientationVector"];</code>
+     * @return The orientationVector.
+     */
+    com.viam.common.v1.Common.Orientation getOrientationVector();
+
+    /**
+     * <code>.viam.common.v1.EulerAngles euler_angles = 4 [json_name = "eulerAngles"];</code>
+     * @return Whether the eulerAngles field is set.
+     */
+    boolean hasEulerAngles();
+    /**
+     * <code>.viam.common.v1.EulerAngles euler_angles = 4 [json_name = "eulerAngles"];</code>
+     * @return The eulerAngles.
+     */
+    com.viam.common.v1.Common.EulerAngles getEulerAngles();
+
+    /**
+     * <code>.viam.common.v1.AxisAngles axis_angles = 5 [json_name = "axisAngles"];</code>
+     * @return Whether the axisAngles field is set.
+     */
+    boolean hasAxisAngles();
+    /**
+     * <code>.viam.common.v1.AxisAngles axis_angles = 5 [json_name = "axisAngles"];</code>
+     * @return The axisAngles.
+     */
+    com.viam.common.v1.Common.AxisAngles getAxisAngles();
+
+    public com.viam.common.v1.Common.LinkPose.OrientationCase getOrientationCase();
+  }
+  /**
+   * <pre>
+   * LinkPose is a translation in mm and an orientation in degrees, identity when absent
+   * </pre>
+   *
+   * Protobuf type {@code viam.common.v1.LinkPose}
+   */
+  public  static final class LinkPose extends
+      com.google.protobuf.GeneratedMessageLite<
+          LinkPose, LinkPose.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.LinkPose)
+      LinkPoseOrBuilder {
+    private LinkPose() {
+    }
+    private int bitField0_;
+    private int orientationCase_ = 0;
+    private java.lang.Object orientation_;
+    public enum OrientationCase
+        implements com.google.protobuf.AbstractMessageLite.InternalOneOfEnum {
+      QUATERNION(2),
+      ORIENTATION_VECTOR(3),
+      EULER_ANGLES(4),
+      AXIS_ANGLES(5),
+      ORIENTATION_NOT_SET(0);
+      private final int value;
+      private OrientationCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static OrientationCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static OrientationCase forNumber(int value) {
+        switch (value) {
+          case 2: return QUATERNION;
+          case 3: return ORIENTATION_VECTOR;
+          case 4: return EULER_ANGLES;
+          case 5: return AXIS_ANGLES;
+          case 0: return ORIENTATION_NOT_SET;
+          default: return null;
+        }
+      }
+      @java.lang.Override public int getNumber() {
+        return this.value;
+      }
+    };
+
+    @java.lang.Override
+    public OrientationCase
+    getOrientationCase() {
+      return OrientationCase.forNumber(
+          orientationCase_);
+    }
+
+    private void clearOrientation() {
+      orientationCase_ = 0;
+      orientation_ = null;
+    }
+
+    public static final int TRANSLATION_FIELD_NUMBER = 1;
+    private com.viam.common.v1.Common.Vector3 translation_;
+    /**
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    @java.lang.Override
+    public boolean hasTranslation() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Vector3 getTranslation() {
+      return translation_ == null ? com.viam.common.v1.Common.Vector3.getDefaultInstance() : translation_;
+    }
+    /**
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setTranslation(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();  // minimal bytecode null check
+      translation_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeTranslation(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();  // minimal bytecode null check
+      if (translation_ != null &&
+          translation_ != com.viam.common.v1.Common.Vector3.getDefaultInstance()) {
+        translation_ =
+          com.viam.common.v1.Common.Vector3.newBuilder(translation_).mergeFrom(value).buildPartial();
+      } else {
+        translation_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+     */
+    private void clearTranslation() {
+      translation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int QUATERNION_FIELD_NUMBER = 2;
+    /**
+     * <code>.viam.common.v1.Quaternion quaternion = 2 [json_name = "quaternion"];</code>
+     */
+    @java.lang.Override
+    public boolean hasQuaternion() {
+      return orientationCase_ == 2;
+    }
+    /**
+     * <code>.viam.common.v1.Quaternion quaternion = 2 [json_name = "quaternion"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Quaternion getQuaternion() {
+      if (orientationCase_ == 2) {
+         return (com.viam.common.v1.Common.Quaternion) orientation_;
+      }
+      return com.viam.common.v1.Common.Quaternion.getDefaultInstance();
+    }
+    /**
+     * <code>.viam.common.v1.Quaternion quaternion = 2 [json_name = "quaternion"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setQuaternion(com.viam.common.v1.Common.Quaternion value) {
+      value.getClass();  // minimal bytecode null check
+      orientation_ = value;
+      orientationCase_ = 2;
+    }
+    /**
+     * <code>.viam.common.v1.Quaternion quaternion = 2 [json_name = "quaternion"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void mergeQuaternion(com.viam.common.v1.Common.Quaternion value) {
+      value.getClass();  // minimal bytecode null check
+      if (orientationCase_ == 2 &&
+          orientation_ != com.viam.common.v1.Common.Quaternion.getDefaultInstance()) {
+        orientation_ = com.viam.common.v1.Common.Quaternion.newBuilder((com.viam.common.v1.Common.Quaternion) orientation_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        orientation_ = value;
+      }
+      orientationCase_ = 2;
+    }
+    /**
+     * <code>.viam.common.v1.Quaternion quaternion = 2 [json_name = "quaternion"];</code>
+     */
+    private void clearQuaternion() {
+      if (orientationCase_ == 2) {
+        orientationCase_ = 0;
+        orientation_ = null;
+      }
+    }
+
+    public static final int ORIENTATION_VECTOR_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * theta in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 3 [json_name = "orientationVector"];</code>
+     */
+    @java.lang.Override
+    public boolean hasOrientationVector() {
+      return orientationCase_ == 3;
+    }
+    /**
+     * <pre>
+     * theta in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 3 [json_name = "orientationVector"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Orientation getOrientationVector() {
+      if (orientationCase_ == 3) {
+         return (com.viam.common.v1.Common.Orientation) orientation_;
+      }
+      return com.viam.common.v1.Common.Orientation.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * theta in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 3 [json_name = "orientationVector"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setOrientationVector(com.viam.common.v1.Common.Orientation value) {
+      value.getClass();  // minimal bytecode null check
+      orientation_ = value;
+      orientationCase_ = 3;
+    }
+    /**
+     * <pre>
+     * theta in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 3 [json_name = "orientationVector"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void mergeOrientationVector(com.viam.common.v1.Common.Orientation value) {
+      value.getClass();  // minimal bytecode null check
+      if (orientationCase_ == 3 &&
+          orientation_ != com.viam.common.v1.Common.Orientation.getDefaultInstance()) {
+        orientation_ = com.viam.common.v1.Common.Orientation.newBuilder((com.viam.common.v1.Common.Orientation) orientation_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        orientation_ = value;
+      }
+      orientationCase_ = 3;
+    }
+    /**
+     * <pre>
+     * theta in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation_vector = 3 [json_name = "orientationVector"];</code>
+     */
+    private void clearOrientationVector() {
+      if (orientationCase_ == 3) {
+        orientationCase_ = 0;
+        orientation_ = null;
+      }
+    }
+
+    public static final int EULER_ANGLES_FIELD_NUMBER = 4;
+    /**
+     * <code>.viam.common.v1.EulerAngles euler_angles = 4 [json_name = "eulerAngles"];</code>
+     */
+    @java.lang.Override
+    public boolean hasEulerAngles() {
+      return orientationCase_ == 4;
+    }
+    /**
+     * <code>.viam.common.v1.EulerAngles euler_angles = 4 [json_name = "eulerAngles"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.EulerAngles getEulerAngles() {
+      if (orientationCase_ == 4) {
+         return (com.viam.common.v1.Common.EulerAngles) orientation_;
+      }
+      return com.viam.common.v1.Common.EulerAngles.getDefaultInstance();
+    }
+    /**
+     * <code>.viam.common.v1.EulerAngles euler_angles = 4 [json_name = "eulerAngles"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setEulerAngles(com.viam.common.v1.Common.EulerAngles value) {
+      value.getClass();  // minimal bytecode null check
+      orientation_ = value;
+      orientationCase_ = 4;
+    }
+    /**
+     * <code>.viam.common.v1.EulerAngles euler_angles = 4 [json_name = "eulerAngles"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void mergeEulerAngles(com.viam.common.v1.Common.EulerAngles value) {
+      value.getClass();  // minimal bytecode null check
+      if (orientationCase_ == 4 &&
+          orientation_ != com.viam.common.v1.Common.EulerAngles.getDefaultInstance()) {
+        orientation_ = com.viam.common.v1.Common.EulerAngles.newBuilder((com.viam.common.v1.Common.EulerAngles) orientation_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        orientation_ = value;
+      }
+      orientationCase_ = 4;
+    }
+    /**
+     * <code>.viam.common.v1.EulerAngles euler_angles = 4 [json_name = "eulerAngles"];</code>
+     */
+    private void clearEulerAngles() {
+      if (orientationCase_ == 4) {
+        orientationCase_ = 0;
+        orientation_ = null;
+      }
+    }
+
+    public static final int AXIS_ANGLES_FIELD_NUMBER = 5;
+    /**
+     * <code>.viam.common.v1.AxisAngles axis_angles = 5 [json_name = "axisAngles"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAxisAngles() {
+      return orientationCase_ == 5;
+    }
+    /**
+     * <code>.viam.common.v1.AxisAngles axis_angles = 5 [json_name = "axisAngles"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.AxisAngles getAxisAngles() {
+      if (orientationCase_ == 5) {
+         return (com.viam.common.v1.Common.AxisAngles) orientation_;
+      }
+      return com.viam.common.v1.Common.AxisAngles.getDefaultInstance();
+    }
+    /**
+     * <code>.viam.common.v1.AxisAngles axis_angles = 5 [json_name = "axisAngles"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setAxisAngles(com.viam.common.v1.Common.AxisAngles value) {
+      value.getClass();  // minimal bytecode null check
+      orientation_ = value;
+      orientationCase_ = 5;
+    }
+    /**
+     * <code>.viam.common.v1.AxisAngles axis_angles = 5 [json_name = "axisAngles"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void mergeAxisAngles(com.viam.common.v1.Common.AxisAngles value) {
+      value.getClass();  // minimal bytecode null check
+      if (orientationCase_ == 5 &&
+          orientation_ != com.viam.common.v1.Common.AxisAngles.getDefaultInstance()) {
+        orientation_ = com.viam.common.v1.Common.AxisAngles.newBuilder((com.viam.common.v1.Common.AxisAngles) orientation_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        orientation_ = value;
+      }
+      orientationCase_ = 5;
+    }
+    /**
+     * <code>.viam.common.v1.AxisAngles axis_angles = 5 [json_name = "axisAngles"];</code>
+     */
+    private void clearAxisAngles() {
+      if (orientationCase_ == 5) {
+        orientationCase_ = 0;
+        orientation_ = null;
+      }
+    }
+
+    public static com.viam.common.v1.Common.LinkPose parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.LinkPose parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.LinkPose parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.LinkPose parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.LinkPose parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.LinkPose parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.LinkPose parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.LinkPose parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.LinkPose parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.LinkPose parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.LinkPose parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.LinkPose parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.LinkPose prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * LinkPose is a translation in mm and an orientation in degrees, identity when absent
+     * </pre>
+     *
+     * Protobuf type {@code viam.common.v1.LinkPose}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.LinkPose, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.LinkPose)
+        com.viam.common.v1.Common.LinkPoseOrBuilder {
+      // Construct using com.viam.common.v1.Common.LinkPose.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+      @java.lang.Override
+      public OrientationCase
+          getOrientationCase() {
+        return instance.getOrientationCase();
+      }
+
+      public Builder clearOrientation() {
+        copyOnWrite();
+        instance.clearOrientation();
+        return this;
+      }
+
+
+      /**
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      @java.lang.Override
+      public boolean hasTranslation() {
+        return instance.hasTranslation();
+      }
+      /**
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Vector3 getTranslation() {
+        return instance.getTranslation();
+      }
+      /**
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      public Builder setTranslation(com.viam.common.v1.Common.Vector3 value) {
+        copyOnWrite();
+        instance.setTranslation(value);
+        return this;
+        }
+      /**
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      public Builder setTranslation(
+          com.viam.common.v1.Common.Vector3.Builder builderForValue) {
+        copyOnWrite();
+        instance.setTranslation(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      public Builder mergeTranslation(com.viam.common.v1.Common.Vector3 value) {
+        copyOnWrite();
+        instance.mergeTranslation(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.Vector3 translation = 1 [json_name = "translation"];</code>
+       */
+      public Builder clearTranslation() {  copyOnWrite();
+        instance.clearTranslation();
+        return this;
+      }
+
+      /**
+       * <code>.viam.common.v1.Quaternion quaternion = 2 [json_name = "quaternion"];</code>
+       */
+      @java.lang.Override
+      public boolean hasQuaternion() {
+        return instance.hasQuaternion();
+      }
+      /**
+       * <code>.viam.common.v1.Quaternion quaternion = 2 [json_name = "quaternion"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Quaternion getQuaternion() {
+        return instance.getQuaternion();
+      }
+      /**
+       * <code>.viam.common.v1.Quaternion quaternion = 2 [json_name = "quaternion"];</code>
+       */
+      public Builder setQuaternion(com.viam.common.v1.Common.Quaternion value) {
+        copyOnWrite();
+        instance.setQuaternion(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.Quaternion quaternion = 2 [json_name = "quaternion"];</code>
+       */
+      public Builder setQuaternion(
+          com.viam.common.v1.Common.Quaternion.Builder builderForValue) {
+        copyOnWrite();
+        instance.setQuaternion(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.Quaternion quaternion = 2 [json_name = "quaternion"];</code>
+       */
+      public Builder mergeQuaternion(com.viam.common.v1.Common.Quaternion value) {
+        copyOnWrite();
+        instance.mergeQuaternion(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.Quaternion quaternion = 2 [json_name = "quaternion"];</code>
+       */
+      public Builder clearQuaternion() {
+        copyOnWrite();
+        instance.clearQuaternion();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * theta in degrees
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation_vector = 3 [json_name = "orientationVector"];</code>
+       */
+      @java.lang.Override
+      public boolean hasOrientationVector() {
+        return instance.hasOrientationVector();
+      }
+      /**
+       * <pre>
+       * theta in degrees
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation_vector = 3 [json_name = "orientationVector"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Orientation getOrientationVector() {
+        return instance.getOrientationVector();
+      }
+      /**
+       * <pre>
+       * theta in degrees
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation_vector = 3 [json_name = "orientationVector"];</code>
+       */
+      public Builder setOrientationVector(com.viam.common.v1.Common.Orientation value) {
+        copyOnWrite();
+        instance.setOrientationVector(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * theta in degrees
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation_vector = 3 [json_name = "orientationVector"];</code>
+       */
+      public Builder setOrientationVector(
+          com.viam.common.v1.Common.Orientation.Builder builderForValue) {
+        copyOnWrite();
+        instance.setOrientationVector(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * theta in degrees
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation_vector = 3 [json_name = "orientationVector"];</code>
+       */
+      public Builder mergeOrientationVector(com.viam.common.v1.Common.Orientation value) {
+        copyOnWrite();
+        instance.mergeOrientationVector(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * theta in degrees
+       * </pre>
+       *
+       * <code>.viam.common.v1.Orientation orientation_vector = 3 [json_name = "orientationVector"];</code>
+       */
+      public Builder clearOrientationVector() {
+        copyOnWrite();
+        instance.clearOrientationVector();
+        return this;
+      }
+
+      /**
+       * <code>.viam.common.v1.EulerAngles euler_angles = 4 [json_name = "eulerAngles"];</code>
+       */
+      @java.lang.Override
+      public boolean hasEulerAngles() {
+        return instance.hasEulerAngles();
+      }
+      /**
+       * <code>.viam.common.v1.EulerAngles euler_angles = 4 [json_name = "eulerAngles"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.EulerAngles getEulerAngles() {
+        return instance.getEulerAngles();
+      }
+      /**
+       * <code>.viam.common.v1.EulerAngles euler_angles = 4 [json_name = "eulerAngles"];</code>
+       */
+      public Builder setEulerAngles(com.viam.common.v1.Common.EulerAngles value) {
+        copyOnWrite();
+        instance.setEulerAngles(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.EulerAngles euler_angles = 4 [json_name = "eulerAngles"];</code>
+       */
+      public Builder setEulerAngles(
+          com.viam.common.v1.Common.EulerAngles.Builder builderForValue) {
+        copyOnWrite();
+        instance.setEulerAngles(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.EulerAngles euler_angles = 4 [json_name = "eulerAngles"];</code>
+       */
+      public Builder mergeEulerAngles(com.viam.common.v1.Common.EulerAngles value) {
+        copyOnWrite();
+        instance.mergeEulerAngles(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.EulerAngles euler_angles = 4 [json_name = "eulerAngles"];</code>
+       */
+      public Builder clearEulerAngles() {
+        copyOnWrite();
+        instance.clearEulerAngles();
+        return this;
+      }
+
+      /**
+       * <code>.viam.common.v1.AxisAngles axis_angles = 5 [json_name = "axisAngles"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAxisAngles() {
+        return instance.hasAxisAngles();
+      }
+      /**
+       * <code>.viam.common.v1.AxisAngles axis_angles = 5 [json_name = "axisAngles"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.AxisAngles getAxisAngles() {
+        return instance.getAxisAngles();
+      }
+      /**
+       * <code>.viam.common.v1.AxisAngles axis_angles = 5 [json_name = "axisAngles"];</code>
+       */
+      public Builder setAxisAngles(com.viam.common.v1.Common.AxisAngles value) {
+        copyOnWrite();
+        instance.setAxisAngles(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.AxisAngles axis_angles = 5 [json_name = "axisAngles"];</code>
+       */
+      public Builder setAxisAngles(
+          com.viam.common.v1.Common.AxisAngles.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAxisAngles(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.AxisAngles axis_angles = 5 [json_name = "axisAngles"];</code>
+       */
+      public Builder mergeAxisAngles(com.viam.common.v1.Common.AxisAngles value) {
+        copyOnWrite();
+        instance.mergeAxisAngles(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.AxisAngles axis_angles = 5 [json_name = "axisAngles"];</code>
+       */
+      public Builder clearAxisAngles() {
+        copyOnWrite();
+        instance.clearAxisAngles();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.LinkPose)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.LinkPose();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "orientation_",
+              "orientationCase_",
+              "bitField0_",
+              "translation_",
+              com.viam.common.v1.Common.Quaternion.class,
+              com.viam.common.v1.Common.Orientation.class,
+              com.viam.common.v1.Common.EulerAngles.class,
+              com.viam.common.v1.Common.AxisAngles.class,
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0001\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "<\u0000\u0003<\u0000\u0004<\u0000\u0005<\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.LinkPose> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.LinkPose.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.LinkPose>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.LinkPose)
+    private static final com.viam.common.v1.Common.LinkPose DEFAULT_INSTANCE;
+    static {
+      LinkPose defaultInstance = new LinkPose();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        LinkPose.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.LinkPose getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<LinkPose> PARSER;
+
+    public static com.google.protobuf.Parser<LinkPose> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface QuaternionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.Quaternion)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>double w = 1 [json_name = "w"];</code>
+     * @return The w.
+     */
+    double getW();
+
+    /**
+     * <code>double x = 2 [json_name = "x"];</code>
+     * @return The x.
+     */
+    double getX();
+
+    /**
+     * <code>double y = 3 [json_name = "y"];</code>
+     * @return The y.
+     */
+    double getY();
+
+    /**
+     * <code>double z = 4 [json_name = "z"];</code>
+     * @return The z.
+     */
+    double getZ();
+  }
+  /**
+   * Protobuf type {@code viam.common.v1.Quaternion}
+   */
+  public  static final class Quaternion extends
+      com.google.protobuf.GeneratedMessageLite<
+          Quaternion, Quaternion.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.Quaternion)
+      QuaternionOrBuilder {
+    private Quaternion() {
+    }
+    public static final int W_FIELD_NUMBER = 1;
+    private double w_;
+    /**
+     * <code>double w = 1 [json_name = "w"];</code>
+     * @return The w.
+     */
+    @java.lang.Override
+    public double getW() {
+      return w_;
+    }
+    /**
+     * <code>double w = 1 [json_name = "w"];</code>
+     * @param value The w to set.
+     */
+    private void setW(double value) {
+      
+      w_ = value;
+    }
+    /**
+     * <code>double w = 1 [json_name = "w"];</code>
+     */
+    private void clearW() {
+
+      w_ = 0D;
+    }
+
+    public static final int X_FIELD_NUMBER = 2;
+    private double x_;
+    /**
+     * <code>double x = 2 [json_name = "x"];</code>
+     * @return The x.
+     */
+    @java.lang.Override
+    public double getX() {
+      return x_;
+    }
+    /**
+     * <code>double x = 2 [json_name = "x"];</code>
+     * @param value The x to set.
+     */
+    private void setX(double value) {
+      
+      x_ = value;
+    }
+    /**
+     * <code>double x = 2 [json_name = "x"];</code>
+     */
+    private void clearX() {
+
+      x_ = 0D;
+    }
+
+    public static final int Y_FIELD_NUMBER = 3;
+    private double y_;
+    /**
+     * <code>double y = 3 [json_name = "y"];</code>
+     * @return The y.
+     */
+    @java.lang.Override
+    public double getY() {
+      return y_;
+    }
+    /**
+     * <code>double y = 3 [json_name = "y"];</code>
+     * @param value The y to set.
+     */
+    private void setY(double value) {
+      
+      y_ = value;
+    }
+    /**
+     * <code>double y = 3 [json_name = "y"];</code>
+     */
+    private void clearY() {
+
+      y_ = 0D;
+    }
+
+    public static final int Z_FIELD_NUMBER = 4;
+    private double z_;
+    /**
+     * <code>double z = 4 [json_name = "z"];</code>
+     * @return The z.
+     */
+    @java.lang.Override
+    public double getZ() {
+      return z_;
+    }
+    /**
+     * <code>double z = 4 [json_name = "z"];</code>
+     * @param value The z to set.
+     */
+    private void setZ(double value) {
+      
+      z_ = value;
+    }
+    /**
+     * <code>double z = 4 [json_name = "z"];</code>
+     */
+    private void clearZ() {
+
+      z_ = 0D;
+    }
+
+    public static com.viam.common.v1.Common.Quaternion parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.Quaternion parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.Quaternion parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.Quaternion parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.Quaternion parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.Quaternion parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.Quaternion parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.Quaternion parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.Quaternion parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.Quaternion parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.Quaternion parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.Quaternion parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.Quaternion prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.common.v1.Quaternion}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.Quaternion, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.Quaternion)
+        com.viam.common.v1.Common.QuaternionOrBuilder {
+      // Construct using com.viam.common.v1.Common.Quaternion.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>double w = 1 [json_name = "w"];</code>
+       * @return The w.
+       */
+      @java.lang.Override
+      public double getW() {
+        return instance.getW();
+      }
+      /**
+       * <code>double w = 1 [json_name = "w"];</code>
+       * @param value The w to set.
+       * @return This builder for chaining.
+       */
+      public Builder setW(double value) {
+        copyOnWrite();
+        instance.setW(value);
+        return this;
+      }
+      /**
+       * <code>double w = 1 [json_name = "w"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearW() {
+        copyOnWrite();
+        instance.clearW();
+        return this;
+      }
+
+      /**
+       * <code>double x = 2 [json_name = "x"];</code>
+       * @return The x.
+       */
+      @java.lang.Override
+      public double getX() {
+        return instance.getX();
+      }
+      /**
+       * <code>double x = 2 [json_name = "x"];</code>
+       * @param value The x to set.
+       * @return This builder for chaining.
+       */
+      public Builder setX(double value) {
+        copyOnWrite();
+        instance.setX(value);
+        return this;
+      }
+      /**
+       * <code>double x = 2 [json_name = "x"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearX() {
+        copyOnWrite();
+        instance.clearX();
+        return this;
+      }
+
+      /**
+       * <code>double y = 3 [json_name = "y"];</code>
+       * @return The y.
+       */
+      @java.lang.Override
+      public double getY() {
+        return instance.getY();
+      }
+      /**
+       * <code>double y = 3 [json_name = "y"];</code>
+       * @param value The y to set.
+       * @return This builder for chaining.
+       */
+      public Builder setY(double value) {
+        copyOnWrite();
+        instance.setY(value);
+        return this;
+      }
+      /**
+       * <code>double y = 3 [json_name = "y"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearY() {
+        copyOnWrite();
+        instance.clearY();
+        return this;
+      }
+
+      /**
+       * <code>double z = 4 [json_name = "z"];</code>
+       * @return The z.
+       */
+      @java.lang.Override
+      public double getZ() {
+        return instance.getZ();
+      }
+      /**
+       * <code>double z = 4 [json_name = "z"];</code>
+       * @param value The z to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZ(double value) {
+        copyOnWrite();
+        instance.setZ(value);
+        return this;
+      }
+      /**
+       * <code>double z = 4 [json_name = "z"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZ() {
+        copyOnWrite();
+        instance.clearZ();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.Quaternion)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.Quaternion();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "w_",
+              "x_",
+              "y_",
+              "z_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0000\u0002\u0000" +
+                "\u0003\u0000\u0004\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.Quaternion> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.Quaternion.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.Quaternion>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.Quaternion)
+    private static final com.viam.common.v1.Common.Quaternion DEFAULT_INSTANCE;
+    static {
+      Quaternion defaultInstance = new Quaternion();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Quaternion.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.Quaternion getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<Quaternion> PARSER;
+
+    public static com.google.protobuf.Parser<Quaternion> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface EulerAnglesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.EulerAngles)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>double roll = 1 [json_name = "roll"];</code>
+     * @return The roll.
+     */
+    double getRoll();
+
+    /**
+     * <code>double pitch = 2 [json_name = "pitch"];</code>
+     * @return The pitch.
+     */
+    double getPitch();
+
+    /**
+     * <code>double yaw = 3 [json_name = "yaw"];</code>
+     * @return The yaw.
+     */
+    double getYaw();
+  }
+  /**
+   * <pre>
+   * Euler angles in degrees
+   * </pre>
+   *
+   * Protobuf type {@code viam.common.v1.EulerAngles}
+   */
+  public  static final class EulerAngles extends
+      com.google.protobuf.GeneratedMessageLite<
+          EulerAngles, EulerAngles.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.EulerAngles)
+      EulerAnglesOrBuilder {
+    private EulerAngles() {
+    }
+    public static final int ROLL_FIELD_NUMBER = 1;
+    private double roll_;
+    /**
+     * <code>double roll = 1 [json_name = "roll"];</code>
+     * @return The roll.
+     */
+    @java.lang.Override
+    public double getRoll() {
+      return roll_;
+    }
+    /**
+     * <code>double roll = 1 [json_name = "roll"];</code>
+     * @param value The roll to set.
+     */
+    private void setRoll(double value) {
+      
+      roll_ = value;
+    }
+    /**
+     * <code>double roll = 1 [json_name = "roll"];</code>
+     */
+    private void clearRoll() {
+
+      roll_ = 0D;
+    }
+
+    public static final int PITCH_FIELD_NUMBER = 2;
+    private double pitch_;
+    /**
+     * <code>double pitch = 2 [json_name = "pitch"];</code>
+     * @return The pitch.
+     */
+    @java.lang.Override
+    public double getPitch() {
+      return pitch_;
+    }
+    /**
+     * <code>double pitch = 2 [json_name = "pitch"];</code>
+     * @param value The pitch to set.
+     */
+    private void setPitch(double value) {
+      
+      pitch_ = value;
+    }
+    /**
+     * <code>double pitch = 2 [json_name = "pitch"];</code>
+     */
+    private void clearPitch() {
+
+      pitch_ = 0D;
+    }
+
+    public static final int YAW_FIELD_NUMBER = 3;
+    private double yaw_;
+    /**
+     * <code>double yaw = 3 [json_name = "yaw"];</code>
+     * @return The yaw.
+     */
+    @java.lang.Override
+    public double getYaw() {
+      return yaw_;
+    }
+    /**
+     * <code>double yaw = 3 [json_name = "yaw"];</code>
+     * @param value The yaw to set.
+     */
+    private void setYaw(double value) {
+      
+      yaw_ = value;
+    }
+    /**
+     * <code>double yaw = 3 [json_name = "yaw"];</code>
+     */
+    private void clearYaw() {
+
+      yaw_ = 0D;
+    }
+
+    public static com.viam.common.v1.Common.EulerAngles parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.EulerAngles parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.EulerAngles parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.EulerAngles parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.EulerAngles parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.EulerAngles parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.EulerAngles parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.EulerAngles parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.EulerAngles parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.EulerAngles parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.EulerAngles parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.EulerAngles parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.EulerAngles prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * Euler angles in degrees
+     * </pre>
+     *
+     * Protobuf type {@code viam.common.v1.EulerAngles}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.EulerAngles, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.EulerAngles)
+        com.viam.common.v1.Common.EulerAnglesOrBuilder {
+      // Construct using com.viam.common.v1.Common.EulerAngles.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>double roll = 1 [json_name = "roll"];</code>
+       * @return The roll.
+       */
+      @java.lang.Override
+      public double getRoll() {
+        return instance.getRoll();
+      }
+      /**
+       * <code>double roll = 1 [json_name = "roll"];</code>
+       * @param value The roll to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoll(double value) {
+        copyOnWrite();
+        instance.setRoll(value);
+        return this;
+      }
+      /**
+       * <code>double roll = 1 [json_name = "roll"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoll() {
+        copyOnWrite();
+        instance.clearRoll();
+        return this;
+      }
+
+      /**
+       * <code>double pitch = 2 [json_name = "pitch"];</code>
+       * @return The pitch.
+       */
+      @java.lang.Override
+      public double getPitch() {
+        return instance.getPitch();
+      }
+      /**
+       * <code>double pitch = 2 [json_name = "pitch"];</code>
+       * @param value The pitch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPitch(double value) {
+        copyOnWrite();
+        instance.setPitch(value);
+        return this;
+      }
+      /**
+       * <code>double pitch = 2 [json_name = "pitch"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPitch() {
+        copyOnWrite();
+        instance.clearPitch();
+        return this;
+      }
+
+      /**
+       * <code>double yaw = 3 [json_name = "yaw"];</code>
+       * @return The yaw.
+       */
+      @java.lang.Override
+      public double getYaw() {
+        return instance.getYaw();
+      }
+      /**
+       * <code>double yaw = 3 [json_name = "yaw"];</code>
+       * @param value The yaw to set.
+       * @return This builder for chaining.
+       */
+      public Builder setYaw(double value) {
+        copyOnWrite();
+        instance.setYaw(value);
+        return this;
+      }
+      /**
+       * <code>double yaw = 3 [json_name = "yaw"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearYaw() {
+        copyOnWrite();
+        instance.clearYaw();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.EulerAngles)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.EulerAngles();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "roll_",
+              "pitch_",
+              "yaw_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0000\u0002\u0000" +
+                "\u0003\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.EulerAngles> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.EulerAngles.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.EulerAngles>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.EulerAngles)
+    private static final com.viam.common.v1.Common.EulerAngles DEFAULT_INSTANCE;
+    static {
+      EulerAngles defaultInstance = new EulerAngles();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        EulerAngles.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.EulerAngles getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<EulerAngles> PARSER;
+
+    public static com.google.protobuf.Parser<EulerAngles> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface AxisAnglesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.AxisAngles)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>double rx = 1 [json_name = "rx"];</code>
+     * @return The rx.
+     */
+    double getRx();
+
+    /**
+     * <code>double ry = 2 [json_name = "ry"];</code>
+     * @return The ry.
+     */
+    double getRy();
+
+    /**
+     * <code>double rz = 3 [json_name = "rz"];</code>
+     * @return The rz.
+     */
+    double getRz();
+
+    /**
+     * <code>double theta = 4 [json_name = "theta"];</code>
+     * @return The theta.
+     */
+    double getTheta();
+  }
+  /**
+   * <pre>
+   * Rotation axis and an angle theta in degrees
+   * </pre>
+   *
+   * Protobuf type {@code viam.common.v1.AxisAngles}
+   */
+  public  static final class AxisAngles extends
+      com.google.protobuf.GeneratedMessageLite<
+          AxisAngles, AxisAngles.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.AxisAngles)
+      AxisAnglesOrBuilder {
+    private AxisAngles() {
+    }
+    public static final int RX_FIELD_NUMBER = 1;
+    private double rx_;
+    /**
+     * <code>double rx = 1 [json_name = "rx"];</code>
+     * @return The rx.
+     */
+    @java.lang.Override
+    public double getRx() {
+      return rx_;
+    }
+    /**
+     * <code>double rx = 1 [json_name = "rx"];</code>
+     * @param value The rx to set.
+     */
+    private void setRx(double value) {
+      
+      rx_ = value;
+    }
+    /**
+     * <code>double rx = 1 [json_name = "rx"];</code>
+     */
+    private void clearRx() {
+
+      rx_ = 0D;
+    }
+
+    public static final int RY_FIELD_NUMBER = 2;
+    private double ry_;
+    /**
+     * <code>double ry = 2 [json_name = "ry"];</code>
+     * @return The ry.
+     */
+    @java.lang.Override
+    public double getRy() {
+      return ry_;
+    }
+    /**
+     * <code>double ry = 2 [json_name = "ry"];</code>
+     * @param value The ry to set.
+     */
+    private void setRy(double value) {
+      
+      ry_ = value;
+    }
+    /**
+     * <code>double ry = 2 [json_name = "ry"];</code>
+     */
+    private void clearRy() {
+
+      ry_ = 0D;
+    }
+
+    public static final int RZ_FIELD_NUMBER = 3;
+    private double rz_;
+    /**
+     * <code>double rz = 3 [json_name = "rz"];</code>
+     * @return The rz.
+     */
+    @java.lang.Override
+    public double getRz() {
+      return rz_;
+    }
+    /**
+     * <code>double rz = 3 [json_name = "rz"];</code>
+     * @param value The rz to set.
+     */
+    private void setRz(double value) {
+      
+      rz_ = value;
+    }
+    /**
+     * <code>double rz = 3 [json_name = "rz"];</code>
+     */
+    private void clearRz() {
+
+      rz_ = 0D;
+    }
+
+    public static final int THETA_FIELD_NUMBER = 4;
+    private double theta_;
+    /**
+     * <code>double theta = 4 [json_name = "theta"];</code>
+     * @return The theta.
+     */
+    @java.lang.Override
+    public double getTheta() {
+      return theta_;
+    }
+    /**
+     * <code>double theta = 4 [json_name = "theta"];</code>
+     * @param value The theta to set.
+     */
+    private void setTheta(double value) {
+      
+      theta_ = value;
+    }
+    /**
+     * <code>double theta = 4 [json_name = "theta"];</code>
+     */
+    private void clearTheta() {
+
+      theta_ = 0D;
+    }
+
+    public static com.viam.common.v1.Common.AxisAngles parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.AxisAngles parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.AxisAngles parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.AxisAngles parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.AxisAngles parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.AxisAngles parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.AxisAngles parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.AxisAngles parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.AxisAngles parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.AxisAngles parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.AxisAngles parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.AxisAngles parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.AxisAngles prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * Rotation axis and an angle theta in degrees
+     * </pre>
+     *
+     * Protobuf type {@code viam.common.v1.AxisAngles}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.AxisAngles, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.AxisAngles)
+        com.viam.common.v1.Common.AxisAnglesOrBuilder {
+      // Construct using com.viam.common.v1.Common.AxisAngles.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>double rx = 1 [json_name = "rx"];</code>
+       * @return The rx.
+       */
+      @java.lang.Override
+      public double getRx() {
+        return instance.getRx();
+      }
+      /**
+       * <code>double rx = 1 [json_name = "rx"];</code>
+       * @param value The rx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRx(double value) {
+        copyOnWrite();
+        instance.setRx(value);
+        return this;
+      }
+      /**
+       * <code>double rx = 1 [json_name = "rx"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRx() {
+        copyOnWrite();
+        instance.clearRx();
+        return this;
+      }
+
+      /**
+       * <code>double ry = 2 [json_name = "ry"];</code>
+       * @return The ry.
+       */
+      @java.lang.Override
+      public double getRy() {
+        return instance.getRy();
+      }
+      /**
+       * <code>double ry = 2 [json_name = "ry"];</code>
+       * @param value The ry to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRy(double value) {
+        copyOnWrite();
+        instance.setRy(value);
+        return this;
+      }
+      /**
+       * <code>double ry = 2 [json_name = "ry"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRy() {
+        copyOnWrite();
+        instance.clearRy();
+        return this;
+      }
+
+      /**
+       * <code>double rz = 3 [json_name = "rz"];</code>
+       * @return The rz.
+       */
+      @java.lang.Override
+      public double getRz() {
+        return instance.getRz();
+      }
+      /**
+       * <code>double rz = 3 [json_name = "rz"];</code>
+       * @param value The rz to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRz(double value) {
+        copyOnWrite();
+        instance.setRz(value);
+        return this;
+      }
+      /**
+       * <code>double rz = 3 [json_name = "rz"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRz() {
+        copyOnWrite();
+        instance.clearRz();
+        return this;
+      }
+
+      /**
+       * <code>double theta = 4 [json_name = "theta"];</code>
+       * @return The theta.
+       */
+      @java.lang.Override
+      public double getTheta() {
+        return instance.getTheta();
+      }
+      /**
+       * <code>double theta = 4 [json_name = "theta"];</code>
+       * @param value The theta to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTheta(double value) {
+        copyOnWrite();
+        instance.setTheta(value);
+        return this;
+      }
+      /**
+       * <code>double theta = 4 [json_name = "theta"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTheta() {
+        copyOnWrite();
+        instance.clearTheta();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.AxisAngles)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.AxisAngles();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "rx_",
+              "ry_",
+              "rz_",
+              "theta_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0000\u0002\u0000" +
+                "\u0003\u0000\u0004\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.AxisAngles> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.AxisAngles.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.AxisAngles>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.AxisAngles)
+    private static final com.viam.common.v1.Common.AxisAngles DEFAULT_INSTANCE;
+    static {
+      AxisAngles defaultInstance = new AxisAngles();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AxisAngles.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.AxisAngles getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<AxisAngles> PARSER;
+
+    public static com.google.protobuf.Parser<AxisAngles> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface KinematicJointOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.KinematicJoint)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Parent link id
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     * @return The parent.
+     */
+    java.lang.String getParent();
+    /**
+     * <pre>
+     * Parent link id
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     * @return The bytes for parent.
+     */
+    com.google.protobuf.ByteString
+        getParentBytes();
+
+    /**
+     * <code>.viam.common.v1.JointType type = 3 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.viam.common.v1.JointType type = 3 [json_name = "type"];</code>
+     * @return The type.
+     */
+    com.viam.common.v1.Common.JointType getType();
+
+    /**
+     * <code>.viam.common.v1.Vector3 axis = 4 [json_name = "axis"];</code>
+     * @return Whether the axis field is set.
+     */
+    boolean hasAxis();
+    /**
+     * <code>.viam.common.v1.Vector3 axis = 4 [json_name = "axis"];</code>
+     * @return The axis.
+     */
+    com.viam.common.v1.Common.Vector3 getAxis();
+
+    /**
+     * <pre>
+     * Effective limits the component serves
+     * </pre>
+     *
+     * <code>.viam.common.v1.JointLimits limits = 5 [json_name = "limits"];</code>
+     * @return Whether the limits field is set.
+     */
+    boolean hasLimits();
+    /**
+     * <pre>
+     * Effective limits the component serves
+     * </pre>
+     *
+     * <code>.viam.common.v1.JointLimits limits = 5 [json_name = "limits"];</code>
+     * @return The limits.
+     */
+    com.viam.common.v1.Common.JointLimits getLimits();
+
+    /**
+     * <code>.viam.common.v1.MimicJoint mimic = 6 [json_name = "mimic"];</code>
+     * @return Whether the mimic field is set.
+     */
+    boolean hasMimic();
+    /**
+     * <code>.viam.common.v1.MimicJoint mimic = 6 [json_name = "mimic"];</code>
+     * @return The mimic.
+     */
+    com.viam.common.v1.Common.MimicJoint getMimic();
+
+    /**
+     * <pre>
+     * Only meaningful for prismatic joints
+     * </pre>
+     *
+     * <code>.viam.common.v1.Geometry geometry = 7 [json_name = "geometry"];</code>
+     * @return Whether the geometry field is set.
+     */
+    boolean hasGeometry();
+    /**
+     * <pre>
+     * Only meaningful for prismatic joints
+     * </pre>
+     *
+     * <code>.viam.common.v1.Geometry geometry = 7 [json_name = "geometry"];</code>
+     * @return The geometry.
+     */
+    com.viam.common.v1.Common.Geometry getGeometry();
+  }
+  /**
+   * Protobuf type {@code viam.common.v1.KinematicJoint}
+   */
+  public  static final class KinematicJoint extends
+      com.google.protobuf.GeneratedMessageLite<
+          KinematicJoint, KinematicJoint.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.KinematicJoint)
+      KinematicJointOrBuilder {
+    private KinematicJoint() {
+      id_ = "";
+      parent_ = "";
+    }
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private java.lang.String id_;
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      return id_;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
+    }
+
+    public static final int PARENT_FIELD_NUMBER = 2;
+    private java.lang.String parent_;
+    /**
+     * <pre>
+     * Parent link id
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     * @return The parent.
+     */
+    @java.lang.Override
+    public java.lang.String getParent() {
+      return parent_;
+    }
+    /**
+     * <pre>
+     * Parent link id
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     * @return The bytes for parent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getParentBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(parent_);
+    }
+    /**
+     * <pre>
+     * Parent link id
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     * @param value The parent to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setParent(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      parent_ = value;
+    }
+    /**
+     * <pre>
+     * Parent link id
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     */
+    private void clearParent() {
+
+      parent_ = getDefaultInstance().getParent();
+    }
+    /**
+     * <pre>
+     * Parent link id
+     * </pre>
+     *
+     * <code>string parent = 2 [json_name = "parent"];</code>
+     * @param value The bytes for parent to set.
+     */
+    private void setParentBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      parent_ = value.toStringUtf8();
+
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private int type_;
+    /**
+     * <code>.viam.common.v1.JointType type = 3 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.viam.common.v1.JointType type = 3 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.JointType getType() {
+      com.viam.common.v1.Common.JointType result = com.viam.common.v1.Common.JointType.forNumber(type_);
+      return result == null ? com.viam.common.v1.Common.JointType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.viam.common.v1.JointType type = 3 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setTypeValue(int value) {
+        type_ = value;
+    }
+    /**
+     * <code>.viam.common.v1.JointType type = 3 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(com.viam.common.v1.Common.JointType value) {
+      type_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.common.v1.JointType type = 3 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = 0;
+    }
+
+    public static final int AXIS_FIELD_NUMBER = 4;
+    private com.viam.common.v1.Common.Vector3 axis_;
+    /**
+     * <code>.viam.common.v1.Vector3 axis = 4 [json_name = "axis"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAxis() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.common.v1.Vector3 axis = 4 [json_name = "axis"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Vector3 getAxis() {
+      return axis_ == null ? com.viam.common.v1.Common.Vector3.getDefaultInstance() : axis_;
+    }
+    /**
+     * <code>.viam.common.v1.Vector3 axis = 4 [json_name = "axis"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setAxis(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();  // minimal bytecode null check
+      axis_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.Vector3 axis = 4 [json_name = "axis"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeAxis(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();  // minimal bytecode null check
+      if (axis_ != null &&
+          axis_ != com.viam.common.v1.Common.Vector3.getDefaultInstance()) {
+        axis_ =
+          com.viam.common.v1.Common.Vector3.newBuilder(axis_).mergeFrom(value).buildPartial();
+      } else {
+        axis_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.Vector3 axis = 4 [json_name = "axis"];</code>
+     */
+    private void clearAxis() {
+      axis_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int LIMITS_FIELD_NUMBER = 5;
+    private com.viam.common.v1.Common.JointLimits limits_;
+    /**
+     * <pre>
+     * Effective limits the component serves
+     * </pre>
+     *
+     * <code>.viam.common.v1.JointLimits limits = 5 [json_name = "limits"];</code>
+     */
+    @java.lang.Override
+    public boolean hasLimits() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Effective limits the component serves
+     * </pre>
+     *
+     * <code>.viam.common.v1.JointLimits limits = 5 [json_name = "limits"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.JointLimits getLimits() {
+      return limits_ == null ? com.viam.common.v1.Common.JointLimits.getDefaultInstance() : limits_;
+    }
+    /**
+     * <pre>
+     * Effective limits the component serves
+     * </pre>
+     *
+     * <code>.viam.common.v1.JointLimits limits = 5 [json_name = "limits"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setLimits(com.viam.common.v1.Common.JointLimits value) {
+      value.getClass();  // minimal bytecode null check
+      limits_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * Effective limits the component serves
+     * </pre>
+     *
+     * <code>.viam.common.v1.JointLimits limits = 5 [json_name = "limits"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeLimits(com.viam.common.v1.Common.JointLimits value) {
+      value.getClass();  // minimal bytecode null check
+      if (limits_ != null &&
+          limits_ != com.viam.common.v1.Common.JointLimits.getDefaultInstance()) {
+        limits_ =
+          com.viam.common.v1.Common.JointLimits.newBuilder(limits_).mergeFrom(value).buildPartial();
+      } else {
+        limits_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * Effective limits the component serves
+     * </pre>
+     *
+     * <code>.viam.common.v1.JointLimits limits = 5 [json_name = "limits"];</code>
+     */
+    private void clearLimits() {
+      limits_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int MIMIC_FIELD_NUMBER = 6;
+    private com.viam.common.v1.Common.MimicJoint mimic_;
+    /**
+     * <code>.viam.common.v1.MimicJoint mimic = 6 [json_name = "mimic"];</code>
+     */
+    @java.lang.Override
+    public boolean hasMimic() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.viam.common.v1.MimicJoint mimic = 6 [json_name = "mimic"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.MimicJoint getMimic() {
+      return mimic_ == null ? com.viam.common.v1.Common.MimicJoint.getDefaultInstance() : mimic_;
+    }
+    /**
+     * <code>.viam.common.v1.MimicJoint mimic = 6 [json_name = "mimic"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMimic(com.viam.common.v1.Common.MimicJoint value) {
+      value.getClass();  // minimal bytecode null check
+      mimic_ = value;
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.viam.common.v1.MimicJoint mimic = 6 [json_name = "mimic"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeMimic(com.viam.common.v1.Common.MimicJoint value) {
+      value.getClass();  // minimal bytecode null check
+      if (mimic_ != null &&
+          mimic_ != com.viam.common.v1.Common.MimicJoint.getDefaultInstance()) {
+        mimic_ =
+          com.viam.common.v1.Common.MimicJoint.newBuilder(mimic_).mergeFrom(value).buildPartial();
+      } else {
+        mimic_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.viam.common.v1.MimicJoint mimic = 6 [json_name = "mimic"];</code>
+     */
+    private void clearMimic() {
+      mimic_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static final int GEOMETRY_FIELD_NUMBER = 7;
+    private com.viam.common.v1.Common.Geometry geometry_;
+    /**
+     * <pre>
+     * Only meaningful for prismatic joints
+     * </pre>
+     *
+     * <code>.viam.common.v1.Geometry geometry = 7 [json_name = "geometry"];</code>
+     */
+    @java.lang.Override
+    public boolean hasGeometry() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Only meaningful for prismatic joints
+     * </pre>
+     *
+     * <code>.viam.common.v1.Geometry geometry = 7 [json_name = "geometry"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Geometry getGeometry() {
+      return geometry_ == null ? com.viam.common.v1.Common.Geometry.getDefaultInstance() : geometry_;
+    }
+    /**
+     * <pre>
+     * Only meaningful for prismatic joints
+     * </pre>
+     *
+     * <code>.viam.common.v1.Geometry geometry = 7 [json_name = "geometry"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setGeometry(com.viam.common.v1.Common.Geometry value) {
+      value.getClass();  // minimal bytecode null check
+      geometry_ = value;
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * Only meaningful for prismatic joints
+     * </pre>
+     *
+     * <code>.viam.common.v1.Geometry geometry = 7 [json_name = "geometry"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeGeometry(com.viam.common.v1.Common.Geometry value) {
+      value.getClass();  // minimal bytecode null check
+      if (geometry_ != null &&
+          geometry_ != com.viam.common.v1.Common.Geometry.getDefaultInstance()) {
+        geometry_ =
+          com.viam.common.v1.Common.Geometry.newBuilder(geometry_).mergeFrom(value).buildPartial();
+      } else {
+        geometry_ = value;
+      }
+      bitField0_ |= 0x00000008;
+    }
+    /**
+     * <pre>
+     * Only meaningful for prismatic joints
+     * </pre>
+     *
+     * <code>.viam.common.v1.Geometry geometry = 7 [json_name = "geometry"];</code>
+     */
+    private void clearGeometry() {
+      geometry_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+    }
+
+    public static com.viam.common.v1.Common.KinematicJoint parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.KinematicJoint parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicJoint parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.KinematicJoint parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicJoint parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.KinematicJoint parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicJoint parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.KinematicJoint parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.KinematicJoint parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.KinematicJoint parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicJoint parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.KinematicJoint parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.KinematicJoint prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.common.v1.KinematicJoint}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.KinematicJoint, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.KinematicJoint)
+        com.viam.common.v1.Common.KinematicJointOrBuilder {
+      // Construct using com.viam.common.v1.Common.KinematicJoint.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        return instance.getId();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        return instance.getIdBytes();
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setId(value);
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        copyOnWrite();
+        instance.clearId();
+        return this;
+      }
+      /**
+       * <code>string id = 1 [json_name = "id"];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Parent link id
+       * </pre>
+       *
+       * <code>string parent = 2 [json_name = "parent"];</code>
+       * @return The parent.
+       */
+      @java.lang.Override
+      public java.lang.String getParent() {
+        return instance.getParent();
+      }
+      /**
+       * <pre>
+       * Parent link id
+       * </pre>
+       *
+       * <code>string parent = 2 [json_name = "parent"];</code>
+       * @return The bytes for parent.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getParentBytes() {
+        return instance.getParentBytes();
+      }
+      /**
+       * <pre>
+       * Parent link id
+       * </pre>
+       *
+       * <code>string parent = 2 [json_name = "parent"];</code>
+       * @param value The parent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParent(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setParent(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Parent link id
+       * </pre>
+       *
+       * <code>string parent = 2 [json_name = "parent"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParent() {
+        copyOnWrite();
+        instance.clearParent();
+        return this;
+      }
+      /**
+       * <pre>
+       * Parent link id
+       * </pre>
+       *
+       * <code>string parent = 2 [json_name = "parent"];</code>
+       * @param value The bytes for parent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setParentBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.common.v1.JointType type = 3 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
+      }
+      /**
+       * <code>.viam.common.v1.JointType type = 3 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        copyOnWrite();
+        instance.setTypeValue(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.JointType type = 3 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.JointType getType() {
+        return instance.getType();
+      }
+      /**
+       * <code>.viam.common.v1.JointType type = 3 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setType(com.viam.common.v1.Common.JointType value) {
+        copyOnWrite();
+        instance.setType(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.JointType type = 3 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        copyOnWrite();
+        instance.clearType();
+        return this;
+      }
+
+      /**
+       * <code>.viam.common.v1.Vector3 axis = 4 [json_name = "axis"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAxis() {
+        return instance.hasAxis();
+      }
+      /**
+       * <code>.viam.common.v1.Vector3 axis = 4 [json_name = "axis"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Vector3 getAxis() {
+        return instance.getAxis();
+      }
+      /**
+       * <code>.viam.common.v1.Vector3 axis = 4 [json_name = "axis"];</code>
+       */
+      public Builder setAxis(com.viam.common.v1.Common.Vector3 value) {
+        copyOnWrite();
+        instance.setAxis(value);
+        return this;
+        }
+      /**
+       * <code>.viam.common.v1.Vector3 axis = 4 [json_name = "axis"];</code>
+       */
+      public Builder setAxis(
+          com.viam.common.v1.Common.Vector3.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAxis(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.Vector3 axis = 4 [json_name = "axis"];</code>
+       */
+      public Builder mergeAxis(com.viam.common.v1.Common.Vector3 value) {
+        copyOnWrite();
+        instance.mergeAxis(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.Vector3 axis = 4 [json_name = "axis"];</code>
+       */
+      public Builder clearAxis() {  copyOnWrite();
+        instance.clearAxis();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Effective limits the component serves
+       * </pre>
+       *
+       * <code>.viam.common.v1.JointLimits limits = 5 [json_name = "limits"];</code>
+       */
+      @java.lang.Override
+      public boolean hasLimits() {
+        return instance.hasLimits();
+      }
+      /**
+       * <pre>
+       * Effective limits the component serves
+       * </pre>
+       *
+       * <code>.viam.common.v1.JointLimits limits = 5 [json_name = "limits"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.JointLimits getLimits() {
+        return instance.getLimits();
+      }
+      /**
+       * <pre>
+       * Effective limits the component serves
+       * </pre>
+       *
+       * <code>.viam.common.v1.JointLimits limits = 5 [json_name = "limits"];</code>
+       */
+      public Builder setLimits(com.viam.common.v1.Common.JointLimits value) {
+        copyOnWrite();
+        instance.setLimits(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Effective limits the component serves
+       * </pre>
+       *
+       * <code>.viam.common.v1.JointLimits limits = 5 [json_name = "limits"];</code>
+       */
+      public Builder setLimits(
+          com.viam.common.v1.Common.JointLimits.Builder builderForValue) {
+        copyOnWrite();
+        instance.setLimits(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Effective limits the component serves
+       * </pre>
+       *
+       * <code>.viam.common.v1.JointLimits limits = 5 [json_name = "limits"];</code>
+       */
+      public Builder mergeLimits(com.viam.common.v1.Common.JointLimits value) {
+        copyOnWrite();
+        instance.mergeLimits(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Effective limits the component serves
+       * </pre>
+       *
+       * <code>.viam.common.v1.JointLimits limits = 5 [json_name = "limits"];</code>
+       */
+      public Builder clearLimits() {  copyOnWrite();
+        instance.clearLimits();
+        return this;
+      }
+
+      /**
+       * <code>.viam.common.v1.MimicJoint mimic = 6 [json_name = "mimic"];</code>
+       */
+      @java.lang.Override
+      public boolean hasMimic() {
+        return instance.hasMimic();
+      }
+      /**
+       * <code>.viam.common.v1.MimicJoint mimic = 6 [json_name = "mimic"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.MimicJoint getMimic() {
+        return instance.getMimic();
+      }
+      /**
+       * <code>.viam.common.v1.MimicJoint mimic = 6 [json_name = "mimic"];</code>
+       */
+      public Builder setMimic(com.viam.common.v1.Common.MimicJoint value) {
+        copyOnWrite();
+        instance.setMimic(value);
+        return this;
+        }
+      /**
+       * <code>.viam.common.v1.MimicJoint mimic = 6 [json_name = "mimic"];</code>
+       */
+      public Builder setMimic(
+          com.viam.common.v1.Common.MimicJoint.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMimic(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.MimicJoint mimic = 6 [json_name = "mimic"];</code>
+       */
+      public Builder mergeMimic(com.viam.common.v1.Common.MimicJoint value) {
+        copyOnWrite();
+        instance.mergeMimic(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.MimicJoint mimic = 6 [json_name = "mimic"];</code>
+       */
+      public Builder clearMimic() {  copyOnWrite();
+        instance.clearMimic();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Only meaningful for prismatic joints
+       * </pre>
+       *
+       * <code>.viam.common.v1.Geometry geometry = 7 [json_name = "geometry"];</code>
+       */
+      @java.lang.Override
+      public boolean hasGeometry() {
+        return instance.hasGeometry();
+      }
+      /**
+       * <pre>
+       * Only meaningful for prismatic joints
+       * </pre>
+       *
+       * <code>.viam.common.v1.Geometry geometry = 7 [json_name = "geometry"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Geometry getGeometry() {
+        return instance.getGeometry();
+      }
+      /**
+       * <pre>
+       * Only meaningful for prismatic joints
+       * </pre>
+       *
+       * <code>.viam.common.v1.Geometry geometry = 7 [json_name = "geometry"];</code>
+       */
+      public Builder setGeometry(com.viam.common.v1.Common.Geometry value) {
+        copyOnWrite();
+        instance.setGeometry(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * Only meaningful for prismatic joints
+       * </pre>
+       *
+       * <code>.viam.common.v1.Geometry geometry = 7 [json_name = "geometry"];</code>
+       */
+      public Builder setGeometry(
+          com.viam.common.v1.Common.Geometry.Builder builderForValue) {
+        copyOnWrite();
+        instance.setGeometry(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * Only meaningful for prismatic joints
+       * </pre>
+       *
+       * <code>.viam.common.v1.Geometry geometry = 7 [json_name = "geometry"];</code>
+       */
+      public Builder mergeGeometry(com.viam.common.v1.Common.Geometry value) {
+        copyOnWrite();
+        instance.mergeGeometry(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Only meaningful for prismatic joints
+       * </pre>
+       *
+       * <code>.viam.common.v1.Geometry geometry = 7 [json_name = "geometry"];</code>
+       */
+      public Builder clearGeometry() {  copyOnWrite();
+        instance.clearGeometry();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.KinematicJoint)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.KinematicJoint();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "id_",
+              "parent_",
+              "type_",
+              "axis_",
+              "limits_",
+              "mimic_",
+              "geometry_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\f\u0004\u1009\u0000\u0005\u1009\u0001\u0006\u1009\u0002\u0007\u1009\u0003" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.KinematicJoint> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.KinematicJoint.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.KinematicJoint>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.KinematicJoint)
+    private static final com.viam.common.v1.Common.KinematicJoint DEFAULT_INSTANCE;
+    static {
+      KinematicJoint defaultInstance = new KinematicJoint();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        KinematicJoint.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.KinematicJoint getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<KinematicJoint> PARSER;
+
+    public static com.google.protobuf.Parser<KinematicJoint> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface JointLimitsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.JointLimits)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional double min = 1 [json_name = "min"];</code>
+     * @return Whether the min field is set.
+     */
+    boolean hasMin();
+    /**
+     * <code>optional double min = 1 [json_name = "min"];</code>
+     * @return The min.
+     */
+    double getMin();
+
+    /**
+     * <code>optional double max = 2 [json_name = "max"];</code>
+     * @return Whether the max field is set.
+     */
+    boolean hasMax();
+    /**
+     * <code>optional double max = 2 [json_name = "max"];</code>
+     * @return The max.
+     */
+    double getMax();
+
+    /**
+     * <code>optional double max_velocity = 3 [json_name = "maxVelocity"];</code>
+     * @return Whether the maxVelocity field is set.
+     */
+    boolean hasMaxVelocity();
+    /**
+     * <code>optional double max_velocity = 3 [json_name = "maxVelocity"];</code>
+     * @return The maxVelocity.
+     */
+    double getMaxVelocity();
+
+    /**
+     * <code>optional double max_acceleration = 4 [json_name = "maxAcceleration"];</code>
+     * @return Whether the maxAcceleration field is set.
+     */
+    boolean hasMaxAcceleration();
+    /**
+     * <code>optional double max_acceleration = 4 [json_name = "maxAcceleration"];</code>
+     * @return The maxAcceleration.
+     */
+    double getMaxAcceleration();
+  }
+  /**
+   * <pre>
+   * Degrees, deg/s and deg/s^2 for revolute joints, mm, mm/s and mm/s^2 for prismatic. Absent means unbounded.
+   * </pre>
+   *
+   * Protobuf type {@code viam.common.v1.JointLimits}
+   */
+  public  static final class JointLimits extends
+      com.google.protobuf.GeneratedMessageLite<
+          JointLimits, JointLimits.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.JointLimits)
+      JointLimitsOrBuilder {
+    private JointLimits() {
+    }
+    private int bitField0_;
+    public static final int MIN_FIELD_NUMBER = 1;
+    private double min_;
+    /**
+     * <code>optional double min = 1 [json_name = "min"];</code>
+     * @return Whether the min field is set.
+     */
+    @java.lang.Override
+    public boolean hasMin() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional double min = 1 [json_name = "min"];</code>
+     * @return The min.
+     */
+    @java.lang.Override
+    public double getMin() {
+      return min_;
+    }
+    /**
+     * <code>optional double min = 1 [json_name = "min"];</code>
+     * @param value The min to set.
+     */
+    private void setMin(double value) {
+      bitField0_ |= 0x00000001;
+      min_ = value;
+    }
+    /**
+     * <code>optional double min = 1 [json_name = "min"];</code>
+     */
+    private void clearMin() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      min_ = 0D;
+    }
+
+    public static final int MAX_FIELD_NUMBER = 2;
+    private double max_;
+    /**
+     * <code>optional double max = 2 [json_name = "max"];</code>
+     * @return Whether the max field is set.
+     */
+    @java.lang.Override
+    public boolean hasMax() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional double max = 2 [json_name = "max"];</code>
+     * @return The max.
+     */
+    @java.lang.Override
+    public double getMax() {
+      return max_;
+    }
+    /**
+     * <code>optional double max = 2 [json_name = "max"];</code>
+     * @param value The max to set.
+     */
+    private void setMax(double value) {
+      bitField0_ |= 0x00000002;
+      max_ = value;
+    }
+    /**
+     * <code>optional double max = 2 [json_name = "max"];</code>
+     */
+    private void clearMax() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      max_ = 0D;
+    }
+
+    public static final int MAX_VELOCITY_FIELD_NUMBER = 3;
+    private double maxVelocity_;
+    /**
+     * <code>optional double max_velocity = 3 [json_name = "maxVelocity"];</code>
+     * @return Whether the maxVelocity field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxVelocity() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>optional double max_velocity = 3 [json_name = "maxVelocity"];</code>
+     * @return The maxVelocity.
+     */
+    @java.lang.Override
+    public double getMaxVelocity() {
+      return maxVelocity_;
+    }
+    /**
+     * <code>optional double max_velocity = 3 [json_name = "maxVelocity"];</code>
+     * @param value The maxVelocity to set.
+     */
+    private void setMaxVelocity(double value) {
+      bitField0_ |= 0x00000004;
+      maxVelocity_ = value;
+    }
+    /**
+     * <code>optional double max_velocity = 3 [json_name = "maxVelocity"];</code>
+     */
+    private void clearMaxVelocity() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      maxVelocity_ = 0D;
+    }
+
+    public static final int MAX_ACCELERATION_FIELD_NUMBER = 4;
+    private double maxAcceleration_;
+    /**
+     * <code>optional double max_acceleration = 4 [json_name = "maxAcceleration"];</code>
+     * @return Whether the maxAcceleration field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxAcceleration() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional double max_acceleration = 4 [json_name = "maxAcceleration"];</code>
+     * @return The maxAcceleration.
+     */
+    @java.lang.Override
+    public double getMaxAcceleration() {
+      return maxAcceleration_;
+    }
+    /**
+     * <code>optional double max_acceleration = 4 [json_name = "maxAcceleration"];</code>
+     * @param value The maxAcceleration to set.
+     */
+    private void setMaxAcceleration(double value) {
+      bitField0_ |= 0x00000008;
+      maxAcceleration_ = value;
+    }
+    /**
+     * <code>optional double max_acceleration = 4 [json_name = "maxAcceleration"];</code>
+     */
+    private void clearMaxAcceleration() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      maxAcceleration_ = 0D;
+    }
+
+    public static com.viam.common.v1.Common.JointLimits parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.JointLimits parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.JointLimits parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.JointLimits parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.JointLimits parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.JointLimits parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.JointLimits parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.JointLimits parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.JointLimits parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.JointLimits parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.JointLimits parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.JointLimits parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.JointLimits prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * Degrees, deg/s and deg/s^2 for revolute joints, mm, mm/s and mm/s^2 for prismatic. Absent means unbounded.
+     * </pre>
+     *
+     * Protobuf type {@code viam.common.v1.JointLimits}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.JointLimits, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.JointLimits)
+        com.viam.common.v1.Common.JointLimitsOrBuilder {
+      // Construct using com.viam.common.v1.Common.JointLimits.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>optional double min = 1 [json_name = "min"];</code>
+       * @return Whether the min field is set.
+       */
+      @java.lang.Override
+      public boolean hasMin() {
+        return instance.hasMin();
+      }
+      /**
+       * <code>optional double min = 1 [json_name = "min"];</code>
+       * @return The min.
+       */
+      @java.lang.Override
+      public double getMin() {
+        return instance.getMin();
+      }
+      /**
+       * <code>optional double min = 1 [json_name = "min"];</code>
+       * @param value The min to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMin(double value) {
+        copyOnWrite();
+        instance.setMin(value);
+        return this;
+      }
+      /**
+       * <code>optional double min = 1 [json_name = "min"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMin() {
+        copyOnWrite();
+        instance.clearMin();
+        return this;
+      }
+
+      /**
+       * <code>optional double max = 2 [json_name = "max"];</code>
+       * @return Whether the max field is set.
+       */
+      @java.lang.Override
+      public boolean hasMax() {
+        return instance.hasMax();
+      }
+      /**
+       * <code>optional double max = 2 [json_name = "max"];</code>
+       * @return The max.
+       */
+      @java.lang.Override
+      public double getMax() {
+        return instance.getMax();
+      }
+      /**
+       * <code>optional double max = 2 [json_name = "max"];</code>
+       * @param value The max to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMax(double value) {
+        copyOnWrite();
+        instance.setMax(value);
+        return this;
+      }
+      /**
+       * <code>optional double max = 2 [json_name = "max"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMax() {
+        copyOnWrite();
+        instance.clearMax();
+        return this;
+      }
+
+      /**
+       * <code>optional double max_velocity = 3 [json_name = "maxVelocity"];</code>
+       * @return Whether the maxVelocity field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxVelocity() {
+        return instance.hasMaxVelocity();
+      }
+      /**
+       * <code>optional double max_velocity = 3 [json_name = "maxVelocity"];</code>
+       * @return The maxVelocity.
+       */
+      @java.lang.Override
+      public double getMaxVelocity() {
+        return instance.getMaxVelocity();
+      }
+      /**
+       * <code>optional double max_velocity = 3 [json_name = "maxVelocity"];</code>
+       * @param value The maxVelocity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxVelocity(double value) {
+        copyOnWrite();
+        instance.setMaxVelocity(value);
+        return this;
+      }
+      /**
+       * <code>optional double max_velocity = 3 [json_name = "maxVelocity"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxVelocity() {
+        copyOnWrite();
+        instance.clearMaxVelocity();
+        return this;
+      }
+
+      /**
+       * <code>optional double max_acceleration = 4 [json_name = "maxAcceleration"];</code>
+       * @return Whether the maxAcceleration field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxAcceleration() {
+        return instance.hasMaxAcceleration();
+      }
+      /**
+       * <code>optional double max_acceleration = 4 [json_name = "maxAcceleration"];</code>
+       * @return The maxAcceleration.
+       */
+      @java.lang.Override
+      public double getMaxAcceleration() {
+        return instance.getMaxAcceleration();
+      }
+      /**
+       * <code>optional double max_acceleration = 4 [json_name = "maxAcceleration"];</code>
+       * @param value The maxAcceleration to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxAcceleration(double value) {
+        copyOnWrite();
+        instance.setMaxAcceleration(value);
+        return this;
+      }
+      /**
+       * <code>optional double max_acceleration = 4 [json_name = "maxAcceleration"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxAcceleration() {
+        copyOnWrite();
+        instance.clearMaxAcceleration();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.JointLimits)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.JointLimits();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "min_",
+              "max_",
+              "maxVelocity_",
+              "maxAcceleration_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u1000\u0000\u0002" +
+                "\u1000\u0001\u0003\u1000\u0002\u0004\u1000\u0003";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.JointLimits> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.JointLimits.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.JointLimits>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.JointLimits)
+    private static final com.viam.common.v1.Common.JointLimits DEFAULT_INSTANCE;
+    static {
+      JointLimits defaultInstance = new JointLimits();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        JointLimits.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.JointLimits getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<JointLimits> PARSER;
+
+    public static com.google.protobuf.Parser<JointLimits> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface MimicJointOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.MimicJoint)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string joint = 1 [json_name = "joint"];</code>
+     * @return The joint.
+     */
+    java.lang.String getJoint();
+    /**
+     * <code>string joint = 1 [json_name = "joint"];</code>
+     * @return The bytes for joint.
+     */
+    com.google.protobuf.ByteString
+        getJointBytes();
+
+    /**
+     * <code>double multiplier = 2 [json_name = "multiplier"];</code>
+     * @return The multiplier.
+     */
+    double getMultiplier();
+
+    /**
+     * <code>double offset = 3 [json_name = "offset"];</code>
+     * @return The offset.
+     */
+    double getOffset();
+  }
+  /**
+   * <pre>
+   * Position is multiplier * position of joint + offset
+   * </pre>
+   *
+   * Protobuf type {@code viam.common.v1.MimicJoint}
+   */
+  public  static final class MimicJoint extends
+      com.google.protobuf.GeneratedMessageLite<
+          MimicJoint, MimicJoint.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.MimicJoint)
+      MimicJointOrBuilder {
+    private MimicJoint() {
+      joint_ = "";
+    }
+    public static final int JOINT_FIELD_NUMBER = 1;
+    private java.lang.String joint_;
+    /**
+     * <code>string joint = 1 [json_name = "joint"];</code>
+     * @return The joint.
+     */
+    @java.lang.Override
+    public java.lang.String getJoint() {
+      return joint_;
+    }
+    /**
+     * <code>string joint = 1 [json_name = "joint"];</code>
+     * @return The bytes for joint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJointBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(joint_);
+    }
+    /**
+     * <code>string joint = 1 [json_name = "joint"];</code>
+     * @param value The joint to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setJoint(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      joint_ = value;
+    }
+    /**
+     * <code>string joint = 1 [json_name = "joint"];</code>
+     */
+    private void clearJoint() {
+
+      joint_ = getDefaultInstance().getJoint();
+    }
+    /**
+     * <code>string joint = 1 [json_name = "joint"];</code>
+     * @param value The bytes for joint to set.
+     */
+    private void setJointBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      joint_ = value.toStringUtf8();
+
+    }
+
+    public static final int MULTIPLIER_FIELD_NUMBER = 2;
+    private double multiplier_;
+    /**
+     * <code>double multiplier = 2 [json_name = "multiplier"];</code>
+     * @return The multiplier.
+     */
+    @java.lang.Override
+    public double getMultiplier() {
+      return multiplier_;
+    }
+    /**
+     * <code>double multiplier = 2 [json_name = "multiplier"];</code>
+     * @param value The multiplier to set.
+     */
+    private void setMultiplier(double value) {
+      
+      multiplier_ = value;
+    }
+    /**
+     * <code>double multiplier = 2 [json_name = "multiplier"];</code>
+     */
+    private void clearMultiplier() {
+
+      multiplier_ = 0D;
+    }
+
+    public static final int OFFSET_FIELD_NUMBER = 3;
+    private double offset_;
+    /**
+     * <code>double offset = 3 [json_name = "offset"];</code>
+     * @return The offset.
+     */
+    @java.lang.Override
+    public double getOffset() {
+      return offset_;
+    }
+    /**
+     * <code>double offset = 3 [json_name = "offset"];</code>
+     * @param value The offset to set.
+     */
+    private void setOffset(double value) {
+      
+      offset_ = value;
+    }
+    /**
+     * <code>double offset = 3 [json_name = "offset"];</code>
+     */
+    private void clearOffset() {
+
+      offset_ = 0D;
+    }
+
+    public static com.viam.common.v1.Common.MimicJoint parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.MimicJoint parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.MimicJoint parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.MimicJoint parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.MimicJoint parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.MimicJoint parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.MimicJoint parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.MimicJoint parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.MimicJoint parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.MimicJoint parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.MimicJoint parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.MimicJoint parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.MimicJoint prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * Position is multiplier * position of joint + offset
+     * </pre>
+     *
+     * Protobuf type {@code viam.common.v1.MimicJoint}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.MimicJoint, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.MimicJoint)
+        com.viam.common.v1.Common.MimicJointOrBuilder {
+      // Construct using com.viam.common.v1.Common.MimicJoint.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string joint = 1 [json_name = "joint"];</code>
+       * @return The joint.
+       */
+      @java.lang.Override
+      public java.lang.String getJoint() {
+        return instance.getJoint();
+      }
+      /**
+       * <code>string joint = 1 [json_name = "joint"];</code>
+       * @return The bytes for joint.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getJointBytes() {
+        return instance.getJointBytes();
+      }
+      /**
+       * <code>string joint = 1 [json_name = "joint"];</code>
+       * @param value The joint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJoint(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setJoint(value);
+        return this;
+      }
+      /**
+       * <code>string joint = 1 [json_name = "joint"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJoint() {
+        copyOnWrite();
+        instance.clearJoint();
+        return this;
+      }
+      /**
+       * <code>string joint = 1 [json_name = "joint"];</code>
+       * @param value The bytes for joint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJointBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setJointBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>double multiplier = 2 [json_name = "multiplier"];</code>
+       * @return The multiplier.
+       */
+      @java.lang.Override
+      public double getMultiplier() {
+        return instance.getMultiplier();
+      }
+      /**
+       * <code>double multiplier = 2 [json_name = "multiplier"];</code>
+       * @param value The multiplier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMultiplier(double value) {
+        copyOnWrite();
+        instance.setMultiplier(value);
+        return this;
+      }
+      /**
+       * <code>double multiplier = 2 [json_name = "multiplier"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMultiplier() {
+        copyOnWrite();
+        instance.clearMultiplier();
+        return this;
+      }
+
+      /**
+       * <code>double offset = 3 [json_name = "offset"];</code>
+       * @return The offset.
+       */
+      @java.lang.Override
+      public double getOffset() {
+        return instance.getOffset();
+      }
+      /**
+       * <code>double offset = 3 [json_name = "offset"];</code>
+       * @param value The offset to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOffset(double value) {
+        copyOnWrite();
+        instance.setOffset(value);
+        return this;
+      }
+      /**
+       * <code>double offset = 3 [json_name = "offset"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOffset() {
+        copyOnWrite();
+        instance.clearOffset();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.MimicJoint)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.MimicJoint();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "joint_",
+              "multiplier_",
+              "offset_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0000" +
+                "\u0003\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.MimicJoint> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.MimicJoint.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.MimicJoint>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.MimicJoint)
+    private static final com.viam.common.v1.Common.MimicJoint DEFAULT_INSTANCE;
+    static {
+      MimicJoint defaultInstance = new MimicJoint();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MimicJoint.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.MimicJoint getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<MimicJoint> PARSER;
+
+    public static com.google.protobuf.Parser<MimicJoint> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface KinematicPropertiesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.KinematicProperties)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * Rate the component expects to be driven at
+     * </pre>
+     *
+     * <code>optional double operating_freq_hz = 1 [json_name = "operatingFreqHz"];</code>
+     * @return Whether the operatingFreqHz field is set.
+     */
+    boolean hasOperatingFreqHz();
+    /**
+     * <pre>
+     * Rate the component expects to be driven at
+     * </pre>
+     *
+     * <code>optional double operating_freq_hz = 1 [json_name = "operatingFreqHz"];</code>
+     * @return The operatingFreqHz.
+     */
+    double getOperatingFreqHz();
+
+    /**
+     * <pre>
+     * Maximum linear speed of the tool center point
+     * </pre>
+     *
+     * <code>optional double max_linear_tcp_speed_mm_per_sec = 2 [json_name = "maxLinearTcpSpeedMmPerSec"];</code>
+     * @return Whether the maxLinearTcpSpeedMmPerSec field is set.
+     */
+    boolean hasMaxLinearTcpSpeedMmPerSec();
+    /**
+     * <pre>
+     * Maximum linear speed of the tool center point
+     * </pre>
+     *
+     * <code>optional double max_linear_tcp_speed_mm_per_sec = 2 [json_name = "maxLinearTcpSpeedMmPerSec"];</code>
+     * @return The maxLinearTcpSpeedMmPerSec.
+     */
+    double getMaxLinearTcpSpeedMmPerSec();
+  }
+  /**
+   * <pre>
+   * Properties of the component as a whole
+   * </pre>
+   *
+   * Protobuf type {@code viam.common.v1.KinematicProperties}
+   */
+  public  static final class KinematicProperties extends
+      com.google.protobuf.GeneratedMessageLite<
+          KinematicProperties, KinematicProperties.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.KinematicProperties)
+      KinematicPropertiesOrBuilder {
+    private KinematicProperties() {
+    }
+    private int bitField0_;
+    public static final int OPERATING_FREQ_HZ_FIELD_NUMBER = 1;
+    private double operatingFreqHz_;
+    /**
+     * <pre>
+     * Rate the component expects to be driven at
+     * </pre>
+     *
+     * <code>optional double operating_freq_hz = 1 [json_name = "operatingFreqHz"];</code>
+     * @return Whether the operatingFreqHz field is set.
+     */
+    @java.lang.Override
+    public boolean hasOperatingFreqHz() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Rate the component expects to be driven at
+     * </pre>
+     *
+     * <code>optional double operating_freq_hz = 1 [json_name = "operatingFreqHz"];</code>
+     * @return The operatingFreqHz.
+     */
+    @java.lang.Override
+    public double getOperatingFreqHz() {
+      return operatingFreqHz_;
+    }
+    /**
+     * <pre>
+     * Rate the component expects to be driven at
+     * </pre>
+     *
+     * <code>optional double operating_freq_hz = 1 [json_name = "operatingFreqHz"];</code>
+     * @param value The operatingFreqHz to set.
+     */
+    private void setOperatingFreqHz(double value) {
+      bitField0_ |= 0x00000001;
+      operatingFreqHz_ = value;
+    }
+    /**
+     * <pre>
+     * Rate the component expects to be driven at
+     * </pre>
+     *
+     * <code>optional double operating_freq_hz = 1 [json_name = "operatingFreqHz"];</code>
+     */
+    private void clearOperatingFreqHz() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      operatingFreqHz_ = 0D;
+    }
+
+    public static final int MAX_LINEAR_TCP_SPEED_MM_PER_SEC_FIELD_NUMBER = 2;
+    private double maxLinearTcpSpeedMmPerSec_;
+    /**
+     * <pre>
+     * Maximum linear speed of the tool center point
+     * </pre>
+     *
+     * <code>optional double max_linear_tcp_speed_mm_per_sec = 2 [json_name = "maxLinearTcpSpeedMmPerSec"];</code>
+     * @return Whether the maxLinearTcpSpeedMmPerSec field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxLinearTcpSpeedMmPerSec() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Maximum linear speed of the tool center point
+     * </pre>
+     *
+     * <code>optional double max_linear_tcp_speed_mm_per_sec = 2 [json_name = "maxLinearTcpSpeedMmPerSec"];</code>
+     * @return The maxLinearTcpSpeedMmPerSec.
+     */
+    @java.lang.Override
+    public double getMaxLinearTcpSpeedMmPerSec() {
+      return maxLinearTcpSpeedMmPerSec_;
+    }
+    /**
+     * <pre>
+     * Maximum linear speed of the tool center point
+     * </pre>
+     *
+     * <code>optional double max_linear_tcp_speed_mm_per_sec = 2 [json_name = "maxLinearTcpSpeedMmPerSec"];</code>
+     * @param value The maxLinearTcpSpeedMmPerSec to set.
+     */
+    private void setMaxLinearTcpSpeedMmPerSec(double value) {
+      bitField0_ |= 0x00000002;
+      maxLinearTcpSpeedMmPerSec_ = value;
+    }
+    /**
+     * <pre>
+     * Maximum linear speed of the tool center point
+     * </pre>
+     *
+     * <code>optional double max_linear_tcp_speed_mm_per_sec = 2 [json_name = "maxLinearTcpSpeedMmPerSec"];</code>
+     */
+    private void clearMaxLinearTcpSpeedMmPerSec() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      maxLinearTcpSpeedMmPerSec_ = 0D;
+    }
+
+    public static com.viam.common.v1.Common.KinematicProperties parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.KinematicProperties parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicProperties parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.KinematicProperties parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicProperties parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.KinematicProperties parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicProperties parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.KinematicProperties parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.KinematicProperties parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.KinematicProperties parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.KinematicProperties parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.KinematicProperties parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.KinematicProperties prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * Properties of the component as a whole
+     * </pre>
+     *
+     * Protobuf type {@code viam.common.v1.KinematicProperties}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.KinematicProperties, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.KinematicProperties)
+        com.viam.common.v1.Common.KinematicPropertiesOrBuilder {
+      // Construct using com.viam.common.v1.Common.KinematicProperties.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * Rate the component expects to be driven at
+       * </pre>
+       *
+       * <code>optional double operating_freq_hz = 1 [json_name = "operatingFreqHz"];</code>
+       * @return Whether the operatingFreqHz field is set.
+       */
+      @java.lang.Override
+      public boolean hasOperatingFreqHz() {
+        return instance.hasOperatingFreqHz();
+      }
+      /**
+       * <pre>
+       * Rate the component expects to be driven at
+       * </pre>
+       *
+       * <code>optional double operating_freq_hz = 1 [json_name = "operatingFreqHz"];</code>
+       * @return The operatingFreqHz.
+       */
+      @java.lang.Override
+      public double getOperatingFreqHz() {
+        return instance.getOperatingFreqHz();
+      }
+      /**
+       * <pre>
+       * Rate the component expects to be driven at
+       * </pre>
+       *
+       * <code>optional double operating_freq_hz = 1 [json_name = "operatingFreqHz"];</code>
+       * @param value The operatingFreqHz to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperatingFreqHz(double value) {
+        copyOnWrite();
+        instance.setOperatingFreqHz(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate the component expects to be driven at
+       * </pre>
+       *
+       * <code>optional double operating_freq_hz = 1 [json_name = "operatingFreqHz"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperatingFreqHz() {
+        copyOnWrite();
+        instance.clearOperatingFreqHz();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Maximum linear speed of the tool center point
+       * </pre>
+       *
+       * <code>optional double max_linear_tcp_speed_mm_per_sec = 2 [json_name = "maxLinearTcpSpeedMmPerSec"];</code>
+       * @return Whether the maxLinearTcpSpeedMmPerSec field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxLinearTcpSpeedMmPerSec() {
+        return instance.hasMaxLinearTcpSpeedMmPerSec();
+      }
+      /**
+       * <pre>
+       * Maximum linear speed of the tool center point
+       * </pre>
+       *
+       * <code>optional double max_linear_tcp_speed_mm_per_sec = 2 [json_name = "maxLinearTcpSpeedMmPerSec"];</code>
+       * @return The maxLinearTcpSpeedMmPerSec.
+       */
+      @java.lang.Override
+      public double getMaxLinearTcpSpeedMmPerSec() {
+        return instance.getMaxLinearTcpSpeedMmPerSec();
+      }
+      /**
+       * <pre>
+       * Maximum linear speed of the tool center point
+       * </pre>
+       *
+       * <code>optional double max_linear_tcp_speed_mm_per_sec = 2 [json_name = "maxLinearTcpSpeedMmPerSec"];</code>
+       * @param value The maxLinearTcpSpeedMmPerSec to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxLinearTcpSpeedMmPerSec(double value) {
+        copyOnWrite();
+        instance.setMaxLinearTcpSpeedMmPerSec(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum linear speed of the tool center point
+       * </pre>
+       *
+       * <code>optional double max_linear_tcp_speed_mm_per_sec = 2 [json_name = "maxLinearTcpSpeedMmPerSec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxLinearTcpSpeedMmPerSec() {
+        copyOnWrite();
+        instance.clearMaxLinearTcpSpeedMmPerSec();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.KinematicProperties)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.KinematicProperties();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "operatingFreqHz_",
+              "maxLinearTcpSpeedMmPerSec_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1000\u0000\u0002" +
+                "\u1000\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.KinematicProperties> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.KinematicProperties.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.KinematicProperties>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.KinematicProperties)
+    private static final com.viam.common.v1.Common.KinematicProperties DEFAULT_INSTANCE;
+    static {
+      KinematicProperties defaultInstance = new KinematicProperties();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        KinematicProperties.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.KinematicProperties getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<KinematicProperties> PARSER;
+
+    public static com.google.protobuf.Parser<KinematicProperties> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }
