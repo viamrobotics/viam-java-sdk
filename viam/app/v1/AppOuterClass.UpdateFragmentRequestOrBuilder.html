@@ -121,6 +121,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block"><code>.google.protobuf.Struct config = 3 [json_name = "config"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFragmentConfigJson()" class="member-name-link">getFragmentConfigJson</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Fragment config JSON, preserving key order.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFragmentConfigJsonBytes()" class="member-name-link">getFragmentConfigJsonBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Fragment config JSON, preserving key order.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string id = 1 [json_name = "id"];</code></div>
@@ -166,18 +178,24 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block"><code>.google.protobuf.Struct config = 3 [json_name = "config"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLastKnownUpdate()" class="member-name-link">hasLastKnownUpdate</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasFragmentConfigJson()" class="member-name-link">hasFragmentConfigJson</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>optional .google.protobuf.Timestamp last_known_update = 6 [json_name = "lastKnownUpdate"];</code></div>
+<div class="block">
+ Fragment config JSON, preserving key order.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPublic()" class="member-name-link">hasPublic</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLastKnownUpdate()" class="member-name-link">hasLastKnownUpdate</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>optional bool public = 4 [json_name = "public"];</code></div>
+<div class="block"><code>optional .google.protobuf.Timestamp last_known_update = 6 [json_name = "lastKnownUpdate"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasVisibility()" class="member-name-link">hasVisibility</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPublic()" class="member-name-link">hasPublic</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>optional bool public = 4 [json_name = "public"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasVisibility()" class="member-name-link">hasVisibility</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>optional .viam.app.v1.FragmentVisibility visibility = 5 [json_name = "visibility"];</code></div>
 </div>
 </div>
@@ -337,6 +355,51 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The lastKnownUpdate.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFragmentConfigJson()">
+<h3>hasFragmentConfigJson</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFragmentConfigJson</span>()</div>
+<div class="block"><pre>
+ Fragment config JSON, preserving key order. Takes precedence over config.
+ </pre>
+
+ <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the fragmentConfigJson field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFragmentConfigJson()">
+<h3>getFragmentConfigJson</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFragmentConfigJson</span>()</div>
+<div class="block"><pre>
+ Fragment config JSON, preserving key order. Takes precedence over config.
+ </pre>
+
+ <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The fragmentConfigJson.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFragmentConfigJsonBytes()">
+<h3>getFragmentConfigJsonBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getFragmentConfigJsonBytes</span>()</div>
+<div class="block"><pre>
+ Fragment config JSON, preserving key order. Takes precedence over config.
+ </pre>
+
+ <code>optional string fragment_config_json = 7 [json_name = "fragmentConfigJson"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for fragmentConfigJson.</dd>
 </dl>
 </section>
 </li>

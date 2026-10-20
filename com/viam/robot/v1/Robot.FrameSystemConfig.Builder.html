@@ -123,7 +123,7 @@ implements <a href="Robot.FrameSystemConfigOrBuilder.html" title="interface in c
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -135,21 +135,31 @@ implements <a href="Robot.FrameSystemConfigOrBuilder.html" title="interface in c
 <div class="block">
  this is an experimental API message</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearKinematics()" class="member-name-link">clearKinematics</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#clearKinematics()" class="member-name-link">clearKinematics</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../common/v1/Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFrame()" class="member-name-link">getFrame</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearModel()" class="member-name-link">clearModel</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../common/v1/Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFrame()" class="member-name-link">getFrame</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  this is an experimental API message</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getKinematics()" class="member-name-link">getKinematics</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getKinematics()" class="member-name-link">getKinematics</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../common/v1/Common.KinematicModel.html" title="class in com.viam.common.v1">Common.KinematicModel</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModel()" class="member-name-link">getModel</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFrame()" class="member-name-link">hasFrame</a>()</code></div>
@@ -157,21 +167,31 @@ implements <a href="Robot.FrameSystemConfigOrBuilder.html" title="interface in c
 <div class="block">
  this is an experimental API message</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasKinematics()" class="member-name-link">hasKinematics</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#hasKinematics()" class="member-name-link">hasKinematics</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrame(com.viam.common.v1.Common.Transform)" class="member-name-link">mergeFrame</a><wbr>(<a href="../../common/v1/Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a>&nbsp;value)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasModel()" class="member-name-link">hasModel</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrame(com.viam.common.v1.Common.Transform)" class="member-name-link">mergeFrame</a><wbr>(<a href="../../common/v1/Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  this is an experimental API message</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#mergeKinematics(com.google.protobuf.Struct)" class="member-name-link">mergeKinematics</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeKinematics(com.google.protobuf.Struct)" class="member-name-link">mergeKinematics</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeModel(com.viam.common.v1.Common.KinematicModel)" class="member-name-link">mergeModel</a><wbr>(<a href="../../common/v1/Common.KinematicModel.html" title="class in com.viam.common.v1">Common.KinematicModel</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFrame(com.viam.common.v1.Common.Transform)" class="member-name-link">setFrame</a><wbr>(<a href="../../common/v1/Common.Transform.html" title="class in com.viam.common.v1">Common.Transform</a>&nbsp;value)</code></div>
@@ -185,15 +205,25 @@ implements <a href="Robot.FrameSystemConfigOrBuilder.html" title="interface in c
 <div class="block">
  this is an experimental API message</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#setKinematics(com.google.protobuf.Struct)" class="member-name-link">setKinematics</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#setKinematics(com.google.protobuf.Struct.Builder)" class="member-name-link">setKinematics</a><wbr>(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setKinematics(com.google.protobuf.Struct)" class="member-name-link">setKinematics</a><wbr>(com.google.protobuf.Struct&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModel(com.viam.common.v1.Common.KinematicModel)" class="member-name-link">setModel</a><wbr>(<a href="../../common/v1/Common.KinematicModel.html" title="class in com.viam.common.v1">Common.KinematicModel</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setKinematics(com.google.protobuf.Struct.Builder)" class="member-name-link">setKinematics</a><wbr>(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setModel(com.viam.common.v1.Common.KinematicModel.Builder)" class="member-name-link">setModel</a><wbr>(<a href="../../common/v1/Common.KinematicModel.Builder.html" title="class in com.viam.common.v1">Common.KinematicModel.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
 </div>
 </div>
 </div>
@@ -302,8 +332,14 @@ implements <a href="Robot.FrameSystemConfigOrBuilder.html" title="interface in c
 <li>
 <section class="detail" id="hasKinematics()">
 <h3>hasKinematics</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasKinematics</span>()</div>
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasKinematics</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><pre>
+ Deprecated: use model
+ </pre>
+
+ <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Robot.FrameSystemConfigOrBuilder.html#hasKinematics()">hasKinematics</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.FrameSystemConfigOrBuilder.html" title="interface in com.viam.robot.v1">Robot.FrameSystemConfigOrBuilder</a></code></dd>
@@ -315,8 +351,14 @@ implements <a href="Robot.FrameSystemConfigOrBuilder.html" title="interface in c
 <li>
 <section class="detail" id="getKinematics()">
 <h3>getKinematics</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getKinematics</span>()</div>
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getKinematics</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><pre>
+ Deprecated: use model
+ </pre>
+
+ <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Robot.FrameSystemConfigOrBuilder.html#getKinematics()">getKinematics</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.FrameSystemConfigOrBuilder.html" title="interface in com.viam.robot.v1">Robot.FrameSystemConfigOrBuilder</a></code></dd>
@@ -328,29 +370,107 @@ implements <a href="Robot.FrameSystemConfigOrBuilder.html" title="interface in c
 <li>
 <section class="detail" id="setKinematics(com.google.protobuf.Struct)">
 <h3>setKinematics</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></span>&nbsp;<span class="element-name">setKinematics</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></span>&nbsp;<span class="element-name">setKinematics</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><pre>
+ Deprecated: use model
+ </pre>
+
+ <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKinematics(com.google.protobuf.Struct.Builder)">
 <h3>setKinematics</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></span>&nbsp;<span class="element-name">setKinematics</span><wbr><span class="parameters">(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</span></div>
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></span>&nbsp;<span class="element-name">setKinematics</span><wbr><span class="parameters">(com.google.protobuf.Struct.Builder&nbsp;builderForValue)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><pre>
+ Deprecated: use model
+ </pre>
+
+ <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="mergeKinematics(com.google.protobuf.Struct)">
 <h3>mergeKinematics</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></span>&nbsp;<span class="element-name">mergeKinematics</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></span>&nbsp;<span class="element-name">mergeKinematics</span><wbr><span class="parameters">(com.google.protobuf.Struct&nbsp;value)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><pre>
+ Deprecated: use model
+ </pre>
+
+ <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="clearKinematics()">
 <h3>clearKinematics</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></span>&nbsp;<span class="element-name">clearKinematics</span>()</div>
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></span>&nbsp;<span class="element-name">clearKinematics</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block"><pre>
+ Deprecated: use model
+ </pre>
+
+ <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasModel()">
+<h3>hasModel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasModel</span>()</div>
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.FrameSystemConfigOrBuilder.html#hasModel()">hasModel</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.FrameSystemConfigOrBuilder.html" title="interface in com.viam.robot.v1">Robot.FrameSystemConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the model field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getModel()">
+<h3>getModel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../common/v1/Common.KinematicModel.html" title="class in com.viam.common.v1">Common.KinematicModel</a></span>&nbsp;<span class="element-name">getModel</span>()</div>
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.FrameSystemConfigOrBuilder.html#getModel()">getModel</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.FrameSystemConfigOrBuilder.html" title="interface in com.viam.robot.v1">Robot.FrameSystemConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The model.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setModel(com.viam.common.v1.Common.KinematicModel)">
+<h3>setModel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></span>&nbsp;<span class="element-name">setModel</span><wbr><span class="parameters">(<a href="../../common/v1/Common.KinematicModel.html" title="class in com.viam.common.v1">Common.KinematicModel</a>&nbsp;value)</span></div>
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setModel(com.viam.common.v1.Common.KinematicModel.Builder)">
+<h3>setModel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></span>&nbsp;<span class="element-name">setModel</span><wbr><span class="parameters">(<a href="../../common/v1/Common.KinematicModel.Builder.html" title="class in com.viam.common.v1">Common.KinematicModel.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeModel(com.viam.common.v1.Common.KinematicModel)">
+<h3>mergeModel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></span>&nbsp;<span class="element-name">mergeModel</span><wbr><span class="parameters">(<a href="../../common/v1/Common.KinematicModel.html" title="class in com.viam.common.v1">Common.KinematicModel</a>&nbsp;value)</span></div>
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearModel()">
+<h3>clearModel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FrameSystemConfig.Builder.html" title="class in com.viam.robot.v1">Robot.FrameSystemConfig.Builder</a></span>&nbsp;<span class="element-name">clearModel</span>()</div>
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
 </section>
 </li>
 </ul>

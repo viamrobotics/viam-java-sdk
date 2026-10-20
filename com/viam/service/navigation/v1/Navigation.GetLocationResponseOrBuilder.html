@@ -115,22 +115,15 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCompassHeading()" class="member-name-link">getCompassHeading</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Navigation.Location.html" title="class in com.viam.service.navigation.v1">Navigation.Location</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLocation()" class="member-name-link">getLocation</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- A number from [0-360) where 0 is north
- 90 is east, 180 is south, 270 is west</div>
+<div class="block"><code>.viam.service.navigation.v1.Location location = 1 [json_name = "location"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../../common/v1/Common.GeoPoint.html" title="class in com.viam.common.v1">Common.GeoPoint</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLocation()" class="member-name-link">getLocation</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLocation()" class="member-name-link">hasLocation</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLocation()" class="member-name-link">hasLocation</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code></div>
+<div class="block"><code>.viam.service.navigation.v1.Location location = 1 [json_name = "location"];</code></div>
 </div>
 </div>
 </div>
@@ -153,7 +146,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <section class="detail" id="hasLocation()">
 <h3>hasLocation</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLocation</span>()</div>
-<div class="block"><code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code></div>
+<div class="block"><code>.viam.service.navigation.v1.Location location = 1 [json_name = "location"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Whether the location field is set.</dd>
@@ -163,27 +156,11 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <li>
 <section class="detail" id="getLocation()">
 <h3>getLocation</h3>
-<div class="member-signature"><span class="return-type"><a href="../../../common/v1/Common.GeoPoint.html" title="class in com.viam.common.v1">Common.GeoPoint</a></span>&nbsp;<span class="element-name">getLocation</span>()</div>
-<div class="block"><code>.viam.common.v1.GeoPoint location = 1 [json_name = "location"];</code></div>
+<div class="member-signature"><span class="return-type"><a href="Navigation.Location.html" title="class in com.viam.service.navigation.v1">Navigation.Location</a></span>&nbsp;<span class="element-name">getLocation</span>()</div>
+<div class="block"><code>.viam.service.navigation.v1.Location location = 1 [json_name = "location"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The location.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getCompassHeading()">
-<h3>getCompassHeading</h3>
-<div class="member-signature"><span class="return-type">double</span>&nbsp;<span class="element-name">getCompassHeading</span>()</div>
-<div class="block"><pre>
- A number from [0-360) where 0 is north
- 90 is east, 180 is south, 270 is west
- </pre>
-
- <code>double compass_heading = 2 [json_name = "compassHeading"];</code></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>The compassHeading.</dd>
 </dl>
 </section>
 </li>

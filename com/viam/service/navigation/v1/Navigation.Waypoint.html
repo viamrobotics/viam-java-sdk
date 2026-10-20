@@ -105,7 +105,12 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public static final class </span><span class="element-name type-name-label">Navigation.Waypoint</span>
 <span class="extends-implements">extends com.google.protobuf.GeneratedMessageLite&lt;<a href="Navigation.Waypoint.html" title="class in com.viam.service.navigation.v1">Navigation.Waypoint</a>,<wbr><a href="Navigation.Waypoint.Builder.html" title="class in com.viam.service.navigation.v1">Navigation.Waypoint.Builder</a>&gt;
 implements <a href="Navigation.WaypointOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.WaypointOrBuilder</a></span></div>
-<div class="block">Protobuf type <code>viam.service.navigation.v1.Waypoint</code></div>
+<div class="block"><pre>
+ Waypoint is a route stop: either the name of a saved Location or an inline
+ Position.
+ </pre>
+
+ Protobuf type <code>viam.service.navigation.v1.Waypoint</code></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -121,8 +126,13 @@ implements <a href="Navigation.WaypointOrBuilder.html" title="interface in com.v
 <div class="col-first even-row-color"><code>static final class&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="Navigation.Waypoint.Builder.html" class="type-name-link" title="class in com.viam.service.navigation.v1">Navigation.Waypoint.Builder</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Protobuf type <code>viam.service.navigation.v1.Waypoint</code></div>
+<div class="block">
+ Waypoint is a route stop: either the name of a saved Location or an inline
+ Position.</div>
 </div>
+<div class="col-first odd-row-color"><code>static enum&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="Navigation.Waypoint.ValueCase.html" class="type-name-link" title="enum class in com.viam.service.navigation.v1">Navigation.Waypoint.ValueCase</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h2 id="nested-classes-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Nested classes/interfaces inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h2>
@@ -142,10 +152,10 @@ implements <a href="Navigation.WaypointOrBuilder.html" title="interface in com.v
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ID_FIELD_NUMBER" class="member-name-link">ID_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#LOCATION_FIELD_NUMBER" class="member-name-link">LOCATION_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#LOCATION_FIELD_NUMBER" class="member-name-link">LOCATION_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#POSITION_FIELD_NUMBER" class="member-name-link">POSITION_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
@@ -176,24 +186,32 @@ implements <a href="Navigation.WaypointOrBuilder.html" title="interface in com.v
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIdBytes()" class="member-name-link">getIdBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../common/v1/Common.GeoPoint.html" title="class in com.viam.common.v1">Common.GeoPoint</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocation()" class="member-name-link">getLocation</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code></div>
+<div class="block"><code>string location = 1 [json_name = "location"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocationBytes()" class="member-name-link">getLocationBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string location = 1 [json_name = "location"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.Position.html" title="class in com.viam.service.navigation.v1">Navigation.Position</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition()" class="member-name-link">getPosition</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.service.navigation.v1.Position position = 2 [json_name = "position"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.Waypoint.ValueCase.html" title="enum class in com.viam.service.navigation.v1">Navigation.Waypoint.ValueCase</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValueCase()" class="member-name-link">getValueCase</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLocation()" class="member-name-link">hasLocation</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string location = 1 [json_name = "location"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasLocation()" class="member-name-link">hasLocation</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasPosition()" class="member-name-link">hasPosition</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code></div>
+<div class="block"><code>.viam.service.navigation.v1.Position position = 2 [json_name = "position"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Navigation.Waypoint.Builder.html" title="class in com.viam.service.navigation.v1">Navigation.Waypoint.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -273,20 +291,6 @@ implements <a href="Navigation.WaypointOrBuilder.html" title="interface in com.v
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="ID_FIELD_NUMBER">
-<h3>ID_FIELD_NUMBER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">ID_FIELD_NUMBER</span></div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="tag-list">
-<li><a href="../../../../../constant-values.html#com.viam.service.navigation.v1.Navigation.Waypoint.ID_FIELD_NUMBER">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="LOCATION_FIELD_NUMBER">
 <h3>LOCATION_FIELD_NUMBER</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">LOCATION_FIELD_NUMBER</span></div>
@@ -295,6 +299,20 @@ implements <a href="Navigation.WaypointOrBuilder.html" title="interface in com.v
 <dd>
 <ul class="tag-list">
 <li><a href="../../../../../constant-values.html#com.viam.service.navigation.v1.Navigation.Waypoint.LOCATION_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="POSITION_FIELD_NUMBER">
+<h3>POSITION_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">POSITION_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../../constant-values.html#com.viam.service.navigation.v1.Navigation.Waypoint.POSITION_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -309,28 +327,12 @@ implements <a href="Navigation.WaypointOrBuilder.html" title="interface in com.v
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getId()">
-<h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
+<section class="detail" id="getValueCase()">
+<h3>getValueCase</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.Waypoint.ValueCase.html" title="enum class in com.viam.service.navigation.v1">Navigation.Waypoint.ValueCase</a></span>&nbsp;<span class="element-name">getValueCase</span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="Navigation.WaypointOrBuilder.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.WaypointOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.WaypointOrBuilder</a></code></dd>
-<dt>Returns:</dt>
-<dd>The id.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getIdBytes()">
-<h3>getIdBytes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getIdBytes</span>()</div>
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="Navigation.WaypointOrBuilder.html#getIdBytes()">getIdBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.WaypointOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.WaypointOrBuilder</a></code></dd>
-<dt>Returns:</dt>
-<dd>The bytes for id.</dd>
+<dd><code><a href="Navigation.WaypointOrBuilder.html#getValueCase()">getValueCase</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.WaypointOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.WaypointOrBuilder</a></code></dd>
 </dl>
 </section>
 </li>
@@ -338,7 +340,7 @@ implements <a href="Navigation.WaypointOrBuilder.html" title="interface in com.v
 <section class="detail" id="hasLocation()">
 <h3>hasLocation</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLocation</span>()</div>
-<div class="block"><code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code></div>
+<div class="block"><code>string location = 1 [json_name = "location"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Navigation.WaypointOrBuilder.html#hasLocation()">hasLocation</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.WaypointOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.WaypointOrBuilder</a></code></dd>
@@ -350,13 +352,52 @@ implements <a href="Navigation.WaypointOrBuilder.html" title="interface in com.v
 <li>
 <section class="detail" id="getLocation()">
 <h3>getLocation</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../common/v1/Common.GeoPoint.html" title="class in com.viam.common.v1">Common.GeoPoint</a></span>&nbsp;<span class="element-name">getLocation</span>()</div>
-<div class="block"><code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getLocation</span>()</div>
+<div class="block"><code>string location = 1 [json_name = "location"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Navigation.WaypointOrBuilder.html#getLocation()">getLocation</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.WaypointOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.WaypointOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The location.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLocationBytes()">
+<h3>getLocationBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getLocationBytes</span>()</div>
+<div class="block"><code>string location = 1 [json_name = "location"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Navigation.WaypointOrBuilder.html#getLocationBytes()">getLocationBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.WaypointOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.WaypointOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for location.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasPosition()">
+<h3>hasPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasPosition</span>()</div>
+<div class="block"><code>.viam.service.navigation.v1.Position position = 2 [json_name = "position"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Navigation.WaypointOrBuilder.html#hasPosition()">hasPosition</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.WaypointOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.WaypointOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the position field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPosition()">
+<h3>getPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.Position.html" title="class in com.viam.service.navigation.v1">Navigation.Position</a></span>&nbsp;<span class="element-name">getPosition</span>()</div>
+<div class="block"><code>.viam.service.navigation.v1.Position position = 2 [json_name = "position"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Navigation.WaypointOrBuilder.html#getPosition()">getPosition</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.WaypointOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.WaypointOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The position.</dd>
 </dl>
 </section>
 </li>

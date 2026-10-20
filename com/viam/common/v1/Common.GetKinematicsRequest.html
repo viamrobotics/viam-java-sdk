@@ -145,6 +145,12 @@ implements <a href="Common.GetKinematicsRequestOrBuilder.html" title="interface 
 <div class="col-second even-row-color"><code><a href="#EXTRA_FIELD_NUMBER" class="member-name-link">EXTRA_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#INCLUDE_COLLISION_MESHES_FIELD_NUMBER" class="member-name-link">INCLUDE_COLLISION_MESHES_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#INCLUDE_VISUAL_MESHES_FIELD_NUMBER" class="member-name-link">INCLUDE_VISUAL_MESHES_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 </div>
@@ -180,6 +186,18 @@ implements <a href="Common.GetKinematicsRequestOrBuilder.html" title="interface 
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  Additional arguments to the method</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIncludeCollisionMeshes()" class="member-name-link">getIncludeCollisionMeshes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Include collision mesh bytes in the response.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIncludeVisualMeshes()" class="member-name-link">getIncludeVisualMeshes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Include visual mesh bytes in the response</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
@@ -291,6 +309,34 @@ implements <a href="Common.GetKinematicsRequestOrBuilder.html" title="interface 
 </section>
 </li>
 <li>
+<section class="detail" id="INCLUDE_COLLISION_MESHES_FIELD_NUMBER">
+<h3>INCLUDE_COLLISION_MESHES_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">INCLUDE_COLLISION_MESHES_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../constant-values.html#com.viam.common.v1.Common.GetKinematicsRequest.INCLUDE_COLLISION_MESHES_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="INCLUDE_VISUAL_MESHES_FIELD_NUMBER">
+<h3>INCLUDE_VISUAL_MESHES_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">INCLUDE_VISUAL_MESHES_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../constant-values.html#com.viam.common.v1.Common.GetKinematicsRequest.INCLUDE_VISUAL_MESHES_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="EXTRA_FIELD_NUMBER">
 <h3>EXTRA_FIELD_NUMBER</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">EXTRA_FIELD_NUMBER</span></div>
@@ -343,6 +389,40 @@ implements <a href="Common.GetKinematicsRequestOrBuilder.html" title="interface 
 <dd><code><a href="Common.GetKinematicsRequestOrBuilder.html#getNameBytes()">getNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Common.GetKinematicsRequestOrBuilder.html" title="interface in com.viam.common.v1">Common.GetKinematicsRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for name.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getIncludeCollisionMeshes()">
+<h3>getIncludeCollisionMeshes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getIncludeCollisionMeshes</span>()</div>
+<div class="block"><pre>
+ Include collision mesh bytes in the response. Otherwise meshes carry only their path.
+ </pre>
+
+ <code>bool include_collision_meshes = 2 [json_name = "includeCollisionMeshes"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Common.GetKinematicsRequestOrBuilder.html#getIncludeCollisionMeshes()">getIncludeCollisionMeshes</a></code>&nbsp;in interface&nbsp;<code><a href="Common.GetKinematicsRequestOrBuilder.html" title="interface in com.viam.common.v1">Common.GetKinematicsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The includeCollisionMeshes.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getIncludeVisualMeshes()">
+<h3>getIncludeVisualMeshes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getIncludeVisualMeshes</span>()</div>
+<div class="block"><pre>
+ Include visual mesh bytes in the response
+ </pre>
+
+ <code>bool include_visual_meshes = 3 [json_name = "includeVisualMeshes"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Common.GetKinematicsRequestOrBuilder.html#getIncludeVisualMeshes()">getIncludeVisualMeshes</a></code>&nbsp;in interface&nbsp;<code><a href="Common.GetKinematicsRequestOrBuilder.html" title="interface in com.viam.common.v1">Common.GetKinematicsRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The includeVisualMeshes.</dd>
 </dl>
 </section>
 </li>

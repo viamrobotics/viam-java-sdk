@@ -116,24 +116,32 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIdBytes()" class="member-name-link">getIdBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../../common/v1/Common.GeoPoint.html" title="class in com.viam.common.v1">Common.GeoPoint</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLocation()" class="member-name-link">getLocation</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code></div>
+<div class="block"><code>string location = 1 [json_name = "location"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLocationBytes()" class="member-name-link">getLocationBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>string location = 1 [json_name = "location"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Navigation.Position.html" title="class in com.viam.service.navigation.v1">Navigation.Position</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPosition()" class="member-name-link">getPosition</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.viam.service.navigation.v1.Position position = 2 [json_name = "position"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Navigation.Waypoint.ValueCase.html" title="enum class in com.viam.service.navigation.v1">Navigation.Waypoint.ValueCase</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getValueCase()" class="member-name-link">getValueCase</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLocation()" class="member-name-link">hasLocation</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>string location = 1 [json_name = "location"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLocation()" class="member-name-link">hasLocation</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPosition()" class="member-name-link">hasPosition</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code></div>
+<div class="block"><code>.viam.service.navigation.v1.Position position = 2 [json_name = "position"];</code></div>
 </div>
 </div>
 </div>
@@ -153,32 +161,10 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getId()">
-<h3>getId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>The id.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getIdBytes()">
-<h3>getIdBytes</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getIdBytes</span>()</div>
-<div class="block"><code>string id = 1 [json_name = "id"];</code></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>The bytes for id.</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="hasLocation()">
 <h3>hasLocation</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasLocation</span>()</div>
-<div class="block"><code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code></div>
+<div class="block"><code>string location = 1 [json_name = "location"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Whether the location field is set.</dd>
@@ -188,12 +174,51 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <li>
 <section class="detail" id="getLocation()">
 <h3>getLocation</h3>
-<div class="member-signature"><span class="return-type"><a href="../../../common/v1/Common.GeoPoint.html" title="class in com.viam.common.v1">Common.GeoPoint</a></span>&nbsp;<span class="element-name">getLocation</span>()</div>
-<div class="block"><code>.viam.common.v1.GeoPoint location = 2 [json_name = "location"];</code></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getLocation</span>()</div>
+<div class="block"><code>string location = 1 [json_name = "location"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The location.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLocationBytes()">
+<h3>getLocationBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getLocationBytes</span>()</div>
+<div class="block"><code>string location = 1 [json_name = "location"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for location.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasPosition()">
+<h3>hasPosition</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasPosition</span>()</div>
+<div class="block"><code>.viam.service.navigation.v1.Position position = 2 [json_name = "position"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the position field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPosition()">
+<h3>getPosition</h3>
+<div class="member-signature"><span class="return-type"><a href="Navigation.Position.html" title="class in com.viam.service.navigation.v1">Navigation.Position</a></span>&nbsp;<span class="element-name">getPosition</span>()</div>
+<div class="block"><code>.viam.service.navigation.v1.Position position = 2 [json_name = "position"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The position.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getValueCase()">
+<h3>getValueCase</h3>
+<div class="member-signature"><span class="return-type"><a href="Navigation.Waypoint.ValueCase.html" title="enum class in com.viam.service.navigation.v1">Navigation.Waypoint.ValueCase</a></span>&nbsp;<span class="element-name">getValueCase</span>()</div>
 </section>
 </li>
 </ul>

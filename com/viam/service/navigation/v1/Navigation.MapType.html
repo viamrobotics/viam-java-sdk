@@ -104,7 +104,8 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="Navigation.MapType.html" title="enum class in com.viam.service.navigation.v1">Navigation.MapType</a>&gt;
 implements com.google.protobuf.Internal.EnumLite</span></div>
 <div class="block"><pre>
- MapType represents the various types of maps the navigation service can ingest.
+ MapType represents the type of map the navigation service operates on.
+ Each service instance uses exactly one map type.
  </pre>
 
  Protobuf enum <code>viam.service.navigation.v1.MapType</code></div>
@@ -130,11 +131,13 @@ implements com.google.protobuf.Internal.EnumLite</span></div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="#MAP_TYPE_GPS" class="member-name-link">MAP_TYPE_GPS</a></code></div>
 <div class="col-last even-row-color">
-<div class="block"><code>MAP_TYPE_GPS = 2;</code></div>
+<div class="block">
+ Positions are GeoPoses</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#MAP_TYPE_NONE" class="member-name-link">MAP_TYPE_NONE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#MAP_TYPE_LOCAL" class="member-name-link">MAP_TYPE_LOCAL</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block"><code>MAP_TYPE_NONE = 1;</code></div>
+<div class="block">
+ Positions are Poses in the active SLAM map's frame</div>
 </div>
 <div class="col-first even-row-color"><code><a href="#MAP_TYPE_UNSPECIFIED" class="member-name-link">MAP_TYPE_UNSPECIFIED</a></code></div>
 <div class="col-last even-row-color">
@@ -157,12 +160,14 @@ implements com.google.protobuf.Internal.EnumLite</span></div>
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#MAP_TYPE_GPS_VALUE" class="member-name-link">MAP_TYPE_GPS_VALUE</a></code></div>
 <div class="col-last even-row-color">
-<div class="block"><code>MAP_TYPE_GPS = 2;</code></div>
+<div class="block">
+ Positions are GeoPoses</div>
 </div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#MAP_TYPE_NONE_VALUE" class="member-name-link">MAP_TYPE_NONE_VALUE</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MAP_TYPE_LOCAL_VALUE" class="member-name-link">MAP_TYPE_LOCAL_VALUE</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block"><code>MAP_TYPE_NONE = 1;</code></div>
+<div class="block">
+ Positions are Poses in the active SLAM map's frame</div>
 </div>
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#MAP_TYPE_UNSPECIFIED_VALUE" class="member-name-link">MAP_TYPE_UNSPECIFIED_VALUE</a></code></div>
@@ -239,17 +244,25 @@ the order they are declared.</div>
 </section>
 </li>
 <li>
-<section class="detail" id="MAP_TYPE_NONE">
-<h3>MAP_TYPE_NONE</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Navigation.MapType.html" title="enum class in com.viam.service.navigation.v1">Navigation.MapType</a></span>&nbsp;<span class="element-name">MAP_TYPE_NONE</span></div>
-<div class="block"><code>MAP_TYPE_NONE = 1;</code></div>
+<section class="detail" id="MAP_TYPE_LOCAL">
+<h3>MAP_TYPE_LOCAL</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Navigation.MapType.html" title="enum class in com.viam.service.navigation.v1">Navigation.MapType</a></span>&nbsp;<span class="element-name">MAP_TYPE_LOCAL</span></div>
+<div class="block"><pre>
+ Positions are Poses in the active SLAM map's frame
+ </pre>
+
+ <code>MAP_TYPE_LOCAL = 1;</code></div>
 </section>
 </li>
 <li>
 <section class="detail" id="MAP_TYPE_GPS">
 <h3>MAP_TYPE_GPS</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Navigation.MapType.html" title="enum class in com.viam.service.navigation.v1">Navigation.MapType</a></span>&nbsp;<span class="element-name">MAP_TYPE_GPS</span></div>
-<div class="block"><code>MAP_TYPE_GPS = 2;</code></div>
+<div class="block"><pre>
+ Positions are GeoPoses
+ </pre>
+
+ <code>MAP_TYPE_GPS = 2;</code></div>
 </section>
 </li>
 <li>
@@ -282,15 +295,19 @@ the order they are declared.</div>
 </section>
 </li>
 <li>
-<section class="detail" id="MAP_TYPE_NONE_VALUE">
-<h3>MAP_TYPE_NONE_VALUE</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MAP_TYPE_NONE_VALUE</span></div>
-<div class="block"><code>MAP_TYPE_NONE = 1;</code></div>
+<section class="detail" id="MAP_TYPE_LOCAL_VALUE">
+<h3>MAP_TYPE_LOCAL_VALUE</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MAP_TYPE_LOCAL_VALUE</span></div>
+<div class="block"><pre>
+ Positions are Poses in the active SLAM map's frame
+ </pre>
+
+ <code>MAP_TYPE_LOCAL = 1;</code></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list">
-<li><a href="../../../../../constant-values.html#com.viam.service.navigation.v1.Navigation.MapType.MAP_TYPE_NONE_VALUE">Constant Field Values</a></li>
+<li><a href="../../../../../constant-values.html#com.viam.service.navigation.v1.Navigation.MapType.MAP_TYPE_LOCAL_VALUE">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -300,7 +317,11 @@ the order they are declared.</div>
 <section class="detail" id="MAP_TYPE_GPS_VALUE">
 <h3>MAP_TYPE_GPS_VALUE</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MAP_TYPE_GPS_VALUE</span></div>
-<div class="block"><code>MAP_TYPE_GPS = 2;</code></div>
+<div class="block"><pre>
+ Positions are GeoPoses
+ </pre>
+
+ <code>MAP_TYPE_GPS = 2;</code></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>

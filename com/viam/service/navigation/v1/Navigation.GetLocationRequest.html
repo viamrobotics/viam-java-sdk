@@ -145,8 +145,11 @@ implements <a href="Navigation.GetLocationRequestOrBuilder.html" title="interfac
 <div class="col-second even-row-color"><code><a href="#EXTRA_FIELD_NUMBER" class="member-name-link">EXTRA_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#LOCATION_NAME_FIELD_NUMBER" class="member-name-link">LOCATION_NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -178,24 +181,34 @@ implements <a href="Navigation.GetLocationRequestOrBuilder.html" title="interfac
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExtra()" class="member-name-link">getExtra</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Additional arguments to the method</div>
+<div class="block"><code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocationName()" class="member-name-link">getLocationName</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string location_name = 2 [json_name = "locationName"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocationNameBytes()" class="member-name-link">getLocationNameBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string location_name = 2 [json_name = "locationName"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
+<div class="block">
+ Name of the navigation service</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNameBytes()" class="member-name-link">getNameBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
+<div class="block">
+ Name of the navigation service</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasExtra()" class="member-name-link">hasExtra</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- Additional arguments to the method</div>
+<div class="block"><code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Navigation.GetLocationRequest.Builder.html" title="class in com.viam.service.navigation.v1">Navigation.GetLocationRequest.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
@@ -289,6 +302,20 @@ implements <a href="Navigation.GetLocationRequestOrBuilder.html" title="interfac
 </section>
 </li>
 <li>
+<section class="detail" id="LOCATION_NAME_FIELD_NUMBER">
+<h3>LOCATION_NAME_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">LOCATION_NAME_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../../constant-values.html#com.viam.service.navigation.v1.Navigation.GetLocationRequest.LOCATION_NAME_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="EXTRA_FIELD_NUMBER">
 <h3>EXTRA_FIELD_NUMBER</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">EXTRA_FIELD_NUMBER</span></div>
@@ -314,7 +341,11 @@ implements <a href="Navigation.GetLocationRequestOrBuilder.html" title="interfac
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
+<div class="block"><pre>
+ Name of the navigation service
+ </pre>
+
+ <code>string name = 1 [json_name = "name"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Navigation.GetLocationRequestOrBuilder.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.GetLocationRequestOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.GetLocationRequestOrBuilder</a></code></dd>
@@ -327,7 +358,11 @@ implements <a href="Navigation.GetLocationRequestOrBuilder.html" title="interfac
 <section class="detail" id="getNameBytes()">
 <h3>getNameBytes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getNameBytes</span>()</div>
-<div class="block"><code>string name = 1 [json_name = "name"];</code></div>
+<div class="block"><pre>
+ Name of the navigation service
+ </pre>
+
+ <code>string name = 1 [json_name = "name"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Navigation.GetLocationRequestOrBuilder.html#getNameBytes()">getNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.GetLocationRequestOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.GetLocationRequestOrBuilder</a></code></dd>
@@ -337,14 +372,36 @@ implements <a href="Navigation.GetLocationRequestOrBuilder.html" title="interfac
 </section>
 </li>
 <li>
+<section class="detail" id="getLocationName()">
+<h3>getLocationName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getLocationName</span>()</div>
+<div class="block"><code>string location_name = 2 [json_name = "locationName"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Navigation.GetLocationRequestOrBuilder.html#getLocationName()">getLocationName</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.GetLocationRequestOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.GetLocationRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The locationName.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLocationNameBytes()">
+<h3>getLocationNameBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getLocationNameBytes</span>()</div>
+<div class="block"><code>string location_name = 2 [json_name = "locationName"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Navigation.GetLocationRequestOrBuilder.html#getLocationNameBytes()">getLocationNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.GetLocationRequestOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.GetLocationRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for locationName.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="hasExtra()">
 <h3>hasExtra</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasExtra</span>()</div>
-<div class="block"><pre>
- Additional arguments to the method
- </pre>
-
- <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
+<div class="block"><code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Navigation.GetLocationRequestOrBuilder.html#hasExtra()">hasExtra</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.GetLocationRequestOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.GetLocationRequestOrBuilder</a></code></dd>
@@ -357,11 +414,7 @@ implements <a href="Navigation.GetLocationRequestOrBuilder.html" title="interfac
 <section class="detail" id="getExtra()">
 <h3>getExtra</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getExtra</span>()</div>
-<div class="block"><pre>
- Additional arguments to the method
- </pre>
-
- <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
+<div class="block"><code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Navigation.GetLocationRequestOrBuilder.html#getExtra()">getExtra</a></code>&nbsp;in interface&nbsp;<code><a href="Navigation.GetLocationRequestOrBuilder.html" title="interface in com.viam.service.navigation.v1">Navigation.GetLocationRequestOrBuilder</a></code></dd>

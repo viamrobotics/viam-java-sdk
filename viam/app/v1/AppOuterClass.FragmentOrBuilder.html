@@ -126,6 +126,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block"><code>.google.protobuf.Struct fragment = 3 [json_name = "fragment", (.tagger.v1.tags) = "bson:&#92;"fragment&#92;" json:&#92;"fragment&#92;""];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFragmentConfigJson()" class="member-name-link">getFragmentConfigJson</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Fragment config JSON, preserving key order.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFragmentConfigJsonBytes()" class="member-name-link">getFragmentConfigJsonBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Fragment config JSON, preserving key order.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string id = 1 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code></div>
@@ -237,14 +249,20 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block"><code>.google.protobuf.Struct fragment = 3 [json_name = "fragment", (.tagger.v1.tags) = "bson:&#92;"fragment&#92;" json:&#92;"fragment&#92;""];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLastUpdated()" class="member-name-link">hasLastUpdated</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasFragmentConfigJson()" class="member-name-link">hasFragmentConfigJson</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Fragment config JSON, preserving key order.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasLastUpdated()" class="member-name-link">hasLastUpdated</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  latest timestamp when fragment was updated</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPublicNamespace()" class="member-name-link">hasPublicNamespace</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPublicNamespace()" class="member-name-link">hasPublicNamespace</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>optional string public_namespace = 15 [json_name = "publicNamespace"];</code></div>
 </div>
 </div>
@@ -564,6 +582,51 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The bytes for publicNamespace.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFragmentConfigJson()">
+<h3>hasFragmentConfigJson</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFragmentConfigJson</span>()</div>
+<div class="block"><pre>
+ Fragment config JSON, preserving key order.
+ </pre>
+
+ <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the fragmentConfigJson field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFragmentConfigJson()">
+<h3>getFragmentConfigJson</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFragmentConfigJson</span>()</div>
+<div class="block"><pre>
+ Fragment config JSON, preserving key order.
+ </pre>
+
+ <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The fragmentConfigJson.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFragmentConfigJsonBytes()">
+<h3>getFragmentConfigJsonBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getFragmentConfigJsonBytes</span>()</div>
+<div class="block"><pre>
+ Fragment config JSON, preserving key order.
+ </pre>
+
+ <code>optional string fragment_config_json = 16 [json_name = "fragmentConfigJson"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for fragmentConfigJson.</dd>
 </dl>
 </section>
 </li>

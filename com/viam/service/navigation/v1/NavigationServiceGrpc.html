@@ -93,7 +93,10 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">NavigationServiceGrpc</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block"><pre>
- A NavigationService declares the gRPC contract for a Navigation service
+ A NavigationService declares the gRPC contract for a Navigation service.
+ Each service instance is bound to exactly one controllable base and one map
+ type (local SLAM or GPS). Apps save named locations, routes, and zones, then
+ navigate with plan-then-drive or direct go-to motion.
  </pre></div>
 </section>
 <section class="summary">
@@ -111,7 +114,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color"><code><a href="NavigationServiceGrpc.AsyncService.html" class="type-name-link" title="interface in com.viam.service.navigation.v1">NavigationServiceGrpc.AsyncService</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">
- A NavigationService declares the gRPC contract for a Navigation service</div>
+ A NavigationService declares the gRPC contract for a Navigation service.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final class&nbsp;</code></div>
 <div class="col-second odd-row-color"><code><a href="NavigationServiceGrpc.NavigationServiceBlockingStub.html" class="type-name-link" title="class in com.viam.service.navigation.v1">NavigationServiceGrpc.NavigationServiceBlockingStub</a></code></div>
@@ -170,60 +173,123 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static final io.grpc.ServerServiceDefinition</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#bindService(com.viam.service.navigation.v1.NavigationServiceGrpc.AsyncService)" class="member-name-link">bindService</a><wbr>(<a href="NavigationServiceGrpc.AsyncService.html" title="interface in com.viam.service.navigation.v1">NavigationServiceGrpc.AsyncService</a>&nbsp;service)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.AddWaypointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddWaypointRequest</a>,<wbr><a href="Navigation.AddWaypointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddWaypointResponse</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getAddWaypointMethod()" class="member-name-link">getAddWaypointMethod</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.AddLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddLocationRequest</a>,<wbr><a href="Navigation.AddLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddLocationResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getAddLocationMethod()" class="member-name-link">getAddLocationMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.AddRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddRouteRequest</a>,<wbr><a href="Navigation.AddRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddRouteResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getAddRouteMethod()" class="member-name-link">getAddRouteMethod</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.AddZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddZoneRequest</a>,<wbr><a href="Navigation.AddZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddZoneResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getAddZoneMethod()" class="member-name-link">getAddZoneMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.CancelRequest.html" title="class in com.viam.service.navigation.v1">Navigation.CancelRequest</a>,<wbr><a href="Navigation.CancelResponse.html" title="class in com.viam.service.navigation.v1">Navigation.CancelResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getCancelMethod()" class="member-name-link">getCancelMethod</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.DeleteLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteLocationRequest</a>,<wbr><a href="Navigation.DeleteLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteLocationResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDeleteLocationMethod()" class="member-name-link">getDeleteLocationMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.DeleteRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteRouteRequest</a>,<wbr><a href="Navigation.DeleteRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteRouteResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDeleteRouteMethod()" class="member-name-link">getDeleteRouteMethod</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.DeleteZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteZoneRequest</a>,<wbr><a href="Navigation.DeleteZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteZoneResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDeleteZoneMethod()" class="member-name-link">getDeleteZoneMethod</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="../../../common/v1/Common.DoCommandRequest.html" title="class in com.viam.common.v1">Common.DoCommandRequest</a>,<wbr><a href="../../../common/v1/Common.DoCommandResponse.html" title="class in com.viam.common.v1">Common.DoCommandResponse</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDoCommandMethod()" class="member-name-link">getDoCommandMethod</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.ExecutePlanRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ExecutePlanRequest</a>,<wbr><a href="Navigation.ExecutePlanResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ExecutePlanResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getExecutePlanMethod()" class="member-name-link">getExecutePlanMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GetCostmapRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetCostmapRequest</a>,<wbr><a href="Navigation.GetCostmapResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetCostmapResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGetCostmapMethod()" class="member-name-link">getGetCostmapMethod</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GetLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetLocationRequest</a>,<wbr><a href="Navigation.GetLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetLocationResponse</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGetLocationMethod()" class="member-name-link">getGetLocationMethod</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GetModeRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetModeRequest</a>,<wbr><a href="Navigation.GetModeResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetModeResponse</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGetModeMethod()" class="member-name-link">getGetModeMethod</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GetNavigationStatusRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetNavigationStatusRequest</a>,<wbr><a href="Navigation.GetNavigationStatusResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetNavigationStatusResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGetNavigationStatusMethod()" class="member-name-link">getGetNavigationStatusMethod</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GetObstaclesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetObstaclesRequest</a>,<wbr><a href="Navigation.GetObstaclesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetObstaclesResponse</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGetObstaclesMethod()" class="member-name-link">getGetObstaclesMethod</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GetPositionRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPositionRequest</a>,<wbr><a href="Navigation.GetPositionResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPositionResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGetPositionMethod()" class="member-name-link">getGetPositionMethod</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GetPathsRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPathsRequest</a>,<wbr><a href="Navigation.GetPathsResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPathsResponse</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGetPathsMethod()" class="member-name-link">getGetPathsMethod</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GetPropertiesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPropertiesRequest</a>,<wbr><a href="Navigation.GetPropertiesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPropertiesResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGetPropertiesMethod()" class="member-name-link">getGetPropertiesMethod</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GetPropertiesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPropertiesRequest</a>,<wbr><a href="Navigation.GetPropertiesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPropertiesResponse</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGetPropertiesMethod()" class="member-name-link">getGetPropertiesMethod</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GetRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetRouteRequest</a>,<wbr><a href="Navigation.GetRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetRouteResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGetRouteMethod()" class="member-name-link">getGetRouteMethod</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>,<wbr><a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGetStatusMethod()" class="member-name-link">getGetStatusMethod</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GetWaypointsRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetWaypointsRequest</a>,<wbr><a href="Navigation.GetWaypointsResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetWaypointsResponse</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGetWaypointsMethod()" class="member-name-link">getGetWaypointsMethod</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GetZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetZoneRequest</a>,<wbr><a href="Navigation.GetZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetZoneResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGetZoneMethod()" class="member-name-link">getGetZoneMethod</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.RemoveWaypointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.RemoveWaypointRequest</a>,<wbr><a href="Navigation.RemoveWaypointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.RemoveWaypointResponse</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getRemoveWaypointMethod()" class="member-name-link">getRemoveWaypointMethod</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GoToLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GoToLocationRequest</a>,<wbr><a href="Navigation.GoToLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GoToLocationResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGoToLocationMethod()" class="member-name-link">getGoToLocationMethod</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.GoToPointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GoToPointRequest</a>,<wbr><a href="Navigation.GoToPointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GoToPointResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getGoToPointMethod()" class="member-name-link">getGoToPointMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.ListLocationsRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ListLocationsRequest</a>,<wbr><a href="Navigation.ListLocationsResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ListLocationsResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getListLocationsMethod()" class="member-name-link">getListLocationsMethod</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.ListRoutesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ListRoutesRequest</a>,<wbr><a href="Navigation.ListRoutesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ListRoutesResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getListRoutesMethod()" class="member-name-link">getListRoutesMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.ListZonesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ListZonesRequest</a>,<wbr><a href="Navigation.ListZonesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ListZonesResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getListZonesMethod()" class="member-name-link">getListZonesMethod</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.NavigateRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateRouteRequest</a>,<wbr><a href="Navigation.NavigateRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateRouteResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getNavigateRouteMethod()" class="member-name-link">getNavigateRouteMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.NavigateToLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToLocationRequest</a>,<wbr><a href="Navigation.NavigateToLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToLocationResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getNavigateToLocationMethod()" class="member-name-link">getNavigateToLocationMethod</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.NavigateToPointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToPointRequest</a>,<wbr><a href="Navigation.NavigateToPointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToPointResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getNavigateToPointMethod()" class="member-name-link">getNavigateToPointMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.PlanToLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToLocationRequest</a>,<wbr><a href="Navigation.PlanToLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToLocationResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getPlanToLocationMethod()" class="member-name-link">getPlanToLocationMethod</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.PlanToPointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToPointRequest</a>,<wbr><a href="Navigation.PlanToPointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToPointResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getPlanToPointMethod()" class="member-name-link">getPlanToPointMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.ResumeRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ResumeRequest</a>,<wbr><a href="Navigation.ResumeResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ResumeResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getResumeMethod()" class="member-name-link">getResumeMethod</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.ServiceDescriptor</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getServiceDescriptor()" class="member-name-link">getServiceDescriptor</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.SetModeRequest.html" title="class in com.viam.service.navigation.v1">Navigation.SetModeRequest</a>,<wbr><a href="Navigation.SetModeResponse.html" title="class in com.viam.service.navigation.v1">Navigation.SetModeResponse</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getSetModeMethod()" class="member-name-link">getSetModeMethod</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.SuspendRequest.html" title="class in com.viam.service.navigation.v1">Navigation.SuspendRequest</a>,<wbr><a href="Navigation.SuspendResponse.html" title="class in com.viam.service.navigation.v1">Navigation.SuspendResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getSuspendMethod()" class="member-name-link">getSuspendMethod</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NavigationServiceGrpc.NavigationServiceBlockingStub.html" title="class in com.viam.service.navigation.v1">NavigationServiceGrpc.NavigationServiceBlockingStub</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBlockingStub(io.grpc.Channel)" class="member-name-link">newBlockingStub</a><wbr>(io.grpc.Channel&nbsp;channel)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.UpdateLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateLocationRequest</a>,<wbr><a href="Navigation.UpdateLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateLocationResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getUpdateLocationMethod()" class="member-name-link">getUpdateLocationMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.UpdateRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateRouteRequest</a>,<wbr><a href="Navigation.UpdateRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateRouteResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getUpdateRouteMethod()" class="member-name-link">getUpdateRouteMethod</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static io.grpc.MethodDescriptor<wbr>&lt;<a href="Navigation.UpdateZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateZoneRequest</a>,<wbr><a href="Navigation.UpdateZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateZoneResponse</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getUpdateZoneMethod()" class="member-name-link">getUpdateZoneMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NavigationServiceGrpc.NavigationServiceBlockingStub.html" title="class in com.viam.service.navigation.v1">NavigationServiceGrpc.NavigationServiceBlockingStub</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBlockingStub(io.grpc.Channel)" class="member-name-link">newBlockingStub</a><wbr>(io.grpc.Channel&nbsp;channel)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a new blocking-style stub that supports unary and streaming output calls on the service</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NavigationServiceGrpc.NavigationServiceBlockingV2Stub.html" title="class in com.viam.service.navigation.v1">NavigationServiceGrpc.NavigationServiceBlockingV2Stub</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBlockingV2Stub(io.grpc.Channel)" class="member-name-link">newBlockingV2Stub</a><wbr>(io.grpc.Channel&nbsp;channel)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NavigationServiceGrpc.NavigationServiceBlockingV2Stub.html" title="class in com.viam.service.navigation.v1">NavigationServiceGrpc.NavigationServiceBlockingV2Stub</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBlockingV2Stub(io.grpc.Channel)" class="member-name-link">newBlockingV2Stub</a><wbr>(io.grpc.Channel&nbsp;channel)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a new blocking-style stub that supports all types of calls on the service</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NavigationServiceGrpc.NavigationServiceFutureStub.html" title="class in com.viam.service.navigation.v1">NavigationServiceGrpc.NavigationServiceFutureStub</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newFutureStub(io.grpc.Channel)" class="member-name-link">newFutureStub</a><wbr>(io.grpc.Channel&nbsp;channel)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NavigationServiceGrpc.NavigationServiceFutureStub.html" title="class in com.viam.service.navigation.v1">NavigationServiceGrpc.NavigationServiceFutureStub</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newFutureStub(io.grpc.Channel)" class="member-name-link">newFutureStub</a><wbr>(io.grpc.Channel&nbsp;channel)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a new ListenableFuture-style stub that supports unary calls on the service</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NavigationServiceGrpc.NavigationServiceStub.html" title="class in com.viam.service.navigation.v1">NavigationServiceGrpc.NavigationServiceStub</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newStub(io.grpc.Channel)" class="member-name-link">newStub</a><wbr>(io.grpc.Channel&nbsp;channel)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NavigationServiceGrpc.NavigationServiceStub.html" title="class in com.viam.service.navigation.v1">NavigationServiceGrpc.NavigationServiceStub</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newStub(io.grpc.Channel)" class="member-name-link">newStub</a><wbr>(io.grpc.Channel&nbsp;channel)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a new async stub that supports all call types for the service</div>
 </div>
 </div>
@@ -266,15 +332,9 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getGetModeMethod()">
-<h3>getGetModeMethod</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.GetModeRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetModeRequest</a>,<wbr><a href="Navigation.GetModeResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetModeResponse</a>&gt;</span>&nbsp;<span class="element-name">getGetModeMethod</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getSetModeMethod()">
-<h3>getSetModeMethod</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.SetModeRequest.html" title="class in com.viam.service.navigation.v1">Navigation.SetModeRequest</a>,<wbr><a href="Navigation.SetModeResponse.html" title="class in com.viam.service.navigation.v1">Navigation.SetModeResponse</a>&gt;</span>&nbsp;<span class="element-name">getSetModeMethod</span>()</div>
+<section class="detail" id="getAddLocationMethod()">
+<h3>getAddLocationMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.AddLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddLocationRequest</a>,<wbr><a href="Navigation.AddLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddLocationResponse</a>&gt;</span>&nbsp;<span class="element-name">getAddLocationMethod</span>()</div>
 </section>
 </li>
 <li>
@@ -284,39 +344,171 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getGetWaypointsMethod()">
-<h3>getGetWaypointsMethod</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.GetWaypointsRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetWaypointsRequest</a>,<wbr><a href="Navigation.GetWaypointsResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetWaypointsResponse</a>&gt;</span>&nbsp;<span class="element-name">getGetWaypointsMethod</span>()</div>
+<section class="detail" id="getListLocationsMethod()">
+<h3>getListLocationsMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.ListLocationsRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ListLocationsRequest</a>,<wbr><a href="Navigation.ListLocationsResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ListLocationsResponse</a>&gt;</span>&nbsp;<span class="element-name">getListLocationsMethod</span>()</div>
 </section>
 </li>
 <li>
-<section class="detail" id="getAddWaypointMethod()">
-<h3>getAddWaypointMethod</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.AddWaypointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddWaypointRequest</a>,<wbr><a href="Navigation.AddWaypointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddWaypointResponse</a>&gt;</span>&nbsp;<span class="element-name">getAddWaypointMethod</span>()</div>
+<section class="detail" id="getUpdateLocationMethod()">
+<h3>getUpdateLocationMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.UpdateLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateLocationRequest</a>,<wbr><a href="Navigation.UpdateLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateLocationResponse</a>&gt;</span>&nbsp;<span class="element-name">getUpdateLocationMethod</span>()</div>
 </section>
 </li>
 <li>
-<section class="detail" id="getRemoveWaypointMethod()">
-<h3>getRemoveWaypointMethod</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.RemoveWaypointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.RemoveWaypointRequest</a>,<wbr><a href="Navigation.RemoveWaypointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.RemoveWaypointResponse</a>&gt;</span>&nbsp;<span class="element-name">getRemoveWaypointMethod</span>()</div>
+<section class="detail" id="getDeleteLocationMethod()">
+<h3>getDeleteLocationMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.DeleteLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteLocationRequest</a>,<wbr><a href="Navigation.DeleteLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteLocationResponse</a>&gt;</span>&nbsp;<span class="element-name">getDeleteLocationMethod</span>()</div>
 </section>
 </li>
 <li>
-<section class="detail" id="getGetObstaclesMethod()">
-<h3>getGetObstaclesMethod</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.GetObstaclesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetObstaclesRequest</a>,<wbr><a href="Navigation.GetObstaclesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetObstaclesResponse</a>&gt;</span>&nbsp;<span class="element-name">getGetObstaclesMethod</span>()</div>
+<section class="detail" id="getAddRouteMethod()">
+<h3>getAddRouteMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.AddRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddRouteRequest</a>,<wbr><a href="Navigation.AddRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddRouteResponse</a>&gt;</span>&nbsp;<span class="element-name">getAddRouteMethod</span>()</div>
 </section>
 </li>
 <li>
-<section class="detail" id="getGetPathsMethod()">
-<h3>getGetPathsMethod</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.GetPathsRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPathsRequest</a>,<wbr><a href="Navigation.GetPathsResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPathsResponse</a>&gt;</span>&nbsp;<span class="element-name">getGetPathsMethod</span>()</div>
+<section class="detail" id="getGetRouteMethod()">
+<h3>getGetRouteMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.GetRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetRouteRequest</a>,<wbr><a href="Navigation.GetRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetRouteResponse</a>&gt;</span>&nbsp;<span class="element-name">getGetRouteMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getListRoutesMethod()">
+<h3>getListRoutesMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.ListRoutesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ListRoutesRequest</a>,<wbr><a href="Navigation.ListRoutesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ListRoutesResponse</a>&gt;</span>&nbsp;<span class="element-name">getListRoutesMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getUpdateRouteMethod()">
+<h3>getUpdateRouteMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.UpdateRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateRouteRequest</a>,<wbr><a href="Navigation.UpdateRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateRouteResponse</a>&gt;</span>&nbsp;<span class="element-name">getUpdateRouteMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getDeleteRouteMethod()">
+<h3>getDeleteRouteMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.DeleteRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteRouteRequest</a>,<wbr><a href="Navigation.DeleteRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteRouteResponse</a>&gt;</span>&nbsp;<span class="element-name">getDeleteRouteMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getAddZoneMethod()">
+<h3>getAddZoneMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.AddZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddZoneRequest</a>,<wbr><a href="Navigation.AddZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddZoneResponse</a>&gt;</span>&nbsp;<span class="element-name">getAddZoneMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getGetZoneMethod()">
+<h3>getGetZoneMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.GetZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetZoneRequest</a>,<wbr><a href="Navigation.GetZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetZoneResponse</a>&gt;</span>&nbsp;<span class="element-name">getGetZoneMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getListZonesMethod()">
+<h3>getListZonesMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.ListZonesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ListZonesRequest</a>,<wbr><a href="Navigation.ListZonesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ListZonesResponse</a>&gt;</span>&nbsp;<span class="element-name">getListZonesMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getUpdateZoneMethod()">
+<h3>getUpdateZoneMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.UpdateZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateZoneRequest</a>,<wbr><a href="Navigation.UpdateZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateZoneResponse</a>&gt;</span>&nbsp;<span class="element-name">getUpdateZoneMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getDeleteZoneMethod()">
+<h3>getDeleteZoneMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.DeleteZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteZoneRequest</a>,<wbr><a href="Navigation.DeleteZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteZoneResponse</a>&gt;</span>&nbsp;<span class="element-name">getDeleteZoneMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getNavigateToLocationMethod()">
+<h3>getNavigateToLocationMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.NavigateToLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToLocationRequest</a>,<wbr><a href="Navigation.NavigateToLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToLocationResponse</a>&gt;</span>&nbsp;<span class="element-name">getNavigateToLocationMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getNavigateToPointMethod()">
+<h3>getNavigateToPointMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.NavigateToPointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToPointRequest</a>,<wbr><a href="Navigation.NavigateToPointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToPointResponse</a>&gt;</span>&nbsp;<span class="element-name">getNavigateToPointMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getNavigateRouteMethod()">
+<h3>getNavigateRouteMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.NavigateRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateRouteRequest</a>,<wbr><a href="Navigation.NavigateRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateRouteResponse</a>&gt;</span>&nbsp;<span class="element-name">getNavigateRouteMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPlanToPointMethod()">
+<h3>getPlanToPointMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.PlanToPointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToPointRequest</a>,<wbr><a href="Navigation.PlanToPointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToPointResponse</a>&gt;</span>&nbsp;<span class="element-name">getPlanToPointMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPlanToLocationMethod()">
+<h3>getPlanToLocationMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.PlanToLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToLocationRequest</a>,<wbr><a href="Navigation.PlanToLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToLocationResponse</a>&gt;</span>&nbsp;<span class="element-name">getPlanToLocationMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getExecutePlanMethod()">
+<h3>getExecutePlanMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.ExecutePlanRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ExecutePlanRequest</a>,<wbr><a href="Navigation.ExecutePlanResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ExecutePlanResponse</a>&gt;</span>&nbsp;<span class="element-name">getExecutePlanMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getGoToLocationMethod()">
+<h3>getGoToLocationMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.GoToLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GoToLocationRequest</a>,<wbr><a href="Navigation.GoToLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GoToLocationResponse</a>&gt;</span>&nbsp;<span class="element-name">getGoToLocationMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getGoToPointMethod()">
+<h3>getGoToPointMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.GoToPointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GoToPointRequest</a>,<wbr><a href="Navigation.GoToPointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GoToPointResponse</a>&gt;</span>&nbsp;<span class="element-name">getGoToPointMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getSuspendMethod()">
+<h3>getSuspendMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.SuspendRequest.html" title="class in com.viam.service.navigation.v1">Navigation.SuspendRequest</a>,<wbr><a href="Navigation.SuspendResponse.html" title="class in com.viam.service.navigation.v1">Navigation.SuspendResponse</a>&gt;</span>&nbsp;<span class="element-name">getSuspendMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getResumeMethod()">
+<h3>getResumeMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.ResumeRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ResumeRequest</a>,<wbr><a href="Navigation.ResumeResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ResumeResponse</a>&gt;</span>&nbsp;<span class="element-name">getResumeMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getCancelMethod()">
+<h3>getCancelMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.CancelRequest.html" title="class in com.viam.service.navigation.v1">Navigation.CancelRequest</a>,<wbr><a href="Navigation.CancelResponse.html" title="class in com.viam.service.navigation.v1">Navigation.CancelResponse</a>&gt;</span>&nbsp;<span class="element-name">getCancelMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getGetPositionMethod()">
+<h3>getGetPositionMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.GetPositionRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPositionRequest</a>,<wbr><a href="Navigation.GetPositionResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPositionResponse</a>&gt;</span>&nbsp;<span class="element-name">getGetPositionMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getGetNavigationStatusMethod()">
+<h3>getGetNavigationStatusMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.GetNavigationStatusRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetNavigationStatusRequest</a>,<wbr><a href="Navigation.GetNavigationStatusResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetNavigationStatusResponse</a>&gt;</span>&nbsp;<span class="element-name">getGetNavigationStatusMethod</span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getGetPropertiesMethod()">
 <h3>getGetPropertiesMethod</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.GetPropertiesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPropertiesRequest</a>,<wbr><a href="Navigation.GetPropertiesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPropertiesResponse</a>&gt;</span>&nbsp;<span class="element-name">getGetPropertiesMethod</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getGetCostmapMethod()">
+<h3>getGetCostmapMethod</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">io.grpc.MethodDescriptor&lt;<a href="Navigation.GetCostmapRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetCostmapRequest</a>,<wbr><a href="Navigation.GetCostmapResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetCostmapResponse</a>&gt;</span>&nbsp;<span class="element-name">getGetCostmapMethod</span>()</div>
 </section>
 </li>
 <li>

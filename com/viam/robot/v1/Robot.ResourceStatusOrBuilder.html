@@ -145,6 +145,32 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block">
  resource name.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Robot.ResourceStatus.Reachability.html" title="enum class in com.viam.robot.v1">Robot.ResourceStatus.Reachability</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReachability()" class="member-name-link">getReachability</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ whether calls to this resource by name can be routed through this machine.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReachabilityValue()" class="member-name-link">getReachabilityValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ whether calls to this resource by name can be routed through this machine.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRemote()" class="member-name-link">getRemote</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ name of the remote, as configured on this machine, that this resource is reached through;
+ for a resource on a remote's remote, this is the first hop.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRemoteBytes()" class="member-name-link">getRemoteBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ name of the remote, as configured on this machine, that this resource is reached through;
+ for a resource on a remote's remote, this is the first hop.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRevision()" class="member-name-link">getRevision</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -186,6 +212,13 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  resource name.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasRemote()" class="member-name-link">hasRemote</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ name of the remote, as configured on this machine, that this resource is reached through;
+ for a resource on a remote's remote, this is the first hop.</div>
 </div>
 </div>
 </div>
@@ -383,6 +416,84 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The cloudMetadata.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getReachabilityValue()">
+<h3>getReachabilityValue</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getReachabilityValue</span>()</div>
+<div class="block"><pre>
+ whether calls to this resource by name can be routed through this machine.
+ </pre>
+
+ <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The enum numeric value on the wire for reachability.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getReachability()">
+<h3>getReachability</h3>
+<div class="member-signature"><span class="return-type"><a href="Robot.ResourceStatus.Reachability.html" title="enum class in com.viam.robot.v1">Robot.ResourceStatus.Reachability</a></span>&nbsp;<span class="element-name">getReachability</span>()</div>
+<div class="block"><pre>
+ whether calls to this resource by name can be routed through this machine.
+ </pre>
+
+ <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The reachability.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasRemote()">
+<h3>hasRemote</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasRemote</span>()</div>
+<div class="block"><pre>
+ name of the remote, as configured on this machine, that this resource is reached through;
+ for a resource on a remote's remote, this is the first hop. Unset for local resources.
+ </pre>
+
+ <code>optional string remote = 8 [json_name = "remote"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the remote field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRemote()">
+<h3>getRemote</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getRemote</span>()</div>
+<div class="block"><pre>
+ name of the remote, as configured on this machine, that this resource is reached through;
+ for a resource on a remote's remote, this is the first hop. Unset for local resources.
+ </pre>
+
+ <code>optional string remote = 8 [json_name = "remote"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The remote.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRemoteBytes()">
+<h3>getRemoteBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getRemoteBytes</span>()</div>
+<div class="block"><pre>
+ name of the remote, as configured on this machine, that this resource is reached through;
+ for a resource on a remote's remote, this is the first hop. Unset for local resources.
+ </pre>
+
+ <code>optional string remote = 8 [json_name = "remote"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The bytes for remote.</dd>
 </dl>
 </section>
 </li>

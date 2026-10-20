@@ -102,7 +102,10 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends io.grpc.stub.AbstractBlockingStub&lt;<a href="NavigationServiceGrpc.NavigationServiceBlockingStub.html" title="class in com.viam.service.navigation.v1">NavigationServiceGrpc.NavigationServiceBlockingStub</a>&gt;</span></div>
 <div class="block">A stub to allow clients to do limited synchronous rpc calls to service NavigationService.
  <pre>
- A NavigationService declares the gRPC contract for a Navigation service
+ A NavigationService declares the gRPC contract for a Navigation service.
+ Each service instance is bound to exactly one controllable base and one map
+ type (local SLAM or GPS). Apps save named locations, routes, and zones, then
+ navigate with plan-then-drive or direct go-to motion.
  </pre></div>
 </section>
 <section class="summary">
@@ -127,37 +130,103 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.AddWaypointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddWaypointResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addWaypoint(com.viam.service.navigation.v1.Navigation.AddWaypointRequest)" class="member-name-link">addWaypoint</a><wbr>(<a href="Navigation.AddWaypointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddWaypointRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.AddLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddLocationResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLocation(com.viam.service.navigation.v1.Navigation.AddLocationRequest)" class="member-name-link">addLocation</a><wbr>(<a href="Navigation.AddLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddLocationRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ AddLocation saves a named position on the active map.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.AddRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddRouteResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addRoute(com.viam.service.navigation.v1.Navigation.AddRouteRequest)" class="member-name-link">addRoute</a><wbr>(<a href="Navigation.AddRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddRouteRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ AddRoute creates a named route from an ordered list of waypoints.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.AddZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddZoneResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addZone(com.viam.service.navigation.v1.Navigation.AddZoneRequest)" class="member-name-link">addZone</a><wbr>(<a href="Navigation.AddZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddZoneRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ AddZone creates a keep-out or speed-limit zone on the active map.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="NavigationServiceGrpc.NavigationServiceBlockingStub.html" title="class in com.viam.service.navigation.v1">NavigationServiceGrpc.NavigationServiceBlockingStub</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build(io.grpc.Channel,io.grpc.CallOptions)" class="member-name-link">build</a><wbr>(io.grpc.Channel&nbsp;channel,
  io.grpc.CallOptions&nbsp;callOptions)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.CancelResponse.html" title="class in com.viam.service.navigation.v1">Navigation.CancelResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cancel(com.viam.service.navigation.v1.Navigation.CancelRequest)" class="member-name-link">cancel</a><wbr>(<a href="Navigation.CancelRequest.html" title="class in com.viam.service.navigation.v1">Navigation.CancelRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Cancel stops all motion and discards both the active goal and any
+ suspended goal.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.DeleteLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteLocationResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deleteLocation(com.viam.service.navigation.v1.Navigation.DeleteLocationRequest)" class="member-name-link">deleteLocation</a><wbr>(<a href="Navigation.DeleteLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteLocationRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ DeleteLocation deletes a saved location.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.DeleteRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteRouteResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deleteRoute(com.viam.service.navigation.v1.Navigation.DeleteRouteRequest)" class="member-name-link">deleteRoute</a><wbr>(<a href="Navigation.DeleteRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteRouteRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ DeleteRoute deletes a route.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.DeleteZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteZoneResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deleteZone(com.viam.service.navigation.v1.Navigation.DeleteZoneRequest)" class="member-name-link">deleteZone</a><wbr>(<a href="Navigation.DeleteZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteZoneRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ DeleteZone deletes a zone.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../common/v1/Common.DoCommandResponse.html" title="class in com.viam.common.v1">Common.DoCommandResponse</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#doCommand(com.viam.common.v1.Common.DoCommandRequest)" class="member-name-link">doCommand</a><wbr>(<a href="../../../common/v1/Common.DoCommandRequest.html" title="class in com.viam.common.v1">Common.DoCommandRequest</a>&nbsp;request)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  DoCommand sends/receives arbitrary commands</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GetLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetLocationResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocation(com.viam.service.navigation.v1.Navigation.GetLocationRequest)" class="member-name-link">getLocation</a><wbr>(<a href="Navigation.GetLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetLocationRequest</a>&nbsp;request)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GetModeResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetModeResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMode(com.viam.service.navigation.v1.Navigation.GetModeRequest)" class="member-name-link">getMode</a><wbr>(<a href="Navigation.GetModeRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetModeRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GetObstaclesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetObstaclesResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getObstacles(com.viam.service.navigation.v1.Navigation.GetObstaclesRequest)" class="member-name-link">getObstacles</a><wbr>(<a href="Navigation.GetObstaclesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetObstaclesRequest</a>&nbsp;request)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GetPathsResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPathsResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPaths(com.viam.service.navigation.v1.Navigation.GetPathsRequest)" class="member-name-link">getPaths</a><wbr>(<a href="Navigation.GetPathsRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPathsRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GetPropertiesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPropertiesResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProperties(com.viam.service.navigation.v1.Navigation.GetPropertiesRequest)" class="member-name-link">getProperties</a><wbr>(<a href="Navigation.GetPropertiesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPropertiesRequest</a>&nbsp;request)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.ExecutePlanResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ExecutePlanResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#executePlan(com.viam.service.navigation.v1.Navigation.ExecutePlanRequest)" class="member-name-link">executePlan</a><wbr>(<a href="Navigation.ExecutePlanRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ExecutePlanRequest</a>&nbsp;request)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- GetProperties returns properties of the current navigation service, including the
- map_type being operated on.</div>
+ ExecutePlan drives a Plan (typically from PlanToPoint or PlanToLocation).</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GetCostmapResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetCostmapResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCostmap(com.viam.service.navigation.v1.Navigation.GetCostmapRequest)" class="member-name-link">getCostmap</a><wbr>(<a href="Navigation.GetCostmapRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetCostmapRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetCostmap returns the local or global costmap as a downsampled grid, for
+ display in UIs.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GetLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetLocationResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocation(com.viam.service.navigation.v1.Navigation.GetLocationRequest)" class="member-name-link">getLocation</a><wbr>(<a href="Navigation.GetLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetLocationRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetLocation returns a saved location by name.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GetNavigationStatusResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetNavigationStatusResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNavigationStatus(com.viam.service.navigation.v1.Navigation.GetNavigationStatusRequest)" class="member-name-link">getNavigationStatus</a><wbr>(<a href="Navigation.GetNavigationStatusRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetNavigationStatusRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetNavigationStatus returns the full navigation state, including the robot's
+ current position and the latest goal.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GetPositionResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPositionResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition(com.viam.service.navigation.v1.Navigation.GetPositionRequest)" class="member-name-link">getPosition</a><wbr>(<a href="Navigation.GetPositionRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPositionRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetPosition returns the robot's current position on the active map.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GetPropertiesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPropertiesResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProperties(com.viam.service.navigation.v1.Navigation.GetPropertiesRequest)" class="member-name-link">getProperties</a><wbr>(<a href="Navigation.GetPropertiesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPropertiesRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetProperties returns the map type the service operates on and robot
+ properties.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GetRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetRouteResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRoute(com.viam.service.navigation.v1.Navigation.GetRouteRequest)" class="member-name-link">getRoute</a><wbr>(<a href="Navigation.GetRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetRouteRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetRoute returns a route by name.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../common/v1/Common.GetStatusResponse.html" title="class in com.viam.common.v1">Common.GetStatusResponse</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus(com.viam.common.v1.Common.GetStatusRequest)" class="member-name-link">getStatus</a><wbr>(<a href="../../../common/v1/Common.GetStatusRequest.html" title="class in com.viam.common.v1">Common.GetStatusRequest</a>&nbsp;request)</code></div>
@@ -165,15 +234,110 @@ loadScripts(document, 'script');</script>
 <div class="block">
  GetStatus returns the status of the resource</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GetWaypointsResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetWaypointsResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWaypoints(com.viam.service.navigation.v1.Navigation.GetWaypointsRequest)" class="member-name-link">getWaypoints</a><wbr>(<a href="Navigation.GetWaypointsRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetWaypointsRequest</a>&nbsp;request)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.RemoveWaypointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.RemoveWaypointResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeWaypoint(com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest)" class="member-name-link">removeWaypoint</a><wbr>(<a href="Navigation.RemoveWaypointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.RemoveWaypointRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.SetModeResponse.html" title="class in com.viam.service.navigation.v1">Navigation.SetModeResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMode(com.viam.service.navigation.v1.Navigation.SetModeRequest)" class="member-name-link">setMode</a><wbr>(<a href="Navigation.SetModeRequest.html" title="class in com.viam.service.navigation.v1">Navigation.SetModeRequest</a>&nbsp;request)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GetZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetZoneResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getZone(com.viam.service.navigation.v1.Navigation.GetZoneRequest)" class="member-name-link">getZone</a><wbr>(<a href="Navigation.GetZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetZoneRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GetZone returns a zone by name.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GoToLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GoToLocationResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#goToLocation(com.viam.service.navigation.v1.Navigation.GoToLocationRequest)" class="member-name-link">goToLocation</a><wbr>(<a href="Navigation.GoToLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GoToLocationRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GoToLocation drives directly to a saved location with a closed-loop
+ controller, without full path planning.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.GoToPointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GoToPointResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#goToPoint(com.viam.service.navigation.v1.Navigation.GoToPointRequest)" class="member-name-link">goToPoint</a><wbr>(<a href="Navigation.GoToPointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GoToPointRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ GoToPoint drives directly to a Position with a closed-loop controller,
+ without full path planning.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.ListLocationsResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ListLocationsResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#listLocations(com.viam.service.navigation.v1.Navigation.ListLocationsRequest)" class="member-name-link">listLocations</a><wbr>(<a href="Navigation.ListLocationsRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ListLocationsRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ ListLocations lists all saved locations on the active map.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.ListRoutesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ListRoutesResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#listRoutes(com.viam.service.navigation.v1.Navigation.ListRoutesRequest)" class="member-name-link">listRoutes</a><wbr>(<a href="Navigation.ListRoutesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ListRoutesRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ ListRoutes lists all routes on the active map.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.ListZonesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ListZonesResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#listZones(com.viam.service.navigation.v1.Navigation.ListZonesRequest)" class="member-name-link">listZones</a><wbr>(<a href="Navigation.ListZonesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ListZonesRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ ListZones lists zones on the active map, optionally filtered by type.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.NavigateRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateRouteResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#navigateRoute(com.viam.service.navigation.v1.Navigation.NavigateRouteRequest)" class="member-name-link">navigateRoute</a><wbr>(<a href="Navigation.NavigateRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateRouteRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ NavigateRoute drives a route one waypoint at a time using the
+ obstacle-aware planner.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.NavigateToLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToLocationResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#navigateToLocation(com.viam.service.navigation.v1.Navigation.NavigateToLocationRequest)" class="member-name-link">navigateToLocation</a><wbr>(<a href="Navigation.NavigateToLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToLocationRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ NavigateToLocation plans an obstacle-aware path to a saved location and
+ starts driving it.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.NavigateToPointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToPointResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#navigateToPoint(com.viam.service.navigation.v1.Navigation.NavigateToPointRequest)" class="member-name-link">navigateToPoint</a><wbr>(<a href="Navigation.NavigateToPointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToPointRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ NavigateToPoint plans an obstacle-aware path to a Position and starts
+ driving it.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.PlanToLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToLocationResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#planToLocation(com.viam.service.navigation.v1.Navigation.PlanToLocationRequest)" class="member-name-link">planToLocation</a><wbr>(<a href="Navigation.PlanToLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToLocationRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ PlanToLocation computes a path to a saved location without moving.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.PlanToPointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToPointResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#planToPoint(com.viam.service.navigation.v1.Navigation.PlanToPointRequest)" class="member-name-link">planToPoint</a><wbr>(<a href="Navigation.PlanToPointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToPointRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ PlanToPoint computes a path from the robot (or a given start) to a
+ Position without moving.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.ResumeResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ResumeResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resume(com.viam.service.navigation.v1.Navigation.ResumeRequest)" class="member-name-link">resume</a><wbr>(<a href="Navigation.ResumeRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ResumeRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Resume resumes the suspended goal the same way it was started: planned
+ navigation, simple go-to, or a route from its current waypoint.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.SuspendResponse.html" title="class in com.viam.service.navigation.v1">Navigation.SuspendResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#suspend(com.viam.service.navigation.v1.Navigation.SuspendRequest)" class="member-name-link">suspend</a><wbr>(<a href="Navigation.SuspendRequest.html" title="class in com.viam.service.navigation.v1">Navigation.SuspendRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Suspend stops motion but remembers the current goal, including the current
+ waypoint and loop setting for routes.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.UpdateLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateLocationResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateLocation(com.viam.service.navigation.v1.Navigation.UpdateLocationRequest)" class="member-name-link">updateLocation</a><wbr>(<a href="Navigation.UpdateLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateLocationRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ UpdateLocation changes a saved location's position or name.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.UpdateRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateRouteResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateRoute(com.viam.service.navigation.v1.Navigation.UpdateRouteRequest)" class="member-name-link">updateRoute</a><wbr>(<a href="Navigation.UpdateRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateRouteRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ UpdateRoute renames a route and/or replaces its waypoints.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Navigation.UpdateZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateZoneResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateZone(com.viam.service.navigation.v1.Navigation.UpdateZoneRequest)" class="member-name-link">updateZone</a><wbr>(<a href="Navigation.UpdateZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateZoneRequest</a>&nbsp;request)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ UpdateZone changes a zone's type, geometry, speed limit, or name.</div>
+</div>
 </div>
 </div>
 </div>
@@ -209,51 +373,285 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getMode(com.viam.service.navigation.v1.Navigation.GetModeRequest)">
-<h3>getMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.GetModeResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetModeResponse</a></span>&nbsp;<span class="element-name">getMode</span><wbr><span class="parameters">(<a href="Navigation.GetModeRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetModeRequest</a>&nbsp;request)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="setMode(com.viam.service.navigation.v1.Navigation.SetModeRequest)">
-<h3>setMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.SetModeResponse.html" title="class in com.viam.service.navigation.v1">Navigation.SetModeResponse</a></span>&nbsp;<span class="element-name">setMode</span><wbr><span class="parameters">(<a href="Navigation.SetModeRequest.html" title="class in com.viam.service.navigation.v1">Navigation.SetModeRequest</a>&nbsp;request)</span></div>
+<section class="detail" id="addLocation(com.viam.service.navigation.v1.Navigation.AddLocationRequest)">
+<h3>addLocation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.AddLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddLocationResponse</a></span>&nbsp;<span class="element-name">addLocation</span><wbr><span class="parameters">(<a href="Navigation.AddLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddLocationRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ AddLocation saves a named position on the active map. If position is
+ omitted, the robot's current position from GetPosition is saved.
+ </pre></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLocation(com.viam.service.navigation.v1.Navigation.GetLocationRequest)">
 <h3>getLocation</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.GetLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetLocationResponse</a></span>&nbsp;<span class="element-name">getLocation</span><wbr><span class="parameters">(<a href="Navigation.GetLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetLocationRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ GetLocation returns a saved location by name. This does not return the
+ robot's current position; use GetPosition for that.
+ </pre></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getWaypoints(com.viam.service.navigation.v1.Navigation.GetWaypointsRequest)">
-<h3>getWaypoints</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.GetWaypointsResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetWaypointsResponse</a></span>&nbsp;<span class="element-name">getWaypoints</span><wbr><span class="parameters">(<a href="Navigation.GetWaypointsRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetWaypointsRequest</a>&nbsp;request)</span></div>
+<section class="detail" id="listLocations(com.viam.service.navigation.v1.Navigation.ListLocationsRequest)">
+<h3>listLocations</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.ListLocationsResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ListLocationsResponse</a></span>&nbsp;<span class="element-name">listLocations</span><wbr><span class="parameters">(<a href="Navigation.ListLocationsRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ListLocationsRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ ListLocations lists all saved locations on the active map.
+ </pre></div>
 </section>
 </li>
 <li>
-<section class="detail" id="addWaypoint(com.viam.service.navigation.v1.Navigation.AddWaypointRequest)">
-<h3>addWaypoint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.AddWaypointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddWaypointResponse</a></span>&nbsp;<span class="element-name">addWaypoint</span><wbr><span class="parameters">(<a href="Navigation.AddWaypointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddWaypointRequest</a>&nbsp;request)</span></div>
+<section class="detail" id="updateLocation(com.viam.service.navigation.v1.Navigation.UpdateLocationRequest)">
+<h3>updateLocation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.UpdateLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateLocationResponse</a></span>&nbsp;<span class="element-name">updateLocation</span><wbr><span class="parameters">(<a href="Navigation.UpdateLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateLocationRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ UpdateLocation changes a saved location's position or name. Renaming a
+ location updates every route waypoint that references it.
+ </pre></div>
 </section>
 </li>
 <li>
-<section class="detail" id="removeWaypoint(com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest)">
-<h3>removeWaypoint</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.RemoveWaypointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.RemoveWaypointResponse</a></span>&nbsp;<span class="element-name">removeWaypoint</span><wbr><span class="parameters">(<a href="Navigation.RemoveWaypointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.RemoveWaypointRequest</a>&nbsp;request)</span></div>
+<section class="detail" id="deleteLocation(com.viam.service.navigation.v1.Navigation.DeleteLocationRequest)">
+<h3>deleteLocation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.DeleteLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteLocationResponse</a></span>&nbsp;<span class="element-name">deleteLocation</span><wbr><span class="parameters">(<a href="Navigation.DeleteLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteLocationRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ DeleteLocation deletes a saved location. The location is also removed from
+ every route that references it.
+ </pre></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getObstacles(com.viam.service.navigation.v1.Navigation.GetObstaclesRequest)">
-<h3>getObstacles</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.GetObstaclesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetObstaclesResponse</a></span>&nbsp;<span class="element-name">getObstacles</span><wbr><span class="parameters">(<a href="Navigation.GetObstaclesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetObstaclesRequest</a>&nbsp;request)</span></div>
+<section class="detail" id="addRoute(com.viam.service.navigation.v1.Navigation.AddRouteRequest)">
+<h3>addRoute</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.AddRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddRouteResponse</a></span>&nbsp;<span class="element-name">addRoute</span><wbr><span class="parameters">(<a href="Navigation.AddRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddRouteRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ AddRoute creates a named route from an ordered list of waypoints. Every
+ referenced location must already exist.
+ </pre></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getPaths(com.viam.service.navigation.v1.Navigation.GetPathsRequest)">
-<h3>getPaths</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.GetPathsResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPathsResponse</a></span>&nbsp;<span class="element-name">getPaths</span><wbr><span class="parameters">(<a href="Navigation.GetPathsRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPathsRequest</a>&nbsp;request)</span></div>
+<section class="detail" id="getRoute(com.viam.service.navigation.v1.Navigation.GetRouteRequest)">
+<h3>getRoute</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.GetRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetRouteResponse</a></span>&nbsp;<span class="element-name">getRoute</span><wbr><span class="parameters">(<a href="Navigation.GetRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetRouteRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ GetRoute returns a route by name.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="listRoutes(com.viam.service.navigation.v1.Navigation.ListRoutesRequest)">
+<h3>listRoutes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.ListRoutesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ListRoutesResponse</a></span>&nbsp;<span class="element-name">listRoutes</span><wbr><span class="parameters">(<a href="Navigation.ListRoutesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ListRoutesRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ ListRoutes lists all routes on the active map.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="updateRoute(com.viam.service.navigation.v1.Navigation.UpdateRouteRequest)">
+<h3>updateRoute</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.UpdateRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateRouteResponse</a></span>&nbsp;<span class="element-name">updateRoute</span><wbr><span class="parameters">(<a href="Navigation.UpdateRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateRouteRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ UpdateRoute renames a route and/or replaces its waypoints. An unset
+ waypoints list leaves the waypoints unchanged. A set list, including an
+ empty one, replaces them.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="deleteRoute(com.viam.service.navigation.v1.Navigation.DeleteRouteRequest)">
+<h3>deleteRoute</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.DeleteRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteRouteResponse</a></span>&nbsp;<span class="element-name">deleteRoute</span><wbr><span class="parameters">(<a href="Navigation.DeleteRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteRouteRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ DeleteRoute deletes a route. The locations it references are not affected.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addZone(com.viam.service.navigation.v1.Navigation.AddZoneRequest)">
+<h3>addZone</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.AddZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.AddZoneResponse</a></span>&nbsp;<span class="element-name">addZone</span><wbr><span class="parameters">(<a href="Navigation.AddZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.AddZoneRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ AddZone creates a keep-out or speed-limit zone on the active map. The
+ planner avoids keep-out zones and caps speed inside speed-limit zones.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getZone(com.viam.service.navigation.v1.Navigation.GetZoneRequest)">
+<h3>getZone</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.GetZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetZoneResponse</a></span>&nbsp;<span class="element-name">getZone</span><wbr><span class="parameters">(<a href="Navigation.GetZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetZoneRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ GetZone returns a zone by name.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="listZones(com.viam.service.navigation.v1.Navigation.ListZonesRequest)">
+<h3>listZones</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.ListZonesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ListZonesResponse</a></span>&nbsp;<span class="element-name">listZones</span><wbr><span class="parameters">(<a href="Navigation.ListZonesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ListZonesRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ ListZones lists zones on the active map, optionally filtered by type.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="updateZone(com.viam.service.navigation.v1.Navigation.UpdateZoneRequest)">
+<h3>updateZone</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.UpdateZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateZoneResponse</a></span>&nbsp;<span class="element-name">updateZone</span><wbr><span class="parameters">(<a href="Navigation.UpdateZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.UpdateZoneRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ UpdateZone changes a zone's type, geometry, speed limit, or name.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="deleteZone(com.viam.service.navigation.v1.Navigation.DeleteZoneRequest)">
+<h3>deleteZone</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.DeleteZoneResponse.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteZoneResponse</a></span>&nbsp;<span class="element-name">deleteZone</span><wbr><span class="parameters">(<a href="Navigation.DeleteZoneRequest.html" title="class in com.viam.service.navigation.v1">Navigation.DeleteZoneRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ DeleteZone deletes a zone.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="navigateToLocation(com.viam.service.navigation.v1.Navigation.NavigateToLocationRequest)">
+<h3>navigateToLocation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.NavigateToLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToLocationResponse</a></span>&nbsp;<span class="element-name">navigateToLocation</span><wbr><span class="parameters">(<a href="Navigation.NavigateToLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToLocationRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ NavigateToLocation plans an obstacle-aware path to a saved location and
+ starts driving it. Returns once the goal is accepted; track progress with
+ GetNavigationStatus.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="navigateToPoint(com.viam.service.navigation.v1.Navigation.NavigateToPointRequest)">
+<h3>navigateToPoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.NavigateToPointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToPointResponse</a></span>&nbsp;<span class="element-name">navigateToPoint</span><wbr><span class="parameters">(<a href="Navigation.NavigateToPointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateToPointRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ NavigateToPoint plans an obstacle-aware path to a Position and starts
+ driving it. Returns once the goal is accepted; track progress with
+ GetNavigationStatus. On a Pose, theta defaults to 0 if omitted.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="navigateRoute(com.viam.service.navigation.v1.Navigation.NavigateRouteRequest)">
+<h3>navigateRoute</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.NavigateRouteResponse.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateRouteResponse</a></span>&nbsp;<span class="element-name">navigateRoute</span><wbr><span class="parameters">(<a href="Navigation.NavigateRouteRequest.html" title="class in com.viam.service.navigation.v1">Navigation.NavigateRouteRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ NavigateRoute drives a route one waypoint at a time using the
+ obstacle-aware planner. Provide either route_name (a saved route) or
+ waypoints (an inline list).
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="planToPoint(com.viam.service.navigation.v1.Navigation.PlanToPointRequest)">
+<h3>planToPoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.PlanToPointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToPointResponse</a></span>&nbsp;<span class="element-name">planToPoint</span><wbr><span class="parameters">(<a href="Navigation.PlanToPointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToPointRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ PlanToPoint computes a path from the robot (or a given start) to a
+ Position without moving. Pass a feasible result to ExecutePlan to drive it.
+ Raises an error if no path exists.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="planToLocation(com.viam.service.navigation.v1.Navigation.PlanToLocationRequest)">
+<h3>planToLocation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.PlanToLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToLocationResponse</a></span>&nbsp;<span class="element-name">planToLocation</span><wbr><span class="parameters">(<a href="Navigation.PlanToLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToLocationRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ PlanToLocation computes a path to a saved location without moving. Accepts
+ the same optional start as PlanToPoint. Raises an error if no path exists.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="executePlan(com.viam.service.navigation.v1.Navigation.ExecutePlanRequest)">
+<h3>executePlan</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.ExecutePlanResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ExecutePlanResponse</a></span>&nbsp;<span class="element-name">executePlan</span><wbr><span class="parameters">(<a href="Navigation.ExecutePlanRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ExecutePlanRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ ExecutePlan drives a Plan (typically from PlanToPoint or PlanToLocation).
+ While navigating, the active path is available on GetNavigationStatus. Rejected if
+ the path is empty.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="goToLocation(com.viam.service.navigation.v1.Navigation.GoToLocationRequest)">
+<h3>goToLocation</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.GoToLocationResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GoToLocationResponse</a></span>&nbsp;<span class="element-name">goToLocation</span><wbr><span class="parameters">(<a href="Navigation.GoToLocationRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GoToLocationRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ GoToLocation drives directly to a saved location with a closed-loop
+ controller, without full path planning. Intended for short hops and
+ docking. With wait false, returns immediately while navigating.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="goToPoint(com.viam.service.navigation.v1.Navigation.GoToPointRequest)">
+<h3>goToPoint</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.GoToPointResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GoToPointResponse</a></span>&nbsp;<span class="element-name">goToPoint</span><wbr><span class="parameters">(<a href="Navigation.GoToPointRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GoToPointRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ GoToPoint drives directly to a Position with a closed-loop controller,
+ without full path planning. Intended for short hops and docking. With wait
+ false, returns immediately while navigating.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="suspend(com.viam.service.navigation.v1.Navigation.SuspendRequest)">
+<h3>suspend</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.SuspendResponse.html" title="class in com.viam.service.navigation.v1">Navigation.SuspendResponse</a></span>&nbsp;<span class="element-name">suspend</span><wbr><span class="parameters">(<a href="Navigation.SuspendRequest.html" title="class in com.viam.service.navigation.v1">Navigation.SuspendRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ Suspend stops motion but remembers the current goal, including the current
+ waypoint and loop setting for routes. A suspended goal must be canceled
+ before a new one starts.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="resume(com.viam.service.navigation.v1.Navigation.ResumeRequest)">
+<h3>resume</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.ResumeResponse.html" title="class in com.viam.service.navigation.v1">Navigation.ResumeResponse</a></span>&nbsp;<span class="element-name">resume</span><wbr><span class="parameters">(<a href="Navigation.ResumeRequest.html" title="class in com.viam.service.navigation.v1">Navigation.ResumeRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ Resume resumes the suspended goal the same way it was started: planned
+ navigation, simple go-to, or a route from its current waypoint.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="cancel(com.viam.service.navigation.v1.Navigation.CancelRequest)">
+<h3>cancel</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.CancelResponse.html" title="class in com.viam.service.navigation.v1">Navigation.CancelResponse</a></span>&nbsp;<span class="element-name">cancel</span><wbr><span class="parameters">(<a href="Navigation.CancelRequest.html" title="class in com.viam.service.navigation.v1">Navigation.CancelRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ Cancel stops all motion and discards both the active goal and any
+ suspended goal.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPosition(com.viam.service.navigation.v1.Navigation.GetPositionRequest)">
+<h3>getPosition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.GetPositionResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPositionResponse</a></span>&nbsp;<span class="element-name">getPosition</span><wbr><span class="parameters">(<a href="Navigation.GetPositionRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPositionRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ GetPosition returns the robot's current position on the active map. Use
+ this for frequent position polling; GetNavigationStatus reports the same position
+ alongside the rest of the navigation state.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getNavigationStatus(com.viam.service.navigation.v1.Navigation.GetNavigationStatusRequest)">
+<h3>getNavigationStatus</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.GetNavigationStatusResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetNavigationStatusResponse</a></span>&nbsp;<span class="element-name">getNavigationStatus</span><wbr><span class="parameters">(<a href="Navigation.GetNavigationStatusRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetNavigationStatusRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ GetNavigationStatus returns the full navigation state, including the robot's
+ current position and the latest goal.
+ </pre></div>
 </section>
 </li>
 <li>
@@ -261,8 +659,18 @@ loadScripts(document, 'script');</script>
 <h3>getProperties</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.GetPropertiesResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetPropertiesResponse</a></span>&nbsp;<span class="element-name">getProperties</span><wbr><span class="parameters">(<a href="Navigation.GetPropertiesRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetPropertiesRequest</a>&nbsp;request)</span></div>
 <div class="block"><pre>
- GetProperties returns properties of the current navigation service, including the
- map_type being operated on.
+ GetProperties returns the map type the service operates on and robot
+ properties. These values do not change while the service is running.
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getCostmap(com.viam.service.navigation.v1.Navigation.GetCostmapRequest)">
+<h3>getCostmap</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Navigation.GetCostmapResponse.html" title="class in com.viam.service.navigation.v1">Navigation.GetCostmapResponse</a></span>&nbsp;<span class="element-name">getCostmap</span><wbr><span class="parameters">(<a href="Navigation.GetCostmapRequest.html" title="class in com.viam.service.navigation.v1">Navigation.GetCostmapRequest</a>&nbsp;request)</span></div>
+<div class="block"><pre>
+ GetCostmap returns the local or global costmap as a downsampled grid, for
+ display in UIs.
  </pre></div>
 </section>
 </li>

@@ -121,6 +121,18 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block">
  Additional arguments to the method</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIncludeCollisionMeshes()" class="member-name-link">getIncludeCollisionMeshes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Include collision mesh bytes in the response.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIncludeVisualMeshes()" class="member-name-link">getIncludeVisualMeshes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ Include visual mesh bytes in the response</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -183,6 +195,36 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The bytes for name.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getIncludeCollisionMeshes()">
+<h3>getIncludeCollisionMeshes</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getIncludeCollisionMeshes</span>()</div>
+<div class="block"><pre>
+ Include collision mesh bytes in the response. Otherwise meshes carry only their path.
+ </pre>
+
+ <code>bool include_collision_meshes = 2 [json_name = "includeCollisionMeshes"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The includeCollisionMeshes.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getIncludeVisualMeshes()">
+<h3>getIncludeVisualMeshes</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getIncludeVisualMeshes</span>()</div>
+<div class="block"><pre>
+ Include visual mesh bytes in the response
+ </pre>
+
+ <code>bool include_visual_meshes = 3 [json_name = "includeVisualMeshes"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The includeVisualMeshes.</dd>
 </dl>
 </section>
 </li>

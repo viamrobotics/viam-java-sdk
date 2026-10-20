@@ -132,20 +132,26 @@ implements com.google.protobuf.Internal.EnumLite</span></div>
 <div class="col-last odd-row-color">
 <div class="block"><code>MODEL_FRAMEWORK_PYTORCH = 3;</code></div>
 </div>
-<div class="col-first even-row-color"><code><a href="#MODEL_FRAMEWORK_TENSORFLOW" class="member-name-link">MODEL_FRAMEWORK_TENSORFLOW</a></code></div>
+<div class="col-first even-row-color"><code><a href="#MODEL_FRAMEWORK_REGISTRY" class="member-name-link">MODEL_FRAMEWORK_REGISTRY</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">
+ Modular components or services in the registry, identified by
+ deployment_modular_resources.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="#MODEL_FRAMEWORK_TENSORFLOW" class="member-name-link">MODEL_FRAMEWORK_TENSORFLOW</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block"><code>MODEL_FRAMEWORK_TENSORFLOW = 2;</code></div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#MODEL_FRAMEWORK_TFLITE" class="member-name-link">MODEL_FRAMEWORK_TFLITE</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="#MODEL_FRAMEWORK_TFLITE" class="member-name-link">MODEL_FRAMEWORK_TFLITE</a></code></div>
+<div class="col-last even-row-color">
 <div class="block"><code>MODEL_FRAMEWORK_TFLITE = 1;</code></div>
 </div>
-<div class="col-first even-row-color"><code><a href="#MODEL_FRAMEWORK_UNSPECIFIED" class="member-name-link">MODEL_FRAMEWORK_UNSPECIFIED</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="#MODEL_FRAMEWORK_UNSPECIFIED" class="member-name-link">MODEL_FRAMEWORK_UNSPECIFIED</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block"><code>MODEL_FRAMEWORK_UNSPECIFIED = 0;</code></div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#UNRECOGNIZED" class="member-name-link">UNRECOGNIZED</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code><a href="#UNRECOGNIZED" class="member-name-link">UNRECOGNIZED</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -169,18 +175,25 @@ implements com.google.protobuf.Internal.EnumLite</span></div>
 <div class="block"><code>MODEL_FRAMEWORK_PYTORCH = 3;</code></div>
 </div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#MODEL_FRAMEWORK_TENSORFLOW_VALUE" class="member-name-link">MODEL_FRAMEWORK_TENSORFLOW_VALUE</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MODEL_FRAMEWORK_REGISTRY_VALUE" class="member-name-link">MODEL_FRAMEWORK_REGISTRY_VALUE</a></code></div>
 <div class="col-last even-row-color">
-<div class="block"><code>MODEL_FRAMEWORK_TENSORFLOW = 2;</code></div>
+<div class="block">
+ Modular components or services in the registry, identified by
+ deployment_modular_resources.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#MODEL_FRAMEWORK_TFLITE_VALUE" class="member-name-link">MODEL_FRAMEWORK_TFLITE_VALUE</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MODEL_FRAMEWORK_TENSORFLOW_VALUE" class="member-name-link">MODEL_FRAMEWORK_TENSORFLOW_VALUE</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block"><code>MODEL_FRAMEWORK_TFLITE = 1;</code></div>
+<div class="block"><code>MODEL_FRAMEWORK_TENSORFLOW = 2;</code></div>
 </div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#MODEL_FRAMEWORK_UNSPECIFIED_VALUE" class="member-name-link">MODEL_FRAMEWORK_UNSPECIFIED_VALUE</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MODEL_FRAMEWORK_TFLITE_VALUE" class="member-name-link">MODEL_FRAMEWORK_TFLITE_VALUE</a></code></div>
 <div class="col-last even-row-color">
+<div class="block"><code>MODEL_FRAMEWORK_TFLITE = 1;</code></div>
+</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#MODEL_FRAMEWORK_UNSPECIFIED_VALUE" class="member-name-link">MODEL_FRAMEWORK_UNSPECIFIED_VALUE</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block"><code>MODEL_FRAMEWORK_UNSPECIFIED = 0;</code></div>
 </div>
 </div>
@@ -281,6 +294,19 @@ the order they are declared.</div>
 </section>
 </li>
 <li>
+<section class="detail" id="MODEL_FRAMEWORK_REGISTRY">
+<h3>MODEL_FRAMEWORK_REGISTRY</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MlTraining.ModelFramework.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelFramework</a></span>&nbsp;<span class="element-name">MODEL_FRAMEWORK_REGISTRY</span></div>
+<div class="block"><pre>
+ Modular components or services in the registry, identified by
+ deployment_modular_resources.
+ This is a deploy target, not a managed-training backend.
+ </pre>
+
+ <code>MODEL_FRAMEWORK_REGISTRY = 5;</code></div>
+</section>
+</li>
+<li>
 <section class="detail" id="UNRECOGNIZED">
 <h3>UNRECOGNIZED</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="MlTraining.ModelFramework.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelFramework</a></span>&nbsp;<span class="element-name">UNRECOGNIZED</span></div>
@@ -364,6 +390,27 @@ the order they are declared.</div>
 <dd>
 <ul class="tag-list">
 <li><a href="../../../../constant-values.html#viam.app.mltraining.v1.MlTraining.ModelFramework.MODEL_FRAMEWORK_ONNX_VALUE">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="MODEL_FRAMEWORK_REGISTRY_VALUE">
+<h3>MODEL_FRAMEWORK_REGISTRY_VALUE</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MODEL_FRAMEWORK_REGISTRY_VALUE</span></div>
+<div class="block"><pre>
+ Modular components or services in the registry, identified by
+ deployment_modular_resources.
+ This is a deploy target, not a managed-training backend.
+ </pre>
+
+ <code>MODEL_FRAMEWORK_REGISTRY = 5;</code></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../constant-values.html#viam.app.mltraining.v1.MlTraining.ModelFramework.MODEL_FRAMEWORK_REGISTRY_VALUE">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>

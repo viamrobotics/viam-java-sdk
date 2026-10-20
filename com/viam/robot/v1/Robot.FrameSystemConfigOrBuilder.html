@@ -109,7 +109,7 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -121,21 +121,35 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="block">
  this is an experimental API message</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Struct</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKinematics()" class="member-name-link">getKinematics</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getKinematics()" class="member-name-link">getKinematics</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.robot.v1.FrameSystemConfig.kinematics is deprecated.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasFrame()" class="member-name-link">hasFrame</a>()</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../common/v1/Common.KinematicModel.html" title="class in com.viam.common.v1">Common.KinematicModel</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModel()" class="member-name-link">getModel</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasFrame()" class="member-name-link">hasFrame</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  this is an experimental API message</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#hasKinematics()" class="member-name-link">hasKinematics</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.robot.v1.FrameSystemConfig.kinematics is deprecated.</div>
+</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasKinematics()" class="member-name-link">hasKinematics</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasModel()" class="member-name-link">hasModel</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
 </div>
 </div>
 </div>
@@ -187,8 +201,17 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <li>
 <section class="detail" id="hasKinematics()">
 <h3>hasKinematics</h3>
-<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasKinematics</span>()</div>
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasKinematics</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.robot.v1.FrameSystemConfig.kinematics is deprecated.
+     See robot/v1/robot.proto;l=201</div>
+</div>
+<div class="block"><pre>
+ Deprecated: use model
+ </pre>
+
+ <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Whether the kinematics field is set.</dd>
@@ -198,11 +221,42 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <li>
 <section class="detail" id="getKinematics()">
 <h3>getKinematics</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getKinematics</span>()</div>
-<div class="block"><code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getKinematics</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">viam.robot.v1.FrameSystemConfig.kinematics is deprecated.
+     See robot/v1/robot.proto;l=201</div>
+</div>
+<div class="block"><pre>
+ Deprecated: use model
+ </pre>
+
+ <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The kinematics.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasModel()">
+<h3>hasModel</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasModel</span>()</div>
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the model field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getModel()">
+<h3>getModel</h3>
+<div class="member-signature"><span class="return-type"><a href="../../common/v1/Common.KinematicModel.html" title="class in com.viam.common.v1">Common.KinematicModel</a></span>&nbsp;<span class="element-name">getModel</span>()</div>
+<div class="block"><code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The model.</dd>
 </dl>
 </section>
 </li>
