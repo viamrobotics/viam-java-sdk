@@ -1755,6 +1755,36 @@ public final class AppServiceGrpc {
     return getUpdateRobotPartMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.SetConfigPropertyRequest,
+      viam.app.v1.AppOuterClass.SetConfigPropertyResponse> getSetConfigPropertyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetConfigProperty",
+      requestType = viam.app.v1.AppOuterClass.SetConfigPropertyRequest.class,
+      responseType = viam.app.v1.AppOuterClass.SetConfigPropertyResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.SetConfigPropertyRequest,
+      viam.app.v1.AppOuterClass.SetConfigPropertyResponse> getSetConfigPropertyMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.SetConfigPropertyRequest, viam.app.v1.AppOuterClass.SetConfigPropertyResponse> getSetConfigPropertyMethod;
+    if ((getSetConfigPropertyMethod = AppServiceGrpc.getSetConfigPropertyMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getSetConfigPropertyMethod = AppServiceGrpc.getSetConfigPropertyMethod) == null) {
+          AppServiceGrpc.getSetConfigPropertyMethod = getSetConfigPropertyMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.SetConfigPropertyRequest, viam.app.v1.AppOuterClass.SetConfigPropertyResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetConfigProperty"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.SetConfigPropertyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.SetConfigPropertyResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getSetConfigPropertyMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.NewRobotPartRequest,
       viam.app.v1.AppOuterClass.NewRobotPartResponse> getNewRobotPartMethod;
 
@@ -2203,6 +2233,96 @@ public final class AppServiceGrpc {
       }
     }
     return getDeleteRobotMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.AddFavoriteMachineRequest,
+      viam.app.v1.AppOuterClass.AddFavoriteMachineResponse> getAddFavoriteMachineMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddFavoriteMachine",
+      requestType = viam.app.v1.AppOuterClass.AddFavoriteMachineRequest.class,
+      responseType = viam.app.v1.AppOuterClass.AddFavoriteMachineResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.AddFavoriteMachineRequest,
+      viam.app.v1.AppOuterClass.AddFavoriteMachineResponse> getAddFavoriteMachineMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.AddFavoriteMachineRequest, viam.app.v1.AppOuterClass.AddFavoriteMachineResponse> getAddFavoriteMachineMethod;
+    if ((getAddFavoriteMachineMethod = AppServiceGrpc.getAddFavoriteMachineMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getAddFavoriteMachineMethod = AppServiceGrpc.getAddFavoriteMachineMethod) == null) {
+          AppServiceGrpc.getAddFavoriteMachineMethod = getAddFavoriteMachineMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.AddFavoriteMachineRequest, viam.app.v1.AppOuterClass.AddFavoriteMachineResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddFavoriteMachine"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.AddFavoriteMachineRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.AddFavoriteMachineResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getAddFavoriteMachineMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest,
+      viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse> getRemoveFavoriteMachineMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveFavoriteMachine",
+      requestType = viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest.class,
+      responseType = viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest,
+      viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse> getRemoveFavoriteMachineMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest, viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse> getRemoveFavoriteMachineMethod;
+    if ((getRemoveFavoriteMachineMethod = AppServiceGrpc.getRemoveFavoriteMachineMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getRemoveFavoriteMachineMethod = AppServiceGrpc.getRemoveFavoriteMachineMethod) == null) {
+          AppServiceGrpc.getRemoveFavoriteMachineMethod = getRemoveFavoriteMachineMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest, viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveFavoriteMachine"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getRemoveFavoriteMachineMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest,
+      viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse> getListFavoriteMachinesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListFavoriteMachines",
+      requestType = viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest.class,
+      responseType = viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest,
+      viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse> getListFavoriteMachinesMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest, viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse> getListFavoriteMachinesMethod;
+    if ((getListFavoriteMachinesMethod = AppServiceGrpc.getListFavoriteMachinesMethod) == null) {
+      synchronized (AppServiceGrpc.class) {
+        if ((getListFavoriteMachinesMethod = AppServiceGrpc.getListFavoriteMachinesMethod) == null) {
+          AppServiceGrpc.getListFavoriteMachinesMethod = getListFavoriteMachinesMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest, viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListFavoriteMachines"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getListFavoriteMachinesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.AppOuterClass.ListFragmentsRequest,
@@ -4207,6 +4327,16 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Set config properties on a robot part
+     * </pre>
+     */
+    default void setConfigProperty(viam.app.v1.AppOuterClass.SetConfigPropertyRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.SetConfigPropertyResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetConfigPropertyMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Create a new robot part
      * </pre>
      */
@@ -4358,6 +4488,36 @@ public final class AppServiceGrpc {
     default void deleteRobot(viam.app.v1.AppOuterClass.DeleteRobotRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeleteRobotResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRobotMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AddFavoriteMachine adds a favorite machine for the user
+     * </pre>
+     */
+    default void addFavoriteMachine(viam.app.v1.AppOuterClass.AddFavoriteMachineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.AddFavoriteMachineResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddFavoriteMachineMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveFavoriteMachine removes a favorite machine for the user
+     * </pre>
+     */
+    default void removeFavoriteMachine(viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveFavoriteMachineMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListFavoriteMachines lists all favorited machines for the user
+     * </pre>
+     */
+    default void listFavoriteMachines(viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFavoriteMachinesMethod(), responseObserver);
     }
 
     /**
@@ -5377,6 +5537,17 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Set config properties on a robot part
+     * </pre>
+     */
+    public void setConfigProperty(viam.app.v1.AppOuterClass.SetConfigPropertyRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.SetConfigPropertyResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetConfigPropertyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Create a new robot part
      * </pre>
      */
@@ -5543,6 +5714,39 @@ public final class AppServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeleteRobotResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteRobotMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AddFavoriteMachine adds a favorite machine for the user
+     * </pre>
+     */
+    public void addFavoriteMachine(viam.app.v1.AppOuterClass.AddFavoriteMachineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.AddFavoriteMachineResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddFavoriteMachineMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveFavoriteMachine removes a favorite machine for the user
+     * </pre>
+     */
+    public void removeFavoriteMachine(viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveFavoriteMachineMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ListFavoriteMachines lists all favorited machines for the user
+     * </pre>
+     */
+    public void listFavoriteMachines(viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListFavoriteMachinesMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -6539,6 +6743,16 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Set config properties on a robot part
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.SetConfigPropertyResponse setConfigProperty(viam.app.v1.AppOuterClass.SetConfigPropertyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetConfigPropertyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Create a new robot part
      * </pre>
      */
@@ -6690,6 +6904,36 @@ public final class AppServiceGrpc {
     public viam.app.v1.AppOuterClass.DeleteRobotResponse deleteRobot(viam.app.v1.AppOuterClass.DeleteRobotRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getDeleteRobotMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddFavoriteMachine adds a favorite machine for the user
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.AddFavoriteMachineResponse addFavoriteMachine(viam.app.v1.AppOuterClass.AddFavoriteMachineRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAddFavoriteMachineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveFavoriteMachine removes a favorite machine for the user
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse removeFavoriteMachine(viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRemoveFavoriteMachineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListFavoriteMachines lists all favorited machines for the user
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse listFavoriteMachines(viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListFavoriteMachinesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -7640,6 +7884,16 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Set config properties on a robot part
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.SetConfigPropertyResponse setConfigProperty(viam.app.v1.AppOuterClass.SetConfigPropertyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetConfigPropertyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Create a new robot part
      * </pre>
      */
@@ -7791,6 +8045,36 @@ public final class AppServiceGrpc {
     public viam.app.v1.AppOuterClass.DeleteRobotResponse deleteRobot(viam.app.v1.AppOuterClass.DeleteRobotRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteRobotMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddFavoriteMachine adds a favorite machine for the user
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.AddFavoriteMachineResponse addFavoriteMachine(viam.app.v1.AppOuterClass.AddFavoriteMachineRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddFavoriteMachineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveFavoriteMachine removes a favorite machine for the user
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse removeFavoriteMachine(viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveFavoriteMachineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ListFavoriteMachines lists all favorited machines for the user
+     * </pre>
+     */
+    public viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse listFavoriteMachines(viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListFavoriteMachinesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -8781,6 +9065,17 @@ public final class AppServiceGrpc {
 
     /**
      * <pre>
+     * Set config properties on a robot part
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.SetConfigPropertyResponse> setConfigProperty(
+        viam.app.v1.AppOuterClass.SetConfigPropertyRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetConfigPropertyMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Create a new robot part
      * </pre>
      */
@@ -8947,6 +9242,39 @@ public final class AppServiceGrpc {
         viam.app.v1.AppOuterClass.DeleteRobotRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteRobotMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * AddFavoriteMachine adds a favorite machine for the user
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.AddFavoriteMachineResponse> addFavoriteMachine(
+        viam.app.v1.AppOuterClass.AddFavoriteMachineRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddFavoriteMachineMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveFavoriteMachine removes a favorite machine for the user
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse> removeFavoriteMachine(
+        viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveFavoriteMachineMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ListFavoriteMachines lists all favorited machines for the user
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse> listFavoriteMachines(
+        viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListFavoriteMachinesMethod(), getCallOptions()), request);
     }
 
     /**
@@ -9446,68 +9774,72 @@ public final class AppServiceGrpc {
   private static final int METHODID_TAIL_ROBOT_PART_LOGS = 55;
   private static final int METHODID_GET_ROBOT_PART_HISTORY = 56;
   private static final int METHODID_UPDATE_ROBOT_PART = 57;
-  private static final int METHODID_NEW_ROBOT_PART = 58;
-  private static final int METHODID_DELETE_ROBOT_PART = 59;
-  private static final int METHODID_GET_ROBOT_PART_METADATA = 60;
-  private static final int METHODID_UPDATE_ROBOT_PART_METADATA = 61;
-  private static final int METHODID_GET_ROBOT_APIKEYS = 62;
-  private static final int METHODID_MARK_PART_AS_MAIN = 63;
-  private static final int METHODID_MARK_PART_FOR_RESTART = 64;
-  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 65;
-  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 66;
-  private static final int METHODID_LIST_ROBOTS = 67;
-  private static final int METHODID_LIST_ROBOTS_FOR_LOCATIONS = 68;
-  private static final int METHODID_LIST_ROBOTS_FOR_ORG = 69;
-  private static final int METHODID_NEW_ROBOT = 70;
-  private static final int METHODID_UPDATE_ROBOT = 71;
-  private static final int METHODID_DELETE_ROBOT = 72;
-  private static final int METHODID_LIST_FRAGMENTS = 73;
-  private static final int METHODID_GET_FRAGMENT = 74;
-  private static final int METHODID_CREATE_FRAGMENT = 75;
-  private static final int METHODID_UPDATE_FRAGMENT = 76;
-  private static final int METHODID_DELETE_FRAGMENT = 77;
-  private static final int METHODID_LIST_NESTED_FRAGMENTS = 78;
-  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 79;
-  private static final int METHODID_LIST_MACHINE_SUMMARIES = 80;
-  private static final int METHODID_GET_FRAGMENT_HISTORY = 81;
-  private static final int METHODID_GET_FRAGMENT_USAGE = 82;
-  private static final int METHODID_SET_FRAGMENT_TAG = 83;
-  private static final int METHODID_DELETE_FRAGMENT_TAG = 84;
-  private static final int METHODID_ADD_ROLE = 85;
-  private static final int METHODID_REMOVE_ROLE = 86;
-  private static final int METHODID_CHANGE_ROLE = 87;
-  private static final int METHODID_LIST_AUTHORIZATIONS = 88;
-  private static final int METHODID_CHECK_PERMISSIONS = 89;
-  private static final int METHODID_GET_REGISTRY_ITEM = 90;
-  private static final int METHODID_CREATE_REGISTRY_ITEM = 91;
-  private static final int METHODID_UPDATE_REGISTRY_ITEM = 92;
-  private static final int METHODID_LIST_REGISTRY_ITEMS = 93;
-  private static final int METHODID_DELETE_REGISTRY_ITEM = 94;
-  private static final int METHODID_RENAME_REGISTRY_ITEM = 95;
-  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 96;
-  private static final int METHODID_DEPRECATE_REGISTRY_ITEM = 97;
-  private static final int METHODID_UNDEPRECATE_REGISTRY_ITEM = 98;
-  private static final int METHODID_CREATE_MODULE = 99;
-  private static final int METHODID_UPDATE_MODULE = 100;
-  private static final int METHODID_GET_MODULE = 101;
-  private static final int METHODID_LIST_MODULES = 102;
-  private static final int METHODID_DEPRECATE_REGISTRY_ITEM_VERSION = 103;
-  private static final int METHODID_UNDEPRECATE_REGISTRY_ITEM_VERSION = 104;
-  private static final int METHODID_CREATE_KEY = 105;
-  private static final int METHODID_DELETE_KEY = 106;
-  private static final int METHODID_LIST_KEYS = 107;
-  private static final int METHODID_RENAME_KEY = 108;
-  private static final int METHODID_ROTATE_KEY = 109;
-  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 110;
-  private static final int METHODID_GET_APP_CONTENT = 111;
-  private static final int METHODID_GET_APP_BRANDING = 112;
-  private static final int METHODID_UPLOAD_DEVICE_PUSH_TOKEN = 113;
-  private static final int METHODID_DELETE_DEVICE_PUSH_TOKEN = 114;
-  private static final int METHODID_GET_DEVICE_PUSH_TOKENS = 115;
-  private static final int METHODID_SET_FIREBASE_CONFIG = 116;
-  private static final int METHODID_GET_FIREBASE_CONFIG = 117;
-  private static final int METHODID_DELETE_FIREBASE_CONFIG = 118;
-  private static final int METHODID_UPLOAD_MODULE_FILE = 119;
+  private static final int METHODID_SET_CONFIG_PROPERTY = 58;
+  private static final int METHODID_NEW_ROBOT_PART = 59;
+  private static final int METHODID_DELETE_ROBOT_PART = 60;
+  private static final int METHODID_GET_ROBOT_PART_METADATA = 61;
+  private static final int METHODID_UPDATE_ROBOT_PART_METADATA = 62;
+  private static final int METHODID_GET_ROBOT_APIKEYS = 63;
+  private static final int METHODID_MARK_PART_AS_MAIN = 64;
+  private static final int METHODID_MARK_PART_FOR_RESTART = 65;
+  private static final int METHODID_CREATE_ROBOT_PART_SECRET = 66;
+  private static final int METHODID_DELETE_ROBOT_PART_SECRET = 67;
+  private static final int METHODID_LIST_ROBOTS = 68;
+  private static final int METHODID_LIST_ROBOTS_FOR_LOCATIONS = 69;
+  private static final int METHODID_LIST_ROBOTS_FOR_ORG = 70;
+  private static final int METHODID_NEW_ROBOT = 71;
+  private static final int METHODID_UPDATE_ROBOT = 72;
+  private static final int METHODID_DELETE_ROBOT = 73;
+  private static final int METHODID_ADD_FAVORITE_MACHINE = 74;
+  private static final int METHODID_REMOVE_FAVORITE_MACHINE = 75;
+  private static final int METHODID_LIST_FAVORITE_MACHINES = 76;
+  private static final int METHODID_LIST_FRAGMENTS = 77;
+  private static final int METHODID_GET_FRAGMENT = 78;
+  private static final int METHODID_CREATE_FRAGMENT = 79;
+  private static final int METHODID_UPDATE_FRAGMENT = 80;
+  private static final int METHODID_DELETE_FRAGMENT = 81;
+  private static final int METHODID_LIST_NESTED_FRAGMENTS = 82;
+  private static final int METHODID_LIST_MACHINE_FRAGMENTS = 83;
+  private static final int METHODID_LIST_MACHINE_SUMMARIES = 84;
+  private static final int METHODID_GET_FRAGMENT_HISTORY = 85;
+  private static final int METHODID_GET_FRAGMENT_USAGE = 86;
+  private static final int METHODID_SET_FRAGMENT_TAG = 87;
+  private static final int METHODID_DELETE_FRAGMENT_TAG = 88;
+  private static final int METHODID_ADD_ROLE = 89;
+  private static final int METHODID_REMOVE_ROLE = 90;
+  private static final int METHODID_CHANGE_ROLE = 91;
+  private static final int METHODID_LIST_AUTHORIZATIONS = 92;
+  private static final int METHODID_CHECK_PERMISSIONS = 93;
+  private static final int METHODID_GET_REGISTRY_ITEM = 94;
+  private static final int METHODID_CREATE_REGISTRY_ITEM = 95;
+  private static final int METHODID_UPDATE_REGISTRY_ITEM = 96;
+  private static final int METHODID_LIST_REGISTRY_ITEMS = 97;
+  private static final int METHODID_DELETE_REGISTRY_ITEM = 98;
+  private static final int METHODID_RENAME_REGISTRY_ITEM = 99;
+  private static final int METHODID_TRANSFER_REGISTRY_ITEM = 100;
+  private static final int METHODID_DEPRECATE_REGISTRY_ITEM = 101;
+  private static final int METHODID_UNDEPRECATE_REGISTRY_ITEM = 102;
+  private static final int METHODID_CREATE_MODULE = 103;
+  private static final int METHODID_UPDATE_MODULE = 104;
+  private static final int METHODID_GET_MODULE = 105;
+  private static final int METHODID_LIST_MODULES = 106;
+  private static final int METHODID_DEPRECATE_REGISTRY_ITEM_VERSION = 107;
+  private static final int METHODID_UNDEPRECATE_REGISTRY_ITEM_VERSION = 108;
+  private static final int METHODID_CREATE_KEY = 109;
+  private static final int METHODID_DELETE_KEY = 110;
+  private static final int METHODID_LIST_KEYS = 111;
+  private static final int METHODID_RENAME_KEY = 112;
+  private static final int METHODID_ROTATE_KEY = 113;
+  private static final int METHODID_CREATE_KEY_FROM_EXISTING_KEY_AUTHORIZATIONS = 114;
+  private static final int METHODID_GET_APP_CONTENT = 115;
+  private static final int METHODID_GET_APP_BRANDING = 116;
+  private static final int METHODID_UPLOAD_DEVICE_PUSH_TOKEN = 117;
+  private static final int METHODID_DELETE_DEVICE_PUSH_TOKEN = 118;
+  private static final int METHODID_GET_DEVICE_PUSH_TOKENS = 119;
+  private static final int METHODID_SET_FIREBASE_CONFIG = 120;
+  private static final int METHODID_GET_FIREBASE_CONFIG = 121;
+  private static final int METHODID_DELETE_FIREBASE_CONFIG = 122;
+  private static final int METHODID_UPLOAD_MODULE_FILE = 123;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -9758,6 +10090,10 @@ public final class AppServiceGrpc {
           serviceImpl.updateRobotPart((viam.app.v1.AppOuterClass.UpdateRobotPartRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.UpdateRobotPartResponse>) responseObserver);
           break;
+        case METHODID_SET_CONFIG_PROPERTY:
+          serviceImpl.setConfigProperty((viam.app.v1.AppOuterClass.SetConfigPropertyRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.SetConfigPropertyResponse>) responseObserver);
+          break;
         case METHODID_NEW_ROBOT_PART:
           serviceImpl.newRobotPart((viam.app.v1.AppOuterClass.NewRobotPartRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.NewRobotPartResponse>) responseObserver);
@@ -9817,6 +10153,18 @@ public final class AppServiceGrpc {
         case METHODID_DELETE_ROBOT:
           serviceImpl.deleteRobot((viam.app.v1.AppOuterClass.DeleteRobotRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.DeleteRobotResponse>) responseObserver);
+          break;
+        case METHODID_ADD_FAVORITE_MACHINE:
+          serviceImpl.addFavoriteMachine((viam.app.v1.AppOuterClass.AddFavoriteMachineRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.AddFavoriteMachineResponse>) responseObserver);
+          break;
+        case METHODID_REMOVE_FAVORITE_MACHINE:
+          serviceImpl.removeFavoriteMachine((viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse>) responseObserver);
+          break;
+        case METHODID_LIST_FAVORITE_MACHINES:
+          serviceImpl.listFavoriteMachines((viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse>) responseObserver);
           break;
         case METHODID_LIST_FRAGMENTS:
           serviceImpl.listFragments((viam.app.v1.AppOuterClass.ListFragmentsRequest) request,
@@ -10430,6 +10778,13 @@ public final class AppServiceGrpc {
               viam.app.v1.AppOuterClass.UpdateRobotPartResponse>(
                 service, METHODID_UPDATE_ROBOT_PART)))
         .addMethod(
+          getSetConfigPropertyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.SetConfigPropertyRequest,
+              viam.app.v1.AppOuterClass.SetConfigPropertyResponse>(
+                service, METHODID_SET_CONFIG_PROPERTY)))
+        .addMethod(
           getNewRobotPartMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -10534,6 +10889,27 @@ public final class AppServiceGrpc {
               viam.app.v1.AppOuterClass.DeleteRobotRequest,
               viam.app.v1.AppOuterClass.DeleteRobotResponse>(
                 service, METHODID_DELETE_ROBOT)))
+        .addMethod(
+          getAddFavoriteMachineMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.AddFavoriteMachineRequest,
+              viam.app.v1.AppOuterClass.AddFavoriteMachineResponse>(
+                service, METHODID_ADD_FAVORITE_MACHINE)))
+        .addMethod(
+          getRemoveFavoriteMachineMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.RemoveFavoriteMachineRequest,
+              viam.app.v1.AppOuterClass.RemoveFavoriteMachineResponse>(
+                service, METHODID_REMOVE_FAVORITE_MACHINE)))
+        .addMethod(
+          getListFavoriteMachinesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.AppOuterClass.ListFavoriteMachinesRequest,
+              viam.app.v1.AppOuterClass.ListFavoriteMachinesResponse>(
+                service, METHODID_LIST_FAVORITE_MACHINES)))
         .addMethod(
           getListFragmentsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -10933,6 +11309,7 @@ public final class AppServiceGrpc {
               .addMethod(getTailRobotPartLogsMethod())
               .addMethod(getGetRobotPartHistoryMethod())
               .addMethod(getUpdateRobotPartMethod())
+              .addMethod(getSetConfigPropertyMethod())
               .addMethod(getNewRobotPartMethod())
               .addMethod(getDeleteRobotPartMethod())
               .addMethod(getGetRobotPartMetadataMethod())
@@ -10948,6 +11325,9 @@ public final class AppServiceGrpc {
               .addMethod(getNewRobotMethod())
               .addMethod(getUpdateRobotMethod())
               .addMethod(getDeleteRobotMethod())
+              .addMethod(getAddFavoriteMachineMethod())
+              .addMethod(getRemoveFavoriteMachineMethod())
+              .addMethod(getListFavoriteMachinesMethod())
               .addMethod(getListFragmentsMethod())
               .addMethod(getGetFragmentMethod())
               .addMethod(getCreateFragmentMethod())

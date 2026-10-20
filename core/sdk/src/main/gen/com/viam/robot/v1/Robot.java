@@ -3718,15 +3718,38 @@ public final class Robot {
     com.viam.common.v1.Common.Transform getFrame();
 
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
+     * @deprecated viam.robot.v1.FrameSystemConfig.kinematics is deprecated.
+     *     See robot/v1/robot.proto;l=201
      * @return Whether the kinematics field is set.
      */
-    boolean hasKinematics();
+    @java.lang.Deprecated boolean hasKinematics();
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
+     * @deprecated viam.robot.v1.FrameSystemConfig.kinematics is deprecated.
+     *     See robot/v1/robot.proto;l=201
      * @return The kinematics.
      */
-    com.google.protobuf.Struct getKinematics();
+    @java.lang.Deprecated com.google.protobuf.Struct getKinematics();
+
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     * @return Whether the model field is set.
+     */
+    boolean hasModel();
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     * @return The model.
+     */
+    com.viam.common.v1.Common.KinematicModel getModel();
   }
   /**
    * Protobuf type {@code viam.robot.v1.FrameSystemConfig}
@@ -3810,21 +3833,33 @@ public final class Robot {
     public static final int KINEMATICS_FIELD_NUMBER = 2;
     private com.google.protobuf.Struct kinematics_;
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
      */
     @java.lang.Override
-    public boolean hasKinematics() {
+    @java.lang.Deprecated public boolean hasKinematics() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.protobuf.Struct getKinematics() {
+    @java.lang.Deprecated public com.google.protobuf.Struct getKinematics() {
       return kinematics_ == null ? com.google.protobuf.Struct.getDefaultInstance() : kinematics_;
     }
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings("ReturnValueIgnored")
     private void setKinematics(com.google.protobuf.Struct value) {
@@ -3833,7 +3868,11 @@ public final class Robot {
       bitField0_ |= 0x00000002;
     }
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
     private void mergeKinematics(com.google.protobuf.Struct value) {
@@ -3848,11 +3887,63 @@ public final class Robot {
       bitField0_ |= 0x00000002;
     }
     /**
-     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+     * <pre>
+     * Deprecated: use model
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
      */
     private void clearKinematics() {
       kinematics_ = null;
       bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int MODEL_FIELD_NUMBER = 3;
+    private com.viam.common.v1.Common.KinematicModel model_;
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     */
+    @java.lang.Override
+    public boolean hasModel() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.KinematicModel getModel() {
+      return model_ == null ? com.viam.common.v1.Common.KinematicModel.getDefaultInstance() : model_;
+    }
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setModel(com.viam.common.v1.Common.KinematicModel value) {
+      value.getClass();  // minimal bytecode null check
+      model_ = value;
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeModel(com.viam.common.v1.Common.KinematicModel value) {
+      value.getClass();  // minimal bytecode null check
+      if (model_ != null &&
+          model_ != com.viam.common.v1.Common.KinematicModel.getDefaultInstance()) {
+        model_ =
+          com.viam.common.v1.Common.KinematicModel.newBuilder(model_).mergeFrom(value).buildPartial();
+      } else {
+        model_ = value;
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+     */
+    private void clearModel() {
+      model_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static com.viam.robot.v1.Robot.FrameSystemConfig parseFrom(
@@ -4024,49 +4115,120 @@ public final class Robot {
       }
 
       /**
-       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+       * <pre>
+       * Deprecated: use model
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
        */
       @java.lang.Override
-      public boolean hasKinematics() {
+      @java.lang.Deprecated public boolean hasKinematics() {
         return instance.hasKinematics();
       }
       /**
-       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+       * <pre>
+       * Deprecated: use model
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
        */
       @java.lang.Override
-      public com.google.protobuf.Struct getKinematics() {
+      @java.lang.Deprecated public com.google.protobuf.Struct getKinematics() {
         return instance.getKinematics();
       }
       /**
-       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+       * <pre>
+       * Deprecated: use model
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
        */
-      public Builder setKinematics(com.google.protobuf.Struct value) {
+      @java.lang.Deprecated public Builder setKinematics(com.google.protobuf.Struct value) {
         copyOnWrite();
         instance.setKinematics(value);
         return this;
         }
       /**
-       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+       * <pre>
+       * Deprecated: use model
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
        */
-      public Builder setKinematics(
+      @java.lang.Deprecated public Builder setKinematics(
           com.google.protobuf.Struct.Builder builderForValue) {
         copyOnWrite();
         instance.setKinematics(builderForValue.build());
         return this;
       }
       /**
-       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+       * <pre>
+       * Deprecated: use model
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
        */
-      public Builder mergeKinematics(com.google.protobuf.Struct value) {
+      @java.lang.Deprecated public Builder mergeKinematics(com.google.protobuf.Struct value) {
         copyOnWrite();
         instance.mergeKinematics(value);
         return this;
       }
       /**
-       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics"];</code>
+       * <pre>
+       * Deprecated: use model
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct kinematics = 2 [json_name = "kinematics", deprecated = true];</code>
        */
-      public Builder clearKinematics() {  copyOnWrite();
+      @java.lang.Deprecated public Builder clearKinematics() {  copyOnWrite();
         instance.clearKinematics();
+        return this;
+      }
+
+      /**
+       * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+       */
+      @java.lang.Override
+      public boolean hasModel() {
+        return instance.hasModel();
+      }
+      /**
+       * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.KinematicModel getModel() {
+        return instance.getModel();
+      }
+      /**
+       * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+       */
+      public Builder setModel(com.viam.common.v1.Common.KinematicModel value) {
+        copyOnWrite();
+        instance.setModel(value);
+        return this;
+        }
+      /**
+       * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+       */
+      public Builder setModel(
+          com.viam.common.v1.Common.KinematicModel.Builder builderForValue) {
+        copyOnWrite();
+        instance.setModel(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+       */
+      public Builder mergeModel(com.viam.common.v1.Common.KinematicModel value) {
+        copyOnWrite();
+        instance.mergeModel(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.KinematicModel model = 3 [json_name = "model"];</code>
+       */
+      public Builder clearModel() {  copyOnWrite();
+        instance.clearModel();
         return this;
       }
 
@@ -4089,10 +4251,11 @@ public final class Robot {
               "bitField0_",
               "frame_",
               "kinematics_",
+              "model_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "\u1009\u0001";
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001\u0003\u1009\u0002";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -23114,6 +23277,57 @@ public final class Robot {
      * @return The cloudMetadata.
      */
     com.viam.robot.v1.Robot.GetCloudMetadataResponse getCloudMetadata();
+
+    /**
+     * <pre>
+     * whether calls to this resource by name can be routed through this machine.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code>
+     * @return The enum numeric value on the wire for reachability.
+     */
+    int getReachabilityValue();
+    /**
+     * <pre>
+     * whether calls to this resource by name can be routed through this machine.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code>
+     * @return The reachability.
+     */
+    com.viam.robot.v1.Robot.ResourceStatus.Reachability getReachability();
+
+    /**
+     * <pre>
+     * name of the remote, as configured on this machine, that this resource is reached through;
+     * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+     * </pre>
+     *
+     * <code>optional string remote = 8 [json_name = "remote"];</code>
+     * @return Whether the remote field is set.
+     */
+    boolean hasRemote();
+    /**
+     * <pre>
+     * name of the remote, as configured on this machine, that this resource is reached through;
+     * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+     * </pre>
+     *
+     * <code>optional string remote = 8 [json_name = "remote"];</code>
+     * @return The remote.
+     */
+    java.lang.String getRemote();
+    /**
+     * <pre>
+     * name of the remote, as configured on this machine, that this resource is reached through;
+     * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+     * </pre>
+     *
+     * <code>optional string remote = 8 [json_name = "remote"];</code>
+     * @return The bytes for remote.
+     */
+    com.google.protobuf.ByteString
+        getRemoteBytes();
   }
   /**
    * Protobuf type {@code viam.robot.v1.ResourceStatus}
@@ -23126,6 +23340,7 @@ public final class Robot {
     private ResourceStatus() {
       revision_ = "";
       error_ = "";
+      remote_ = "";
     }
     /**
      * Protobuf enum {@code viam.robot.v1.ResourceStatus.State}
@@ -23293,6 +23508,160 @@ public final class Robot {
       }
 
       // @@protoc_insertion_point(enum_scope:viam.robot.v1.ResourceStatus.State)
+    }
+
+    /**
+     * <pre>
+     * whether calls to the resource by name can be routed through this machine.
+     * Independent of state, which for an unreachable resource is its last known state.
+     * </pre>
+     *
+     * Protobuf enum {@code viam.robot.v1.ResourceStatus.Reachability}
+     */
+    public enum Reachability
+        implements com.google.protobuf.Internal.EnumLite {
+      /**
+       * <pre>
+       * set by machines that predate this field; treat as reachable.
+       * </pre>
+       *
+       * <code>REACHABILITY_UNSPECIFIED = 0;</code>
+       */
+      REACHABILITY_UNSPECIFIED(0),
+      /**
+       * <code>REACHABILITY_REACHABLE = 1;</code>
+       */
+      REACHABILITY_REACHABLE(1),
+      /**
+       * <pre>
+       * the remote machine this resource is on is disconnected.
+       * </pre>
+       *
+       * <code>REACHABILITY_REMOTE_DISCONNECTED = 2;</code>
+       */
+      REACHABILITY_REMOTE_DISCONNECTED(2),
+      /**
+       * <pre>
+       * a local resource has the same name, so calls by name go to the local resource.
+       * </pre>
+       *
+       * <code>REACHABILITY_SHADOWED_BY_LOCAL = 3;</code>
+       */
+      REACHABILITY_SHADOWED_BY_LOCAL(3),
+      /**
+       * <pre>
+       * multiple remote resources have the same name and no local resource claims it.
+       * </pre>
+       *
+       * <code>REACHABILITY_AMBIGUOUS_REMOTE = 4;</code>
+       */
+      REACHABILITY_AMBIGUOUS_REMOTE(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * set by machines that predate this field; treat as reachable.
+       * </pre>
+       *
+       * <code>REACHABILITY_UNSPECIFIED = 0;</code>
+       */
+      public static final int REACHABILITY_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>REACHABILITY_REACHABLE = 1;</code>
+       */
+      public static final int REACHABILITY_REACHABLE_VALUE = 1;
+      /**
+       * <pre>
+       * the remote machine this resource is on is disconnected.
+       * </pre>
+       *
+       * <code>REACHABILITY_REMOTE_DISCONNECTED = 2;</code>
+       */
+      public static final int REACHABILITY_REMOTE_DISCONNECTED_VALUE = 2;
+      /**
+       * <pre>
+       * a local resource has the same name, so calls by name go to the local resource.
+       * </pre>
+       *
+       * <code>REACHABILITY_SHADOWED_BY_LOCAL = 3;</code>
+       */
+      public static final int REACHABILITY_SHADOWED_BY_LOCAL_VALUE = 3;
+      /**
+       * <pre>
+       * multiple remote resources have the same name and no local resource claims it.
+       * </pre>
+       *
+       * <code>REACHABILITY_AMBIGUOUS_REMOTE = 4;</code>
+       */
+      public static final int REACHABILITY_AMBIGUOUS_REMOTE_VALUE = 4;
+
+
+      @java.lang.Override
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Reachability valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static Reachability forNumber(int value) {
+        switch (value) {
+          case 0: return REACHABILITY_UNSPECIFIED;
+          case 1: return REACHABILITY_REACHABLE;
+          case 2: return REACHABILITY_REMOTE_DISCONNECTED;
+          case 3: return REACHABILITY_SHADOWED_BY_LOCAL;
+          case 4: return REACHABILITY_AMBIGUOUS_REMOTE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Reachability>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Reachability> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Reachability>() {
+              @java.lang.Override
+              public Reachability findValueByNumber(int number) {
+                return Reachability.forNumber(number);
+              }
+            };
+
+      public static com.google.protobuf.Internal.EnumVerifier 
+          internalGetVerifier() {
+        return ReachabilityVerifier.INSTANCE;
+      }
+
+      private static final class ReachabilityVerifier implements 
+           com.google.protobuf.Internal.EnumVerifier { 
+              static final com.google.protobuf.Internal.EnumVerifier
+                  INSTANCE = new ReachabilityVerifier();
+              @java.lang.Override
+              public boolean isInRange(int number) {
+                return Reachability.forNumber(number) != null;
+              }
+            };
+
+      private final int value;
+
+      private Reachability(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:viam.robot.v1.ResourceStatus.Reachability)
     }
 
     private int bitField0_;
@@ -23702,6 +24071,155 @@ public final class Robot {
     private void clearCloudMetadata() {
       cloudMetadata_ = null;
       bitField0_ = (bitField0_ & ~0x00000004);
+    }
+
+    public static final int REACHABILITY_FIELD_NUMBER = 7;
+    private int reachability_;
+    /**
+     * <pre>
+     * whether calls to this resource by name can be routed through this machine.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code>
+     * @return The enum numeric value on the wire for reachability.
+     */
+    @java.lang.Override
+    public int getReachabilityValue() {
+      return reachability_;
+    }
+    /**
+     * <pre>
+     * whether calls to this resource by name can be routed through this machine.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code>
+     * @return The reachability.
+     */
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.ResourceStatus.Reachability getReachability() {
+      com.viam.robot.v1.Robot.ResourceStatus.Reachability result = com.viam.robot.v1.Robot.ResourceStatus.Reachability.forNumber(reachability_);
+      return result == null ? com.viam.robot.v1.Robot.ResourceStatus.Reachability.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * whether calls to this resource by name can be routed through this machine.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code>
+     * @param value The enum numeric value on the wire for reachability to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setReachabilityValue(int value) {
+        reachability_ = value;
+    }
+    /**
+     * <pre>
+     * whether calls to this resource by name can be routed through this machine.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code>
+     * @param value The reachability to set.
+     */
+    private void setReachability(com.viam.robot.v1.Robot.ResourceStatus.Reachability value) {
+      reachability_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * whether calls to this resource by name can be routed through this machine.
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code>
+     */
+    private void clearReachability() {
+
+      reachability_ = 0;
+    }
+
+    public static final int REMOTE_FIELD_NUMBER = 8;
+    private java.lang.String remote_;
+    /**
+     * <pre>
+     * name of the remote, as configured on this machine, that this resource is reached through;
+     * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+     * </pre>
+     *
+     * <code>optional string remote = 8 [json_name = "remote"];</code>
+     * @return Whether the remote field is set.
+     */
+    @java.lang.Override
+    public boolean hasRemote() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * name of the remote, as configured on this machine, that this resource is reached through;
+     * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+     * </pre>
+     *
+     * <code>optional string remote = 8 [json_name = "remote"];</code>
+     * @return The remote.
+     */
+    @java.lang.Override
+    public java.lang.String getRemote() {
+      return remote_;
+    }
+    /**
+     * <pre>
+     * name of the remote, as configured on this machine, that this resource is reached through;
+     * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+     * </pre>
+     *
+     * <code>optional string remote = 8 [json_name = "remote"];</code>
+     * @return The bytes for remote.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRemoteBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(remote_);
+    }
+    /**
+     * <pre>
+     * name of the remote, as configured on this machine, that this resource is reached through;
+     * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+     * </pre>
+     *
+     * <code>optional string remote = 8 [json_name = "remote"];</code>
+     * @param value The remote to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setRemote(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      bitField0_ |= 0x00000008;
+      remote_ = value;
+    }
+    /**
+     * <pre>
+     * name of the remote, as configured on this machine, that this resource is reached through;
+     * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+     * </pre>
+     *
+     * <code>optional string remote = 8 [json_name = "remote"];</code>
+     */
+    private void clearRemote() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      remote_ = getDefaultInstance().getRemote();
+    }
+    /**
+     * <pre>
+     * name of the remote, as configured on this machine, that this resource is reached through;
+     * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+     * </pre>
+     *
+     * <code>optional string remote = 8 [json_name = "remote"];</code>
+     * @param value The bytes for remote to set.
+     */
+    private void setRemoteBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      remote_ = value.toStringUtf8();
+      bitField0_ |= 0x00000008;
     }
 
     public static com.viam.robot.v1.Robot.ResourceStatus parseFrom(
@@ -24224,6 +24742,160 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <pre>
+       * whether calls to this resource by name can be routed through this machine.
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code>
+       * @return The enum numeric value on the wire for reachability.
+       */
+      @java.lang.Override
+      public int getReachabilityValue() {
+        return instance.getReachabilityValue();
+      }
+      /**
+       * <pre>
+       * whether calls to this resource by name can be routed through this machine.
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code>
+       * @param value The reachability to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReachabilityValue(int value) {
+        copyOnWrite();
+        instance.setReachabilityValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * whether calls to this resource by name can be routed through this machine.
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code>
+       * @return The reachability.
+       */
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.ResourceStatus.Reachability getReachability() {
+        return instance.getReachability();
+      }
+      /**
+       * <pre>
+       * whether calls to this resource by name can be routed through this machine.
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code>
+       * @param value The enum numeric value on the wire for reachability to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setReachability(com.viam.robot.v1.Robot.ResourceStatus.Reachability value) {
+        copyOnWrite();
+        instance.setReachability(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * whether calls to this resource by name can be routed through this machine.
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ResourceStatus.Reachability reachability = 7 [json_name = "reachability"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReachability() {
+        copyOnWrite();
+        instance.clearReachability();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * name of the remote, as configured on this machine, that this resource is reached through;
+       * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+       * </pre>
+       *
+       * <code>optional string remote = 8 [json_name = "remote"];</code>
+       * @return Whether the remote field is set.
+       */
+      @java.lang.Override
+      public boolean hasRemote() {
+        return instance.hasRemote();
+      }
+      /**
+       * <pre>
+       * name of the remote, as configured on this machine, that this resource is reached through;
+       * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+       * </pre>
+       *
+       * <code>optional string remote = 8 [json_name = "remote"];</code>
+       * @return The remote.
+       */
+      @java.lang.Override
+      public java.lang.String getRemote() {
+        return instance.getRemote();
+      }
+      /**
+       * <pre>
+       * name of the remote, as configured on this machine, that this resource is reached through;
+       * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+       * </pre>
+       *
+       * <code>optional string remote = 8 [json_name = "remote"];</code>
+       * @return The bytes for remote.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRemoteBytes() {
+        return instance.getRemoteBytes();
+      }
+      /**
+       * <pre>
+       * name of the remote, as configured on this machine, that this resource is reached through;
+       * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+       * </pre>
+       *
+       * <code>optional string remote = 8 [json_name = "remote"];</code>
+       * @param value The remote to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemote(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRemote(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the remote, as configured on this machine, that this resource is reached through;
+       * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+       * </pre>
+       *
+       * <code>optional string remote = 8 [json_name = "remote"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemote() {
+        copyOnWrite();
+        instance.clearRemote();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the remote, as configured on this machine, that this resource is reached through;
+       * for a resource on a remote's remote, this is the first hop. Unset for local resources.
+       * </pre>
+       *
+       * <code>optional string remote = 8 [json_name = "remote"];</code>
+       * @param value The bytes for remote to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRemoteBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.robot.v1.ResourceStatus)
     }
     @java.lang.Override
@@ -24247,10 +24919,12 @@ public final class Robot {
               "revision_",
               "error_",
               "cloudMetadata_",
+              "reachability_",
+              "remote_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "\f\u0003\u1009\u0001\u0004\u0208\u0005\u0208\u0006\u1009\u0002";
+                "\u0000\b\u0000\u0001\u0001\b\b\u0000\u0000\u0000\u0001\u1009\u0000\u0002\f\u0003" +
+                "\u1009\u0001\u0004\u0208\u0005\u0208\u0006\u1009\u0002\u0007\f\b\u1208\u0003";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
