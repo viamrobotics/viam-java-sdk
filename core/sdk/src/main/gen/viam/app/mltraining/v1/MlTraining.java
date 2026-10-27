@@ -32,6 +32,14 @@ public final class MlTraining {
      * <code>MODEL_TYPE_OBJECT_DETECTION = 3;</code>
      */
     MODEL_TYPE_OBJECT_DETECTION(3),
+    /**
+     * <pre>
+     * A policy that controls a robot.
+     * </pre>
+     *
+     * <code>MODEL_TYPE_ROBOT_POLICY = 4;</code>
+     */
+    MODEL_TYPE_ROBOT_POLICY(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -51,6 +59,14 @@ public final class MlTraining {
      * <code>MODEL_TYPE_OBJECT_DETECTION = 3;</code>
      */
     public static final int MODEL_TYPE_OBJECT_DETECTION_VALUE = 3;
+    /**
+     * <pre>
+     * A policy that controls a robot.
+     * </pre>
+     *
+     * <code>MODEL_TYPE_ROBOT_POLICY = 4;</code>
+     */
+    public static final int MODEL_TYPE_ROBOT_POLICY_VALUE = 4;
 
 
     @java.lang.Override
@@ -78,6 +94,7 @@ public final class MlTraining {
         case 1: return MODEL_TYPE_SINGLE_LABEL_CLASSIFICATION;
         case 2: return MODEL_TYPE_MULTI_LABEL_CLASSIFICATION;
         case 3: return MODEL_TYPE_OBJECT_DETECTION;
+        case 4: return MODEL_TYPE_ROBOT_POLICY;
         default: return null;
       }
     }

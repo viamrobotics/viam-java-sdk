@@ -24537,6 +24537,27 @@ com.viam.service.motion.v1.Motion.ComponentState defaultValue) {
   public interface TempStreamArmJointPositionsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.motion.v1.TempStreamArmJointPositionsResponse)
       com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * motion_side_current_runway_ms is sent once per target, right after the service adds it. It is how much
+     * motion, in milliseconds, the service has accepted but not yet handed to the arm at that moment.
+     * </pre>
+     *
+     * <code>optional int32 motion_side_current_runway_ms = 1 [json_name = "motionSideCurrentRunwayMs"];</code>
+     * @return Whether the motionSideCurrentRunwayMs field is set.
+     */
+    boolean hasMotionSideCurrentRunwayMs();
+    /**
+     * <pre>
+     * motion_side_current_runway_ms is sent once per target, right after the service adds it. It is how much
+     * motion, in milliseconds, the service has accepted but not yet handed to the arm at that moment.
+     * </pre>
+     *
+     * <code>optional int32 motion_side_current_runway_ms = 1 [json_name = "motionSideCurrentRunwayMs"];</code>
+     * @return The motionSideCurrentRunwayMs.
+     */
+    int getMotionSideCurrentRunwayMs();
   }
   /**
    * Protobuf type {@code viam.service.motion.v1.TempStreamArmJointPositionsResponse}
@@ -24548,6 +24569,61 @@ com.viam.service.motion.v1.Motion.ComponentState defaultValue) {
       TempStreamArmJointPositionsResponseOrBuilder {
     private TempStreamArmJointPositionsResponse() {
     }
+    private int bitField0_;
+    public static final int MOTION_SIDE_CURRENT_RUNWAY_MS_FIELD_NUMBER = 1;
+    private int motionSideCurrentRunwayMs_;
+    /**
+     * <pre>
+     * motion_side_current_runway_ms is sent once per target, right after the service adds it. It is how much
+     * motion, in milliseconds, the service has accepted but not yet handed to the arm at that moment.
+     * </pre>
+     *
+     * <code>optional int32 motion_side_current_runway_ms = 1 [json_name = "motionSideCurrentRunwayMs"];</code>
+     * @return Whether the motionSideCurrentRunwayMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasMotionSideCurrentRunwayMs() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * motion_side_current_runway_ms is sent once per target, right after the service adds it. It is how much
+     * motion, in milliseconds, the service has accepted but not yet handed to the arm at that moment.
+     * </pre>
+     *
+     * <code>optional int32 motion_side_current_runway_ms = 1 [json_name = "motionSideCurrentRunwayMs"];</code>
+     * @return The motionSideCurrentRunwayMs.
+     */
+    @java.lang.Override
+    public int getMotionSideCurrentRunwayMs() {
+      return motionSideCurrentRunwayMs_;
+    }
+    /**
+     * <pre>
+     * motion_side_current_runway_ms is sent once per target, right after the service adds it. It is how much
+     * motion, in milliseconds, the service has accepted but not yet handed to the arm at that moment.
+     * </pre>
+     *
+     * <code>optional int32 motion_side_current_runway_ms = 1 [json_name = "motionSideCurrentRunwayMs"];</code>
+     * @param value The motionSideCurrentRunwayMs to set.
+     */
+    private void setMotionSideCurrentRunwayMs(int value) {
+      bitField0_ |= 0x00000001;
+      motionSideCurrentRunwayMs_ = value;
+    }
+    /**
+     * <pre>
+     * motion_side_current_runway_ms is sent once per target, right after the service adds it. It is how much
+     * motion, in milliseconds, the service has accepted but not yet handed to the arm at that moment.
+     * </pre>
+     *
+     * <code>optional int32 motion_side_current_runway_ms = 1 [json_name = "motionSideCurrentRunwayMs"];</code>
+     */
+    private void clearMotionSideCurrentRunwayMs() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      motionSideCurrentRunwayMs_ = 0;
+    }
+
     public static com.viam.service.motion.v1.Motion.TempStreamArmJointPositionsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -24645,6 +24721,62 @@ com.viam.service.motion.v1.Motion.ComponentState defaultValue) {
       }
 
 
+      /**
+       * <pre>
+       * motion_side_current_runway_ms is sent once per target, right after the service adds it. It is how much
+       * motion, in milliseconds, the service has accepted but not yet handed to the arm at that moment.
+       * </pre>
+       *
+       * <code>optional int32 motion_side_current_runway_ms = 1 [json_name = "motionSideCurrentRunwayMs"];</code>
+       * @return Whether the motionSideCurrentRunwayMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasMotionSideCurrentRunwayMs() {
+        return instance.hasMotionSideCurrentRunwayMs();
+      }
+      /**
+       * <pre>
+       * motion_side_current_runway_ms is sent once per target, right after the service adds it. It is how much
+       * motion, in milliseconds, the service has accepted but not yet handed to the arm at that moment.
+       * </pre>
+       *
+       * <code>optional int32 motion_side_current_runway_ms = 1 [json_name = "motionSideCurrentRunwayMs"];</code>
+       * @return The motionSideCurrentRunwayMs.
+       */
+      @java.lang.Override
+      public int getMotionSideCurrentRunwayMs() {
+        return instance.getMotionSideCurrentRunwayMs();
+      }
+      /**
+       * <pre>
+       * motion_side_current_runway_ms is sent once per target, right after the service adds it. It is how much
+       * motion, in milliseconds, the service has accepted but not yet handed to the arm at that moment.
+       * </pre>
+       *
+       * <code>optional int32 motion_side_current_runway_ms = 1 [json_name = "motionSideCurrentRunwayMs"];</code>
+       * @param value The motionSideCurrentRunwayMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMotionSideCurrentRunwayMs(int value) {
+        copyOnWrite();
+        instance.setMotionSideCurrentRunwayMs(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * motion_side_current_runway_ms is sent once per target, right after the service adds it. It is how much
+       * motion, in milliseconds, the service has accepted but not yet handed to the arm at that moment.
+       * </pre>
+       *
+       * <code>optional int32 motion_side_current_runway_ms = 1 [json_name = "motionSideCurrentRunwayMs"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMotionSideCurrentRunwayMs() {
+        copyOnWrite();
+        instance.clearMotionSideCurrentRunwayMs();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.service.motion.v1.TempStreamArmJointPositionsResponse)
     }
     @java.lang.Override
@@ -24660,9 +24792,12 @@ com.viam.service.motion.v1.Motion.ComponentState defaultValue) {
           return new Builder();
         }
         case BUILD_MESSAGE_INFO: {
-            java.lang.Object[] objects = null;
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "motionSideCurrentRunwayMs_",
+            };
             java.lang.String info =
-                "\u0000\u0000";
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1004\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
