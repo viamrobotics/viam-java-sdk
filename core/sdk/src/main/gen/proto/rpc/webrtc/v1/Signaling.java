@@ -1569,6 +1569,17 @@ public final class Signaling {
      */
     com.google.protobuf.ByteString
         getSdpBytes();
+
+    /**
+     * <pre>
+     * must_auth_against_answerer tells the caller that the signaling server could not
+     * authenticate it, so it must authenticate with the answerer over the PeerConnection.
+     * </pre>
+     *
+     * <code>bool must_auth_against_answerer = 2 [json_name = "mustAuthAgainstAnswerer"];</code>
+     * @return The mustAuthAgainstAnswerer.
+     */
+    boolean getMustAuthAgainstAnswerer();
   }
   /**
    * <pre>
@@ -1632,6 +1643,47 @@ public final class Signaling {
       checkByteStringIsUtf8(value);
       sdp_ = value.toStringUtf8();
 
+    }
+
+    public static final int MUST_AUTH_AGAINST_ANSWERER_FIELD_NUMBER = 2;
+    private boolean mustAuthAgainstAnswerer_;
+    /**
+     * <pre>
+     * must_auth_against_answerer tells the caller that the signaling server could not
+     * authenticate it, so it must authenticate with the answerer over the PeerConnection.
+     * </pre>
+     *
+     * <code>bool must_auth_against_answerer = 2 [json_name = "mustAuthAgainstAnswerer"];</code>
+     * @return The mustAuthAgainstAnswerer.
+     */
+    @java.lang.Override
+    public boolean getMustAuthAgainstAnswerer() {
+      return mustAuthAgainstAnswerer_;
+    }
+    /**
+     * <pre>
+     * must_auth_against_answerer tells the caller that the signaling server could not
+     * authenticate it, so it must authenticate with the answerer over the PeerConnection.
+     * </pre>
+     *
+     * <code>bool must_auth_against_answerer = 2 [json_name = "mustAuthAgainstAnswerer"];</code>
+     * @param value The mustAuthAgainstAnswerer to set.
+     */
+    private void setMustAuthAgainstAnswerer(boolean value) {
+      
+      mustAuthAgainstAnswerer_ = value;
+    }
+    /**
+     * <pre>
+     * must_auth_against_answerer tells the caller that the signaling server could not
+     * authenticate it, so it must authenticate with the answerer over the PeerConnection.
+     * </pre>
+     *
+     * <code>bool must_auth_against_answerer = 2 [json_name = "mustAuthAgainstAnswerer"];</code>
+     */
+    private void clearMustAuthAgainstAnswerer() {
+
+      mustAuthAgainstAnswerer_ = false;
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parseFrom(
@@ -1785,6 +1837,49 @@ public final class Signaling {
         return this;
       }
 
+      /**
+       * <pre>
+       * must_auth_against_answerer tells the caller that the signaling server could not
+       * authenticate it, so it must authenticate with the answerer over the PeerConnection.
+       * </pre>
+       *
+       * <code>bool must_auth_against_answerer = 2 [json_name = "mustAuthAgainstAnswerer"];</code>
+       * @return The mustAuthAgainstAnswerer.
+       */
+      @java.lang.Override
+      public boolean getMustAuthAgainstAnswerer() {
+        return instance.getMustAuthAgainstAnswerer();
+      }
+      /**
+       * <pre>
+       * must_auth_against_answerer tells the caller that the signaling server could not
+       * authenticate it, so it must authenticate with the answerer over the PeerConnection.
+       * </pre>
+       *
+       * <code>bool must_auth_against_answerer = 2 [json_name = "mustAuthAgainstAnswerer"];</code>
+       * @param value The mustAuthAgainstAnswerer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMustAuthAgainstAnswerer(boolean value) {
+        copyOnWrite();
+        instance.setMustAuthAgainstAnswerer(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * must_auth_against_answerer tells the caller that the signaling server could not
+       * authenticate it, so it must authenticate with the answerer over the PeerConnection.
+       * </pre>
+       *
+       * <code>bool must_auth_against_answerer = 2 [json_name = "mustAuthAgainstAnswerer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMustAuthAgainstAnswerer() {
+        copyOnWrite();
+        instance.clearMustAuthAgainstAnswerer();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.CallResponseInitStage)
     }
     @java.lang.Override
@@ -1802,9 +1897,11 @@ public final class Signaling {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "sdp_",
+              "mustAuthAgainstAnswerer_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0007" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -4874,6 +4971,18 @@ java.lang.String defaultValue);
 
     java.lang.String getCallerAuthMetadataOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * a warning from the signaling server that the signaling server
+     * could not auth the caller. if this flag is true, the answerer
+     * must auth the caller itself
+     * </pre>
+     *
+     * <code>bool must_auth_caller = 6 [json_name = "mustAuthCaller"];</code>
+     * @return The mustAuthCaller.
+     */
+    boolean getMustAuthCaller();
   }
   /**
    * <pre>
@@ -5240,6 +5349,50 @@ java.lang.String defaultValue) {
     private java.util.Map<java.lang.String, java.lang.String>
     getMutableCallerAuthMetadataMap() {
       return internalGetMutableCallerAuthMetadata();
+    }
+
+    public static final int MUST_AUTH_CALLER_FIELD_NUMBER = 6;
+    private boolean mustAuthCaller_;
+    /**
+     * <pre>
+     * a warning from the signaling server that the signaling server
+     * could not auth the caller. if this flag is true, the answerer
+     * must auth the caller itself
+     * </pre>
+     *
+     * <code>bool must_auth_caller = 6 [json_name = "mustAuthCaller"];</code>
+     * @return The mustAuthCaller.
+     */
+    @java.lang.Override
+    public boolean getMustAuthCaller() {
+      return mustAuthCaller_;
+    }
+    /**
+     * <pre>
+     * a warning from the signaling server that the signaling server
+     * could not auth the caller. if this flag is true, the answerer
+     * must auth the caller itself
+     * </pre>
+     *
+     * <code>bool must_auth_caller = 6 [json_name = "mustAuthCaller"];</code>
+     * @param value The mustAuthCaller to set.
+     */
+    private void setMustAuthCaller(boolean value) {
+      
+      mustAuthCaller_ = value;
+    }
+    /**
+     * <pre>
+     * a warning from the signaling server that the signaling server
+     * could not auth the caller. if this flag is true, the answerer
+     * must auth the caller itself
+     * </pre>
+     *
+     * <code>bool must_auth_caller = 6 [json_name = "mustAuthCaller"];</code>
+     */
+    private void clearMustAuthCaller() {
+
+      mustAuthCaller_ = false;
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseFrom(
@@ -5706,6 +5859,52 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * a warning from the signaling server that the signaling server
+       * could not auth the caller. if this flag is true, the answerer
+       * must auth the caller itself
+       * </pre>
+       *
+       * <code>bool must_auth_caller = 6 [json_name = "mustAuthCaller"];</code>
+       * @return The mustAuthCaller.
+       */
+      @java.lang.Override
+      public boolean getMustAuthCaller() {
+        return instance.getMustAuthCaller();
+      }
+      /**
+       * <pre>
+       * a warning from the signaling server that the signaling server
+       * could not auth the caller. if this flag is true, the answerer
+       * must auth the caller itself
+       * </pre>
+       *
+       * <code>bool must_auth_caller = 6 [json_name = "mustAuthCaller"];</code>
+       * @param value The mustAuthCaller to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMustAuthCaller(boolean value) {
+        copyOnWrite();
+        instance.setMustAuthCaller(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * a warning from the signaling server that the signaling server
+       * could not auth the caller. if this flag is true, the answerer
+       * must auth the caller itself
+       * </pre>
+       *
+       * <code>bool must_auth_caller = 6 [json_name = "mustAuthCaller"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMustAuthCaller() {
+        copyOnWrite();
+        instance.clearMustAuthCaller();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerRequestInitStage)
     }
     @java.lang.Override
@@ -5729,10 +5928,11 @@ java.lang.String defaultValue) {
               "callerAuthEntity_",
               "callerAuthMetadata_",
               CallerAuthMetadataDefaultEntryHolder.defaultEntry,
+              "mustAuthCaller_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0001\u0000\u0000\u0001\u0208\u0002\u1009" +
-                "\u0000\u0003\u1009\u0001\u0004\u0208\u00052";
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0001\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001\u0004\u0208\u00052\u0006\u0007";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -7876,6 +8076,17 @@ java.lang.String defaultValue) {
      */
     com.google.protobuf.ByteString
         getSdpBytes();
+
+    /**
+     * <pre>
+     * can_auth_callers tells the signaling server that this answerer can authenticate
+     * callers itself, so it may receive callers the signaling server could not authenticate.
+     * </pre>
+     *
+     * <code>bool can_auth_callers = 2 [json_name = "canAuthCallers"];</code>
+     * @return The canAuthCallers.
+     */
+    boolean getCanAuthCallers();
   }
   /**
    * <pre>
@@ -7939,6 +8150,47 @@ java.lang.String defaultValue) {
       checkByteStringIsUtf8(value);
       sdp_ = value.toStringUtf8();
 
+    }
+
+    public static final int CAN_AUTH_CALLERS_FIELD_NUMBER = 2;
+    private boolean canAuthCallers_;
+    /**
+     * <pre>
+     * can_auth_callers tells the signaling server that this answerer can authenticate
+     * callers itself, so it may receive callers the signaling server could not authenticate.
+     * </pre>
+     *
+     * <code>bool can_auth_callers = 2 [json_name = "canAuthCallers"];</code>
+     * @return The canAuthCallers.
+     */
+    @java.lang.Override
+    public boolean getCanAuthCallers() {
+      return canAuthCallers_;
+    }
+    /**
+     * <pre>
+     * can_auth_callers tells the signaling server that this answerer can authenticate
+     * callers itself, so it may receive callers the signaling server could not authenticate.
+     * </pre>
+     *
+     * <code>bool can_auth_callers = 2 [json_name = "canAuthCallers"];</code>
+     * @param value The canAuthCallers to set.
+     */
+    private void setCanAuthCallers(boolean value) {
+      
+      canAuthCallers_ = value;
+    }
+    /**
+     * <pre>
+     * can_auth_callers tells the signaling server that this answerer can authenticate
+     * callers itself, so it may receive callers the signaling server could not authenticate.
+     * </pre>
+     *
+     * <code>bool can_auth_callers = 2 [json_name = "canAuthCallers"];</code>
+     */
+    private void clearCanAuthCallers() {
+
+      canAuthCallers_ = false;
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parseFrom(
@@ -8092,6 +8344,49 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * can_auth_callers tells the signaling server that this answerer can authenticate
+       * callers itself, so it may receive callers the signaling server could not authenticate.
+       * </pre>
+       *
+       * <code>bool can_auth_callers = 2 [json_name = "canAuthCallers"];</code>
+       * @return The canAuthCallers.
+       */
+      @java.lang.Override
+      public boolean getCanAuthCallers() {
+        return instance.getCanAuthCallers();
+      }
+      /**
+       * <pre>
+       * can_auth_callers tells the signaling server that this answerer can authenticate
+       * callers itself, so it may receive callers the signaling server could not authenticate.
+       * </pre>
+       *
+       * <code>bool can_auth_callers = 2 [json_name = "canAuthCallers"];</code>
+       * @param value The canAuthCallers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCanAuthCallers(boolean value) {
+        copyOnWrite();
+        instance.setCanAuthCallers(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * can_auth_callers tells the signaling server that this answerer can authenticate
+       * callers itself, so it may receive callers the signaling server could not authenticate.
+       * </pre>
+       *
+       * <code>bool can_auth_callers = 2 [json_name = "canAuthCallers"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCanAuthCallers() {
+        copyOnWrite();
+        instance.clearCanAuthCallers();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerResponseInitStage)
     }
     @java.lang.Override
@@ -8109,9 +8404,11 @@ java.lang.String defaultValue) {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "sdp_",
+              "canAuthCallers_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0007" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
