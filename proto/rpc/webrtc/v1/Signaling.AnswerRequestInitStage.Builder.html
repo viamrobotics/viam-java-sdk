@@ -150,74 +150,88 @@ implements <a href="Signaling.AnswerRequestInitStageOrBuilder.html" title="inter
 <div class="block"><code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.AnswerRequestInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearOptionalConfig()" class="member-name-link">clearOptionalConfig</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMustAuthCaller()" class="member-name-link">clearMustAuthCaller</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code></div>
+<div class="block">
+ a warning from the signaling server that the signaling server
+ could not auth the caller.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.AnswerRequestInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSdp()" class="member-name-link">clearSdp</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearOptionalConfig()" class="member-name-link">clearOptionalConfig</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.AnswerRequestInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSdp()" class="member-name-link">clearSdp</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string sdp = 1 [json_name = "sdp"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#containsCallerAuthMetadata(java.lang.String)" class="member-name-link">containsCallerAuthMetadata</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
- from the caller's auth token by the signaling server.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCallerAuthEntity()" class="member-name-link">getCallerAuthEntity</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
- from the caller's auth token by the signaling server.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCallerAuthEntityBytes()" class="member-name-link">getCallerAuthEntityBytes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
- from the caller's auth token by the signaling server.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getCallerAuthMetadata()" class="member-name-link">getCallerAuthMetadata</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCallerAuthMetadataCount()" class="member-name-link">getCallerAuthMetadataCount</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
- caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
- from the caller's auth token by the signaling server.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCallerAuthMetadataMap()" class="member-name-link">getCallerAuthMetadataMap</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#containsCallerAuthMetadata(java.lang.String)" class="member-name-link">containsCallerAuthMetadata</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
  from the caller's auth token by the signaling server.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCallerAuthMetadataOrDefault(java.lang.String,java.lang.String)" class="member-name-link">getCallerAuthMetadataOrDefault</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
- <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defaultValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCallerAuthEntity()" class="member-name-link">getCallerAuthEntity</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+ from the caller's auth token by the signaling server.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCallerAuthEntityBytes()" class="member-name-link">getCallerAuthEntityBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ caller_auth_entity is the caller's authenticated entity (its JWT subject), extracted
+ from the caller's auth token by the signaling server.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getCallerAuthMetadata()" class="member-name-link">getCallerAuthMetadata</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCallerAuthMetadataCount()" class="member-name-link">getCallerAuthMetadataCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+ from the caller's auth token by the signaling server.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCallerAuthMetadataMap()" class="member-name-link">getCallerAuthMetadataMap</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
  from the caller's auth token by the signaling server.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCallerAuthMetadataOrThrow(java.lang.String)" class="member-name-link">getCallerAuthMetadataOrThrow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCallerAuthMetadataOrDefault(java.lang.String,java.lang.String)" class="member-name-link">getCallerAuthMetadataOrDefault</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defaultValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
  from the caller's auth token by the signaling server.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDeadline()" class="member-name-link">getDeadline</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCallerAuthMetadataOrThrow(java.lang.String)" class="member-name-link">getCallerAuthMetadataOrThrow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ caller_auth_metadata is the caller's auth metadata (its rpc_auth_md claim), extracted
+ from the caller's auth token by the signaling server.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDeadline()" class="member-name-link">getDeadline</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMustAuthCaller()" class="member-name-link">getMustAuthCaller</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ a warning from the signaling server that the signaling server
+ could not auth the caller.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.WebRTCConfig.html" title="class in proto.rpc.webrtc.v1">Signaling.WebRTCConfig</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOptionalConfig()" class="member-name-link">getOptionalConfig</a>()</code></div>
@@ -301,23 +315,30 @@ implements <a href="Signaling.AnswerRequestInitStageOrBuilder.html" title="inter
 <div class="block"><code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.AnswerRequestInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOptionalConfig(proto.rpc.webrtc.v1.Signaling.WebRTCConfig)" class="member-name-link">setOptionalConfig</a><wbr>(<a href="Signaling.WebRTCConfig.html" title="class in proto.rpc.webrtc.v1">Signaling.WebRTCConfig</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMustAuthCaller(boolean)" class="member-name-link">setMustAuthCaller</a><wbr>(boolean&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code></div>
+<div class="block">
+ a warning from the signaling server that the signaling server
+ could not auth the caller.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.AnswerRequestInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOptionalConfig(proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder)" class="member-name-link">setOptionalConfig</a><wbr>(<a href="Signaling.WebRTCConfig.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.WebRTCConfig.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOptionalConfig(proto.rpc.webrtc.v1.Signaling.WebRTCConfig)" class="member-name-link">setOptionalConfig</a><wbr>(<a href="Signaling.WebRTCConfig.html" title="class in proto.rpc.webrtc.v1">Signaling.WebRTCConfig</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.AnswerRequestInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSdp(java.lang.String)" class="member-name-link">setSdp</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOptionalConfig(proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder)" class="member-name-link">setOptionalConfig</a><wbr>(<a href="Signaling.WebRTCConfig.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.WebRTCConfig.Builder</a>&nbsp;builderForValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string sdp = 1 [json_name = "sdp"];</code></div>
+<div class="block"><code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.AnswerRequestInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSdpBytes(com.google.protobuf.ByteString)" class="member-name-link">setSdpBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSdp(java.lang.String)" class="member-name-link">setSdp</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string sdp = 1 [json_name = "sdp"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.AnswerRequestInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSdpBytes(com.google.protobuf.ByteString)" class="member-name-link">setSdpBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string sdp = 1 [json_name = "sdp"];</code></div>
 </div>
 </div>
@@ -751,6 +772,61 @@ implements <a href="Signaling.AnswerRequestInitStageOrBuilder.html" title="inter
  </pre>
 
  <code>map&lt;string, string&gt; caller_auth_metadata = 5 [json_name = "callerAuthMetadata"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getMustAuthCaller()">
+<h3>getMustAuthCaller</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getMustAuthCaller</span>()</div>
+<div class="block"><pre>
+ a warning from the signaling server that the signaling server
+ could not auth the caller. if this flag is true, the answerer
+ must auth the caller itself
+ </pre>
+
+ <code>bool must_auth_caller = 6 [json_name = "mustAuthCaller"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Signaling.AnswerRequestInitStageOrBuilder.html#getMustAuthCaller()">getMustAuthCaller</a></code>&nbsp;in interface&nbsp;<code><a href="Signaling.AnswerRequestInitStageOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStageOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The mustAuthCaller.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMustAuthCaller(boolean)">
+<h3>setMustAuthCaller</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Signaling.AnswerRequestInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage.Builder</a></span>&nbsp;<span class="element-name">setMustAuthCaller</span><wbr><span class="parameters">(boolean&nbsp;value)</span></div>
+<div class="block"><pre>
+ a warning from the signaling server that the signaling server
+ could not auth the caller. if this flag is true, the answerer
+ must auth the caller itself
+ </pre>
+
+ <code>bool must_auth_caller = 6 [json_name = "mustAuthCaller"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The mustAuthCaller to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearMustAuthCaller()">
+<h3>clearMustAuthCaller</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Signaling.AnswerRequestInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage.Builder</a></span>&nbsp;<span class="element-name">clearMustAuthCaller</span>()</div>
+<div class="block"><pre>
+ a warning from the signaling server that the signaling server
+ could not auth the caller. if this flag is true, the answerer
+ must auth the caller itself
+ </pre>
+
+ <code>bool must_auth_caller = 6 [json_name = "mustAuthCaller"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
 </section>
 </li>
 </ul>

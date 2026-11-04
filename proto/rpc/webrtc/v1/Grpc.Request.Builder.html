@@ -137,51 +137,79 @@ implements <a href="Grpc.RequestOrBuilder.html" title="interface in proto.rpc.we
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearHeaders()" class="member-name-link">clearHeaders</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearApiToken()" class="member-name-link">clearApiToken</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code></div>
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMessage()" class="member-name-link">clearMessage</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearRstStream()" class="member-name-link">clearRstStream</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>bool rst_stream = 4 [json_name = "rstStream"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearStream()" class="member-name-link">clearStream</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearType()" class="member-name-link">clearType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.RequestHeaders.html" title="class in proto.rpc.webrtc.v1">Grpc.RequestHeaders</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHeaders()" class="member-name-link">getHeaders</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearHeaders()" class="member-name-link">clearHeaders</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.RequestMessage.html" title="class in proto.rpc.webrtc.v1">Grpc.RequestMessage</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMessage()" class="member-name-link">getMessage</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMessage()" class="member-name-link">clearMessage</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRstStream()" class="member-name-link">getRstStream</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearRstStream()" class="member-name-link">clearRstStream</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>bool rst_stream = 4 [json_name = "rstStream"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Stream.html" title="class in proto.rpc.webrtc.v1">Grpc.Stream</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStream()" class="member-name-link">getStream</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearStream()" class="member-name-link">clearStream</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.TypeCase.html" title="enum class in proto.rpc.webrtc.v1">Grpc.Request.TypeCase</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypeCase()" class="member-name-link">getTypeCase</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearType()" class="member-name-link">clearType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getApiToken()" class="member-name-link">getApiToken</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getApiTokenBytes()" class="member-name-link">getApiTokenBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.RequestHeaders.html" title="class in proto.rpc.webrtc.v1">Grpc.RequestHeaders</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHeaders()" class="member-name-link">getHeaders</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.RequestMessage.html" title="class in proto.rpc.webrtc.v1">Grpc.RequestMessage</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMessage()" class="member-name-link">getMessage</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRstStream()" class="member-name-link">getRstStream</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>bool rst_stream = 4 [json_name = "rstStream"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Stream.html" title="class in proto.rpc.webrtc.v1">Grpc.Stream</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStream()" class="member-name-link">getStream</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.TypeCase.html" title="enum class in proto.rpc.webrtc.v1">Grpc.Request.TypeCase</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypeCase()" class="member-name-link">getTypeCase</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasApiToken()" class="member-name-link">hasApiToken</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasHeaders()" class="member-name-link">hasHeaders</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -216,6 +244,20 @@ implements <a href="Grpc.RequestOrBuilder.html" title="interface in proto.rpc.we
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeStream(proto.rpc.webrtc.v1.Grpc.Stream)" class="member-name-link">mergeStream</a><wbr>(<a href="Grpc.Stream.html" title="class in proto.rpc.webrtc.v1">Grpc.Stream</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setApiToken(java.lang.String)" class="member-name-link">setApiToken</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setApiTokenBytes(com.google.protobuf.ByteString)" class="member-name-link">setApiTokenBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHeaders(proto.rpc.webrtc.v1.Grpc.RequestHeaders)" class="member-name-link">setHeaders</a><wbr>(<a href="Grpc.RequestHeaders.html" title="class in proto.rpc.webrtc.v1">Grpc.RequestHeaders</a>&nbsp;value)</code></div>
@@ -501,6 +543,112 @@ implements <a href="Grpc.RequestOrBuilder.html" title="interface in proto.rpc.we
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></span>&nbsp;<span class="element-name">clearRstStream</span>()</div>
 <div class="block"><code>bool rst_stream = 4 [json_name = "rstStream"];</code></div>
 <dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasApiToken()">
+<h3>hasApiToken</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasApiToken</span>()</div>
+<div class="block"><pre>
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+ </pre>
+
+ <code>string api_token = 5 [json_name = "apiToken"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Grpc.RequestOrBuilder.html#hasApiToken()">hasApiToken</a></code>&nbsp;in interface&nbsp;<code><a href="Grpc.RequestOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.RequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the apiToken field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getApiToken()">
+<h3>getApiToken</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getApiToken</span>()</div>
+<div class="block"><pre>
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+ </pre>
+
+ <code>string api_token = 5 [json_name = "apiToken"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Grpc.RequestOrBuilder.html#getApiToken()">getApiToken</a></code>&nbsp;in interface&nbsp;<code><a href="Grpc.RequestOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.RequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The apiToken.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getApiTokenBytes()">
+<h3>getApiTokenBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getApiTokenBytes</span>()</div>
+<div class="block"><pre>
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+ </pre>
+
+ <code>string api_token = 5 [json_name = "apiToken"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Grpc.RequestOrBuilder.html#getApiTokenBytes()">getApiTokenBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Grpc.RequestOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.RequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for apiToken.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setApiToken(java.lang.String)">
+<h3>setApiToken</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></span>&nbsp;<span class="element-name">setApiToken</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><pre>
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+ </pre>
+
+ <code>string api_token = 5 [json_name = "apiToken"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The apiToken to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearApiToken()">
+<h3>clearApiToken</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></span>&nbsp;<span class="element-name">clearApiToken</span>()</div>
+<div class="block"><pre>
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+ </pre>
+
+ <code>string api_token = 5 [json_name = "apiToken"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setApiTokenBytes(com.google.protobuf.ByteString)">
+<h3>setApiTokenBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></span>&nbsp;<span class="element-name">setApiTokenBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="block"><pre>
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+ </pre>
+
+ <code>string api_token = 5 [json_name = "apiToken"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The bytes for apiToken to set.</dd>
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
 </dl>

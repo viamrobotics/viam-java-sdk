@@ -1690,7 +1690,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#addAllPermissions(java.lang.Iterable)" class="member-name-link">addAllPermissions(Iterable&lt;? extends Robot.Permission&gt;)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html#addAllPermissions(java.lang.Iterable)" class="member-name-link">addAllPermissions(Iterable&lt;String&gt;)</a> - Method in class com.google.iam.v1.<a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html" title="class in com.google.iam.v1">TestIamPermissionsRequest.Builder</a></dt>
 <dd>
@@ -2302,6 +2303,11 @@ loadScripts(document, 'script');</script>
 <div class="block">
  user_permissions represents the map of Users to Permissions for
  this machine.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#addAllUsers(java.lang.Iterable)" class="member-name-link">addAllUsers(Iterable&lt;? extends Robot.User&gt;)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
 </dd>
 <dt><a href="com/viam/service/worldstatestore/v1/WorldStateStore.ListUUIDsResponse.Builder.html#addAllUuids(java.lang.Iterable)" class="member-name-link">addAllUuids(Iterable&lt;? extends ByteString&gt;)</a> - Method in class com.viam.service.worldstatestore.v1.<a href="com/viam/service/worldstatestore/v1/WorldStateStore.ListUUIDsResponse.Builder.html" title="class in com.viam.service.worldstatestore.v1">WorldStateStore.ListUUIDsResponse.Builder</a></dt>
 <dd>
@@ -6445,11 +6451,13 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#addPermissions(int,viam.app.v1.Robot.Permission)" class="member-name-link">addPermissions(int, Robot.Permission)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#addPermissions(int,viam.app.v1.Robot.Permission.Builder)" class="member-name-link">addPermissions(int, Robot.Permission.Builder)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html#addPermissions(java.lang.String)" class="member-name-link">addPermissions(String)</a> - Method in class com.google.iam.v1.<a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html" title="class in com.google.iam.v1">TestIamPermissionsRequest.Builder</a></dt>
 <dd>
@@ -6476,11 +6484,13 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#addPermissions(viam.app.v1.Robot.Permission)" class="member-name-link">addPermissions(Robot.Permission)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#addPermissions(viam.app.v1.Robot.Permission.Builder)" class="member-name-link">addPermissions(Robot.Permission.Builder)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html#addPermissionsBytes(com.google.protobuf.ByteString)" class="member-name-link">addPermissionsBytes(ByteString)</a> - Method in class com.google.iam.v1.<a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html" title="class in com.google.iam.v1">TestIamPermissionsRequest.Builder</a></dt>
 <dd>
@@ -8527,6 +8537,26 @@ loadScripts(document, 'script');</script>
  user_permissions represents the map of Users to Permissions for
  this machine.</div>
 </dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#addUsers(int,viam.app.v1.Robot.User)" class="member-name-link">addUsers(int, Robot.User)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#addUsers(int,viam.app.v1.Robot.User.Builder)" class="member-name-link">addUsers(int, Robot.User.Builder)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#addUsers(viam.app.v1.Robot.User)" class="member-name-link">addUsers(Robot.User)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#addUsers(viam.app.v1.Robot.User.Builder)" class="member-name-link">addUsers(Robot.User.Builder)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
 <dt><a href="com/viam/service/worldstatestore/v1/WorldStateStore.ListUUIDsResponse.Builder.html#addUuids(com.google.protobuf.ByteString)" class="member-name-link">addUuids(ByteString)</a> - Method in class com.viam.service.worldstatestore.v1.<a href="com/viam/service/worldstatestore/v1/WorldStateStore.ListUUIDsResponse.Builder.html" title="class in com.viam.service.worldstatestore.v1">WorldStateStore.ListUUIDsResponse.Builder</a></dt>
 <dd>
 <div class="block"><code>repeated bytes uuids = 1 [json_name = "uuids"];</code></div>
@@ -9306,6 +9336,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com/google/rpc/QuotaFailure.Violation.html#API_SERVICE_FIELD_NUMBER" class="member-name-link">API_SERVICE_FIELD_NUMBER</a> - Static variable in class com.google.rpc.<a href="com/google/rpc/QuotaFailure.Violation.html" title="class in com.google.rpc">QuotaFailure.Violation</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/google/api/Publishing.html#API_SHORT_NAME_FIELD_NUMBER" class="member-name-link">API_SHORT_NAME_FIELD_NUMBER</a> - Static variable in class com.google.api.<a href="com/google/api/Publishing.html" title="class in com.google.api">Publishing</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.Request.TypeCase.html#API_TOKEN" class="member-name-link">API_TOKEN</a> - Enum constant in enum class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.Request.TypeCase.html" title="enum class in proto.rpc.webrtc.v1">Grpc.Request.TypeCase</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.Request.html#API_TOKEN_FIELD_NUMBER" class="member-name-link">API_TOKEN_FIELD_NUMBER</a> - Static variable in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.Request.html" title="class in proto.rpc.webrtc.v1">Grpc.Request</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/google/api/ClientProto.html#API_VERSION_FIELD_NUMBER" class="member-name-link">API_VERSION_FIELD_NUMBER</a> - Static variable in class com.google.api.<a href="com/google/api/ClientProto.html" title="class in com.google.api">ClientProto</a></dt>
 <dd>&nbsp;</dd>
@@ -16067,6 +16101,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/viam/component/camera/v1/CameraServiceGrpc.CameraServiceImplBase.html#%3Cinit%3E()" class="member-name-link">CameraServiceImplBase()</a> - Constructor for class com.viam.component.camera.v1.<a href="com/viam/component/camera/v1/CameraServiceGrpc.CameraServiceImplBase.html" title="class in com.viam.component.camera.v1">CameraServiceGrpc.CameraServiceImplBase</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.AnswerResponseInitStage.html#CAN_AUTH_CALLERS_FIELD_NUMBER" class="member-name-link">CAN_AUTH_CALLERS_FIELD_NUMBER</a> - Static variable in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.AnswerResponseInitStage.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStage</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="com/viam/service/navigation/v1/NavigationServiceGrpc.NavigationServiceBlockingStub.html#cancel(com.viam.service.navigation.v1.Navigation.CancelRequest)" class="member-name-link">cancel(Navigation.CancelRequest)</a> - Method in class com.viam.service.navigation.v1.<a href="com/viam/service/navigation/v1/NavigationServiceGrpc.NavigationServiceBlockingStub.html" title="class in com.viam.service.navigation.v1">NavigationServiceGrpc.NavigationServiceBlockingStub</a></dt>
 <dd>
 <div class="block">
@@ -16751,6 +16787,12 @@ loadScripts(document, 'script');</script>
  relations artifacts like docs, packages delivered to package managers,
  etc.</div>
 </dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.Request.Builder.html#clearApiToken()" class="member-name-link">clearApiToken()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></dt>
+<dd>
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</dd>
 <dt><a href="com/viam/robot/v1/Robot.GetVersionResponse.Builder.html#clearApiVersion()" class="member-name-link">clearApiVersion()</a> - Method in class com.viam.robot.v1.<a href="com/viam/robot/v1/Robot.GetVersionResponse.Builder.html" title="class in com.viam.robot.v1">Robot.GetVersionResponse.Builder</a></dt>
 <dd>
 <div class="block"><code>string api_version = 3 [json_name = "apiVersion"];</code></div>
@@ -17253,7 +17295,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=150</div>
+     See app/v1/billing.proto;l=151</div>
 </div>
 </dd>
 <dt><a href="viam/app/data/v1/Data.AddBoundingBoxToImageByIDRequest.Builder.html#clearBinaryDataId()" class="member-name-link">clearBinaryDataId()</a> - Method in class viam.app.data.v1.<a href="viam/app/data/v1/Data.AddBoundingBoxToImageByIDRequest.Builder.html" title="class in viam.app.data.v1">Data.AddBoundingBoxToImageByIDRequest.Builder</a></dt>
@@ -17533,6 +17575,12 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Name of a camera</div>
 </dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.AnswerResponseInitStage.Builder.html#clearCanAuthCallers()" class="member-name-link">clearCanAuthCallers()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.AnswerResponseInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStage.Builder</a></dt>
+<dd>
+<div class="block">
+ can_auth_callers tells the signaling server that this answerer can authenticate
+ callers itself, so it may receive callers the signaling server could not authenticate.</div>
+</dd>
 <dt><a href="com/viam/component/inputcontroller/v1/InputController.StreamEventsRequest.Events.Builder.html#clearCancelledEvents()" class="member-name-link">clearCancelledEvents()</a> - Method in class com.viam.component.inputcontroller.v1.<a href="com/viam/component/inputcontroller/v1/InputController.StreamEventsRequest.Events.Builder.html" title="class in com.viam.component.inputcontroller.v1">InputController.StreamEventsRequest.Events.Builder</a></dt>
 <dd>
 <div class="block">
@@ -17750,7 +17798,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=141</div>
+     See app/v1/billing.proto;l=142</div>
 </div>
 </dd>
 <dt><a href="com/google/rpc/context/AttributeContext.Response.Builder.html#clearCode()" class="member-name-link">clearCode()</a> - Method in class com.google.rpc.context.<a href="com/google/rpc/context/AttributeContext.Response.Builder.html" title="class in com.google.rpc.context">AttributeContext.Response.Builder</a></dt>
@@ -18617,7 +18665,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     See app/v1/billing.proto;l=143</div>
+     See app/v1/billing.proto;l=144</div>
 </div>
 </dd>
 <dt><a href="viam/app/datapipelines/v1/DataPipelines.DataPipelineRun.Builder.html#clearDataEndTime()" class="member-name-link">clearDataEndTime()</a> - Method in class viam.app.datapipelines.v1.<a href="viam/app/datapipelines/v1/DataPipelines.DataPipelineRun.Builder.html" title="class in viam.app.datapipelines.v1">DataPipelines.DataPipelineRun.Builder</a></dt>
@@ -18765,7 +18813,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     See app/v1/billing.proto;l=142</div>
+     See app/v1/billing.proto;l=143</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/AppOuterClass.OrganizationMember.Builder.html#clearDateAdded()" class="member-name-link">clearDateAdded()</a> - Method in class viam.app.v1.<a href="viam/app/v1/AppOuterClass.OrganizationMember.Builder.html" title="class in viam.app.v1">AppOuterClass.OrganizationMember.Builder</a></dt>
@@ -19233,7 +19281,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     See app/v1/billing.proto;l=146</div>
+     See app/v1/billing.proto;l=147</div>
 </div>
 </dd>
 <dt><a href="com/viam/service/discovery/v1/Discovery.DiscoverResourcesResponse.Builder.html#clearDiscoveries()" class="member-name-link">clearDiscoveries()</a> - Method in class com.viam.service.discovery.v1.<a href="com/viam/service/discovery/v1/Discovery.DiscoverResourcesResponse.Builder.html" title="class in com.viam.service.discovery.v1">Discovery.DiscoverResourcesResponse.Builder</a></dt>
@@ -24725,6 +24773,11 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Optional set of motion configuration options</div>
 </dd>
+<dt><a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.Builder.html#clearMotionSideCurrentRunwayMs()" class="member-name-link">clearMotionSideCurrentRunwayMs()</a> - Method in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.Builder.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsResponse.Builder</a></dt>
+<dd>
+<div class="block">
+ motion_side_current_runway_ms is sent once per target, right after the service adds it.</div>
+</dd>
 <dt><a href="com/viam/service/motion/v1/Motion.MoveOnGlobeRequest.Builder.html#clearMovementSensorName()" class="member-name-link">clearMovementSensorName()</a> - Method in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.MoveOnGlobeRequest.Builder.html" title="class in com.viam.service.motion.v1">Motion.MoveOnGlobeRequest.Builder</a></dt>
 <dd>
 <div class="block">
@@ -24772,6 +24825,18 @@ loadScripts(document, 'script');</script>
 <dt><a href="com/viam/common/v1/Common.MimicJoint.Builder.html#clearMultiplier()" class="member-name-link">clearMultiplier()</a> - Method in class com.viam.common.v1.<a href="com/viam/common/v1/Common.MimicJoint.Builder.html" title="class in com.viam.common.v1">Common.MimicJoint.Builder</a></dt>
 <dd>
 <div class="block"><code>double multiplier = 2 [json_name = "multiplier"];</code></div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.CallResponseInitStage.Builder.html#clearMustAuthAgainstAnswerer()" class="member-name-link">clearMustAuthAgainstAnswerer()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.CallResponseInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.CallResponseInitStage.Builder</a></dt>
+<dd>
+<div class="block">
+ must_auth_against_answerer tells the caller that the signaling server could not
+ authenticate it, so it must authenticate with the answerer over the PeerConnection.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.AnswerRequestInitStage.Builder.html#clearMustAuthCaller()" class="member-name-link">clearMustAuthCaller()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.AnswerRequestInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage.Builder</a></dt>
+<dd>
+<div class="block">
+ a warning from the signaling server that the signaling server
+ could not auth the caller.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.NeedsRestartResponse.Builder.html#clearMustRestart()" class="member-name-link">clearMustRestart()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.NeedsRestartResponse.Builder.html" title="class in viam.app.v1">Robot.NeedsRestartResponse.Builder</a></dt>
 <dd>
@@ -26934,7 +26999,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=151</div>
+     See app/v1/billing.proto;l=152</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Robot.TracingConfig.Builder.html#clearOtlpEndpoint()" class="member-name-link">clearOtlpEndpoint()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.TracingConfig.Builder.html" title="class in viam.app.v1">Robot.TracingConfig.Builder</a></dt>
@@ -27420,7 +27485,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     See app/v1/billing.proto;l=149</div>
+     See app/v1/billing.proto;l=150</div>
 </div>
 </dd>
 <dt><a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html#clearPermissions()" class="member-name-link">clearPermissions()</a> - Method in class com.google.iam.v1.<a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html" title="class in com.google.iam.v1">TestIamPermissionsRequest.Builder</a></dt>
@@ -27444,7 +27509,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#clearPermissions()" class="member-name-link">clearPermissions()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="com/google/api/ClientLibrarySettings.Builder.html#clearPhpSettings()" class="member-name-link">clearPhpSettings()</a> - Method in class com.google.api.<a href="com/google/api/ClientLibrarySettings.Builder.html" title="class in com.google.api">ClientLibrarySettings.Builder</a></dt>
 <dd>
@@ -28409,7 +28475,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     See app/v1/billing.proto;l=144</div>
+     See app/v1/billing.proto;l=145</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Robot.RobotConfig.Builder.html#clearRemotes()" class="member-name-link">clearRemotes()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.RobotConfig.Builder.html" title="class in viam.app.v1">Robot.RobotConfig.Builder</a></dt>
@@ -29740,7 +29806,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     See app/v1/billing.proto;l=145</div>
+     See app/v1/billing.proto;l=146</div>
 </div>
 </dd>
 <dt><a href="com/viam/service/navigation/v1/Navigation.PlanToLocationRequest.Builder.html#clearStart()" class="member-name-link">clearStart()</a> - Method in class com.viam.service.navigation.v1.<a href="com/viam/service/navigation/v1/Navigation.PlanToLocationRequest.Builder.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToLocationRequest.Builder</a></dt>
@@ -30609,14 +30675,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     See app/v1/billing.proto;l=147</div>
+     See app/v1/billing.proto;l=148</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.Builder.html#clearTotalUsageWithoutDiscount()" class="member-name-link">clearTotalUsageWithoutDiscount()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.Builder.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse.Builder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     See app/v1/billing.proto;l=148</div>
+     See app/v1/billing.proto;l=149</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.ResourceUsageCosts.Builder.html#clearTotalWithDiscount()" class="member-name-link">clearTotalWithDiscount()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.ResourceUsageCosts.Builder.html" title="class in viam.app.v1">Billing.ResourceUsageCosts.Builder</a></dt>
@@ -31219,7 +31285,7 @@ loadScripts(document, 'script');</script>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#clearUser()" class="member-name-link">clearUser()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ user is a single User these permissions apply to.</div>
 </dd>
 <dt><a href="viam/app/data/v1/Data.TabularDataByMQLRequest.Builder.html#clearUseRecentData()" class="member-name-link">clearUseRecentData()</a> - Method in class viam.app.data.v1.<a href="viam/app/data/v1/Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></dt>
 <dd>
@@ -31267,6 +31333,11 @@ loadScripts(document, 'script');</script>
 <div class="block">
  user_permissions represents the map of Users to Permissions for
  this machine.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#clearUsers()" class="member-name-link">clearUsers()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
 </dd>
 <dt><a href="viam/app/v1/AppOuterClass.RobotPart.Builder.html#clearUserSuppliedInfo()" class="member-name-link">clearUserSuppliedInfo()</a> - Method in class viam.app.v1.<a href="viam/app/v1/AppOuterClass.RobotPart.Builder.html" title="class in viam.app.v1">AppOuterClass.RobotPart.Builder</a></dt>
 <dd>
@@ -47758,6 +47829,42 @@ loadScripts(document, 'script');</script>
  relations artifacts like docs, packages delivered to package managers,
  etc.</div>
 </dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.Request.Builder.html#getApiToken()" class="member-name-link">getApiToken()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></dt>
+<dd>
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.Request.html#getApiToken()" class="member-name-link">getApiToken()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.Request.html" title="class in proto.rpc.webrtc.v1">Grpc.Request</a></dt>
+<dd>
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.RequestOrBuilder.html#getApiToken()" class="member-name-link">getApiToken()</a> - Method in interface proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.RequestOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.RequestOrBuilder</a></dt>
+<dd>
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.Request.Builder.html#getApiTokenBytes()" class="member-name-link">getApiTokenBytes()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></dt>
+<dd>
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.Request.html#getApiTokenBytes()" class="member-name-link">getApiTokenBytes()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.Request.html" title="class in proto.rpc.webrtc.v1">Grpc.Request</a></dt>
+<dd>
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.RequestOrBuilder.html#getApiTokenBytes()" class="member-name-link">getApiTokenBytes()</a> - Method in interface proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.RequestOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.RequestOrBuilder</a></dt>
+<dd>
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</dd>
 <dt><a href="com/viam/robot/v1/Robot.GetVersionResponse.Builder.html#getApiVersion()" class="member-name-link">getApiVersion()</a> - Method in class com.viam.robot.v1.<a href="com/viam/robot/v1/Robot.GetVersionResponse.Builder.html" title="class in com.viam.robot.v1">Robot.GetVersionResponse.Builder</a></dt>
 <dd>
 <div class="block"><code>string api_version = 3 [json_name = "apiVersion"];</code></div>
@@ -51143,21 +51250,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=150</div>
+     See app/v1/billing.proto;l=151</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html#getBinaryDataCloudStorageUsageCost()" class="member-name-link">getBinaryDataCloudStorageUsageCost()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=150</div>
+     See app/v1/billing.proto;l=151</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html#getBinaryDataCloudStorageUsageCost()" class="member-name-link">getBinaryDataCloudStorageUsageCost()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=150</div>
+     See app/v1/billing.proto;l=151</div>
 </div>
 </dd>
 <dt><a href="viam/app/data/v1/Data.AddBoundingBoxToImageByIDRequest.Builder.html#getBinaryDataId()" class="member-name-link">getBinaryDataId()</a> - Method in class viam.app.data.v1.<a href="viam/app/data/v1/Data.AddBoundingBoxToImageByIDRequest.Builder.html" title="class in viam.app.data.v1">Data.AddBoundingBoxToImageByIDRequest.Builder</a></dt>
@@ -53017,6 +53124,24 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Name of a camera</div>
 </dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.AnswerResponseInitStage.Builder.html#getCanAuthCallers()" class="member-name-link">getCanAuthCallers()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.AnswerResponseInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStage.Builder</a></dt>
+<dd>
+<div class="block">
+ can_auth_callers tells the signaling server that this answerer can authenticate
+ callers itself, so it may receive callers the signaling server could not authenticate.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.AnswerResponseInitStage.html#getCanAuthCallers()" class="member-name-link">getCanAuthCallers()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.AnswerResponseInitStage.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStage</a></dt>
+<dd>
+<div class="block">
+ can_auth_callers tells the signaling server that this answerer can authenticate
+ callers itself, so it may receive callers the signaling server could not authenticate.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.AnswerResponseInitStageOrBuilder.html#getCanAuthCallers()" class="member-name-link">getCanAuthCallers()</a> - Method in interface proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.AnswerResponseInitStageOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStageOrBuilder</a></dt>
+<dd>
+<div class="block">
+ can_auth_callers tells the signaling server that this answerer can authenticate
+ callers itself, so it may receive callers the signaling server could not authenticate.</div>
+</dd>
 <dt><a href="com/viam/component/inputcontroller/v1/InputController.StreamEventsRequest.Events.Builder.html#getCancelledEvents(int)" class="member-name-link">getCancelledEvents(int)</a> - Method in class com.viam.component.inputcontroller.v1.<a href="com/viam/component/inputcontroller/v1/InputController.StreamEventsRequest.Events.Builder.html" title="class in com.viam.component.inputcontroller.v1">InputController.StreamEventsRequest.Events.Builder</a></dt>
 <dd>
 <div class="block">
@@ -54322,21 +54447,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=141</div>
+     See app/v1/billing.proto;l=142</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html#getCloudStorageUsageCost()" class="member-name-link">getCloudStorageUsageCost()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=141</div>
+     See app/v1/billing.proto;l=142</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html#getCloudStorageUsageCost()" class="member-name-link">getCloudStorageUsageCost()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=141</div>
+     See app/v1/billing.proto;l=142</div>
 </div>
 </dd>
 <dt><a href="com/google/rpc/context/AttributeContext.Response.Builder.html#getCode()" class="member-name-link">getCode()</a> - Method in class com.google.rpc.context.<a href="com/google/rpc/context/AttributeContext.Response.Builder.html" title="class in com.google.rpc.context">AttributeContext.Response.Builder</a></dt>
@@ -58481,21 +58606,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     See app/v1/billing.proto;l=143</div>
+     See app/v1/billing.proto;l=144</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html#getDataEgresUsageCost()" class="member-name-link">getDataEgresUsageCost()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     See app/v1/billing.proto;l=143</div>
+     See app/v1/billing.proto;l=144</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html#getDataEgresUsageCost()" class="member-name-link">getDataEgresUsageCost()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     See app/v1/billing.proto;l=143</div>
+     See app/v1/billing.proto;l=144</div>
 </div>
 </dd>
 <dt><a href="viam/app/datapipelines/v1/DataPipelines.DataPipelineRun.Builder.html#getDataEndTime()" class="member-name-link">getDataEndTime()</a> - Method in class viam.app.datapipelines.v1.<a href="viam/app/datapipelines/v1/DataPipelines.DataPipelineRun.Builder.html" title="class in viam.app.datapipelines.v1">DataPipelines.DataPipelineRun.Builder</a></dt>
@@ -59670,21 +59795,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     See app/v1/billing.proto;l=142</div>
+     See app/v1/billing.proto;l=143</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html#getDataUploadUsageCost()" class="member-name-link">getDataUploadUsageCost()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     See app/v1/billing.proto;l=142</div>
+     See app/v1/billing.proto;l=143</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html#getDataUploadUsageCost()" class="member-name-link">getDataUploadUsageCost()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     See app/v1/billing.proto;l=142</div>
+     See app/v1/billing.proto;l=143</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/AppOuterClass.OrganizationMember.Builder.html#getDateAdded()" class="member-name-link">getDateAdded()</a> - Method in class viam.app.v1.<a href="viam/app/v1/AppOuterClass.OrganizationMember.Builder.html" title="class in viam.app.v1">AppOuterClass.OrganizationMember.Builder</a></dt>
@@ -65498,21 +65623,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     See app/v1/billing.proto;l=146</div>
+     See app/v1/billing.proto;l=147</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html#getDiscountAmount()" class="member-name-link">getDiscountAmount()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     See app/v1/billing.proto;l=146</div>
+     See app/v1/billing.proto;l=147</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html#getDiscountAmount()" class="member-name-link">getDiscountAmount()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     See app/v1/billing.proto;l=146</div>
+     See app/v1/billing.proto;l=147</div>
 </div>
 </dd>
 <dt><a href="com/viam/service/discovery/v1/Discovery.DiscoverResourcesResponse.Builder.html#getDiscoveries(int)" class="member-name-link">getDiscoveries(int)</a> - Method in class com.viam.service.discovery.v1.<a href="com/viam/service/discovery/v1/Discovery.DiscoverResourcesResponse.Builder.html" title="class in com.viam.service.discovery.v1">Discovery.DiscoverResourcesResponse.Builder</a></dt>
@@ -95656,6 +95781,21 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Optional set of motion configuration options</div>
 </dd>
+<dt><a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.Builder.html#getMotionSideCurrentRunwayMs()" class="member-name-link">getMotionSideCurrentRunwayMs()</a> - Method in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.Builder.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsResponse.Builder</a></dt>
+<dd>
+<div class="block">
+ motion_side_current_runway_ms is sent once per target, right after the service adds it.</div>
+</dd>
+<dt><a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.html#getMotionSideCurrentRunwayMs()" class="member-name-link">getMotionSideCurrentRunwayMs()</a> - Method in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsResponse</a></dt>
+<dd>
+<div class="block">
+ motion_side_current_runway_ms is sent once per target, right after the service adds it.</div>
+</dd>
+<dt><a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponseOrBuilder.html#getMotionSideCurrentRunwayMs()" class="member-name-link">getMotionSideCurrentRunwayMs()</a> - Method in interface com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponseOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsResponseOrBuilder</a></dt>
+<dd>
+<div class="block">
+ motion_side_current_runway_ms is sent once per target, right after the service adds it.</div>
+</dd>
 <dt><a href="com/viam/service/motion/v1/Motion.MoveOnGlobeRequest.Builder.html#getMovementSensorName()" class="member-name-link">getMovementSensorName()</a> - Method in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.MoveOnGlobeRequest.Builder.html" title="class in com.viam.service.motion.v1">Motion.MoveOnGlobeRequest.Builder</a></dt>
 <dd>
 <div class="block">
@@ -96017,6 +96157,42 @@ loadScripts(document, 'script');</script>
 <dt><a href="com/viam/common/v1/Common.MimicJointOrBuilder.html#getMultiplier()" class="member-name-link">getMultiplier()</a> - Method in interface com.viam.common.v1.<a href="com/viam/common/v1/Common.MimicJointOrBuilder.html" title="interface in com.viam.common.v1">Common.MimicJointOrBuilder</a></dt>
 <dd>
 <div class="block"><code>double multiplier = 2 [json_name = "multiplier"];</code></div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.CallResponseInitStage.Builder.html#getMustAuthAgainstAnswerer()" class="member-name-link">getMustAuthAgainstAnswerer()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.CallResponseInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.CallResponseInitStage.Builder</a></dt>
+<dd>
+<div class="block">
+ must_auth_against_answerer tells the caller that the signaling server could not
+ authenticate it, so it must authenticate with the answerer over the PeerConnection.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.CallResponseInitStage.html#getMustAuthAgainstAnswerer()" class="member-name-link">getMustAuthAgainstAnswerer()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.CallResponseInitStage.html" title="class in proto.rpc.webrtc.v1">Signaling.CallResponseInitStage</a></dt>
+<dd>
+<div class="block">
+ must_auth_against_answerer tells the caller that the signaling server could not
+ authenticate it, so it must authenticate with the answerer over the PeerConnection.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.CallResponseInitStageOrBuilder.html#getMustAuthAgainstAnswerer()" class="member-name-link">getMustAuthAgainstAnswerer()</a> - Method in interface proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.CallResponseInitStageOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.CallResponseInitStageOrBuilder</a></dt>
+<dd>
+<div class="block">
+ must_auth_against_answerer tells the caller that the signaling server could not
+ authenticate it, so it must authenticate with the answerer over the PeerConnection.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.AnswerRequestInitStage.Builder.html#getMustAuthCaller()" class="member-name-link">getMustAuthCaller()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.AnswerRequestInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage.Builder</a></dt>
+<dd>
+<div class="block">
+ a warning from the signaling server that the signaling server
+ could not auth the caller.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.AnswerRequestInitStage.html#getMustAuthCaller()" class="member-name-link">getMustAuthCaller()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.AnswerRequestInitStage.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage</a></dt>
+<dd>
+<div class="block">
+ a warning from the signaling server that the signaling server
+ could not auth the caller.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.AnswerRequestInitStageOrBuilder.html#getMustAuthCaller()" class="member-name-link">getMustAuthCaller()</a> - Method in interface proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.AnswerRequestInitStageOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStageOrBuilder</a></dt>
+<dd>
+<div class="block">
+ a warning from the signaling server that the signaling server
+ could not auth the caller.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.NeedsRestartResponse.Builder.html#getMustRestart()" class="member-name-link">getMustRestart()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.NeedsRestartResponse.Builder.html" title="class in viam.app.v1">Robot.NeedsRestartResponse.Builder</a></dt>
 <dd>
@@ -109218,21 +109394,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=151</div>
+     See app/v1/billing.proto;l=152</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html#getOtherCloudStorageUsageCost()" class="member-name-link">getOtherCloudStorageUsageCost()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=151</div>
+     See app/v1/billing.proto;l=152</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html#getOtherCloudStorageUsageCost()" class="member-name-link">getOtherCloudStorageUsageCost()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=151</div>
+     See app/v1/billing.proto;l=152</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Robot.TracingConfig.Builder.html#getOtlpEndpoint()" class="member-name-link">getOtlpEndpoint()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.TracingConfig.Builder.html" title="class in viam.app.v1">Robot.TracingConfig.Builder</a></dt>
@@ -112099,21 +112275,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     See app/v1/billing.proto;l=149</div>
+     See app/v1/billing.proto;l=150</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html#getPerMachineUsageCost()" class="member-name-link">getPerMachineUsageCost()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     See app/v1/billing.proto;l=149</div>
+     See app/v1/billing.proto;l=150</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html#getPerMachineUsageCost()" class="member-name-link">getPerMachineUsageCost()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     See app/v1/billing.proto;l=149</div>
+     See app/v1/billing.proto;l=150</div>
 </div>
 </dd>
 <dt><a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html#getPermissions(int)" class="member-name-link">getPermissions(int)</a> - Method in class com.google.iam.v1.<a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html" title="class in com.google.iam.v1">TestIamPermissionsRequest.Builder</a></dt>
@@ -112175,15 +112351,18 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#getPermissions(int)" class="member-name-link">getPermissions(int)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.html#getPermissions(int)" class="member-name-link">getPermissions(int)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermissionOrBuilder.html#getPermissions(int)" class="member-name-link">getPermissions(int)</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html#getPermissionsBytes(int)" class="member-name-link">getPermissionsBytes(int)</a> - Method in class com.google.iam.v1.<a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html" title="class in com.google.iam.v1">TestIamPermissionsRequest.Builder</a></dt>
 <dd>
@@ -112289,15 +112468,18 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#getPermissionsCount()" class="member-name-link">getPermissionsCount()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.html#getPermissionsCount()" class="member-name-link">getPermissionsCount()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermissionOrBuilder.html#getPermissionsCount()" class="member-name-link">getPermissionsCount()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html#getPermissionsList()" class="member-name-link">getPermissionsList()</a> - Method in class com.google.iam.v1.<a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html" title="class in com.google.iam.v1">TestIamPermissionsRequest.Builder</a></dt>
 <dd>
@@ -112358,15 +112540,18 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#getPermissionsList()" class="member-name-link">getPermissionsList()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.html#getPermissionsList()" class="member-name-link">getPermissionsList()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermissionOrBuilder.html#getPermissionsList()" class="member-name-link">getPermissionsList()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="viam/app/v1/AppOuterClass.CheckPermissionsRequest.html#getPermissionsOrBuilder(int)" class="member-name-link">getPermissionsOrBuilder(int)</a> - Method in class viam.app.v1.<a href="viam/app/v1/AppOuterClass.CheckPermissionsRequest.html" title="class in viam.app.v1">AppOuterClass.CheckPermissionsRequest</a></dt>
 <dd>
@@ -112374,7 +112559,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.html#getPermissionsOrBuilder(int)" class="member-name-link">getPermissionsOrBuilder(int)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="viam/app/v1/AppOuterClass.CheckPermissionsRequest.html#getPermissionsOrBuilderList()" class="member-name-link">getPermissionsOrBuilderList()</a> - Method in class viam.app.v1.<a href="viam/app/v1/AppOuterClass.CheckPermissionsRequest.html" title="class in viam.app.v1">AppOuterClass.CheckPermissionsRequest</a></dt>
 <dd>
@@ -112382,7 +112568,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.html#getPermissionsOrBuilderList()" class="member-name-link">getPermissionsOrBuilderList()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="com/google/api/ClientLibrarySettings.Builder.html#getPhpSettings()" class="member-name-link">getPhpSettings()</a> - Method in class com.google.api.<a href="com/google/api/ClientLibrarySettings.Builder.html" title="class in com.google.api">ClientLibrarySettings.Builder</a></dt>
 <dd>
@@ -118822,21 +119009,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     See app/v1/billing.proto;l=144</div>
+     See app/v1/billing.proto;l=145</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html#getRemoteControlUsageCost()" class="member-name-link">getRemoteControlUsageCost()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     See app/v1/billing.proto;l=144</div>
+     See app/v1/billing.proto;l=145</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html#getRemoteControlUsageCost()" class="member-name-link">getRemoteControlUsageCost()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     See app/v1/billing.proto;l=144</div>
+     See app/v1/billing.proto;l=145</div>
 </div>
 </dd>
 <dt><a href="com/viam/sdk/core/webrtc/PeerConnection.html#getRemoteDescription()" class="member-name-link">getRemoteDescription()</a> - Method in interface com.viam.sdk.core.webrtc.<a href="com/viam/sdk/core/webrtc/PeerConnection.html" title="interface in com.viam.sdk.core.webrtc">PeerConnection</a></dt>
@@ -127583,21 +127770,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     See app/v1/billing.proto;l=145</div>
+     See app/v1/billing.proto;l=146</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html#getStandardComputeUsageCost()" class="member-name-link">getStandardComputeUsageCost()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     See app/v1/billing.proto;l=145</div>
+     See app/v1/billing.proto;l=146</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html#getStandardComputeUsageCost()" class="member-name-link">getStandardComputeUsageCost()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     See app/v1/billing.proto;l=145</div>
+     See app/v1/billing.proto;l=146</div>
 </div>
 </dd>
 <dt><a href="com/viam/service/navigation/v1/Navigation.PlanToLocationRequest.Builder.html#getStart()" class="member-name-link">getStart()</a> - Method in class com.viam.service.navigation.v1.<a href="com/viam/service/navigation/v1/Navigation.PlanToLocationRequest.Builder.html" title="class in com.viam.service.navigation.v1">Navigation.PlanToLocationRequest.Builder</a></dt>
@@ -133175,42 +133362,42 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     See app/v1/billing.proto;l=147</div>
+     See app/v1/billing.proto;l=148</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html#getTotalUsageWithDiscount()" class="member-name-link">getTotalUsageWithDiscount()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     See app/v1/billing.proto;l=147</div>
+     See app/v1/billing.proto;l=148</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html#getTotalUsageWithDiscount()" class="member-name-link">getTotalUsageWithDiscount()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     See app/v1/billing.proto;l=147</div>
+     See app/v1/billing.proto;l=148</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.Builder.html#getTotalUsageWithoutDiscount()" class="member-name-link">getTotalUsageWithoutDiscount()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.Builder.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse.Builder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     See app/v1/billing.proto;l=148</div>
+     See app/v1/billing.proto;l=149</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html#getTotalUsageWithoutDiscount()" class="member-name-link">getTotalUsageWithoutDiscount()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     See app/v1/billing.proto;l=148</div>
+     See app/v1/billing.proto;l=149</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html#getTotalUsageWithoutDiscount()" class="member-name-link">getTotalUsageWithoutDiscount()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponseOrBuilder.html" title="interface in viam.app.v1">Billing.GetCurrentMonthUsageResponseOrBuilder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     See app/v1/billing.proto;l=148</div>
+     See app/v1/billing.proto;l=149</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.ResourceUsageCosts.Builder.html#getTotalWithDiscount()" class="member-name-link">getTotalWithDiscount()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.ResourceUsageCosts.Builder.html" title="class in viam.app.v1">Billing.ResourceUsageCosts.Builder</a></dt>
@@ -136582,17 +136769,17 @@ loadScripts(document, 'script');</script>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#getUser()" class="member-name-link">getUser()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ user is a single User these permissions apply to.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.html#getUser()" class="member-name-link">getUser()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></dt>
 <dd>
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ user is a single User these permissions apply to.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermissionOrBuilder.html#getUser()" class="member-name-link">getUser()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></dt>
 <dd>
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ user is a single User these permissions apply to.</div>
 </dd>
 <dt><a href="viam/app/data/v1/Data.TabularDataByMQLRequest.Builder.html#getUseRecentData()" class="member-name-link">getUseRecentData()</a> - Method in class viam.app.data.v1.<a href="viam/app/data/v1/Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></dt>
 <dd>
@@ -136903,6 +137090,61 @@ loadScripts(document, 'script');</script>
 <div class="block">
  user_permissions represents the map of Users to Permissions for
  this machine.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#getUsers(int)" class="member-name-link">getUsers(int)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.html#getUsers(int)" class="member-name-link">getUsers(int)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermissionOrBuilder.html#getUsers(int)" class="member-name-link">getUsers(int)</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#getUsersCount()" class="member-name-link">getUsersCount()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.html#getUsersCount()" class="member-name-link">getUsersCount()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermissionOrBuilder.html#getUsersCount()" class="member-name-link">getUsersCount()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#getUsersList()" class="member-name-link">getUsersList()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.html#getUsersList()" class="member-name-link">getUsersList()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermissionOrBuilder.html#getUsersList()" class="member-name-link">getUsersList()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.html#getUsersOrBuilder(int)" class="member-name-link">getUsersOrBuilder(int)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.html#getUsersOrBuilderList()" class="member-name-link">getUsersOrBuilderList()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
 </dd>
 <dt><a href="viam/app/v1/AppOuterClass.RobotPart.Builder.html#getUserSuppliedInfo()" class="member-name-link">getUserSuppliedInfo()</a> - Method in class viam.app.v1.<a href="viam/app/v1/AppOuterClass.RobotPart.Builder.html" title="class in viam.app.v1">AppOuterClass.RobotPart.Builder</a></dt>
 <dd>
@@ -142992,6 +143234,24 @@ loadScripts(document, 'script');</script>
 <dt><a href="viam/provisioning/v1/Provisioning.CloudConfigOrBuilder.html#hasApiKey()" class="member-name-link">hasApiKey()</a> - Method in interface viam.provisioning.v1.<a href="viam/provisioning/v1/Provisioning.CloudConfigOrBuilder.html" title="interface in viam.provisioning.v1">Provisioning.CloudConfigOrBuilder</a></dt>
 <dd>
 <div class="block"><code>.viam.provisioning.v1.APIKey api_key = 4 [json_name = "apiKey"];</code></div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.Request.Builder.html#hasApiToken()" class="member-name-link">hasApiToken()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></dt>
+<dd>
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.Request.html#hasApiToken()" class="member-name-link">hasApiToken()</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.Request.html" title="class in proto.rpc.webrtc.v1">Grpc.Request</a></dt>
+<dd>
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.RequestOrBuilder.html#hasApiToken()" class="member-name-link">hasApiToken()</a> - Method in interface proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.RequestOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.RequestOrBuilder</a></dt>
+<dd>
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
 </dd>
 <dt><a href="com/viam/robot/v1/Robot.Operation.Builder.html#hasArguments()" class="member-name-link">hasArguments()</a> - Method in class com.viam.robot.v1.<a href="com/viam/robot/v1/Robot.Operation.Builder.html" title="class in com.viam.robot.v1">Robot.Operation.Builder</a></dt>
 <dd>
@@ -152253,6 +152513,21 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Optional set of motion configuration options</div>
 </dd>
+<dt><a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.Builder.html#hasMotionSideCurrentRunwayMs()" class="member-name-link">hasMotionSideCurrentRunwayMs()</a> - Method in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.Builder.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsResponse.Builder</a></dt>
+<dd>
+<div class="block">
+ motion_side_current_runway_ms is sent once per target, right after the service adds it.</div>
+</dd>
+<dt><a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.html#hasMotionSideCurrentRunwayMs()" class="member-name-link">hasMotionSideCurrentRunwayMs()</a> - Method in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsResponse</a></dt>
+<dd>
+<div class="block">
+ motion_side_current_runway_ms is sent once per target, right after the service adds it.</div>
+</dd>
+<dt><a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponseOrBuilder.html#hasMotionSideCurrentRunwayMs()" class="member-name-link">hasMotionSideCurrentRunwayMs()</a> - Method in interface com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponseOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsResponseOrBuilder</a></dt>
+<dd>
+<div class="block">
+ motion_side_current_runway_ms is sent once per target, right after the service adds it.</div>
+</dd>
 <dt><a href="com/viam/service/motion/v1/Motion.MoveOnGlobeRequest.Builder.html#hasMovementSensorNameDeprecated()" class="member-name-link">hasMovementSensorNameDeprecated()</a> - Method in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.MoveOnGlobeRequest.Builder.html" title="class in com.viam.service.motion.v1">Motion.MoveOnGlobeRequest.Builder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
@@ -157023,17 +157298,17 @@ loadScripts(document, 'script');</script>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#hasUser()" class="member-name-link">hasUser()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ user is a single User these permissions apply to.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.html#hasUser()" class="member-name-link">hasUser()</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></dt>
 <dd>
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ user is a single User these permissions apply to.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermissionOrBuilder.html#hasUser()" class="member-name-link">hasUser()</a> - Method in interface viam.app.v1.<a href="viam/app/v1/Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></dt>
 <dd>
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ user is a single User these permissions apply to.</div>
 </dd>
 <dt><a href="viam/app/data/v1/Data.TabularDataByMQLRequest.Builder.html#hasUseRecentData()" class="member-name-link">hasUseRecentData()</a> - Method in class viam.app.data.v1.<a href="viam/app/data/v1/Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></dt>
 <dd>
@@ -165508,7 +165783,7 @@ loadScripts(document, 'script');</script>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#mergeUser(viam.app.v1.Robot.User)" class="member-name-link">mergeUser(Robot.User)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ user is a single User these permissions apply to.</div>
 </dd>
 <dt><a href="viam/app/v1/AppOuterClass.RobotPart.Builder.html#mergeUserSuppliedInfo(com.google.protobuf.Struct)" class="member-name-link">mergeUserSuppliedInfo(Struct)</a> - Method in class viam.app.v1.<a href="viam/app/v1/AppOuterClass.RobotPart.Builder.html" title="class in viam.app.v1">AppOuterClass.RobotPart.Builder</a></dt>
 <dd>
@@ -166784,6 +167059,16 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block"><code>MODEL_TYPE_OBJECT_DETECTION = 3;</code></div>
 </dd>
+<dt><a href="viam/app/mltraining/v1/MlTraining.ModelType.html#MODEL_TYPE_ROBOT_POLICY" class="member-name-link">MODEL_TYPE_ROBOT_POLICY</a> - Enum constant in enum class viam.app.mltraining.v1.<a href="viam/app/mltraining/v1/MlTraining.ModelType.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelType</a></dt>
+<dd>
+<div class="block">
+ A policy that controls a robot.</div>
+</dd>
+<dt><a href="viam/app/mltraining/v1/MlTraining.ModelType.html#MODEL_TYPE_ROBOT_POLICY_VALUE" class="member-name-link">MODEL_TYPE_ROBOT_POLICY_VALUE</a> - Static variable in enum class viam.app.mltraining.v1.<a href="viam/app/mltraining/v1/MlTraining.ModelType.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelType</a></dt>
+<dd>
+<div class="block">
+ A policy that controls a robot.</div>
+</dd>
 <dt><a href="viam/app/mltraining/v1/MlTraining.ModelType.html#MODEL_TYPE_SINGLE_LABEL_CLASSIFICATION" class="member-name-link">MODEL_TYPE_SINGLE_LABEL_CLASSIFICATION</a> - Enum constant in enum class viam.app.mltraining.v1.<a href="viam/app/mltraining/v1/MlTraining.ModelType.html" title="enum class in viam.app.mltraining.v1">MlTraining.ModelType</a></dt>
 <dd>
 <div class="block"><code>MODEL_TYPE_SINGLE_LABEL_CLASSIFICATION = 1;</code></div>
@@ -167164,6 +167449,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="com/viam/service/motion/v1/Motion.MoveOnGlobeRequest.html#MOTION_CONFIGURATION_FIELD_NUMBER" class="member-name-link">MOTION_CONFIGURATION_FIELD_NUMBER</a> - Static variable in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.MoveOnGlobeRequest.html" title="class in com.viam.service.motion.v1">Motion.MoveOnGlobeRequest</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/viam/service/motion/v1/Motion.MoveOnMapRequest.html#MOTION_CONFIGURATION_FIELD_NUMBER" class="member-name-link">MOTION_CONFIGURATION_FIELD_NUMBER</a> - Static variable in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.MoveOnMapRequest.html" title="class in com.viam.service.motion.v1">Motion.MoveOnMapRequest</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.html#MOTION_SIDE_CURRENT_RUNWAY_MS_FIELD_NUMBER" class="member-name-link">MOTION_SIDE_CURRENT_RUNWAY_MS_FIELD_NUMBER</a> - Static variable in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsResponse</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/viam/service/motion/v1/Motion.CollisionSpecification.html" class="type-name-link" title="class in com.viam.service.motion.v1">Motion.CollisionSpecification</a> - Class in <a href="com/viam/service/motion/v1/package-summary.html">com.viam.service.motion.v1</a></dt>
 <dd>
@@ -168305,6 +168592,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="viam/app/datapipelines/v1/DataPipelines.DataPipeline.html#MQL_BINARY_FIELD_NUMBER" class="member-name-link">MQL_BINARY_FIELD_NUMBER</a> - Static variable in class viam.app.datapipelines.v1.<a href="viam/app/datapipelines/v1/DataPipelines.DataPipeline.html" title="class in viam.app.datapipelines.v1">DataPipelines.DataPipeline</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/viam/common/v1/Common.MimicJoint.html#MULTIPLIER_FIELD_NUMBER" class="member-name-link">MULTIPLIER_FIELD_NUMBER</a> - Static variable in class com.viam.common.v1.<a href="com/viam/common/v1/Common.MimicJoint.html" title="class in com.viam.common.v1">Common.MimicJoint</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.CallResponseInitStage.html#MUST_AUTH_AGAINST_ANSWERER_FIELD_NUMBER" class="member-name-link">MUST_AUTH_AGAINST_ANSWERER_FIELD_NUMBER</a> - Static variable in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.CallResponseInitStage.html" title="class in proto.rpc.webrtc.v1">Signaling.CallResponseInitStage</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.AnswerRequestInitStage.html#MUST_AUTH_CALLER_FIELD_NUMBER" class="member-name-link">MUST_AUTH_CALLER_FIELD_NUMBER</a> - Static variable in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.AnswerRequestInitStage.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="viam/app/v1/Robot.NeedsRestartResponse.html#MUST_RESTART_FIELD_NUMBER" class="member-name-link">MUST_RESTART_FIELD_NUMBER</a> - Static variable in class viam.app.v1.<a href="viam/app/v1/Robot.NeedsRestartResponse.html" title="class in viam.app.v1">Robot.NeedsRestartResponse</a></dt>
 <dd>&nbsp;</dd>
@@ -217996,7 +218287,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#removePermissions(int)" class="member-name-link">removePermissions(int)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="com/viam/service/motion/v1/Motion.ListPlanStatusesResponse.Builder.html#removePlanStatusesWithIds(int)" class="member-name-link">removePlanStatusesWithIds(int)</a> - Method in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.ListPlanStatusesResponse.Builder.html" title="class in com.viam.service.motion.v1">Motion.ListPlanStatusesResponse.Builder</a></dt>
 <dd>
@@ -218587,6 +218879,11 @@ loadScripts(document, 'script');</script>
 <div class="block">
  user_permissions represents the map of Users to Permissions for
  this machine.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#removeUsers(int)" class="member-name-link">removeUsers(int)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
 </dd>
 <dt><a href="com/google/api/expr/v1alpha1/EvalState.Builder.html#removeValues(int)" class="member-name-link">removeValues(int)</a> - Method in class com.google.api.expr.v1alpha1.<a href="com/google/api/expr/v1alpha1/EvalState.Builder.html" title="class in com.google.api.expr.v1alpha1">EvalState.Builder</a></dt>
 <dd>
@@ -220623,14 +220920,12 @@ loadScripts(document, 'script');</script>
 <dt><a href="viam/app/v1/Robot.UserPermission.html" class="type-name-link" title="class in viam.app.v1">Robot.UserPermission</a> - Class in <a href="viam/app/v1/package-summary.html">viam.app.v1</a></dt>
 <dd>
 <div class="block">
- A UserPermission describes a User and the permissions granted to
- that user.</div>
+ A UserPermission describes the Users a set of permissions is granted to.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html" class="type-name-link" title="class in viam.app.v1">Robot.UserPermission.Builder</a> - Class in <a href="viam/app/v1/package-summary.html">viam.app.v1</a></dt>
 <dd>
 <div class="block">
- A UserPermission describes a User and the permissions granted to
- that user.</div>
+ A UserPermission describes the Users a set of permissions is granted to.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermissionOrBuilder.html" class="type-name-link" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a> - Interface in <a href="viam/app/v1/package-summary.html">viam.app.v1</a></dt>
 <dd>&nbsp;</dd>
@@ -222436,6 +222731,18 @@ loadScripts(document, 'script');</script>
  relations artifacts like docs, packages delivered to package managers,
  etc.</div>
 </dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.Request.Builder.html#setApiToken(java.lang.String)" class="member-name-link">setApiToken(String)</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></dt>
+<dd>
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Grpc.Request.Builder.html#setApiTokenBytes(com.google.protobuf.ByteString)" class="member-name-link">setApiTokenBytes(ByteString)</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Grpc.Request.Builder.html" title="class in proto.rpc.webrtc.v1">Grpc.Request.Builder</a></dt>
+<dd>
+<div class="block">
+ api_token lets a client authenticate with the answerer over the PeerConnection when
+ the signaling server could not authenticate it.</div>
+</dd>
 <dt><a href="com/viam/robot/v1/Robot.GetVersionResponse.Builder.html#setApiVersion(java.lang.String)" class="member-name-link">setApiVersion(String)</a> - Method in class com.viam.robot.v1.<a href="com/viam/robot/v1/Robot.GetVersionResponse.Builder.html" title="class in com.viam.robot.v1">Robot.GetVersionResponse.Builder</a></dt>
 <dd>
 <div class="block"><code>string api_version = 3 [json_name = "apiVersion"];</code></div>
@@ -223369,7 +223676,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.binary_data_cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=150</div>
+     See app/v1/billing.proto;l=151</div>
 </div>
 </dd>
 <dt><a href="viam/app/data/v1/Data.AddBoundingBoxToImageByIDRequest.Builder.html#setBinaryDataId(java.lang.String)" class="member-name-link">setBinaryDataId(String)</a> - Method in class viam.app.data.v1.<a href="viam/app/data/v1/Data.AddBoundingBoxToImageByIDRequest.Builder.html" title="class in viam.app.data.v1">Data.AddBoundingBoxToImageByIDRequest.Builder</a></dt>
@@ -223821,6 +224128,12 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Name of a camera</div>
 </dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.AnswerResponseInitStage.Builder.html#setCanAuthCallers(boolean)" class="member-name-link">setCanAuthCallers(boolean)</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.AnswerResponseInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStage.Builder</a></dt>
+<dd>
+<div class="block">
+ can_auth_callers tells the signaling server that this answerer can authenticate
+ callers itself, so it may receive callers the signaling server could not authenticate.</div>
+</dd>
 <dt><a href="com/viam/component/inputcontroller/v1/InputController.StreamEventsRequest.Events.Builder.html#setCancelledEvents(int,java.lang.String)" class="member-name-link">setCancelledEvents(int, String)</a> - Method in class com.viam.component.inputcontroller.v1.<a href="com/viam/component/inputcontroller/v1/InputController.StreamEventsRequest.Events.Builder.html" title="class in com.viam.component.inputcontroller.v1">InputController.StreamEventsRequest.Events.Builder</a></dt>
 <dd>
 <div class="block">
@@ -224222,7 +224535,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=141</div>
+     See app/v1/billing.proto;l=142</div>
 </div>
 </dd>
 <dt><a href="com/google/rpc/Status.Builder.html#setCode(int)" class="member-name-link">setCode(int)</a> - Method in class com.google.rpc.<a href="com/google/rpc/Status.Builder.html" title="class in com.google.rpc">Status.Builder</a></dt>
@@ -225723,7 +226036,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_egres_usage_cost is deprecated.
-     See app/v1/billing.proto;l=143</div>
+     See app/v1/billing.proto;l=144</div>
 </div>
 </dd>
 <dt><a href="viam/app/datapipelines/v1/DataPipelines.DataPipelineRun.Builder.html#setDataEndTime(com.google.protobuf.Timestamp)" class="member-name-link">setDataEndTime(Timestamp)</a> - Method in class viam.app.datapipelines.v1.<a href="viam/app/datapipelines/v1/DataPipelines.DataPipelineRun.Builder.html" title="class in viam.app.datapipelines.v1">DataPipelines.DataPipelineRun.Builder</a></dt>
@@ -225993,7 +226306,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.data_upload_usage_cost is deprecated.
-     See app/v1/billing.proto;l=142</div>
+     See app/v1/billing.proto;l=143</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/AppOuterClass.OrganizationMember.Builder.html#setDateAdded(com.google.protobuf.Timestamp)" class="member-name-link">setDateAdded(Timestamp)</a> - Method in class viam.app.v1.<a href="viam/app/v1/AppOuterClass.OrganizationMember.Builder.html" title="class in viam.app.v1">AppOuterClass.OrganizationMember.Builder</a></dt>
@@ -226756,7 +227069,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.discount_amount is deprecated.
-     See app/v1/billing.proto;l=146</div>
+     See app/v1/billing.proto;l=147</div>
 </div>
 </dd>
 <dt><a href="com/viam/service/discovery/v1/Discovery.DiscoverResourcesResponse.Builder.html#setDiscoveries(int,viam.app.v1.Robot.ComponentConfig)" class="member-name-link">setDiscoveries(int, Robot.ComponentConfig)</a> - Method in class com.viam.service.discovery.v1.<a href="com/viam/service/discovery/v1/Discovery.DiscoverResourcesResponse.Builder.html" title="class in com.viam.service.discovery.v1">Discovery.DiscoverResourcesResponse.Builder</a></dt>
@@ -236593,6 +236906,11 @@ loadScripts(document, 'script');</script>
 <div class="block">
  Optional set of motion configuration options</div>
 </dd>
+<dt><a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.Builder.html#setMotionSideCurrentRunwayMs(int)" class="member-name-link">setMotionSideCurrentRunwayMs(int)</a> - Method in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.TempStreamArmJointPositionsResponse.Builder.html" title="class in com.viam.service.motion.v1">Motion.TempStreamArmJointPositionsResponse.Builder</a></dt>
+<dd>
+<div class="block">
+ motion_side_current_runway_ms is sent once per target, right after the service adds it.</div>
+</dd>
 <dt><a href="com/viam/service/motion/v1/Motion.MoveOnGlobeRequest.Builder.html#setMovementSensorName(java.lang.String)" class="member-name-link">setMovementSensorName(String)</a> - Method in class com.viam.service.motion.v1.<a href="com/viam/service/motion/v1/Motion.MoveOnGlobeRequest.Builder.html" title="class in com.viam.service.motion.v1">Motion.MoveOnGlobeRequest.Builder</a></dt>
 <dd>
 <div class="block">
@@ -236654,6 +236972,18 @@ loadScripts(document, 'script');</script>
 <dt><a href="com/viam/common/v1/Common.MimicJoint.Builder.html#setMultiplier(double)" class="member-name-link">setMultiplier(double)</a> - Method in class com.viam.common.v1.<a href="com/viam/common/v1/Common.MimicJoint.Builder.html" title="class in com.viam.common.v1">Common.MimicJoint.Builder</a></dt>
 <dd>
 <div class="block"><code>double multiplier = 2 [json_name = "multiplier"];</code></div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.CallResponseInitStage.Builder.html#setMustAuthAgainstAnswerer(boolean)" class="member-name-link">setMustAuthAgainstAnswerer(boolean)</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.CallResponseInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.CallResponseInitStage.Builder</a></dt>
+<dd>
+<div class="block">
+ must_auth_against_answerer tells the caller that the signaling server could not
+ authenticate it, so it must authenticate with the answerer over the PeerConnection.</div>
+</dd>
+<dt><a href="proto/rpc/webrtc/v1/Signaling.AnswerRequestInitStage.Builder.html#setMustAuthCaller(boolean)" class="member-name-link">setMustAuthCaller(boolean)</a> - Method in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.AnswerRequestInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerRequestInitStage.Builder</a></dt>
+<dd>
+<div class="block">
+ a warning from the signaling server that the signaling server
+ could not auth the caller.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.NeedsRestartResponse.Builder.html#setMustRestart(boolean)" class="member-name-link">setMustRestart(boolean)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.NeedsRestartResponse.Builder.html" title="class in viam.app.v1">Robot.NeedsRestartResponse.Builder</a></dt>
 <dd>
@@ -240819,7 +241149,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.other_cloud_storage_usage_cost is deprecated.
-     See app/v1/billing.proto;l=151</div>
+     See app/v1/billing.proto;l=152</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Robot.TracingConfig.Builder.html#setOtlpEndpoint(java.lang.String)" class="member-name-link">setOtlpEndpoint(String)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.TracingConfig.Builder.html" title="class in viam.app.v1">Robot.TracingConfig.Builder</a></dt>
@@ -241664,7 +241994,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.per_machine_usage_cost is deprecated.
-     See app/v1/billing.proto;l=149</div>
+     See app/v1/billing.proto;l=150</div>
 </div>
 </dd>
 <dt><a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html#setPermissions(int,java.lang.String)" class="member-name-link">setPermissions(int, String)</a> - Method in class com.google.iam.v1.<a href="com/google/iam/v1/TestIamPermissionsRequest.Builder.html" title="class in com.google.iam.v1">TestIamPermissionsRequest.Builder</a></dt>
@@ -241692,11 +242022,13 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#setPermissions(int,viam.app.v1.Robot.Permission)" class="member-name-link">setPermissions(int, Robot.Permission)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#setPermissions(int,viam.app.v1.Robot.Permission.Builder)" class="member-name-link">setPermissions(int, Robot.Permission.Builder)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </dd>
 <dt><a href="com/google/api/ClientLibrarySettings.Builder.html#setPhpSettings(com.google.api.PhpSettings)" class="member-name-link">setPhpSettings(PhpSettings)</a> - Method in class com.google.api.<a href="com/google/api/ClientLibrarySettings.Builder.html" title="class in com.google.api">ClientLibrarySettings.Builder</a></dt>
 <dd>
@@ -243479,7 +243811,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.remote_control_usage_cost is deprecated.
-     See app/v1/billing.proto;l=144</div>
+     See app/v1/billing.proto;l=145</div>
 </div>
 </dd>
 <dt><a href="com/viam/sdk/core/webrtc/PeerConnection.html#setRemoteDescription(com.viam.sdk.core.webrtc.SessionDescription.Observer,com.viam.sdk.core.webrtc.SessionDescription)" class="member-name-link">setRemoteDescription(SessionDescription.Observer, SessionDescription)</a> - Method in interface com.viam.sdk.core.webrtc.<a href="com/viam/sdk/core/webrtc/PeerConnection.html" title="interface in com.viam.sdk.core.webrtc">PeerConnection</a></dt>
@@ -245854,7 +246186,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.standard_compute_usage_cost is deprecated.
-     See app/v1/billing.proto;l=145</div>
+     See app/v1/billing.proto;l=146</div>
 </div>
 </dd>
 <dt><a href="viam/app/data/v1/Data.CaptureInterval.Builder.html#setStart(com.google.protobuf.Timestamp)" class="member-name-link">setStart(Timestamp)</a> - Method in class viam.app.data.v1.<a href="viam/app/data/v1/Data.CaptureInterval.Builder.html" title="class in viam.app.data.v1">Data.CaptureInterval.Builder</a></dt>
@@ -247320,14 +247652,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_with_discount is deprecated.
-     See app/v1/billing.proto;l=147</div>
+     See app/v1/billing.proto;l=148</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.Builder.html#setTotalUsageWithoutDiscount(double)" class="member-name-link">setTotalUsageWithoutDiscount(double)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.GetCurrentMonthUsageResponse.Builder.html" title="class in viam.app.v1">Billing.GetCurrentMonthUsageResponse.Builder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">viam.app.v1.GetCurrentMonthUsageResponse.total_usage_without_discount is deprecated.
-     See app/v1/billing.proto;l=148</div>
+     See app/v1/billing.proto;l=149</div>
 </div>
 </dd>
 <dt><a href="viam/app/v1/Billing.ResourceUsageCosts.Builder.html#setTotalWithDiscount(double)" class="member-name-link">setTotalWithDiscount(double)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Billing.ResourceUsageCosts.Builder.html" title="class in viam.app.v1">Billing.ResourceUsageCosts.Builder</a></dt>
@@ -248430,12 +248762,12 @@ loadScripts(document, 'script');</script>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#setUser(viam.app.v1.Robot.User)" class="member-name-link">setUser(Robot.User)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ user is a single User these permissions apply to.</div>
 </dd>
 <dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#setUser(viam.app.v1.Robot.User.Builder)" class="member-name-link">setUser(Robot.User.Builder)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
 <dd>
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ user is a single User these permissions apply to.</div>
 </dd>
 <dt><a href="viam/app/data/v1/Data.TabularDataByMQLRequest.Builder.html#setUseRecentData(boolean)" class="member-name-link">setUseRecentData(boolean)</a> - Method in class viam.app.data.v1.<a href="viam/app/data/v1/Data.TabularDataByMQLRequest.Builder.html" title="class in viam.app.data.v1">Data.TabularDataByMQLRequest.Builder</a></dt>
 <dd>
@@ -248521,6 +248853,16 @@ loadScripts(document, 'script');</script>
 <div class="block">
  user_permissions represents the map of Users to Permissions for
  this machine.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#setUsers(int,viam.app.v1.Robot.User)" class="member-name-link">setUsers(int, Robot.User)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.Builder.html#setUsers(int,viam.app.v1.Robot.User.Builder)" class="member-name-link">setUsers(int, Robot.User.Builder)</a> - Method in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></dt>
+<dd>
+<div class="block">
+ users are the Users these permissions apply to.</div>
 </dd>
 <dt><a href="viam/app/v1/AppOuterClass.RobotPart.Builder.html#setUserSuppliedInfo(com.google.protobuf.Struct)" class="member-name-link">setUserSuppliedInfo(Struct)</a> - Method in class viam.app.v1.<a href="viam/app/v1/AppOuterClass.RobotPart.Builder.html" title="class in viam.app.v1">AppOuterClass.RobotPart.Builder</a></dt>
 <dd>
@@ -254982,6 +255324,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block"><code>USAGE_COST_TYPE_REMOTE_CONTROL = 3;</code></div>
 </dd>
+<dt><a href="viam/app/v1/Billing.UsageCostType.html#USAGE_COST_TYPE_SIMULATION_COMPUTE" class="member-name-link">USAGE_COST_TYPE_SIMULATION_COMPUTE</a> - Enum constant in enum class viam.app.v1.<a href="viam/app/v1/Billing.UsageCostType.html" title="enum class in viam.app.v1">Billing.UsageCostType</a></dt>
+<dd>
+<div class="block"><code>USAGE_COST_TYPE_SIMULATION_COMPUTE = 28;</code></div>
+</dd>
+<dt><a href="viam/app/v1/Billing.UsageCostType.html#USAGE_COST_TYPE_SIMULATION_COMPUTE_VALUE" class="member-name-link">USAGE_COST_TYPE_SIMULATION_COMPUTE_VALUE</a> - Static variable in enum class viam.app.v1.<a href="viam/app/v1/Billing.UsageCostType.html" title="enum class in viam.app.v1">Billing.UsageCostType</a></dt>
+<dd>
+<div class="block"><code>USAGE_COST_TYPE_SIMULATION_COMPUTE = 28;</code></div>
+</dd>
 <dt><a href="viam/app/v1/Billing.UsageCostType.html#USAGE_COST_TYPE_STANDARD_COMPUTE" class="member-name-link">USAGE_COST_TYPE_STANDARD_COMPUTE</a> - Enum constant in enum class viam.app.v1.<a href="viam/app/v1/Billing.UsageCostType.html" title="enum class in viam.app.v1">Billing.UsageCostType</a></dt>
 <dd>
 <div class="block"><code>USAGE_COST_TYPE_STANDARD_COMPUTE = 4;</code></div>
@@ -255091,6 +255441,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="viam/app/v1/Robot.ProcessConfig.html#USERNAME_FIELD_NUMBER" class="member-name-link">USERNAME_FIELD_NUMBER</a> - Static variable in class viam.app.v1.<a href="viam/app/v1/Robot.ProcessConfig.html" title="class in viam.app.v1">Robot.ProcessConfig</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="proto/rpc/webrtc/v1/Signaling.ICECandidate.html#USERNAME_FRAGMENT_FIELD_NUMBER" class="member-name-link">USERNAME_FRAGMENT_FIELD_NUMBER</a> - Static variable in class proto.rpc.webrtc.v1.<a href="proto/rpc/webrtc/v1/Signaling.ICECandidate.html" title="class in proto.rpc.webrtc.v1">Signaling.ICECandidate</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="viam/app/v1/Robot.UserPermission.html#USERS_FIELD_NUMBER" class="member-name-link">USERS_FIELD_NUMBER</a> - Static variable in class viam.app.v1.<a href="viam/app/v1/Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/viam/sdk/core/service/mlmodel/Registry.html#useService()" class="member-name-link">useService()</a> - Static method in class com.viam.sdk.core.service.mlmodel.<a href="com/viam/sdk/core/service/mlmodel/Registry.html" title="class in com.viam.sdk.core.service.mlmodel">Registry</a></dt>
 <dd>&nbsp;</dd>

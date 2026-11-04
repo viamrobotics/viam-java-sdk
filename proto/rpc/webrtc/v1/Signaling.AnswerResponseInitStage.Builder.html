@@ -135,9 +135,23 @@ implements <a href="Signaling.AnswerResponseInitStageOrBuilder.html" title="inte
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.AnswerResponseInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStage.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSdp()" class="member-name-link">clearSdp</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearCanAuthCallers()" class="member-name-link">clearCanAuthCallers</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ can_auth_callers tells the signaling server that this answerer can authenticate
+ callers itself, so it may receive callers the signaling server could not authenticate.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.AnswerResponseInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStage.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSdp()" class="member-name-link">clearSdp</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string sdp = 1 [json_name = "sdp"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCanAuthCallers()" class="member-name-link">getCanAuthCallers</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ can_auth_callers tells the signaling server that this answerer can authenticate
+ callers itself, so it may receive callers the signaling server could not authenticate.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSdp()" class="member-name-link">getSdp</a>()</code></div>
@@ -150,13 +164,20 @@ implements <a href="Signaling.AnswerResponseInitStageOrBuilder.html" title="inte
 <div class="block"><code>string sdp = 1 [json_name = "sdp"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.AnswerResponseInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStage.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSdp(java.lang.String)" class="member-name-link">setSdp</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCanAuthCallers(boolean)" class="member-name-link">setCanAuthCallers</a><wbr>(boolean&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string sdp = 1 [json_name = "sdp"];</code></div>
+<div class="block">
+ can_auth_callers tells the signaling server that this answerer can authenticate
+ callers itself, so it may receive callers the signaling server could not authenticate.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.AnswerResponseInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStage.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSdpBytes(com.google.protobuf.ByteString)" class="member-name-link">setSdpBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSdp(java.lang.String)" class="member-name-link">setSdp</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string sdp = 1 [json_name = "sdp"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Signaling.AnswerResponseInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStage.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSdpBytes(com.google.protobuf.ByteString)" class="member-name-link">setSdpBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string sdp = 1 [json_name = "sdp"];</code></div>
 </div>
 </div>
@@ -243,6 +264,58 @@ implements <a href="Signaling.AnswerResponseInitStageOrBuilder.html" title="inte
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - The bytes for sdp to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCanAuthCallers()">
+<h3>getCanAuthCallers</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getCanAuthCallers</span>()</div>
+<div class="block"><pre>
+ can_auth_callers tells the signaling server that this answerer can authenticate
+ callers itself, so it may receive callers the signaling server could not authenticate.
+ </pre>
+
+ <code>bool can_auth_callers = 2 [json_name = "canAuthCallers"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Signaling.AnswerResponseInitStageOrBuilder.html#getCanAuthCallers()">getCanAuthCallers</a></code>&nbsp;in interface&nbsp;<code><a href="Signaling.AnswerResponseInitStageOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStageOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The canAuthCallers.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCanAuthCallers(boolean)">
+<h3>setCanAuthCallers</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Signaling.AnswerResponseInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStage.Builder</a></span>&nbsp;<span class="element-name">setCanAuthCallers</span><wbr><span class="parameters">(boolean&nbsp;value)</span></div>
+<div class="block"><pre>
+ can_auth_callers tells the signaling server that this answerer can authenticate
+ callers itself, so it may receive callers the signaling server could not authenticate.
+ </pre>
+
+ <code>bool can_auth_callers = 2 [json_name = "canAuthCallers"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The canAuthCallers to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearCanAuthCallers()">
+<h3>clearCanAuthCallers</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Signaling.AnswerResponseInitStage.Builder.html" title="class in proto.rpc.webrtc.v1">Signaling.AnswerResponseInitStage.Builder</a></span>&nbsp;<span class="element-name">clearCanAuthCallers</span>()</div>
+<div class="block"><pre>
+ can_auth_callers tells the signaling server that this answerer can authenticate
+ callers itself, so it may receive callers the signaling server could not authenticate.
+ </pre>
+
+ <code>bool can_auth_callers = 2 [json_name = "canAuthCallers"];</code></div>
+<dl class="notes">
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
 </dl>

@@ -106,8 +106,7 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends com.google.protobuf.GeneratedMessageLite&lt;<a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>,<wbr><a href="Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a>&gt;
 implements <a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></span></div>
 <div class="block"><pre>
- A UserPermission describes a User and the permissions granted to
- that user.
+ A UserPermission describes the Users a set of permissions is granted to.
  </pre>
 
  Protobuf type <code>viam.app.v1.UserPermission</code></div>
@@ -127,8 +126,7 @@ implements <a href="Robot.UserPermissionOrBuilder.html" title="interface in viam
 <div class="col-second even-row-color"><code><a href="Robot.UserPermission.Builder.html" class="type-name-link" title="class in viam.app.v1">Robot.UserPermission.Builder</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">
- A UserPermission describes a User and the permissions granted to
- that user.</div>
+ A UserPermission describes the Users a set of permissions is granted to.</div>
 </div>
 </div>
 <div class="inherited-list">
@@ -154,6 +152,9 @@ implements <a href="Robot.UserPermissionOrBuilder.html" title="interface in viam
 <div class="col-first odd-row-color"><code>static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#USER_FIELD_NUMBER" class="member-name-link">USER_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#USERS_FIELD_NUMBER" class="member-name-link">USERS_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -185,91 +186,126 @@ implements <a href="Robot.UserPermissionOrBuilder.html" title="interface in viam
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.Permission.html" title="class in viam.app.v1">Robot.Permission</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPermissions(int)" class="member-name-link">getPermissions</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPermissionsCount()" class="member-name-link">getPermissionsCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Robot.Permission.html" title="class in viam.app.v1">Robot.Permission</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPermissionsList()" class="member-name-link">getPermissionsList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.PermissionOrBuilder.html" title="interface in viam.app.v1">Robot.PermissionOrBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPermissionsOrBuilder(int)" class="member-name-link">getPermissionsOrBuilder</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;? extends <a href="Robot.PermissionOrBuilder.html" title="interface in viam.app.v1">Robot.PermissionOrBuilder</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPermissionsOrBuilderList()" class="member-name-link">getPermissionsOrBuilderList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.User.html" title="class in viam.app.v1">Robot.User</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUser()" class="member-name-link">getUser</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ user is a single User these permissions apply to.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasUser()" class="member-name-link">hasUser</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.User.html" title="class in viam.app.v1">Robot.User</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUsers(int)" class="member-name-link">getUsers</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ users are the Users these permissions apply to.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUsersCount()" class="member-name-link">getUsersCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Robot.User.html" title="class in viam.app.v1">Robot.User</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUsersList()" class="member-name-link">getUsersList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.UserOrBuilder.html" title="interface in viam.app.v1">Robot.UserOrBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUsersOrBuilder(int)" class="member-name-link">getUsersOrBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;? extends <a href="Robot.UserOrBuilder.html" title="interface in viam.app.v1">Robot.UserOrBuilder</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUsersOrBuilderList()" class="member-name-link">getUsersOrBuilderList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasUser()" class="member-name-link">hasUser</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ user is a single User these permissions apply to.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.v1.Robot.UserPermission)" class="member-name-link">newBuilder</a><wbr>(<a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&nbsp;prototype)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.Builder.html" title="class in viam.app.v1">Robot.UserPermission.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.v1.Robot.UserPermission)" class="member-name-link">newBuilder</a><wbr>(<a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&nbsp;prototype)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser<wbr>&lt;<a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser<wbr>&lt;<a href="Robot.UserPermission.html" title="class in viam.app.v1">Robot.UserPermission</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -297,14 +333,14 @@ implements <a href="Robot.UserPermissionOrBuilder.html" title="interface in viam
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="USER_FIELD_NUMBER">
-<h3>USER_FIELD_NUMBER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">USER_FIELD_NUMBER</span></div>
+<section class="detail" id="USERS_FIELD_NUMBER">
+<h3>USERS_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">USERS_FIELD_NUMBER</span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list">
-<li><a href="../../../constant-values.html#viam.app.v1.Robot.UserPermission.USER_FIELD_NUMBER">Constant Field Values</a></li>
+<li><a href="../../../constant-values.html#viam.app.v1.Robot.UserPermission.USERS_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -324,6 +360,20 @@ implements <a href="Robot.UserPermissionOrBuilder.html" title="interface in viam
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="USER_FIELD_NUMBER">
+<h3>USER_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">USER_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../constant-values.html#viam.app.v1.Robot.UserPermission.USER_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -333,12 +383,162 @@ implements <a href="Robot.UserPermissionOrBuilder.html" title="interface in viam
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="getUsersList()">
+<h3>getUsersList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.User.html" title="class in viam.app.v1">Robot.User</a>&gt;</span>&nbsp;<span class="element-name">getUsersList</span>()</div>
+<div class="block"><pre>
+ users are the Users these permissions apply to. A User can be listed in
+ only one UserPermission for a set of UserPermissions, counting both users
+ and user.
+ </pre>
+
+ <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.UserPermissionOrBuilder.html#getUsersList()">getUsersList</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUsersOrBuilderList()">
+<h3>getUsersOrBuilderList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.UserOrBuilder.html" title="interface in viam.app.v1">Robot.UserOrBuilder</a>&gt;</span>&nbsp;<span class="element-name">getUsersOrBuilderList</span>()</div>
+<div class="block"><pre>
+ users are the Users these permissions apply to. A User can be listed in
+ only one UserPermission for a set of UserPermissions, counting both users
+ and user.
+ </pre>
+
+ <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getUsersCount()">
+<h3>getUsersCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getUsersCount</span>()</div>
+<div class="block"><pre>
+ users are the Users these permissions apply to. A User can be listed in
+ only one UserPermission for a set of UserPermissions, counting both users
+ and user.
+ </pre>
+
+ <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.UserPermissionOrBuilder.html#getUsersCount()">getUsersCount</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUsers(int)">
+<h3>getUsers</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.User.html" title="class in viam.app.v1">Robot.User</a></span>&nbsp;<span class="element-name">getUsers</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ users are the Users these permissions apply to. A User can be listed in
+ only one UserPermission for a set of UserPermissions, counting both users
+ and user.
+ </pre>
+
+ <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.UserPermissionOrBuilder.html#getUsers(int)">getUsers</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getUsersOrBuilder(int)">
+<h3>getUsersOrBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.UserOrBuilder.html" title="interface in viam.app.v1">Robot.UserOrBuilder</a></span>&nbsp;<span class="element-name">getUsersOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ users are the Users these permissions apply to. A User can be listed in
+ only one UserPermission for a set of UserPermissions, counting both users
+ and user.
+ </pre>
+
+ <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPermissionsList()">
+<h3>getPermissionsList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.Permission.html" title="class in viam.app.v1">Robot.Permission</a>&gt;</span>&nbsp;<span class="element-name">getPermissionsList</span>()</div>
+<div class="block"><pre>
+ permissions are the methods these Users may invoke, by resource. A User
+ named here with no permissions may invoke nothing.
+ </pre>
+
+ <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.UserPermissionOrBuilder.html#getPermissionsList()">getPermissionsList</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPermissionsOrBuilderList()">
+<h3>getPermissionsOrBuilderList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.PermissionOrBuilder.html" title="interface in viam.app.v1">Robot.PermissionOrBuilder</a>&gt;</span>&nbsp;<span class="element-name">getPermissionsOrBuilderList</span>()</div>
+<div class="block"><pre>
+ permissions are the methods these Users may invoke, by resource. A User
+ named here with no permissions may invoke nothing.
+ </pre>
+
+ <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPermissionsCount()">
+<h3>getPermissionsCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getPermissionsCount</span>()</div>
+<div class="block"><pre>
+ permissions are the methods these Users may invoke, by resource. A User
+ named here with no permissions may invoke nothing.
+ </pre>
+
+ <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.UserPermissionOrBuilder.html#getPermissionsCount()">getPermissionsCount</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPermissions(int)">
+<h3>getPermissions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.Permission.html" title="class in viam.app.v1">Robot.Permission</a></span>&nbsp;<span class="element-name">getPermissions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ permissions are the methods these Users may invoke, by resource. A User
+ named here with no permissions may invoke nothing.
+ </pre>
+
+ <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.UserPermissionOrBuilder.html#getPermissions(int)">getPermissions</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPermissionsOrBuilder(int)">
+<h3>getPermissionsOrBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.PermissionOrBuilder.html" title="interface in viam.app.v1">Robot.PermissionOrBuilder</a></span>&nbsp;<span class="element-name">getPermissionsOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ permissions are the methods these Users may invoke, by resource. A User
+ named here with no permissions may invoke nothing.
+ </pre>
+
+ <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+</section>
+</li>
+<li>
 <section class="detail" id="hasUser()">
 <h3>hasUser</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasUser</span>()</div>
 <div class="block"><pre>
- user is the User this UserPermission applies to. A User can only be
- listed in a single UserPermission for a set of UserPermissions.
+ user is a single User these permissions apply to. Superseded by users:
+ prefer users in new writers, and expect readers to ignore user when users
+ is set.
  </pre>
 
  <code>.viam.app.v1.User user = 1 [json_name = "user"];</code></div>
@@ -355,8 +555,9 @@ implements <a href="Robot.UserPermissionOrBuilder.html" title="interface in viam
 <h3>getUser</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.User.html" title="class in viam.app.v1">Robot.User</a></span>&nbsp;<span class="element-name">getUser</span>()</div>
 <div class="block"><pre>
- user is the User this UserPermission applies to. A User can only be
- listed in a single UserPermission for a set of UserPermissions.
+ user is a single User these permissions apply to. Superseded by users:
+ prefer users in new writers, and expect readers to ignore user when users
+ is set.
  </pre>
 
  <code>.viam.app.v1.User user = 1 [json_name = "user"];</code></div>
@@ -366,53 +567,6 @@ implements <a href="Robot.UserPermissionOrBuilder.html" title="interface in viam
 <dt>Returns:</dt>
 <dd>The user.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getPermissionsList()">
-<h3>getPermissionsList</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.Permission.html" title="class in viam.app.v1">Robot.Permission</a>&gt;</span>&nbsp;<span class="element-name">getPermissionsList</span>()</div>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="Robot.UserPermissionOrBuilder.html#getPermissionsList()">getPermissionsList</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getPermissionsOrBuilderList()">
-<h3>getPermissionsOrBuilderList</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.PermissionOrBuilder.html" title="interface in viam.app.v1">Robot.PermissionOrBuilder</a>&gt;</span>&nbsp;<span class="element-name">getPermissionsOrBuilderList</span>()</div>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getPermissionsCount()">
-<h3>getPermissionsCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getPermissionsCount</span>()</div>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="Robot.UserPermissionOrBuilder.html#getPermissionsCount()">getPermissionsCount</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getPermissions(int)">
-<h3>getPermissions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.Permission.html" title="class in viam.app.v1">Robot.Permission</a></span>&nbsp;<span class="element-name">getPermissions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="Robot.UserPermissionOrBuilder.html#getPermissions(int)">getPermissions</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.UserPermissionOrBuilder.html" title="interface in viam.app.v1">Robot.UserPermissionOrBuilder</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getPermissionsOrBuilder(int)">
-<h3>getPermissionsOrBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.PermissionOrBuilder.html" title="interface in viam.app.v1">Robot.PermissionOrBuilder</a></span>&nbsp;<span class="element-name">getPermissionsOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
 </section>
 </li>
 <li>

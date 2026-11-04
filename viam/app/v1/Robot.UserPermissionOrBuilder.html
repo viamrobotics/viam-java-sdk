@@ -118,29 +118,50 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Robot.Permission.html" title="class in viam.app.v1">Robot.Permission</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPermissions(int)" class="member-name-link">getPermissions</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPermissionsCount()" class="member-name-link">getPermissionsCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Robot.Permission.html" title="class in viam.app.v1">Robot.Permission</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPermissionsList()" class="member-name-link">getPermissionsList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+<div class="block">
+ permissions are the methods these Users may invoke, by resource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Robot.User.html" title="class in viam.app.v1">Robot.User</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUser()" class="member-name-link">getUser</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ user is a single User these permissions apply to.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasUser()" class="member-name-link">hasUser</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Robot.User.html" title="class in viam.app.v1">Robot.User</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUsers(int)" class="member-name-link">getUsers</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- user is the User this UserPermission applies to.</div>
+ users are the Users these permissions apply to.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUsersCount()" class="member-name-link">getUsersCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Robot.User.html" title="class in viam.app.v1">Robot.User</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUsersList()" class="member-name-link">getUsersList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ users are the Users these permissions apply to.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasUser()" class="member-name-link">hasUser</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ user is a single User these permissions apply to.</div>
 </div>
 </div>
 </div>
@@ -160,12 +181,88 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="getUsersList()">
+<h3>getUsersList</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.User.html" title="class in viam.app.v1">Robot.User</a>&gt;</span>&nbsp;<span class="element-name">getUsersList</span>()</div>
+<div class="block"><pre>
+ users are the Users these permissions apply to. A User can be listed in
+ only one UserPermission for a set of UserPermissions, counting both users
+ and user.
+ </pre>
+
+ <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getUsers(int)">
+<h3>getUsers</h3>
+<div class="member-signature"><span class="return-type"><a href="Robot.User.html" title="class in viam.app.v1">Robot.User</a></span>&nbsp;<span class="element-name">getUsers</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ users are the Users these permissions apply to. A User can be listed in
+ only one UserPermission for a set of UserPermissions, counting both users
+ and user.
+ </pre>
+
+ <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getUsersCount()">
+<h3>getUsersCount</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getUsersCount</span>()</div>
+<div class="block"><pre>
+ users are the Users these permissions apply to. A User can be listed in
+ only one UserPermission for a set of UserPermissions, counting both users
+ and user.
+ </pre>
+
+ <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPermissionsList()">
+<h3>getPermissionsList</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.Permission.html" title="class in viam.app.v1">Robot.Permission</a>&gt;</span>&nbsp;<span class="element-name">getPermissionsList</span>()</div>
+<div class="block"><pre>
+ permissions are the methods these Users may invoke, by resource. A User
+ named here with no permissions may invoke nothing.
+ </pre>
+
+ <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPermissions(int)">
+<h3>getPermissions</h3>
+<div class="member-signature"><span class="return-type"><a href="Robot.Permission.html" title="class in viam.app.v1">Robot.Permission</a></span>&nbsp;<span class="element-name">getPermissions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ permissions are the methods these Users may invoke, by resource. A User
+ named here with no permissions may invoke nothing.
+ </pre>
+
+ <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getPermissionsCount()">
+<h3>getPermissionsCount</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getPermissionsCount</span>()</div>
+<div class="block"><pre>
+ permissions are the methods these Users may invoke, by resource. A User
+ named here with no permissions may invoke nothing.
+ </pre>
+
+ <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
+</section>
+</li>
+<li>
 <section class="detail" id="hasUser()">
 <h3>hasUser</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasUser</span>()</div>
 <div class="block"><pre>
- user is the User this UserPermission applies to. A User can only be
- listed in a single UserPermission for a set of UserPermissions.
+ user is a single User these permissions apply to. Superseded by users:
+ prefer users in new writers, and expect readers to ignore user when users
+ is set.
  </pre>
 
  <code>.viam.app.v1.User user = 1 [json_name = "user"];</code></div>
@@ -180,8 +277,9 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <h3>getUser</h3>
 <div class="member-signature"><span class="return-type"><a href="Robot.User.html" title="class in viam.app.v1">Robot.User</a></span>&nbsp;<span class="element-name">getUser</span>()</div>
 <div class="block"><pre>
- user is the User this UserPermission applies to. A User can only be
- listed in a single UserPermission for a set of UserPermissions.
+ user is a single User these permissions apply to. Superseded by users:
+ prefer users in new writers, and expect readers to ignore user when users
+ is set.
  </pre>
 
  <code>.viam.app.v1.User user = 1 [json_name = "user"];</code></div>
@@ -189,27 +287,6 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The user.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getPermissionsList()">
-<h3>getPermissionsList</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.Permission.html" title="class in viam.app.v1">Robot.Permission</a>&gt;</span>&nbsp;<span class="element-name">getPermissionsList</span>()</div>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getPermissions(int)">
-<h3>getPermissions</h3>
-<div class="member-signature"><span class="return-type"><a href="Robot.Permission.html" title="class in viam.app.v1">Robot.Permission</a></span>&nbsp;<span class="element-name">getPermissions</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getPermissionsCount()">
-<h3>getPermissionsCount</h3>
-<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getPermissionsCount</span>()</div>
-<div class="block"><code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code></div>
 </section>
 </li>
 </ul>
