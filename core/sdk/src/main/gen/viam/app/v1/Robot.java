@@ -15868,8 +15868,70 @@ java.lang.String defaultValue) {
 
     /**
      * <pre>
-     * user is the User this UserPermission applies to. A User can only be
-     * listed in a single UserPermission for a set of UserPermissions.
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    java.util.List<viam.app.v1.Robot.User> 
+        getUsersList();
+    /**
+     * <pre>
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    viam.app.v1.Robot.User getUsers(int index);
+    /**
+     * <pre>
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    int getUsersCount();
+
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    java.util.List<viam.app.v1.Robot.Permission> 
+        getPermissionsList();
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    viam.app.v1.Robot.Permission getPermissions(int index);
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    int getPermissionsCount();
+
+    /**
+     * <pre>
+     * user is a single User these permissions apply to. Superseded by users:
+     * prefer users in new writers, and expect readers to ignore user when users
+     * is set.
      * </pre>
      *
      * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
@@ -15878,33 +15940,19 @@ java.lang.String defaultValue) {
     boolean hasUser();
     /**
      * <pre>
-     * user is the User this UserPermission applies to. A User can only be
-     * listed in a single UserPermission for a set of UserPermissions.
+     * user is a single User these permissions apply to. Superseded by users:
+     * prefer users in new writers, and expect readers to ignore user when users
+     * is set.
      * </pre>
      *
      * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
      * @return The user.
      */
     viam.app.v1.Robot.User getUser();
-
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    java.util.List<viam.app.v1.Robot.Permission> 
-        getPermissionsList();
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    viam.app.v1.Robot.Permission getPermissions(int index);
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    int getPermissionsCount();
   }
   /**
    * <pre>
-   * A UserPermission describes a User and the permissions granted to
-   * that user.
+   * A UserPermission describes the Users a set of permissions is granted to.
    * </pre>
    *
    * Protobuf type {@code viam.app.v1.UserPermission}
@@ -15915,15 +15963,332 @@ java.lang.String defaultValue) {
       // @@protoc_insertion_point(message_implements:viam.app.v1.UserPermission)
       UserPermissionOrBuilder {
     private UserPermission() {
+      users_ = emptyProtobufList();
       permissions_ = emptyProtobufList();
     }
     private int bitField0_;
+    public static final int USERS_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.User> users_;
+    /**
+     * <pre>
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.Robot.User> getUsersList() {
+      return users_;
+    }
+    /**
+     * <pre>
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.Robot.UserOrBuilder> 
+        getUsersOrBuilderList() {
+      return users_;
+    }
+    /**
+     * <pre>
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    @java.lang.Override
+    public int getUsersCount() {
+      return users_.size();
+    }
+    /**
+     * <pre>
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.User getUsers(int index) {
+      return users_.get(index);
+    }
+    /**
+     * <pre>
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    public viam.app.v1.Robot.UserOrBuilder getUsersOrBuilder(
+        int index) {
+      return users_.get(index);
+    }
+    private void ensureUsersIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.User> tmp = users_;
+      if (!tmp.isModifiable()) {
+        users_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setUsers(
+        int index, viam.app.v1.Robot.User value) {
+      value.getClass();  // minimal bytecode null check
+      ensureUsersIsMutable();
+      users_.set(index, value);
+    }
+    /**
+     * <pre>
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addUsers(viam.app.v1.Robot.User value) {
+      value.getClass();  // minimal bytecode null check
+      ensureUsersIsMutable();
+      users_.add(value);
+    }
+    /**
+     * <pre>
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addUsers(
+        int index, viam.app.v1.Robot.User value) {
+      value.getClass();  // minimal bytecode null check
+      ensureUsersIsMutable();
+      users_.add(index, value);
+    }
+    /**
+     * <pre>
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    private void addAllUsers(
+        java.lang.Iterable<? extends viam.app.v1.Robot.User> values) {
+      ensureUsersIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, users_);
+    }
+    /**
+     * <pre>
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    private void clearUsers() {
+      users_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * users are the Users these permissions apply to. A User can be listed in
+     * only one UserPermission for a set of UserPermissions, counting both users
+     * and user.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+     */
+    private void removeUsers(int index) {
+      ensureUsersIsMutable();
+      users_.remove(index);
+    }
+
+    public static final int PERMISSIONS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.Permission> permissions_;
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.Robot.Permission> getPermissionsList() {
+      return permissions_;
+    }
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.Robot.PermissionOrBuilder> 
+        getPermissionsOrBuilderList() {
+      return permissions_;
+    }
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    @java.lang.Override
+    public int getPermissionsCount() {
+      return permissions_.size();
+    }
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.Permission getPermissions(int index) {
+      return permissions_.get(index);
+    }
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    public viam.app.v1.Robot.PermissionOrBuilder getPermissionsOrBuilder(
+        int index) {
+      return permissions_.get(index);
+    }
+    private void ensurePermissionsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.Permission> tmp = permissions_;
+      if (!tmp.isModifiable()) {
+        permissions_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setPermissions(
+        int index, viam.app.v1.Robot.Permission value) {
+      value.getClass();  // minimal bytecode null check
+      ensurePermissionsIsMutable();
+      permissions_.set(index, value);
+    }
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addPermissions(viam.app.v1.Robot.Permission value) {
+      value.getClass();  // minimal bytecode null check
+      ensurePermissionsIsMutable();
+      permissions_.add(value);
+    }
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addPermissions(
+        int index, viam.app.v1.Robot.Permission value) {
+      value.getClass();  // minimal bytecode null check
+      ensurePermissionsIsMutable();
+      permissions_.add(index, value);
+    }
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    private void addAllPermissions(
+        java.lang.Iterable<? extends viam.app.v1.Robot.Permission> values) {
+      ensurePermissionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, permissions_);
+    }
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    private void clearPermissions() {
+      permissions_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * permissions are the methods these Users may invoke, by resource. A User
+     * named here with no permissions may invoke nothing.
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+     */
+    private void removePermissions(int index) {
+      ensurePermissionsIsMutable();
+      permissions_.remove(index);
+    }
+
     public static final int USER_FIELD_NUMBER = 1;
     private viam.app.v1.Robot.User user_;
     /**
      * <pre>
-     * user is the User this UserPermission applies to. A User can only be
-     * listed in a single UserPermission for a set of UserPermissions.
+     * user is a single User these permissions apply to. Superseded by users:
+     * prefer users in new writers, and expect readers to ignore user when users
+     * is set.
      * </pre>
      *
      * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
@@ -15934,8 +16299,9 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * user is the User this UserPermission applies to. A User can only be
-     * listed in a single UserPermission for a set of UserPermissions.
+     * user is a single User these permissions apply to. Superseded by users:
+     * prefer users in new writers, and expect readers to ignore user when users
+     * is set.
      * </pre>
      *
      * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
@@ -15946,8 +16312,9 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * user is the User this UserPermission applies to. A User can only be
-     * listed in a single UserPermission for a set of UserPermissions.
+     * user is a single User these permissions apply to. Superseded by users:
+     * prefer users in new writers, and expect readers to ignore user when users
+     * is set.
      * </pre>
      *
      * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
@@ -15960,8 +16327,9 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * user is the User this UserPermission applies to. A User can only be
-     * listed in a single UserPermission for a set of UserPermissions.
+     * user is a single User these permissions apply to. Superseded by users:
+     * prefer users in new writers, and expect readers to ignore user when users
+     * is set.
      * </pre>
      *
      * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
@@ -15980,8 +16348,9 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * user is the User this UserPermission applies to. A User can only be
-     * listed in a single UserPermission for a set of UserPermissions.
+     * user is a single User these permissions apply to. Superseded by users:
+     * prefer users in new writers, and expect readers to ignore user when users
+     * is set.
      * </pre>
      *
      * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
@@ -15989,103 +16358,6 @@ java.lang.String defaultValue) {
     private void clearUser() {
       user_ = null;
       bitField0_ = (bitField0_ & ~0x00000001);
-    }
-
-    public static final int PERMISSIONS_FIELD_NUMBER = 2;
-    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.Permission> permissions_;
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    @java.lang.Override
-    public java.util.List<viam.app.v1.Robot.Permission> getPermissionsList() {
-      return permissions_;
-    }
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    public java.util.List<? extends viam.app.v1.Robot.PermissionOrBuilder> 
-        getPermissionsOrBuilderList() {
-      return permissions_;
-    }
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    @java.lang.Override
-    public int getPermissionsCount() {
-      return permissions_.size();
-    }
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    @java.lang.Override
-    public viam.app.v1.Robot.Permission getPermissions(int index) {
-      return permissions_.get(index);
-    }
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    public viam.app.v1.Robot.PermissionOrBuilder getPermissionsOrBuilder(
-        int index) {
-      return permissions_.get(index);
-    }
-    private void ensurePermissionsIsMutable() {
-      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.Permission> tmp = permissions_;
-      if (!tmp.isModifiable()) {
-        permissions_ =
-            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
-       }
-    }
-
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    @java.lang.SuppressWarnings("ReturnValueIgnored")
-    private void setPermissions(
-        int index, viam.app.v1.Robot.Permission value) {
-      value.getClass();  // minimal bytecode null check
-      ensurePermissionsIsMutable();
-      permissions_.set(index, value);
-    }
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    @java.lang.SuppressWarnings("ReturnValueIgnored")
-    private void addPermissions(viam.app.v1.Robot.Permission value) {
-      value.getClass();  // minimal bytecode null check
-      ensurePermissionsIsMutable();
-      permissions_.add(value);
-    }
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    @java.lang.SuppressWarnings("ReturnValueIgnored")
-    private void addPermissions(
-        int index, viam.app.v1.Robot.Permission value) {
-      value.getClass();  // minimal bytecode null check
-      ensurePermissionsIsMutable();
-      permissions_.add(index, value);
-    }
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    private void addAllPermissions(
-        java.lang.Iterable<? extends viam.app.v1.Robot.Permission> values) {
-      ensurePermissionsIsMutable();
-      com.google.protobuf.AbstractMessageLite.addAll(
-          values, permissions_);
-    }
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    private void clearPermissions() {
-      permissions_ = emptyProtobufList();
-    }
-    /**
-     * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-     */
-    private void removePermissions(int index) {
-      ensurePermissionsIsMutable();
-      permissions_.remove(index);
     }
 
     public static viam.app.v1.Robot.UserPermission parseFrom(
@@ -16173,8 +16445,7 @@ java.lang.String defaultValue) {
 
     /**
      * <pre>
-     * A UserPermission describes a User and the permissions granted to
-     * that user.
+     * A UserPermission describes the Users a set of permissions is granted to.
      * </pre>
      *
      * Protobuf type {@code viam.app.v1.UserPermission}
@@ -16192,8 +16463,345 @@ java.lang.String defaultValue) {
 
       /**
        * <pre>
-       * user is the User this UserPermission applies to. A User can only be
-       * listed in a single UserPermission for a set of UserPermissions.
+       * users are the Users these permissions apply to. A User can be listed in
+       * only one UserPermission for a set of UserPermissions, counting both users
+       * and user.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.Robot.User> getUsersList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getUsersList());
+      }
+      /**
+       * <pre>
+       * users are the Users these permissions apply to. A User can be listed in
+       * only one UserPermission for a set of UserPermissions, counting both users
+       * and user.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+       */
+      @java.lang.Override
+      public int getUsersCount() {
+        return instance.getUsersCount();
+      }/**
+       * <pre>
+       * users are the Users these permissions apply to. A User can be listed in
+       * only one UserPermission for a set of UserPermissions, counting both users
+       * and user.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.User getUsers(int index) {
+        return instance.getUsers(index);
+      }
+      /**
+       * <pre>
+       * users are the Users these permissions apply to. A User can be listed in
+       * only one UserPermission for a set of UserPermissions, counting both users
+       * and user.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+       */
+      public Builder setUsers(
+          int index, viam.app.v1.Robot.User value) {
+        copyOnWrite();
+        instance.setUsers(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * users are the Users these permissions apply to. A User can be listed in
+       * only one UserPermission for a set of UserPermissions, counting both users
+       * and user.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+       */
+      public Builder setUsers(
+          int index, viam.app.v1.Robot.User.Builder builderForValue) {
+        copyOnWrite();
+        instance.setUsers(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * users are the Users these permissions apply to. A User can be listed in
+       * only one UserPermission for a set of UserPermissions, counting both users
+       * and user.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+       */
+      public Builder addUsers(viam.app.v1.Robot.User value) {
+        copyOnWrite();
+        instance.addUsers(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * users are the Users these permissions apply to. A User can be listed in
+       * only one UserPermission for a set of UserPermissions, counting both users
+       * and user.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+       */
+      public Builder addUsers(
+          int index, viam.app.v1.Robot.User value) {
+        copyOnWrite();
+        instance.addUsers(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * users are the Users these permissions apply to. A User can be listed in
+       * only one UserPermission for a set of UserPermissions, counting both users
+       * and user.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+       */
+      public Builder addUsers(
+          viam.app.v1.Robot.User.Builder builderForValue) {
+        copyOnWrite();
+        instance.addUsers(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * users are the Users these permissions apply to. A User can be listed in
+       * only one UserPermission for a set of UserPermissions, counting both users
+       * and user.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+       */
+      public Builder addUsers(
+          int index, viam.app.v1.Robot.User.Builder builderForValue) {
+        copyOnWrite();
+        instance.addUsers(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * users are the Users these permissions apply to. A User can be listed in
+       * only one UserPermission for a set of UserPermissions, counting both users
+       * and user.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+       */
+      public Builder addAllUsers(
+          java.lang.Iterable<? extends viam.app.v1.Robot.User> values) {
+        copyOnWrite();
+        instance.addAllUsers(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * users are the Users these permissions apply to. A User can be listed in
+       * only one UserPermission for a set of UserPermissions, counting both users
+       * and user.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+       */
+      public Builder clearUsers() {
+        copyOnWrite();
+        instance.clearUsers();
+        return this;
+      }
+      /**
+       * <pre>
+       * users are the Users these permissions apply to. A User can be listed in
+       * only one UserPermission for a set of UserPermissions, counting both users
+       * and user.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.User users = 3 [json_name = "users"];</code>
+       */
+      public Builder removeUsers(int index) {
+        copyOnWrite();
+        instance.removeUsers(index);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * permissions are the methods these Users may invoke, by resource. A User
+       * named here with no permissions may invoke nothing.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.Robot.Permission> getPermissionsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getPermissionsList());
+      }
+      /**
+       * <pre>
+       * permissions are the methods these Users may invoke, by resource. A User
+       * named here with no permissions may invoke nothing.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      @java.lang.Override
+      public int getPermissionsCount() {
+        return instance.getPermissionsCount();
+      }/**
+       * <pre>
+       * permissions are the methods these Users may invoke, by resource. A User
+       * named here with no permissions may invoke nothing.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.Permission getPermissions(int index) {
+        return instance.getPermissions(index);
+      }
+      /**
+       * <pre>
+       * permissions are the methods these Users may invoke, by resource. A User
+       * named here with no permissions may invoke nothing.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder setPermissions(
+          int index, viam.app.v1.Robot.Permission value) {
+        copyOnWrite();
+        instance.setPermissions(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * permissions are the methods these Users may invoke, by resource. A User
+       * named here with no permissions may invoke nothing.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder setPermissions(
+          int index, viam.app.v1.Robot.Permission.Builder builderForValue) {
+        copyOnWrite();
+        instance.setPermissions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * permissions are the methods these Users may invoke, by resource. A User
+       * named here with no permissions may invoke nothing.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder addPermissions(viam.app.v1.Robot.Permission value) {
+        copyOnWrite();
+        instance.addPermissions(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * permissions are the methods these Users may invoke, by resource. A User
+       * named here with no permissions may invoke nothing.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder addPermissions(
+          int index, viam.app.v1.Robot.Permission value) {
+        copyOnWrite();
+        instance.addPermissions(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * permissions are the methods these Users may invoke, by resource. A User
+       * named here with no permissions may invoke nothing.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder addPermissions(
+          viam.app.v1.Robot.Permission.Builder builderForValue) {
+        copyOnWrite();
+        instance.addPermissions(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * permissions are the methods these Users may invoke, by resource. A User
+       * named here with no permissions may invoke nothing.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder addPermissions(
+          int index, viam.app.v1.Robot.Permission.Builder builderForValue) {
+        copyOnWrite();
+        instance.addPermissions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * permissions are the methods these Users may invoke, by resource. A User
+       * named here with no permissions may invoke nothing.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder addAllPermissions(
+          java.lang.Iterable<? extends viam.app.v1.Robot.Permission> values) {
+        copyOnWrite();
+        instance.addAllPermissions(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * permissions are the methods these Users may invoke, by resource. A User
+       * named here with no permissions may invoke nothing.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder clearPermissions() {
+        copyOnWrite();
+        instance.clearPermissions();
+        return this;
+      }
+      /**
+       * <pre>
+       * permissions are the methods these Users may invoke, by resource. A User
+       * named here with no permissions may invoke nothing.
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
+       */
+      public Builder removePermissions(int index) {
+        copyOnWrite();
+        instance.removePermissions(index);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * user is a single User these permissions apply to. Superseded by users:
+       * prefer users in new writers, and expect readers to ignore user when users
+       * is set.
        * </pre>
        *
        * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
@@ -16204,8 +16812,9 @@ java.lang.String defaultValue) {
       }
       /**
        * <pre>
-       * user is the User this UserPermission applies to. A User can only be
-       * listed in a single UserPermission for a set of UserPermissions.
+       * user is a single User these permissions apply to. Superseded by users:
+       * prefer users in new writers, and expect readers to ignore user when users
+       * is set.
        * </pre>
        *
        * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
@@ -16216,8 +16825,9 @@ java.lang.String defaultValue) {
       }
       /**
        * <pre>
-       * user is the User this UserPermission applies to. A User can only be
-       * listed in a single UserPermission for a set of UserPermissions.
+       * user is a single User these permissions apply to. Superseded by users:
+       * prefer users in new writers, and expect readers to ignore user when users
+       * is set.
        * </pre>
        *
        * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
@@ -16229,8 +16839,9 @@ java.lang.String defaultValue) {
         }
       /**
        * <pre>
-       * user is the User this UserPermission applies to. A User can only be
-       * listed in a single UserPermission for a set of UserPermissions.
+       * user is a single User these permissions apply to. Superseded by users:
+       * prefer users in new writers, and expect readers to ignore user when users
+       * is set.
        * </pre>
        *
        * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
@@ -16243,8 +16854,9 @@ java.lang.String defaultValue) {
       }
       /**
        * <pre>
-       * user is the User this UserPermission applies to. A User can only be
-       * listed in a single UserPermission for a set of UserPermissions.
+       * user is a single User these permissions apply to. Superseded by users:
+       * prefer users in new writers, and expect readers to ignore user when users
+       * is set.
        * </pre>
        *
        * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
@@ -16256,116 +16868,15 @@ java.lang.String defaultValue) {
       }
       /**
        * <pre>
-       * user is the User this UserPermission applies to. A User can only be
-       * listed in a single UserPermission for a set of UserPermissions.
+       * user is a single User these permissions apply to. Superseded by users:
+       * prefer users in new writers, and expect readers to ignore user when users
+       * is set.
        * </pre>
        *
        * <code>.viam.app.v1.User user = 1 [json_name = "user"];</code>
        */
       public Builder clearUser() {  copyOnWrite();
         instance.clearUser();
-        return this;
-      }
-
-      /**
-       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-       */
-      @java.lang.Override
-      public java.util.List<viam.app.v1.Robot.Permission> getPermissionsList() {
-        return java.util.Collections.unmodifiableList(
-            instance.getPermissionsList());
-      }
-      /**
-       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-       */
-      @java.lang.Override
-      public int getPermissionsCount() {
-        return instance.getPermissionsCount();
-      }/**
-       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-       */
-      @java.lang.Override
-      public viam.app.v1.Robot.Permission getPermissions(int index) {
-        return instance.getPermissions(index);
-      }
-      /**
-       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-       */
-      public Builder setPermissions(
-          int index, viam.app.v1.Robot.Permission value) {
-        copyOnWrite();
-        instance.setPermissions(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-       */
-      public Builder setPermissions(
-          int index, viam.app.v1.Robot.Permission.Builder builderForValue) {
-        copyOnWrite();
-        instance.setPermissions(index,
-            builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-       */
-      public Builder addPermissions(viam.app.v1.Robot.Permission value) {
-        copyOnWrite();
-        instance.addPermissions(value);
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-       */
-      public Builder addPermissions(
-          int index, viam.app.v1.Robot.Permission value) {
-        copyOnWrite();
-        instance.addPermissions(index, value);
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-       */
-      public Builder addPermissions(
-          viam.app.v1.Robot.Permission.Builder builderForValue) {
-        copyOnWrite();
-        instance.addPermissions(builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-       */
-      public Builder addPermissions(
-          int index, viam.app.v1.Robot.Permission.Builder builderForValue) {
-        copyOnWrite();
-        instance.addPermissions(index,
-            builderForValue.build());
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-       */
-      public Builder addAllPermissions(
-          java.lang.Iterable<? extends viam.app.v1.Robot.Permission> values) {
-        copyOnWrite();
-        instance.addAllPermissions(values);
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-       */
-      public Builder clearPermissions() {
-        copyOnWrite();
-        instance.clearPermissions();
-        return this;
-      }
-      /**
-       * <code>repeated .viam.app.v1.Permission permissions = 2 [json_name = "permissions"];</code>
-       */
-      public Builder removePermissions(int index) {
-        copyOnWrite();
-        instance.removePermissions(index);
         return this;
       }
 
@@ -16389,10 +16900,12 @@ java.lang.String defaultValue) {
               "user_",
               "permissions_",
               viam.app.v1.Robot.Permission.class,
+              "users_",
+              viam.app.v1.Robot.User.class,
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u1009\u0000\u0002" +
-                "\u001b";
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0002\u0000\u0001\u1009\u0000\u0002" +
+                "\u001b\u0003\u001b";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {

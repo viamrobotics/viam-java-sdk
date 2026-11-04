@@ -633,6 +633,38 @@ public final class Grpc {
      */
     boolean getRstStream();
 
+    /**
+     * <pre>
+     * api_token lets a client authenticate with the answerer over the PeerConnection when
+     * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+     * </pre>
+     *
+     * <code>string api_token = 5 [json_name = "apiToken"];</code>
+     * @return Whether the apiToken field is set.
+     */
+    boolean hasApiToken();
+    /**
+     * <pre>
+     * api_token lets a client authenticate with the answerer over the PeerConnection when
+     * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+     * </pre>
+     *
+     * <code>string api_token = 5 [json_name = "apiToken"];</code>
+     * @return The apiToken.
+     */
+    java.lang.String getApiToken();
+    /**
+     * <pre>
+     * api_token lets a client authenticate with the answerer over the PeerConnection when
+     * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+     * </pre>
+     *
+     * <code>string api_token = 5 [json_name = "apiToken"];</code>
+     * @return The bytes for apiToken.
+     */
+    com.google.protobuf.ByteString
+        getApiTokenBytes();
+
     public proto.rpc.webrtc.v1.Grpc.Request.TypeCase getTypeCase();
   }
   /**
@@ -660,6 +692,7 @@ public final class Grpc {
       HEADERS(2),
       MESSAGE(3),
       RST_STREAM(4),
+      API_TOKEN(5),
       TYPE_NOT_SET(0);
       private final int value;
       private TypeCase(int value) {
@@ -678,6 +711,7 @@ public final class Grpc {
           case 2: return HEADERS;
           case 3: return MESSAGE;
           case 4: return RST_STREAM;
+          case 5: return API_TOKEN;
           case 0: return TYPE_NOT_SET;
           default: return null;
         }
@@ -887,6 +921,101 @@ public final class Grpc {
         typeCase_ = 0;
         type_ = null;
       }
+    }
+
+    public static final int API_TOKEN_FIELD_NUMBER = 5;
+    /**
+     * <pre>
+     * api_token lets a client authenticate with the answerer over the PeerConnection when
+     * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+     * </pre>
+     *
+     * <code>string api_token = 5 [json_name = "apiToken"];</code>
+     * @return Whether the apiToken field is set.
+     */
+    @java.lang.Override
+    public boolean hasApiToken() {
+      return typeCase_ == 5;
+    }
+    /**
+     * <pre>
+     * api_token lets a client authenticate with the answerer over the PeerConnection when
+     * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+     * </pre>
+     *
+     * <code>string api_token = 5 [json_name = "apiToken"];</code>
+     * @return The apiToken.
+     */
+    @java.lang.Override
+    public java.lang.String getApiToken() {
+      java.lang.String ref = "";
+      if (typeCase_ == 5) {
+        ref = (java.lang.String) type_;
+      }
+      return ref;
+    }
+    /**
+     * <pre>
+     * api_token lets a client authenticate with the answerer over the PeerConnection when
+     * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+     * </pre>
+     *
+     * <code>string api_token = 5 [json_name = "apiToken"];</code>
+     * @return The bytes for apiToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApiTokenBytes() {
+      java.lang.String ref = "";
+      if (typeCase_ == 5) {
+        ref = (java.lang.String) type_;
+      }
+      return com.google.protobuf.ByteString.copyFromUtf8(ref);
+    }
+    /**
+     * <pre>
+     * api_token lets a client authenticate with the answerer over the PeerConnection when
+     * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+     * </pre>
+     *
+     * <code>string api_token = 5 [json_name = "apiToken"];</code>
+     * @param value The apiToken to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setApiToken(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      typeCase_ = 5;
+      type_ = value;
+    }
+    /**
+     * <pre>
+     * api_token lets a client authenticate with the answerer over the PeerConnection when
+     * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+     * </pre>
+     *
+     * <code>string api_token = 5 [json_name = "apiToken"];</code>
+     */
+    private void clearApiToken() {
+      if (typeCase_ == 5) {
+        typeCase_ = 0;
+        type_ = null;
+      }
+    }
+    /**
+     * <pre>
+     * api_token lets a client authenticate with the answerer over the PeerConnection when
+     * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+     * </pre>
+     *
+     * <code>string api_token = 5 [json_name = "apiToken"];</code>
+     * @param value The bytes for apiToken to set.
+     */
+    private void setApiTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      type_ = value.toStringUtf8();
+      typeCase_ = 5;
     }
 
     public static proto.rpc.webrtc.v1.Grpc.Request parseFrom(
@@ -1184,6 +1313,93 @@ public final class Grpc {
         return this;
       }
 
+      /**
+       * <pre>
+       * api_token lets a client authenticate with the answerer over the PeerConnection when
+       * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+       * </pre>
+       *
+       * <code>string api_token = 5 [json_name = "apiToken"];</code>
+       * @return Whether the apiToken field is set.
+       */
+      @java.lang.Override
+      public boolean hasApiToken() {
+        return instance.hasApiToken();
+      }
+      /**
+       * <pre>
+       * api_token lets a client authenticate with the answerer over the PeerConnection when
+       * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+       * </pre>
+       *
+       * <code>string api_token = 5 [json_name = "apiToken"];</code>
+       * @return The apiToken.
+       */
+      @java.lang.Override
+      public java.lang.String getApiToken() {
+        return instance.getApiToken();
+      }
+      /**
+       * <pre>
+       * api_token lets a client authenticate with the answerer over the PeerConnection when
+       * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+       * </pre>
+       *
+       * <code>string api_token = 5 [json_name = "apiToken"];</code>
+       * @return The bytes for apiToken.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getApiTokenBytes() {
+        return instance.getApiTokenBytes();
+      }
+      /**
+       * <pre>
+       * api_token lets a client authenticate with the answerer over the PeerConnection when
+       * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+       * </pre>
+       *
+       * <code>string api_token = 5 [json_name = "apiToken"];</code>
+       * @param value The apiToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApiToken(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setApiToken(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * api_token lets a client authenticate with the answerer over the PeerConnection when
+       * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+       * </pre>
+       *
+       * <code>string api_token = 5 [json_name = "apiToken"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApiToken() {
+        copyOnWrite();
+        instance.clearApiToken();
+        return this;
+      }
+      /**
+       * <pre>
+       * api_token lets a client authenticate with the answerer over the PeerConnection when
+       * the signaling server could not authenticate it. In the form `&lt;api-key-id&gt;:&lt;api-key&gt;`.
+       * </pre>
+       *
+       * <code>string api_token = 5 [json_name = "apiToken"];</code>
+       * @param value The bytes for apiToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApiTokenBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setApiTokenBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.Request)
     }
     @java.lang.Override
@@ -1208,8 +1424,8 @@ public final class Grpc {
               proto.rpc.webrtc.v1.Grpc.RequestMessage.class,
             };
             java.lang.String info =
-                "\u0000\u0004\u0001\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "<\u0000\u0003<\u0000\u0004:\u0000";
+                "\u0000\u0005\u0001\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "<\u0000\u0003<\u0000\u0004:\u0000\u0005\u023b\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
