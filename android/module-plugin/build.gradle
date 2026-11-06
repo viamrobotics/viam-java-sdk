@@ -12,7 +12,7 @@ gradlePlugin {
             id = 'com.viam.sdk.android.module'
             displayName = 'Plugin for Viam Modules'
             description = 'A plugin that enables Viam Modules on Android devices'
-            tags.addAll('viam', 'robotics', 'smart machine')
+            tags.addAll('viam', 'robotics', 'smart-machine')
             implementationClass = 'com.viam.sdk.android.module.AndroidModulePlugin'
             signing {
                 required { !System.getenv("DONT_SIGN") }
