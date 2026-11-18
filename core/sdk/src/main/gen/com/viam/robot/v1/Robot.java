@@ -21132,6 +21132,17 @@ public final class Robot {
      * <code>repeated .viam.robot.v1.PackageStatus packages = 6 [json_name = "packages"];</code>
      */
     int getPackagesCount();
+
+    /**
+     * <code>.viam.robot.v1.MaintenanceStatus maintenance_status = 7 [json_name = "maintenanceStatus"];</code>
+     * @return Whether the maintenanceStatus field is set.
+     */
+    boolean hasMaintenanceStatus();
+    /**
+     * <code>.viam.robot.v1.MaintenanceStatus maintenance_status = 7 [json_name = "maintenanceStatus"];</code>
+     * @return The maintenanceStatus.
+     */
+    com.viam.robot.v1.Robot.MaintenanceStatus getMaintenanceStatus();
   }
   /**
    * Protobuf type {@code viam.robot.v1.GetMachineStatusResponse}
@@ -21744,6 +21755,54 @@ public final class Robot {
       packages_.remove(index);
     }
 
+    public static final int MAINTENANCE_STATUS_FIELD_NUMBER = 7;
+    private com.viam.robot.v1.Robot.MaintenanceStatus maintenanceStatus_;
+    /**
+     * <code>.viam.robot.v1.MaintenanceStatus maintenance_status = 7 [json_name = "maintenanceStatus"];</code>
+     */
+    @java.lang.Override
+    public boolean hasMaintenanceStatus() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.viam.robot.v1.MaintenanceStatus maintenance_status = 7 [json_name = "maintenanceStatus"];</code>
+     */
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.MaintenanceStatus getMaintenanceStatus() {
+      return maintenanceStatus_ == null ? com.viam.robot.v1.Robot.MaintenanceStatus.getDefaultInstance() : maintenanceStatus_;
+    }
+    /**
+     * <code>.viam.robot.v1.MaintenanceStatus maintenance_status = 7 [json_name = "maintenanceStatus"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setMaintenanceStatus(com.viam.robot.v1.Robot.MaintenanceStatus value) {
+      value.getClass();  // minimal bytecode null check
+      maintenanceStatus_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.viam.robot.v1.MaintenanceStatus maintenance_status = 7 [json_name = "maintenanceStatus"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeMaintenanceStatus(com.viam.robot.v1.Robot.MaintenanceStatus value) {
+      value.getClass();  // minimal bytecode null check
+      if (maintenanceStatus_ != null &&
+          maintenanceStatus_ != com.viam.robot.v1.Robot.MaintenanceStatus.getDefaultInstance()) {
+        maintenanceStatus_ =
+          com.viam.robot.v1.Robot.MaintenanceStatus.newBuilder(maintenanceStatus_).mergeFrom(value).buildPartial();
+      } else {
+        maintenanceStatus_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.viam.robot.v1.MaintenanceStatus maintenance_status = 7 [json_name = "maintenanceStatus"];</code>
+     */
+    private void clearMaintenanceStatus() {
+      maintenanceStatus_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
     public static com.viam.robot.v1.Robot.GetMachineStatusResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -22343,6 +22402,53 @@ public final class Robot {
         return this;
       }
 
+      /**
+       * <code>.viam.robot.v1.MaintenanceStatus maintenance_status = 7 [json_name = "maintenanceStatus"];</code>
+       */
+      @java.lang.Override
+      public boolean hasMaintenanceStatus() {
+        return instance.hasMaintenanceStatus();
+      }
+      /**
+       * <code>.viam.robot.v1.MaintenanceStatus maintenance_status = 7 [json_name = "maintenanceStatus"];</code>
+       */
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.MaintenanceStatus getMaintenanceStatus() {
+        return instance.getMaintenanceStatus();
+      }
+      /**
+       * <code>.viam.robot.v1.MaintenanceStatus maintenance_status = 7 [json_name = "maintenanceStatus"];</code>
+       */
+      public Builder setMaintenanceStatus(com.viam.robot.v1.Robot.MaintenanceStatus value) {
+        copyOnWrite();
+        instance.setMaintenanceStatus(value);
+        return this;
+        }
+      /**
+       * <code>.viam.robot.v1.MaintenanceStatus maintenance_status = 7 [json_name = "maintenanceStatus"];</code>
+       */
+      public Builder setMaintenanceStatus(
+          com.viam.robot.v1.Robot.MaintenanceStatus.Builder builderForValue) {
+        copyOnWrite();
+        instance.setMaintenanceStatus(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.robot.v1.MaintenanceStatus maintenance_status = 7 [json_name = "maintenanceStatus"];</code>
+       */
+      public Builder mergeMaintenanceStatus(com.viam.robot.v1.Robot.MaintenanceStatus value) {
+        copyOnWrite();
+        instance.mergeMaintenanceStatus(value);
+        return this;
+      }
+      /**
+       * <code>.viam.robot.v1.MaintenanceStatus maintenance_status = 7 [json_name = "maintenanceStatus"];</code>
+       */
+      public Builder clearMaintenanceStatus() {  copyOnWrite();
+        instance.clearMaintenanceStatus();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.robot.v1.GetMachineStatusResponse)
     }
     @java.lang.Override
@@ -22370,10 +22476,11 @@ public final class Robot {
               com.viam.robot.v1.Robot.ModuleStatus.class,
               "packages_",
               com.viam.robot.v1.Robot.PackageStatus.class,
+              "maintenanceStatus_",
             };
             java.lang.String info =
-                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0004\u0000\u0001\u001b\u0002\u1009" +
-                "\u0000\u0003\f\u0004\u001b\u0005\u001b\u0006\u001b";
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0004\u0000\u0001\u001b\u0002\u1009" +
+                "\u0000\u0003\f\u0004\u001b\u0005\u001b\u0006\u001b\u0007\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -22424,6 +22531,363 @@ public final class Robot {
     private static volatile com.google.protobuf.Parser<GetMachineStatusResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetMachineStatusResponse> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface MaintenanceStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.MaintenanceStatus)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>bool allowed = 1 [json_name = "allowed"];</code>
+     * @return The allowed.
+     */
+    boolean getAllowed();
+
+    /**
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    java.lang.String getReason();
+    /**
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    com.google.protobuf.ByteString
+        getReasonBytes();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.MaintenanceStatus}
+   */
+  public  static final class MaintenanceStatus extends
+      com.google.protobuf.GeneratedMessageLite<
+          MaintenanceStatus, MaintenanceStatus.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.MaintenanceStatus)
+      MaintenanceStatusOrBuilder {
+    private MaintenanceStatus() {
+      reason_ = "";
+    }
+    public static final int ALLOWED_FIELD_NUMBER = 1;
+    private boolean allowed_;
+    /**
+     * <code>bool allowed = 1 [json_name = "allowed"];</code>
+     * @return The allowed.
+     */
+    @java.lang.Override
+    public boolean getAllowed() {
+      return allowed_;
+    }
+    /**
+     * <code>bool allowed = 1 [json_name = "allowed"];</code>
+     * @param value The allowed to set.
+     */
+    private void setAllowed(boolean value) {
+      
+      allowed_ = value;
+    }
+    /**
+     * <code>bool allowed = 1 [json_name = "allowed"];</code>
+     */
+    private void clearAllowed() {
+
+      allowed_ = false;
+    }
+
+    public static final int REASON_FIELD_NUMBER = 2;
+    private java.lang.String reason_;
+    /**
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The reason.
+     */
+    @java.lang.Override
+    public java.lang.String getReason() {
+      return reason_;
+    }
+    /**
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @return The bytes for reason.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReasonBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(reason_);
+    }
+    /**
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @param value The reason to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setReason(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      reason_ = value;
+    }
+    /**
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     */
+    private void clearReason() {
+
+      reason_ = getDefaultInstance().getReason();
+    }
+    /**
+     * <code>string reason = 2 [json_name = "reason"];</code>
+     * @param value The bytes for reason to set.
+     */
+    private void setReasonBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      reason_ = value.toStringUtf8();
+
+    }
+
+    public static com.viam.robot.v1.Robot.MaintenanceStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.MaintenanceStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.MaintenanceStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.MaintenanceStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.MaintenanceStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.robot.v1.Robot.MaintenanceStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.MaintenanceStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.MaintenanceStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.MaintenanceStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.robot.v1.Robot.MaintenanceStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.MaintenanceStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.robot.v1.Robot.MaintenanceStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.MaintenanceStatus prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.robot.v1.MaintenanceStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.robot.v1.Robot.MaintenanceStatus, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.MaintenanceStatus)
+        com.viam.robot.v1.Robot.MaintenanceStatusOrBuilder {
+      // Construct using com.viam.robot.v1.Robot.MaintenanceStatus.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>bool allowed = 1 [json_name = "allowed"];</code>
+       * @return The allowed.
+       */
+      @java.lang.Override
+      public boolean getAllowed() {
+        return instance.getAllowed();
+      }
+      /**
+       * <code>bool allowed = 1 [json_name = "allowed"];</code>
+       * @param value The allowed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowed(boolean value) {
+        copyOnWrite();
+        instance.setAllowed(value);
+        return this;
+      }
+      /**
+       * <code>bool allowed = 1 [json_name = "allowed"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowed() {
+        copyOnWrite();
+        instance.clearAllowed();
+        return this;
+      }
+
+      /**
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @return The reason.
+       */
+      @java.lang.Override
+      public java.lang.String getReason() {
+        return instance.getReason();
+      }
+      /**
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @return The bytes for reason.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getReasonBytes() {
+        return instance.getReasonBytes();
+      }
+      /**
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReason(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setReason(value);
+        return this;
+      }
+      /**
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReason() {
+        copyOnWrite();
+        instance.clearReason();
+        return this;
+      }
+      /**
+       * <code>string reason = 2 [json_name = "reason"];</code>
+       * @param value The bytes for reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReasonBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setReasonBytes(value);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.MaintenanceStatus)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.robot.v1.Robot.MaintenanceStatus();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "allowed_",
+              "reason_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0007\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.robot.v1.Robot.MaintenanceStatus> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.robot.v1.Robot.MaintenanceStatus.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.robot.v1.Robot.MaintenanceStatus>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.MaintenanceStatus)
+    private static final com.viam.robot.v1.Robot.MaintenanceStatus DEFAULT_INSTANCE;
+    static {
+      MaintenanceStatus defaultInstance = new MaintenanceStatus();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MaintenanceStatus.class, defaultInstance);
+    }
+
+    public static com.viam.robot.v1.Robot.MaintenanceStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<MaintenanceStatus> PARSER;
+
+    public static com.google.protobuf.Parser<MaintenanceStatus> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

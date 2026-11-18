@@ -33852,6 +33852,17 @@ java.lang.String defaultValue) {
      */
     com.google.protobuf.ByteString
         getMaintenanceAllowedKeyBytes();
+
+    /**
+     * <code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code>
+     * @return Whether the followPart field is set.
+     */
+    boolean hasFollowPart();
+    /**
+     * <code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code>
+     * @return The followPart.
+     */
+    viam.app.v1.Robot.FollowPartRef getFollowPart();
   }
   /**
    * Protobuf type {@code viam.app.v1.MaintenanceConfig}
@@ -33959,6 +33970,54 @@ java.lang.String defaultValue) {
       checkByteStringIsUtf8(value);
       maintenanceAllowedKey_ = value.toStringUtf8();
 
+    }
+
+    public static final int FOLLOW_PART_FIELD_NUMBER = 3;
+    private viam.app.v1.Robot.FollowPartRef followPart_;
+    /**
+     * <code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code>
+     */
+    @java.lang.Override
+    public boolean hasFollowPart() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.FollowPartRef getFollowPart() {
+      return followPart_ == null ? viam.app.v1.Robot.FollowPartRef.getDefaultInstance() : followPart_;
+    }
+    /**
+     * <code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setFollowPart(viam.app.v1.Robot.FollowPartRef value) {
+      value.getClass();  // minimal bytecode null check
+      followPart_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeFollowPart(viam.app.v1.Robot.FollowPartRef value) {
+      value.getClass();  // minimal bytecode null check
+      if (followPart_ != null &&
+          followPart_ != viam.app.v1.Robot.FollowPartRef.getDefaultInstance()) {
+        followPart_ =
+          viam.app.v1.Robot.FollowPartRef.newBuilder(followPart_).mergeFrom(value).buildPartial();
+      } else {
+        followPart_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code>
+     */
+    private void clearFollowPart() {
+      followPart_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static viam.app.v1.Robot.MaintenanceConfig parseFrom(
@@ -34154,6 +34213,53 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code>
+       */
+      @java.lang.Override
+      public boolean hasFollowPart() {
+        return instance.hasFollowPart();
+      }
+      /**
+       * <code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.FollowPartRef getFollowPart() {
+        return instance.getFollowPart();
+      }
+      /**
+       * <code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code>
+       */
+      public Builder setFollowPart(viam.app.v1.Robot.FollowPartRef value) {
+        copyOnWrite();
+        instance.setFollowPart(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code>
+       */
+      public Builder setFollowPart(
+          viam.app.v1.Robot.FollowPartRef.Builder builderForValue) {
+        copyOnWrite();
+        instance.setFollowPart(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code>
+       */
+      public Builder mergeFollowPart(viam.app.v1.Robot.FollowPartRef value) {
+        copyOnWrite();
+        instance.mergeFollowPart(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code>
+       */
+      public Builder clearFollowPart() {  copyOnWrite();
+        instance.clearFollowPart();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.MaintenanceConfig)
     }
     @java.lang.Override
@@ -34173,10 +34279,11 @@ java.lang.String defaultValue) {
               "bitField0_",
               "sensorName_",
               "maintenanceAllowedKey_",
+              "followPart_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "\u0208";
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u0208\u0003\u1009\u0001";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -34227,6 +34334,411 @@ java.lang.String defaultValue) {
     private static volatile com.google.protobuf.Parser<MaintenanceConfig> PARSER;
 
     public static com.google.protobuf.Parser<MaintenanceConfig> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface FollowPartRefOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.FollowPartRef)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>.viam.app.v1.RemoteAuth auth = 2 [json_name = "auth"];</code>
+     * @return Whether the auth field is set.
+     */
+    boolean hasAuth();
+    /**
+     * <code>.viam.app.v1.RemoteAuth auth = 2 [json_name = "auth"];</code>
+     * @return The auth.
+     */
+    viam.app.v1.Robot.RemoteAuth getAuth();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.FollowPartRef}
+   */
+  public  static final class FollowPartRef extends
+      com.google.protobuf.GeneratedMessageLite<
+          FollowPartRef, FollowPartRef.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.FollowPartRef)
+      FollowPartRefOrBuilder {
+    private FollowPartRef() {
+      address_ = "";
+    }
+    private int bitField0_;
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    private java.lang.String address_;
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      return address_;
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(address_);
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @param value The address to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setAddress(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      address_ = value;
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     */
+    private void clearAddress() {
+
+      address_ = getDefaultInstance().getAddress();
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @param value The bytes for address to set.
+     */
+    private void setAddressBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      address_ = value.toStringUtf8();
+
+    }
+
+    public static final int AUTH_FIELD_NUMBER = 2;
+    private viam.app.v1.Robot.RemoteAuth auth_;
+    /**
+     * <code>.viam.app.v1.RemoteAuth auth = 2 [json_name = "auth"];</code>
+     */
+    @java.lang.Override
+    public boolean hasAuth() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.viam.app.v1.RemoteAuth auth = 2 [json_name = "auth"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.RemoteAuth getAuth() {
+      return auth_ == null ? viam.app.v1.Robot.RemoteAuth.getDefaultInstance() : auth_;
+    }
+    /**
+     * <code>.viam.app.v1.RemoteAuth auth = 2 [json_name = "auth"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setAuth(viam.app.v1.Robot.RemoteAuth value) {
+      value.getClass();  // minimal bytecode null check
+      auth_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.v1.RemoteAuth auth = 2 [json_name = "auth"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeAuth(viam.app.v1.Robot.RemoteAuth value) {
+      value.getClass();  // minimal bytecode null check
+      if (auth_ != null &&
+          auth_ != viam.app.v1.Robot.RemoteAuth.getDefaultInstance()) {
+        auth_ =
+          viam.app.v1.Robot.RemoteAuth.newBuilder(auth_).mergeFrom(value).buildPartial();
+      } else {
+        auth_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.v1.RemoteAuth auth = 2 [json_name = "auth"];</code>
+     */
+    private void clearAuth() {
+      auth_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static viam.app.v1.Robot.FollowPartRef parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.FollowPartRef parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.FollowPartRef parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.FollowPartRef parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.FollowPartRef parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.FollowPartRef parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.FollowPartRef parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.FollowPartRef parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Robot.FollowPartRef parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Robot.FollowPartRef parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.FollowPartRef parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.FollowPartRef parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Robot.FollowPartRef prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.FollowPartRef}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Robot.FollowPartRef, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.FollowPartRef)
+        viam.app.v1.Robot.FollowPartRefOrBuilder {
+      // Construct using viam.app.v1.Robot.FollowPartRef.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      @java.lang.Override
+      public java.lang.String getAddress() {
+        return instance.getAddress();
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        return instance.getAddressBytes();
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setAddress(value);
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        copyOnWrite();
+        instance.clearAddress();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setAddressBytes(value);
+        return this;
+      }
+
+      /**
+       * <code>.viam.app.v1.RemoteAuth auth = 2 [json_name = "auth"];</code>
+       */
+      @java.lang.Override
+      public boolean hasAuth() {
+        return instance.hasAuth();
+      }
+      /**
+       * <code>.viam.app.v1.RemoteAuth auth = 2 [json_name = "auth"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.RemoteAuth getAuth() {
+        return instance.getAuth();
+      }
+      /**
+       * <code>.viam.app.v1.RemoteAuth auth = 2 [json_name = "auth"];</code>
+       */
+      public Builder setAuth(viam.app.v1.Robot.RemoteAuth value) {
+        copyOnWrite();
+        instance.setAuth(value);
+        return this;
+        }
+      /**
+       * <code>.viam.app.v1.RemoteAuth auth = 2 [json_name = "auth"];</code>
+       */
+      public Builder setAuth(
+          viam.app.v1.Robot.RemoteAuth.Builder builderForValue) {
+        copyOnWrite();
+        instance.setAuth(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.RemoteAuth auth = 2 [json_name = "auth"];</code>
+       */
+      public Builder mergeAuth(viam.app.v1.Robot.RemoteAuth value) {
+        copyOnWrite();
+        instance.mergeAuth(value);
+        return this;
+      }
+      /**
+       * <code>.viam.app.v1.RemoteAuth auth = 2 [json_name = "auth"];</code>
+       */
+      public Builder clearAuth() {  copyOnWrite();
+        instance.clearAuth();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.FollowPartRef)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Robot.FollowPartRef();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "address_",
+              "auth_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Robot.FollowPartRef> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Robot.FollowPartRef.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Robot.FollowPartRef>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.FollowPartRef)
+    private static final viam.app.v1.Robot.FollowPartRef DEFAULT_INSTANCE;
+    static {
+      FollowPartRef defaultInstance = new FollowPartRef();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        FollowPartRef.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Robot.FollowPartRef getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<FollowPartRef> PARSER;
+
+    public static com.google.protobuf.Parser<FollowPartRef> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

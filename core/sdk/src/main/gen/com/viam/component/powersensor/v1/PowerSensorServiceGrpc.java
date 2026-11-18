@@ -105,6 +105,66 @@ public final class PowerSensorServiceGrpc {
     return getGetPowerMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest,
+      com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse> getGetBatteryPercentMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetBatteryPercent",
+      requestType = com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest.class,
+      responseType = com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest,
+      com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse> getGetBatteryPercentMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest, com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse> getGetBatteryPercentMethod;
+    if ((getGetBatteryPercentMethod = PowerSensorServiceGrpc.getGetBatteryPercentMethod) == null) {
+      synchronized (PowerSensorServiceGrpc.class) {
+        if ((getGetBatteryPercentMethod = PowerSensorServiceGrpc.getGetBatteryPercentMethod) == null) {
+          PowerSensorServiceGrpc.getGetBatteryPercentMethod = getGetBatteryPercentMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest, com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBatteryPercent"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetBatteryPercentMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest,
+      com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse> getGetPropertiesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetProperties",
+      requestType = com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest.class,
+      responseType = com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest,
+      com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse> getGetPropertiesMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest, com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse> getGetPropertiesMethod;
+    if ((getGetPropertiesMethod = PowerSensorServiceGrpc.getGetPropertiesMethod) == null) {
+      synchronized (PowerSensorServiceGrpc.class) {
+        if ((getGetPropertiesMethod = PowerSensorServiceGrpc.getGetPropertiesMethod) == null) {
+          PowerSensorServiceGrpc.getGetPropertiesMethod = getGetPropertiesMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest, com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProperties"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetPropertiesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetReadingsRequest,
       com.viam.common.v1.Common.GetReadingsResponse> getGetReadingsMethod;
 
@@ -293,6 +353,26 @@ public final class PowerSensorServiceGrpc {
 
     /**
      * <pre>
+     * GetBatteryPercent returns the remaining charge of the battery the power sensor monitors
+     * </pre>
+     */
+    default void getBatteryPercent(com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBatteryPercentMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the properties of a power sensor
+     * </pre>
+     */
+    default void getProperties(com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPropertiesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetReadings returns the readings of a sensor of the underlying robot.
      * </pre>
      */
@@ -390,6 +470,28 @@ public final class PowerSensorServiceGrpc {
 
     /**
      * <pre>
+     * GetBatteryPercent returns the remaining charge of the battery the power sensor monitors
+     * </pre>
+     */
+    public void getBatteryPercent(com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetBatteryPercentMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the properties of a power sensor
+     * </pre>
+     */
+    public void getProperties(com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPropertiesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetReadings returns the readings of a sensor of the underlying robot.
      * </pre>
      */
@@ -473,6 +575,26 @@ public final class PowerSensorServiceGrpc {
 
     /**
      * <pre>
+     * GetBatteryPercent returns the remaining charge of the battery the power sensor monitors
+     * </pre>
+     */
+    public com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse getBatteryPercent(com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetBatteryPercentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the properties of a power sensor
+     * </pre>
+     */
+    public com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse getProperties(com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * GetReadings returns the readings of a sensor of the underlying robot.
      * </pre>
      */
@@ -549,6 +671,26 @@ public final class PowerSensorServiceGrpc {
     public com.viam.component.powersensor.v1.Powersensor.GetPowerResponse getPower(com.viam.component.powersensor.v1.Powersensor.GetPowerRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPowerMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetBatteryPercent returns the remaining charge of the battery the power sensor monitors
+     * </pre>
+     */
+    public com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse getBatteryPercent(com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetBatteryPercentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the properties of a power sensor
+     * </pre>
+     */
+    public com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse getProperties(com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -636,6 +778,28 @@ public final class PowerSensorServiceGrpc {
 
     /**
      * <pre>
+     * GetBatteryPercent returns the remaining charge of the battery the power sensor monitors
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse> getBatteryPercent(
+        com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetBatteryPercentMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the properties of a power sensor
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse> getProperties(
+        com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPropertiesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetReadings returns the readings of a sensor of the underlying robot.
      * </pre>
      */
@@ -671,9 +835,11 @@ public final class PowerSensorServiceGrpc {
   private static final int METHODID_GET_VOLTAGE = 0;
   private static final int METHODID_GET_CURRENT = 1;
   private static final int METHODID_GET_POWER = 2;
-  private static final int METHODID_GET_READINGS = 3;
-  private static final int METHODID_DO_COMMAND = 4;
-  private static final int METHODID_GET_STATUS = 5;
+  private static final int METHODID_GET_BATTERY_PERCENT = 3;
+  private static final int METHODID_GET_PROPERTIES = 4;
+  private static final int METHODID_GET_READINGS = 5;
+  private static final int METHODID_DO_COMMAND = 6;
+  private static final int METHODID_GET_STATUS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -703,6 +869,14 @@ public final class PowerSensorServiceGrpc {
         case METHODID_GET_POWER:
           serviceImpl.getPower((com.viam.component.powersensor.v1.Powersensor.GetPowerRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.powersensor.v1.Powersensor.GetPowerResponse>) responseObserver);
+          break;
+        case METHODID_GET_BATTERY_PERCENT:
+          serviceImpl.getBatteryPercent((com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse>) responseObserver);
+          break;
+        case METHODID_GET_PROPERTIES:
+          serviceImpl.getProperties((com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse>) responseObserver);
           break;
         case METHODID_GET_READINGS:
           serviceImpl.getReadings((com.viam.common.v1.Common.GetReadingsRequest) request,
@@ -756,6 +930,20 @@ public final class PowerSensorServiceGrpc {
               com.viam.component.powersensor.v1.Powersensor.GetPowerResponse>(
                 service, METHODID_GET_POWER)))
         .addMethod(
+          getGetBatteryPercentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest,
+              com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse>(
+                service, METHODID_GET_BATTERY_PERCENT)))
+        .addMethod(
+          getGetPropertiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest,
+              com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse>(
+                service, METHODID_GET_PROPERTIES)))
+        .addMethod(
           getGetReadingsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -791,6 +979,8 @@ public final class PowerSensorServiceGrpc {
               .addMethod(getGetVoltageMethod())
               .addMethod(getGetCurrentMethod())
               .addMethod(getGetPowerMethod())
+              .addMethod(getGetBatteryPercentMethod())
+              .addMethod(getGetPropertiesMethod())
               .addMethod(getGetReadingsMethod())
               .addMethod(getDoCommandMethod())
               .addMethod(getGetStatusMethod())
