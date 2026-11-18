@@ -124012,6 +124012,51 @@ java.lang.String defaultValue) {
      */
     com.google.protobuf.ByteString
         getSupportedHardwareBytes(int index);
+
+    /**
+     * <pre>
+     * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+     * retained for tooling that predates `apis`; new code should read `apis`.
+     * </pre>
+     *
+     * <code>repeated string apis = 6 [json_name = "apis"];</code>
+     * @return A list containing the apis.
+     */
+    java.util.List<java.lang.String>
+        getApisList();
+    /**
+     * <pre>
+     * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+     * retained for tooling that predates `apis`; new code should read `apis`.
+     * </pre>
+     *
+     * <code>repeated string apis = 6 [json_name = "apis"];</code>
+     * @return The count of apis.
+     */
+    int getApisCount();
+    /**
+     * <pre>
+     * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+     * retained for tooling that predates `apis`; new code should read `apis`.
+     * </pre>
+     *
+     * <code>repeated string apis = 6 [json_name = "apis"];</code>
+     * @param index The index of the element to return.
+     * @return The apis at the given index.
+     */
+    java.lang.String getApis(int index);
+    /**
+     * <pre>
+     * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+     * retained for tooling that predates `apis`; new code should read `apis`.
+     * </pre>
+     *
+     * <code>repeated string apis = 6 [json_name = "apis"];</code>
+     * @param index The index of the element to return.
+     * @return The apis at the given index.
+     */
+    com.google.protobuf.ByteString
+        getApisBytes(int index);
   }
   /**
    * Protobuf type {@code viam.app.v1.Model}
@@ -124027,6 +124072,7 @@ java.lang.String defaultValue) {
       markdownDocumentation_ = "";
       description_ = "";
       supportedHardware_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      apis_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
     private int bitField0_;
     public static final int API_FIELD_NUMBER = 1;
@@ -124454,6 +124500,146 @@ java.lang.String defaultValue) {
       checkByteStringIsUtf8(value);
       ensureSupportedHardwareIsMutable();
       supportedHardware_.add(value.toStringUtf8());
+    }
+
+    public static final int APIS_FIELD_NUMBER = 6;
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> apis_;
+    /**
+     * <pre>
+     * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+     * retained for tooling that predates `apis`; new code should read `apis`.
+     * </pre>
+     *
+     * <code>repeated string apis = 6 [json_name = "apis"];</code>
+     * @return A list containing the apis.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.String> getApisList() {
+      return apis_;
+    }
+    /**
+     * <pre>
+     * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+     * retained for tooling that predates `apis`; new code should read `apis`.
+     * </pre>
+     *
+     * <code>repeated string apis = 6 [json_name = "apis"];</code>
+     * @return The count of apis.
+     */
+    @java.lang.Override
+    public int getApisCount() {
+      return apis_.size();
+    }
+    /**
+     * <pre>
+     * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+     * retained for tooling that predates `apis`; new code should read `apis`.
+     * </pre>
+     *
+     * <code>repeated string apis = 6 [json_name = "apis"];</code>
+     * @param index The index of the element to return.
+     * @return The apis at the given index.
+     */
+    @java.lang.Override
+    public java.lang.String getApis(int index) {
+      return apis_.get(index);
+    }
+    /**
+     * <pre>
+     * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+     * retained for tooling that predates `apis`; new code should read `apis`.
+     * </pre>
+     *
+     * <code>repeated string apis = 6 [json_name = "apis"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the apis at the given index.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApisBytes(int index) {
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          apis_.get(index));
+    }
+    private void ensureApisIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          apis_;  if (!tmp.isModifiable()) {
+        apis_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+     * retained for tooling that predates `apis`; new code should read `apis`.
+     * </pre>
+     *
+     * <code>repeated string apis = 6 [json_name = "apis"];</code>
+     * @param index The index to set the value at.
+     * @param value The apis to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setApis(
+        int index, java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureApisIsMutable();
+      apis_.set(index, value);
+    }
+    /**
+     * <pre>
+     * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+     * retained for tooling that predates `apis`; new code should read `apis`.
+     * </pre>
+     *
+     * <code>repeated string apis = 6 [json_name = "apis"];</code>
+     * @param value The apis to add.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addApis(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+      ensureApisIsMutable();
+      apis_.add(value);
+    }
+    /**
+     * <pre>
+     * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+     * retained for tooling that predates `apis`; new code should read `apis`.
+     * </pre>
+     *
+     * <code>repeated string apis = 6 [json_name = "apis"];</code>
+     * @param values The apis to add.
+     */
+    private void addAllApis(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureApisIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, apis_);
+    }
+    /**
+     * <pre>
+     * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+     * retained for tooling that predates `apis`; new code should read `apis`.
+     * </pre>
+     *
+     * <code>repeated string apis = 6 [json_name = "apis"];</code>
+     */
+    private void clearApis() {
+      apis_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+     * retained for tooling that predates `apis`; new code should read `apis`.
+     * </pre>
+     *
+     * <code>repeated string apis = 6 [json_name = "apis"];</code>
+     * @param value The bytes of the apis to add.
+     */
+    private void addApisBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureApisIsMutable();
+      apis_.add(value.toStringUtf8());
     }
 
     public static viam.app.v1.AppOuterClass.Model parseFrom(
@@ -124981,6 +125167,143 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+       * retained for tooling that predates `apis`; new code should read `apis`.
+       * </pre>
+       *
+       * <code>repeated string apis = 6 [json_name = "apis"];</code>
+       * @return A list containing the apis.
+       */
+      @java.lang.Override
+      public java.util.List<java.lang.String>
+          getApisList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getApisList());
+      }
+      /**
+       * <pre>
+       * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+       * retained for tooling that predates `apis`; new code should read `apis`.
+       * </pre>
+       *
+       * <code>repeated string apis = 6 [json_name = "apis"];</code>
+       * @return The count of apis.
+       */
+      @java.lang.Override
+      public int getApisCount() {
+        return instance.getApisCount();
+      }
+      /**
+       * <pre>
+       * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+       * retained for tooling that predates `apis`; new code should read `apis`.
+       * </pre>
+       *
+       * <code>repeated string apis = 6 [json_name = "apis"];</code>
+       * @param index The index of the element to return.
+       * @return The apis at the given index.
+       */
+      @java.lang.Override
+      public java.lang.String getApis(int index) {
+        return instance.getApis(index);
+      }
+      /**
+       * <pre>
+       * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+       * retained for tooling that predates `apis`; new code should read `apis`.
+       * </pre>
+       *
+       * <code>repeated string apis = 6 [json_name = "apis"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the apis at the given index.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getApisBytes(int index) {
+        return instance.getApisBytes(index);
+      }
+      /**
+       * <pre>
+       * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+       * retained for tooling that predates `apis`; new code should read `apis`.
+       * </pre>
+       *
+       * <code>repeated string apis = 6 [json_name = "apis"];</code>
+       * @param index The index to set the value at.
+       * @param value The apis to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApis(
+          int index, java.lang.String value) {
+        copyOnWrite();
+        instance.setApis(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+       * retained for tooling that predates `apis`; new code should read `apis`.
+       * </pre>
+       *
+       * <code>repeated string apis = 6 [json_name = "apis"];</code>
+       * @param value The apis to add.
+       * @return This builder for chaining.
+       */
+      public Builder addApis(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.addApis(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+       * retained for tooling that predates `apis`; new code should read `apis`.
+       * </pre>
+       *
+       * <code>repeated string apis = 6 [json_name = "apis"];</code>
+       * @param values The apis to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllApis(
+          java.lang.Iterable<java.lang.String> values) {
+        copyOnWrite();
+        instance.addAllApis(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+       * retained for tooling that predates `apis`; new code should read `apis`.
+       * </pre>
+       *
+       * <code>repeated string apis = 6 [json_name = "apis"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApis() {
+        copyOnWrite();
+        instance.clearApis();
+        return this;
+      }
+      /**
+       * <pre>
+       * The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+       * retained for tooling that predates `apis`; new code should read `apis`.
+       * </pre>
+       *
+       * <code>repeated string apis = 6 [json_name = "apis"];</code>
+       * @param value The bytes of the apis to add.
+       * @return This builder for chaining.
+       */
+      public Builder addApisBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.addApisBytes(value);
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.Model)
     }
     @java.lang.Override
@@ -125003,10 +125326,11 @@ java.lang.String defaultValue) {
               "markdownDocumentation_",
               "description_",
               "supportedHardware_",
+              "apis_",
             };
             java.lang.String info =
-                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u1208\u0000\u0004\u1208\u0001\u0005\u021a";
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0002\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u1208\u0000\u0004\u1208\u0001\u0005\u021a\u0006\u021a";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
