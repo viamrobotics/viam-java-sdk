@@ -121,18 +121,32 @@ loadScripts(document, 'script');</script>
  DoCommand sends/receives arbitrary commands</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getCurrent(com.viam.component.powersensor.v1.Powersensor.GetCurrentRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getCurrent</a><wbr>(<a href="Powersensor.GetCurrentRequest.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetCurrentRequest</a>&nbsp;request,
- io.grpc.stub.StreamObserver&lt;<a href="Powersensor.GetCurrentResponse.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetCurrentResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getBatteryPercent(com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getBatteryPercent</a><wbr>(<a href="Powersensor.GetBatteryPercentRequest.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetBatteryPercentRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Powersensor.GetBatteryPercentResponse.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetBatteryPercentResponse</a>&gt;&nbsp;responseObserver)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">
+ GetBatteryPercent returns the remaining charge of the battery the power sensor monitors</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getCurrent(com.viam.component.powersensor.v1.Powersensor.GetCurrentRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getCurrent</a><wbr>(<a href="Powersensor.GetCurrentRequest.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetCurrentRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Powersensor.GetCurrentResponse.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetCurrentResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  GetCurrent returns the current reading of a power sensor in amperes</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getPower(com.viam.component.powersensor.v1.Powersensor.GetPowerRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getPower</a><wbr>(<a href="Powersensor.GetPowerRequest.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetPowerRequest</a>&nbsp;request,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getPower(com.viam.component.powersensor.v1.Powersensor.GetPowerRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getPower</a><wbr>(<a href="Powersensor.GetPowerRequest.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetPowerRequest</a>&nbsp;request,
  io.grpc.stub.StreamObserver&lt;<a href="Powersensor.GetPowerResponse.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetPowerResponse</a>&gt;&nbsp;responseObserver)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">
  GetPower returns the power reading of a power sensor in watts</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getProperties(com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getProperties</a><wbr>(<a href="Powersensor.GetPropertiesRequest.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetPropertiesRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Powersensor.GetPropertiesResponse.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetPropertiesResponse</a>&gt;&nbsp;responseObserver)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">
+ GetProperties returns the properties of a power sensor</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getReadings(com.viam.common.v1.Common.GetReadingsRequest,io.grpc.stub.StreamObserver)" class="member-name-link">getReadings</a><wbr>(<a href="../../../common/v1/Common.GetReadingsRequest.html" title="class in com.viam.common.v1">Common.GetReadingsRequest</a>&nbsp;request,
@@ -196,6 +210,26 @@ loadScripts(document, 'script');</script>
  io.grpc.stub.StreamObserver&lt;<a href="Powersensor.GetPowerResponse.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetPowerResponse</a>&gt;&nbsp;responseObserver)</span></div>
 <div class="block"><pre>
  GetPower returns the power reading of a power sensor in watts
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getBatteryPercent(com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentRequest,io.grpc.stub.StreamObserver)">
+<h3>getBatteryPercent</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getBatteryPercent</span><wbr><span class="parameters">(<a href="Powersensor.GetBatteryPercentRequest.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetBatteryPercentRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Powersensor.GetBatteryPercentResponse.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetBatteryPercentResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ GetBatteryPercent returns the remaining charge of the battery the power sensor monitors
+ </pre></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getProperties(com.viam.component.powersensor.v1.Powersensor.GetPropertiesRequest,io.grpc.stub.StreamObserver)">
+<h3>getProperties</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">getProperties</span><wbr><span class="parameters">(<a href="Powersensor.GetPropertiesRequest.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetPropertiesRequest</a>&nbsp;request,
+ io.grpc.stub.StreamObserver&lt;<a href="Powersensor.GetPropertiesResponse.html" title="class in com.viam.component.powersensor.v1">Powersensor.GetPropertiesResponse</a>&gt;&nbsp;responseObserver)</span></div>
+<div class="block"><pre>
+ GetProperties returns the properties of a power sensor
  </pre></div>
 </section>
 </li>

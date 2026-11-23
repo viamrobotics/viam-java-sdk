@@ -130,14 +130,24 @@ implements <a href="Robot.MaintenanceConfigOrBuilder.html" title="interface in v
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMaintenanceAllowedKey()" class="member-name-link">clearMaintenanceAllowedKey</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearFollowPart()" class="member-name-link">clearFollowPart</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code></div>
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSensorName()" class="member-name-link">clearSensorName</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMaintenanceAllowedKey()" class="member-name-link">clearMaintenanceAllowedKey</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSensorName()" class="member-name-link">clearSensorName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.FollowPartRef.html" title="class in viam.app.v1">Robot.FollowPartRef</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFollowPart()" class="member-name-link">getFollowPart</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaintenanceAllowedKey()" class="member-name-link">getMaintenanceAllowedKey</a>()</code></div>
@@ -155,14 +165,34 @@ implements <a href="Robot.MaintenanceConfigOrBuilder.html" title="interface in v
 <div class="block"><code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSensorName()" class="member-name-link">hasSensorName</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFollowPart()" class="member-name-link">hasFollowPart</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSensorName()" class="member-name-link">hasSensorName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFollowPart(viam.app.v1.Robot.FollowPartRef)" class="member-name-link">mergeFollowPart</a><wbr>(<a href="Robot.FollowPartRef.html" title="class in viam.app.v1">Robot.FollowPartRef</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeSensorName(com.viam.common.v1.Common.ResourceName)" class="member-name-link">mergeSensorName</a><wbr>(<a href="../../../com/viam/common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFollowPart(viam.app.v1.Robot.FollowPartRef)" class="member-name-link">setFollowPart</a><wbr>(<a href="Robot.FollowPartRef.html" title="class in viam.app.v1">Robot.FollowPartRef</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFollowPart(viam.app.v1.Robot.FollowPartRef.Builder)" class="member-name-link">setFollowPart</a><wbr>(<a href="Robot.FollowPartRef.Builder.html" title="class in viam.app.v1">Robot.FollowPartRef.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaintenanceAllowedKey(java.lang.String)" class="member-name-link">setMaintenanceAllowedKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
@@ -325,6 +355,60 @@ implements <a href="Robot.MaintenanceConfigOrBuilder.html" title="interface in v
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFollowPart()">
+<h3>hasFollowPart</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFollowPart</span>()</div>
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.MaintenanceConfigOrBuilder.html#hasFollowPart()">hasFollowPart</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.MaintenanceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.MaintenanceConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the followPart field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFollowPart()">
+<h3>getFollowPart</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FollowPartRef.html" title="class in viam.app.v1">Robot.FollowPartRef</a></span>&nbsp;<span class="element-name">getFollowPart</span>()</div>
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.MaintenanceConfigOrBuilder.html#getFollowPart()">getFollowPart</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.MaintenanceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.MaintenanceConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The followPart.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setFollowPart(viam.app.v1.Robot.FollowPartRef)">
+<h3>setFollowPart</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a></span>&nbsp;<span class="element-name">setFollowPart</span><wbr><span class="parameters">(<a href="Robot.FollowPartRef.html" title="class in viam.app.v1">Robot.FollowPartRef</a>&nbsp;value)</span></div>
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setFollowPart(viam.app.v1.Robot.FollowPartRef.Builder)">
+<h3>setFollowPart</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a></span>&nbsp;<span class="element-name">setFollowPart</span><wbr><span class="parameters">(<a href="Robot.FollowPartRef.Builder.html" title="class in viam.app.v1">Robot.FollowPartRef.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="mergeFollowPart(viam.app.v1.Robot.FollowPartRef)">
+<h3>mergeFollowPart</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a></span>&nbsp;<span class="element-name">mergeFollowPart</span><wbr><span class="parameters">(<a href="Robot.FollowPartRef.html" title="class in viam.app.v1">Robot.FollowPartRef</a>&nbsp;value)</span></div>
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearFollowPart()">
+<h3>clearFollowPart</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.MaintenanceConfig.Builder.html" title="class in viam.app.v1">Robot.MaintenanceConfig.Builder</a></span>&nbsp;<span class="element-name">clearFollowPart</span>()</div>
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
 </section>
 </li>
 </ul>

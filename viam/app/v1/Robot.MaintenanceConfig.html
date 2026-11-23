@@ -142,11 +142,14 @@ implements <a href="Robot.MaintenanceConfigOrBuilder.html" title="interface in v
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#MAINTENANCE_ALLOWED_KEY_FIELD_NUMBER" class="member-name-link">MAINTENANCE_ALLOWED_KEY_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#FOLLOW_PART_FIELD_NUMBER" class="member-name-link">FOLLOW_PART_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#SENSOR_NAME_FIELD_NUMBER" class="member-name-link">SENSOR_NAME_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MAINTENANCE_ALLOWED_KEY_FIELD_NUMBER" class="member-name-link">MAINTENANCE_ALLOWED_KEY_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#SENSOR_NAME_FIELD_NUMBER" class="member-name-link">SENSOR_NAME_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageLite">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageLite</h3>
@@ -175,20 +178,30 @@ implements <a href="Robot.MaintenanceConfigOrBuilder.html" title="interface in v
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Robot.MaintenanceConfig.html" title="class in viam.app.v1">Robot.MaintenanceConfig</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDefaultInstance()" class="member-name-link">getDefaultInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaintenanceAllowedKey()" class="member-name-link">getMaintenanceAllowedKey</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Robot.FollowPartRef.html" title="class in viam.app.v1">Robot.FollowPartRef</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFollowPart()" class="member-name-link">getFollowPart</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code></div>
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaintenanceAllowedKeyBytes()" class="member-name-link">getMaintenanceAllowedKeyBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaintenanceAllowedKey()" class="member-name-link">getMaintenanceAllowedKey</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../com/viam/common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSensorName()" class="member-name-link">getSensorName</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaintenanceAllowedKeyBytes()" class="member-name-link">getMaintenanceAllowedKeyBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string maintenance_allowed_key = 2 [json_name = "maintenanceAllowedKey"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../com/viam/common/v1/Common.ResourceName.html" title="class in com.viam.common.v1">Common.ResourceName</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSensorName()" class="member-name-link">getSensorName</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.common.v1.ResourceName sensor_name = 1 [json_name = "sensorName"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFollowPart()" class="member-name-link">hasFollowPart</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSensorName()" class="member-name-link">hasSensorName</a>()</code></div>
@@ -300,6 +313,20 @@ implements <a href="Robot.MaintenanceConfigOrBuilder.html" title="interface in v
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="FOLLOW_PART_FIELD_NUMBER">
+<h3>FOLLOW_PART_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">FOLLOW_PART_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../constant-values.html#viam.app.v1.Robot.MaintenanceConfig.FOLLOW_PART_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -357,6 +384,32 @@ implements <a href="Robot.MaintenanceConfigOrBuilder.html" title="interface in v
 <dd><code><a href="Robot.MaintenanceConfigOrBuilder.html#getMaintenanceAllowedKeyBytes()">getMaintenanceAllowedKeyBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.MaintenanceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.MaintenanceConfigOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for maintenanceAllowedKey.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFollowPart()">
+<h3>hasFollowPart</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFollowPart</span>()</div>
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.MaintenanceConfigOrBuilder.html#hasFollowPart()">hasFollowPart</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.MaintenanceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.MaintenanceConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the followPart field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFollowPart()">
+<h3>getFollowPart</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Robot.FollowPartRef.html" title="class in viam.app.v1">Robot.FollowPartRef</a></span>&nbsp;<span class="element-name">getFollowPart</span>()</div>
+<div class="block"><code>.viam.app.v1.FollowPartRef follow_part = 3 [json_name = "followPart"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Robot.MaintenanceConfigOrBuilder.html#getFollowPart()">getFollowPart</a></code>&nbsp;in interface&nbsp;<code><a href="Robot.MaintenanceConfigOrBuilder.html" title="interface in viam.app.v1">Robot.MaintenanceConfigOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The followPart.</dd>
 </dl>
 </section>
 </li>

@@ -128,6 +128,30 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
  The colon-delimited-triplet of the api implemented by the model</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getApis(int)" class="member-name-link">getApis</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The full set of co-equal APIs this model serves.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getApisBytes(int)" class="member-name-link">getApisBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The full set of co-equal APIs this model serves.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getApisCount()" class="member-name-link">getApisCount</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The full set of co-equal APIs this model serves.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getApisList()" class="member-name-link">getApisList</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ The full set of co-equal APIs this model serves.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDescription()" class="member-name-link">getDescription</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
@@ -427,6 +451,74 @@ extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 <dd><code>index</code> - The index of the element to return.</dd>
 <dt>Returns:</dt>
 <dd>The supportedHardware at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getApisList()">
+<h3>getApisList</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getApisList</span>()</div>
+<div class="block"><pre>
+ The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+ retained for tooling that predates `apis`; new code should read `apis`.
+ </pre>
+
+ <code>repeated string apis = 6 [json_name = "apis"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>A list containing the apis.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getApisCount()">
+<h3>getApisCount</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getApisCount</span>()</div>
+<div class="block"><pre>
+ The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+ retained for tooling that predates `apis`; new code should read `apis`.
+ </pre>
+
+ <code>repeated string apis = 6 [json_name = "apis"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The count of apis.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getApis(int)">
+<h3>getApis</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getApis</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+ retained for tooling that predates `apis`; new code should read `apis`.
+ </pre>
+
+ <code>repeated string apis = 6 [json_name = "apis"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index of the element to return.</dd>
+<dt>Returns:</dt>
+<dd>The apis at the given index.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getApisBytes(int)">
+<h3>getApisBytes</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getApisBytes</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><pre>
+ The full set of co-equal APIs this model serves. The `api` field is always one of these and is
+ retained for tooling that predates `apis`; new code should read `apis`.
+ </pre>
+
+ <code>repeated string apis = 6 [json_name = "apis"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>index</code> - The index of the element to return.</dd>
+<dt>Returns:</dt>
+<dd>The apis at the given index.</dd>
 </dl>
 </section>
 </li>
