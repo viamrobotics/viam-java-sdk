@@ -6391,7 +6391,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=110
+     *     See app/v1/robot.proto;l=111
      * @return The locationSecret.
      */
     @java.lang.Deprecated java.lang.String getLocationSecret();
@@ -6402,7 +6402,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=110
+     *     See app/v1/robot.proto;l=111
      * @return The bytes for locationSecret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -6806,7 +6806,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=110
+     *     See app/v1/robot.proto;l=111
      * @return The locationSecret.
      */
     @java.lang.Override
@@ -6820,7 +6820,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=110
+     *     See app/v1/robot.proto;l=111
      * @return The bytes for locationSecret.
      */
     @java.lang.Override
@@ -7619,7 +7619,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=110
+       *     See app/v1/robot.proto;l=111
        * @return The locationSecret.
        */
       @java.lang.Override
@@ -7633,7 +7633,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=110
+       *     See app/v1/robot.proto;l=111
        * @return The bytes for locationSecret.
        */
       @java.lang.Override
@@ -7648,7 +7648,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=110
+       *     See app/v1/robot.proto;l=111
        * @param value The locationSecret to set.
        * @return This builder for chaining.
        */
@@ -7665,7 +7665,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=110
+       *     See app/v1/robot.proto;l=111
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLocationSecret() {
@@ -7680,7 +7680,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=110
+       *     See app/v1/robot.proto;l=111
        * @param value The bytes for locationSecret to set.
        * @return This builder for chaining.
        */
@@ -26532,6 +26532,64 @@ java.lang.String defaultValue) {
      */
     com.google.protobuf.ByteString
         getPlatformTagsBytes(int index);
+
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    java.util.List<viam.app.v1.Robot.ModuleVersionInfo> 
+        getModuleVersionsList();
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    viam.app.v1.Robot.ModuleVersionInfo getModuleVersions(int index);
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    int getModuleVersionsCount();
+
+    /**
+     * <pre>
+     * how long this viam-server process has been running, measured with a monotonic clock;
+     * app anchors it to the time the request is received
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 9 [json_name = "viamServerUptime"];</code>
+     * @return Whether the viamServerUptime field is set.
+     */
+    boolean hasViamServerUptime();
+    /**
+     * <pre>
+     * how long this viam-server process has been running, measured with a monotonic clock;
+     * app anchors it to the time the request is received
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 9 [json_name = "viamServerUptime"];</code>
+     * @return The viamServerUptime.
+     */
+    com.google.protobuf.Duration getViamServerUptime();
+
+    /**
+     * <pre>
+     * true while a pending reconfigure is being held back by the maintenance sensor;
+     * false once that reconfigure is applied (or when nothing is pending)
+     * </pre>
+     *
+     * <code>bool reconfigure_blocked = 10 [json_name = "reconfigureBlocked"];</code>
+     * @return The reconfigureBlocked.
+     */
+    boolean getReconfigureBlocked();
   }
   /**
    * Protobuf type {@code viam.app.v1.AgentInfo}
@@ -26549,6 +26607,7 @@ java.lang.String defaultValue) {
       gitRevision_ = "";
       platform_ = "";
       platformTags_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      moduleVersions_ = emptyProtobufList();
     }
     private int bitField0_;
     public static final int HOST_FIELD_NUMBER = 1;
@@ -27123,6 +27182,261 @@ java.lang.String defaultValue) {
       checkByteStringIsUtf8(value);
       ensurePlatformTagsIsMutable();
       platformTags_.add(value.toStringUtf8());
+    }
+
+    public static final int MODULE_VERSIONS_FIELD_NUMBER = 8;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.ModuleVersionInfo> moduleVersions_;
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.Robot.ModuleVersionInfo> getModuleVersionsList() {
+      return moduleVersions_;
+    }
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    public java.util.List<? extends viam.app.v1.Robot.ModuleVersionInfoOrBuilder> 
+        getModuleVersionsOrBuilderList() {
+      return moduleVersions_;
+    }
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    @java.lang.Override
+    public int getModuleVersionsCount() {
+      return moduleVersions_.size();
+    }
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.ModuleVersionInfo getModuleVersions(int index) {
+      return moduleVersions_.get(index);
+    }
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    public viam.app.v1.Robot.ModuleVersionInfoOrBuilder getModuleVersionsOrBuilder(
+        int index) {
+      return moduleVersions_.get(index);
+    }
+    private void ensureModuleVersionsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Robot.ModuleVersionInfo> tmp = moduleVersions_;
+      if (!tmp.isModifiable()) {
+        moduleVersions_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setModuleVersions(
+        int index, viam.app.v1.Robot.ModuleVersionInfo value) {
+      value.getClass();  // minimal bytecode null check
+      ensureModuleVersionsIsMutable();
+      moduleVersions_.set(index, value);
+    }
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addModuleVersions(viam.app.v1.Robot.ModuleVersionInfo value) {
+      value.getClass();  // minimal bytecode null check
+      ensureModuleVersionsIsMutable();
+      moduleVersions_.add(value);
+    }
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void addModuleVersions(
+        int index, viam.app.v1.Robot.ModuleVersionInfo value) {
+      value.getClass();  // minimal bytecode null check
+      ensureModuleVersionsIsMutable();
+      moduleVersions_.add(index, value);
+    }
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    private void addAllModuleVersions(
+        java.lang.Iterable<? extends viam.app.v1.Robot.ModuleVersionInfo> values) {
+      ensureModuleVersionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, moduleVersions_);
+    }
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    private void clearModuleVersions() {
+      moduleVersions_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * modules in the applied config (registry and local) with their running version and status
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+     */
+    private void removeModuleVersions(int index) {
+      ensureModuleVersionsIsMutable();
+      moduleVersions_.remove(index);
+    }
+
+    public static final int VIAM_SERVER_UPTIME_FIELD_NUMBER = 9;
+    private com.google.protobuf.Duration viamServerUptime_;
+    /**
+     * <pre>
+     * how long this viam-server process has been running, measured with a monotonic clock;
+     * app anchors it to the time the request is received
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 9 [json_name = "viamServerUptime"];</code>
+     */
+    @java.lang.Override
+    public boolean hasViamServerUptime() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * how long this viam-server process has been running, measured with a monotonic clock;
+     * app anchors it to the time the request is received
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 9 [json_name = "viamServerUptime"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getViamServerUptime() {
+      return viamServerUptime_ == null ? com.google.protobuf.Duration.getDefaultInstance() : viamServerUptime_;
+    }
+    /**
+     * <pre>
+     * how long this viam-server process has been running, measured with a monotonic clock;
+     * app anchors it to the time the request is received
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 9 [json_name = "viamServerUptime"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setViamServerUptime(com.google.protobuf.Duration value) {
+      value.getClass();  // minimal bytecode null check
+      viamServerUptime_ = value;
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * how long this viam-server process has been running, measured with a monotonic clock;
+     * app anchors it to the time the request is received
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 9 [json_name = "viamServerUptime"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeViamServerUptime(com.google.protobuf.Duration value) {
+      value.getClass();  // minimal bytecode null check
+      if (viamServerUptime_ != null &&
+          viamServerUptime_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        viamServerUptime_ =
+          com.google.protobuf.Duration.newBuilder(viamServerUptime_).mergeFrom(value).buildPartial();
+      } else {
+        viamServerUptime_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * how long this viam-server process has been running, measured with a monotonic clock;
+     * app anchors it to the time the request is received
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration viam_server_uptime = 9 [json_name = "viamServerUptime"];</code>
+     */
+    private void clearViamServerUptime() {
+      viamServerUptime_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+    }
+
+    public static final int RECONFIGURE_BLOCKED_FIELD_NUMBER = 10;
+    private boolean reconfigureBlocked_;
+    /**
+     * <pre>
+     * true while a pending reconfigure is being held back by the maintenance sensor;
+     * false once that reconfigure is applied (or when nothing is pending)
+     * </pre>
+     *
+     * <code>bool reconfigure_blocked = 10 [json_name = "reconfigureBlocked"];</code>
+     * @return The reconfigureBlocked.
+     */
+    @java.lang.Override
+    public boolean getReconfigureBlocked() {
+      return reconfigureBlocked_;
+    }
+    /**
+     * <pre>
+     * true while a pending reconfigure is being held back by the maintenance sensor;
+     * false once that reconfigure is applied (or when nothing is pending)
+     * </pre>
+     *
+     * <code>bool reconfigure_blocked = 10 [json_name = "reconfigureBlocked"];</code>
+     * @param value The reconfigureBlocked to set.
+     */
+    private void setReconfigureBlocked(boolean value) {
+      
+      reconfigureBlocked_ = value;
+    }
+    /**
+     * <pre>
+     * true while a pending reconfigure is being held back by the maintenance sensor;
+     * false once that reconfigure is applied (or when nothing is pending)
+     * </pre>
+     *
+     * <code>bool reconfigure_blocked = 10 [json_name = "reconfigureBlocked"];</code>
+     */
+    private void clearReconfigureBlocked() {
+
+      reconfigureBlocked_ = false;
     }
 
     public static viam.app.v1.Robot.AgentInfo parseFrom(
@@ -27795,6 +28109,276 @@ java.lang.String defaultValue) {
         return this;
       }
 
+      /**
+       * <pre>
+       * modules in the applied config (registry and local) with their running version and status
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+       */
+      @java.lang.Override
+      public java.util.List<viam.app.v1.Robot.ModuleVersionInfo> getModuleVersionsList() {
+        return java.util.Collections.unmodifiableList(
+            instance.getModuleVersionsList());
+      }
+      /**
+       * <pre>
+       * modules in the applied config (registry and local) with their running version and status
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+       */
+      @java.lang.Override
+      public int getModuleVersionsCount() {
+        return instance.getModuleVersionsCount();
+      }/**
+       * <pre>
+       * modules in the applied config (registry and local) with their running version and status
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+       */
+      @java.lang.Override
+      public viam.app.v1.Robot.ModuleVersionInfo getModuleVersions(int index) {
+        return instance.getModuleVersions(index);
+      }
+      /**
+       * <pre>
+       * modules in the applied config (registry and local) with their running version and status
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+       */
+      public Builder setModuleVersions(
+          int index, viam.app.v1.Robot.ModuleVersionInfo value) {
+        copyOnWrite();
+        instance.setModuleVersions(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * modules in the applied config (registry and local) with their running version and status
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+       */
+      public Builder setModuleVersions(
+          int index, viam.app.v1.Robot.ModuleVersionInfo.Builder builderForValue) {
+        copyOnWrite();
+        instance.setModuleVersions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * modules in the applied config (registry and local) with their running version and status
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+       */
+      public Builder addModuleVersions(viam.app.v1.Robot.ModuleVersionInfo value) {
+        copyOnWrite();
+        instance.addModuleVersions(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * modules in the applied config (registry and local) with their running version and status
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+       */
+      public Builder addModuleVersions(
+          int index, viam.app.v1.Robot.ModuleVersionInfo value) {
+        copyOnWrite();
+        instance.addModuleVersions(index, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * modules in the applied config (registry and local) with their running version and status
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+       */
+      public Builder addModuleVersions(
+          viam.app.v1.Robot.ModuleVersionInfo.Builder builderForValue) {
+        copyOnWrite();
+        instance.addModuleVersions(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * modules in the applied config (registry and local) with their running version and status
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+       */
+      public Builder addModuleVersions(
+          int index, viam.app.v1.Robot.ModuleVersionInfo.Builder builderForValue) {
+        copyOnWrite();
+        instance.addModuleVersions(index,
+            builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * modules in the applied config (registry and local) with their running version and status
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+       */
+      public Builder addAllModuleVersions(
+          java.lang.Iterable<? extends viam.app.v1.Robot.ModuleVersionInfo> values) {
+        copyOnWrite();
+        instance.addAllModuleVersions(values);
+        return this;
+      }
+      /**
+       * <pre>
+       * modules in the applied config (registry and local) with their running version and status
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+       */
+      public Builder clearModuleVersions() {
+        copyOnWrite();
+        instance.clearModuleVersions();
+        return this;
+      }
+      /**
+       * <pre>
+       * modules in the applied config (registry and local) with their running version and status
+       * </pre>
+       *
+       * <code>repeated .viam.app.v1.ModuleVersionInfo module_versions = 8 [json_name = "moduleVersions"];</code>
+       */
+      public Builder removeModuleVersions(int index) {
+        copyOnWrite();
+        instance.removeModuleVersions(index);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * how long this viam-server process has been running, measured with a monotonic clock;
+       * app anchors it to the time the request is received
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration viam_server_uptime = 9 [json_name = "viamServerUptime"];</code>
+       */
+      @java.lang.Override
+      public boolean hasViamServerUptime() {
+        return instance.hasViamServerUptime();
+      }
+      /**
+       * <pre>
+       * how long this viam-server process has been running, measured with a monotonic clock;
+       * app anchors it to the time the request is received
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration viam_server_uptime = 9 [json_name = "viamServerUptime"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getViamServerUptime() {
+        return instance.getViamServerUptime();
+      }
+      /**
+       * <pre>
+       * how long this viam-server process has been running, measured with a monotonic clock;
+       * app anchors it to the time the request is received
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration viam_server_uptime = 9 [json_name = "viamServerUptime"];</code>
+       */
+      public Builder setViamServerUptime(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.setViamServerUptime(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * how long this viam-server process has been running, measured with a monotonic clock;
+       * app anchors it to the time the request is received
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration viam_server_uptime = 9 [json_name = "viamServerUptime"];</code>
+       */
+      public Builder setViamServerUptime(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setViamServerUptime(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * how long this viam-server process has been running, measured with a monotonic clock;
+       * app anchors it to the time the request is received
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration viam_server_uptime = 9 [json_name = "viamServerUptime"];</code>
+       */
+      public Builder mergeViamServerUptime(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.mergeViamServerUptime(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * how long this viam-server process has been running, measured with a monotonic clock;
+       * app anchors it to the time the request is received
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration viam_server_uptime = 9 [json_name = "viamServerUptime"];</code>
+       */
+      public Builder clearViamServerUptime() {  copyOnWrite();
+        instance.clearViamServerUptime();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * true while a pending reconfigure is being held back by the maintenance sensor;
+       * false once that reconfigure is applied (or when nothing is pending)
+       * </pre>
+       *
+       * <code>bool reconfigure_blocked = 10 [json_name = "reconfigureBlocked"];</code>
+       * @return The reconfigureBlocked.
+       */
+      @java.lang.Override
+      public boolean getReconfigureBlocked() {
+        return instance.getReconfigureBlocked();
+      }
+      /**
+       * <pre>
+       * true while a pending reconfigure is being held back by the maintenance sensor;
+       * false once that reconfigure is applied (or when nothing is pending)
+       * </pre>
+       *
+       * <code>bool reconfigure_blocked = 10 [json_name = "reconfigureBlocked"];</code>
+       * @param value The reconfigureBlocked to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReconfigureBlocked(boolean value) {
+        copyOnWrite();
+        instance.setReconfigureBlocked(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * true while a pending reconfigure is being held back by the maintenance sensor;
+       * false once that reconfigure is applied (or when nothing is pending)
+       * </pre>
+       *
+       * <code>bool reconfigure_blocked = 10 [json_name = "reconfigureBlocked"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReconfigureBlocked() {
+        copyOnWrite();
+        instance.clearReconfigureBlocked();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.app.v1.AgentInfo)
     }
     @java.lang.Override
@@ -27819,10 +28403,15 @@ java.lang.String defaultValue) {
               "gitRevision_",
               "platform_",
               "platformTags_",
+              "moduleVersions_",
+              viam.app.v1.Robot.ModuleVersionInfo.class,
+              "viamServerUptime_",
+              "reconfigureBlocked_",
             };
             java.lang.String info =
-                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0002\u0000\u0001\u0208\u0002\u0208" +
-                "\u0003\u021a\u0004\u0208\u0005\u0208\u0006\u1208\u0000\u0007\u021a";
+                "\u0000\n\u0000\u0001\u0001\n\n\u0000\u0003\u0000\u0001\u0208\u0002\u0208\u0003\u021a" +
+                "\u0004\u0208\u0005\u0208\u0006\u1208\u0000\u0007\u021a\b\u001b\t\u1009\u0001\n\u0007" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -27873,6 +28462,1177 @@ java.lang.String defaultValue) {
     private static volatile com.google.protobuf.Parser<AgentInfo> PARSER;
 
     public static com.google.protobuf.Parser<AgentInfo> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface ModuleVersionInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.ModuleVersionInfo)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * registry module ID, e.g. "viam:realsense" (empty for local modules)
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @return The moduleId.
+     */
+    java.lang.String getModuleId();
+    /**
+     * <pre>
+     * registry module ID, e.g. "viam:realsense" (empty for local modules)
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @return The bytes for moduleId.
+     */
+    com.google.protobuf.ByteString
+        getModuleIdBytes();
+
+    /**
+     * <pre>
+     * module name from the machine config; unique within the part
+     * </pre>
+     *
+     * <code>string module_name = 8 [json_name = "moduleName"];</code>
+     * @return The moduleName.
+     */
+    java.lang.String getModuleName();
+    /**
+     * <pre>
+     * module name from the machine config; unique within the part
+     * </pre>
+     *
+     * <code>string module_name = 8 [json_name = "moduleName"];</code>
+     * @return The bytes for moduleName.
+     */
+    com.google.protobuf.ByteString
+        getModuleNameBytes();
+
+    /**
+     * <pre>
+     * version currently running ("local" for local modules; empty if not running or unknown)
+     * </pre>
+     *
+     * <code>string running_version = 2 [json_name = "runningVersion"];</code>
+     * @return The runningVersion.
+     */
+    java.lang.String getRunningVersion();
+    /**
+     * <pre>
+     * version currently running ("local" for local modules; empty if not running or unknown)
+     * </pre>
+     *
+     * <code>string running_version = 2 [json_name = "runningVersion"];</code>
+     * @return The bytes for runningVersion.
+     */
+    com.google.protobuf.ByteString
+        getRunningVersionBytes();
+
+    /**
+     * <pre>
+     * how long the running version has been ready, measured with a monotonic clock; app anchors it
+     * to the time the request is received (unset if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration running_for = 3 [json_name = "runningFor"];</code>
+     * @return Whether the runningFor field is set.
+     */
+    boolean hasRunningFor();
+    /**
+     * <pre>
+     * how long the running version has been ready, measured with a monotonic clock; app anchors it
+     * to the time the request is received (unset if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration running_for = 3 [json_name = "runningFor"];</code>
+     * @return The runningFor.
+     */
+    com.google.protobuf.Duration getRunningFor();
+
+    /**
+     * <pre>
+     * current lifecycle state of the module process
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ModuleStatus.State state = 4 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <pre>
+     * current lifecycle state of the module process
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ModuleStatus.State state = 4 [json_name = "state"];</code>
+     * @return The state.
+     */
+    com.viam.robot.v1.Robot.ModuleStatus.State getState();
+
+    /**
+     * <pre>
+     * failures since the module was last ready
+     * </pre>
+     *
+     * <code>uint32 consecutive_failures = 6 [json_name = "consecutiveFailures"];</code>
+     * @return The consecutiveFailures.
+     */
+    int getConsecutiveFailures();
+
+    /**
+     * <pre>
+     * times the module has become ready since viam-server started, including the first start;
+     * only goes up, and resets when viam-server restarts
+     * </pre>
+     *
+     * <code>uint32 ready_count = 7 [json_name = "readyCount"];</code>
+     * @return The readyCount.
+     */
+    int getReadyCount();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.ModuleVersionInfo}
+   */
+  public  static final class ModuleVersionInfo extends
+      com.google.protobuf.GeneratedMessageLite<
+          ModuleVersionInfo, ModuleVersionInfo.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.ModuleVersionInfo)
+      ModuleVersionInfoOrBuilder {
+    private ModuleVersionInfo() {
+      moduleId_ = "";
+      moduleName_ = "";
+      runningVersion_ = "";
+    }
+    private int bitField0_;
+    public static final int MODULE_ID_FIELD_NUMBER = 1;
+    private java.lang.String moduleId_;
+    /**
+     * <pre>
+     * registry module ID, e.g. "viam:realsense" (empty for local modules)
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @return The moduleId.
+     */
+    @java.lang.Override
+    public java.lang.String getModuleId() {
+      return moduleId_;
+    }
+    /**
+     * <pre>
+     * registry module ID, e.g. "viam:realsense" (empty for local modules)
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @return The bytes for moduleId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleIdBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(moduleId_);
+    }
+    /**
+     * <pre>
+     * registry module ID, e.g. "viam:realsense" (empty for local modules)
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @param value The moduleId to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setModuleId(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      moduleId_ = value;
+    }
+    /**
+     * <pre>
+     * registry module ID, e.g. "viam:realsense" (empty for local modules)
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     */
+    private void clearModuleId() {
+
+      moduleId_ = getDefaultInstance().getModuleId();
+    }
+    /**
+     * <pre>
+     * registry module ID, e.g. "viam:realsense" (empty for local modules)
+     * </pre>
+     *
+     * <code>string module_id = 1 [json_name = "moduleId"];</code>
+     * @param value The bytes for moduleId to set.
+     */
+    private void setModuleIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      moduleId_ = value.toStringUtf8();
+
+    }
+
+    public static final int MODULE_NAME_FIELD_NUMBER = 8;
+    private java.lang.String moduleName_;
+    /**
+     * <pre>
+     * module name from the machine config; unique within the part
+     * </pre>
+     *
+     * <code>string module_name = 8 [json_name = "moduleName"];</code>
+     * @return The moduleName.
+     */
+    @java.lang.Override
+    public java.lang.String getModuleName() {
+      return moduleName_;
+    }
+    /**
+     * <pre>
+     * module name from the machine config; unique within the part
+     * </pre>
+     *
+     * <code>string module_name = 8 [json_name = "moduleName"];</code>
+     * @return The bytes for moduleName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleNameBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(moduleName_);
+    }
+    /**
+     * <pre>
+     * module name from the machine config; unique within the part
+     * </pre>
+     *
+     * <code>string module_name = 8 [json_name = "moduleName"];</code>
+     * @param value The moduleName to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setModuleName(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      moduleName_ = value;
+    }
+    /**
+     * <pre>
+     * module name from the machine config; unique within the part
+     * </pre>
+     *
+     * <code>string module_name = 8 [json_name = "moduleName"];</code>
+     */
+    private void clearModuleName() {
+
+      moduleName_ = getDefaultInstance().getModuleName();
+    }
+    /**
+     * <pre>
+     * module name from the machine config; unique within the part
+     * </pre>
+     *
+     * <code>string module_name = 8 [json_name = "moduleName"];</code>
+     * @param value The bytes for moduleName to set.
+     */
+    private void setModuleNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      moduleName_ = value.toStringUtf8();
+
+    }
+
+    public static final int RUNNING_VERSION_FIELD_NUMBER = 2;
+    private java.lang.String runningVersion_;
+    /**
+     * <pre>
+     * version currently running ("local" for local modules; empty if not running or unknown)
+     * </pre>
+     *
+     * <code>string running_version = 2 [json_name = "runningVersion"];</code>
+     * @return The runningVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getRunningVersion() {
+      return runningVersion_;
+    }
+    /**
+     * <pre>
+     * version currently running ("local" for local modules; empty if not running or unknown)
+     * </pre>
+     *
+     * <code>string running_version = 2 [json_name = "runningVersion"];</code>
+     * @return The bytes for runningVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRunningVersionBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(runningVersion_);
+    }
+    /**
+     * <pre>
+     * version currently running ("local" for local modules; empty if not running or unknown)
+     * </pre>
+     *
+     * <code>string running_version = 2 [json_name = "runningVersion"];</code>
+     * @param value The runningVersion to set.
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setRunningVersion(
+        java.lang.String value) {
+      value.getClass();  // minimal bytecode null check
+
+      runningVersion_ = value;
+    }
+    /**
+     * <pre>
+     * version currently running ("local" for local modules; empty if not running or unknown)
+     * </pre>
+     *
+     * <code>string running_version = 2 [json_name = "runningVersion"];</code>
+     */
+    private void clearRunningVersion() {
+
+      runningVersion_ = getDefaultInstance().getRunningVersion();
+    }
+    /**
+     * <pre>
+     * version currently running ("local" for local modules; empty if not running or unknown)
+     * </pre>
+     *
+     * <code>string running_version = 2 [json_name = "runningVersion"];</code>
+     * @param value The bytes for runningVersion to set.
+     */
+    private void setRunningVersionBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      runningVersion_ = value.toStringUtf8();
+
+    }
+
+    public static final int RUNNING_FOR_FIELD_NUMBER = 3;
+    private com.google.protobuf.Duration runningFor_;
+    /**
+     * <pre>
+     * how long the running version has been ready, measured with a monotonic clock; app anchors it
+     * to the time the request is received (unset if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration running_for = 3 [json_name = "runningFor"];</code>
+     */
+    @java.lang.Override
+    public boolean hasRunningFor() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * how long the running version has been ready, measured with a monotonic clock; app anchors it
+     * to the time the request is received (unset if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration running_for = 3 [json_name = "runningFor"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getRunningFor() {
+      return runningFor_ == null ? com.google.protobuf.Duration.getDefaultInstance() : runningFor_;
+    }
+    /**
+     * <pre>
+     * how long the running version has been ready, measured with a monotonic clock; app anchors it
+     * to the time the request is received (unset if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration running_for = 3 [json_name = "runningFor"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setRunningFor(com.google.protobuf.Duration value) {
+      value.getClass();  // minimal bytecode null check
+      runningFor_ = value;
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * how long the running version has been ready, measured with a monotonic clock; app anchors it
+     * to the time the request is received (unset if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration running_for = 3 [json_name = "runningFor"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality", "ReturnValueIgnored"})
+    private void mergeRunningFor(com.google.protobuf.Duration value) {
+      value.getClass();  // minimal bytecode null check
+      if (runningFor_ != null &&
+          runningFor_ != com.google.protobuf.Duration.getDefaultInstance()) {
+        runningFor_ =
+          com.google.protobuf.Duration.newBuilder(runningFor_).mergeFrom(value).buildPartial();
+      } else {
+        runningFor_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * how long the running version has been ready, measured with a monotonic clock; app anchors it
+     * to the time the request is received (unset if not running)
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration running_for = 3 [json_name = "runningFor"];</code>
+     */
+    private void clearRunningFor() {
+      runningFor_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+    }
+
+    public static final int STATE_FIELD_NUMBER = 4;
+    private int state_;
+    /**
+     * <pre>
+     * current lifecycle state of the module process
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ModuleStatus.State state = 4 [json_name = "state"];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override
+    public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <pre>
+     * current lifecycle state of the module process
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ModuleStatus.State state = 4 [json_name = "state"];</code>
+     * @return The state.
+     */
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.ModuleStatus.State getState() {
+      com.viam.robot.v1.Robot.ModuleStatus.State result = com.viam.robot.v1.Robot.ModuleStatus.State.forNumber(state_);
+      return result == null ? com.viam.robot.v1.Robot.ModuleStatus.State.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * current lifecycle state of the module process
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ModuleStatus.State state = 4 [json_name = "state"];</code>
+     * @param value The enum numeric value on the wire for state to set.
+     * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+     */
+    private void setStateValue(int value) {
+        state_ = value;
+    }
+    /**
+     * <pre>
+     * current lifecycle state of the module process
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ModuleStatus.State state = 4 [json_name = "state"];</code>
+     * @param value The state to set.
+     */
+    private void setState(com.viam.robot.v1.Robot.ModuleStatus.State value) {
+      state_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * current lifecycle state of the module process
+     * </pre>
+     *
+     * <code>.viam.robot.v1.ModuleStatus.State state = 4 [json_name = "state"];</code>
+     */
+    private void clearState() {
+
+      state_ = 0;
+    }
+
+    public static final int CONSECUTIVE_FAILURES_FIELD_NUMBER = 6;
+    private int consecutiveFailures_;
+    /**
+     * <pre>
+     * failures since the module was last ready
+     * </pre>
+     *
+     * <code>uint32 consecutive_failures = 6 [json_name = "consecutiveFailures"];</code>
+     * @return The consecutiveFailures.
+     */
+    @java.lang.Override
+    public int getConsecutiveFailures() {
+      return consecutiveFailures_;
+    }
+    /**
+     * <pre>
+     * failures since the module was last ready
+     * </pre>
+     *
+     * <code>uint32 consecutive_failures = 6 [json_name = "consecutiveFailures"];</code>
+     * @param value The consecutiveFailures to set.
+     */
+    private void setConsecutiveFailures(int value) {
+      
+      consecutiveFailures_ = value;
+    }
+    /**
+     * <pre>
+     * failures since the module was last ready
+     * </pre>
+     *
+     * <code>uint32 consecutive_failures = 6 [json_name = "consecutiveFailures"];</code>
+     */
+    private void clearConsecutiveFailures() {
+
+      consecutiveFailures_ = 0;
+    }
+
+    public static final int READY_COUNT_FIELD_NUMBER = 7;
+    private int readyCount_;
+    /**
+     * <pre>
+     * times the module has become ready since viam-server started, including the first start;
+     * only goes up, and resets when viam-server restarts
+     * </pre>
+     *
+     * <code>uint32 ready_count = 7 [json_name = "readyCount"];</code>
+     * @return The readyCount.
+     */
+    @java.lang.Override
+    public int getReadyCount() {
+      return readyCount_;
+    }
+    /**
+     * <pre>
+     * times the module has become ready since viam-server started, including the first start;
+     * only goes up, and resets when viam-server restarts
+     * </pre>
+     *
+     * <code>uint32 ready_count = 7 [json_name = "readyCount"];</code>
+     * @param value The readyCount to set.
+     */
+    private void setReadyCount(int value) {
+      
+      readyCount_ = value;
+    }
+    /**
+     * <pre>
+     * times the module has become ready since viam-server started, including the first start;
+     * only goes up, and resets when viam-server restarts
+     * </pre>
+     *
+     * <code>uint32 ready_count = 7 [json_name = "readyCount"];</code>
+     */
+    private void clearReadyCount() {
+
+      readyCount_ = 0;
+    }
+
+    public static viam.app.v1.Robot.ModuleVersionInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.ModuleVersionInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.ModuleVersionInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.ModuleVersionInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.ModuleVersionInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static viam.app.v1.Robot.ModuleVersionInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.ModuleVersionInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.ModuleVersionInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.Robot.ModuleVersionInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static viam.app.v1.Robot.ModuleVersionInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static viam.app.v1.Robot.ModuleVersionInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static viam.app.v1.Robot.ModuleVersionInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.Robot.ModuleVersionInfo prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code viam.app.v1.ModuleVersionInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Robot.ModuleVersionInfo, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.ModuleVersionInfo)
+        viam.app.v1.Robot.ModuleVersionInfoOrBuilder {
+      // Construct using viam.app.v1.Robot.ModuleVersionInfo.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * registry module ID, e.g. "viam:realsense" (empty for local modules)
+       * </pre>
+       *
+       * <code>string module_id = 1 [json_name = "moduleId"];</code>
+       * @return The moduleId.
+       */
+      @java.lang.Override
+      public java.lang.String getModuleId() {
+        return instance.getModuleId();
+      }
+      /**
+       * <pre>
+       * registry module ID, e.g. "viam:realsense" (empty for local modules)
+       * </pre>
+       *
+       * <code>string module_id = 1 [json_name = "moduleId"];</code>
+       * @return The bytes for moduleId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getModuleIdBytes() {
+        return instance.getModuleIdBytes();
+      }
+      /**
+       * <pre>
+       * registry module ID, e.g. "viam:realsense" (empty for local modules)
+       * </pre>
+       *
+       * <code>string module_id = 1 [json_name = "moduleId"];</code>
+       * @param value The moduleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleId(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setModuleId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * registry module ID, e.g. "viam:realsense" (empty for local modules)
+       * </pre>
+       *
+       * <code>string module_id = 1 [json_name = "moduleId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModuleId() {
+        copyOnWrite();
+        instance.clearModuleId();
+        return this;
+      }
+      /**
+       * <pre>
+       * registry module ID, e.g. "viam:realsense" (empty for local modules)
+       * </pre>
+       *
+       * <code>string module_id = 1 [json_name = "moduleId"];</code>
+       * @param value The bytes for moduleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleIdBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setModuleIdBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * module name from the machine config; unique within the part
+       * </pre>
+       *
+       * <code>string module_name = 8 [json_name = "moduleName"];</code>
+       * @return The moduleName.
+       */
+      @java.lang.Override
+      public java.lang.String getModuleName() {
+        return instance.getModuleName();
+      }
+      /**
+       * <pre>
+       * module name from the machine config; unique within the part
+       * </pre>
+       *
+       * <code>string module_name = 8 [json_name = "moduleName"];</code>
+       * @return The bytes for moduleName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getModuleNameBytes() {
+        return instance.getModuleNameBytes();
+      }
+      /**
+       * <pre>
+       * module name from the machine config; unique within the part
+       * </pre>
+       *
+       * <code>string module_name = 8 [json_name = "moduleName"];</code>
+       * @param value The moduleName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleName(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setModuleName(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * module name from the machine config; unique within the part
+       * </pre>
+       *
+       * <code>string module_name = 8 [json_name = "moduleName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModuleName() {
+        copyOnWrite();
+        instance.clearModuleName();
+        return this;
+      }
+      /**
+       * <pre>
+       * module name from the machine config; unique within the part
+       * </pre>
+       *
+       * <code>string module_name = 8 [json_name = "moduleName"];</code>
+       * @param value The bytes for moduleName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleNameBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setModuleNameBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * version currently running ("local" for local modules; empty if not running or unknown)
+       * </pre>
+       *
+       * <code>string running_version = 2 [json_name = "runningVersion"];</code>
+       * @return The runningVersion.
+       */
+      @java.lang.Override
+      public java.lang.String getRunningVersion() {
+        return instance.getRunningVersion();
+      }
+      /**
+       * <pre>
+       * version currently running ("local" for local modules; empty if not running or unknown)
+       * </pre>
+       *
+       * <code>string running_version = 2 [json_name = "runningVersion"];</code>
+       * @return The bytes for runningVersion.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getRunningVersionBytes() {
+        return instance.getRunningVersionBytes();
+      }
+      /**
+       * <pre>
+       * version currently running ("local" for local modules; empty if not running or unknown)
+       * </pre>
+       *
+       * <code>string running_version = 2 [json_name = "runningVersion"];</code>
+       * @param value The runningVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRunningVersion(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setRunningVersion(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * version currently running ("local" for local modules; empty if not running or unknown)
+       * </pre>
+       *
+       * <code>string running_version = 2 [json_name = "runningVersion"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRunningVersion() {
+        copyOnWrite();
+        instance.clearRunningVersion();
+        return this;
+      }
+      /**
+       * <pre>
+       * version currently running ("local" for local modules; empty if not running or unknown)
+       * </pre>
+       *
+       * <code>string running_version = 2 [json_name = "runningVersion"];</code>
+       * @param value The bytes for runningVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRunningVersionBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setRunningVersionBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * how long the running version has been ready, measured with a monotonic clock; app anchors it
+       * to the time the request is received (unset if not running)
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration running_for = 3 [json_name = "runningFor"];</code>
+       */
+      @java.lang.Override
+      public boolean hasRunningFor() {
+        return instance.hasRunningFor();
+      }
+      /**
+       * <pre>
+       * how long the running version has been ready, measured with a monotonic clock; app anchors it
+       * to the time the request is received (unset if not running)
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration running_for = 3 [json_name = "runningFor"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getRunningFor() {
+        return instance.getRunningFor();
+      }
+      /**
+       * <pre>
+       * how long the running version has been ready, measured with a monotonic clock; app anchors it
+       * to the time the request is received (unset if not running)
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration running_for = 3 [json_name = "runningFor"];</code>
+       */
+      public Builder setRunningFor(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.setRunningFor(value);
+        return this;
+        }
+      /**
+       * <pre>
+       * how long the running version has been ready, measured with a monotonic clock; app anchors it
+       * to the time the request is received (unset if not running)
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration running_for = 3 [json_name = "runningFor"];</code>
+       */
+      public Builder setRunningFor(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        copyOnWrite();
+        instance.setRunningFor(builderForValue.build());
+        return this;
+      }
+      /**
+       * <pre>
+       * how long the running version has been ready, measured with a monotonic clock; app anchors it
+       * to the time the request is received (unset if not running)
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration running_for = 3 [json_name = "runningFor"];</code>
+       */
+      public Builder mergeRunningFor(com.google.protobuf.Duration value) {
+        copyOnWrite();
+        instance.mergeRunningFor(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * how long the running version has been ready, measured with a monotonic clock; app anchors it
+       * to the time the request is received (unset if not running)
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration running_for = 3 [json_name = "runningFor"];</code>
+       */
+      public Builder clearRunningFor() {  copyOnWrite();
+        instance.clearRunningFor();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * current lifecycle state of the module process
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ModuleStatus.State state = 4 [json_name = "state"];</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override
+      public int getStateValue() {
+        return instance.getStateValue();
+      }
+      /**
+       * <pre>
+       * current lifecycle state of the module process
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ModuleStatus.State state = 4 [json_name = "state"];</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        copyOnWrite();
+        instance.setStateValue(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * current lifecycle state of the module process
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ModuleStatus.State state = 4 [json_name = "state"];</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.ModuleStatus.State getState() {
+        return instance.getState();
+      }
+      /**
+       * <pre>
+       * current lifecycle state of the module process
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ModuleStatus.State state = 4 [json_name = "state"];</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @throws IllegalArgumentException if UNRECOGNIZED is provided.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.viam.robot.v1.Robot.ModuleStatus.State value) {
+        copyOnWrite();
+        instance.setState(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * current lifecycle state of the module process
+       * </pre>
+       *
+       * <code>.viam.robot.v1.ModuleStatus.State state = 4 [json_name = "state"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        copyOnWrite();
+        instance.clearState();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * failures since the module was last ready
+       * </pre>
+       *
+       * <code>uint32 consecutive_failures = 6 [json_name = "consecutiveFailures"];</code>
+       * @return The consecutiveFailures.
+       */
+      @java.lang.Override
+      public int getConsecutiveFailures() {
+        return instance.getConsecutiveFailures();
+      }
+      /**
+       * <pre>
+       * failures since the module was last ready
+       * </pre>
+       *
+       * <code>uint32 consecutive_failures = 6 [json_name = "consecutiveFailures"];</code>
+       * @param value The consecutiveFailures to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConsecutiveFailures(int value) {
+        copyOnWrite();
+        instance.setConsecutiveFailures(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * failures since the module was last ready
+       * </pre>
+       *
+       * <code>uint32 consecutive_failures = 6 [json_name = "consecutiveFailures"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConsecutiveFailures() {
+        copyOnWrite();
+        instance.clearConsecutiveFailures();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * times the module has become ready since viam-server started, including the first start;
+       * only goes up, and resets when viam-server restarts
+       * </pre>
+       *
+       * <code>uint32 ready_count = 7 [json_name = "readyCount"];</code>
+       * @return The readyCount.
+       */
+      @java.lang.Override
+      public int getReadyCount() {
+        return instance.getReadyCount();
+      }
+      /**
+       * <pre>
+       * times the module has become ready since viam-server started, including the first start;
+       * only goes up, and resets when viam-server restarts
+       * </pre>
+       *
+       * <code>uint32 ready_count = 7 [json_name = "readyCount"];</code>
+       * @param value The readyCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReadyCount(int value) {
+        copyOnWrite();
+        instance.setReadyCount(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * times the module has become ready since viam-server started, including the first start;
+       * only goes up, and resets when viam-server restarts
+       * </pre>
+       *
+       * <code>uint32 ready_count = 7 [json_name = "readyCount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReadyCount() {
+        copyOnWrite();
+        instance.clearReadyCount();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.ModuleVersionInfo)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Robot.ModuleVersionInfo();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "moduleId_",
+              "runningVersion_",
+              "runningFor_",
+              "state_",
+              "consecutiveFailures_",
+              "readyCount_",
+              "moduleName_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0001\u0001\b\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u1009\u0000\u0004\f\u0006\u000b\u0007\u000b\b\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Robot.ModuleVersionInfo> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Robot.ModuleVersionInfo.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Robot.ModuleVersionInfo>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.ModuleVersionInfo)
+    private static final viam.app.v1.Robot.ModuleVersionInfo DEFAULT_INSTANCE;
+    static {
+      ModuleVersionInfo defaultInstance = new ModuleVersionInfo();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ModuleVersionInfo.class, defaultInstance);
+    }
+
+    public static viam.app.v1.Robot.ModuleVersionInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<ModuleVersionInfo> PARSER;
+
+    public static com.google.protobuf.Parser<ModuleVersionInfo> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

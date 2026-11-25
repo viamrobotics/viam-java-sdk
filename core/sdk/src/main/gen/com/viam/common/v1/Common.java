@@ -4279,6 +4279,351 @@ public final class Common {
     }
   }
 
+  public interface CylinderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.common.v1.Cylinder)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>double radius_mm = 1 [json_name = "radiusMm"];</code>
+     * @return The radiusMm.
+     */
+    double getRadiusMm();
+
+    /**
+     * <pre>
+     * Full end-to-end length along the cylinder's axis.
+     * </pre>
+     *
+     * <code>double length_mm = 2 [json_name = "lengthMm"];</code>
+     * @return The lengthMm.
+     */
+    double getLengthMm();
+  }
+  /**
+   * <pre>
+   * Cylinder is a solid right circular cylinder, flat end caps included, whose axis is the local Z
+   * axis of the geometry's center pose.
+   * </pre>
+   *
+   * Protobuf type {@code viam.common.v1.Cylinder}
+   */
+  public  static final class Cylinder extends
+      com.google.protobuf.GeneratedMessageLite<
+          Cylinder, Cylinder.Builder> implements
+      // @@protoc_insertion_point(message_implements:viam.common.v1.Cylinder)
+      CylinderOrBuilder {
+    private Cylinder() {
+    }
+    public static final int RADIUS_MM_FIELD_NUMBER = 1;
+    private double radiusMm_;
+    /**
+     * <code>double radius_mm = 1 [json_name = "radiusMm"];</code>
+     * @return The radiusMm.
+     */
+    @java.lang.Override
+    public double getRadiusMm() {
+      return radiusMm_;
+    }
+    /**
+     * <code>double radius_mm = 1 [json_name = "radiusMm"];</code>
+     * @param value The radiusMm to set.
+     */
+    private void setRadiusMm(double value) {
+      
+      radiusMm_ = value;
+    }
+    /**
+     * <code>double radius_mm = 1 [json_name = "radiusMm"];</code>
+     */
+    private void clearRadiusMm() {
+
+      radiusMm_ = 0D;
+    }
+
+    public static final int LENGTH_MM_FIELD_NUMBER = 2;
+    private double lengthMm_;
+    /**
+     * <pre>
+     * Full end-to-end length along the cylinder's axis.
+     * </pre>
+     *
+     * <code>double length_mm = 2 [json_name = "lengthMm"];</code>
+     * @return The lengthMm.
+     */
+    @java.lang.Override
+    public double getLengthMm() {
+      return lengthMm_;
+    }
+    /**
+     * <pre>
+     * Full end-to-end length along the cylinder's axis.
+     * </pre>
+     *
+     * <code>double length_mm = 2 [json_name = "lengthMm"];</code>
+     * @param value The lengthMm to set.
+     */
+    private void setLengthMm(double value) {
+      
+      lengthMm_ = value;
+    }
+    /**
+     * <pre>
+     * Full end-to-end length along the cylinder's axis.
+     * </pre>
+     *
+     * <code>double length_mm = 2 [json_name = "lengthMm"];</code>
+     */
+    private void clearLengthMm() {
+
+      lengthMm_ = 0D;
+    }
+
+    public static com.viam.common.v1.Common.Cylinder parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.Cylinder parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.Cylinder parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.Cylinder parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.Cylinder parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.viam.common.v1.Common.Cylinder parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.Cylinder parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.Cylinder parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static com.viam.common.v1.Common.Cylinder parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+
+    public static com.viam.common.v1.Common.Cylinder parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.viam.common.v1.Common.Cylinder parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.viam.common.v1.Common.Cylinder parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.viam.common.v1.Common.Cylinder prototype) {
+      return DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * <pre>
+     * Cylinder is a solid right circular cylinder, flat end caps included, whose axis is the local Z
+     * axis of the geometry's center pose.
+     * </pre>
+     *
+     * Protobuf type {@code viam.common.v1.Cylinder}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.common.v1.Common.Cylinder, Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.common.v1.Cylinder)
+        com.viam.common.v1.Common.CylinderOrBuilder {
+      // Construct using com.viam.common.v1.Common.Cylinder.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>double radius_mm = 1 [json_name = "radiusMm"];</code>
+       * @return The radiusMm.
+       */
+      @java.lang.Override
+      public double getRadiusMm() {
+        return instance.getRadiusMm();
+      }
+      /**
+       * <code>double radius_mm = 1 [json_name = "radiusMm"];</code>
+       * @param value The radiusMm to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRadiusMm(double value) {
+        copyOnWrite();
+        instance.setRadiusMm(value);
+        return this;
+      }
+      /**
+       * <code>double radius_mm = 1 [json_name = "radiusMm"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRadiusMm() {
+        copyOnWrite();
+        instance.clearRadiusMm();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Full end-to-end length along the cylinder's axis.
+       * </pre>
+       *
+       * <code>double length_mm = 2 [json_name = "lengthMm"];</code>
+       * @return The lengthMm.
+       */
+      @java.lang.Override
+      public double getLengthMm() {
+        return instance.getLengthMm();
+      }
+      /**
+       * <pre>
+       * Full end-to-end length along the cylinder's axis.
+       * </pre>
+       *
+       * <code>double length_mm = 2 [json_name = "lengthMm"];</code>
+       * @param value The lengthMm to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLengthMm(double value) {
+        copyOnWrite();
+        instance.setLengthMm(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Full end-to-end length along the cylinder's axis.
+       * </pre>
+       *
+       * <code>double length_mm = 2 [json_name = "lengthMm"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLengthMm() {
+        copyOnWrite();
+        instance.clearLengthMm();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:viam.common.v1.Cylinder)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"ThrowNull"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.common.v1.Common.Cylinder();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "radiusMm_",
+              "lengthMm_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0000\u0002\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.common.v1.Common.Cylinder> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.common.v1.Common.Cylinder.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.common.v1.Common.Cylinder>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        // SET_MEMOIZED_IS_INITIALIZED is never called for this message.
+        // So it can do anything. Combine with default case for smaller codegen.
+        case SET_MEMOIZED_IS_INITIALIZED:
+      }
+      // Should never happen. Generates tight code to throw an exception.
+      throw null;
+    }
+
+
+    // @@protoc_insertion_point(class_scope:viam.common.v1.Cylinder)
+    private static final com.viam.common.v1.Common.Cylinder DEFAULT_INSTANCE;
+    static {
+      Cylinder defaultInstance = new Cylinder();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Cylinder.class, defaultInstance);
+    }
+
+    public static com.viam.common.v1.Common.Cylinder getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<Cylinder> PARSER;
+
+    public static com.google.protobuf.Parser<Cylinder> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface RectangularPrismOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.common.v1.RectangularPrism)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -5537,6 +5882,17 @@ public final class Common {
     com.viam.common.v1.Common.PointCloud getPointcloud();
 
     /**
+     * <code>.viam.common.v1.Cylinder cylinder = 8 [json_name = "cylinder"];</code>
+     * @return Whether the cylinder field is set.
+     */
+    boolean hasCylinder();
+    /**
+     * <code>.viam.common.v1.Cylinder cylinder = 8 [json_name = "cylinder"];</code>
+     * @return The cylinder.
+     */
+    com.viam.common.v1.Common.Cylinder getCylinder();
+
+    /**
      * <pre>
      * Label of the geometry. If none supplied, will be an empty string.
      * </pre>
@@ -5583,6 +5939,7 @@ public final class Common {
       CAPSULE(5),
       MESH(6),
       POINTCLOUD(7),
+      CYLINDER(8),
       GEOMETRYTYPE_NOT_SET(0);
       private final int value;
       private GeometryTypeCase(int value) {
@@ -5603,6 +5960,7 @@ public final class Common {
           case 5: return CAPSULE;
           case 6: return MESH;
           case 7: return POINTCLOUD;
+          case 8: return CYLINDER;
           case 0: return GEOMETRYTYPE_NOT_SET;
           default: return null;
         }
@@ -5947,6 +6305,58 @@ public final class Common {
      */
     private void clearPointcloud() {
       if (geometryTypeCase_ == 7) {
+        geometryTypeCase_ = 0;
+        geometryType_ = null;
+      }
+    }
+
+    public static final int CYLINDER_FIELD_NUMBER = 8;
+    /**
+     * <code>.viam.common.v1.Cylinder cylinder = 8 [json_name = "cylinder"];</code>
+     */
+    @java.lang.Override
+    public boolean hasCylinder() {
+      return geometryTypeCase_ == 8;
+    }
+    /**
+     * <code>.viam.common.v1.Cylinder cylinder = 8 [json_name = "cylinder"];</code>
+     */
+    @java.lang.Override
+    public com.viam.common.v1.Common.Cylinder getCylinder() {
+      if (geometryTypeCase_ == 8) {
+         return (com.viam.common.v1.Common.Cylinder) geometryType_;
+      }
+      return com.viam.common.v1.Common.Cylinder.getDefaultInstance();
+    }
+    /**
+     * <code>.viam.common.v1.Cylinder cylinder = 8 [json_name = "cylinder"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void setCylinder(com.viam.common.v1.Common.Cylinder value) {
+      value.getClass();  // minimal bytecode null check
+      geometryType_ = value;
+      geometryTypeCase_ = 8;
+    }
+    /**
+     * <code>.viam.common.v1.Cylinder cylinder = 8 [json_name = "cylinder"];</code>
+     */
+    @java.lang.SuppressWarnings("ReturnValueIgnored")
+    private void mergeCylinder(com.viam.common.v1.Common.Cylinder value) {
+      value.getClass();  // minimal bytecode null check
+      if (geometryTypeCase_ == 8 &&
+          geometryType_ != com.viam.common.v1.Common.Cylinder.getDefaultInstance()) {
+        geometryType_ = com.viam.common.v1.Common.Cylinder.newBuilder((com.viam.common.v1.Common.Cylinder) geometryType_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        geometryType_ = value;
+      }
+      geometryTypeCase_ = 8;
+    }
+    /**
+     * <code>.viam.common.v1.Cylinder cylinder = 8 [json_name = "cylinder"];</code>
+     */
+    private void clearCylinder() {
+      if (geometryTypeCase_ == 8) {
         geometryTypeCase_ = 0;
         geometryType_ = null;
       }
@@ -6445,6 +6855,54 @@ public final class Common {
       }
 
       /**
+       * <code>.viam.common.v1.Cylinder cylinder = 8 [json_name = "cylinder"];</code>
+       */
+      @java.lang.Override
+      public boolean hasCylinder() {
+        return instance.hasCylinder();
+      }
+      /**
+       * <code>.viam.common.v1.Cylinder cylinder = 8 [json_name = "cylinder"];</code>
+       */
+      @java.lang.Override
+      public com.viam.common.v1.Common.Cylinder getCylinder() {
+        return instance.getCylinder();
+      }
+      /**
+       * <code>.viam.common.v1.Cylinder cylinder = 8 [json_name = "cylinder"];</code>
+       */
+      public Builder setCylinder(com.viam.common.v1.Common.Cylinder value) {
+        copyOnWrite();
+        instance.setCylinder(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.Cylinder cylinder = 8 [json_name = "cylinder"];</code>
+       */
+      public Builder setCylinder(
+          com.viam.common.v1.Common.Cylinder.Builder builderForValue) {
+        copyOnWrite();
+        instance.setCylinder(builderForValue.build());
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.Cylinder cylinder = 8 [json_name = "cylinder"];</code>
+       */
+      public Builder mergeCylinder(com.viam.common.v1.Common.Cylinder value) {
+        copyOnWrite();
+        instance.mergeCylinder(value);
+        return this;
+      }
+      /**
+       * <code>.viam.common.v1.Cylinder cylinder = 8 [json_name = "cylinder"];</code>
+       */
+      public Builder clearCylinder() {
+        copyOnWrite();
+        instance.clearCylinder();
+        return this;
+      }
+
+      /**
        * <pre>
        * Label of the geometry. If none supplied, will be an empty string.
        * </pre>
@@ -6539,10 +6997,11 @@ public final class Common {
               com.viam.common.v1.Common.Capsule.class,
               com.viam.common.v1.Common.Mesh.class,
               com.viam.common.v1.Common.PointCloud.class,
+              com.viam.common.v1.Common.Cylinder.class,
             };
             java.lang.String info =
-                "\u0000\u0007\u0001\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
-                "<\u0000\u0003<\u0000\u0004\u0208\u0005<\u0000\u0006<\u0000\u0007<\u0000";
+                "\u0000\b\u0001\u0001\u0001\b\b\u0000\u0000\u0000\u0001\u1009\u0000\u0002<\u0000\u0003" +
+                "<\u0000\u0004\u0208\u0005<\u0000\u0006<\u0000\u0007<\u0000\b<\u0000";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -13962,7 +14421,7 @@ public final class Common {
      *
      * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
      * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
-     *     See common/v1/common.proto;l=274
+     *     See common/v1/common.proto;l=283
      * @return The enum numeric value on the wire for format.
      */
     @java.lang.Deprecated int getFormatValue();
@@ -13974,7 +14433,7 @@ public final class Common {
      *
      * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
      * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
-     *     See common/v1/common.proto;l=274
+     *     See common/v1/common.proto;l=283
      * @return The format.
      */
     @java.lang.Deprecated com.viam.common.v1.Common.KinematicsFileFormat getFormat();
@@ -13986,7 +14445,7 @@ public final class Common {
      *
      * <code>bytes kinematics_data = 2 [json_name = "kinematicsData", deprecated = true];</code>
      * @deprecated viam.common.v1.GetKinematicsResponse.kinematics_data is deprecated.
-     *     See common/v1/common.proto;l=276
+     *     See common/v1/common.proto;l=285
      * @return The kinematicsData.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString getKinematicsData();
@@ -14088,7 +14547,7 @@ com.viam.common.v1.Common.Mesh defaultValue);
      *
      * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
      * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
-     *     See common/v1/common.proto;l=274
+     *     See common/v1/common.proto;l=283
      * @return The enum numeric value on the wire for format.
      */
     @java.lang.Override
@@ -14103,7 +14562,7 @@ com.viam.common.v1.Common.Mesh defaultValue);
      *
      * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
      * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
-     *     See common/v1/common.proto;l=274
+     *     See common/v1/common.proto;l=283
      * @return The format.
      */
     @java.lang.Override
@@ -14159,7 +14618,7 @@ com.viam.common.v1.Common.Mesh defaultValue);
      *
      * <code>bytes kinematics_data = 2 [json_name = "kinematicsData", deprecated = true];</code>
      * @deprecated viam.common.v1.GetKinematicsResponse.kinematics_data is deprecated.
-     *     See common/v1/common.proto;l=276
+     *     See common/v1/common.proto;l=285
      * @return The kinematicsData.
      */
     @java.lang.Override
@@ -14481,7 +14940,7 @@ com.viam.common.v1.Common.Mesh defaultValue) {
        *
        * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
        * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
-       *     See common/v1/common.proto;l=274
+       *     See common/v1/common.proto;l=283
        * @return The enum numeric value on the wire for format.
        */
       @java.lang.Override
@@ -14496,7 +14955,7 @@ com.viam.common.v1.Common.Mesh defaultValue) {
        *
        * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
        * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
-       *     See common/v1/common.proto;l=274
+       *     See common/v1/common.proto;l=283
        * @param value The format to set.
        * @return This builder for chaining.
        */
@@ -14513,7 +14972,7 @@ com.viam.common.v1.Common.Mesh defaultValue) {
        *
        * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
        * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
-       *     See common/v1/common.proto;l=274
+       *     See common/v1/common.proto;l=283
        * @return The format.
        */
       @java.lang.Override
@@ -14528,7 +14987,7 @@ com.viam.common.v1.Common.Mesh defaultValue) {
        *
        * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
        * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
-       *     See common/v1/common.proto;l=274
+       *     See common/v1/common.proto;l=283
        * @param value The enum numeric value on the wire for format to set.
        * @throws IllegalArgumentException if UNRECOGNIZED is provided.
        * @return This builder for chaining.
@@ -14546,7 +15005,7 @@ com.viam.common.v1.Common.Mesh defaultValue) {
        *
        * <code>.viam.common.v1.KinematicsFileFormat format = 1 [json_name = "format", deprecated = true];</code>
        * @deprecated viam.common.v1.GetKinematicsResponse.format is deprecated.
-       *     See common/v1/common.proto;l=274
+       *     See common/v1/common.proto;l=283
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearFormat() {
@@ -14562,7 +15021,7 @@ com.viam.common.v1.Common.Mesh defaultValue) {
        *
        * <code>bytes kinematics_data = 2 [json_name = "kinematicsData", deprecated = true];</code>
        * @deprecated viam.common.v1.GetKinematicsResponse.kinematics_data is deprecated.
-       *     See common/v1/common.proto;l=276
+       *     See common/v1/common.proto;l=285
        * @return The kinematicsData.
        */
       @java.lang.Override
@@ -14576,7 +15035,7 @@ com.viam.common.v1.Common.Mesh defaultValue) {
        *
        * <code>bytes kinematics_data = 2 [json_name = "kinematicsData", deprecated = true];</code>
        * @deprecated viam.common.v1.GetKinematicsResponse.kinematics_data is deprecated.
-       *     See common/v1/common.proto;l=276
+       *     See common/v1/common.proto;l=285
        * @param value The kinematicsData to set.
        * @return This builder for chaining.
        */
@@ -14592,7 +15051,7 @@ com.viam.common.v1.Common.Mesh defaultValue) {
        *
        * <code>bytes kinematics_data = 2 [json_name = "kinematicsData", deprecated = true];</code>
        * @deprecated viam.common.v1.GetKinematicsResponse.kinematics_data is deprecated.
-       *     See common/v1/common.proto;l=276
+       *     See common/v1/common.proto;l=285
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearKinematicsData() {
