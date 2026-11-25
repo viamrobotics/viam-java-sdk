@@ -225,6 +225,96 @@ public final class GripperServiceGrpc {
     return getGoToInputsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.SetPercentOpenRequest,
+      com.viam.component.gripper.v1.Gripper.SetPercentOpenResponse> getSetPercentOpenMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetPercentOpen",
+      requestType = com.viam.component.gripper.v1.Gripper.SetPercentOpenRequest.class,
+      responseType = com.viam.component.gripper.v1.Gripper.SetPercentOpenResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.SetPercentOpenRequest,
+      com.viam.component.gripper.v1.Gripper.SetPercentOpenResponse> getSetPercentOpenMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.SetPercentOpenRequest, com.viam.component.gripper.v1.Gripper.SetPercentOpenResponse> getSetPercentOpenMethod;
+    if ((getSetPercentOpenMethod = GripperServiceGrpc.getSetPercentOpenMethod) == null) {
+      synchronized (GripperServiceGrpc.class) {
+        if ((getSetPercentOpenMethod = GripperServiceGrpc.getSetPercentOpenMethod) == null) {
+          GripperServiceGrpc.getSetPercentOpenMethod = getSetPercentOpenMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.gripper.v1.Gripper.SetPercentOpenRequest, com.viam.component.gripper.v1.Gripper.SetPercentOpenResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetPercentOpen"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.gripper.v1.Gripper.SetPercentOpenRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.gripper.v1.Gripper.SetPercentOpenResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getSetPercentOpenMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.GetPercentOpenRequest,
+      com.viam.component.gripper.v1.Gripper.GetPercentOpenResponse> getGetPercentOpenMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPercentOpen",
+      requestType = com.viam.component.gripper.v1.Gripper.GetPercentOpenRequest.class,
+      responseType = com.viam.component.gripper.v1.Gripper.GetPercentOpenResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.GetPercentOpenRequest,
+      com.viam.component.gripper.v1.Gripper.GetPercentOpenResponse> getGetPercentOpenMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.GetPercentOpenRequest, com.viam.component.gripper.v1.Gripper.GetPercentOpenResponse> getGetPercentOpenMethod;
+    if ((getGetPercentOpenMethod = GripperServiceGrpc.getGetPercentOpenMethod) == null) {
+      synchronized (GripperServiceGrpc.class) {
+        if ((getGetPercentOpenMethod = GripperServiceGrpc.getGetPercentOpenMethod) == null) {
+          GripperServiceGrpc.getGetPercentOpenMethod = getGetPercentOpenMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.gripper.v1.Gripper.GetPercentOpenRequest, com.viam.component.gripper.v1.Gripper.GetPercentOpenResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPercentOpen"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.gripper.v1.Gripper.GetPercentOpenRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.gripper.v1.Gripper.GetPercentOpenResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetPercentOpenMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.GetPropertiesRequest,
+      com.viam.component.gripper.v1.Gripper.GetPropertiesResponse> getGetPropertiesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetProperties",
+      requestType = com.viam.component.gripper.v1.Gripper.GetPropertiesRequest.class,
+      responseType = com.viam.component.gripper.v1.Gripper.GetPropertiesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.GetPropertiesRequest,
+      com.viam.component.gripper.v1.Gripper.GetPropertiesResponse> getGetPropertiesMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.GetPropertiesRequest, com.viam.component.gripper.v1.Gripper.GetPropertiesResponse> getGetPropertiesMethod;
+    if ((getGetPropertiesMethod = GripperServiceGrpc.getGetPropertiesMethod) == null) {
+      synchronized (GripperServiceGrpc.class) {
+        if ((getGetPropertiesMethod = GripperServiceGrpc.getGetPropertiesMethod) == null) {
+          GripperServiceGrpc.getGetPropertiesMethod = getGetPropertiesMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.gripper.v1.Gripper.GetPropertiesRequest, com.viam.component.gripper.v1.Gripper.GetPropertiesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProperties"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.gripper.v1.Gripper.GetPropertiesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
+                  com.viam.component.gripper.v1.Gripper.GetPropertiesResponse.getDefaultInstance()))
+              .build();
+        }
+      }
+    }
+    return getGetPropertiesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
       com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
 
@@ -483,6 +573,47 @@ public final class GripperServiceGrpc {
 
     /**
      * <pre>
+     * SetPercentOpen moves the gripper to a normalized opening, where 0.0 is fully closed (where
+     * Grab moves to) and 1.0 is fully open (where Open moves to). The gripper maps the value
+     * linearly onto its range of motion and owns any inversion of its hardware scale.
+     * A percent_open that is NaN or outside 0.0-1.0 returns InvalidArgument.
+     * This call blocks until the move completes or is stopped, like Open and Grab. Stop cancels it.
+     * If the gripper does not support percent open (GetProperties reports
+     * percent_open_supported = false or is Unimplemented, or SetPercentOpen is Unimplemented),
+     * the server falls back to Grab for a percent_open below 0.5 and Open for 0.5 and above.
+     * </pre>
+     */
+    default void setPercentOpen(com.viam.component.gripper.v1.Gripper.SetPercentOpenRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.SetPercentOpenResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetPercentOpenMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetPercentOpen returns the measured opening of the gripper on the same 0.0 (closed) to
+     * 1.0 (open) scale as SetPercentOpen. Returns Unimplemented if the gripper does not support
+     * percent open; there is no fallback.
+     * </pre>
+     */
+    default void getPercentOpen(com.viam.component.gripper.v1.Gripper.GetPercentOpenRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GetPercentOpenResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPercentOpenMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the capabilities of the gripper.
+     * A gripper that returns Unimplemented for GetProperties is treated as having
+     * percent_open_supported = false.
+     * </pre>
+     */
+    default void getProperties(com.viam.component.gripper.v1.Gripper.GetPropertiesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GetPropertiesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPropertiesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -634,6 +765,50 @@ public final class GripperServiceGrpc {
 
     /**
      * <pre>
+     * SetPercentOpen moves the gripper to a normalized opening, where 0.0 is fully closed (where
+     * Grab moves to) and 1.0 is fully open (where Open moves to). The gripper maps the value
+     * linearly onto its range of motion and owns any inversion of its hardware scale.
+     * A percent_open that is NaN or outside 0.0-1.0 returns InvalidArgument.
+     * This call blocks until the move completes or is stopped, like Open and Grab. Stop cancels it.
+     * If the gripper does not support percent open (GetProperties reports
+     * percent_open_supported = false or is Unimplemented, or SetPercentOpen is Unimplemented),
+     * the server falls back to Grab for a percent_open below 0.5 and Open for 0.5 and above.
+     * </pre>
+     */
+    public void setPercentOpen(com.viam.component.gripper.v1.Gripper.SetPercentOpenRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.SetPercentOpenResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetPercentOpenMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetPercentOpen returns the measured opening of the gripper on the same 0.0 (closed) to
+     * 1.0 (open) scale as SetPercentOpen. Returns Unimplemented if the gripper does not support
+     * percent open; there is no fallback.
+     * </pre>
+     */
+    public void getPercentOpen(com.viam.component.gripper.v1.Gripper.GetPercentOpenRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GetPercentOpenResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPercentOpenMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the capabilities of the gripper.
+     * A gripper that returns Unimplemented for GetProperties is treated as having
+     * percent_open_supported = false.
+     * </pre>
+     */
+    public void getProperties(com.viam.component.gripper.v1.Gripper.GetPropertiesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GetPropertiesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPropertiesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -768,6 +943,47 @@ public final class GripperServiceGrpc {
 
     /**
      * <pre>
+     * SetPercentOpen moves the gripper to a normalized opening, where 0.0 is fully closed (where
+     * Grab moves to) and 1.0 is fully open (where Open moves to). The gripper maps the value
+     * linearly onto its range of motion and owns any inversion of its hardware scale.
+     * A percent_open that is NaN or outside 0.0-1.0 returns InvalidArgument.
+     * This call blocks until the move completes or is stopped, like Open and Grab. Stop cancels it.
+     * If the gripper does not support percent open (GetProperties reports
+     * percent_open_supported = false or is Unimplemented, or SetPercentOpen is Unimplemented),
+     * the server falls back to Grab for a percent_open below 0.5 and Open for 0.5 and above.
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.SetPercentOpenResponse setPercentOpen(com.viam.component.gripper.v1.Gripper.SetPercentOpenRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetPercentOpenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetPercentOpen returns the measured opening of the gripper on the same 0.0 (closed) to
+     * 1.0 (open) scale as SetPercentOpen. Returns Unimplemented if the gripper does not support
+     * percent open; there is no fallback.
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.GetPercentOpenResponse getPercentOpen(com.viam.component.gripper.v1.Gripper.GetPercentOpenRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPercentOpenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the capabilities of the gripper.
+     * A gripper that returns Unimplemented for GetProperties is treated as having
+     * percent_open_supported = false.
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.GetPropertiesResponse getProperties(com.viam.component.gripper.v1.Gripper.GetPropertiesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -894,6 +1110,47 @@ public final class GripperServiceGrpc {
     public com.viam.component.gripper.v1.Gripper.GoToInputsResponse goToInputs(com.viam.component.gripper.v1.Gripper.GoToInputsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGoToInputsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SetPercentOpen moves the gripper to a normalized opening, where 0.0 is fully closed (where
+     * Grab moves to) and 1.0 is fully open (where Open moves to). The gripper maps the value
+     * linearly onto its range of motion and owns any inversion of its hardware scale.
+     * A percent_open that is NaN or outside 0.0-1.0 returns InvalidArgument.
+     * This call blocks until the move completes or is stopped, like Open and Grab. Stop cancels it.
+     * If the gripper does not support percent open (GetProperties reports
+     * percent_open_supported = false or is Unimplemented, or SetPercentOpen is Unimplemented),
+     * the server falls back to Grab for a percent_open below 0.5 and Open for 0.5 and above.
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.SetPercentOpenResponse setPercentOpen(com.viam.component.gripper.v1.Gripper.SetPercentOpenRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetPercentOpenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetPercentOpen returns the measured opening of the gripper on the same 0.0 (closed) to
+     * 1.0 (open) scale as SetPercentOpen. Returns Unimplemented if the gripper does not support
+     * percent open; there is no fallback.
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.GetPercentOpenResponse getPercentOpen(com.viam.component.gripper.v1.Gripper.GetPercentOpenRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPercentOpenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the capabilities of the gripper.
+     * A gripper that returns Unimplemented for GetProperties is treated as having
+     * percent_open_supported = false.
+     * </pre>
+     */
+    public com.viam.component.gripper.v1.Gripper.GetPropertiesResponse getProperties(com.viam.component.gripper.v1.Gripper.GetPropertiesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1035,6 +1292,50 @@ public final class GripperServiceGrpc {
 
     /**
      * <pre>
+     * SetPercentOpen moves the gripper to a normalized opening, where 0.0 is fully closed (where
+     * Grab moves to) and 1.0 is fully open (where Open moves to). The gripper maps the value
+     * linearly onto its range of motion and owns any inversion of its hardware scale.
+     * A percent_open that is NaN or outside 0.0-1.0 returns InvalidArgument.
+     * This call blocks until the move completes or is stopped, like Open and Grab. Stop cancels it.
+     * If the gripper does not support percent open (GetProperties reports
+     * percent_open_supported = false or is Unimplemented, or SetPercentOpen is Unimplemented),
+     * the server falls back to Grab for a percent_open below 0.5 and Open for 0.5 and above.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.gripper.v1.Gripper.SetPercentOpenResponse> setPercentOpen(
+        com.viam.component.gripper.v1.Gripper.SetPercentOpenRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetPercentOpenMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetPercentOpen returns the measured opening of the gripper on the same 0.0 (closed) to
+     * 1.0 (open) scale as SetPercentOpen. Returns Unimplemented if the gripper does not support
+     * percent open; there is no fallback.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.gripper.v1.Gripper.GetPercentOpenResponse> getPercentOpen(
+        com.viam.component.gripper.v1.Gripper.GetPercentOpenRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPercentOpenMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the capabilities of the gripper.
+     * A gripper that returns Unimplemented for GetProperties is treated as having
+     * percent_open_supported = false.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.gripper.v1.Gripper.GetPropertiesResponse> getProperties(
+        com.viam.component.gripper.v1.Gripper.GetPropertiesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPropertiesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * DoCommand sends/receives arbitrary commands
      * </pre>
      */
@@ -1085,10 +1386,13 @@ public final class GripperServiceGrpc {
   private static final int METHODID_IS_HOLDING_SOMETHING = 4;
   private static final int METHODID_GET_CURRENT_INPUTS = 5;
   private static final int METHODID_GO_TO_INPUTS = 6;
-  private static final int METHODID_DO_COMMAND = 7;
-  private static final int METHODID_GET_STATUS = 8;
-  private static final int METHODID_GET_GEOMETRIES = 9;
-  private static final int METHODID_GET_KINEMATICS = 10;
+  private static final int METHODID_SET_PERCENT_OPEN = 7;
+  private static final int METHODID_GET_PERCENT_OPEN = 8;
+  private static final int METHODID_GET_PROPERTIES = 9;
+  private static final int METHODID_DO_COMMAND = 10;
+  private static final int METHODID_GET_STATUS = 11;
+  private static final int METHODID_GET_GEOMETRIES = 12;
+  private static final int METHODID_GET_KINEMATICS = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1134,6 +1438,18 @@ public final class GripperServiceGrpc {
         case METHODID_GO_TO_INPUTS:
           serviceImpl.goToInputs((com.viam.component.gripper.v1.Gripper.GoToInputsRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GoToInputsResponse>) responseObserver);
+          break;
+        case METHODID_SET_PERCENT_OPEN:
+          serviceImpl.setPercentOpen((com.viam.component.gripper.v1.Gripper.SetPercentOpenRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.SetPercentOpenResponse>) responseObserver);
+          break;
+        case METHODID_GET_PERCENT_OPEN:
+          serviceImpl.getPercentOpen((com.viam.component.gripper.v1.Gripper.GetPercentOpenRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GetPercentOpenResponse>) responseObserver);
+          break;
+        case METHODID_GET_PROPERTIES:
+          serviceImpl.getProperties((com.viam.component.gripper.v1.Gripper.GetPropertiesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GetPropertiesResponse>) responseObserver);
           break;
         case METHODID_DO_COMMAND:
           serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
@@ -1219,6 +1535,27 @@ public final class GripperServiceGrpc {
               com.viam.component.gripper.v1.Gripper.GoToInputsResponse>(
                 service, METHODID_GO_TO_INPUTS)))
         .addMethod(
+          getSetPercentOpenMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.gripper.v1.Gripper.SetPercentOpenRequest,
+              com.viam.component.gripper.v1.Gripper.SetPercentOpenResponse>(
+                service, METHODID_SET_PERCENT_OPEN)))
+        .addMethod(
+          getGetPercentOpenMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.gripper.v1.Gripper.GetPercentOpenRequest,
+              com.viam.component.gripper.v1.Gripper.GetPercentOpenResponse>(
+                service, METHODID_GET_PERCENT_OPEN)))
+        .addMethod(
+          getGetPropertiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.gripper.v1.Gripper.GetPropertiesRequest,
+              com.viam.component.gripper.v1.Gripper.GetPropertiesResponse>(
+                service, METHODID_GET_PROPERTIES)))
+        .addMethod(
           getDoCommandMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1265,6 +1602,9 @@ public final class GripperServiceGrpc {
               .addMethod(getIsHoldingSomethingMethod())
               .addMethod(getGetCurrentInputsMethod())
               .addMethod(getGoToInputsMethod())
+              .addMethod(getSetPercentOpenMethod())
+              .addMethod(getGetPercentOpenMethod())
+              .addMethod(getGetPropertiesMethod())
               .addMethod(getDoCommandMethod())
               .addMethod(getGetStatusMethod())
               .addMethod(getGetGeometriesMethod())

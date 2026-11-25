@@ -3043,6 +3043,16 @@ public final class Powersensor {
      * @return The percent.
      */
     double getPercent();
+
+    /**
+     * <pre>
+     * Whether the battery is charging. Only meaningful when GetProperties reports is_charging_supported.
+     * </pre>
+     *
+     * <code>bool is_charging = 2 [json_name = "isCharging"];</code>
+     * @return The isCharging.
+     */
+    boolean getIsCharging();
   }
   /**
    * Protobuf type {@code viam.component.powersensor.v1.GetBatteryPercentResponse}
@@ -3090,6 +3100,44 @@ public final class Powersensor {
     private void clearPercent() {
 
       percent_ = 0D;
+    }
+
+    public static final int IS_CHARGING_FIELD_NUMBER = 2;
+    private boolean isCharging_;
+    /**
+     * <pre>
+     * Whether the battery is charging. Only meaningful when GetProperties reports is_charging_supported.
+     * </pre>
+     *
+     * <code>bool is_charging = 2 [json_name = "isCharging"];</code>
+     * @return The isCharging.
+     */
+    @java.lang.Override
+    public boolean getIsCharging() {
+      return isCharging_;
+    }
+    /**
+     * <pre>
+     * Whether the battery is charging. Only meaningful when GetProperties reports is_charging_supported.
+     * </pre>
+     *
+     * <code>bool is_charging = 2 [json_name = "isCharging"];</code>
+     * @param value The isCharging to set.
+     */
+    private void setIsCharging(boolean value) {
+      
+      isCharging_ = value;
+    }
+    /**
+     * <pre>
+     * Whether the battery is charging. Only meaningful when GetProperties reports is_charging_supported.
+     * </pre>
+     *
+     * <code>bool is_charging = 2 [json_name = "isCharging"];</code>
+     */
+    private void clearIsCharging() {
+
+      isCharging_ = false;
     }
 
     public static com.viam.component.powersensor.v1.Powersensor.GetBatteryPercentResponse parseFrom(
@@ -3229,6 +3277,46 @@ public final class Powersensor {
         return this;
       }
 
+      /**
+       * <pre>
+       * Whether the battery is charging. Only meaningful when GetProperties reports is_charging_supported.
+       * </pre>
+       *
+       * <code>bool is_charging = 2 [json_name = "isCharging"];</code>
+       * @return The isCharging.
+       */
+      @java.lang.Override
+      public boolean getIsCharging() {
+        return instance.getIsCharging();
+      }
+      /**
+       * <pre>
+       * Whether the battery is charging. Only meaningful when GetProperties reports is_charging_supported.
+       * </pre>
+       *
+       * <code>bool is_charging = 2 [json_name = "isCharging"];</code>
+       * @param value The isCharging to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsCharging(boolean value) {
+        copyOnWrite();
+        instance.setIsCharging(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the battery is charging. Only meaningful when GetProperties reports is_charging_supported.
+       * </pre>
+       *
+       * <code>bool is_charging = 2 [json_name = "isCharging"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsCharging() {
+        copyOnWrite();
+        instance.clearIsCharging();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.component.powersensor.v1.GetBatteryPercentResponse)
     }
     @java.lang.Override
@@ -3246,9 +3334,11 @@ public final class Powersensor {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "percent_",
+              "isCharging_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0000";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0000\u0002\u0007" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
@@ -3821,6 +3911,16 @@ public final class Powersensor {
      * @return The isBatteryPercentSupported.
      */
     boolean getIsBatteryPercentSupported();
+
+    /**
+     * <pre>
+     * Whether GetBatteryPercent reports a meaningful is_charging
+     * </pre>
+     *
+     * <code>bool is_charging_supported = 2 [json_name = "isChargingSupported"];</code>
+     * @return The isChargingSupported.
+     */
+    boolean getIsChargingSupported();
   }
   /**
    * Protobuf type {@code viam.component.powersensor.v1.GetPropertiesResponse}
@@ -3868,6 +3968,44 @@ public final class Powersensor {
     private void clearIsBatteryPercentSupported() {
 
       isBatteryPercentSupported_ = false;
+    }
+
+    public static final int IS_CHARGING_SUPPORTED_FIELD_NUMBER = 2;
+    private boolean isChargingSupported_;
+    /**
+     * <pre>
+     * Whether GetBatteryPercent reports a meaningful is_charging
+     * </pre>
+     *
+     * <code>bool is_charging_supported = 2 [json_name = "isChargingSupported"];</code>
+     * @return The isChargingSupported.
+     */
+    @java.lang.Override
+    public boolean getIsChargingSupported() {
+      return isChargingSupported_;
+    }
+    /**
+     * <pre>
+     * Whether GetBatteryPercent reports a meaningful is_charging
+     * </pre>
+     *
+     * <code>bool is_charging_supported = 2 [json_name = "isChargingSupported"];</code>
+     * @param value The isChargingSupported to set.
+     */
+    private void setIsChargingSupported(boolean value) {
+      
+      isChargingSupported_ = value;
+    }
+    /**
+     * <pre>
+     * Whether GetBatteryPercent reports a meaningful is_charging
+     * </pre>
+     *
+     * <code>bool is_charging_supported = 2 [json_name = "isChargingSupported"];</code>
+     */
+    private void clearIsChargingSupported() {
+
+      isChargingSupported_ = false;
     }
 
     public static com.viam.component.powersensor.v1.Powersensor.GetPropertiesResponse parseFrom(
@@ -4007,6 +4145,46 @@ public final class Powersensor {
         return this;
       }
 
+      /**
+       * <pre>
+       * Whether GetBatteryPercent reports a meaningful is_charging
+       * </pre>
+       *
+       * <code>bool is_charging_supported = 2 [json_name = "isChargingSupported"];</code>
+       * @return The isChargingSupported.
+       */
+      @java.lang.Override
+      public boolean getIsChargingSupported() {
+        return instance.getIsChargingSupported();
+      }
+      /**
+       * <pre>
+       * Whether GetBatteryPercent reports a meaningful is_charging
+       * </pre>
+       *
+       * <code>bool is_charging_supported = 2 [json_name = "isChargingSupported"];</code>
+       * @param value The isChargingSupported to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsChargingSupported(boolean value) {
+        copyOnWrite();
+        instance.setIsChargingSupported(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether GetBatteryPercent reports a meaningful is_charging
+       * </pre>
+       *
+       * <code>bool is_charging_supported = 2 [json_name = "isChargingSupported"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsChargingSupported() {
+        copyOnWrite();
+        instance.clearIsChargingSupported();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:viam.component.powersensor.v1.GetPropertiesResponse)
     }
     @java.lang.Override
@@ -4024,9 +4202,11 @@ public final class Powersensor {
         case BUILD_MESSAGE_INFO: {
             java.lang.Object[] objects = new java.lang.Object[] {
               "isBatteryPercentSupported_",
+              "isChargingSupported_",
             };
             java.lang.String info =
-                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0007";
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0007\u0002\u0007" +
+                "";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         case GET_DEFAULT_INSTANCE: {
